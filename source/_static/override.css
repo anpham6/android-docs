@@ -1,0 +1,15 @@
+.rst-content .code-block-caption {
+    padding-top: 0;
+    text-align: left;
+}
+
+.section-caption .code-block-caption {
+    font-size: 100%;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.section-caption .code-block-caption em {
+    font-size: 85%;
+    font-weight: 400;
+}
