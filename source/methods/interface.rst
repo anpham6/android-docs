@@ -4,6 +4,9 @@ Interface
 Functions
 ---------
 
+squared
+^^^^^^^
+
 .. rst-class:: section-caption
 
 .. code-block:: typescript
@@ -132,10 +135,43 @@ Functions
   function observeSrc(element: HTMLElement | string, options: FileObserveOptions): Promise<ObserveSocket | ObserveSocket[]>;
   function observeSrc(element: HTMLElement | string, callback: (ev: MessageEvent, target: HTMLElement) => void, options?: FileObserveOptions): Promise<ObserveSocket | ObserveSocket[]>;
 
+android
+^^^^^^^
+
+.. code-block:: typescript
+
+  interface AppFramework {
+      setViewModel(data: AppViewModel, sessionId?: string): void;
+      setViewModelByProject(data: AppViewModel, projectId?: string): void;
+      addDependency(group: string, name: string, version?: number | string, type?: number | boolean, overwrite?: boolean): string;
+      addDependencyByProject(projectId: string, group: string, name: string, version?: number | string, type?: number | boolean, overwrite?: boolean): string;
+      addFontProvider(authority: string, package: string, certs: string[], webFonts: string | FontProviderFonts): boolean | Promise<boolean>;
+      addXmlNs(name: string, uri: string): void;
+      customize(api: number, widget: string, options: Record<string, Record<string, string>>): Record<string, Record<string, string>> | undefined;
+      loadCustomizations(name: string): void;
+      saveCustomizations(name: string): void;
+      resetCustomizations(): void;
+      setResolutionByDeviceName(value: string): boolean;
+      getLocalSettings(): ControllerSettingsUI;
+      removeObserver(element: HTMLElement): boolean;
+  }
+
+chrome
+^^^^^^
+
+.. code-block:: typescript
+
+  interface AppFramework {
+      removeObserver(element: HTMLElement): boolean;
+  }
+
 References
 ----------
 
-.. _references-types:
+squared
+^^^^^^^
+
+.. _references-squared-types:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/squared.d.ts
@@ -146,7 +182,7 @@ https://unpkg.com/squared/types/squared.d.ts
   | FileObserveOptions
   | PrefetchItem
 
-.. _references-types-base:
+.. _references-squared-types-base:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/base/squared.d.ts
@@ -157,14 +193,14 @@ https://unpkg.com/squared/types/base/squared.d.ts
   | Node
   | RootElement
 
-.. _references-types-base-file:
+.. _references-squared-types-base-file:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/base/file.d.ts
   | BroadcastMessageCallback
   | ResponseData
 
-.. _references-types-internal:
+.. _references-squared-types-internal:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/internal/squared.d.ts
@@ -174,3 +210,24 @@ https://unpkg.com/squared/types/internal/squared.d.ts
 
 https://developer.mozilla.org/docs/Web/API/MutationObserver/observe#options
   | MutationObserverInit
+
+android
+^^^^^^^
+
+.. _references-android:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/squared.d.ts
+  | AppViewModel
+
+.. _references-android-application:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/application.d.ts:
+  | ControllerSettingsUI
+
+.. _references-android-resource:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/resource.d.ts:
+  | FontProviderFonts

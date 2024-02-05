@@ -11,6 +11,8 @@ squared
 
     squared.setHostname("https://localhost:8000");
 
+    squared.setHostname(); // Reset to window.location (e.g. localhost:3000)
+
 .. function:: setEndpoint(name, value)
 
   Set alternate pathname for API v1 functions.
@@ -78,7 +80,7 @@ squared
 
   Redirect stdout messages to DevTools console.
 
-  :param function callback: See :any:`BroadcastMessageCallback <references-types-base-file>`
+  :param function callback: See :any:`BroadcastMessageCallback <references-squared-types-base-file>`
   :param string socketId: Unique identifier assigned during server initialization
   :returns: boolean
 
@@ -113,7 +115,7 @@ squared
 
   Install application interpreter. (e.g. android.framework.js)
 
-  :param object target: Global object implementing :any:`AppFramework <references-types-base>`
+  :param object target: Global object implementing :any:`AppFramework <references-squared-types-base>`
   :param object options: (optional) Initialize settings with non-default values
   :param boolean cache: (optional) Load previous cached instance and settings
 
@@ -133,10 +135,20 @@ squared
 
 .. function:: extend(map[, framework])
 
-  Add functions and properties to |Node| prototype.
+  Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the get/set object syntax.
 
   :param object map: Attribute object consisting of extensions and overrides
-  :param number framework: (optional) 0 - *all* | 1 - *vdom* | 2 - *android* | 4 - *chrome*
+  :param number framework: (optional) See *APP_FRAMEWORK*
+
+  .. code-block:: typescript
+    :caption: squared.base.lib.constant
+
+    const enum APP_FRAMEWORK {
+        UNIVERSAL = 0,
+        VDOM = 1,
+        ANDROID = 2,
+        CHROME = 4
+    }
 
   Usage::
 
@@ -250,6 +262,7 @@ squared
     const [drawer, menu] = squared.get("android.widget.drawer", "android.widget.menu");
 
     drawer.options.navigationView.android = { fitsSystemWindows: "true" };
+    menu.project.set(document.getElementId("child-item-id"), await fetch("http://localhost:3000/drawer/menu.json"), "project-1" /* optional */); // Add project data
 
 .. function:: attr(target, name[, value])
 
@@ -307,7 +320,7 @@ squared
   :param string type: *css* | *javascript* | *image* | *svg*
   :param boolean all: (*optional*) Accept request from any origin
   :param targets: (optional) URL string or root element of a contained Document
-  :returns: Promise<:any:`PrefetchItem <references-types>`\[\]>
+  :returns: Promise<:any:`PrefetchItem <references-squared-types>`\[\]>
 
   Usage::
 
@@ -761,13 +774,13 @@ squared
       characterDataOldValue: false
     });
 
-.. function:: observeSrc(target[, callback, options])
+.. function:: observeSrc(targets[, callback, options])
 
   Can be used to watch external elements which contain modifiable source files.
 
-  :param target: Element targets by either selector or *HTMLElement* (**src** or **href** attribute is required)
+  :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
   :param function callback: (*optional*) Method to call when a ``modified`` event is received
-  :param object options: (optional) See :any:`FileObserveOptions <references-types>`
+  :param object options: (optional) See :any:`FileObserveOptions <references-squared-types>`
   :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
 
   Usage::
@@ -786,17 +799,16 @@ squared
 
   Alternate::
 
-    await squared.parseDocument();
     await squared.observeSrc("link[rel=stylesheet]"); // Will call location.reload()
 
 .. |targetElement| replace:: Element target by either an ``id`` string or *HTMLElement*
-.. |Application| replace:: :any:`Application <references-types-base>`
-.. |Node| replace:: :any:`Node <references-types-base>`
-.. |Extension| replace:: :any:`Extension <references-types-base>`
-.. |ResponseData| replace:: Promise<:any:`ResponseData <references-types-base-file>`>
-.. |FileActionOptions| replace:: :any:`FileActionOptions <references-types>`
-.. |ElementSettings| replace:: :any:`ElementSettings <references-types-base>`
-.. |ObserveSocket| replace:: :any:`ObserveSocket <references-types-internal>`
+.. |Application| replace:: :any:`Application <references-squared-types-base>`
+.. |Node| replace:: :any:`Node <references-squared-types-base>`
+.. |Extension| replace:: :any:`Extension <references-squared-types-base>`
+.. |ResponseData| replace:: Promise<:any:`ResponseData <references-squared-types-base-file>`>
+.. |FileActionOptions| replace:: :any:`FileActionOptions <references-squared-types>`
+.. |ElementSettings| replace:: :any:`ElementSettings <references-squared-types-base>`
+.. |ObserveSocket| replace:: :any:`ObserveSocket <references-squared-types-internal>`
 
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelector

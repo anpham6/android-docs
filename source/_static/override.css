@@ -13,3 +13,8 @@
     font-size: 85%;
     font-weight: 400;
 }
+
+.hlist ul.simple li, .hlist ul.simple p {
+    line-height: 20px;
+    font-size: 12px;
+}

@@ -7,3 +7,5 @@ Methods
 
    interface
    squared
+   android
+   chrome
