@@ -3,7 +3,7 @@ squared
 
 .. function:: setHostname(value)
 
-  Use another CORS-enabled server for processing assets.
+  Use another :abbr:`CORS (Cross-Origin Resource Sharing)`-enabled server for processing assets.
 
   :param string value: http(s)://hostname(:port)
 
@@ -40,7 +40,7 @@ squared
 
 .. function:: auth(token)
 
-  Set JWT authorization token for all requests
+  Set :abbr:`JWT (JSON Web Token)` authorization token for all requests
 
   :param string token: Three concatenated Base64url-encoded strings separated by dots
 

@@ -13,22 +13,22 @@ Example usage
   <script src="/dist/chrome.framework.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      squared.setFramework(chrome, /* settings */);
+      squared.setFramework(chrome, {/* settings */});
 
       await squared.save(); // Uses defaults from settings
       /* OR */
-      await squared.saveAs(/* archive filename */, /* options */);
+      await squared.saveAs("android.zip", /* options */);
       /* OR */
-      await squared.copyTo(/* directory */, /* options */);
+      await squared.copyTo("/path/project", /* options */);
       /* OR */
-      await squared.appendTo(/* archive location */, /* options */);
+      await squared.appendTo("/path/to/android.7z", /* options */);
     });
   </script>
 
 .. code-block::
   :caption: Observe element [#]_
 
-  await squared.copyTo(/* directory */, { useOriginalHtmlPage: false, observe: true }).then(() => {
+  await squared.copyTo("/path/project", { useOriginalHtmlPage: false, observe: true }).then(() => {
     squared.observe(); // Watch all events
     /* OR */
     squared.observe({

@@ -3,7 +3,7 @@ Android
 
 The primary function ``parseDocument`` can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.
 
-.. warning:: Calling "save" or "copy" methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use ``parseDocument.then`` to set a callback for your commands and not ``parseDocumentSync``.
+.. warning:: Calling "save" or "copy" methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use **parseDocument.then** to set a callback for your commands and not **parseDocumentSync**.
 
 Example usage
 -------------
@@ -18,11 +18,11 @@ Example usage
     squared.settings.targetAPI = 34; // Optional
 
     document.addEventListener("DOMContentLoaded", async () => {
-      squared.setFramework(android, /* settings */);
+      squared.setFramework(android, {/* settings */});
 
       await squared.parseDocument(); // Node (document.body)
       /* OR */
-      await squared.parseDocument(/* HTMLElement */, /* "fragment-id" */, /* ...element */); // Node[]
+      await squared.parseDocument(document.querySelector("main"), "fragment-id", /* ...element */); // Node[]
       /* OR */
       await squared.parseDocument(
         { // Custom settings do not affect other layouts

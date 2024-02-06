@@ -1,7 +1,7 @@
 Resources
 =========
 
-Projects can include additional values that are required during compilation which might not have been detected.
+Projects can include additional values which may have missed detection and are required during compilation.
 
 Interface
 ---------
