@@ -53,23 +53,6 @@ android
   :requirements:
     - **createBuildDependencies** = *true*
 
-  .. code-block:: typescript
-    :caption: android.lib.constant
-
-    const enum DEPENDENCY_TYPE {
-        IMPLEMENTATION = 0,
-        API = 1,
-        COMPILE_ONLY = 2,
-        COMPILE_ONLY_API = 3,
-        RUNTIME_ONLY = 4,
-        TEST_IMPLEMENTATION = 5,
-        TEST_COMPILE_ONLY = 6,
-        TEST_RUNTIME_ONLY = 7,
-        ANDROID_TEST_IMPLEMENTATION = 8,
-        ANDROID_TEST_COMPILE_ONLY = 9,
-        ANDROID_TEST_RUNTIME_ONLY = 10
-    }
-
   Usage::
 
     android.addDependency("androidx.core", "core", "1.12.0"); // Default is "implementation"
@@ -165,35 +148,6 @@ android
     - **customizationsBaseAPI** >= *0*
     - **customizationsOverwritePrivilege** = *true*
 
-  .. code-block:: typescript
-    :caption: android.lib.constant
-
-    const enum BUILD_VERSION {
-        ALL = 0,
-        LATEST = 34,
-        ICE_CREAM_SANDWICH = 14,
-        ICE_CREAM_SANDWICH_1 = 15,
-        JELLYBEAN = 16,
-        JELLYBEAN_1 = 17,
-        JELLYBEAN_2 = 18,
-        KITKAT = 19,
-        KITKAT_1 = 20,
-        LOLLIPOP = 21,
-        LOLLIPOP_1 = 22,
-        MARSHMALLOW = 23,
-        NOUGAT = 24,
-        NOUGAT_1 = 25,
-        OREO = 26,
-        OREO_1 = 27,
-        PIE = 28,
-        Q = 29,
-        R = 30,
-        S = 31,
-        S_L = 32,
-        T = 33,
-        U = 34
-    }
-
   Usage::
 
     android.customize(BUILD_VERSION.ALL /* 0 */, "Button", {
@@ -226,7 +180,7 @@ android
     squared.settings.targetAPI = BUILD_VERSION.T;
     squared.settings.customizationsBaseAPI = 0; // Apply all customizations
 
-    android.loadCustomizations("customize-example"); // Any page with same origin
+    android.loadCustomizations("customize-example"); // Any page in same domain
 
     android.customize(BUILD_VERSION.T, "Button", { android: { minWidth: "25px" } });
     android.customize(BUILD_VERSION.LATEST, "Button", { android: { minWidth: "30px" } });

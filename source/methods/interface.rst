@@ -1,11 +1,8 @@
 Interface
 =========
 
-Functions
----------
-
 squared
-^^^^^^^
+-------
 
 .. rst-class:: section-caption
 
@@ -130,13 +127,13 @@ squared
   :caption: Observe
 
   function observe(enable = true): void;
-  function observe(init: MutationObserverInit): void;
+  function observe(options: MutationObserverInit): void;
 
   function observeSrc(element: HTMLElement | string, options: FileObserveOptions): Promise<ObserveSocket | ObserveSocket[]>;
   function observeSrc(element: HTMLElement | string, callback: (ev: MessageEvent, target: HTMLElement) => void, options?: FileObserveOptions): Promise<ObserveSocket | ObserveSocket[]>;
 
 android
-^^^^^^^
+-------
 
 .. code-block:: typescript
 
@@ -157,7 +154,7 @@ android
   }
 
 chrome
-^^^^^^
+------
 
 .. code-block:: typescript
 

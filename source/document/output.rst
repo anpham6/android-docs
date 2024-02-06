@@ -1,3 +1,4 @@
+============
 Build Output
 ============
 
@@ -9,7 +10,7 @@ Build Output
     - RequestData
 
 Interface
----------
+=========
 
 .. code-block:: typescript
 
@@ -26,7 +27,7 @@ Interface
       };
       outgoing?: OutgoingHeaders;
       exclusions?: Exclusions | (string | RegExp)[];
-      broadcast?: BroadcastMessageCallback | WebSocketClient<string | string[]> & { callback?: BroadcastMessageCallback };
+      broadcast?: BroadcastSocket | BroadcastMessageCallback;
       throwErrors?: boolean;
       filter?: (item: FileAsset, index: number, array: FileAsset[]) => unknown;
   }
@@ -66,10 +67,10 @@ Interface
   }
 
 Android
--------
+=======
 
 Interface
-^^^^^^^^^
+---------
 
 .. code-block:: typescript
 
@@ -94,12 +95,12 @@ Interface
   }
 
 Example usage
-^^^^^^^^^^^^^
+-------------
 
 .. code-block::
 
   squared.copyTo("/path/project", {
-    projectId: 'project-1',
+    projectId: "project-1",
     priority: 10,
     profileable: true,
     dependencyScopes: "snapshot",
@@ -111,7 +112,7 @@ Example usage
         theme: "AppTheme"
       }
     },
-    commands: ['clean', ['build', '--parallel']],
+    commands: ["clean", ["build", "--parallel"]],
     assets: [
       {
         pathname: "app/src/main/res/drawable",
@@ -127,10 +128,10 @@ Example usage
   });
 
 Chrome
-------
+======
 
 Interface
-^^^^^^^^^
+---------
 
 .. code-block:: typescript
 
@@ -192,7 +193,7 @@ Interface
   }
 
 Example usage
-^^^^^^^^^^^^^
+-------------
 
 .. code-block::
 

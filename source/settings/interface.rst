@@ -37,35 +37,6 @@ These settings are available in the global variable ``squared`` to customize you
       broadcastSecurePort?: number;
   }
 
-  interface TaskCommand {
-      handler: string;
-      task: unknown;
-      preceding?: boolean;
-  }
-
-  interface WatchInterval {
-      interval?: number | string;
-      start?: number | string;
-      expires?: number | string;
-      id?: string;
-      main?: boolean;
-      reload?: WatchReload | boolean;
-  }
-
-  interface WatchReload {
-      socketId?: string;
-      port?: number;
-      secure?: boolean;
-      module?: boolean;
-      always?: boolean;
-      on?: {
-          message: string;
-          open?: string;
-          error?: string;
-          close?: string;
-      };
-  }
-
 .. code-block:: typescript
 
   interface UserResourceSettingsUI extends UserResourceSettings {
@@ -82,14 +53,7 @@ These settings are available in the global variable ``squared`` to customize you
       resolutionScreenHeight?: number;
   }
 
-  interface ShowCommentsInclude {
-      tagName?: boolean | string[];
-      attributes?: boolean | string[];
-      dataset?: boolean;
-      bounds?: boolean;
-  }
-
-  type CssStyleAttr = keyof CSSStyleDeclaration;
+.. seealso:: :doc:`References </references>` for any non-browser named definitions.
 
 Global
 ------
@@ -104,7 +68,7 @@ Global
     createElementMap: false // Cache querySelector results for subsequent queries
   };
 
-.. note:: The native **document.querySelector** does not enter *shadowRoot* [#]_ elements.
+.. note:: The native ``document.querySelector`` does not enter :any:`ShadowRoot <references-mdn-shadowroot>` elements.
 
 .. code-block:: typescript
   :caption: Optional
@@ -128,5 +92,3 @@ Global
   };
 
 .. note:: These optional settings are not available in the :doc:`vdom <vdom>` framework.
-
-.. [#] https://developer.mozilla.org/docs/Web/API/ShadowRoot

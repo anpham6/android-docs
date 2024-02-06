@@ -138,17 +138,7 @@ squared
   Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the get/set object syntax.
 
   :param object map: Attribute object consisting of extensions and overrides
-  :param number framework: (optional) See *APP_FRAMEWORK*
-
-  .. code-block:: typescript
-    :caption: squared.base.lib.constant
-
-    const enum APP_FRAMEWORK {
-        UNIVERSAL = 0,
-        VDOM = 1,
-        ANDROID = 2,
-        CHROME = 4
-    }
+  :param number framework: (optional) See :any:`APP_FRAMEWORK <references-squared-base>`
 
   Usage::
 
@@ -335,7 +325,7 @@ squared
 
 .. function:: parseDocument(...elements)
 
-  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. Assets can be preloaded (e.g. images) which is required with the :doc:`android <../framework/android>` framework to calculate dimensions.
+  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. Assets can be preloaded (e.g. images) which is required with the :doc:`android </framework/android>` framework.
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
@@ -354,7 +344,7 @@ squared
 
 .. function:: parseDocumentSync(...elements)
 
-  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. No assets are preloaded which is sufficient for the :doc:`vdom <../framework/vdom>` framework.
+  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. No assets are preloaded which is sufficient for the :doc:`vdom </framework/vdom>` framework.
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
@@ -469,7 +459,7 @@ squared
     squared.saveAs("android.zip", { timeout: 15, log: { showSize: true } }, "android-example"); // Uses own "saveAs" namespace
 
     // Load
-    squared.saveAs("android.zip", "android-example"); // Any page with same origin
+    squared.saveAs("android.zip", "android-example"); // Any page in same domain
 
 .. function:: appendTo(uri[, options, setting, overwrite])
 
@@ -496,7 +486,7 @@ squared
     squared.appendTo("./android.zip", { timeout: 20, log: { showSize: true } }, "android-example"); // Uses own "appendTo" namespace
 
     // Load
-    squared.appendTo("./android.zip", "android-example"); // Any page with same origin
+    squared.appendTo("./android.zip", "android-example"); // Any page in same domain
 
 .. function:: copyTo(pathname[, options, setting, overwrite])
 
@@ -526,7 +516,7 @@ squared
     squared.copyTo("./path/to/project", { timeout: 10, log: { showSize: true } }, "android-example"); // Uses own "copyTo" namespace
 
     // Load
-    squared.copyTo("./path/to/project", "android-example"); // Any page with same origin
+    squared.copyTo("./path/to/project", "android-example"); // Any page in same domain
 
 .. function:: saveFiles(filename[, options, setting, overwrite])
 
@@ -567,7 +557,7 @@ squared
     squared.saveFiles("android.zip", options, "android-example"); // Uses own "saveFiles" namespace
 
     // Load
-    squared.saveFiles("android.zip", "android-example"); // Any page with same origin
+    squared.saveFiles("android.zip", "android-example"); // Any page in same domain
 
 .. function:: appendFiles(uri[, options, setting, overwrite])
 
@@ -609,7 +599,7 @@ squared
     squared.appendFiles("android.zip", options, "android-example"); // Uses own "appendFiles" namespace
 
     // Load
-    squared.appendFiles("android.zip", "android-example"); // Any page with same origin
+    squared.appendFiles("android.zip", "android-example"); // Any page in same domain
 
 .. function:: copyFiles(pathname[, options, setting, overwrite])
 
@@ -653,7 +643,7 @@ squared
     squared.copyFiles("./path/to/project", options, "android-example"); // Uses own "copyFiles" namespace
 
     // Load
-    squared.copyFiles("./path/to/project", "android-example"); // Any page with same origin
+    squared.copyFiles("./path/to/project", "android-example"); // Any page in same domain
 
 .. function:: getElementById(value[, sync, cache = true])
 
@@ -740,9 +730,9 @@ squared
 
 .. function:: observe([enable = true])
 
-  Uses *MutationObserver* [#]_ to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
+  Uses :any:`MutationObserver <references-mdn-mutationobserver-observe>` to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
 
-  :param boolean enable: (optional) Start or stop all root elements who have registered
+  :param boolean enable: (optional) Start or stop all root elements who are monitoring
 
   Usage::
 
@@ -813,4 +803,3 @@ squared
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelector
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelectorAll
-.. [#] https://developer.mozilla.org/docs/Web/API/MutationObserver

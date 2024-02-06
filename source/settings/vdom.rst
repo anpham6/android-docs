@@ -6,7 +6,7 @@ Interface
 
 .. code-block:: typescript
 
-  import type { UserResourceSettings } from "./interface";
+  import type { UserSettings } from "./interface";
 
 Example usage
 -------------

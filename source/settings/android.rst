@@ -51,71 +51,10 @@ Interface
       manifestPackage?: string;
   }
 
-  interface ControllerSettingsDirectoryUI {
-      layout: string;
-      string: string;
-      font: string;
-      image: string;
-      video: string;
-      audio: string;
-      integer: string;
-      fraction: string;
-      array: string;
-      color: string;
-      dimension: string;
-      style: string;
-      theme: string;
-      animation: string;
-      menu: string;
-  }
+.. versionadded:: 5.2.0
+  *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
-  interface ExtensionViewModelElement {
-      selector?: string;
-      namespace?: string;
-      attr?: string;
-      expression?: string;
-      twoWay?: boolean;
-  }
-
-  interface ExtensionIncludeElement {
-      selectorStart?: string;
-      selectorEnd?: string;
-      merge?: boolean;
-      viewModel?: string;
-      pathname?: string;
-      filename?: string;
-  }
-
-  interface ExtensionSubtituteElement extends Record<string, unknown> {
-      selector?: string;
-      tag?: string;
-      tagChild?: string;
-      tagChildAttr?: string | ViewAttribute;
-      renderChildren?: boolean | string;
-      autoLayout?: boolean | string;
-  }
-
-  interface ExtensionFragmentElement extends Partial<ViewAttribute> {
-      selector?: string;
-      name?: string;
-      tag?: string;
-      pathname?: string;
-      filename?: string;
-  }
-
-  interface ViewAttribute extends Record<string, unknown> {
-      android: Record<string, string>;
-      app?: Record<string, string>;
-      documentId?: string;
-  }
-
-  interface ResourceQualifierMap {
-      suffix?: string;
-      [K in keyof ControllerSettingsDirectoryUI]?: string | boolean;
-  }
-
-  type NamingStyles = "android" | "html" | Record<string, string | (item: Node) => string | [string, number, number?, NodeListOf<Node>?]>;
-  type ResolutionUnit = "px" | "dp" | "sp" | "pt" | "in" | "mm";
+.. seealso:: :doc:`References </references>` for any non-browser named definitions.
 
 Example usage
 -------------
@@ -283,7 +222,3 @@ Example usage
       "jetpack.compose.view" // enabledCompose
     ]
   };
-
-.. versionadded:: 5.2.0
-
-  - *ExtensionFragmentElement* attributes can be fully customized using the *ViewAttribute* interface.
