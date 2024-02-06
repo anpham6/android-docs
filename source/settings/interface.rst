@@ -98,11 +98,13 @@ Global
   :caption: Required
 
   squared.settings = {
-    pierceShadowRoot: true, // https://developer.mozilla.org/docs/Web/API/ShadowRoot
+    pierceShadowRoot: false,
     showErrorMessages: false, // console.log
     showErrorMessages: true, // alert
     createElementMap: false // Cache querySelector results for subsequent queries
   };
+
+.. note:: The native **document.querySelector** does not enter *shadowRoot* [#]_ elements.
 
 .. code-block:: typescript
   :caption: Optional
@@ -126,3 +128,5 @@ Global
   };
 
 .. note:: These optional settings are not available in the :doc:`vdom <vdom>` framework.
+
+.. [#] https://developer.mozilla.org/docs/Web/API/ShadowRoot

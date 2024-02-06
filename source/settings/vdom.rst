@@ -16,7 +16,7 @@ Example usage
 
   squared.settings = {
     createElementMap: true,
-    pierceShadowRoot: false, // Native document.querySelector does not enter shadowRoot elements
+    pierceShadowRoot: false,
     showErrorMessages: false
   };
 

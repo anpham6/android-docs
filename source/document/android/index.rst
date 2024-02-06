@@ -12,4 +12,5 @@ Android
  compose
  attributes
  fonts
+ animations
  exclusions
