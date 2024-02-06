@@ -375,5 +375,5 @@ android
     android.removeObserver(document.body);
 
 .. |projectId| replace:: Names a project to be used for storage
-.. |AppViewModel| replace:: :any:`AppViewModel <references-android>`
-.. |Application| replace:: :any:`Application <references-squared-types-base>`
+.. |AppViewModel| replace:: :any:`AppViewModel <references-android-main>`
+.. |Application| replace:: :any:`Application <references-squared-base>`

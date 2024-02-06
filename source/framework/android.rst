@@ -27,7 +27,7 @@ Example usage
       await squared.parseDocument(
         { // Custom settings do not affect other layouts
           element: document.body,
-          projectId: "sqd1", // Default is "_"
+          projectId: "project-1", // Default is "_"
 
           resourceQualifier: "land", // "res/*" folder suffix
           /* OR */
@@ -75,8 +75,9 @@ Example usage
         },
         { // Only "element" is required
           element: "fragment-1",
-          projectId: "sqd1", // Implicit
-          pathname: "app/src/main/res/layout-hdpi", // Will not be overridden by resourceQualifier "land"
+          projectId: "project-1", // Implicit once projectId is not "_"
+          resourceQualifier: "port",
+          pathname: "app/src/main/res/layout-hdpi", // Will not be overridden by resourceQualifier "port"
           filename: "fragment.xml",
           baseLayoutAsFragment: true,
           baseLayoutAsFragment: ["com.example.fragment", "fragment-tag", "document_id"],
@@ -92,7 +93,7 @@ Example usage
       );
       await squared.parseDocument({
         element: "fragment-2",
-        projectId: "sqd2", // Will not conflict with projectId "sqd1"
+        projectId: "project-2", // Will not conflict with projectId "project-1"
         resourceQualifier: "port",
         enabledFragment: true,
         fragmentableElements: [
@@ -106,21 +107,20 @@ Example usage
         }
       });
 
-      await squared.close(/* projectId */); // Next call to "parseDocument" will reset project (optional)
+      await squared.close(/* projectId? */); // Next call to "parseDocument" will reset project (optional)
 
       // File actions - implicitly calls "close"
 
-      await squared.save(/* "sqd1" */, /* broadcastId | timeout */); // Uses defaults from settings
+      await squared.save(/* projectId? */, /* broadcastId | timeout */); // Uses defaults from settings
       /* OR */
-      await squared.saveAs(/* archive filename */, /* options from squared-express */); // { projectId: "sqd1" }
-      await squared.saveAs(/* archive filename */, { throwErrors: true }).catch(err => console.log(err)); // Will cancel partial archive download
+      await squared.saveAs("project.zip", { projectId: "project-1" });
+      await squared.saveAs("default.7z", { throwErrors: true }).catch(err => console.log(err)); // Will cancel partial archive download
       /* OR */
-      await squared.copyTo(/* directory */, /* options */);
-      await squared.copyTo(/* directory */, { modified: true }); // Can be used with observe (optional)
+      await squared.copyTo("/path/project-1", { ignoreExtensions: true, profileable: true });
       /* OR */
-      await squared.appendTo(/* archive location */, /* options */);
+      await squared.appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
 
-      squared.reset(/* projectId */); // Start new "parseDocument" session (optional)
+      squared.reset(/* projectId? */); // Start new "parseDocument" session (optional)
     });
   </script>
 
@@ -139,9 +139,13 @@ Example usage
 .. code-block::
   :caption: Kill request
 
-  squared.kill("30s").then(result => {/* killed when result > 0 */}); // Abort next request in 30 seconds
+  squared.kill("30s").then(pid => { // Abort next request in 30 seconds
+    if (pid > 0) {
+      /* KILLED */
+    }
+  });
   /* OR */
-  await squared.saveAs(/* archive filename */, { timeout: 10 }); // Kills request if not complete in 10 seconds
+  await squared.saveAs("project.zip", { timeout: 10 }); // Cancels request if not complete in 10 seconds
 
 .. code-block::
   :caption: Modify attributes
@@ -149,7 +153,7 @@ Example usage
   squared.parseDocument().then(() => {
     const body = squared.findDocumentNode(document.body);
     body.android("layout_width", "match_parent");
-    body.lockAttr("android", "layout_width"); // Optional
+    body.lockAttr("android", "layout_width");
   });
 
 .. code-block::
@@ -158,7 +162,7 @@ Example usage
   await squared.parseDocument({
     element: document.body,
     observe(mutations, observer, settings) {
-      squared.reset(); // Required when calling "parseDocument" after a File action
+      squared.reset(); // Required after a File action
       squared.parseDocument(settings).then(() => {
         squared.copyTo("/path/project", { modified: true }).then(response => console.log(response));
       });
@@ -175,7 +179,7 @@ Example usage
       squared.reset();
       squared.parseDocument().then(() => squared.copyTo("/path/project"));
     },
-    { // squared.json: "observe"
+    { // squared.json
       port: 8080,
       secure: false,
       action: "reload",

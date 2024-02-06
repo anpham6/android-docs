@@ -21,4 +21,4 @@ chrome
 
     chrome.removeObserver(document.body);
 
-.. |Application| replace:: :any:`Application <references-squared-types-base>`
+.. |Application| replace:: :any:`Application <references-squared-base>`

@@ -80,7 +80,7 @@ squared
 
   Redirect stdout messages to DevTools console.
 
-  :param function callback: See :any:`BroadcastMessageCallback <references-squared-types-base-file>`
+  :param function callback: See :any:`BroadcastMessageCallback <references-squared-base-file>`
   :param string socketId: Unique identifier assigned during server initialization
   :returns: boolean
 
@@ -115,7 +115,7 @@ squared
 
   Install application interpreter. (e.g. android.framework.js)
 
-  :param object target: Global object implementing :any:`AppFramework <references-squared-types-base>`
+  :param object target: Global object implementing :any:`AppFramework <references-squared-base>`
   :param object options: (optional) Initialize settings with non-default values
   :param boolean cache: (optional) Load previous cached instance and settings
 
@@ -320,7 +320,7 @@ squared
   :param string type: *css* | *javascript* | *image* | *svg*
   :param boolean all: (*optional*) Accept request from any origin
   :param targets: (optional) URL string or root element of a contained Document
-  :returns: Promise<:any:`PrefetchItem <references-squared-types>`\[\]>
+  :returns: Promise<:any:`PrefetchItem <references-squared-main>`\[\]>
 
   Usage::
 
@@ -780,7 +780,7 @@ squared
 
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
   :param function callback: (*optional*) Method to call when a ``modified`` event is received
-  :param object options: (optional) See :any:`FileObserveOptions <references-squared-types>`
+  :param object options: (optional) See :any:`FileObserveOptions <references-squared-main>`
   :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
 
   Usage::
@@ -802,13 +802,13 @@ squared
     await squared.observeSrc("link[rel=stylesheet]"); // Will call location.reload()
 
 .. |targetElement| replace:: Element target by either an ``id`` string or *HTMLElement*
-.. |Application| replace:: :any:`Application <references-squared-types-base>`
-.. |Node| replace:: :any:`Node <references-squared-types-base>`
-.. |Extension| replace:: :any:`Extension <references-squared-types-base>`
-.. |ResponseData| replace:: Promise<:any:`ResponseData <references-squared-types-base-file>`>
-.. |FileActionOptions| replace:: :any:`FileActionOptions <references-squared-types>`
-.. |ElementSettings| replace:: :any:`ElementSettings <references-squared-types-base>`
-.. |ObserveSocket| replace:: :any:`ObserveSocket <references-squared-types-internal>`
+.. |Application| replace:: :any:`Application <references-squared-base>`
+.. |Node| replace:: :any:`Node <references-squared-base>`
+.. |Extension| replace:: :any:`Extension <references-squared-base>`
+.. |ResponseData| replace:: Promise<:any:`ResponseData <references-squared-base-file>`>
+.. |FileActionOptions| replace:: :any:`FileActionOptions <references-squared-main>`
+.. |ElementSettings| replace:: :any:`ElementSettings <references-squared-base>`
+.. |ObserveSocket| replace:: :any:`ObserveSocket <references-squared-internal>`
 
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelector

@@ -11,6 +11,7 @@ squared 5.1
   settings/index
   methods/index
   document/index
+  references
 
 License
 =======

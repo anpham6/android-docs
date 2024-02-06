@@ -37,28 +37,4 @@ Example usage
     );
   });
 
-References
-----------
-
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/dom.d.ts
-  | ColorRGB
-
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/android/squared.d.ts
-  | RESOURCE
-
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/android/application.d.ts
-  | ThemeAttribute
-
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/android/options.d.ts
-  | AddArrayOptions
-  | AddImageOptions
-  | AddStringOptions
-  | AddThemeOptions
+.. seealso:: :doc:`References </references>` for any non-browser named definitions.

@@ -21,6 +21,7 @@ python:
 
 search:
   ranking:
+    references.html: 10
     methods/*: 10
     settings/*: 9
     document/*: 8
