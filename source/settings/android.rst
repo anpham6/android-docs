@@ -1,4 +1,4 @@
-android
+Android
 =======
 
 Interface
@@ -95,7 +95,7 @@ Interface
       autoLayout?: boolean | string;
   }
 
-  interface ExtensionFragmentElement {
+  interface ExtensionFragmentElement extends Partial<ViewAttribute> {
       selector?: string;
       name?: string;
       tag?: string;
@@ -149,7 +149,7 @@ Example usage
     composableElements: [/* "selector" | "--property" */],
     baseLayoutAsFragment: false, // ExtensionFragmentElement
     baseLayoutAsFragment: "fragment-name",
-    baseLayoutAsFragment: ["fragment-name", "fragment-tag"],
+    baseLayoutAsFragment: ["fragment-name", "fragment-tag", "document_id" /* Optional */],
     baseLayoutToolsIgnore: "", // Android Studio (e.g. "TooManyViews, HardcodedText")
     fontMeasureAdjust: 0.75, // thicker < 0 | thinner > 0
     lineHeightAdjust: 1.1, // shorter < 1 | taller > 1
@@ -283,3 +283,7 @@ Example usage
       "jetpack.compose.view" // enabledCompose
     ]
   };
+
+.. versionadded:: 5.2.0
+
+  - *ExtensionFragmentElement* attributes can be fully customized using the *ViewAttribute* interface.

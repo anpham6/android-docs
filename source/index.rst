@@ -3,13 +3,14 @@ squared 5.1
 ===========
 
 .. toctree::
-   :maxdepth: 1
+  :maxdepth: 1
 
-   installation
-   browser
-   framework/index
-   settings/index
-   methods/index
+  installation
+  browser
+  framework/index
+  settings/index
+  methods/index
+  document/index
 
 License
 =======

@@ -2,7 +2,7 @@
 Browser
 =======
 
-* ES2018
+- ES2018
 
 Download
 ========
@@ -10,31 +10,31 @@ Download
 android
 -------
 
-* https://unpkg.com/squared/dist/squared.min.js
-* https://unpkg.com/squared/dist/squared.base.min.js
-* https://unpkg.com/squared/dist/android.framework.min.js
+- https://unpkg.com/squared/dist/squared.min.js
+- https://unpkg.com/squared/dist/squared.base.min.js
+- https://unpkg.com/squared/dist/android.framework.min.js
 
 chrome
 ------
 
-* https://unpkg.com/squared/dist/squared.min.js
-* https://unpkg.com/squared/dist/squared.base.min.js
-* https://unpkg.com/squared/dist/chrome.framework.min.js
+- https://unpkg.com/squared/dist/squared.min.js
+- https://unpkg.com/squared/dist/squared.base.min.js
+- https://unpkg.com/squared/dist/chrome.framework.min.js
 
 vdom
 ----
 
-* https://unpkg.com/squared/dist/squared.min.js
-* https://unpkg.com/squared/dist/squared.base-dom.min.js
-* https://unpkg.com/squared/dist/vdom.framework.min.js
+- https://unpkg.com/squared/dist/squared.min.js
+- https://unpkg.com/squared/dist/squared.base-dom.min.js
+- https://unpkg.com/squared/dist/vdom.framework.min.js
 
 .. _browser-download-vdom-lite:
 
 vdom-lite
 ---------
 
-* https://unpkg.com/squared/dist/squared.min.js
-* https://unpkg.com/squared/dist/vdom-lite.framework.min.js
+- https://unpkg.com/squared/dist/squared.min.js
+- https://unpkg.com/squared/dist/vdom-lite.framework.min.js
 
 Usage
 =====

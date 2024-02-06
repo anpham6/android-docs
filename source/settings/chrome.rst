@@ -1,7 +1,7 @@
-chrome
+Chrome
 ======
 
-The default settings are for creating static web pages with `E-mc <https://e-mc.readthedocs.io>`_. Any customizations are usually the ``output`` properties.
+The default settings were optimized for creating static web pages with `E-mc <https://e-mc.readthedocs.io>`_. Any customizations are usually the ``output`` properties.
 
 Interface
 ---------

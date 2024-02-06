@@ -1,4 +1,4 @@
-vdom
+VDOM
 ====
 
 A minimal framework (50kb gzipped) that is useful for debugging in DevTools console. The :any:`lite <browser-download-vdom-lite>` version is half the download size and was built for browser applications.

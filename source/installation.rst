@@ -2,7 +2,7 @@
 Installation
 ============
 
-* NodeJS 14
+- NodeJS 14 (Minimum)
 
 NPX
 ===

@@ -1,4 +1,4 @@
-android
+Android
 =======
 
 The primary function ``parseDocument`` can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.
@@ -78,7 +78,16 @@ Example usage
           projectId: "sqd1", // Implicit
           pathname: "app/src/main/res/layout-hdpi", // Will not be overridden by resourceQualifier "land"
           filename: "fragment.xml",
-          baseLayoutAsFragment: true // ["com.example.fragment", "fragment-tag"]
+          baseLayoutAsFragment: true,
+          baseLayoutAsFragment: ["com.example.fragment", "fragment-tag", "document_id"],
+          baseLayoutAsFragment: {
+              name: "androidx.navigation.fragment.NavHostFragment",
+              documentId: "main_content",
+              app: {
+                  navGraph: "@navigation/product_list_graph",
+                  defaultNavHost: "true"
+              }
+          }
         }
       );
       await squared.parseDocument({
@@ -87,7 +96,7 @@ Example usage
         resourceQualifier: "port",
         enabledFragment: true,
         fragmentableElements: [
-          { selector: "main", name: "com.example.fragment", filename: "fragment.xml" }, // document.querySelector
+          { selector: "main", name: "com.example.fragment", filename: "fragment.xml", documentId: "main_content" }, // document.querySelector
           "main > article" // document.querySelectorAll (declarative double nested fragments are invalid)
         ],
         options: {
@@ -115,7 +124,7 @@ Example usage
     });
   </script>
 
-.. code-block:: javascript
+.. code-block::
   :caption: Cross-origin support
 
   squared.prefetch("css").then(() => squared.parseDocument()); // Chromium
@@ -127,14 +136,14 @@ Example usage
   )
   .then(() => squared.parseDocument());
 
-.. code-block:: javascript
+.. code-block::
   :caption: Kill request
 
   squared.kill("30s").then(result => {/* killed when result > 0 */}); // Abort next request in 30 seconds
   /* OR */
   await squared.saveAs(/* archive filename */, { timeout: 10 }); // Kills request if not complete in 10 seconds
 
-.. code-block:: javascript
+.. code-block::
   :caption: Modify attributes
 
   squared.parseDocument().then(() => {
@@ -143,7 +152,7 @@ Example usage
     body.lockAttr("android", "layout_width"); // Optional
   });
 
-.. code-block:: javascript
+.. code-block::
   :caption: Observe element attributes
 
   await squared.parseDocument({
@@ -157,7 +166,7 @@ Example usage
   });
   squared.observe();
 
-.. code-block:: javascript
+.. code-block::
   :caption: Observe element source files
 
   await squared.observeSrc(

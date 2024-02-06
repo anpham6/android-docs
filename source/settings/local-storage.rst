@@ -6,12 +6,12 @@ Custom named user settings per framework can be saved to `local storage <https:/
 Framework
 ---------
 
-.. code-block:: javascript
+.. code-block::
   :caption: Save
 
   squared.setFramework(android, { compressImages: true }, "android-example");
 
-.. code-block:: javascript
+.. code-block::
   :caption: Load
 
   squared.setFramework(android, "android-example");
@@ -19,12 +19,12 @@ Framework
 Output
 ------
 
-.. code-block:: javascript
+.. code-block::
   :caption: Save
 
   await squared.copyTo("/path/project", {/* options saved with JSON.stringify */}, "copy-example", true); // Will overwrite and not merge with previously saved settings
 
-.. code-block:: javascript
+.. code-block::
   :caption: Load
 
   // Local storage

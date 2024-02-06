@@ -1,4 +1,4 @@
-chrome
+Chrome
 ======
 
 You have the same features as the :doc:`vdom` framework but you can also bundle assets using query selector syntax. It is adequate for most applications and gives you the ability to preview your application before building a working copy of it.
@@ -25,25 +25,22 @@ Example usage
     });
   </script>
 
-.. code-block:: javascript
+.. code-block::
   :caption: Observe element [#]_
 
-  await squared.copyTo(/* directory */, { useOriginalHtmlPage: false, observe: true })
-    .then(() => {
-      squared.observe(); // Watch all events
-      /* OR */
-      squared.observe({
-        subtree: true,
-        childList: true,
-        attributes: true,
-        characterData: true,
-        attributeOldValue: true,
-        characterDataOldValue: true
-      });
-      /* OR */
-      squared.observe(false);
+  await squared.copyTo(/* directory */, { useOriginalHtmlPage: false, observe: true }).then(() => {
+    squared.observe(); // Watch all events
+    /* OR */
+    squared.observe({
+      subtree: true,
+      childList: true,
+      attributes: true,
+      characterData: true,
+      attributeOldValue: true,
+      characterDataOldValue: true
     });
-
-.. tip:: *chrome* is the reference framework for the `E-mc <https://e-mc.readthedocs.io>`_ documentation.
+    /* OR */
+    squared.observe(false);
+  });
 
 .. [#] https://developer.mozilla.org/docs/Web/API/MutationObserver/observe#options

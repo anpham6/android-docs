@@ -3,8 +3,8 @@ Framework
 =========
 
 .. toctree::
-   :maxdepth: 1
+  :maxdepth: 1
 
-   android
-   chrome
-   vdom
+  android
+  chrome
+  vdom

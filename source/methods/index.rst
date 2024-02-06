@@ -3,9 +3,9 @@ Methods
 =======
 
 .. toctree::
-   :maxdepth: 1
+  :maxdepth: 1
 
-   interface
-   squared
-   android
-   chrome
+  interface
+  squared
+  android
+  chrome

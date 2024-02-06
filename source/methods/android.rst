@@ -51,7 +51,7 @@ android
   :returns: string
 
   :requirements:
-    * **createBuildDependencies** = *true*
+    - **createBuildDependencies** = *true*
 
   .. code-block:: typescript
     :caption: android.lib.constant
@@ -92,7 +92,7 @@ android
   :returns: string
 
   :requirements:
-    * **createBuildDependencies** = *true*
+    - **createBuildDependencies** = *true*
 
   Usage::
 
@@ -115,8 +115,8 @@ android
   :returns: boolean | Promise<boolean>
 
   :requirements:
-    * **targetAPI** >= *26*
-    * **createDownloadableFonts** = *true*
+    - **targetAPI** >= *26*
+    - **createDownloadableFonts** = *true*
 
   Usage::
 
@@ -162,8 +162,8 @@ android
   :returns: Record<string, Record<string, string>> | undefined
 
   :requirements:
-    * **customizationsBaseAPI** >= *0*
-    * **customizationsOverwritePrivilege** = *true*
+    - **customizationsBaseAPI** >= *0*
+    - **customizationsOverwritePrivilege** = *true*
 
   .. code-block:: typescript
     :caption: android.lib.constant
