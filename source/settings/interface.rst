@@ -1,3 +1,4 @@
+=========
 Interface
 =========
 
@@ -56,7 +57,7 @@ These settings are available in the global variable ``squared`` to customize you
 .. seealso:: :doc:`References </references>` for any non-browser named definitions.
 
 Global
-------
+======
 
 .. code-block:: typescript
   :caption: Required

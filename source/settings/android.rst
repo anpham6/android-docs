@@ -1,8 +1,9 @@
+=======
 Android
 =======
 
 Interface
----------
+=========
 
 .. code-block:: typescript
 
@@ -57,7 +58,7 @@ Interface
 .. seealso:: :doc:`References </references>` for any non-browser named definitions.
 
 Example usage
--------------
+=============
 
 .. code-block:: typescript
   :caption: Customizable (project/all)

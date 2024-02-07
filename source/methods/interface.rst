@@ -1,8 +1,9 @@
+=========
 Interface
 =========
 
 squared
--------
+=======
 
 .. rst-class:: section-caption
 
@@ -133,7 +134,7 @@ squared
   function observeSrc(element: HTMLElement | string, callback: (ev: MessageEvent, target: HTMLElement) => void, options?: FileObserveOptions): Promise<ObserveSocket | ObserveSocket[]>;
 
 android
--------
+=======
 
 .. code-block:: typescript
 
@@ -154,7 +155,7 @@ android
   }
 
 chrome
-------
+======
 
 .. code-block:: typescript
 

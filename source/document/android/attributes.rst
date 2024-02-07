@@ -1,10 +1,11 @@
+=================
 Custom Attributes
 =================
 
 System or extension generated attributes can be overridden preceding finalization. They will only be visible on the declared framework.
 
 Method
-------
+======
 
 .. code-block::
 
@@ -16,7 +17,7 @@ Method
   });
 
 Inline
-------
+======
 
 .. code-block:: none
 

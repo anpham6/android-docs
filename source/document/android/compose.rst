@@ -1,10 +1,11 @@
+===============
 Jetpack Compose
 ===============
 
 Most mobile applications do not have a deeply nested hierarchy and are generally better to implement using declarative programming.
 
 Method
-------
+======
 
 .. code-block::
 
@@ -41,7 +42,7 @@ You can also do it using the "android.substitute" extension directly inside the 
   });
 
 Inline
-------
+======
 
 .. code-block:: html
   :emphasize-lines: 4,5

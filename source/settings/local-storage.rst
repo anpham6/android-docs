@@ -1,10 +1,11 @@
+=============
 Local Storage
 =============
 
 Custom named user settings per framework can be saved to `local storage <https://developer.mozilla.org/docs/Web/API/Window/localStorage>`_ and reloaded across all pages in the same domain. Extensions are configured using the same procedure.
 
 Framework
----------
+=========
 
 .. code-block::
   :caption: Save
@@ -17,7 +18,7 @@ Framework
   squared.setFramework(android, "android-example");
 
 Output
-------
+======
 
 .. code-block::
   :caption: Save

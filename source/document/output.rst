@@ -192,6 +192,8 @@ Interface
       unusedAtRules?: UnusedAtRule[];
   }
 
+.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+
 Example usage
 -------------
 
@@ -206,5 +208,3 @@ Example usage
     retainUsedStyles: [/^a:[a-z]/i, "--property-name"],
     excluding: Array.from(document.querySelectorAll("video, audio"))
   });
-
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.

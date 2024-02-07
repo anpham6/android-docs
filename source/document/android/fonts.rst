@@ -1,3 +1,4 @@
+==================
 Downloadable Fonts
 ==================
 
@@ -11,7 +12,7 @@ Google Fonts [#]_ are pre-installed and can be used without any additional confi
 .. seealso:: https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
 
 Enable
-------
+======
 
 .. code-block::
   :caption: Install and build
@@ -28,7 +29,7 @@ Enable
 .. note:: *WOFF2* format is supported as a local resource font.
 
 Output
-^^^^^^
+------
 
 .. code-block:: xml
   :caption: AndroidManifest.xml
@@ -47,7 +48,7 @@ Output
   }
 
 Disable
--------
+=======
 
 .. code-block::
 

@@ -1,8 +1,9 @@
+==============
 SVG Animations
 ==============
 
 Initialize
-----------
+==========
 
 Animations are usually started before ``parseDocument`` can read the initial values once the *DOMContentLoaded* event has fired. Inline hints are required in order to recreate the non-CSS initial values which are lost once they are dynamically altered by the native SVG.
 
@@ -28,7 +29,7 @@ Animations are usually started before ``parseDocument`` can read the initial val
   </svg>
 
 Play
-----
+====
 
 Only the XML based layout and resource files can be viewed on the Android device/emulator without any Java/Kotlin backend code. To play animations in the emulator you also have to ``start`` the animation in *MainActivity.java*.
 

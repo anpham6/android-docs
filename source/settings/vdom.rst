@@ -1,15 +1,16 @@
+====
 VDOM
 ====
 
 Interface
----------
+=========
 
 .. code-block:: typescript
 
   import type { UserSettings } from "./interface";
 
 Example usage
--------------
+=============
 
 .. code-block:: typescript
   :caption: Global

@@ -1,3 +1,4 @@
+=======
 Android
 =======
 
@@ -6,7 +7,7 @@ The primary function ``parseDocument`` can be called on multiple elements and mu
 .. warning:: Calling "save" or "copy" methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use **parseDocument.then** to set a callback for your commands and not **parseDocumentSync**.
 
 Example usage
--------------
+=============
 
 .. code-block:: html
 

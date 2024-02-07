@@ -1,3 +1,4 @@
+==========
 Exclusions
 ==========
 
@@ -6,7 +7,7 @@ Most attributes can be excluded from the generated XML. One or more exclusions c
 .. tip:: Defining an element ``id`` will prevent it from being removed during the optimization phase.
 
 Interface
----------
+=========
 
 .. code-block:: typescript
   :caption: squared.lib.base.constant
@@ -43,7 +44,7 @@ Interface
   }
 
 Method
-------
+======
 
 .. code-block::
 
@@ -70,7 +71,7 @@ Method
     });
 
 Inline
-------
+======
 
 .. code-block:: html
 

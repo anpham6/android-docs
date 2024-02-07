@@ -1,10 +1,11 @@
+=========
 Resources
 =========
 
 Projects can include additional values which may have missed detection and are required during compilation.
 
 Interface
----------
+=========
 
 .. code-block:: typescript
 
@@ -18,7 +19,7 @@ Interface
   }
 
 Example usage
--------------
+=============
 
 .. code-block::
 
