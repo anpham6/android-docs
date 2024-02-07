@@ -13,7 +13,7 @@ Interface
       static addTheme(resourceId: number, theme: ThemeAttribute, options?: AddThemeOptions): boolean;
       static addString(resourceId: number, value: string, name?: string, options?: AddStringOptions): string;
       static addArray(resourceId: number, name: string, items: string[], options?: AddArrayOptions): string;
-      static addImage(resourceId: number, images: Record<string, string>, options?: AddImageOptions): string;
+      static addImage(resourceId: number, images: StringMap, options?: AddImageOptions): string;
       static addColor(resourceId: number, value: ColorRGB | string, transparency?: boolean): string;
       static addDimen(resourceId: number, name: string, value: string): string;
   }

@@ -171,8 +171,7 @@ squared
       this.classList.toggle("example");
     });
 
-    // squared.base.lib.constant
-    squared.extend({ _preferInitial: true }, APP_FRAMEWORK.VDOM /* 1 */ | APP_FRAMEWORK.CHROME /* 4 */);
+    squared.extend({ _preferInitial: true }, APP_FRAMEWORK.VDOM /* 1 */ | APP_FRAMEWORK.CHROME /* 4 */); // squared.base.lib.constant
     squared.setFramework(chrome);
 
 .. function:: clear()

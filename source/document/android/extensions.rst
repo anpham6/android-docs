@@ -42,9 +42,9 @@ Interface
 
   interface ExtensionSubstituteOptions {
       element: Record<string, ExtensionAttributeElement>;
-      resource: Record<string, unknown>;
+      resource: PlainObject;
       viewAttributes: string[];
-      attributeMapping: Record<string, string>;
+      attributeMapping: StringMap;
   }
 
 .. code-block:: typescript

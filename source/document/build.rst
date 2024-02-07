@@ -32,18 +32,6 @@ Interface
       filter?: (item: FileAsset, index: number, array: FileAsset[]) => unknown;
   }
 
-  interface FileCopyingOptions extends FileActionOptions {
-      pathname?: string;
-      emptyDir?: boolean;
-      modified?: boolean;
-  }
-
-  interface FileArchivingOptions extends FileActionOptions {
-      filename?: string;
-      format?: string;
-      copyTo?: string;
-  }
-
   interface RequestData {
       projectId?: string;
       assets?: FileAsset[];
@@ -54,16 +42,30 @@ Interface
       update?: WatchInterval;
       incremental?: boolean | IncrementalMatch;
       checksum?: string | boolean | 1 | ChecksumOutput;
-      imports?: Record<string, string>;
+      imports?: StringMap;
       headers?: OutgoingHeaders;
       watch?: boolean;
-      cache?: boolean | Record<string, unknown>;
+      cache?: boolean | PlainObject;
       log?: boolean | string | string[] | LogOptions;
       baseUrl?: string;
       priority?: number;
       broadcastId?: string | string[];
       error?: { abort?: boolean | string | string[]; fatal?: boolean };
       ignoreExtensions?: boolean | string | string[];
+  }
+
+.. code-block:: typescript
+
+  interface FileCopyingOptions extends FileActionOptions {
+      pathname?: string;
+      emptyDir?: boolean;
+      modified?: boolean;
+  }
+
+  interface FileArchivingOptions extends FileActionOptions {
+      filename?: string;
+      format?: string;
+      copyTo?: string;
   }
 
 Android
@@ -91,7 +93,7 @@ Interface
       versionCode?: number;
       dataBinding?: boolean;
       commands?: string | string[] | (string | string[])[];
-      extensionData?: Record<string, Record<string, unknown>>;
+      extensionData?: Record<string, PlainObject>;
   }
 
 Example usage

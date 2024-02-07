@@ -26,11 +26,11 @@ squared
 .. code-block:: typescript
   :caption: Framework
 
-  function setFramework(value: Application, options?: Record<string, unknown>, cache?: boolean): void;
+  function setFramework(value: Application, options?: PlainObject, cache?: boolean): void;
   function setFramework(value: Application, loadAs: string, cache?: boolean): void;
-  function setFramework(value: Application, options?: Record<string, unknown>, saveAs?: string, cache?: boolean): void;
+  function setFramework(value: Application, options?: PlainObject, saveAs?: string, cache?: boolean): void;
 
-  function extend(functionMap: Record<string, unknown>, framework?: number): void;
+  function extend(functionMap: PlainObject, framework?: number): void;
   function clear(): void;
 
 .. rst-class:: section-caption
@@ -44,7 +44,7 @@ squared
   function attr(name: ExtensionRequest, attrName: string, value?: unknown): unknown;
 
   function apply(value: ExtensionRequest, saveAs: string): boolean;
-  function apply(value: ExtensionRequest, options: Record<string, unknown>, saveAs?: string): boolean;
+  function apply(value: ExtensionRequest, options: PlainObject, saveAs?: string): boolean;
 
 .. rst-class:: section-caption
 
@@ -145,7 +145,7 @@ android
       addDependencyByProject(projectId: string, group: string, name: string, version?: number | string, type?: number | boolean, overwrite?: boolean): string;
       addFontProvider(authority: string, package: string, certs: string[], webFonts: string | FontProviderFonts): boolean | Promise<boolean>;
       addXmlNs(name: string, uri: string): void;
-      customize(api: number, widget: string, options: Record<string, Record<string, string>>): Record<string, Record<string, string>> | undefined;
+      customize(api: number, widget: string, options: Record<string, StringMap>): Record<string, StringMap> | undefined;
       loadCustomizations(name: string): void;
       saveCustomizations(name: string): void;
       resetCustomizations(): void;

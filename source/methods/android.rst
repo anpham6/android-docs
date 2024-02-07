@@ -143,7 +143,7 @@ android
   :param number api: Android SDK build API version
   :param string widget: Namespace of layout control
   :param object options: Attributes to be applied to control
-  :returns: Record<string, Record<string, string>> | undefined
+  :returns: Record<string, StringMap> | undefined
 
   :requirements:
     - **customizationsBaseAPI** >= *0*

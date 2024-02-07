@@ -7,6 +7,13 @@ References
 squared
 =======
 
+.. _references-squared-type:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/type.d.ts
+  | `PlainObject <search.html?q=PlainObject>`_
+  | `StringMap <search.html?q=StringMap>`_
+
 .. _references-squared-main:
 .. rst-class:: block-list
 
@@ -73,6 +80,18 @@ https://unpkg.com/squared/types/base/file.d.ts
 https://unpkg.com/squared/types/svg/object.d.ts
   | `SvgTransformExclude <search.html?q=SvgTransformExclude>`_
 
+.. _references-squared-types-dom:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/dom.d.ts
+  | `ColorRGB <search.html?q=ColorRGB>`_
+
+.. _references-squared-types-lib-data:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/lib/data.d.ts
+  | `UserAgentData <search.html?q=UserAgentData>`_
+
 .. _references-squared-internal:
 .. rst-class:: block-list
 
@@ -82,7 +101,7 @@ https://unpkg.com/squared/types/internal/squared.d.ts
 .. _references-android:
 
 Android
--------
+=======
 
 .. _references-android-main:
 .. rst-class:: block-list
@@ -179,23 +198,6 @@ https://unpkg.com/squared/types/chrome/file.d.ts
 
 https://unpkg.com/squared/types/chrome/options.d.ts
   | `SaveAsOptions <search.html?q=SaveAsOptions>`_
-
-.. _references-objects:
-
-Objects
-=======
-
-.. _references-squared-types-dom:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/dom.d.ts
-  | `ColorRGB <search.html?q=ColorRGB>`_
-
-.. _references-squared-types-lib-data:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/lib/data.d.ts
-  | `UserAgentData <search.html?q=UserAgentData>`_
 
 .. _references-mdn:
 

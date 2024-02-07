@@ -23,8 +23,9 @@ search:
   ranking:
     methods/*: 10
     settings/*: 9
-    document/*: 8
-    framework/*: 7
+    document/android/*: 9
+    framework/*: 8
+    document/*: 7
     references.html: 5
     "*/interface.html": 0
     browser.html: -1
