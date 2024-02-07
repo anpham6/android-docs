@@ -12,6 +12,7 @@ squared 5.1
   methods/index
   document/index
   references
+  versions
 
 License
 =======
