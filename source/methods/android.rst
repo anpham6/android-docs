@@ -302,7 +302,7 @@ android
 
   Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to ``parseDocument``.
 
-  :returns: :any:`ControllerSettingsUI <references-android-application>`
+  :returns: :ref:`ControllerSettingsUI <references-android-application>`
 
   Usage::
 
@@ -316,7 +316,7 @@ android
 
   Forwards the target element to |Application| which will stop it from being monitored for changes.
 
-  :param element: HTMLElement instance
+  :param element: *HTMLElement* instance
 
   :returns: boolean
 
@@ -330,5 +330,5 @@ android
     android.removeObserver(document.body);
 
 .. |projectId| replace:: Names a project to be used for storage
-.. |AppViewModel| replace:: :any:`AppViewModel <references-android-main>`
-.. |Application| replace:: :any:`Application <references-squared-base>`
+.. |AppViewModel| replace:: :ref:`AppViewModel <references-android-main>`
+.. |Application| replace:: :ref:`Application <references-squared-base>`

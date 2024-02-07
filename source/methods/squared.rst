@@ -81,7 +81,7 @@ squared
 
   Redirect stdout messages to DevTools console.
 
-  :param function callback: See :any:`BroadcastMessageCallback <references-squared-base-file>`
+  :param function callback: See :ref:`BroadcastMessageCallback <references-squared-base-file>`
   :param string socketId: Unique identifier assigned during server initialization
   :returns: boolean
 
@@ -116,7 +116,7 @@ squared
 
   Install application interpreter. (e.g. android.framework.js)
 
-  :param object target: Global object implementing :any:`AppFramework <references-squared-base>`
+  :param object target: Global object implementing :ref:`AppFramework <references-squared-base>`
   :param object options: (optional) Initialize settings with non-default values
   :param boolean cache: (optional) Load previous cached instance and settings
 
@@ -139,7 +139,7 @@ squared
   Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the get/set object syntax.
 
   :param object map: Attribute object consisting of extensions and overrides
-  :param number framework: (optional) See :any:`APP_FRAMEWORK <references-squared-base>`
+  :param number framework: (optional) See :ref:`APP_FRAMEWORK <references-squared-base>`
 
   Usage::
 
@@ -311,7 +311,7 @@ squared
   :param string type: *css* | *javascript* | *image* | *svg*
   :param boolean all: (*optional*) Accept request from any origin
   :param targets: (optional) URL string or root element of a contained Document
-  :returns: Promise<:any:`PrefetchItem <references-squared-main>`\[\]>
+  :returns: Promise<:ref:`PrefetchItem <references-squared-main>`\[\]>
 
   Usage::
 
@@ -731,7 +731,7 @@ squared
 
 .. function:: observe([enable = true])
 
-  Uses :any:`MutationObserver <references-mdn-mutationobserver-observe>` to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
+  Uses :ref:`MutationObserver <references-mdn-mutationobserver-observe>` to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
 
   :param boolean enable: (optional) Start or stop all root elements who are monitoring
 
@@ -771,7 +771,7 @@ squared
 
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
   :param function callback: (*optional*) Method to call when a ``modified`` event is received
-  :param object options: (optional) See :any:`FileObserveOptions <references-squared-main>`
+  :param object options: (optional) See :ref:`FileObserveOptions <references-squared-main>`
   :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
 
   Usage::
@@ -793,13 +793,13 @@ squared
     await squared.observeSrc("link[rel=stylesheet]"); // Will call location.reload()
 
 .. |targetElement| replace:: Element target by either an ``id`` string or *HTMLElement*
-.. |Application| replace:: :any:`Application <references-squared-base>`
-.. |Node| replace:: :any:`Node <references-squared-base>`
-.. |Extension| replace:: :any:`Extension <references-squared-base>`
-.. |ResponseData| replace:: Promise<:any:`ResponseData <references-squared-base-file>`>
-.. |FileActionOptions| replace:: :any:`FileActionOptions <references-squared-main>`
-.. |ElementSettings| replace:: :any:`ElementSettings <references-squared-base>`
-.. |ObserveSocket| replace:: :any:`ObserveSocket <references-squared-internal>`
+.. |Application| replace:: :ref:`Application <references-squared-base>`
+.. |Node| replace:: :ref:`Node <references-squared-base>`
+.. |Extension| replace:: :ref:`Extension <references-squared-base>`
+.. |ResponseData| replace:: Promise<:ref:`ResponseData <references-squared-base-file>`>
+.. |FileActionOptions| replace:: :ref:`FileActionOptions <references-squared-main>`
+.. |ElementSettings| replace:: :ref:`ElementSettings <references-squared-base>`
+.. |ObserveSocket| replace:: :ref:`ObserveSocket <references-squared-internal>`
 
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelector

@@ -28,6 +28,7 @@ https://unpkg.com/squared/types/base/squared.d.ts
   | AppFramework
   | Application
   | ElementSettings
+  | Extension
   | FileActionResult
   | MutationCallback
   | Node
@@ -114,6 +115,13 @@ https://unpkg.com/squared/types/android/extension.d.ts:
   | ExtensionSubtituteElement
   | ExtensionViewModelElement
 
+.. _references-android-node:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/node.d.ts
+  | NamingStyles
+  | ViewAttribute
+
 .. _references-android-options:
 .. rst-class:: block-list
 
@@ -122,13 +130,6 @@ https://unpkg.com/squared/types/android/options.d.ts
   | AddImageOptions
   | AddStringOptions
   | AddThemeOptions
-
-.. _references-android-node:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/android/node.d.ts
-  | NamingStyles
-  | ViewAttribute
 
 .. _references-chrome:
 

@@ -69,7 +69,7 @@ Global
     createElementMap: false // Cache querySelector results for subsequent queries
   };
 
-.. note:: The native ``document.querySelector`` does not enter :any:`ShadowRoot <references-mdn-shadowroot>` elements.
+.. note:: The native ``document.querySelector`` does not enter :ref:`ShadowRoot <references-mdn-shadowroot>` elements.
 
 .. code-block:: typescript
   :caption: Optional

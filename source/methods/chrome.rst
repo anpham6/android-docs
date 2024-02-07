@@ -8,7 +8,7 @@ chrome
 
   Forwards the target element to |Application| which will stop it from being monitored for changes.
 
-  :param element: HTMLElement instance
+  :param element: *HTMLElement* instance
 
   :returns: boolean
 
@@ -22,4 +22,4 @@ chrome
 
     chrome.removeObserver(document.body);
 
-.. |Application| replace:: :any:`Application <references-squared-base>`
+.. |Application| replace:: :ref:`Application <references-squared-base>`
