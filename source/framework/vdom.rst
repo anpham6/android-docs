@@ -2,7 +2,7 @@
 VDOM
 ====
 
-A minimal framework (50kb gzipped) that is useful for debugging in DevTools console. The :ref:`lite <browser-download-vdom-lite>` version is half the download size and was built for browser applications.
+A minimal framework (50kb gzipped) that is useful for debugging in `DevTools <https://developer.chrome.com/docs/devtools>`_ console. The :ref:`lite <browser-download-vdom-lite>` version is half the download size and was built for browser applications.
 
 Example usage
 =============
@@ -32,10 +32,12 @@ Example usage
   <script src="/dist/vdom-lite.framework.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      squared.setFramework(vdom, {/* settings */});
+      squared.setFramework(vdom);
 
       const element = squared.querySelector("body", true); // Synchronous
       /* OR */
       const element = squared.fromElement(document.body, true);
     });
   </script>
+
+.. tip:: Synchronous is the recommended way to query when you are not concerned with image dimensions.

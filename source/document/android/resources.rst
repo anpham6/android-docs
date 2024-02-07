@@ -18,7 +18,7 @@ Interface
       static addDimen(resourceId: number, name: string, value: string): string;
   }
 
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
 
 Example usage
 =============

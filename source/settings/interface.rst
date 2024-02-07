@@ -54,7 +54,7 @@ These settings are available in the global variable ``squared`` to customize you
       resolutionScreenHeight?: number;
   }
 
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
 
 Global
 ======

@@ -55,7 +55,7 @@ Interface
 .. versionadded:: 5.2.0
   *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
 
 Example usage
 =============

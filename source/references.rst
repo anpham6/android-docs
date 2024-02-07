@@ -62,6 +62,7 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `IncrementalMatch <search.html?q=IncrementalMatch>`_
   | `LogOptions <search.html?q=LogOptions>`_
   | `OutgoingHeaders <search.html?q=OutgoingHeaders>`_
+  | `RequestData <search.html?q=RequestData>`_
   | `ResponseData <search.html?q=ResponseData>`_
   | `WatchInterval <search.html?q=WatchInterval>`_
   | `WebSocketClient <search.html?q=WebSocketClient>`_
@@ -115,6 +116,12 @@ https://unpkg.com/squared/types/android/resource.d.ts:
   | `FontProviderFonts <search.html?q=FontProviderFonts>`_
   | `ManifestData <search.html?q=ManifestData>`_
 
+.. _references-android-file:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/file.d.ts
+  | `DocumentOutput <search.html?q=DocumentOutput>`_
+
 .. _references-android-extension:
 .. rst-class:: block-list
 
@@ -163,6 +170,8 @@ https://unpkg.com/squared/types/chrome/application.d.ts
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/chrome/file.d.ts
+  | `DocumentOutput <search.html?q=DocumentOutput>`_
+  | `RequestData <search.html?q=RequestData>`_
   | `UnusedAtRule <search.html?q=UnusedAtRule>`_
 
 .. _references-chrome-options:

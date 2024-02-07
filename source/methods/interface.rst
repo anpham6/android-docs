@@ -163,4 +163,4 @@ chrome
       removeObserver(element: HTMLElement): boolean;
   }
 
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+.. seealso:: For any non-browser named definitions check :doc:`References </references>`.

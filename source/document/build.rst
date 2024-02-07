@@ -3,11 +3,11 @@ Build Options
 =============
 
 :squared:
-    - FileActionOptions
+    - |FileActionOptions|
 
 :squared-express:
-    - DocumentOutput
-    - RequestData
+    - |DocumentOutput|
+    - |RequestData|
 
 Interface
 =========
@@ -192,7 +192,7 @@ Interface
       unusedAtRules?: UnusedAtRule[];
   }
 
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
 
 Example usage
 -------------
@@ -208,3 +208,7 @@ Example usage
     retainUsedStyles: [/^a:[a-z]/i, "--property-name"],
     excluding: Array.from(document.querySelectorAll("video, audio"))
   });
+
+.. |FileActionOptions| replace:: :ref:`FileActionOptions <references-squared-main>`
+.. |DocumentOutput| replace:: :ref:`DocumentOutput <references-android-file>`
+.. |RequestData| replace:: :ref:`RequestData <references-squared-base-file>`
