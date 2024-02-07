@@ -3,6 +3,14 @@
     text-align: left;
 }
 
+.rst-content dl[class] > dt {
+    border-top-color: slategray !important;
+}
+
+.rst-content dl[class] .descclassname {
+    display: none;
+}
+
 .section-caption .code-block-caption {
     font-size: 100%;
     font-weight: 700;
