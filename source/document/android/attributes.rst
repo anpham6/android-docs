@@ -31,7 +31,7 @@ Inline
   </div>
 
 .. code-block:: xml
-  :caption: output
+  :caption: Output
 
   <LinearLayout
     android:id="@+id/customId"

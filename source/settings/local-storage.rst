@@ -2,7 +2,7 @@
 Local Storage
 =============
 
-Custom named user settings per framework can be saved to `local storage <https://developer.mozilla.org/docs/Web/API/Window/localStorage>`_ and reloaded across all pages in the same domain. Extensions are configured using the same procedure.
+Custom named user settings per framework can be saved to `local storage <https://developer.mozilla.org/docs/Web/API/Window/localStorage>`_ as JSON and reused across all pages in the same domain. Extensions are configured using the same procedure.
 
 Framework
 =========
@@ -23,7 +23,7 @@ Output
 .. code-block::
   :caption: Save
 
-  await squared.copyTo("/path/project", {/* options saved with JSON.stringify */}, "copy-example", true); // Will overwrite and not merge with previously saved settings
+  await squared.copyTo("/path/project", {/* options */}, "copy-example", true); // Will overwrite when "true" and not merge with previously saved settings
 
 .. code-block::
   :caption: Load

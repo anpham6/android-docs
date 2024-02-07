@@ -66,6 +66,12 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `WatchInterval <search.html?q=WatchInterval>`_
   | `WebSocketClient <search.html?q=WebSocketClient>`_
 
+.. _references-squared-svg-object:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/svg/object.d.ts
+  | `SvgTransformExclude <search.html?q=SvgTransformExclude>`_
+
 .. _references-squared-internal:
 .. rst-class:: block-list
 
@@ -113,6 +119,7 @@ https://unpkg.com/squared/types/android/resource.d.ts:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/android/extension.d.ts:
+  | `ExtensionAttributeElement <search.html?q=ExtensionAttributeElement>`_
   | `ExtensionFragmentElement <search.html?q=ExtensionFragmentElement>`_
   | `ExtensionIncludeElement <search.html?q=ExtensionIncludeElement>`_
   | `ExtensionSubtituteElement <search.html?q=ExtensionSubtituteElement>`_

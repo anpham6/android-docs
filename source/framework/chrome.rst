@@ -27,7 +27,7 @@ Example usage
   </script>
 
 .. code-block::
-  :caption: Observe element [#]_
+  :caption: Observe element
 
   await squared.copyTo("/path/project", { useOriginalHtmlPage: false, observe: true }).then(() => {
     squared.observe(); // Watch all events
@@ -43,5 +43,3 @@ Example usage
     /* OR */
     squared.observe(false);
   });
-
-.. [#] https://developer.mozilla.org/docs/Web/API/MutationObserver/observe#options

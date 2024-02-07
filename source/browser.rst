@@ -39,7 +39,7 @@ vdom-lite
 Usage
 =====
 
-Library files are in the ``/dist`` folder. A minimum of *two* files are required to run **squared**.
+Library files are in the ``/dist`` folder. A minimum of **two** files are required to run **squared**.
 
 #. squared
 #. squared-base - *required* [#]_
@@ -49,7 +49,7 @@ Library files are in the ``/dist`` folder. A minimum of *two* files are required
 
 Usable combinations: 1-2-4 + 1-2-4-5 + 1-2-3-4-5 + 1-vdom-lite
 
-File bundles for common combinations are available in the ``/dist/bundles`` folder and do not require a call to **setFramework**.
+File bundles for common combinations are available in the ``/dist/bundles`` folder and do not require a call to *setFramework*.
 
 .. [#] android | chrome | vdom
 .. [#] android

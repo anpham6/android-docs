@@ -31,9 +31,10 @@ Animations are usually started before ``parseDocument`` can read the initial val
 Play
 ====
 
-Only the XML based layout and resource files can be viewed on the Android device/emulator without any Java/Kotlin backend code. To play animations in the emulator you also have to ``start`` the animation in *MainActivity.java*.
+Only the XML based layout and resource files can be viewed on the Android device/emulator without any Java/Kotlin backend code. To play animations in the emulator you also have to **start** the animation in *MainActivity.java*.
 
 .. code-block:: java
+  :emphasize-lines: 6
 
   import android.graphics.drawable.Animatable;
 

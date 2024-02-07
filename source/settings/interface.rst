@@ -92,4 +92,4 @@ Global
     broadcastSecurePort: 3443
   };
 
-.. note:: These optional settings are not available in the :doc:`vdom <vdom>` framework.
+.. note:: These optional settings are not available in the :doc:`vdom` framework.

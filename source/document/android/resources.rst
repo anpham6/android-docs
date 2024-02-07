@@ -18,6 +18,8 @@ Interface
       static addDimen(resourceId: number, name: string, value: string): string;
   }
 
+.. seealso:: :doc:`References </references>` for any non-browser named definitions.
+
 Example usage
 =============
 
@@ -37,5 +39,3 @@ Example usage
       { pathname: "res/values", filename: "theme.xml" }
     );
   });
-
-.. seealso:: :doc:`References </references>` for any non-browser named definitions.

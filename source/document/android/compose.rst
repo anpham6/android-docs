@@ -12,7 +12,7 @@ Method
   squared.settings.composableElements = ["main", "#content", "--boxShadow", "--height=300px"];
   squared.settings.createBuildDependencies = true; // Optional
 
-You can also do it using the "android.substitute" extension directly inside the HTML element.
+You can also do it using the ``android.substitute`` extension directly inside the HTML element.
 
 .. code-block::
 
@@ -25,8 +25,8 @@ You can also do it using the "android.substitute" extension directly inside the 
   const items = squared.attr("android.substitute", "viewAttributes");
   items.push("hint", "buttonTint");
   squared.attr("android.substitute", "attributeMapping", {
-    "android:src": "app:srcCompat" /* app */,
-    "icon": "navigationIcon" /* android */
+    "android:src": "app:srcCompat", // Rename
+    "icon": "navigationIcon" // Set "android:icon"
   });
 
   squared.parseDocument({
@@ -36,7 +36,7 @@ You can also do it using the "android.substitute" extension directly inside the 
       tag: "androidx.compose.ui.platform.ComposeView",
       renderChildren: false
     }],
-    enabledSubstitute: true, // Some extensions have convenience properties
+    enabledSubstitute: true, // Disabled built-in extensions have convenience toggles
     /* OR */
     include: ["android.substitute"]
   });

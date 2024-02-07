@@ -2,20 +2,10 @@
 Layout Includes
 ===============
 
-Some applications can benefit from using includes or merge tags to share common templates. Merge is the default behavior and can be disabled using the "false" attribute value. Nested includes are also supported.
+Some applications can benefit from using includes or merge tags to share common templates. Nested includes are also supported.
 
-.. code-block:: html
-  :emphasize-lines: 6
-
-  <div>
-    <div id="item1">Item 1</div>
-    <div id="item2" data-android-include-start="true" data-android-include-merge="true" data-pathname-android="app/src/main/res/layout-land" data-filename-android="filename1.xml">Item 2</div>
-    <div id="item3">Item 3</div>
-    <div id="item4" data-android-include-end="true">Item 4</div>
-    <div id="item5" data-android-include="filename2" data-android-include-end="true" data-android-include-viewmodel="exampleData">Item 5</div>
-  </div>
-
-.. tip:: **data-pathname-android** AND **data-filename-android** can also be used with any ``parseDocument`` root element.
+Method
+======
 
 .. code-block::
   :emphasize-lines: 3,24
@@ -50,8 +40,25 @@ Some applications can benefit from using includes or merge tags to share common 
 
 .. note:: By *sessionId* has precedence when associating a view model.
 
+Inline
+======
+
+.. code-block:: html
+  :emphasize-lines: 6
+
+  <div>
+    <div id="item1">Item 1</div>
+    <div id="item2" data-android-include-start="true" data-android-include-merge="true" data-pathname-android="app/src/main/res/layout-land" data-filename-android="filename1.xml">Item 2</div>
+    <div id="item3">Item 3</div>
+    <div id="item4" data-android-include-end="true">Item 4</div>
+    <div id="item5" data-android-include="filename2" data-android-include-end="true" data-android-include-viewmodel="exampleData">Item 5</div>
+  </div>
+
+.. tip:: **data-pathname-android** AND **data-filename-android** can also be used with any ``parseDocument`` root element.
+
 .. code-block:: xml
   :caption: Output
+  :emphasize-lines: 5,18
 
   <!-- res/layout/activity_main.xml -->
   <LinearLayout>

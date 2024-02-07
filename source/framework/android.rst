@@ -4,7 +4,7 @@ Android
 
 The primary function ``parseDocument`` can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.
 
-.. warning:: Calling **save** or **copy** methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use ``parseDocument.then`` to set a callback for your commands and not ``parseDocumentSync``.
+.. warning:: Calling **save** or **copy** methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous :code:`await parseDocument()` or :code:`parseDocument().then()` for your commands and not ``parseDocumentSync``.
 
 Example usage
 =============
@@ -108,11 +108,11 @@ Example usage
         }
       });
 
-      await squared.close(/* projectId? */); // Next call to "parseDocument" will reset project (optional)
+      await squared.close("project-1"); // Next call to "parseDocument" will reset project (optional)
 
       // File actions - implicitly calls "close"
 
-      await squared.save(/* projectId? */, /* broadcastId | timeout */); // Uses defaults from settings
+      await squared.save(); // Uses defaults from settings
       /* OR */
       await squared.saveAs("project.zip", { projectId: "project-1" });
       await squared.saveAs("default.7z", { throwErrors: true }).catch(err => console.log(err)); // Will cancel partial archive download
@@ -121,7 +121,7 @@ Example usage
       /* OR */
       await squared.appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
 
-      squared.reset(/* projectId? */); // Start new "parseDocument" session (optional)
+      squared.reset(); // Start new "parseDocument" session (optional)
     });
   </script>
 

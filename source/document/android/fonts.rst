@@ -26,13 +26,12 @@ Enable
 
   squared.parseDocument({ element: document.body, createDownloadableFonts: true }).then(() => squared.saveAs("fonts.zip"));
 
-.. note:: *WOFF2* format is supported as a local resource font.
-
 Output
 ------
 
 .. code-block:: xml
   :caption: AndroidManifest.xml
+  :emphasize-lines: 3
 
   <manifest xmlns:android="http://schemas.android.com/apk/res/android">
      <application android:theme="@style/AppTheme">

@@ -84,24 +84,28 @@ Creating a view model inline can be more convenient for simple layouts. JavaScri
 These two additional output parameters are required when using the **data-viewmodel** prefix.
 
 .. code-block:: html
+  :emphasize-lines: 5
 
   <div id="main">
     <label>Name:</label>
     <input id="first_name" type="text" data-viewmodel-android-text="user.firstName" />
     <input id="last_name" type="text" data-viewmodel-android-text="user.lastName" />
-    <input id="remember_me" type="checkbox" data-viewmodel-android-checked="=user.rememberMe" /> <!-- "=" for two-way binding -->
+    <input id="remember_me" type="checkbox" data-viewmodel-android-checked="=user.rememberMe" />
   </div>
+
+.. tip:: Use "=" to create a two-way binding.
 
 .. code-block:: xml
   :caption: Output
+  :emphasize-lines: 16,20,23
 
   <layout>
     <data>
       <import type="java.util.Map" />
       <import type="java.util.List" />
       <variable name="user" type="com.example.User" />
-      <variable name="list" type="List&lt;String&gt;" /> <!-- List<String> -->
-      <variable name="map" type="Map&lt;String, String&gt;" /> <!-- Map<String, String> -->
+      <variable name="list" type="List&lt;String&gt;" />
+      <variable name="map" type="Map&lt;String, String&gt;" />
       <variable name="index" type="int" />
       <variable name="key" type="String" />
     </data>

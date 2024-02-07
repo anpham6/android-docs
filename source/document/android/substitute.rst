@@ -4,6 +4,9 @@ Substitute
 
 There are some cases where a DOM layout tree has to be transformed into an equivalent layout using third-party controls.
 
+Method
+======
+
 .. code-block::
 
   squared.parseDocument({
@@ -22,6 +25,9 @@ There are some cases where a DOM layout tree has to be transformed into an equiv
       autoLayout: true
     }]
   });
+
+Inline
+======
 
 .. code-block:: html
   :emphasize-lines: 4,5,6
