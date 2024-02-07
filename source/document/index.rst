@@ -7,4 +7,4 @@ Document
 
   Android <android/index>
   chrome
-  output
+  build
