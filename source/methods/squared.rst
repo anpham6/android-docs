@@ -19,7 +19,7 @@ squared
   Set alternate pathname for API v1 functions.
 
   :param string name: *ASSETS_COPY* | *ASSETS_ARCHIVE* | *LOADER_DATA* | *THREADS_KILL* | *WEBSOCKET_OBSERVE*
-  :param string value: Absolute path to server GET/POST method
+  :param string value: Absolute path to server *GET/POST* method
 
   Usage::
 
@@ -27,7 +27,7 @@ squared
 
 .. function:: setLocalAddress(...values)
 
-  Additional hostnames which are interpreted as localhost. Protocol and port is not used.
+  Additional hostnames which are interpreted as localhost. Protocol and port are not used.
 
   :param string values: Same format as URL.hostname
 
@@ -81,7 +81,7 @@ squared
 
   Redirect stdout messages to DevTools console.
 
-  :param function callback: See :ref:`BroadcastMessageCallback <references-squared-base-file>`
+  :param function callback: See |BroadcastMessageCallback|
   :param string socketId: Unique identifier assigned during server initialization
   :returns: boolean
 
@@ -116,7 +116,7 @@ squared
 
   Install application interpreter. (e.g. android.framework.js)
 
-  :param object target: Global object implementing :ref:`AppFramework <references-squared-base>`
+  :param object target: Global object implementing |AppFramework|
   :param object options: (optional) Initialize settings with non-default values
   :param boolean cache: (optional) Load previous cached instance and settings
 
@@ -139,7 +139,7 @@ squared
   Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the get/set object syntax.
 
   :param object map: Attribute object consisting of extensions and overrides
-  :param number framework: (optional) See :ref:`APP_FRAMEWORK <references-squared-base>`
+  :param number framework: (optional) See |APP_FRAMEWORK|
 
   Usage::
 
@@ -177,7 +177,7 @@ squared
 
 .. function:: clear()
 
-  Calls *Application*.clear() for any loaded frameworks and deletes all cached sessions.
+  Calls |Application|.clear() for any loaded frameworks and deletes all cached sessions.
 
   Usage::
 
@@ -260,7 +260,7 @@ squared
   Set or get extension options. **typeof** is enforced and will only set existing attributes.
 
   :param target: Name or control of extension
-  :param string name: Name of attribute in *Extension*.options
+  :param string name: Name of attribute in |Extension|.options
   :param value: Any value of an existing attribute
   :returns: unknown
 
@@ -275,7 +275,7 @@ squared
 
 .. function:: apply(target, options[, setting])
 
-  Find extension and merge a configuration object with existing *Extension*.options.
+  Find extension and merge a configuration object with existing |Extension|.options.
 
   :param target: Name or control of extension
   :param object options: Overriding configuration values
@@ -311,7 +311,7 @@ squared
   :param string type: *css* | *javascript* | *image* | *svg*
   :param boolean all: (*optional*) Accept request from any origin
   :param targets: (optional) URL string or root element of a contained Document
-  :returns: Promise<:ref:`PrefetchItem <references-squared-main>`\[\]>
+  :returns: Promise<|PrefetchItem|\[\]>
 
   Usage::
 
@@ -419,7 +419,7 @@ squared
 
 .. function:: save([projectId, timeout])
 
-  Uses the default *Application*.settings to generate an archive of the current session or selected project.
+  Uses the default |Application|.settings to generate an archive of the current session or selected project.
 
   :param string projectId: (optional) Targets a project that is not the default project
   :param number timeout: (optional) Maximum time in seconds for build to complete
@@ -731,7 +731,7 @@ squared
 
 .. function:: observe([enable = true])
 
-  Uses :ref:`MutationObserver <references-mdn-mutationobserver-observe>` to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
+  Uses |MutationObserver| to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
 
   :param boolean enable: (optional) Start or stop all root elements who are monitoring
 
@@ -771,7 +771,7 @@ squared
 
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
   :param function callback: (*optional*) Method to call when a ``modified`` event is received
-  :param object options: (optional) See :ref:`FileObserveOptions <references-squared-main>`
+  :param object options: (optional) See |FileObserveOptions|
   :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
 
   Usage::
@@ -800,6 +800,12 @@ squared
 .. |FileActionOptions| replace:: :ref:`FileActionOptions <references-squared-main>`
 .. |ElementSettings| replace:: :ref:`ElementSettings <references-squared-base>`
 .. |ObserveSocket| replace:: :ref:`ObserveSocket <references-squared-internal>`
+.. |AppFramework| replace:: :ref:`AppFramework <references-squared-base>`
+.. |BroadcastMessageCallback| replace:: :ref:`BroadcastMessageCallback <references-squared-base-file>`
+.. |APP_FRAMEWORK| replace:: :ref:`APP_FRAMEWORK <references-squared-base>`
+.. |PrefetchItem| replace:: :ref:`PrefetchItem <references-squared-main>`
+.. |MutationObserver| replace:: :ref:`MutationObserver <references-mdn-mutationobserver-observe>`
+.. |FileObserveOptions| replace:: :ref:`FileObserveOptions <references-squared-main>`
 
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelector

@@ -302,7 +302,7 @@ android
 
   Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to ``parseDocument``.
 
-  :returns: :ref:`ControllerSettingsUI <references-android-application>`
+  :returns: |ControllerSettingsUI|
 
   Usage::
 
@@ -332,3 +332,4 @@ android
 .. |projectId| replace:: Names a project to be used for storage
 .. |AppViewModel| replace:: :ref:`AppViewModel <references-android-main>`
 .. |Application| replace:: :ref:`Application <references-squared-base>`
+.. |ControllerSettingsUI| replace:: :ref:`ControllerSettingsUI <references-android-application>`
