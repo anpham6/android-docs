@@ -94,7 +94,7 @@ Example usage
     fontMeasureAdjust: 0.75, // thicker < 0 | thinner > 0
     lineHeightAdjust: 1.1, // shorter < 1 | taller > 1
     preferMaterialDesign: false, // "Material3" | "MaterialComponents"
-    createDownloadableFonts: true, // https://developers.google.com/fonts/docs/developer_api
+    createDownloadableFonts: true,
     createElementMap: false, // Cache not used with NodeUI (e.g. querySelector)
     pierceShadowRoot: true,
     lockElementSettings: true, // Used before rendering (e.g. findDocumentNode + node.localSettings)
