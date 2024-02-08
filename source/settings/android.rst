@@ -55,12 +55,12 @@ Interface
 .. versionadded:: 5.2.0
   *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
-.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
+.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 
 Example usage
 =============
 
-.. code-block:: typescript
+.. code-block::
   :caption: Customizable (project/all)
 
   squared.settings = {
@@ -84,25 +84,34 @@ Example usage
     enabledCompose: false, // android.compose.view
     dataBindableElements: [/* ExtensionViewModelElement */],
     includableElements: [/* ExtensionIncludeElement */],
-    substitutableElements: [/* ExtensionSubtituteElement * /],
+    substitutableElements: [/* ExtensionSubtituteElement */],
     fragmentableElements: [/* "selector" | ExtensionFragmentElement */],
     composableElements: [/* "selector" | "--property" */],
-    baseLayoutAsFragment: false, // ExtensionFragmentElement
     baseLayoutAsFragment: "fragment-name",
     baseLayoutAsFragment: ["fragment-name", "fragment-tag", "document_id" /* Optional */],
-    baseLayoutToolsIgnore: "", // Android Studio (e.g. "TooManyViews, HardcodedText")
+    baseLayoutAsFragment: { // ExtensionFragmentElement
+      name: "androidx.navigation.fragment.NavHostFragment",
+      documentId: "main_content",
+      app: {
+        navGraph: "@navigation/product_list_graph",
+        defaultNavHost: "true"
+      }
+    },
+    baseLayoutToolsIgnore: "TooManyViews, HardcodedText", // Android Studio Editor
     fontMeasureAdjust: 0.75, // thicker < 0 | thinner > 0
     lineHeightAdjust: 1.1, // shorter < 1 | taller > 1
-    preferMaterialDesign: false, // "Material3" | "MaterialComponents"
+    preferMaterialDesign: true, // "Material3"
+    preferMaterialDesign: "MaterialComponents",
     createDownloadableFonts: true,
-    createElementMap: false, // Cache not used with NodeUI (e.g. querySelector)
+    createElementMap: false, // Cache not used with NodeUI
     pierceShadowRoot: true,
-    lockElementSettings: true, // Used before rendering (e.g. findDocumentNode + node.localSettings)
-    customizationsBaseAPI: 0, // 0 - All | -1 - None
-    customizationsBaseAPI: [0, 33, 34], // android.customize(0, "Button", {/* attributes */})
+    lockElementSettings: false, // Modify Node before rendering (LocalSettingsUI)
+    customizationsBaseAPI: -1, // None
+    customizationsBaseAPI: 0, // All (14 - 34)
+    customizationsBaseAPI: [0, 33, 34], // Multiple with ordering
     customizationsOverwritePrivilege: true, // Existing auto-generated attributes (e.g. layout_width)
     removeDeprecatedAttributes: true, // Remove all
-    removeDeprecatedAttributes: ["enabled", "singleLine"], // Remove all except "enabled" + "singleLine"
+    removeDeprecatedAttributes: ["enabled", "singleLine"], // Remove all except the listed values
     removeUnusedResourceViewId: false,
     idNamingStyle: "android", // Use layout name
     idNamingStyle: "html", // Use tagName
@@ -121,7 +130,7 @@ Example usage
     outputFragmentFileName: "fragment_main.xml"
   };
 
-.. code-block:: typescript
+.. code-block::
   :caption: Customizable (project/main)
 
   squared.settings = {
@@ -135,11 +144,11 @@ Example usage
     outputDocumentCSS: [], // CSS properties to be processed with a server extension (e.g. "boxShadow")
     outputDirectory: "app/src/main",
     createManifest: false, // Update AndroidManifest.xml
-    createBuildDependencies: false, // "ktx" | "baseline-profile" (build.gradle)
+    createBuildDependencies: false, // build.gradle
     createBuildDependencies: ["ktx", "baseline-profile"]
   };
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global
 
   squared.settings = {
@@ -212,7 +221,7 @@ Example usage
     outputArchiveCache: false // Downloadable URL in ResponseData<downloadUrl>
   };
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global (optional)
 
   squared.settings = {

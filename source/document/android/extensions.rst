@@ -7,28 +7,30 @@ Layout rendering can be fully customized as the program was built to be nearly c
 Interface
 =========
 
-.. code-block:: typescript
+.. highlight:: typescript
+
+.. code-block::
   :caption: squared.accessibility
 
   interface ExtensionAccessibilityOptions {
       displayLabel: boolean;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: squared.grid
 
   interface ResourceGridOptions {
       floatPrecision: number;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: squared.css-grid
 
   interface ResourceCssGridOptions {
       floatPrecision: number;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: squared.list
 
   interface ExtensionListOptions {
@@ -37,7 +39,7 @@ Interface
       imagePaddingRight: number;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.substitute
 
   interface ExtensionSubstituteOptions {
@@ -47,21 +49,21 @@ Interface
       attributeMapping: StringMap;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.delegate.multiline
 
   interface DelegateMultilineOptions {
       mergeSingleLine: boolean;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.delegate.scrollbar
 
   interface DelegateScrollbarOptions {
       alwaysDrawTrack: boolean;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.background
 
   interface ResourceBackgroundOptions {
@@ -69,7 +71,7 @@ Interface
       enableImageRepeat: boolean;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.dimens
 
   interface ResourceDimensOptions {
@@ -77,7 +79,7 @@ Interface
       floatPrecision: number;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.fonts
 
   interface ResourceFontsOptions {
@@ -89,7 +91,7 @@ Interface
       floatPrecision: number;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.fragment
 
   interface ExtensionFragmentOptions {
@@ -100,7 +102,7 @@ Interface
       dynamicNestedFragments: boolean;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.includes
 
   interface ExtensionIncludesOptions {
@@ -109,14 +111,14 @@ Interface
       viewAttributesOuterView: string[];
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.strings
 
   interface ResourceStringsOptions {
       numberAsResource: boolean;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: android.resource.svg
 
   interface ResourceSvgOptions {
@@ -127,7 +129,7 @@ Interface
       floatPrecisionKeyTime: number;
   }
 
-.. code-block:: typescript
+.. code-block::
   :caption: jetpack.compose.view
 
   interface JetpackComposeViewOptions {
@@ -141,6 +143,8 @@ Example usage
 =============
 
 Some extensions have a few settings which can be configured. The default settings usually achieve the best overall rendering accuracy without noticeably affecting performance.
+
+.. highlight:: javascript
 
 .. code-block::
   :caption: Create

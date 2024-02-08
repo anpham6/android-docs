@@ -7,15 +7,12 @@ Google Fonts [#]_ are pre-installed and can be used without any additional confi
   squared.settings.outputDocumentEditing = true;
   squared.settings.createManifest = true;
   squared.settings.createBuildDependencies = true;
-  squared.settings.createDownloadableFonts = true;
-
-.. seealso:: https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
 
 Enable
 ======
 
 .. code-block::
-  :caption: Install and build
+  :caption: Install and build [#]_
 
   await android.addFontProvider(
     "com.google.android.gms.fonts",
@@ -43,14 +40,15 @@ Output
   :caption: build.gradle
 
   dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+      implementation 'androidx.appcompat:appcompat:1.6.0'
   }
 
 Disable
 =======
 
-.. code-block::
+::
 
   squared.attr("android.resource.fonts", "installGoogleFonts", false); // Use browser and local fonts only
 
+.. [#] https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
 .. [#] https://developers.google.com/fonts/docs/developer_api

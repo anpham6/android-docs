@@ -2,12 +2,14 @@
 Installation
 ============
 
-- NodeJS 14 (Minimum)
+- NodeJS 14 (*Minimum*)
+
+.. highlight:: bash
 
 NPX
 ===
 
-.. code-block:: shell
+.. code-block::
   :caption: node_modules
 
   npm init
@@ -16,7 +18,7 @@ NPX
   npx sqd init
   npx sqd serve
 
-.. code-block:: shell
+.. code-block::
   :caption: local
 
   npm init
@@ -25,7 +27,7 @@ NPX
   npx sqd init --public --local-serve
   node serve.js
 
-.. code-block:: shell
+.. code-block::
   :caption: without sqd-cli
 
   npm init
@@ -33,15 +35,15 @@ NPX
 
   mkdir dist html
   cp -r ./node_modules/squared/dist/* ./dist
-  cp ./node_modules/squared/html/* ./html # optional
-  cp ./node_modules/sqd-serve/config/json/* .
+  cp ./node_modules/squared/html/* ./html     # optional
+  cp ./node_modules/sqd-serve/config/json/* . # yaml
 
   npx serve
 
 GitHub
 ======
 
-.. code-block:: shell
+.. code-block::
   :caption: prod - 5.1.2
 
   git clone https://github.com/anpham6/squared
@@ -59,14 +61,14 @@ GitHub
 
   npm install
   npm run prod
-  npm run deploy
+  npm run deploy # deploy:yaml
 
   cd ../squared
 
   # squared.json
   node serve.js
 
-.. code-block:: shell
+.. code-block::
   :caption: dev - 5.2.0
 
   git clone https://github.com/anpham6/squared
@@ -84,7 +86,7 @@ GitHub
 
   npm install
   npm run dev
-  npm run deploy:config
+  npm run deploy:config # deploy:config:yaml
 
   cd ../squared
 

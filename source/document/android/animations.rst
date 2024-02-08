@@ -22,10 +22,10 @@ Animations are usually started before ``parseDocument`` can read the initial val
   :emphasize-lines: 1,2
 
   <svg width="120" height="120" viewBox="0 0 240 240" data-base-value="width: 120; height: 120; opacity: 1;">
-      <rect x="10" y="0" width="100" height="50" stroke="black" stroke-width="2" fill="purple" data-base-value="x: 10; y: 0; width: 100; fill: purple; opacity: 1; stroke-opacity: 1; fill-opacity: 1;">
-          <animate attributeName="x" values="0; 100;" keyTimes="0; 1" begin="0s" dur="10s" repeatCount="indefinite" />
-          <animate attributeName="y" values="0; 100" keyTimes="0; 1" begin="0s; 5s; 10s" dur="10s" repeatCount="1" />
-      </rect>
+    <rect x="10" y="0" width="100" height="50" stroke="black" stroke-width="2" fill="purple" data-base-value="x: 10; y: 0; width: 100; fill: purple; opacity: 1; stroke-opacity: 1; fill-opacity: 1;">
+      <animate attributeName="x" values="0; 100;" keyTimes="0; 1" begin="0s" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="y" values="0; 100" keyTimes="0; 1" begin="0s; 5s; 10s" dur="10s" repeatCount="1" />
+    </rect>
   </svg>
 
 Play
@@ -40,6 +40,6 @@ Only the XML based layout and resource files can be viewed on the Android device
 
   android.widget.ImageView svg = findViewById(R.id.imageview_1);
   if (svg != null) {
-    Animatable animatable = (Animatable)svg.getDrawable();
-    animatable.start();
+      Animatable animatable = (Animatable)svg.getDrawable();
+      animatable.start();
   }

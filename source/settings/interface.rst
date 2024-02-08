@@ -4,7 +4,9 @@ Interface
 
 These settings are available in the global variable ``squared`` to customize your desired output structure. Each framework shares a common set of settings and also a subset of their own settings.
 
-.. code-block:: typescript
+.. highlight:: typescript
+
+::
 
   interface UserSettings {
       builtInExtensions: string[];
@@ -13,7 +15,7 @@ These settings are available in the global variable ``squared`` to customize you
       createElementMap: boolean;
   }
 
-.. code-block:: typescript
+::
 
   interface UserResourceSettings extends UserSettings {
       preloadImages: boolean;
@@ -38,7 +40,7 @@ These settings are available in the global variable ``squared`` to customize you
       broadcastSecurePort?: number;
   }
 
-.. code-block:: typescript
+::
 
   interface UserResourceSettingsUI extends UserResourceSettings {
       enabledSVG: boolean;
@@ -54,32 +56,34 @@ These settings are available in the global variable ``squared`` to customize you
       resolutionScreenHeight?: number;
   }
 
-.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
+.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 
-Global
-======
+Example usage
+=============
 
-.. code-block:: typescript
-  :caption: Required
+.. highlight:: javascript
+
+.. code-block::
+  :caption: All
 
   squared.settings = {
     pierceShadowRoot: false,
     showErrorMessages: false, // console.log
     showErrorMessages: true, // alert
-    createElementMap: false // Cache querySelector results for subsequent queries
+    createElementMap: false // Cache queries for subsequent nested queries
   };
 
 .. note:: The native ``document.querySelector`` does not enter :ref:`ShadowRoot <references-mdn-shadowroot>` elements.
 
-.. code-block:: typescript
-  :caption: Optional
+.. code-block::
+  :caption: Resource
 
   squared.settings = {
     formatUUID: "8-4-4-4-12", // UUID: 8-4-[12345]3-[89ab]3-12
     formatDictionary: "0123456789abcdef",
     outputConfigName: "sqd.config", // Per directory filename with URL globs of static pages
     outputTasks: {
-      "*.xml": { handler: "gulp", task: "minify" } // https://e-mc.readthedocs.io/en/latest/task
+      "*.xml": { handler: "gulp", task: "minify" }
     },
     outputWatch: {
       "**/images/*.png": true,
@@ -92,4 +96,4 @@ Global
     broadcastSecurePort: 3443
   };
 
-.. note:: These optional settings are not available in the :doc:`vdom` framework.
+.. note:: These settings are not available in the :doc:`vdom` framework.

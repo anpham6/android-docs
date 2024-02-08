@@ -80,16 +80,7 @@ Example usage
           resourceQualifier: "port",
           pathname: "app/src/main/res/layout-hdpi", // Will not be overridden by resourceQualifier "port"
           filename: "fragment.xml",
-          baseLayoutAsFragment: true,
-          baseLayoutAsFragment: ["com.example.fragment", "fragment-tag", "document_id"],
-          baseLayoutAsFragment: {
-              name: "androidx.navigation.fragment.NavHostFragment",
-              documentId: "main_content",
-              app: {
-                  navGraph: "@navigation/product_list_graph",
-                  defaultNavHost: "true"
-              }
-          }
+          baseLayoutAsFragment: ["com.example.fragment", "fragment-tag", "fragment_id"]
         }
       );
       await squared.parseDocument({
@@ -117,7 +108,7 @@ Example usage
       await squared.saveAs("project.zip", { projectId: "project-1" });
       await squared.saveAs("default.7z", { throwErrors: true }).catch(err => console.log(err)); // Will cancel partial archive download
       /* OR */
-      await squared.copyTo("/path/project-1", { ignoreExtensions: true, profileable: true });
+      await squared.copyTo("/path/project-1", { emptyDir: true, ignoreExtensions: true });
       /* OR */
       await squared.appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
 

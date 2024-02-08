@@ -2,17 +2,19 @@
 VDOM
 ====
 
+.. highlight:: typescript
+
 Interface
 =========
 
-.. code-block:: typescript
+::
 
   import type { UserSettings } from "./interface";
 
 Example usage
 =============
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global
 
   squared.settings = {
@@ -21,7 +23,7 @@ Example usage
     showErrorMessages: false
   };
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global (unused)
 
   squared.settings = {

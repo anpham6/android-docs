@@ -18,12 +18,12 @@ Interface
       static addDimen(resourceId: number, name: string, value: string): string;
   }
 
-.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
+.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 
 Example usage
 =============
 
-.. code-block::
+::
 
   squared.parseDocument().then(node => {
     const resourceId = node.localSettings.resourceId;

@@ -38,7 +38,7 @@ Method
     );
   });
 
-.. code-block::
+::
 
   squared.parseDocument({
     element: "main",

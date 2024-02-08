@@ -155,6 +155,7 @@ https://unpkg.com/squared/types/android/extension.d.ts:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/android/node.d.ts
+  | `LocalSettingsUI <search.html?q=LocalSettingsUI>`_
   | `NamingStyles <search.html?q=NamingStyles>`_
   | `ViewAttribute <search.html?q=ViewAttribute>`_
 

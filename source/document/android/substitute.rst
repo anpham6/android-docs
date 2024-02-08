@@ -7,7 +7,7 @@ There are some cases where a DOM layout tree has to be transformed into an equiv
 Method
 ======
 
-.. code-block::
+::
 
   squared.parseDocument({
     element: document.body,

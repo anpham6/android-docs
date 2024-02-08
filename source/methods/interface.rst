@@ -5,9 +5,11 @@ Interface
 squared
 =======
 
+.. highlight:: typescript
+
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Serve *(API)*
 
   function setHostname(value: string): void;
@@ -23,7 +25,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Framework
 
   function setFramework(value: Application, options?: PlainObject, cache?: boolean): void;
@@ -35,7 +37,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Extensions
 
   function add(...values: ExtensionRequestObject[]): number;
@@ -48,7 +50,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Session *(create)*
 
   function prefetch(type: "css", all: boolean, ...targets: (Document | ShadowRoot)[]): Promise<PrefetchItem[]>;
@@ -61,7 +63,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Session *(modify)*
 
   function findDocumentNode(value: HTMLElement | string, projectId?: string): Node | undefined;
@@ -76,7 +78,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Session *(API)*
 
   function save(): FileActionResult;
@@ -104,7 +106,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: DOM
 
   function getElementById(value: string, sync: true, cache = true): Node | null;
@@ -124,7 +126,7 @@ squared
 
 .. rst-class:: section-caption
 
-.. code-block:: typescript
+.. code-block::
   :caption: Observe
 
   function observe(enable = true): void;
@@ -136,7 +138,7 @@ squared
 android
 =======
 
-.. code-block:: typescript
+::
 
   interface AppFramework {
       setViewModel(data: AppViewModel, sessionId?: string): void;
@@ -157,10 +159,10 @@ android
 chrome
 ======
 
-.. code-block:: typescript
+::
 
   interface AppFramework {
       removeObserver(element: HTMLElement): boolean;
   }
 
-.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
+.. seealso:: For any non-standard named definitions check :doc:`References </references>`.

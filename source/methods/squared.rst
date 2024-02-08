@@ -136,7 +136,7 @@ squared
 
 .. function:: extend(map[, framework])
 
-  Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the get/set object syntax.
+  Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the *get/set* object syntax.
 
   :param object map: Attribute object consisting of extensions and overrides
   :param number framework: (optional) See |APP_FRAMEWORK|
@@ -791,7 +791,7 @@ squared
 
     await squared.observeSrc("link[rel=stylesheet]"); // Will call location.reload()
 
-.. |targetElement| replace:: Element target by either an ``id`` string or *HTMLElement*
+.. |targetElement| replace:: *Element* target by either an ``id`` string or *HTMLElement*
 .. |Application| replace:: :ref:`Application <references-squared-base>`
 .. |Node| replace:: :ref:`Node <references-squared-base>`
 .. |Extension| replace:: :ref:`Extension <references-squared-base>`

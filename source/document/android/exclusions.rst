@@ -46,7 +46,7 @@ Interface
 Method
 ======
 
-.. code-block::
+::
 
     const { NODE_RESOURCE, NODE_PROCEDURE, APP_SECTION } = squared.base.lib.constant;
 

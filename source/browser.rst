@@ -39,13 +39,13 @@ vdom-lite
 Usage
 =====
 
-Library files are in the ``/dist`` folder. A minimum of **two** files are required to run **squared**.
+Library files are in the ``/dist`` folder. A minimum of **two** files are required to run the application.
 
-#. squared
-#. squared-base - *required* [#]_
-#. squared-svg - *optional* [#]_
-#. framework [#]_
-#. extensions - *optional*
+#. **squared**
+#. **squared-base** [#]_
+#. *squared-svg* [#]_
+#. **framework** [#]_
+#. *extensions*
 
 Usable combinations: 1-2-4 + 1-2-4-5 + 1-2-3-4-5 + 1-vdom-lite
 

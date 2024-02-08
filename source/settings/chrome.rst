@@ -20,7 +20,7 @@ Interface
 Example usage
 =============
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global (bundle)
 
   squared.settings = {
@@ -42,7 +42,7 @@ Example usage
     outputArchiveCache: false
   };
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global (query)
 
   squared.settings = {
@@ -50,7 +50,7 @@ Example usage
     createElementMap: true
   };
 
-.. code-block:: typescript
+.. code-block::
   :caption: Global (unused)
 
   squared.settings = {

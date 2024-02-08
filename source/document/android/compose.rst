@@ -7,14 +7,14 @@ Most mobile applications do not have a deeply nested hierarchy and are generally
 Method
 ======
 
-.. code-block::
+::
 
   squared.settings.composableElements = ["main", "#content", "--boxShadow", "--height=300px"];
   squared.settings.createBuildDependencies = true; // Optional
 
 You can also do it using the ``android.substitute`` extension directly inside the HTML element.
 
-.. code-block::
+::
 
   squared.add(["android.substitute", {
     element: {

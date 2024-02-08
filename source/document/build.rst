@@ -12,13 +12,15 @@ Build Options
 Interface
 =========
 
-.. code-block:: typescript
+.. highlight:: typescript
+
+::
 
   interface FileActionOptions {
       pid?: number;
       fetchMode?: RequestMode;
       timeout?: number;
-      config?: FileActionConfig | boolean | string;
+      config?: boolean | string | FileActionConfig;
       incrementalMap?: {
           pathname?: IncrementalData;
           extension?: IncrementalData;
@@ -54,7 +56,7 @@ Interface
       ignoreExtensions?: boolean | string | string[];
   }
 
-.. code-block:: typescript
+::
 
   interface FileCopyingOptions extends FileActionOptions {
       pathname?: string;
@@ -74,7 +76,7 @@ Android
 Interface
 ---------
 
-.. code-block:: typescript
+::
 
   interface DocumentOutput {
       targetAPI?: number | string;
@@ -99,9 +101,9 @@ Interface
 Example usage
 -------------
 
-.. code-block::
+.. code-block:: javascript
 
-  squared.copyTo("/path/project", {
+  squared.saveAs("android.zip", {
     projectId: "project-1",
     priority: 10,
     profileable: true,
@@ -135,7 +137,7 @@ Chrome
 Interface
 ---------
 
-.. code-block:: typescript
+::
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -148,7 +150,7 @@ Interface
       };
       downloadOnly?: boolean;
       excluding?: HTMLElement[];
-      observe?: MutationCallback | true;
+      observe?: true | MutationCallback;
       preserveCrossOrigin?: boolean | URLData;
       addResourceHints?: boolean | ResourceHintType | ResourceHintType[];
       retainUsedStyles?: (string | RegExp)[] | UsedStylesData;
@@ -194,12 +196,12 @@ Interface
       unusedAtRules?: UnusedAtRule[];
   }
 
-.. seealso:: For any non-browser named definitions check :doc:`References </references>`.
+.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 
 Example usage
 -------------
 
-.. code-block::
+.. code-block:: javascript
 
   squared.copyTo("/path/project", {
     projectId: "project-1",

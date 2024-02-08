@@ -7,7 +7,7 @@ System or extension generated attributes can be overridden preceding finalizatio
 Method
 ======
 
-.. code-block::
+::
 
   squared.parseDocument().then(() => {
     const node = squared.findDocumentNode("customId");
