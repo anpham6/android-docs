@@ -2,12 +2,10 @@
 VDOM
 ====
 
-.. highlight:: typescript
-
 Interface
 =========
 
-::
+.. code-block:: typescript
 
   import type { UserSettings } from "./interface";
 

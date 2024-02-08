@@ -50,7 +50,6 @@ android
   :param string version: (*optional*) Exact version requested
   :param number type: (optional) Dependency namespace method in Gradle
   :returns: string
-
   :requirements:
     - **createBuildDependencies** = *true*
 
@@ -74,7 +73,6 @@ android
   :param string version: (*optional*) Exact version requested
   :param number type: (optional) Dependency namespace method in Gradle
   :returns: string
-
   :requirements:
     - **createBuildDependencies** = *true*
 
@@ -97,7 +95,6 @@ android
   :param array certs: List of certificates the font provider is signed with
   :param string webFonts: Web font service URL
   :returns: boolean | Promise<boolean>
-
   :requirements:
     - **targetAPI** >= *26*
     - **createDownloadableFonts** = *true*
@@ -144,7 +141,6 @@ android
   :param string widget: Namespace of layout control
   :param object options: Attributes to be applied to control
   :returns: Record<string, StringMap> | undefined
-
   :requirements:
     - **customizationsBaseAPI** >= *0*
     - **customizationsOverwritePrivilege** = *true*
@@ -172,7 +168,7 @@ android
 
 .. function:: loadCustomizations(name)
 
-  Will merge any saved customizations from the same origin. Any previous calls to ``customize`` may be overwritten.
+  Will merge any saved customizations from the same origin. Any previous calls to :func:`android.customize` may be overwritten.
 
   :param string name: Unique identifier to be used for local storage
 
@@ -205,7 +201,7 @@ android
 
 .. function:: saveCustomizations(name)
 
-  Any valid customizations created using ``customize`` will be saved to local storage.
+  Any valid customizations created using :func:`android.customize` will be saved to local storage.
 
   :param string name: Unique identifier to be used for local storage
 
@@ -300,7 +296,7 @@ android
 
 .. function:: getLocalSettings()
 
-  Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to ``parseDocument``.
+  Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to :func:`parseDocument`.
 
   :returns: |ControllerSettingsUI|
 
@@ -317,7 +313,6 @@ android
   Forwards the target element to |Application| which will stop it from being monitored for changes.
 
   :param element: *HTMLElement* instance
-
   :returns: boolean
 
   Usage::

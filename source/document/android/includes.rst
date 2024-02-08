@@ -54,7 +54,7 @@ Inline
     <div id="item5" data-android-include="filename2" data-android-include-end="true" data-android-include-viewmodel="exampleData">Item 5</div>
   </div>
 
-.. tip:: **data-pathname-android** AND **data-filename-android** can also be used with any ``parseDocument`` root element.
+.. tip:: ``data-pathname-android`` AND ``data-filename-android`` can also be used with any :func:`parseDocument` root element.
 
 .. code-block:: xml
   :caption: Output
@@ -82,7 +82,7 @@ Inline
     <TextView>Item 5</TextView>
   </layout>
 
-The attributes **data-android-include-start** and **data-android-include-end** can only be applied to elements which share the same parent container.
+The attributes ``data-android-include-start`` and ``data-android-include-end`` can only be applied to elements which share the same parent container.
 
 .. seealso:: Demo page using `squared-express <http://localhost:3000/demos/gradient.html>`_ [#]_ for an actual implementation.
 

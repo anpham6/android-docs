@@ -2,9 +2,9 @@
 Android
 =======
 
-The primary function ``parseDocument`` can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.
+The primary function :func:`parseDocument` can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.
 
-.. warning:: Calling **save** or **copy** methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous :code:`await parseDocument()` or :code:`parseDocument().then()` and not ``parseDocumentSync``.
+.. warning:: Calling **save** or **copy** methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous :code:`await parseDocument()` or :code:`parseDocument().then()` and not :func:`parseDocumentSync`.
 
 Example usage
 =============

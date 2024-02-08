@@ -380,7 +380,7 @@ squared
 
 .. function:: latest([count = 1])
 
-  Get any stored session ids from ``parseDocument`` since the last time ``clear`` was called.
+  Get any stored session ids from :func:`parseDocument` since the last time :func:`clear` was called.
 
   :param number count: (optional) How many ids at most to be retrieved
   :returns: string | string[] | **undefined**
@@ -697,7 +697,7 @@ squared
 
 .. function:: fromElement(element[, sync, cache])
 
-  Same behavior as ``getElementById`` except it also accepts a native *Element*. The **cache** parameter by default is not enabled.
+  Same behavior as :func:`getElementById` except it also accepts a native *Element*. The **cache** parameter by default is not enabled.
 
   :param element: |targetElement|
   :param boolean sync: (optional) Will block and not wrap query in a Promise
@@ -730,7 +730,7 @@ squared
 
 .. function:: observe([enable = true])
 
-  Uses |MutationObserver| to watch for any changes to the ``parseDocument`` root element. Start after DOM and third-party libraries are initialized.
+  Uses |MutationObserver| to watch for any changes to the :func:`parseDocument` root element. Start after DOM and third-party libraries are initialized.
 
   :param boolean enable: (optional) Start or stop all root elements who are monitoring
 

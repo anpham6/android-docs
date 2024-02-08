@@ -2,7 +2,7 @@
 Data Binding
 ============
 
-View model data can be applied to most HTML elements using the *dataset* [#]_ feature. Different view models can be used for every ``parseDocument`` session.
+View model data can be applied to most HTML elements using the *dataset* [#]_ feature. Different view models can be used for every :func:`parseDocument` session.
 
 Leaving the *sessionId* empty uses the default view model which is searched last for all projects when attempting a bind.
 
@@ -75,7 +75,7 @@ Method
 Inline
 ======
 
-Creating a view model inline can be more convenient for simple layouts. JavaScript is the recommended solution when ``parseDocument`` is called multiple times.
+Creating a view model inline can be more convenient for simple layouts. JavaScript is the recommended solution when :func:`parseDocument` is called multiple times.
 
 .. code-block:: none
 
