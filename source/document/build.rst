@@ -84,7 +84,7 @@ Interface
       namespace?: string;
       profileable?: boolean | string | string[];
       dependencies?: string[];
-      dependencyScopes?: boolean | DependencyScopes | "snapshot" | (DependencyScopes | "snapshot")[];
+      dependencyScopes?: boolean | 1 | DependencyScopes | "snapshot" | (DependencyScopes | "snapshot")[];
       directories?: ControllerSettingsDirectoryUI;
       projectName?: string;
       mainParentDir?: string;
@@ -96,27 +96,66 @@ Interface
       dataBinding?: boolean;
       commands?: string | string[] | (string | string[])[];
       extensionData?: Record<string, PlainObject>;
+      updateXmlOnly?: boolean;
   }
+
+.. versionadded:: 5.2.0
+  **dependencyScopes** with the "snapshot" value ``1``.
 
 Example usage
 -------------
 
-.. code-block:: javascript
+.. highlight:: javascript
+
+::
 
   squared.saveAs("android.zip", {
-    projectId: "project-1",
-    priority: 10,
-    profileable: true,
-    dependencyScopes: "snapshot",
+    targetAPI: 32, // Override settings.targetAPI
+    targetAPI: "Tiramisu",
     manifest: {
-      package: "example",
+      package: "com.example.demo", // <manifest package="com.example.demo">
       application: {
         label: "app_name",
         supportsRtl: true,
         theme: "AppTheme"
       }
     },
-    commands: ["clean", ["build", "--parallel"]],
+    namespace: "com.example.demo", // android.defaultConfig.applicationId (app/build.gradle)
+    profileable: true, // <profileable android:enabled="[false|true]" />
+    profileable: "debug", // android.buildTypes.release.signingConfig = signingConfigs.debug
+    profileable: "--warn-manifest-validation", // aaptOptions.additionalParameters (--prefix)
+    profileable: ["release", "--warn-manifest-validation", "--no-version-vectors"], // buildTypes.signingConfig + aaptOptions.additionalParameters (multiple --args)
+    dependencies: ["androidx.appcompat:appcompat:1.6.0"],
+    dependencyScopes: true, // All first-level dependencies
+    dependencyScopes: "compile", // implementation="compile" | compileOnly="provided" | runtimeOnly="runtime" | testImplementation="test"
+    dependencyScopes: ["compile", "runtime"],
+    dependencyScopes: "snapshot", // Use latest published release
+    dependencyScopes: 1, // true + "snapshot"
+    dependencyScopes: ["snapshot", "compile"],
+    directories: {
+      layout: "/path/to/res/layout",
+      string: "/path/to/res/values"
+    },
+    projectName: "Example Project", // rootProject.name (settings.gradle)
+    mainParentDir: "app", // Override settings.outputDirectory
+    mainSrcDir: "src/main",
+    mainActivityFile: "MainActivity.java", // "MainActivity.*" | "/path/user/project/MainActivity.java" | "app/path/MainActivity.java"
+    javaVersion: 1.8, // JavaVersion.VERSION_1_8
+    javaVersion: 11, // JavaVersion.VERSION_11
+    versionName: "1.0",
+    versionCode: 1,
+    dataBinding: true, // android.buildFeatures.dataBinding
+    commands: "build", // gradlew build
+    commands: ["test", "deploy"], // gradlew test deploy
+    commands: ["lint", ["test", "--rerun-tasks"]], // gradlew lint && gradlew test --rerun-tasks
+    updateXmlOnly: true // Copy only auto-generated content
+  });
+
+.. code-block::
+  :caption: With assets
+
+  squared.saveAs("android.zip", {
+    projectId: "project-1",
     assets: [
       {
         pathname: "app/src/main/res/drawable",
@@ -137,7 +176,7 @@ Chrome
 Interface
 ---------
 
-::
+.. code-block:: typescript
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -201,17 +240,41 @@ Interface
 Example usage
 -------------
 
-.. code-block:: javascript
+::
 
   squared.copyTo("/path/project", {
-    projectId: "project-1",
-    useOriginalHtmlPage: true,
-    preserveCrossOrigin: true,
-    useSessionCache: true,
-    removeUnusedClasses: true,
+    cache: {
+      transform: false, // Not recommended when using watch
+      transform: true, // "etag" (not bundled) + string comparison by URL (single page)
+      transform: "etag", // request.cache OR request.buffer.expires (required)
+      transform: "md5" | "sha1" | "sha224" | "sha256" | "sha384" | "sha512", // Multi-[user|page] + Inline content (includes "etag")
+      transform: { expires: "2h" }, // Expires in 2 hrs since creation
+      transform: { expires: "1h", renew: true }, // Expires from 1 hr of last time accessed
+      transform: { algorithm: "md5" /* etag */, expires: "2h", limit: "5mb" }, // Set expiration and content size limit
+      transform: { exclude: { html: "*", js: ["bundle-es6"] } }, // Format names per type
+      transform: { include: { css: "*", js: ["bundle"] } }
+    },
+    imports: {
+      "http://localhost:3000/build/": "./build", // Starts with "http"
+      "http://localhost:3000/dist/chrome.framework.js": "/path/project/build/framework/chrome/src/main.js" // Full file path
+    },
+    webBundle: {
+      baseUrl: "http://hostname/dir/", // Resolves to current host and directory
+      rewriteHtmlPage: true | "index.html", // Hide or rename main page
+      excludeHtmlPage: true, // Exclude HTML page from WBN archive
+      excludeTransforms: true, // Exclude transformed files not used in HTML page
+      includeScopes: ["**/*.css"], // http://localhost:3000/dir/**/*.css (hides "excludeTransforms" + "excludeScopes")
+      excludeScopes: ["/**/*.js"], // http://localhost:3000/**/*.js
+      copyTo: "/path/project", // Copy archive (absolute + permission)
+      rootDirAlias: "__serverroot__" // Internal value
+    },
+    baseHref: "http://hostname/prod/example.html", // Additional hostname to use for parsing (URL | string)
     retainUsedStyles: [/^a:[a-z]/i, "--property-name"],
-    excluding: Array.from(document.querySelectorAll("video, audio"))
+    downloadOnly: true, // Do not transform HTML and CSS files
+    excluding: Array.from(document.querySelectorAll("video, audio")) // Elements to remove from HTML
   });
+
+.. seealso:: `E-mc <https://e-mc.readthedocs.io>`_ / `Build Options <https://e-mc.readthedocs.io/en/latest/build.html>`_
 
 .. |FileActionOptions| replace:: :ref:`FileActionOptions <references-squared-main>`
 .. |DocumentOutput| replace:: :ref:`DocumentOutput <references-android-file>`
