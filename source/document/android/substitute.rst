@@ -7,9 +7,10 @@ There are some cases where a DOM layout tree has to be transformed into an equiv
 Method
 ======
 
-::
+.. code-block::
+  :emphasize-lines: 10,18
 
-  squared.parseDocument({
+  await squared.parseDocument({
     element: document.body,
     include: ["android.substitute"],
     substitutableElements: [{
@@ -25,12 +26,16 @@ Method
       autoLayout: true
     }]
   });
+  const navigation = squared.findDocumentNode("navigation");
+  navigation.android("layout_height", "match_parent");
+
+.. tip:: Use ``node.lockAttr(namespace, attribute)`` when your changes are overriden by an extension.
 
 Inline
 ======
 
 .. code-block:: html
-  :emphasize-lines: 4,5,6
+  :emphasize-lines: 3,6
 
   <ul id="navigation"
     data-use-android="android.substitute"
@@ -50,7 +55,7 @@ Inline
   <com.google.android.material.tabs.TabLayout
     android:id="@+id/navigation"
     android:layout_height="match_parent"
-    android:layout_width="wrap_content">
+    android:layout_width="match_parent">
     <com.google.android.material.tabs.TabItem
       android:layout_height="match_parent"
       android:layout_width="wrap_content"

@@ -61,9 +61,7 @@ These settings are available in the global variable ``squared`` to customize you
 Example usage
 =============
 
-.. highlight:: javascript
-
-.. code-block::
+.. code-block:: javascript
   :caption: All
 
   squared.settings = {
@@ -75,7 +73,7 @@ Example usage
 
 .. note:: The native ``document.querySelector`` does not enter :ref:`ShadowRoot <references-mdn-shadowroot>` elements.
 
-.. code-block::
+.. code-block:: javascript
   :caption: Resource
 
   squared.settings = {

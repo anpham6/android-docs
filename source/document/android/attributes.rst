@@ -39,4 +39,4 @@ Inline
     android:layout_height="match_parent"
     app:layout_scrollFlags="scroll|exitUntilCollapsed" />
 
-.. note:: Default namespace is "android"
+.. note:: Default namespace is ``android``.

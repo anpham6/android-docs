@@ -5,10 +5,9 @@ Interface
 squared
 =======
 
-.. highlight:: typescript
-
 .. rst-class:: section-caption
 
+.. highlight:: typescript
 .. code-block::
   :caption: Serve *(API)*
 

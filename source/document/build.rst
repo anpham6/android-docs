@@ -105,9 +105,7 @@ Interface
 Example usage
 -------------
 
-.. highlight:: javascript
-
-::
+.. code-block:: javascript
 
   squared.saveAs("android.zip", {
     targetAPI: 32, // Override settings.targetAPI
@@ -124,7 +122,7 @@ Example usage
     profileable: true, // <profileable android:enabled="[false|true]" />
     profileable: "debug", // android.buildTypes.release.signingConfig = signingConfigs.debug
     profileable: "--warn-manifest-validation", // aaptOptions.additionalParameters (--prefix)
-    profileable: ["release", "--warn-manifest-validation", "--no-version-vectors"], // buildTypes.signingConfig + aaptOptions.additionalParameters (multiple --args)
+    profileable: ["release", "--warn-manifest-validation", "--no-version-vectors"], // signingConfig + additionalParameters (multiple --args)
     dependencies: ["androidx.appcompat:appcompat:1.6.0"],
     dependencyScopes: true, // All first-level dependencies
     dependencyScopes: "compile", // implementation="compile" | compileOnly="provided" | runtimeOnly="runtime" | testImplementation="test"
@@ -151,7 +149,7 @@ Example usage
     updateXmlOnly: true // Copy only auto-generated content
   });
 
-.. code-block::
+.. code-block:: javascript
   :caption: With assets
 
   squared.saveAs("android.zip", {
@@ -176,7 +174,7 @@ Chrome
 Interface
 ---------
 
-.. code-block:: typescript
+::
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -240,7 +238,7 @@ Interface
 Example usage
 -------------
 
-::
+.. code-block:: javascript
 
   squared.copyTo("/path/project", {
     cache: {

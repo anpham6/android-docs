@@ -4,11 +4,10 @@ Installation
 
 - NodeJS 14 (*Minimum*)
 
-.. highlight:: bash
-
 NPX
 ===
 
+.. highlight:: bash
 .. code-block::
   :caption: node_modules
 

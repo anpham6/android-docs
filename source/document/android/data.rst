@@ -38,7 +38,8 @@ Method
     );
   });
 
-::
+.. code-block::
+  :emphasize-lines: 19,20
 
   squared.parseDocument({
     element: "main",

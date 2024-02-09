@@ -14,7 +14,8 @@ Method
 
 You can also do it using the ``android.substitute`` extension directly inside the HTML element.
 
-::
+.. code-block::
+  :emphasize-lines: 18,19
 
   squared.add(["android.substitute", {
     element: {
@@ -45,7 +46,7 @@ Inline
 ======
 
 .. code-block:: html
-  :emphasize-lines: 4,5
+  :emphasize-lines: 5
 
   <body>
     <header style="height: 100px"></header>
