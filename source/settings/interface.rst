@@ -71,7 +71,7 @@ Example usage
     createElementMap: false // Cache queries for subsequent nested queries
   };
 
-.. note:: The native ``document.querySelector`` does not enter :ref:`ShadowRoot <references-mdn-shadowroot>` elements.
+.. note:: The native ``document.querySelector`` does not enter :ref:`ShadowRoot <references-typescript-dom-generated>` elements.
 
 .. code-block:: javascript
   :caption: Resource

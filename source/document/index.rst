@@ -7,4 +7,5 @@ Document
 
   Android <android/index>
   chrome
+  VDOM <vdom/index>
   build

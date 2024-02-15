@@ -11,6 +11,7 @@ squared
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/type.d.ts
+  | `IteratorPredicate <search.html?q=IteratorPredicate>`_
   | `PlainObject <search.html?q=PlainObject>`_
   | `StringMap <search.html?q=StringMap>`_
 
@@ -42,6 +43,7 @@ https://unpkg.com/squared/types/base/squared.d.ts
   | `FileActionResult <search.html?q=FileActionResult>`_
   | `MutationCallback <search.html?q=MutationCallback>`_
   | `Node <search.html?q=Node>`_
+  | `NodeParentAttr <search.html?q=NodeParentAttr>`_
   | `RootElement <search.html?q=RootElement>`_
 
 .. _references-squared-base-application:
@@ -55,6 +57,16 @@ https://unpkg.com/squared/types/base/application.d.ts
 
 https://unpkg.com/squared/types/base/resource.d.ts
   | `URLData <search.html?q=URLData>`_
+
+.. _references-squared-base-node:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/base/node.d.ts
+  | `AutoMargin <search.html?q=AutoMargin>`_
+  | `CacheState <search.html?q=CacheState>`_
+  | `CacheValue <search.html?q=CacheValue>`_
+  | `InitialData <search.html?q=InitialData>`_
+  | `VisibleStyle <search.html?q=VisibleStyle>`_
 
 .. _references-squared-base-file:
 .. rst-class:: block-list
@@ -74,23 +86,89 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `WatchInterval <search.html?q=WatchInterval>`_
   | `WebSocketClient <search.html?q=WebSocketClient>`_
 
-.. _references-squared-svg-object:
+.. _references-squared-base-type:
 .. rst-class:: block-list
 
-https://unpkg.com/squared/types/svg/object.d.ts
-  | `SvgTransformExclude <search.html?q=SvgTransformExclude>`_
+https://unpkg.com/squared/types/base/type.d.ts
+  | `ClearDirectionAttr <search.html?q=ClearDirectionAttr>`_
+  | `FloatDirectionAttr <search.html?q=FloatDirectionAttr>`_
+
+.. _references-squared-base-options:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/base/options.d.ts
+  | `AscendParameterOptions <search.html?q=AscendParameterOptions>`_
+  | `CoordsXYOptions <search.html?q=CoordsXYOptions>`_
+  | `CssAnyOptions <search.html?q=CssAnyOptions>`_
+  | `CssAscendOptions <search.html?q=CssAscendOptions>`_
+  | `CssInitialOptions <search.html?q=CssInitialOptions>`_
+  | `CssSortOptions <search.html?q=CssSortOptions>`_
+  | `CssUnitOptions <search.html?q=CssUnitOptions>`_
+  | `DescendParameterOptions <search.html?q=DescendParameterOptions>`_
+  | `HasOptions <search.html?q=HasOptions>`_
+  | `HasUnitOptions <search.html?q=HasUnitOptions>`_
+  | `MinMaxOptions <search.html?q=MinMaxOptions>`_
+  | `NodeConvertUnitOptions <search.html?q=NodeConvertUnitOptions>`_
+  | `NodeParseUnitOptions <search.html?q=NodeParseUnitOptions>`_
+  | `NodeUnitOptions <search.html?q=NodeUnitOptions>`_
+  | `OffsetXYOptions <search.html?q=OffsetXYOptions>`_
+  | `SiblingsParameterOptions <search.html?q=SiblingsParameterOptions>`_
+
+.. _references-squared-types-object:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/object.d.ts
+  | `Dimension <search.html?q=Dimension>`_
 
 .. _references-squared-types-dom:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/dom.d.ts
+  | `BoxModelAttr <search.html?q=BoxModelAttr>`_
+  | `BoxRect <search.html?q=BoxRect>`_
+  | `BoxRectDimension <search.html?q=BoxRectDimension>`_
   | `ColorRGB <search.html?q=ColorRGB>`_
+  | `ContainerDimension <search.html?q=ContainerDimension>`_
+  | `FlexBox <search.html?q=FlexBox>`_
+  | `FlexData <search.html?q=FlexData>`_
+  | `CssStyleAttr <search.html?q=CssStyleAttr>`_
+  | `CssStyleMap <search.html?q=CssStyleMap>`_
+  | `PseudoElt <search.html?q=PseudoElt>`_
+
+.. _references-squared-types-lib-main:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/lib/squared.d.ts
+  | `ListIterator <search.html?q=ListIterator>`_
+
+.. _references-squared-types-lib-type:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/lib/type.d.ts
+  | `Specificity <search.html?q=Specificity>`_
 
 .. _references-squared-types-lib-data:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/lib/data.d.ts
+  | `ElementData <search.html?q=ElementData>`_
   | `UserAgentData <search.html?q=UserAgentData>`_
+
+.. _references-squared-types-lib-options:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/lib/options.d.ts
+  | `ContainerCascadeOptions <search.html?q=ContainerCascadeOptions>`_
+  | `ContainerFindOptions <search.html?q=ContainerFindOptions>`_
+  | `ContainerIncludesOptions <search.html?q=ContainerIncludesOptions>`_
+  | `ContainerRangeOptions <search.html?q=ContainerRangeOptions>`_
+  | `ContainerRemoveIfOptions <search.html?q=ContainerRemoveIfOptions>`_
+
+.. _references-squared-svg-object:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/svg/object.d.ts
+  | `SvgTransformExclude <search.html?q=SvgTransformExclude>`_
 
 .. _references-squared-internal:
 .. rst-class:: block-list
@@ -200,25 +278,37 @@ https://unpkg.com/squared/types/chrome/file.d.ts
 https://unpkg.com/squared/types/chrome/options.d.ts
   | `SaveAsOptions <search.html?q=SaveAsOptions>`_
 
+.. _references-typescript:
+
+TypeScript
+==========
+
+.. _references-typescript-dom-generated:
+.. rst-class:: block-list
+
+https://github.com/microsoft/TypeScript/blob/main/src/lib/dom.generated.d.ts
+  | `CSSStyleDeclaration <search.html?q=CSSStyleDeclaration>`_
+  | `DOMRect <search.html?q=DOMRect>`_
+  | `DOMStringMap <search.html?q=DOMStringMap>`_
+  | `Element <search.html?q=Element>`_
+  | `HTMLElement <search.html?q=HTMLElement>`_
+  | `MutationObserverInit <search.html?q=MutationObserverInit>`_
+  | `ShadowRoot <search.html?q=DOMRect>`_
+
+.. _references-typescript-es2015-iterable:
+.. rst-class:: block-list
+
+https://github.com/microsoft/TypeScript/blob/main/src/lib/es2015.iterable.d.ts
+  | `Iterable <search.html?q=Iterable>`_
+  | `IterableIterator <search.html?q=IterableIterator>`_
+
 .. _references-mdn:
 
 MDN
 ===
-
-.. _references-mdn-shadowroot:
-.. rst-class:: block-list
-
-https://developer.mozilla.org/docs/Web/API/ShadowRoot
-  | `ShadowRoot <search.html?q=ShadowRoot>`_
 
 .. _references-mdn-request-mode:
 .. rst-class:: block-list
 
 https://developer.mozilla.org/docs/Web/API/Request/mode
   | `RequestMode <search.html?q=RequestMode>`_
-
-.. _references-mdn-mutationobserver-observe:
-.. rst-class:: block-list
-
-https://developer.mozilla.org/docs/Web/API/MutationObserver/observe
-  | `MutationObserverInit <search.html?q=MutationObserverInit>`_

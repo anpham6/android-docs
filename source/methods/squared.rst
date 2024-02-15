@@ -803,7 +803,7 @@ squared
 .. |BroadcastMessageCallback| replace:: :ref:`BroadcastMessageCallback <references-squared-base-file>`
 .. |APP_FRAMEWORK| replace:: :ref:`APP_FRAMEWORK <references-squared-base>`
 .. |PrefetchItem| replace:: :ref:`PrefetchItem <references-squared-main>`
-.. |MutationObserver| replace:: :ref:`MutationObserver <references-mdn-mutationobserver-observe>`
+.. |MutationObserver| replace:: :ref:`MutationObserver <references-typescript-dom-generated>`
 .. |FileObserveOptions| replace:: :ref:`FileObserveOptions <references-squared-main>`
 
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
