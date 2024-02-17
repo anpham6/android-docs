@@ -1,13 +1,13 @@
-.table-right th.head {
+table.versions th.head {
     min-width: 75px;
     text-align: right;
 }
 
-.table-right th.head:nth-child(1) {
+table.versions th.head:nth-child(1) {
     text-align: center;
 }
 
-.table-right td {
+table.versions td {
     text-align: right;
 }
 

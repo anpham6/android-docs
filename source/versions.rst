@@ -2,7 +2,7 @@
 Versions
 ========
 
-.. rst-class:: table-right
+.. rst-class:: versions
 
 ======== ======== ======== ======== ========
   Date       Docs  squared     E-mc  sqd-cli
