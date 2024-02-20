@@ -8,6 +8,7 @@ Interface
 =========
 
 .. highlight:: typescript
+
 .. code-block::
   :caption: squared.accessibility
 
@@ -144,6 +145,7 @@ Example usage
 Some extensions have a few settings which can be configured. The default settings usually achieve the best overall rendering accuracy without noticeably affecting performance.
 
 .. highlight:: javascript
+
 .. code-block::
   :caption: Create
 

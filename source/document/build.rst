@@ -100,7 +100,8 @@ Interface
   }
 
 .. versionadded:: 5.2.0
-  **dependencyScopes** with the "snapshot" value ``1``.
+
+  **dependencyScopes** with the "snapshot" number value "**1**" for all scopes.
 
 Example usage
 -------------

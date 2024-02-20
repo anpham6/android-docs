@@ -8,6 +8,7 @@ NPX
 ===
 
 .. highlight:: bash
+
 .. code-block::
   :caption: node_modules
 
@@ -18,7 +19,7 @@ NPX
   npx sqd serve
 
 .. code-block::
-  :caption: local
+  :caption: local (dev)
 
   npm init
   npm i sqd-cli sqd-serve

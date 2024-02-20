@@ -9,8 +9,6 @@ Interface
 
 .. code-block:: typescript
 
-  import type { UserResourceSettings } from "./interface";
-
   interface UserResourceSettings {
       excludePlainText?: boolean;
       webSocketPort?: number;

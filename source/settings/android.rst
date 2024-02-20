@@ -7,8 +7,6 @@ Interface
 
 .. code-block:: typescript
 
-  import type { UserResourceSettingsUI } from "./interface";
-
   interface UserResourceSettingsUI {
       targetAPI: number;
       supportRTL: boolean;
@@ -53,6 +51,7 @@ Interface
   }
 
 .. versionadded:: 5.2.0
+
   *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.

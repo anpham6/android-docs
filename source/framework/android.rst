@@ -4,7 +4,7 @@ Android
 
 The primary function :func:`parseDocument` can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.
 
-.. warning:: Calling **save** or **copy** methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous :code:`await parseDocument()` or :code:`parseDocument().then()` and not :func:`parseDocumentSync`.
+.. warning:: Calling :func:`saveAs` or :func:`copyTo` methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous :func:`parseDocument` and not :func:`parseDocumentSync`.
 
 Example usage
 =============
@@ -156,7 +156,9 @@ Example usage
     observe(mutations, observer, settings) {
       squared.reset(); // Required after a File action
       squared.parseDocument(settings).then(() => {
-        squared.copyTo("/path/project", { modified: true }).then(response => console.log(response));
+        squared.copyTo("/path/project", { modified: true }).then(response => {
+          console.log(response);
+        });
       });
     }
   });
