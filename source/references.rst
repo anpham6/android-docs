@@ -200,18 +200,18 @@ https://unpkg.com/squared/types/android/type.d.ts
 .. _references-android-application:
 .. rst-class:: block-list
 
-https://unpkg.com/squared/types/android/application.d.ts:
+https://unpkg.com/squared/types/android/application.d.ts
   | `ControllerSettingsDirectoryUI <search.html?q=ControllerSettingsDirectoryUI>`_
   | `ControllerSettingsUI <search.html?q=ControllerSettingsUI>`_
-  | `ResourceQualifierMap <search.html?q=ResourceQualifierMap>`_
   | `ThemeAttribute <search.html?q=ThemeAttribute>`_
 
 .. _references-android-resource:
 .. rst-class:: block-list
 
-https://unpkg.com/squared/types/android/resource.d.ts:
+https://unpkg.com/squared/types/android/resource.d.ts
   | `FontProviderFonts <search.html?q=FontProviderFonts>`_
   | `ManifestData <search.html?q=ManifestData>`_
+  | `ResourceQualifierMap <search.html?q=ResourceQualifierMap>`_
 
 .. _references-android-file:
 .. rst-class:: block-list
@@ -222,7 +222,7 @@ https://unpkg.com/squared/types/android/file.d.ts
 .. _references-android-extension:
 .. rst-class:: block-list
 
-https://unpkg.com/squared/types/android/extension.d.ts:
+https://unpkg.com/squared/types/android/extension.d.ts
   | `ExtensionAttributeElement <search.html?q=ExtensionAttributeElement>`_
   | `ExtensionFragmentElement <search.html?q=ExtensionFragmentElement>`_
   | `ExtensionIncludeElement <search.html?q=ExtensionIncludeElement>`_
@@ -235,6 +235,11 @@ https://unpkg.com/squared/types/android/extension.d.ts:
 https://unpkg.com/squared/types/android/node.d.ts
   | `LocalSettingsUI <search.html?q=LocalSettingsUI>`_
   | `NamingStyles <search.html?q=NamingStyles>`_
+
+.. _references-android-data:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/data.d.ts
   | `ViewAttribute <search.html?q=ViewAttribute>`_
 
 .. _references-android-options:

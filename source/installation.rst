@@ -113,10 +113,12 @@ Repo
   repo init -u https://github.com/anpham6/squared-repo -m 5.1.5.xml
   repo sync
 
-  ls
-  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
+.. rst-class:: installation-workspace
 
-  cd squared
+.. code-block::
+  :caption: ~/workspace
+
+  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo

@@ -257,7 +257,7 @@ Example usage
       "http://localhost:3000/build/": "./build", // Starts with "http"
       "http://localhost:3000/dist/chrome.framework.js": "/path/project/build/framework/chrome/src/main.js" // Full file path
     },
-    webBundle: {
+    webBundle: { // Chromium
       baseUrl: "http://hostname/dir/", // Resolves to current host and directory
       rewriteHtmlPage: true | "index.html", // Hide or rename main page
       excludeHtmlPage: true, // Exclude HTML page from WBN archive
@@ -265,9 +265,9 @@ Example usage
       includeScopes: ["**/*.css"], // http://localhost:3000/dir/**/*.css (hides "excludeTransforms" + "excludeScopes")
       excludeScopes: ["/**/*.js"], // http://localhost:3000/**/*.js
       copyTo: "/path/project", // Copy archive (absolute + permission)
-      rootDirAlias: "__serverroot__" // Internal value
+      rootDirAlias: "__serverroot__" // Internal
     },
-    baseHref: "http://hostname/prod/example.html", // Additional hostname to use for parsing (URL | string)
+    baseHref: "http://hostname/prod/example.html", // Additional hostname to use for parsing local files
     retainUsedStyles: [/^a:[a-z]/i, "--property-name"],
     downloadOnly: true, // Do not transform HTML and CSS files
     excluding: Array.from(document.querySelectorAll("video, audio")) // Elements to remove from HTML

@@ -18,3 +18,12 @@ table.versions td {
 .block-list .line {
     font-size: 90%;
 }
+
+.installation-workspace .caption-text {
+    color: mediumblue;
+}
+
+.installation-workspace pre {
+    font-weight: 700;
+    color: peachpuff;
+}
