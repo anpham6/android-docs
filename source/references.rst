@@ -257,20 +257,20 @@ Chrome
 https://unpkg.com/squared/types/chrome/type.d.ts
   | `ResourceHintType <search.html?q=ResourceHintType>`_
 
-.. _references-chrome-application:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/chrome/application.d.ts
-  | `TemplateMap <search.html?q=TemplateMap>`_
-  | `UsedStylesData <search.html?q=UsedStylesData>`_
-
 .. _references-chrome-file:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/chrome/file.d.ts
   | `DocumentOutput <search.html?q=DocumentOutput>`_
   | `RequestData <search.html?q=RequestData>`_
+  | `TemplateMap <search.html?q=TemplateMap>`_
+
+.. _references-chrome-data:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/chrome/data.d.ts
   | `UnusedAtRule <search.html?q=UnusedAtRule>`_
+  | `UsedStylesData <search.html?q=UsedStylesData>`_
 
 .. _references-chrome-options:
 .. rst-class:: block-list

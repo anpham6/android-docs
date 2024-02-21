@@ -92,3 +92,31 @@ GitHub
 
   # squared.json
   node serve.js
+
+Repo
+====
+
+.. code-block::
+  :caption: Install [#]_
+
+  export REPO=$(mktemp /tmp/repo.XXXXXXXXX)
+  curl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo
+  gpg --recv-keys 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
+  curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} && install -m 755 ${REPO} ~/bin/repo
+
+.. code-block::
+  :caption: Usage [#]_
+
+  mkdir workspace
+  cd workspace
+
+  repo init -u https://github.com/anpham6/squared-repo -m 5.1.5.xml
+  repo sync
+
+  ls
+  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
+
+  cd squared
+
+.. [#] https://source.android.com/docs/setup/download#installing-repo
+.. [#] https://source.android.com/docs/setup/reference/repo

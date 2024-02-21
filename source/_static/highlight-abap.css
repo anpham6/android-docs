@@ -61,6 +61,18 @@
     color: inherit;
 }
 
-.highlight-bash .highlight .nb {
+.highlight-bash .highlight .k, .highlight-bash  .highlight .si {
     color: cyan;
+}
+
+.highlight-bash .highlight .nb {
+    color: greenyellow;
+}
+
+.highlight-bash .highlight .p {
+    color: floralwhite;
+}
+
+.highlight-bash .highlight .nv {
+    color: mintcream;
 }
