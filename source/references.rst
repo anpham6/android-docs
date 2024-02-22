@@ -78,7 +78,6 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `DataSource <search.html?q=DataSource>`_
   | `Exclusions <search.html?q=Exclusions>`_
   | `FileAsset <search.html?q=FileAsset>`_
-  | `IncrementalMatch <search.html?q=IncrementalMatch>`_
   | `LogOptions <search.html?q=LogOptions>`_
   | `OutgoingHeaders <search.html?q=OutgoingHeaders>`_
   | `RequestData <search.html?q=RequestData>`_

@@ -42,7 +42,7 @@ Interface
       task?: string[];
       modules?: string[];
       update?: WatchInterval;
-      incremental?: boolean | IncrementalMatch;
+      incremental?: boolean | "none" | "staging" | "etag" | "exists";
       checksum?: string | boolean | 1 | ChecksumOutput;
       imports?: StringMap;
       headers?: OutgoingHeaders;
@@ -252,6 +252,19 @@ Example usage
       transform: { algorithm: "md5" /* etag */, expires: "2h", limit: "5mb" }, // Set expiration and content size limit
       transform: { exclude: { html: "*", js: ["bundle-es6"] } }, // Format names per type
       transform: { include: { css: "*", js: ["bundle"] } }
+    },
+    checksum: true, // sha256 + recursive
+    checksum: 1, // sha256 + recursive = 1
+    checksum: "sha512", // checksum.sha512
+    checksum: "filename.sha384", // sha384
+    checksum: {
+      algorithm: "md5", // Default is "sha256"
+      digest: "base64", // Default is "hex"
+      filename: "checksum.crc", // Default is "checksum" + algorithm
+      recursive: true, // Default is "false"
+      recursive: 1, // Ignore nested checksum files
+      include: "**/*.png", // Has precedence
+      exclude: ["**/*.js", "**/*.css"]
     },
     imports: {
       "http://localhost:3000/build/": "./build", // Starts with "http"
