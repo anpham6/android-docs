@@ -23,19 +23,27 @@ primary_domain = 'js'
 highlight_language = 'javascript'
 pygments_style = 'abap'
 
+nitpick_ignore = [
+  ('js:func', 'string'),
+  ('js:func', 'number'),
+  ('js:func', 'boolean'),
+  ('js:func', 'function'),
+  ('js:func', 'object'),
+]
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-    'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/001.png)',
-    'navigation_depth': 3,
-    'includehidden': False,
+  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/001.png)',
+  'navigation_depth': 3,
+  'includehidden': False,
 }
 html_static_path = ['_static']
 html_css_files = ['content.css', 'highlight-abap.css', 'override.css']
 html_context = {
-  "display_github": False,
-  "commit": False,
+  'display_github': False,
+  'commit': False,
 }
 html_show_copyright = False

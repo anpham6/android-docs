@@ -244,7 +244,7 @@ squared
   Retrieve extensions by name only.
 
   :param string targets: Name of extension
-  :returns: |Extension| | |Extension|\[\] | **undefined**
+  :returns: |Extension| | |Extension|\[\] | undefined
 
   Usage::
 
@@ -329,7 +329,7 @@ squared
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
-  :returns: Promise<|Node| | |Node|\[\] | **void**>
+  :returns: Promise<|Node| | |Node|\[\] | void>
 
   Usage::
 
@@ -348,7 +348,7 @@ squared
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
-  :returns: |Node| | |Node|\[\] | **undefined**
+  :returns: |Node| | |Node|\[\] | undefined
 
   Usage::
 
@@ -363,7 +363,7 @@ squared
   :param target: |targetElement| (selectors are supported)
   :param boolean all: (*optional*) Uses filter to return multiple results
   :param string projectId: (optional) Uses an existing project in the current framework
-  :returns: |Node| | |Node|\[\] | **undefined**
+  :returns: |Node| | |Node|\[\] | undefined
 
   Usage::
 
@@ -383,7 +383,7 @@ squared
   Get any stored session ids from :func:`parseDocument` since the last time :func:`clear` was called.
 
   :param number count: (optional) How many ids at most to be retrieved
-  :returns: string | string[] | **undefined**
+  :returns: string | string[] | undefined
 
   Usage::
 
