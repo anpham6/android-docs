@@ -9,10 +9,8 @@ Interface
       [Symbol.iterator](): IterableIterator<T>;
       item(index: number, value?: T): T | undefined;
       add(item: T): this;
-      addAt?(index: number, ...items: T[]): this;
       addAll(list: T[] | Container): this;
       remove(item: T): T | undefined;
-      removeAt?(index: number): T | undefined;
       removeAll(list: T[] | Container): T[];
       retainAs(list: T[]): this;
       each(predicate: IteratorPredicate<T, void>, options?: ContainerEachOptions): this;
@@ -23,13 +21,16 @@ Interface
       includes(item: T, options?: ContainerIncludesOptions<T>): boolean;
       cascade(predicate?: IteratorPredicate<T, unknown>, options?: ContainerCascadeOptions<T>): T[];
       map(predicate: IteratorPredicate<T, unknown>): unknown[];
-      sortBy?(...attrs: [...string[], boolean]): this;
       contains(...items: T[]): boolean;
       clear(): this;
-      iterator?(): ListIterator<T>;
       isEmpty(): boolean;
       size(): number;
       toArray(): T[];
+      /* squared.lib.js */
+      addAt?(index: number, ...items: T[]): this;
+      removeAt?(index: number): T | undefined;
+      sortBy?(...attrs: [...string[], boolean?]): this;
+      iterator?(): ListIterator<T>;
       constructor(children?: T[]);
   }
 

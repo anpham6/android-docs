@@ -2,7 +2,7 @@
 Chrome
 ======
 
-You have the same features as the :doc:`vdom` framework but you can also bundle assets using query selector syntax. It is adequate for most applications and gives you the ability to preview your application before building a working copy of it.
+Uses the :doc:`vdom` framework as the element base but can also export any used resources for further processing. It is adequate for most single page applications and gives you the ability to preview your application before building a working copy of it.
 
 Example usage
 =============

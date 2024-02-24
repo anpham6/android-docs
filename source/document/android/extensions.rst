@@ -37,6 +37,13 @@ Interface
       ordinalFontSizeAdjust: number;
       ordinalPaddingLeft: number;
       imagePaddingRight: number;
+      /* base */
+      symbolDisc: string;
+      symbolSquare: string;
+      symbolCircle: string;
+      symbolDisclosureOpen: string;
+      symbolDisclosureClosed: string | [string, string /* rtl */];
+      markerStyle: CssStyleMap;
   }
 
 .. code-block::
@@ -144,28 +151,28 @@ Example usage
 
 Some extensions have a few settings which can be configured. The default settings usually achieve the best overall rendering accuracy without noticeably affecting performance.
 
-.. highlight:: javascript
-
 .. code-block::
   :caption: Create
 
   class Sample extends squared.base.ExtensionUI {
-    options = {
-      attributeName: [],
-      floatPrecision: 3
-    };
+      options = {
+          attributeName: [],
+          floatPrecision: 3
+      };
 
-    constructor(name, framework = 0, options = {}) {
-      super(name, framework, options);
-    }
-
-    processNode(node) {
-      const data = this.project.get(node.element, node.localSettings.projectId);
-      if (data) {
-          node.each((child, index) => child.element.title = data[index]);
+      constructor(name, framework = 0, options = {}) {
+          super(name, framework, options);
       }
-    }
+
+      processNode(node) {
+          const data = this.project.get(node.element, node.localSettings.projectId);
+          if (data) {
+              node.each((child, index) => child.element.title = data[index]);
+          }
+      }
   }
+
+.. highlight:: javascript
 
 .. code-block::
   :caption: Install
@@ -184,4 +191,24 @@ Some extensions have a few settings which can be configured. The default setting
   :caption: Add project data
 
   const ext = squared.get("widget.example.com");
-  ext.project.set(element, await fetch(url), "project-1"); // Map interface with optional "projectId" argument
+
+  ext.project.set(element, await fetch(url?id=1)); // Map interface with optional "projectId" argument
+  ext.project.set(element, await fetch(url?id=2), "project-1");
+
+  const data = ext.project.get(element, "project-2"); // Returns data from default project (id=1)
+
+.. versionadded:: 5.2.0
+
+  - *ExtensionListOptions* properties were created:
+
+    .. hlist::
+      :columns: 3
+
+      - symbolDisc
+      - symbolSquare
+      - symbolCircle
+      - symbolDisclosureOpen
+      - symbolDisclosureClosed
+      - markerStyle
+
+  - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 
