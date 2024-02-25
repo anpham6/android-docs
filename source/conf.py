@@ -29,7 +29,13 @@ nitpick_ignore = [
   ('js:func', 'boolean'),
   ('js:func', 'function'),
   ('js:func', 'object'),
+  ('js:func', 'array'),
 ]
+
+rst_prolog = """
+.. role:: alt(emphasis)
+.. role:: target(emphasis)
+"""
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -41,7 +47,7 @@ html_theme_options = {
   'includehidden': False,
 }
 html_static_path = ['_static']
-html_css_files = ['content.css', 'highlight-abap.css', 'override.css']
+html_css_files = ['role.css', 'content.css', 'highlight-abap.css', 'override.css']
 html_context = {
   'display_github': False,
   'commit': False,

@@ -2,7 +2,7 @@
 VDOM
 ====
 
-A minimal framework (*50kb gzipped*) that is useful for debugging in `DevTools <https://developer.chrome.com/docs/devtools>`_ console. The :ref:`lite <browser-download-vdom-lite>` version is half the download size and was built for browser applications.
+A minimal framework that is primarily for debugging elements in `DevTools <https://developer.chrome.com/docs/devtools>`_ console. The :ref:`lite <browser-download-vdom-lite>` version is half the download size :alt:`(55kb gzipped)` and was built for browser applications.
 
 Example usage
 =============

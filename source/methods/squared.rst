@@ -244,7 +244,9 @@ squared
   Retrieve extensions by name only.
 
   :param string targets: Name of extension
-  :returns: |Extension| | |Extension|\[\] | undefined
+  :returns:
+    - |Extension| | undefined
+    - |Extension|\[\] :alt:`(multiple)`
 
   Usage::
 
@@ -308,7 +310,7 @@ squared
   Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for CSS.
 
   :param string type: *css* | *javascript* | *image* | *svg*
-  :param boolean all: (*optional*) Accept request from any origin
+  :param boolean all: (:alt:`optional`) Accept request from any origin
   :param targets: (optional) URL string or root element of a contained Document
   :returns: Promise<|PrefetchItem|\[\]>
 
@@ -329,7 +331,9 @@ squared
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
-  :returns: Promise<|Node| | |Node|\[\] | void>
+  :returns:
+    - Promise<|Node| | void>
+    - Promise<|Node|\[\]> :alt:`(multiple)`
 
   Usage::
 
@@ -348,7 +352,9 @@ squared
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
-  :returns: |Node| | |Node|\[\] | undefined
+  :returns:
+    - |Node| | undefined
+    - |Node|\[\] :alt:`(multiple)`
 
   Usage::
 
@@ -361,9 +367,11 @@ squared
   Can be used before saving rendered document to modify auto-generated |Node| attributes.
 
   :param target: |targetElement| (selectors are supported)
-  :param boolean all: (*optional*) Uses filter to return multiple results
+  :param boolean all: (:alt:`optional`) Uses filter to return multiple results
   :param string projectId: (optional) Uses an existing project in the current framework
-  :returns: |Node| | |Node|\[\] | undefined
+  :returns:
+    - |Node| | undefined
+    - |Node|\[\] :alt:`(all)`
 
   Usage::
 
@@ -652,7 +660,9 @@ squared
   :param string value: Case-sensitive match against *Element*.id property
   :param boolean sync: (optional) Will block and not wrap query in a Promise
   :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns: Promise<|Node| | null> | |Node| | null
+  :returns:
+    - Promise<|Node| | null>
+    - |Node| | null :alt:`(sync)`
 
   Usage::
 
@@ -668,7 +678,9 @@ squared
   :param string selector: Selector or selectors matching one or more elements
   :param boolean sync: (optional) Will block and not wrap query in a Promise
   :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns: Promise<|Node| | null> | |Node| | null
+  :returns:
+    - Promise<|Node| | null>
+    - |Node| | null :alt:`(sync)`
 
   Usage::
 
@@ -687,7 +699,9 @@ squared
   :param string selector: Selector or selectors matching one or more elements
   :param boolean sync: (optional) Will block and not wrap query in a Promise
   :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns: Promise<|Node|\[\] | null> | |Node|\[\] | null
+  :returns:
+    - Promise<|Node|\[\] | null>
+    - |Node|\[\] | null :alt:`(sync)`
 
   Usage::
 
@@ -702,7 +716,9 @@ squared
   :param element: |targetElement|
   :param boolean sync: (optional) Will block and not wrap query in a Promise
   :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns: Promise<|Node| | null> | |Node| | null
+  :returns:
+    - Promise<|Node|\[\] | null>
+    - |Node|\[\] | null :alt:`(sync)`
 
   Usage::
 
@@ -718,7 +734,9 @@ squared
   :param object node: See |Node|
   :param boolean sync: (optional) Will block and not wrap query in a Promise
   :param boolean cache: (optional) Use any existing |Node| instance
-  :returns: Promise<|Node| | null> | |Node| | null
+  :returns:
+    - Promise<|Node|\[\] | null>
+    - |Node|\[\] | null :alt:`(sync)`
 
   Usage::
 
@@ -769,7 +787,7 @@ squared
   Can be used to watch external elements which contain modifiable source files.
 
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
-  :param function callback: (*optional*) Method to call when a ``modified`` event is received
+  :param function callback: (:alt:`optional`) Method to call when a ``modified`` event is received
   :param object options: (optional) See |FileObserveOptions|
   :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
 

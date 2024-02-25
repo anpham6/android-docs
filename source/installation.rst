@@ -2,7 +2,7 @@
 Installation
 ============
 
-- NodeJS 14 (*Minimum*)
+- NodeJS 14 :alt:`(Minimum)`
 
 NPX
 ===

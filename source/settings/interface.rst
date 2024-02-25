@@ -94,4 +94,4 @@ Example usage
     broadcastSecurePort: 3443
   };
 
-.. note:: These settings are not available in the :doc:`vdom` framework.
+.. attention:: These settings are not available in the :doc:`vdom` framework.

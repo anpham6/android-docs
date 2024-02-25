@@ -12,6 +12,21 @@
     display: none;
 }
 
+.rst-content code.literal:not(.xref) {
+    color: mediumblue;
+    border-color: lightsteelblue;
+}
+
+.rst-content code.xref {
+    color: darkred;
+    border: none;
+}
+
+.rst-content a.reference code.xref {
+    color: #444444;
+    border: 1px solid gainsboro;
+}
+
 .section-caption .code-block-caption {
     font-size: 100%;
     font-weight: 700;

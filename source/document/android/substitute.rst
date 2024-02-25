@@ -29,7 +29,7 @@ Method
   const navigation = squared.findDocumentNode("navigation");
   navigation.android("layout_height", "match_parent");
 
-.. tip:: Use ``node.lockAttr(namespace, attribute)`` when your changes are overriden by an extension.
+.. tip:: Use :code:`node.lockAttr(namespace, attribute)` when your changes are overriden by an extension.
 
 Inline
 ======
