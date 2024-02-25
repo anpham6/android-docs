@@ -35,6 +35,7 @@ nitpick_ignore = [
 rst_prolog = """
 .. role:: alt(emphasis)
 .. role:: target(emphasis)
+.. role:: sub(abbr)
 """
 
 # -- Options for HTML output -------------------------------------------------

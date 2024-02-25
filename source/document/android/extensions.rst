@@ -43,6 +43,7 @@ Interface
       symbolCircle: string;
       symbolDisclosureOpen: string;
       symbolDisclosureClosed: string | [string, string /* rtl */];
+      symbolFallback: string;
       markerStyle: CssStyleMap;
   }
 
@@ -209,6 +210,7 @@ Some extensions have a few settings which can be configured. The default setting
       - symbolCircle
       - symbolDisclosureOpen
       - symbolDisclosureClosed
+      - symbolFallback
       - markerStyle
 
   - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 

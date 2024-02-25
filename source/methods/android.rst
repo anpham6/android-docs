@@ -47,7 +47,7 @@ android
 
   :param string group: Namespace of library
   :param string name: Componenent name in library
-  :param string version: (:alt:`optional`) Exact version requested
+  :param string version: (:sub:`optional (type)`) Exact version requested
   :param number type: (optional) Dependency namespace method in Gradle
   :returns: string
   :requirements:
@@ -70,7 +70,7 @@ android
   :param string projectId: |projectId|
   :param string group: Namespace of library
   :param string name: Componenent name in library
-  :param string version: (:alt:`optional`) Exact version requested
+  :param string version: (:sub:`optional (type)`) Exact version requested
   :param number type: (optional) Dependency namespace method in Gradle
   :returns: string
   :requirements:

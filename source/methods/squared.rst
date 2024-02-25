@@ -27,13 +27,13 @@ squared
 
 .. function:: setLocalAddress(...values)
 
-  Additional hostnames which are interpreted as localhost. Protocol and port are not used.
+  Additional hostnames which are interpreted as localhost. Protocol and port are not required.
 
   :param string values: Same format as URL.hostname
 
   Usage::
 
-    squared.setLocalAddress("127.0.0.1", "nodejs-001", new URL("http://0.0.0.0"));
+    squared.setLocalAddress("127.0.0.1", "nodejs-001");
 
   Alternate::
 
@@ -53,7 +53,7 @@ squared
 
   Abort request if not completed in the given amount of time.
 
-  :param number pid: (optional) File request self-assigned number (options.pid)
+  :param number pid: (optional) File request self-assigned number :alt:`(options.pid)`
   :param number timeout: (optional) Seconds until request expires
   :returns: Promise<number>
 
@@ -114,7 +114,7 @@ squared
 
 .. function:: setFramework(target[, options, cache])
 
-  Install application interpreter. (e.g. android.framework.js)
+  Install application interpreter. :alt:`(e.g. android.framework.js)`
 
   :param object target: Global object implementing |AppFramework|
   :param object options: (optional) Initialize settings with non-default values
@@ -310,7 +310,7 @@ squared
   Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for CSS.
 
   :param string type: *css* | *javascript* | *image* | *svg*
-  :param boolean all: (:alt:`optional`) Accept request from any origin
+  :param boolean all: (:sub:`optional (targets)`) Accept request from any origin
   :param targets: (optional) URL string or root element of a contained Document
   :returns: Promise<|PrefetchItem|\[\]>
 
@@ -327,7 +327,7 @@ squared
 
 .. function:: parseDocument(...elements)
 
-  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. Assets can be preloaded (e.g. images) which is required with the :doc:`android </framework/android>` framework.
+  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. Assets can be preloaded :alt:`(e.g. images)` which is required with the :doc:`android </framework/android>` framework.
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
@@ -367,7 +367,7 @@ squared
   Can be used before saving rendered document to modify auto-generated |Node| attributes.
 
   :param target: |targetElement| (selectors are supported)
-  :param boolean all: (:alt:`optional`) Uses filter to return multiple results
+  :param boolean all: (:sub:`optional (projectId)`) Uses filter to return multiple results
   :param string projectId: (optional) Uses an existing project in the current framework
   :returns:
     - |Node| | undefined
@@ -787,7 +787,7 @@ squared
   Can be used to watch external elements which contain modifiable source files.
 
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
-  :param function callback: (:alt:`optional`) Method to call when a ``modified`` event is received
+  :param function callback: (:alt:`optional (options)`) Method to call when a ``modified`` event is received
   :param object options: (optional) See |FileObserveOptions|
   :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
 
