@@ -14,15 +14,15 @@ Example usage
   <script src="/dist/chrome.framework.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      squared.setFramework(chrome, {/* settings */});
+      squared.setFramework(chrome, {/* UserResourceSettings */});
 
       await squared.save(); // Uses defaults from settings
       /* OR */
-      await squared.saveAs("android.zip", /* options */);
+      await squared.saveAs("android.zip", {/* RequestData */});
       /* OR */
-      await squared.copyTo("/path/project", /* options */);
+      await squared.copyTo("/path/project", {/* RequestData */});
       /* OR */
-      await squared.appendTo("/path/to/android.7z", /* options */);
+      await squared.appendTo("/path/to/android.7z", {/* RequestData */});
     });
   </script>
 

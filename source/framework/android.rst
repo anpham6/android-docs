@@ -19,7 +19,7 @@ Example usage
     squared.settings.targetAPI = 34; // Optional
 
     document.addEventListener("DOMContentLoaded", async () => {
-      squared.setFramework(android, {/* settings */});
+      squared.setFramework(android, {/* UserResourceSettingsUI */});
 
       await squared.parseDocument(); // Node (document.body)
       /* OR */
@@ -105,10 +105,10 @@ Example usage
 
       await squared.save(); // Uses defaults from settings
       /* OR */
-      await squared.saveAs("project.zip", { projectId: "project-1" });
+      await squared.saveAs("project.zip", {/* RequestData */});
       await squared.saveAs("default.7z", { throwErrors: true }).catch(err => console.log(err)); // Will cancel partial archive download
       /* OR */
-      await squared.copyTo("/path/project-1", { emptyDir: true, ignoreExtensions: true });
+      await squared.copyTo("/path/project-1", { projectId: "project-1", emptyDir: true, ignoreExtensions: true });
       /* OR */
       await squared.appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
 

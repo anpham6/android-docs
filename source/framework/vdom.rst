@@ -15,7 +15,7 @@ Example usage
   <script src="/dist/vdom.framework.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      squared.setFramework(vdom, {/* settings */});
+      squared.setFramework(vdom, {/* UserSettings */});
 
       const elements = await squared.querySelectorAll("*");
       /* OR */

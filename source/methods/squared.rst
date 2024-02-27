@@ -395,8 +395,8 @@ squared
 
   Usage::
 
-    squared.parseDocument().then(() => {
-      // ["1", "2", "3"]
+    squared.parseDocument("id-1", "id-2", "id-3").then(() => {
+      // ["00001", "00002", "00003"]
       const id3 = squared.latest();
       const id1 = squared.latest(-1);
       const [id2, id3] = squared.latest(2);
@@ -458,8 +458,10 @@ squared
     await squared.parseDocument();
     await squared.saveAs("android.zip", { timeout: 15, log: { showSize: true } }); // Uses default unnamed project "_"
 
-    await squared.parseDocument({ element: document.body, projectId: "sqd-1" });
-    await squared.saveAs("project-1.7z", { projectId: "sqd-1", throwErrors: true }).catch(err => console.log(err)); // Will cancel partial archive download
+    await squared.parseDocument({ element: document.body, projectId: "project-1" });
+    await squared.saveAs("project-1.7z", { projectId: "project-1", throwErrors: true }).catch(err => { // Will cancel partial archive download
+      console.log(err);
+    });
 
   Alternate::
 
@@ -485,8 +487,10 @@ squared
       await squared.appendTo("http://localhost:3000/archives/android.001", { format: "tar" }); // "tar" is explicit (ignored filename)
     });
 
-    await squared.parseDocument({ element: document.body, projectId: "sqd-1" });
-    squared.appendTo("../data/project-1.7z", { projectId: "sqd-1" }).then(result => console.log(result)); // Uses NodeJS process.cwd() resolution
+    await squared.parseDocument({ element: document.body, projectId: "project-1" });
+    squared.appendTo("../data/project-1.7z", { projectId: "project-1" }).then(result => { // Uses NodeJS process.cwd() resolution
+      console.log(result);
+    });
 
   Alternate::
 
@@ -511,8 +515,8 @@ squared
     await squared.parseDocument();
     await squared.copyTo("./path/to/project", { timeout: 10, log: { showSize: true } });
 
-    squared.parseDocument({ element: document.body, projectId: "sqd-1" }).then(() => {
-      squared.copyTo("/path/project", { projectId: "sqd-1" }).then(result => console.log(result));
+    squared.parseDocument({ element: document.body, projectId: "project-1" }).then(() => {
+      squared.copyTo("/path/project", { projectId: "project-1" }).then(result => console.log(result));
     });
 
   Alternate::

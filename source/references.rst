@@ -51,6 +51,9 @@ https://unpkg.com/squared/types/base/squared.d.ts
 
 https://unpkg.com/squared/types/base/application.d.ts
   | `ControllerSettingsDirectoryUI <search.html?q=ControllerSettingsDirectoryUI>`_
+  | `UserSettings <search.html?q=UserSettings>`_
+  | `UserResourceSettings <search.html?q=UserResourceSettings>`_
+  | `UserResourceSettingsUI <search.html?q=UserResourceSettingsUI>`_
 
 .. _references-squared-base-resource:
 .. rst-class:: block-list
@@ -203,6 +206,7 @@ https://unpkg.com/squared/types/android/application.d.ts
   | `ControllerSettingsDirectoryUI <search.html?q=ControllerSettingsDirectoryUI>`_
   | `ControllerSettingsUI <search.html?q=ControllerSettingsUI>`_
   | `ThemeAttribute <search.html?q=ThemeAttribute>`_
+  | `UserResourceSettingsUI <search.html?q=UserResourceSettingsUI>`_
 
 .. _references-android-resource:
 .. rst-class:: block-list
@@ -217,6 +221,7 @@ https://unpkg.com/squared/types/android/resource.d.ts
 
 https://unpkg.com/squared/types/android/file.d.ts
   | `DocumentOutput <search.html?q=DocumentOutput>`_
+  | `RequestData <search.html?q=RequestData>`_
 
 .. _references-android-extension:
 .. rst-class:: block-list
@@ -260,6 +265,13 @@ Chrome
 
 https://unpkg.com/squared/types/chrome/type.d.ts
   | `ResourceHintType <search.html?q=ResourceHintType>`_
+
+
+.. _references-chrome-application:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/chrome/application.d.ts
+  | `UserResourceSettings <search.html?q=UserResourceSettings>`_
 
 .. _references-chrome-file:
 .. rst-class:: block-list
