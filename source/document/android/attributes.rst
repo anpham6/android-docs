@@ -1,8 +1,29 @@
 =================
-Custom Attributes
+Modify Attributes
 =================
 
 System or extension generated attributes can be overridden preceding finalization. They will only be visible on the declared framework.
+
+.. tip:: Default namespace is ``android``.
+
+Settings
+========
+
+.. code-block::
+  :emphasize-lines: 2
+
+  squared.settings.showAttributes = {
+    "hyphenationFrequency": "full", // Replace all
+    "android:fontFeatureSettings": null, // Delete all
+    "app:menu": [
+      "@menu/menu_1", "@menu/menu_2", // Replace with "@menu/menu_2" when value is "@menu/menu_1"
+      "@menu/menu_3", null // Delete attribute when value is "@menu/menu_3"
+    ]
+  };
+
+.. versionadded:: 5.2.0
+
+  Settings property **showAttributes** used as a replacement map was implemented.
 
 Method
 ======
@@ -24,6 +45,7 @@ Inline
   data-android-attr-{namespace}?
 
 .. code-block:: html
+  :emphasize-lines: 2
 
   <div id="customId"
     data-android-attr="layout_width::match_parent;layout_height::match_parent"
@@ -38,5 +60,3 @@ Inline
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_scrollFlags="scroll|exitUntilCollapsed" />
-
-.. note:: Default namespace is ``android``.

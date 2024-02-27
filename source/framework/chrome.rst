@@ -40,6 +40,4 @@ Example usage
       attributeOldValue: true,
       characterDataOldValue: true
     });
-    /* OR */
-    squared.observe(false);
   });
