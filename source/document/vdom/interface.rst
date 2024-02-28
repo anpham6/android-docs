@@ -26,12 +26,13 @@ Interface
       isEmpty(): boolean;
       size(): number;
       toArray(): T[];
+      constructor(children?: T[]);
+
       /* squared.lib.js */
       addAt?(index: number, ...items: T[]): this;
       removeAt?(index: number): T | undefined;
       sortBy?(...attrs: [...string[], boolean?]): this;
       iterator?(): ListIterator<T>;
-      constructor(children?: T[]);
   }
 
   class Node extends Container<Node> {

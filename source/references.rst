@@ -294,6 +294,17 @@ https://unpkg.com/squared/types/chrome/data.d.ts
 https://unpkg.com/squared/types/chrome/options.d.ts
   | `SaveAsOptions <search.html?q=SaveAsOptions>`_
 
+.. _references-e-mc:
+
+E-mc
+====
+
+.. _references-e-mc-types-lib-core:
+.. rst-class:: block-list
+
+https://unpkg.com/@e-mc/types/lib/core.d.ts
+  | `PermittedDirectories <search.html?q=PermittedDirectories>`_
+
 .. _references-typescript:
 
 TypeScript
