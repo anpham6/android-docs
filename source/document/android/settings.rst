@@ -56,7 +56,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :caption: `View Module <https://e-mc.readthedocs.io/en/latest/modules/document.html>`_
+  :caption: :external+chrome:doc:`View Module <modules/document>`
 
   interface DocumentModule {
       handler: "@pi-r/android";

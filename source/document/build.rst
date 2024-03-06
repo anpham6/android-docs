@@ -286,7 +286,7 @@ Example usage
     excluding: Array.from(document.querySelectorAll("video, audio")) // Elements to remove from HTML
   });
 
-.. seealso:: `E-mc <https://e-mc.readthedocs.io>`_ / `Build Options <https://e-mc.readthedocs.io/en/latest/build.html>`_
+.. seealso:: :external+chrome:doc:`E-mc <index>` / :external+chrome:doc:`Build Options <build>`
 
 .. |FileActionOptions| replace:: :ref:`FileActionOptions <references-squared-main>`
 .. |DocumentOutput| replace:: :ref:`DocumentOutput <references-android-file>`

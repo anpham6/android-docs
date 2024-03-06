@@ -2,7 +2,7 @@
 Chrome
 ======
 
-The default settings were optimized for creating static web pages with `E-mc <https://e-mc.readthedocs.io>`_. Any customizations are usually the ``output`` properties.
+The default settings were optimized for creating static web pages with :external+chrome:doc:`E-mc <index>`. Any customizations are usually the ``output`` properties.
 
 Interface
 =========

@@ -14,7 +14,11 @@ release = '5.1.5'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['sphinx.ext.intersphinx']
+
+intersphinx_mapping = {
+  'chrome': ('https://e-mc.readthedocs.io/en/latest', ('../../chrome-docs/build/html/objects.inv', None)),
+}
 
 templates_path = ['_templates']
 exclude_patterns = []
