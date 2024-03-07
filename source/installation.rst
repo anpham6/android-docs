@@ -110,7 +110,7 @@ Repo
   mkdir workspace
   cd workspace
 
-  repo init -u https://github.com/anpham6/squared-repo -m 5.1.5.xml
+  repo init -u https://github.com/anpham6/squared-repo -m 5.1.6.xml
   repo sync
 
 .. rst-class:: installation-workspace
