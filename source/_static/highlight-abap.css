@@ -76,3 +76,7 @@
 .highlight-bash .highlight .nv {
     color: mintcream;
 }
+
+.highlight-bash .highlight .hll {
+    background-color: darkslategrey;
+}

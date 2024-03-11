@@ -15,7 +15,7 @@ NPX
   npm init
   npm i sqd-cli sqd-serve
 
-  npx sqd init
+  npx sqd init  # --serve-only
   npx sqd serve
 
 .. code-block::

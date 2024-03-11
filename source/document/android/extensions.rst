@@ -69,6 +69,13 @@ Interface
 
   interface DelegateScrollbarOptions {
       alwaysDrawTrack: boolean;
+      alwaysDrawHorizontalTrack: boolean;
+      alwaysDrawVerticalTrack: boolean;
+      style: "none" | "outsideInset" | "insideInset" | "insideOverlay" | "outsideOverlay";
+      size: string; // px
+      thinSize: string;
+      fadeDuration: number;
+      delayBeforeFade: number;
   }
 
 .. code-block::
@@ -212,5 +219,18 @@ Some extensions have a few settings which can be configured. The default setting
       - symbolDisclosureClosed
       - symbolFallback
       - markerStyle
+
+  - *DelegateScrollbarOptions* properties were created:
+
+    .. hlist::
+      :columns: 3
+
+      - alwaysDrawHorizontalTrack
+      - alwaysDrawVerticalTrack
+      - style
+      - size
+      - thinSize
+      - fadeDuration
+      - delayBeforeFade
 
   - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 

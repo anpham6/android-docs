@@ -5,7 +5,7 @@ SVG Animations
 Initialize
 ==========
 
-Animations are usually started before :func:`parseDocument` can read the initial values once the *DOMContentLoaded* event has fired. Inline hints are required in order to recreate the non-CSS initial values which are lost once they are dynamically altered by the native SVG.
+Animations are usually started before the *DOMContentLoaded* event has fired and :func:`parseDocument` is unable to read the initial **attribute** values. Inline hints are required in order to recreate the non-CSS initial values which are lost when altered by the native SVG.
 
 .. code-block:: html
   :caption: JSON
