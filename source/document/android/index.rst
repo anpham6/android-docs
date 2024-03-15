@@ -16,4 +16,5 @@ Android
   multiline
   animations
   exclusions
+  miscellaneous
   settings
