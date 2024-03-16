@@ -33,6 +33,7 @@ Interface
       removeUnusedResourceViewId: boolean;
       preferMaterialDesign: boolean | "MaterialComponents" | "Material3";
       idNamingStyle: NamingStyles;
+      showAttributes: boolean | Record<string, (string | null)[] | string | null>;
       createDownloadableFonts: boolean;
       manifestActivityName: string;
       manifestLabelAppName: string;
@@ -52,7 +53,8 @@ Interface
 
 .. versionadded:: 5.2.0
 
-  *ExtensionFragmentElement* extends the *ViewAttribute* interface.
+  - *UserResourceSettingsUI* property **showAttributes** accepts a map to globally replace layout attributes.
+  - *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 
@@ -180,7 +182,10 @@ Example usage
     ],
     convertImages: "png", // jpeg | webp | gif | bmp
     compressImages: false, // TinyPNG (https://tinypng.com/developers)
-    showAttributes: true,
+    showAttributes: {
+      "android:hyphenationFrequency": "full", // Replace all
+      "android:fontFeatureSettings": null // Delete all
+    },
     showComments: false, // <!-- TODO in layout.xml -->
     showComments: ["boxShadow"],
     showComments: {

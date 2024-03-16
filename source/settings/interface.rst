@@ -6,12 +6,14 @@ These settings are available in the global variable ``squared`` to customize you
 
 .. highlight:: typescript
 
-::
+.. code-block::
+  :emphasize-lines: 5
 
   interface UserSettings {
       builtInExtensions: string[];
       showErrorMessages: boolean;
       pierceShadowRoot: boolean;
+      adaptStyleMap: boolean;
       createElementMap: boolean;
   }
 
@@ -40,12 +42,13 @@ These settings are available in the global variable ``squared`` to customize you
       broadcastSecurePort?: number;
   }
 
-::
+.. code-block::
+  :emphasize-lines: 4
 
   interface UserResourceSettingsUI extends UserResourceSettings {
       enabledSVG: boolean;
       supportNegativeLeftTop: boolean;
-      showAttributes: boolean;
+      showAttributes: boolean | Record<string, unknown>;
       showComments: boolean | CssStyleAttr[] | { include?: ShowCommentsInclude } & Record<string, CssStyleAttr[]>;
       insertSpaces: number;
       outputDirectory: string;
@@ -55,6 +58,11 @@ These settings are available in the global variable ``squared`` to customize you
       resolutionScreenWidth?: number;
       resolutionScreenHeight?: number;
   }
+
+.. versionadded:: 5.2.0
+
+  - *UserSettings* property **adaptStyleMap** for the rendered value was created.
+  - *UserResourceSettingsUI* property **showAttributes** for global attribute modification is supported.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 
@@ -66,6 +74,7 @@ Example usage
 
   squared.settings = {
     pierceShadowRoot: false,
+    adaptStyleMap: false, // Merge all associated styles into rendered value
     showErrorMessages: false, // console.log
     showErrorMessages: true, // alert
     createElementMap: false // Cache queries for subsequent nested queries

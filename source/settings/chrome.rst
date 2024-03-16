@@ -23,6 +23,7 @@ Example usage
 
   squared.settings = {
     pierceShadowRoot: true,
+    adaptStyleMap: false,
     builtInExtensions: [], // Called for every local asset (ext.processFile)
     showErrorMessages: false,
     webSocketPort: 80, // Used with watch

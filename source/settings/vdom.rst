@@ -18,6 +18,7 @@ Example usage
   squared.settings = {
     createElementMap: true,
     pierceShadowRoot: false,
+    adaptStyleMap: false,
     showErrorMessages: false
   };
 
