@@ -43,7 +43,7 @@ These settings are available in the global variable ``squared`` to customize you
   }
 
 .. code-block::
-  :emphasize-lines: 4
+  :emphasize-lines: 4,11
 
   interface UserResourceSettingsUI extends UserResourceSettings {
       enabledSVG: boolean;
@@ -55,6 +55,7 @@ These settings are available in the global variable ``squared`` to customize you
       outputDocumentEditing: boolean;
       outputDocumentCSS: CssStyleAttr[];
       framesPerSecond?: number;
+      useShapeGeometryBox?: boolean;
       resolutionScreenWidth?: number;
       resolutionScreenHeight?: number;
   }
@@ -62,6 +63,7 @@ These settings are available in the global variable ``squared`` to customize you
 .. versionadded:: 5.2.0
 
   - *UserSettings* property **adaptStyleMap** for the rendered value was created.
+  - *UserResourceSettingsUI* property **useShapeGeometryBox** for SVG native method getBbox was created.
   - *UserResourceSettingsUI* property **showAttributes** for global attribute modification is supported.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.

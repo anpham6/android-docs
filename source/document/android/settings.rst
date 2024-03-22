@@ -20,8 +20,8 @@ These are the latest default settings for the :target:`android` framework.
           "@pi-r/android/extensions/task"
         ],
         "versions": {
-          "org.jetbrains.kotlin:kotlin-stdlib": "1.9.22",
-          "kotlinCompilerExtensionVersion": "1.5.9",
+          "org.jetbrains.kotlin:kotlin-stdlib": "1.9.23",
+          "kotlinCompilerExtensionVersion": "1.5.11",
           "buildToolsVersion": ""
         },
         "settings": {

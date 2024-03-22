@@ -3,6 +3,7 @@ Interface
 =========
 
 .. code-block:: typescript
+  :emphasize-lines: 72
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -75,6 +76,7 @@ Interface
       cssTryAll(attrs: CssStyleMap, callback?: (this: Node, ...args: unknown[]) => void): CssStyleMap | boolean;
       cssFinally(attrs: CssStyleAttr | CssStyleMap): void;
       parseUnit(value: unknown, options?: NodeParseUnitOptions): number;
+      withDisplay(...values: [inline?: boolean | string, ...string[]]): boolean;
       convertUnit(value: unknown, options: NodeConvertUnitOptions): string;
       convertUnit(value: unknown, unit?: string, options?: NodeConvertUnitOptions): string;
       has(attr: CssStyleAttr, options?: HasOptions): boolean;
@@ -225,5 +227,9 @@ Interface
       get initial(): InitialData<Node>;
       constructor(id: number, sessionId?: string, element?: Element, children?: Node[]);
   }
+
+.. versionadded:: 5.2.0
+
+  *Node* method **withDisplay** for inline and multiple display values was created.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.

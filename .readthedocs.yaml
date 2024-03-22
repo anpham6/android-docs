@@ -27,10 +27,11 @@ search:
     framework/*: 8
     document/*: 7
     document/vdom/interface.html: 6
-    references.html: 5
+    installation.html: 5
+    references.html: 4
     "*/interface.html": 0
     browser.html: -1
-    installation.html: -2
   ignore:
   - index.html
   - "*/index.html"
+  - versions.html

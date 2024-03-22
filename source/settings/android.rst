@@ -63,6 +63,7 @@ Example usage
 
 .. code-block::
   :caption: Customizable (project/all)
+  :emphasize-lines: 7,44
 
   squared.settings = {
     targetAPI: 34,
@@ -70,6 +71,7 @@ Example usage
     resolutionScreenWidth: 1280,
     resolutionScreenHeight: 800,
     framesPerSecond: 60, // SVG animation only
+    useShapeGeometryBox: true, // Dimensions use native SVG method getBbox
     supportRTL: true,
     supportNegativeLeftTop: true,
     preloadImages: true,
@@ -106,6 +108,7 @@ Example usage
     createDownloadableFonts: true,
     createElementMap: false, // Cache not used with NodeUI
     pierceShadowRoot: true,
+    adaptStyleMap: true, // Use rendered values for output
     lockElementSettings: false, // Modify Node before rendering (LocalSettingsUI)
     customizationsBaseAPI: -1, // None
     customizationsBaseAPI: 0, // All (14 - 34)
