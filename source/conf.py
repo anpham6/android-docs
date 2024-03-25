@@ -41,6 +41,7 @@ rst_prolog = """
 .. role:: target(emphasis)
 .. role:: lower(emphasis)
 .. role:: sub(abbr)
+.. role:: right(strong)
 """
 
 # -- Options for HTML output -------------------------------------------------

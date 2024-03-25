@@ -2,7 +2,7 @@
 Settings
 ========
 
-These are the latest default settings for the :target:`android` framework.
+These are the latest server default settings for the :target:`android` framework.
 
 .. code-block:: json
   :caption: squared.json [#]_

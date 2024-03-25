@@ -14,3 +14,18 @@ em.lower {
 abbr.sub {
     color: slategray;
 }
+
+strong.right {
+    font-size: 115%;
+    display: block;
+    text-align: end;
+}
+
+p:has(strong.right) {
+    margin: 0px 0px 0.5em 0px;
+}
+
+section:has(p:nth-child(2) > strong.right) > :is(h1, h2):nth-child(1),
+section:has(.toctree-wrapper:nth-child(2)):has(p:nth-child(3) > strong.right) > .toctree-wrapper > ul {
+    margin-bottom: 0.5em;
+}

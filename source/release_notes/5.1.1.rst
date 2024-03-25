@@ -1,0 +1,84 @@
+=====
+5.1.1
+=====
+
+.. toctree::
+  :maxdepth: 1
+
+  5.1.2
+  5.1.7
+
+:right:`2023-12-07`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared
+
+  interface RequestData {
+      checksum?: string | boolean | ChecksumOutput; // Write base directory hashes
+      checksum?: 1; // Ignore recursive nested checksums
+  }
+
+.. code-block::
+  :caption: squared.base
+
+  interface FileAsset {
+      checksum?: ChecksumValue; // Download
+      checksumOutput?: ChecksumValue; // Locally transformed
+  }
+
+  class Node
+      get floatClear(): ClearDirectionAttr;
+  }
+
+.. code-block::
+  :caption: squared.lib.color
+
+  function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | null; // Custom third-party override
+
+.. code-block::
+  :caption: android
+
+  interface DocumentOutput {
+      dependencyScopes?: boolean | ArrayOf<"compile" | "provided" | "runtime" | "test" | "snapshot">; // true is all except "snapshot"
+  }
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const enum DEPENDENCY_TYPE {
+      IMPLEMENTATION,
+      API,
+      COMPILE_ONLY,
+      RUNTIME_ONLY,
+      TEST_IMPLEMENTATION,
+      ANDROID_TEST_IMPLEMENTATION
+  }
+
+.. code-block::
+  :caption: chrome
+
+  interface DocumentOutput {
+      useSessionCache?: boolean;
+  }
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: android.base
+
+  class Application {
+      addDependency(group: string, name: string, type?: number, overwrite?: boolean): string; // type
+      addDependency(group: string, name: string, version?: number, type?: number, overwrite?: boolean): string;
+      addDependencyByProject(projectId: string, group: string, name: string, type?: number, overwrite?: boolean): string;
+      addDependencyByProject(projectId: string, group: string, name: string, version?: string, type?: number, overwrite?: boolean): string;
+  }

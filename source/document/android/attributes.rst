@@ -10,7 +10,6 @@ Settings
 ========
 
 .. code-block::
-  :emphasize-lines: 2
 
   squared.settings.showAttributes = {
     "hyphenationFrequency": "full", // Replace all
