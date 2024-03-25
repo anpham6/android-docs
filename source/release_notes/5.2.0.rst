@@ -1,0 +1,327 @@
+=====
+5.2.0
+=====
+
+:right:`2024-04-29`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.lib.client
+  :emphasize-lines: 5
+
+  interface UserAgentData {
+      browser: Chrome = 1;
+      browser: Edge = 8;
+
+      browser: Edge = 1 & 8;
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  class Svg {
+      constructor(element: SVGSVGElement, documentRoot?: boolean); // documentRoot not "true" by default (parentElement instanceof HTMLElement)
+  }
+
+  class SvgAnimateTransform {
+      get attributeName(): string; // "transform" for <animateTransform>
+      get attributeName(): string; // "translate" | "scale" | "rotate" | "skewX" | "skewY" for CSS animation
+  }
+
+  class SvgAnimateMotion {
+      set path(value); // Will refit path automatically
+  }
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface UserSettings {
+      adaptStyleMap: boolean;
+  }
+
+  interface UserResourceSettingsUI {
+      useShapeGeometryBox?: boolean;
+  }
+
+  interface RequestData {
+      log?: { showProgress?: boolean };
+  }
+
+  class Node {
+      withDisplay(inline: boolean, ...values: string[]): boolean;
+      withDisplay(...values: string[]): boolean;
+  }
+
+  class NodeUI {
+      get tagDisplay(): string;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* constant */
+
+  const enum TRANSFORM_METHOD {
+      NONE = 0,
+      TRANSLATE_X = 1,
+      ROTATE_X = 2,
+      SCALE_X = 4,
+      SKEW_X = 8,
+      TRANSLATE_Y = 16,
+      ROTATE_Y = 32,
+      SCALE_Y = 64,
+      SKEW_Y = 128,
+      TRANSLATE_Z = 256,
+      ROTATE_Z = 512,
+      SCALE_Z = 1024,
+      TRANSLATE_2D = TRANSLATE_X | TRANSLATE_Y,
+      SCALE_2D = SCALE_X | SCALE_Y,
+      ROTATE_2D = ROTATE_X | ROTATE_Y,
+      TRANSLATE = TRANSLATE_2D | TRANSLATE_Z,
+      ROTATE = ROTATE_2D | ROTATE_Z,
+      SCALE = SCALE_2D | SCALE_Z,
+      SKEW = SKEW_X | SKEW_Y,
+      ALL = TRANSLATE | ROTATE | SCALE | SKEW,
+      ALL_2D = TRANSLATE_2D | ROTATE_2D | SCALE_2D | SKEW
+  }
+
+  /* css */
+
+  function parseBorderRadius(value: string, options?: ParseBorderRadiusOptions): [number, number, number, number][] | null;
+
+  /* util */
+
+  function addMimeType(types: StringMap): void;
+  function addMimeType(name: string, value: string): void;
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentData {
+      name: string;
+      majorVersion: number;
+      mobile: boolean;
+  }
+
+  function getUserAgentFeatures(): UserAgentFeatures;
+
+  /* css */
+
+  function measureText(element: HTMLElement, value: string, options?: MeasureTextOptions): number;
+
+  /* math */
+
+  function oppositeAngle(angle: number, x: number, y: number, relative?: boolean): number;
+
+  /* regex */
+
+  const CSS: {
+      CUSTOM_ELEMENT: RegExp;
+  };
+
+.. code-block::
+  :caption: squared.svg
+
+  type SvgGeometryBoxAttr = "border-box" | "fill-box" | "stroke-box" | "view-box" | "margin-box" | "padding-box" | "content-box";
+
+  interface SvgPaint {
+      computed: boolean;
+      getBoundingBox(paths?: string[] | DOMRect, geometryBox?: SvgGeometryBoxAttr): DOMRect;
+      getStrokeWidth(fallback: number): number;
+      getStrokeWidth(method?: SvgMathRounding, fallback?: number): number;
+  }
+
+  class SvgBuild {
+      static isPaint(object: unknown): object is SvgPaint;
+      static drawShapes(element: SVGGraphicsElement, values: ArrayOf<string>, options?: SvgDrawShapesOptions<SvgContainer>): SvgShapePath[];
+      static transformPoints(values: SvgPoint[], transforms: SvgTransform[], options?: SvgTransformPointsOptions): SvgPoint[];
+  }
+
+  class SvgContainer {
+      findViewBox(element?: SVGElement): SVGSVGElement | SVGSymbolElement | undefined;
+      setAspectRatio(container?: Svg | SvgUseSymbol | null, options?: SvgSetAspectRatioOptions): void;
+      refitRect(x1: number, y1: number, width: number, height: number): DOMRect;
+  }
+
+  class SvgPath {
+      draw(options?: SvgBuildOptions): string;
+      get transformOrigin(): Point | null;
+  }
+
+  class SvgShape {
+      get transformOrigin(): Point | null;
+  }
+
+  class SvgUseShape {
+      get transformOrigin(): Point | null;
+  }
+
+  class SvgAnimation {
+      refitPoint(value: Point | null): void;
+      get precision(): number | undefined;
+  }
+
+  class SvgAnimate {
+      readonly replaceType: Map<number, string>;
+  }
+
+  class SvgAnimateTransform {
+      setReplaceValues(): void;
+  }
+
+  class SvgAnimateMotion {
+      get anchor(): Point | null;
+      get cssPath(): string;
+      get rotateAnchor(): Required<Point>[] | null; // rotate: z | pivot: x y
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  const SVG: {
+      geometry(element: Element): element is SVGGeometryElement;
+  };
+
+  const TRANSFORM: {
+      parseStyle(element: SVGElement, all?: boolean, type?: number): SvgTransform[] | null;
+      fromList(values: SVGTransformList): SvgTransform[];
+      nameAsType(value: string): number;
+  };
+
+  function copyRect(target: DOMRect): SvgRect & BoxRect;
+  function isObjectBoundingBox(element: SVGElement): element is SVGClipPathElement | SVGPatternElement;
+  function getBoundingBox(element: SVGGraphicsElement, geometryBox?: SvgGeometryBoxAttr): DOMRect;
+  function getBoundingLength(element: SVGGraphicsElement, value: string, dimension: number | DimensionAttr, precision: number): number;
+  function getBoundingLength(element: SVGGraphicsElement, value: string, dimension?: number | DimensionAttr, geometryBox?: SvgGeometryBoxAttr, precision?: number): number;
+  function getViewBoxPosition(element: SVGElement, attr: ViewBoxPositionAttr, value?: string): Point | undefined;
+  function formatRotate(value: string, type?: number): string;
+  function formatScale(value: string, type?: number): string;
+  function formatTranslate(value: string, type?: number): string;
+  function isNone(value: unknown): boolean;
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      extractAttributes(depth?: number, replaceWith?: AnyObject): string; // replaceWith
+      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): string | CssStyleMap | null; // PseudoStyleElt
+  }
+
+.. code-block::
+  :caption: squared.lib.math
+
+  function triangulate(a: number, b: number, clen: number, contain?: boolean): number; // contain
+
+.. code-block::
+  :caption: squared.svg
+
+  interface SvgPaint {
+      setPaint(options: SvgBuildOptions): void; // options
+      setPaint(d: string[] | null, options: SvgBuildOptions): void;
+  }
+
+  class SvgBuild {
+      static drawRect(rect: BoxRect | DOMRect, options?: SvgDrawRectOptions): string; // DOMRect | options
+      static drawRect(width: number, height: number, x: number, y: number, options: SvgDrawRectOptions): string; // options
+      static toOffsetPath(value: string, rotation?: string, options?: SvgToOffsetPathOptions): SvgOffsetPath[]; // options
+      static syncPath(values: SvgPathCommand[], points: SvgPoint[], options?: SvgSyncPathOptions): SvgPathCommand[]; // options
+      static boxRectOf(value: string[] | DOMRect, strokeWidth?: number | string): BoxRectDimension; // DOMRect | BoxRectDimension
+  }
+
+  class SvgPath {
+      static extrapolate(attr: string, value: string, values: string[], precision: number): string[];
+      static extrapolate(attr: string, value: string, values: string[], options?: SvgPathExtrapolateOptions<SvgShape>): string[];
+  }
+
+  class SvgAnimateMotion {
+      set distance(value); // Uses current CSS value except when set explicitly
+      get distance(): string;
+      set rotate(value);
+      get rotate(): string;
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  class TRANSFORM: {
+      parse(element: SVGElement, type: number): SvgTransform[] | null;
+      parse(element: SVGElement, value?: string, type?: number): SvgTransform[] | null;
+  };
+
+  function containsViewBox(element: SVGElement | null, outer?: boolean): element is SVGSVGElement | SVGSymbolElement | SVGPatternElement | SVGMarkerElement; // outer
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      showAttributes: boolean | Record<string, string | null | (string | null)[]>; // Record
+      baseLayoutAsFragment: boolean | string | string[] | ExtensionFragmentElement; // ExtensionFragmentElement extends ViewAttribute
+  }
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentData {
+      brand: string;
+  }
+
+  /* css */
+
+  function measureTextWidth(element: StyleElement, value: string, options?: MeasureTextOptions): number; // measureText
+
+  /* supports */
+
+  function hasLookbehind(): boolean; // client.getUserAgentFeatures
+  function hasCascadeLayers(): boolean;
+  function hasContainerQueries(): boolean;
+  function hasStyleNesting(): boolean;
+  function hasStyleSheet(): boolean;
+  function hasStyleProperty(): boolean;
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgBuild {
+      static convertTransforms(transforms: SVGTransformList): SvgTransform[]; // lib.util.TRANSFORM.fromList
+      static applyTransforms(transforms: SvgTransform[], points: Point[], origin?: Point | null): SvgPoint[]; // transformPoints
+  }
+
+  class SvgPath {
+      static extrapolate(attr: string, value: string, values: string[], transforms?: SvgTransform[] | null, parent?: SvgShape | null, precision?: number): string[]; // options
+  }
+
+  class SvgAnimateMotion {
+      get rotateValues(): number[] | null; // rotateAnchor.z
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  class TRANSFORM: {
+      parse(element: SVGElement, value?: string, with3d?: boolean): SvgTransform[] | null; // type
+  };

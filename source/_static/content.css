@@ -27,3 +27,11 @@ table.versions td {
     font-weight: 700;
     color: peachpuff;
 }
+
+section.release-notes > h2 {
+    color: white;
+    font-size: 125%;
+    padding: 6px 8px;
+    background-color: steelblue;
+    border: 2px solid cornflowerblue;
+}

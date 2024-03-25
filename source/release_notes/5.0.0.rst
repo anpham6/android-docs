@@ -1,0 +1,141 @@
+=====
+5.0.0
+=====
+
+:right:`2023-04-29`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.lib
+  :emphasize-lines: 5,6,13
+
+  /* util */
+
+  function splitEnclosing(value: string, pattern?: string | RegExp, start: number, opening?: string, closing?: string): string[];
+
+  function splitEnclosing(value: string, pattern?: string | RegExp, count: number, opening?: string, closing?: string): string[];
+  function splitEnclosing(value: string, pattern?: string | RegExp, options: SplitEnclosingOptions, opening?: string, closing?: string): string[]; // start in options
+
+  /* error */
+
+  function outputMessage(display: null, message: unknown, hint?: string): string;
+  function outputMessage(display: boolean, message: unknown, hint?: string): void;
+
+  function outputMessage(message: unknown, hint?: string, display?: boolean): void; // display
+
+.. code-block::
+  :caption: squared.lib.error
+  :emphasize-lines: 3
+
+  function reject(value: string): Promise<never>;
+
+  function rejectError(value: string): Promise<never>;
+
+.. code-block::
+  :caption: squared.base
+
+  class Resource {
+      addImage(resourceId: number, uri: string, options?: AddImageOptions): void; // options
+      getFonts(resourceId: number, fontFamily: string, options?: AddImageOptions): FontFaceData[];
+  }
+
+  class ApplicationUI {
+      saveDocument(filename: string, content: string, options?: SaveDocumentOptions<AppProjectUI>): void; // options
+  }
+
+  class ControllerUI {
+      writeDocument(templates: NodeTemplate<NodeUI>[], depth: number, options?: WriteDocumentOptions): string; // options
+  }
+
+.. code-block::
+  :caption: android.base
+
+  class Resource {
+      static addTheme(resourceId: number, theme: ThemeAttribute, options?: AddThemeOptions): boolean; // options
+      static addString(resourceId: number, value: string, name?: string, options?: AddStringOptions): string;
+      static addImage(resourceId: number, images: StringMap, options?: AddImageOptions): string;
+
+      parseImage(resourceId: number, src: string, options?: ParseImageOptions): string; // options
+      addImageSrc(resourceId: number, element: HTMLImageElement | HTMLInputElement | string, options?: AddImageSrcOptions): string;
+  }
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  class ResourceUI {
+      parseBackgroundImage(node: NodeUI, value: string, outImage?: ImageSet[]): ResourceBackgroundImage[] | undefined;
+  }
+
+  class Node {
+      setParent(parent: Node | null, depth?: number, index?: number): void; // internalSelf
+  }
+
+  class NodeUI {
+      get preIndent(): [string, NodeUI] | null;
+      get causesLineBreak(): boolean;
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* color */
+
+  function intoRGB(value: ColorSpace): RGB | null; // External hook for CSS Color Module Level 4
+
+  /* constant */
+
+  const enum PLATFORM {
+      CROS = 8,
+      ANDROID = 16,
+      IOS = 32
+  }
+
+  const enum USER_AGENT {
+      CHROME_CROS = 16,
+      CHROME_ANDROID = 64,
+      SAFARI_IOS = 128
+  }
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class Controller {
+      get application(): Application<Node>;
+  }
+
+  class ControllerUI {
+      get application(): ApplicationUI<NodeUI>;
+  }
+
+  class Resource {
+      get application(): Application<Node>;
+  }
+
+  class ResourceUI {
+      parseBackgroundImage(node: NodeUI, value: string, outImage?: ImageSet[]): ResourceBackgroundImage[] | undefined;
+      get application(): ApplicationUI<NodeUI>;
+  }
+
+  class ExtensionManager {
+      get application(): Application<Node>;
+  }
+
+  class File {
+      get resource(): Resource<Node>;
+  }

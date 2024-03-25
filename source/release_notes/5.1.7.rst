@@ -1,0 +1,27 @@
+=====
+5.1.7
+=====
+
+:right:`2023-04-02`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared.svg
+  :emphasize-lines: 8,9
+
+  class SvgBuild {
+      static boxRectOf(value: string[], strokeWidth?: number | string): BoxRect; // strokeWidth
+  }
+
+  class SvgAnimateMotion {
+      path: string;
+
+      set path(value);
+      get path(): string;
+  }

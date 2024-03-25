@@ -28,7 +28,8 @@ search:
     document/*: 7
     document/vdom/interface.html: 6
     installation.html: 5
-    references.html: 4
+    release_notes/*: 4
+    references.html: 3
     "*/interface.html": 0
     browser.html: -1
   ignore:

@@ -1,0 +1,73 @@
+=====
+5.1.2
+=====
+
+.. toctree::
+  :maxdepth: 1
+
+  5.1.7
+
+:right:`2023-12-23`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function detectUnit(value: string, options?: CalculateOptions): [number, number];
+  function asUnitOf(value: number): string;
+  function hasLength(value: string): boolean;
+  function hasColor(value: string): boolean;
+  function hasAngle(value: string): boolean;
+  function hasTime(value: string): boolean;
+
+  /* util */
+
+  function charStart(value: string, char: string): boolean;
+  function charEnd(value: string, char: string): boolean;
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgAnimate {
+      get timingValues(): unknown[] | null;
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  function containsViewBox(element: SVGElement): element is SvgViewBoxElement;
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const enum DEPENDENCY_TYPE {
+      IMPLEMENTATION = 0,
+      API = 1,
+      COMPILE_ONLY = 2,
+      COMPILE_ONLY_API = 3,
+      RUNTIME_ONLY = 4,
+      TEST_IMPLEMENTATION = 5,
+      TEST_COMPILE_ONLY = 6,
+      TEST_RUNTIME_ONLY = 7,
+      ANDROID_TEST_IMPLEMENTATION = 8,
+      ANDROID_TEST_COMPILE_ONLY = 9,
+      ANDROID_TEST_RUNTIME_ONLY = 10
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  function findContainer(element: Element, name?: string, ancestors?: WeakMap<HTMLElement, ContainerData>): ContainerData | null; // ancestors
