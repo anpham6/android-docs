@@ -2,8 +2,10 @@
 Interface
 =========
 
-.. code-block:: typescript
-  :emphasize-lines: 72
+.. highlight::  typescript
+
+.. code-block::
+  :emphasize-lines: 66
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -28,12 +30,6 @@ Interface
       size(): number;
       toArray(): T[];
       constructor(children?: T[]);
-
-      /* squared.lib.js */
-      addAt?(index: number, ...items: T[]): this;
-      removeAt?(index: number): T | undefined;
-      sortBy?(...attrs: [...string[], boolean?]): this;
-      iterator?(): ListIterator<T>;
   }
 
   class Node extends Container<Node> {
@@ -231,5 +227,15 @@ Interface
 .. versionadded:: 5.2.0
 
   *Node* method **withDisplay** for inline and multiple display values was created.
+
+.. code-block::
+  :caption: squared.lib.js
+
+  class Container {
+      addAt(index: number, ...items: T[]): this;
+      removeAt(index: number): T | undefined;
+      sortBy(...attrs: [...string[], boolean?]): this;
+      iterator(): ListIterator<T>;
+  }
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.

@@ -175,7 +175,8 @@ Chrome
 Interface
 ---------
 
-::
+.. code-block::
+  :emphasize-lines: 25
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -199,8 +200,9 @@ Interface
       removeUnusedFontFace?: boolean;
       removeUnusedKeyframes?: boolean;
       removeUnusedMedia?: boolean;
-      removeUnusedContainer?: boolean;
       removeUnusedSupports?: boolean;
+      removeUnusedContainer?: boolean;
+      removeUnusedScope?: boolean;
   }
 
   interface DocumentOutput {
@@ -233,6 +235,10 @@ Interface
       unusedSupports?: string[];
       unusedAtRules?: UnusedAtRule[];
   }
+
+.. versionadded:: 5.2.0
+
+  *FileActionOptions* property **removeUnusedScope** was created.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.
 

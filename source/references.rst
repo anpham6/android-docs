@@ -16,6 +16,32 @@ https://unpkg.com/squared/types/type.d.ts
   | `PlainObject <search.html?q=PlainObject>`_
   | `StringMap <search.html?q=StringMap>`_
 
+.. _references-squared-object:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/object.d.ts
+  | `Dimension <search.html?q=Dimension>`_
+
+.. _references-squared-dom:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/dom.d.ts
+  | `BoxMarginAttr <search.html?q=BoxMarginAttr>`_
+  | `BoxModelAttr <search.html?q=BoxModelAttr>`_
+  | `BoxPaddingAttr <search.html?q=BoxPaddingAttr>`_
+  | `BoxRect <search.html?q=BoxRect>`_
+  | `BoxRectDimension <search.html?q=BoxRectDimension>`_
+  | `ColorRGB <search.html?q=ColorRGB>`_
+  | `ContainerDimension <search.html?q=ContainerDimension>`_
+  | `CssStyleAttr <search.html?q=CssStyleAttr>`_
+  | `CssStyleMap <search.html?q=BoxPaddingAttr>`_
+  | `DimensionAttr <search.html?q=DimensionAttr>`_
+  | `FlexBox <search.html?q=FlexBox>`_
+  | `FlexData <search.html?q=FlexData>`_
+  | `PseudoElt <search.html?q=PseudoElt>`_
+  | `PseudoStyleElt <search.html?q=PseudoStyleElt>`_
+  | `PositionAttr <search.html?q=PositionAttr>`_
+
 .. _references-squared-main:
 .. rst-class:: block-list
 
@@ -35,6 +61,7 @@ https://unpkg.com/squared/types/squared.d.ts
 https://unpkg.com/squared/types/base/squared.d.ts
   | `APP_FRAMEWORK <search.html?q=APP_FRAMEWORK>`_
   | `APP_SECTION <search.html?q=APP_SECTION>`_
+  | `BOX_STANDARD <search.html?q=BOX_STANDARD>`_
   | `NODE_PROCEDURE <search.html?q=NODE_PROCEDURE>`_
   | `NODE_RESOURCE <search.html?q=NODE_RESOURCE>`_
   | `AppFramework <search.html?q=AppFramework>`_
@@ -52,6 +79,7 @@ https://unpkg.com/squared/types/base/squared.d.ts
 
 https://unpkg.com/squared/types/base/application.d.ts
   | `ControllerSettingsDirectoryUI <search.html?q=ControllerSettingsDirectoryUI>`_
+  | `NodeTemplate <search.html?q=NodeTemplate>`_
   | `UserSettings <search.html?q=UserSettings>`_
   | `UserResourceSettings <search.html?q=UserResourceSettings>`_
   | `UserResourceSettingsUI <search.html?q=UserResourceSettingsUI>`_
@@ -68,8 +96,12 @@ https://unpkg.com/squared/types/base/resource.d.ts
 https://unpkg.com/squared/types/base/node.d.ts
   | `AutoMargin <search.html?q=AutoMargin>`_
   | `CacheState <search.html?q=CacheState>`_
+  | `CacheStateUI <search.html?q=CacheStateUI>`_
   | `CacheValue <search.html?q=CacheValue>`_
+  | `CacheValueUI <search.html?q=CacheValueUI>`_
   | `InitialData <search.html?q=InitialData>`_
+  | `LinearData <search.html?q=LinearData>`_
+  | `SupportUI <search.html?q=SupportUI>`_
   | `VisibleStyle <search.html?q=VisibleStyle>`_
 
 .. _references-squared-base-file:
@@ -89,18 +121,13 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `WatchInterval <search.html?q=WatchInterval>`_
   | `WebSocketClient <search.html?q=WebSocketClient>`_
 
-.. _references-squared-base-type:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/base/type.d.ts
-  | `ClearDirectionAttr <search.html?q=ClearDirectionAttr>`_
-  | `FloatDirectionAttr <search.html?q=FloatDirectionAttr>`_
-
 .. _references-squared-base-options:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/base/options.d.ts
+  | `AlignedVerticallyOptions <search.html?q=AlignedVerticallyOptions>`_
   | `AscendParameterOptions <search.html?q=AscendParameterOptions>`_
+  | `BoxOptions <search.html?q=BoxOptions>`_
   | `CoordsXYOptions <search.html?q=CoordsXYOptions>`_
   | `CssAnyOptions <search.html?q=CssAnyOptions>`_
   | `CssAscendOptions <search.html?q=CssAscendOptions>`_
@@ -108,56 +135,48 @@ https://unpkg.com/squared/types/base/options.d.ts
   | `CssSortOptions <search.html?q=CssSortOptions>`_
   | `CssUnitOptions <search.html?q=CssUnitOptions>`_
   | `DescendParameterOptions <search.html?q=DescendParameterOptions>`_
+  | `ExcludeOptions <search.html?q=CssUnitOptions>`_
   | `HasOptions <search.html?q=HasOptions>`_
   | `HasUnitOptions <search.html?q=HasUnitOptions>`_
+  | `HideOptions <search.html?q=HideOptions>`_
   | `MinMaxOptions <search.html?q=MinMaxOptions>`_
   | `NodeConvertUnitOptions <search.html?q=NodeConvertUnitOptions>`_
   | `NodeParseUnitOptions <search.html?q=NodeParseUnitOptions>`_
   | `NodeUnitOptions <search.html?q=NodeUnitOptions>`_
   | `OffsetXYOptions <search.html?q=OffsetXYOptions>`_
+  | `RemoveTryOptions <search.html?q=RemoveTryOptions>`_
+  | `ReplaceTryOptions <search.html?q=ReplaceTryOptions>`_
   | `SiblingsParameterOptions <search.html?q=SiblingsParameterOptions>`_
+  | `TextHeightOptions <search.html?q=TextHeightOptions>`_
+  | `TranslateOptions <search.html?q=TranslateOptions>`_
+  | `TraverseSiblingsOptions <search.html?q=TraverseSiblingsOptions>`_
 
-.. _references-squared-types-object:
+.. _references-squared-base-type:
 .. rst-class:: block-list
 
-https://unpkg.com/squared/types/object.d.ts
-  | `Dimension <search.html?q=Dimension>`_
+https://unpkg.com/squared/types/base/type.d.ts
+  | `AnchorPositionAttr <search.html?q=AnchorPositionAttr>`_
+  | `BoxType <search.html?q=BoxType>`_
+  | `ClearDirectionAttr <search.html?q=ClearDirectionAttr>`_
+  | `DimensionSizableAttr <search.html?q=DimensionSizableAttr>`_
+  | `FloatDirectionAttr <search.html?q=FloatDirectionAttr>`_
+  | `OrientationAttr <search.html?q=OrientationAttr>`_
+  | `ReferenceType <search.html?q=ReferenceType>`_
 
-.. _references-squared-types-dom:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/dom.d.ts
-  | `BoxModelAttr <search.html?q=BoxModelAttr>`_
-  | `BoxRect <search.html?q=BoxRect>`_
-  | `BoxRectDimension <search.html?q=BoxRectDimension>`_
-  | `ColorRGB <search.html?q=ColorRGB>`_
-  | `ContainerDimension <search.html?q=ContainerDimension>`_
-  | `FlexBox <search.html?q=FlexBox>`_
-  | `FlexData <search.html?q=FlexData>`_
-  | `CssStyleAttr <search.html?q=CssStyleAttr>`_
-  | `CssStyleMap <search.html?q=CssStyleMap>`_
-  | `PseudoElt <search.html?q=PseudoElt>`_
-
-.. _references-squared-types-lib-main:
+.. _references-lib-main:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/lib/squared.d.ts
   | `ListIterator <search.html?q=ListIterator>`_
 
-.. _references-squared-types-lib-type:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/lib/type.d.ts
-  | `Specificity <search.html?q=Specificity>`_
-
-.. _references-squared-types-lib-data:
+.. _references-lib-data:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/lib/data.d.ts
   | `ElementData <search.html?q=ElementData>`_
   | `UserAgentData <search.html?q=UserAgentData>`_
 
-.. _references-squared-types-lib-options:
+.. _references-lib-options:
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/lib/options.d.ts
@@ -166,6 +185,12 @@ https://unpkg.com/squared/types/lib/options.d.ts
   | `ContainerIncludesOptions <search.html?q=ContainerIncludesOptions>`_
   | `ContainerRangeOptions <search.html?q=ContainerRangeOptions>`_
   | `ContainerRemoveIfOptions <search.html?q=ContainerRemoveIfOptions>`_
+
+.. _references-lib-type:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/lib/type.d.ts
+  | `Specificity <search.html?q=Specificity>`_
 
 .. _references-squared-svg-object:
 .. rst-class:: block-list
@@ -192,13 +217,6 @@ https://unpkg.com/squared/types/android/squared.d.ts
   | `DEPENDENCY_TYPE <search.html?q=DEPENDENCY_TYPE>`_
   | `RESOURCE <search.html?q=RESOURCE>`_
   | `AppViewModel <search.html?q=AppViewModel>`_
-
-.. _references-android-type:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/android/type.d.ts
-  | `DependencyScopes <search.html?q=DependencyScopes>`_
-  | `ResolutionUnit <search.html?q=ResolutionUnit>`_
 
 .. _references-android-application:
 .. rst-class:: block-list
@@ -238,6 +256,7 @@ https://unpkg.com/squared/types/android/extension.d.ts
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/android/node.d.ts
+  | `Constraint <search.html?q=Constraint>`_
   | `LocalSettingsUI <search.html?q=LocalSettingsUI>`_
   | `NamingStyles <search.html?q=NamingStyles>`_
 
@@ -255,18 +274,24 @@ https://unpkg.com/squared/types/android/options.d.ts
   | `AddImageOptions <search.html?q=AddImageOptions>`_
   | `AddStringOptions <search.html?q=AddStringOptions>`_
   | `AddThemeOptions <search.html?q=AddThemeOptions>`_
+  | `IsAnchoredOptions <search.html?q=IsAnchoredOptions>`_
+  | `CloneOptions <search.html?q=CloneOptions>`_
+
+.. _references-android-type:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/android/type.d.ts
+  | `DependencyScopes <search.html?q=DependencyScopes>`_
+  | `LayoutChainStyle <search.html?q=LayoutChainStyle>`_
+  | `LayoutDirectionAttr <search.html?q=LayoutDirectionAttr>`_
+  | `LayoutGravityAttr <search.html?q=LayoutGravityAttr>`_
+  | `LayoutGravityDirectionAttr <search.html?q=LayoutGravityDirectionAttr>`_
+  | `ResolutionUnit <search.html?q=ResolutionUnit>`_
 
 .. _references-chrome:
 
 Chrome
 ======
-
-.. _references-chrome-type:
-.. rst-class:: block-list
-
-https://unpkg.com/squared/types/chrome/type.d.ts
-  | `ResourceHintType <search.html?q=ResourceHintType>`_
-
 
 .. _references-chrome-application:
 .. rst-class:: block-list
@@ -294,6 +319,12 @@ https://unpkg.com/squared/types/chrome/data.d.ts
 
 https://unpkg.com/squared/types/chrome/options.d.ts
   | `SaveAsOptions <search.html?q=SaveAsOptions>`_
+
+.. _references-chrome-type:
+.. rst-class:: block-list
+
+https://unpkg.com/squared/types/chrome/type.d.ts
+  | `ResourceHintType <search.html?q=ResourceHintType>`_
 
 .. _references-e-mc:
 
