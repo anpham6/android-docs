@@ -258,10 +258,14 @@ android
     * Pixel 5
     * Pixel 6
     * Pixel 6a
-    * Pixel 7
     * Pixel 6 Pro
+    * Pixel 7
+    * Pixel 7a
     * Pixel 7 Pro
+    * Pixel 8
+    * Pixel 8 Pro
     * Pixel C
+    * Pixel Fold
     * Nexus 5X
     * Nexus 6
     * Nexus 6P
