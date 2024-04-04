@@ -118,6 +118,7 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `OutgoingHeaders <search.html?q=OutgoingHeaders>`_
   | `RequestData <search.html?q=RequestData>`_
   | `ResponseData <search.html?q=ResponseData>`_
+  | `TaskCommand <search.html?q=TaskCommand>`_
   | `WatchInterval <search.html?q=WatchInterval>`_
   | `WebSocketClient <search.html?q=WebSocketClient>`_
 

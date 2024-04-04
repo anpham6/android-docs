@@ -231,8 +231,9 @@ Interface
       usedKeyframes?: string[];
       unusedStyles?: string[];
       unusedMedia?: string[];
-      unusedContainer?: string[];
       unusedSupports?: string[];
+      unusedContainer?: string[];
+      unusedScope?: string[];
       unusedAtRules?: UnusedAtRule[];
   }
 
