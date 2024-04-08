@@ -36,6 +36,10 @@ ADDED
 .. code-block::
   :caption: squared.svg
 
+  interface SvgPaint {
+      geometryBox: string;
+  }
+
   class SvgAnimate {
       get timingValues(): unknown[] | null;
   }

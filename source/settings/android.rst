@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 16,27
+  :emphasize-lines: 16,27,39
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -46,6 +46,7 @@ Interface
       outputFragmentFileName: string;
       resolutionDPI?: number;
       resourceQualifier?: string | ResourceQualifierMap;
+      resourceSystemColors?: Record<string, string | [string, number] | ColorRGB>;
       convertImages?: string;
       convertLineHeight?: ResolutionUnit;
       baseLayoutToolsIgnore?: string;
@@ -55,6 +56,7 @@ Interface
 .. versionadded:: 5.2.0
 
   - *UserResourceSettingsUI* property **showAttributes** accepts a map to globally replace layout attributes.
+  - *UserResourceSettingsUI* property **resourceSystemColors** device color translation map was created.
   - *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
 .. seealso:: For any non-standard named definitions check :doc:`References </references>`.
@@ -137,9 +139,15 @@ Example usage
 
 .. code-block::
   :caption: Customizable (project/main)
+  :emphasize-lines: 3,4,5,6,7
 
   squared.settings = {
     resourceQualifier: "land", // "res/layout-land"
+    resourceSystemColors: {
+        "system_accent1_100": "white", // Will be converted to ARGB
+        "system_accent1_200": ["#ff0000", 0.75], // opacity
+        "system_accent1_300": squared.lib.color.parseColor("#000", 1)
+    },
     manifestPackage: "example", // <manifest package="example"> (OR: RequestData<{ namespace: "android.application.id" }>)
     manifestLabelAppName: "android", // <application android:label="@string/android">
     manifestThemeName: "AppTheme", // <application android:theme="@style/AppTheme"> (overrides manifestParentThemeName)

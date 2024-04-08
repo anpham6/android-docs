@@ -300,4 +300,4 @@ Interface
 
   - *NodeUI* property getter **tagDisplay** for rendered behavior was created.
   - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was created.
-  - *NodeUI* method **getPseudoElement** *existing* argument **name** with :alt:`PseudoStyleElt` was created.
+  - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.

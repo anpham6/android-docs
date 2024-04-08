@@ -34,4 +34,4 @@ Sometimes it is necessary to extract elements and append them into other contain
       <TextView>Item 2</TextView>
   </LinearLayout>
 
-Using **target** into a ConstraintLayout or RelativeLayout container will not include automatic positioning.
+.. note:: Using **target** into a ConstraintLayout or RelativeLayout container will not include automatic positioning.

@@ -138,6 +138,8 @@ Interface
 
   interface ResourceSvgOptions {
       textAsImage: boolean;
+      mergeClipPath: boolean;
+      mergeVectorDrawable: boolean;
       transformExclude: SvgTransformExclude;
       animateInterpolator: string;
       floatPrecision: number;
@@ -233,4 +235,5 @@ Some extensions have a few settings which can be configured. The default setting
       - fadeDuration
       - delayBeforeFade
 
+  - *ResourceSvgOptions* properties **mergeClipPath** | **mergeVectorDrawable** as :alt:`boolean` were created.
   - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 

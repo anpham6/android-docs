@@ -9,7 +9,7 @@ System or extension generated attributes can be overridden preceding finalizatio
 Settings
 ========
 
-.. code-block::
+::
 
   squared.settings.showAttributes = {
     "hyphenationFrequency": "full", // Replace all
