@@ -20,10 +20,6 @@ Settings
     ]
   };
 
-.. versionadded:: 5.2.0
-
-  Settings property **showAttributes** used as a replacement map was implemented.
-
 Method
 ======
 

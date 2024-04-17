@@ -154,7 +154,7 @@ Interface
       renderChildren: boolean;
   }
 
-.. note:: These are only the built-in extensions with configurable settings.
+.. note:: These are the built-in extensions which have configurable settings.
 
 Example usage
 =============

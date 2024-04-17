@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 81,92,171
+  :emphasize-lines: 81,92,171,216,266-267
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -222,6 +222,7 @@ Interface
       get firstLetterStyle(): CssStyleMap | null;
       get textAlignLast(): string;
       get textJustified(): boolean;
+      get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
       get outerRegion(): BoxRectDimension;
   }
@@ -271,6 +272,8 @@ Interface
       get anchored(): boolean;
       set localSettings(value);
       get localSettings(): LocalSettingsUI;
+      set useSystemColors(value);
+      get useSystemColors(): boolean;
       get documentId(): string;
       get anchorTarget(): View;
       get constraint(): Constraint<View>;
@@ -299,5 +302,7 @@ Interface
 .. versionadded:: 5.2.0
 
   - *NodeUI* property getter **tagDisplay** for rendered behavior was created.
+  - *NodeUI* property getter **alignContent** for vertical layout position was created.
   - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was created.
   - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.
+  - *View* property getter **useSystemColors** for device color translation was created.

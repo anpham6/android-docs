@@ -214,9 +214,11 @@ Android
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/android/squared.d.ts
+  | `ATTRIBUTE_COLOR <search.html?q=ATTRIBUTE_COLOR>`_
   | `BUILD_VERSION <search.html?q=BUILD_VERSION>`_
   | `DEPENDENCY_TYPE <search.html?q=DEPENDENCY_TYPE>`_
   | `RESOURCE <search.html?q=RESOURCE>`_
+  | `SYSTEM_COLOR <search.html?q=SYSTEM_COLOR>`_
   | `AppViewModel <search.html?q=AppViewModel>`_
 
 .. _references-android-application:

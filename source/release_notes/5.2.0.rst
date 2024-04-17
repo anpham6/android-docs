@@ -47,7 +47,7 @@ BREAKING
 
 .. code-block::
   :caption: types/base/squared.d.ts
-  :emphasize-lines: 10,18,25,26
+  :emphasize-lines: 10,18,25-26
 
   /* 5.1 */
 
@@ -326,6 +326,7 @@ ADDED
 
   const XML_PROLOG: string;
   const SYSTEM_COLOR: string[];
+  const ATTRIBUTE_COLOR: string[];
 
 .. rst-class:: release-notes
 

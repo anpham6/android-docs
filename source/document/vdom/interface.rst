@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 66
+  :emphasize-lines: 66-69
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -72,7 +72,10 @@ Interface
       cssTryAll(attrs: CssStyleMap, callback?: (this: Node, ...args: unknown[]) => void): CssStyleMap | boolean;
       cssFinally(attrs: CssStyleAttr | CssStyleMap): void;
       parseUnit(value: unknown, options?: NodeParseUnitOptions): number;
-      withDisplay(...values: [inline?: boolean | string, ...string[]]): boolean;
+      withDisplay(inline: boolean, ...values: string[]): boolean;
+      withDisplay(...values: string[]): boolean;
+      parseColor(value: string, opacity: number): ColorRGB | null;
+      parseColor(value: string, options?: NodeParseColorOptions): ColorRGB | null;
       convertUnit(value: unknown, options: NodeConvertUnitOptions): string;
       convertUnit(value: unknown, unit?: string, options?: NodeConvertUnitOptions): string;
       has(attr: CssStyleAttr, options?: HasOptions): boolean;
@@ -227,6 +230,7 @@ Interface
 .. versionadded:: 5.2.0
 
   *Node* method **withDisplay** for inline and multiple display values was created.
+  *Node* method **parseColor** for color scheme detection was created.
 
 .. code-block::
   :caption: squared.lib.js

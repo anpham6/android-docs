@@ -19,7 +19,7 @@ Animations are usually started before *DOMContentLoaded* has been fired and :fun
 
 .. code-block:: html
   :caption: Delimited
-  :emphasize-lines: 1,2
+  :emphasize-lines: 1-2
 
   <svg width="120" height="120" viewBox="0 0 240 240" data-base-value="width: 120; height: 120; opacity: 1;">
     <rect x="10" y="0" width="100" height="50" stroke="black" stroke-width="2" fill="purple" data-base-value="x: 10; y: 0; width: 100; fill: purple; opacity: 1; stroke-opacity: 1; fill-opacity: 1;">

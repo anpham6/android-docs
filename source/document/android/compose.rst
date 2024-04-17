@@ -15,7 +15,7 @@ Method
 You can also do it using the ``android.substitute`` extension directly inside the HTML element.
 
 .. code-block::
-  :emphasize-lines: 18,19
+  :emphasize-lines: 18-19
 
   squared.add(["android.substitute", {
     element: {

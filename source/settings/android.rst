@@ -139,7 +139,7 @@ Example usage
 
 .. code-block::
   :caption: Customizable (project/main)
-  :emphasize-lines: 3,4,5,6,7
+  :emphasize-lines: 3-7
 
   squared.settings = {
     resourceQualifier: "land", // "res/layout-land"
@@ -163,6 +163,7 @@ Example usage
 
 .. code-block::
   :caption: Global
+  :emphasize-lines: 9
 
   squared.settings = {
     builtInExtensions: [
@@ -172,6 +173,7 @@ Example usage
       "android.delegate.positive-x",
       "android.delegate.max-width-height",
       "android.delegate.percent",
+      "android.delegate.content",
       "android.delegate.scrollbar",
       "android.delegate.radiogroup",
       "android.delegate.multiline",
