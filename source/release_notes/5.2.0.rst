@@ -200,6 +200,7 @@ ADDED
   /* regex */
 
   const CSS: {
+      LIGHT_DARK: RegExp;
       CUSTOM_ELEMENT: RegExp;
   };
 
@@ -348,6 +349,13 @@ MODIFIED
   function hypotenuse(a: number, b: number, subtract?: boolean): number; // subtract
 
 .. code-block::
+  :caption: squared.lib.regex
+
+  const CSS: {
+      COLOR: RegExp; // flags "gi"
+  };
+
+.. code-block::
   :caption: squared.svg
 
   interface SvgPaint {
@@ -392,7 +400,7 @@ MODIFIED
 
   interface UserResourceSettingsUI {
       builtInExtensions: [
-          "android.delegate.content"
+          "android.delegate.content" // CSS align-content (optional)
       ],
       showAttributes: boolean | Record<string, string | null | (string | null)[]>; // Record
       baseLayoutAsFragment: boolean | string | string[] | ExtensionFragmentElement; // ExtensionFragmentElement extends ViewAttribute

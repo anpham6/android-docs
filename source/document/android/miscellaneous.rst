@@ -22,7 +22,7 @@ Any `R.color <https://developer.android.com/reference/android/R.color>`_ that st
 .. code-block::
   :caption: `?attr/color* <https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/color/res/values/attrs.xml>`_
 
-  squared.settings.preferMaterialDesign = 'MaterialComponents'; // Required
+  squared.settings.preferMaterialDesign = "MaterialComponents"; // Required
   squared.settings.resourceSystemColors = {
     "system_accent1_0": "white", // Invalid
     "colorPrimary": "white",
