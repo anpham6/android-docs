@@ -241,5 +241,3 @@ Interface
       sortBy(...attrs: [...string[], boolean?]): this;
       iterator(): ListIterator<T>;
   }
-
-.. seealso:: For any non-standard named definitions check :doc:`References </references>`.

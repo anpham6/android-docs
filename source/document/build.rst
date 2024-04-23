@@ -241,8 +241,6 @@ Interface
 
   *FileActionOptions* property **removeUnusedScope** was created.
 
-.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
-
 Example usage
 -------------
 

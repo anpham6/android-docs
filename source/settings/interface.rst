@@ -66,8 +66,6 @@ These settings are available in the global variable ``squared`` to customize you
   - *UserResourceSettingsUI* property **useShapeGeometryBox** for SVG native method getBbox was created.
   - *UserResourceSettingsUI* property **showAttributes** for global attribute modification is supported.
 
-.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
-
 Example usage
 =============
 

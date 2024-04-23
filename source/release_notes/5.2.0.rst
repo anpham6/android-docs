@@ -185,6 +185,12 @@ ADDED
 
   function isColor(value: unknown): value is ColorRGB;
 
+  /* container */
+
+  interface ContainerRangeOptions {
+      isEmpty?: boolean
+  }
+
   /* css */
 
   function measureText(element: HTMLElement, value: string, options?: MeasureTextOptions): number;
@@ -400,7 +406,7 @@ MODIFIED
 
   interface UserResourceSettingsUI {
       builtInExtensions: [
-          "android.delegate.content" // CSS align-content (optional)
+          "android.delegate.content" // CSS: contain | align-content
       ],
       showAttributes: boolean | Record<string, string | null | (string | null)[]>; // Record
       baseLayoutAsFragment: boolean | string | string[] | ExtensionFragmentElement; // ExtensionFragmentElement extends ViewAttribute

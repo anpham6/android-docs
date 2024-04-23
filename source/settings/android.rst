@@ -59,8 +59,6 @@ Interface
   - *UserResourceSettingsUI* property **resourceSystemColors** device color translation map was created.
   - *ExtensionFragmentElement* extends the *ViewAttribute* interface.
 
-.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
-
 Example usage
 =============
 

@@ -164,5 +164,3 @@ chrome
   interface AppFramework {
       removeObserver(element: HTMLElement): boolean;
   }
-
-.. seealso:: For any non-standard named definitions check :doc:`References </references>`.

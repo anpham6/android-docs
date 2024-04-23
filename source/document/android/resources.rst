@@ -18,8 +18,6 @@ Interface
       static addDimen(resourceId: number, name: string, value: string): string;
   }
 
-.. seealso:: For any non-standard named definitions check :doc:`References </references>`.
-
 Example usage
 =============
 
