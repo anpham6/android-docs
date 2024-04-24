@@ -101,7 +101,7 @@ Interface
 
 .. versionadded:: 5.2.0
 
-  **dependencyScopes** with the "snapshot" number value "**1**" for all scopes.
+  - **dependencyScopes** with the "snapshot" number value "**1**" for all scopes.
 
 Example usage
 -------------
@@ -239,7 +239,7 @@ Interface
 
 .. versionadded:: 5.2.0
 
-  *FileActionOptions* property **removeUnusedScope** was created.
+  - *FileActionOptions* property **removeUnusedScope** was created.
 
 Example usage
 -------------

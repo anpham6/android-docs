@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 81,92,171,216,266-267
+  :emphasize-lines: 81,86-89,92,171,191-192,216,266-267
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -92,10 +92,10 @@ Interface
       cssSet(attr: CssStyleAttr, value: string, cache?: boolean): string;
       translateX(value: number, options?: TranslateOptions): boolean;
       translateY(value: number, options?: TranslateOptions): boolean;
-      flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean, wrapped?: boolean): boolean;
-      flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean, wrapped?: boolean): string;
-      flex(attr: "grow" | "shrink" | "order", parent?: boolean, wrapped?: boolean): number;
-      flex(attr: keyof (FlexData & FlexBox), parent?: boolean, wrapped?: boolean): boolean | number | string | undefined;
+      flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | NodeUI, wrapped?: boolean): boolean;
+      flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | NodeUI, wrapped?: boolean): string;
+      flex(attr: "grow" | "shrink" | "order", parent?: boolean | NodeUI, wrapped?: boolean): number;
+      flex<(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): CssStyleMap | string | null;
@@ -305,4 +305,10 @@ Interface
   - *NodeUI* property getter **alignContent** for vertical layout position was created.
   - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was created.
   - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.
+  - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was amended.
   - *View* property getter **useSystemColors** for device color translation was created.
+
+.. deprecated:: 5.2.0
+
+  - *NodeUI* properties **flexRow** as :alt:`NodeUI.flex("row")` is pending removal.
+  - *NodeUI* properties **flexColumn** as :alt:`NodeUI.flex("column")` is pending removal.

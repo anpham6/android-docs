@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 66-69
+  :emphasize-lines: 12,16,66-69,86-89,184
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -18,11 +18,11 @@ Interface
       retainAs(list: T[]): this;
       each(predicate: IteratorPredicate<T, void>, options?: ContainerEachOptions): this;
       every(predicate: IteratorPredicate<T, unknown>, options?: ContainerRangeOptions): boolean;
-      removeIf(predicate: IteratorPredicate<T, unknown>, options?: ContainerRemoveIfOptions<T>): T[];
+      removeIf(predicate: IteratorPredicate<T, unknown>, options?: ContainerRemoveIfOptions<T> | IteratorPredicate<T, boolean>): T[];
       find(predicate: IteratorPredicate<T, unknown>, options?: ContainerFindOptions<T>): T | undefined;
       includes(item: T, cascade: boolean): boolean;
       includes(item: T, options?: ContainerIncludesOptions<T>): boolean;
-      cascade(predicate?: IteratorPredicate<T, unknown>, options?: ContainerCascadeOptions<T>): T[];
+      cascade(predicate?: IteratorPredicate<T, unknown>, options?: ContainerCascadeOptions<T> | IteratorPredicate<T, boolean>): T[];
       map(predicate: IteratorPredicate<T, unknown>): unknown[];
       contains(...items: T[]): boolean;
       clear(): this;
@@ -92,6 +92,10 @@ Interface
       setBounds(cache?: boolean): BoxRectDimension | null;
       resetBounds(recalibrate?: boolean): void;
       getContainerSize(options?: NodeUnitOptions): number;
+      flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | Node): boolean;
+      flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | Node): string;
+      flex(attr: "grow" | "shrink" | "order", parent?: boolean | Node): number;
+      flex(attr: string, parent?: boolean | Node): boolean | number | string;
       min(attr: string, options?: MinMaxOptions): Node;
       max(attr: string, options?: MinMaxOptions): Node;
       querySelector(value: string): Node | null;
@@ -229,8 +233,14 @@ Interface
 
 .. versionadded:: 5.2.0
 
-  *Node* method **withDisplay** for inline and multiple display values was created.
-  *Node* method **parseColor** for color scheme detection was created.
+  - *Node* method **withDisplay** for inline and multiple display values was created.
+  - *Node* method **parseColor** for color scheme detection was created.
+  - *Node* method **flex** for parsed Flexbox values was created.
+  - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was amended.
+
+.. deprecated:: 5.2.0
+
+  - *Node* property **flexdata** as :alt:`Node.flex(attr, parent)` is pending removal.
 
 .. code-block::
   :caption: squared.lib.js
