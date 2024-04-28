@@ -357,6 +357,13 @@ ADDED
 .. code-block::
   :caption: android.lib.constant
 
+  const MATERIAL_TAGNAME: {
+      IMAGE: string;
+      LINE: string;
+  };
+  const SUPPORT_TAGNAME_X: {
+      APPBAR_TOOLBAR: string;
+  };
   const XML_PROLOG: string;
   const SYSTEM_COLOR: string[];
   const ATTRIBUTE_COLOR: string[];
