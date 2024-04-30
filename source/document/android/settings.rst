@@ -21,7 +21,7 @@ These are the latest server default settings for the :target:`android` framework
         ],
         "versions": {
           "org.jetbrains.kotlin:kotlin-stdlib": "1.9.23",
-          "kotlinCompilerExtensionVersion": "1.5.11",
+          "kotlinCompilerExtensionVersion": "1.5.12",
           "buildToolsVersion": ""
         },
         "settings": {

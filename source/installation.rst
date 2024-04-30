@@ -2,7 +2,7 @@
 Installation
 ============
 
-- NodeJS 14 :alt:`(Minimum)`
+- NodeJS 16 :alt:`(Minimum)`
 
 NPX
 ===
@@ -44,11 +44,11 @@ GitHub
 ======
 
 .. code-block::
-  :caption: prod - 5.1.2
+  :caption: prod - master
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.1.2
+  git checkout master
 
   npm install
   npm run build:all
@@ -57,7 +57,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 3.1.1
+  git checkout master
 
   npm install
   npm run prod
@@ -110,7 +110,7 @@ Repo
   mkdir workspace
   cd workspace
 
-  repo init -u https://github.com/anpham6/squared-repo -m 5.1.8.xml
+  repo init -u https://github.com/anpham6/squared-repo -m 5.2.0.xml
   repo sync
 
 .. rst-class:: installation-workspace

@@ -1,4 +1,4 @@
-# squared 5.1 - android
+# squared 5.2 - android
 
 https://squared.readthedocs.io
 

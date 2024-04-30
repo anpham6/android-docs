@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 12,16,66-69,86-89,184
+  :emphasize-lines: 12,16,66-71,88-91,133,187
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -72,8 +72,10 @@ Interface
       cssTryAll(attrs: CssStyleMap, callback?: (this: Node, ...args: unknown[]) => void): CssStyleMap | boolean;
       cssFinally(attrs: CssStyleAttr | CssStyleMap): void;
       parseUnit(value: unknown, options?: NodeParseUnitOptions): number;
-      withDisplay(inline: boolean, ...values: string[]): boolean;
+      withDisplay(type: boolean, ...values: string[]): boolean;
       withDisplay(...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" | number, type: number, ...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" |  number, ...values: string[]): boolean;
       parseColor(value: string, opacity: number): ColorRGB | null;
       parseColor(value: string, options?: NodeParseColorOptions): ColorRGB | null;
       convertUnit(value: unknown, options: NodeConvertUnitOptions): string;
@@ -137,6 +139,7 @@ Interface
       get tableElement(): boolean;
       get inputElement(): boolean;
       get buttonElement(): boolean;
+      get mathElement(): boolean;
       get voidElement(): boolean;
       get pseudoElement(): boolean;
       get pseudoElt(): PseudoElt | "";
@@ -233,9 +236,11 @@ Interface
 
 .. versionadded:: 5.2.0
 
-  - *Node* method **withDisplay** for inline and multiple display values was created.
+  - *Node* method **withDisplay** for group display values was created.
+  - *Node* method **withLayout** for display outside and inside values was created.
   - *Node* method **parseColor** for color scheme detection was created.
   - *Node* method **flex** for parsed Flexbox values was created.
+  - *Node* property **mathElement** for MathML elements was created.
   - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was amended.
 
 .. deprecated:: 5.2.0

@@ -103,6 +103,14 @@ ADDED
       useShapeGeometryBox?: boolean;
   }
 
+  interface ControllerSettingsUI {
+      baseStyle?: ControllerSettingsBaseStyleUI;
+  }
+
+  interface ControllerSettingsBaseStyleUI {
+      math?: CssStyleMap;
+  }
+
   interface Flexbox {
       enabled: boolean;
   }
@@ -127,9 +135,12 @@ ADDED
       parseColor(value: string, options?: NodeParseColorOptions): ColorRGB | null;
       withDisplay(type: number, ...values: string[]): boolean;
       withDisplay(...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" | number, type: number, ...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" | number, ...values: string[]): boolean;
       flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | Node): boolean;
       flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | Node): string;
       flex(attr: "grow" | "shrink" | "order", parent?: boolean | Node): number;
+      get mathElement(): boolean;
   }
 
   class NodeUI {
@@ -197,14 +208,26 @@ ADDED
   const enum CSS_DISPLAY {
       INLINE = 1,
       INLINE_START = 2,
-      BLOCK = 4,
-      BLOCK_START = 8,
-      FLOW = 16,
-      FLOW_START = 32,
-      TABLE = 64,
-      TABLE_START = 128,
-      RUBY = 256,
-      RUBY_START = 512
+      FLOW = 4,
+      FLOW_START = 8,
+      TABLE = 16,
+      TABLE_START = 32,
+      RUBY = 64,
+      RUBY_START = 128
+  }
+
+  const enum CSS_LAYOUT {
+      NONE = 0,
+      BLOCK = 1,
+      INLINE = 2,
+      FLOW = 4,
+      FLOW_ROOT = 8,
+      TABLE = 16,
+      FLEX = 32,
+      GRID = 64,
+      RUBY = 128,
+      MATH = 256,
+      LIST_ITEM = 512
   }
 
   /* container */
