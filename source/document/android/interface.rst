@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 81,86-89,92,171,191-192,216,266-267
+  :emphasize-lines: 81,86-89,92,171,191-192,210,217,267-268
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -216,6 +216,7 @@ Interface
       get overflowY(): boolean;
       get textEmpty(): boolean;
       get textWidth(): number;
+      get textMetrics(): TextMetrics | null;
       get innerMostWrapped(): NodeUI;
       get outerMostWrapper(): NodeUI;
       get firstLineStyle(): CssStyleMap | null;
@@ -298,6 +299,10 @@ Interface
       get target(): HTMLElement | null;
       get support(): SupportUI;
   }
+
+.. versionadded:: 5.2.1
+
+  - *NodeUI* property getter **textMetrics** for font dimensions was created.
 
 .. versionadded:: 5.2.0
 

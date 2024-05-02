@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 12,16,66-71,88-91,133,187
+  :emphasize-lines: 12,16,49,67-72,89-92,134,188
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -55,6 +55,7 @@ Interface
       withinY(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
       outsideX(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
       outsideY(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
+      as(target: typeof Element): InstanceType<typeof Element> | null;
       css(attr: CssStyleAttr, value?: string, cache?: boolean): string;
       cssInitial(attr: CssStyleAttr, options?: CssInitialOptions): string;
       cssAny(attr: CssStyleAttr, values: string[], options?: CssAnyOptions): boolean;
@@ -233,6 +234,10 @@ Interface
       get initial(): InitialData<Node>;
       constructor(id: number, sessionId?: string, element?: Element, children?: Node[]);
   }
+
+.. versionadded:: 5.2.1
+
+  - *Node* method **as** for element casting was created.
 
 .. versionadded:: 5.2.0
 

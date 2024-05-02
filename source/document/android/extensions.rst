@@ -140,6 +140,7 @@ Interface
       textAsImage: boolean;
       mergeClipPath: boolean;
       mergeVectorDrawable: boolean;
+      dependencyVectorDrawable: "animated" | "seekable";
       transformExclude: SvgTransformExclude;
       animateInterpolator: string;
       floatPrecision: number;
@@ -206,6 +207,10 @@ Some extensions have a few settings which can be configured. The default setting
   ext.project.set(element, await fetch(url?id=2), "project-1");
 
   const data = ext.project.get(element, "project-2"); // Returns data from default project (id=1)
+
+.. versionadded:: 5.2.1
+
+  - *ResourceSvgOptions* properties **dependencyVectorDrawable** as :alt:`string` was created.
 
 .. versionadded:: 5.2.0
 
