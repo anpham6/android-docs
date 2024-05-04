@@ -348,6 +348,9 @@ TypeScript
 .. _references-typescript-dom-generated:
 .. rst-class:: block-list
 
+https://github.com/microsoft/TypeScript/blob/main/src/lib/es5.d.ts
+  | `InstanceType <search.html?q=InstanceType>`_
+
 https://github.com/microsoft/TypeScript/blob/main/src/lib/dom.generated.d.ts
   | `CSSStyleDeclaration <search.html?q=CSSStyleDeclaration>`_
   | `DOMRect <search.html?q=DOMRect>`_

@@ -315,5 +315,5 @@ Interface
 
 .. deprecated:: 5.2.0
 
-  - *NodeUI* properties **flexRow** as :alt:`NodeUI.flex("row")` is pending removal.
-  - *NodeUI* properties **flexColumn** as :alt:`NodeUI.flex("column")` is pending removal.
+  - *NodeUI* property getter **flexRow** as :alt:`NodeUI.flex("row")` is pending removal.
+  - *NodeUI* property getter **flexColumn** as :alt:`NodeUI.flex("column")` is pending removal.

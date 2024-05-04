@@ -76,7 +76,7 @@ Interface
       withDisplay(type: boolean, ...values: string[]): boolean;
       withDisplay(...values: string[]): boolean;
       withLayout(outside: "block" | "inline" | number, type: number, ...values: string[]): boolean;
-      withLayout(outside: "block" | "inline" |  number, ...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" | number, ...values: string[]): boolean;
       parseColor(value: string, opacity: number): ColorRGB | null;
       parseColor(value: string, options?: NodeParseColorOptions): ColorRGB | null;
       convertUnit(value: unknown, options: NodeConvertUnitOptions): string;
@@ -245,12 +245,12 @@ Interface
   - *Node* method **withLayout** for display outside and inside values was created.
   - *Node* method **parseColor** for color scheme detection was created.
   - *Node* method **flex** for parsed Flexbox values was created.
-  - *Node* property **mathElement** for MathML elements was created.
+  - *Node* property getter **mathElement** for MathML elements was created.
   - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was amended.
 
 .. deprecated:: 5.2.0
 
-  - *Node* property **flexdata** as :alt:`Node.flex(attr, parent)` is pending removal.
+  - *Node* property getter **flexdata** as :alt:`Node.flex(attr, parent)` is pending removal.
 
 .. code-block::
   :caption: squared.lib.js
