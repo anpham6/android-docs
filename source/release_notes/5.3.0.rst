@@ -1,0 +1,100 @@
+=====
+5.3.0
+=====
+
+:right:`2024-08-06`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Uses Node.valueOf without options
+      toInt(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number;
+  }
+
+  class NodeUI {
+      get textIndent(): number; // Detection for "each-line" and "hanging"
+  }
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface ControllerSettingsStyleUI {
+      inputFontSize?: string;
+      buttonFontSize?: string;
+      textareaFontSize?: string;
+      selectFontSize?: string;
+      h1FontSize?: string;
+      h2FontSize?: string;
+      h3FontSize?: string;
+      h4FontSize?: string;
+      h5FontSize?: string;
+      h6FontSize?: string;
+      rtFontSize?: string;
+  }
+
+  interface HasOptions {
+      inherit?: boolean;
+  }
+
+  class NodeUI {
+      get afterLineBreak(): boolean;
+      get wordSpacing(): number;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* dom */
+
+  function causesLineBreak(element: Element): boolean;
+
+.. code-block::
+  :caption: chrome.base
+
+  interface FileActionAttribute {
+      saveAs?: {
+          video?: SaveAsOptions;
+          audio?: SaveAsOptions;
+          raw?: SaveAsOptions;
+      };
+  }
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared
+
+  function toString(projectId?: string): string; // projectId
+
+.. code-block::
+  :caption: squared.base
+
+  interface HasOptions {
+      type?: number; // CSS_UNIT.DECIMAL | CSS_UNIT.INTEGER
+  }
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  interface ControllerSettingsStyleUI {
+      formFontSize: string;
+  }
+
+  class ApplicationUI {
+      get layouts(): FileAsset[]; // ApplicationUI.getProject().layouts
+  }
