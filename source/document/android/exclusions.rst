@@ -43,6 +43,20 @@ Interface
       ALL = DOCUMENT | USABILITY
   }
 
+  enum STAGE_OPTIMIZATION {
+      EXCLUDE = 1,
+      INHERIT = 2,
+      ALIGNMENT = 4,
+      POSITION = 8,
+      DIMENSION = 16,
+      MARGIN = 32,
+      PADDING = 64,
+      BASELINE = 128,
+      WHITESPACE = 256,
+      TRANSLATE = 512,
+      TRANSFORM = 1024
+  }
+
 Method
 ======
 
@@ -75,10 +89,10 @@ Inline
 
 .. code-block:: html
 
-  <h1>
-    data-exclude-section="DOM_TRAVERSE | EXTENSION"
-    data-exclude-resource="BOX_SPACING | FONT_STYLE"
-    data-exclude-procedure="CONSTRAINT | LOCALIZATION | CUSTOMIZATION | OPTIMIZATION">
+  <h1 data-exclude-section="DOM_TRAVERSE | EXTENSION"
+      data-exclude-resource="BOX_SPACING | FONT_STYLE"
+      data-exclude-procedure="CONSTRAINT | LOCALIZATION | CUSTOMIZATION | OPTIMIZATION"
+      data-exclude-optimization="INHERIT | ALIGNMENT">
     title
   </h1>
   <p>

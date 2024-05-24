@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 81,86-89,92,171,191-192,210,217,267-268
+  :emphasize-lines: 54,82,87-90,93,172,192-193,211,218,268-269
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -60,6 +60,7 @@ Interface
       hasProcedure(value: number): boolean;
       hasResource(value: number): boolean;
       hasSection(value: number): boolean;
+      hasOptimization(value: number): boolean;
       exclude(options: ExcludeOptions): void;
       hide(options?: HideOptions<NodeUI>): NodeTemplate<NodeUI> | null;
       replaceTry(options: ReplaceTryOptions<NodeUI>): boolean;
@@ -300,6 +301,10 @@ Interface
       get support(): SupportUI;
   }
 
+.. versionadded:: 5.3.0
+
+  - *NodeUI* method **hasOptimization** was created.
+
 .. versionadded:: 5.2.1
 
   - *NodeUI* property getter **textMetrics** for font dimensions was created.
@@ -308,7 +313,7 @@ Interface
 
   - *NodeUI* property getter **tagDisplay** for rendered behavior was created.
   - *NodeUI* property getter **alignContent** for vertical layout position was created.
-  - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was created.
+  - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was implemented.
   - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.
   - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was amended.
   - *View* property getter **useSystemColors** for device color translation was created.

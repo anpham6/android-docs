@@ -43,17 +43,38 @@ ADDED
       rtFontSize?: string;
   }
 
+  interface ExcludeOptions {
+      optimization?: number;
+  }
+
   interface HasOptions {
       inherit?: boolean;
   }
 
   class NodeUI {
+      hasOptimization(value: number): boolean;
       get afterLineBreak(): boolean;
       get wordSpacing(): number;
   }
 
 .. code-block::
   :caption: squared.base.lib
+
+  /* constant */
+
+  enum STAGE_OPTIMIZATION {
+      EXCLUDE = 1,
+      INHERIT = 2,
+      ALIGNMENT = 4,
+      POSITION = 8,
+      DIMENSION = 16,
+      MARGIN = 32,
+      PADDING = 64,
+      BASELINE = 128,
+      WHITESPACE = 256,
+      TRANSLATE = 512,
+      TRANSFORM = 1024
+  }
 
   /* dom */
 
