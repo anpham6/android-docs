@@ -69,11 +69,11 @@ GitHub
   node serve.js
 
 .. code-block::
-  :caption: dev - 5.2.0
+  :caption: dev - 5.3.0
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.2.0
+  git checkout 5.3.0
 
   npm install
   npm run build:dev
@@ -82,7 +82,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 3.2.0
+  git checkout 3.3.0
 
   npm install
   npm run dev
@@ -110,7 +110,7 @@ Repo
   mkdir workspace
   cd workspace
 
-  repo init -u https://github.com/anpham6/squared-repo -m 5.2.0.xml
+  repo init -u https://github.com/anpham6/squared-repo -m 5.3.0.xml
   repo sync
 
 .. rst-class:: installation-workspace
