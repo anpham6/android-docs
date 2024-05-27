@@ -56,4 +56,4 @@ Inline
     content content content content content content content content
   </p>
 
-.. tip:: CSS style property ``initial-letter`` uses the :target:`multiline` extension for detection and rendering.
+.. tip:: *CSS* style property ``initial-letter`` uses the :target:`multiline` extension for detection and rendering.

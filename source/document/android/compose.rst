@@ -12,7 +12,7 @@ Method
   squared.settings.composableElements = ["main", "#content", "--boxShadow", "--height=300px"];
   squared.settings.createBuildDependencies = true; // Optional
 
-You can also do it using the ``android.substitute`` extension directly inside the HTML element.
+You can also do it using the ``android.substitute`` extension directly inside the *HTML* element.
 
 .. code-block::
   :emphasize-lines: 18-19

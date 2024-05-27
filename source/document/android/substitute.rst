@@ -2,7 +2,7 @@
 Substitute
 ==========
 
-There are some cases where a DOM layout tree has to be transformed into an equivalent layout using third-party controls.
+There are some cases where a *DOM* layout tree has to be transformed into an equivalent layout using third-party controls.
 
 Method
 ======

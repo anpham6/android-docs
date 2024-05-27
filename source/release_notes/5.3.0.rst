@@ -102,14 +102,8 @@ MODIFIED
 .. code-block::
   :caption: squared.base
 
-  type SlotParentMap = Map<HTMLElement, [HTMLSlotElement, ...HTMLElement[]][]>; // HTMLSlotElement formerly [1]
-
   interface HasOptions {
       type?: number; // CSS_UNIT.DECIMAL | CSS_UNIT.INTEGER
-  }
-
-  class Application {
-      replaceShadowRootSlots(shadowRoot: ShadowRoot, slotsMap?: SlotParentMap): SlotParentMap; // slotsMap (Internal)
   }
 
 DEPRECATED

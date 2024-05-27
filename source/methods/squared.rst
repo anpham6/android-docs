@@ -307,7 +307,7 @@ squared
 
 .. function:: prefetch(type[, all, ...targets])
 
-  Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for CSS.
+  Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for *CSS*.
 
   :param string type: *css* | *javascript* | *image* | *svg*
   :param boolean all: (:sub:`optional (targets)`) Accept request from any origin
@@ -327,7 +327,7 @@ squared
 
 .. function:: parseDocument(...elements)
 
-  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. Assets can be preloaded :alt:`(e.g. images)` which is required with the :doc:`android </framework/android>` framework.
+  Starts at the root target element and creates a virtual *DOM* structure by cascading into all the children. Assets can be preloaded :alt:`(e.g. images)` which is required with the :doc:`android </framework/android>` framework.
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
@@ -348,7 +348,7 @@ squared
 
 .. function:: parseDocumentSync(...elements)
 
-  Starts at the root target element and creates a virtual DOM structure by cascading into all the children. No assets are preloaded which is sufficient for the :doc:`vdom </framework/vdom>` framework.
+  Starts at the root target element and creates a virtual *DOM* structure by cascading into all the children. No assets are preloaded which is sufficient for the :doc:`vdom </framework/vdom>` framework.
 
   :param elements: (optional) |targetElement|
   :param elements: (optional) See |ElementSettings|
@@ -752,7 +752,7 @@ squared
 
 .. function:: observe([enable = true])
 
-  Uses |MutationObserver| to watch for any changes to the :func:`parseDocument` root element. Start after DOM and third-party libraries are initialized.
+  Uses |MutationObserver| to watch for any changes to the :func:`parseDocument` root element. Start after *DOM* and third-party libraries are initialized.
 
   :param boolean enable: (optional) Start or stop all root elements who are monitoring
 

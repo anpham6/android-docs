@@ -303,7 +303,7 @@ Interface
 
 .. versionadded:: 5.3.0
 
-  - *NodeUI* method **hasOptimization** was created.
+  - *NodeUI* method **hasOptimization** for bypassing incorrect adjustments was created.
 
 .. versionadded:: 5.2.1
 

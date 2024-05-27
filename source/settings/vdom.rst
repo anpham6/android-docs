@@ -29,4 +29,4 @@ Example usage
     builtInExtensions: []
   };
 
-.. tip:: Frequent modifications to the DOM use the setting :code:`createElementMap = false`.
+.. tip:: Frequent modifications to the *DOM* use the setting :code:`createElementMap = false`.

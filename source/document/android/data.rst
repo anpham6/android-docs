@@ -2,7 +2,7 @@
 Data Binding
 ============
 
-View model data can be applied to most HTML elements using the *dataset* [#]_ feature. Different view models can be used for every :func:`parseDocument` session.
+View model data can be applied to most *HTML* elements using the *dataset* [#]_ feature. Different view models can be used for every :func:`parseDocument` session.
 
 Leaving the **sessionId** empty uses the default view model which is searched last for all projects when attempting a bind.
 

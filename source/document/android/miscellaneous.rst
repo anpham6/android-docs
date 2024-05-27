@@ -5,7 +5,7 @@ Miscellaneous
 System Colors
 =============
 
-Any `R.color <https://developer.android.com/reference/android/R.color>`_ that starts with the prefix "**system_**" can be used as substitute for a CSS color.
+Any `R.color <https://developer.android.com/reference/android/R.color>`_ that starts with the prefix "**system_**" can be used as substitute for a *CSS* color.
 
 ::
 
@@ -29,7 +29,7 @@ Any `R.color <https://developer.android.com/reference/android/R.color>`_ that st
     "colorSecondary": "rgb(255 0 0)"
   };
 
-When any element uses a CSS color it will be substituted with the same value in the global system color map. This behavior can be disabled locally using dataset attributes. 
+When any element uses a *CSS* color it will be substituted with the same value in the global system color map. This behavior can be disabled locally using dataset attributes. 
 
 .. code-block:: html
   :caption: Active (highlight)

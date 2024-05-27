@@ -1,0 +1,21 @@
+=====
+5.2.2
+=====
+
+:right:`2024-05-27`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared.base
+
+  type SlotParentMap = Map<HTMLElement, [HTMLSlotElement, ...HTMLElement[]][]>; // HTMLSlotElement formerly [1]
+
+  class Application {
+      replaceShadowRootSlots(shadowRoot: ShadowRoot, slotsMap?: SlotParentMap): SlotParentMap; // slotsMap (Internal)
+  }
