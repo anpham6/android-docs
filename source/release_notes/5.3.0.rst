@@ -23,6 +23,32 @@ BREAKING
       get textIndent(): number; // Detection for "each-line" and "hanging"
   }
 
+.. code-block::
+  :caption: squared.lib.client
+  :emphasize-lines: 4
+
+  interface UserAgentData {
+      name: "Chrome";
+
+      name: "Chrome" | "Chromium"; // getUserAgentData
+  }
+
+.. code-block::
+  :caption: squared.lib.css
+  :emphasize-lines: 9
+
+  /*
+    switch (attr) {
+      case "width":
+      case "maxWidth":
+      case "minWidth": 
+      case "height":
+      case "maxHeight":
+      case "minHeight":
+        return "px" | "%";
+  */
+  function calculateStyle(element: StyleElement, attr: string, value: string, boundingBox?: Null<Dimension>): string;
+
 ADDED
 =====
 
@@ -47,8 +73,18 @@ ADDED
       optimization?: number;
   }
 
+  interface AutoMargin {
+      leftRightAnchor?: boolean;
+      topBottomAnchor?: boolean;
+  }
+
   interface HasOptions {
       inherit?: boolean;
+  }
+
+  class Node {
+      get voidElement(): boolean;
+      get nowrapWhiteSpace(): boolean;
   }
 
   class NodeUI {
@@ -81,7 +117,20 @@ ADDED
   function causesLineBreak(element: Element): boolean;
 
 .. code-block::
+  :caption: squared.lib.client
+
+  interface UserAgentFeatures {
+      RULES: {
+          ADOPTED_STYLE_SHEET: boolean;
+      };
+  }
+
+.. code-block::
   :caption: chrome.base
+
+  interface FileActionOptions {
+      removeBinaries?: boolean;
+  }
 
   interface FileActionAttribute {
       saveAs?: {

@@ -104,6 +104,8 @@ squared
   function copyFiles(value: string | string[], setting: string): FileActionResult;
   function copyFiles(value: string | string[], options: FileActionOptions, setting?: string, overwrite?: boolean): FileActionResult;
 
+  function toString(projectId?: string): string;
+
 .. rst-class:: section-caption
 
 .. code-block::

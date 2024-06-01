@@ -657,6 +657,25 @@ squared
     // Load
     squared.copyFiles("./path/to/project", "android-example"); // Any page in same domain
 
+.. function:: toString([projectId])
+
+  Writes the system name of the currently installed non-UI framework.
+
+  :param string projectId: (optional) Targets a project that is not the default project
+  :returns: string
+
+  Usage::
+
+    squared.setFramework(chrome);
+    const systemName = squared.toString(); // "chrome"
+
+  Alternate::
+
+    squared.setFramework(android);
+    await squared.parseDocument();
+    await squared.close();
+    const activityMain = squared.toString("project1"); // XML content
+
 .. function:: getElementById(value[, sync, cache = true])
 
   Same behavior as native ``document.getElementById`` [#]_ except returns a |Node| instance.
