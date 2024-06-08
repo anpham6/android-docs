@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 54,82,87-90,93,172,192-193,211,218,268-269
+  :emphasize-lines: 54,150,173,193-194,212,213,220,270-271
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -96,7 +96,7 @@ Interface
       flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | NodeUI, wrapped?: boolean): boolean;
       flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | NodeUI, wrapped?: boolean): string;
       flex(attr: "grow" | "shrink" | "order", parent?: boolean | NodeUI, wrapped?: boolean): number;
-      flex<(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
+      flex(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): CssStyleMap | string | null;
@@ -156,6 +156,7 @@ Interface
       get textIndent(): number;
       get preIndent(): [string, NodeUI] | null;
       get causesLineBreak(): boolean;
+      get afterLineBreak(): boolean;
       set renderExclude(value: boolean);
       get renderExclude(): boolean;
       set renderAs(value);
@@ -218,6 +219,7 @@ Interface
       get textEmpty(): boolean;
       get textWidth(): number;
       get textMetrics(): TextMetrics | null;
+      get wordSpacing(): number;
       get innerMostWrapped(): NodeUI;
       get outerMostWrapper(): NodeUI;
       get firstLineStyle(): CssStyleMap | null;
@@ -304,6 +306,8 @@ Interface
 .. versionadded:: 5.3.0
 
   - *NodeUI* method **hasOptimization** for bypassing incorrect adjustments was created.
+  - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
+  - *NodeUI* property getter **wordSpacing** for trailing margin was created.
 
 .. versionadded:: 5.2.1
 

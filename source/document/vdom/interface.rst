@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 12,16,49,67-72,89-92,134,188
+  :emphasize-lines: 49,67-72,134,188,220
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -226,6 +226,7 @@ Interface
       get checked(): boolean | null;
       get boundingClientRect(): DOMRect | null;
       get preserveWhiteSpace(): boolean;
+      get nowrapWhiteSpace(): boolean;
       get style(): CSSStyleDeclaration;
       get cssStyle(): CssStyleMap;
       get textStyle(): CssStyleMap;
@@ -234,6 +235,10 @@ Interface
       get initial(): InitialData<Node>;
       constructor(id: number, sessionId?: string, element?: Element, children?: Node[]);
   }
+
+.. versionadded:: 5.3.0
+
+  - *Node* property getter **nowrapWhiteSpace** for detection using :alt:`text-wrap` was created.
 
 .. versionadded:: 5.2.1
 

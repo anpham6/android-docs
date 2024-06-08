@@ -17,10 +17,12 @@ BREAKING
   class Node {
       toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Uses Node.valueOf without options
       toInt(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number;
+      get plainText(): boolean; // Set in the constructor
   }
 
   class NodeUI {
       get textIndent(): number; // Detection for "each-line" and "hanging"
+      get plainText(): boolean; // Modifiable using NodeUI.setCacheState
   }
 
 .. code-block::
@@ -83,7 +85,6 @@ ADDED
   }
 
   class Node {
-      get voidElement(): boolean;
       get nowrapWhiteSpace(): boolean;
   }
 
