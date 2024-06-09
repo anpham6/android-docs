@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 54,150,173,193-194,212,213,220,270-271
+  :emphasize-lines: 54,63,94,151,174,194-195,213,214,221,270-271
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -100,6 +100,7 @@ Interface
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): CssStyleMap | string | null;
+      hasFixedDimension(dimension: DimensionAttr): boolean;
       isResizable(attr: DimensionSizableAttr, not?: string | string[]): boolean;
       fitToScreen(value: Dimension): Dimension;
       getComments(type: ReferenceType, attrs?: CssStyleAttr[]): [string, string];
@@ -271,7 +272,6 @@ Interface
       getMarginPercent(horizontal: boolean): number;
       getPaddingPercent(horizontal: boolean): number;
       hasFlex(direction: LayoutDirectionAttr): boolean | 0;
-      hasFixedDimension(dimension: DimensionAttr): boolean;
       set anchored(value);
       get anchored(): boolean;
       set localSettings(value);
@@ -306,6 +306,8 @@ Interface
 .. versionadded:: 5.3.0
 
   - *NodeUI* method **hasOptimization** for bypassing incorrect adjustments was created.
+  - *NodeUI* method **actualRect** was migrated from :target:`View` and is no longer abstract.
+  - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
   - *NodeUI* property getter **wordSpacing** for trailing margin was created.
 

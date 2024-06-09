@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 49,67-72,134,188,220
+  :emphasize-lines: 39-40,51,69-74,136,190,222
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -45,6 +45,8 @@ Interface
       data(name: string | symbol, attr: string | symbol, value?: unknown, overwrite?: boolean): unknown;
       unsetCache(...attrs: (CssStyleAttr | keyof CacheValue)[]): void;
       unsetState(...attrs: (keyof CacheState<Node>)[]) : void;
+      resetCache(): void;
+      resetState(): void;
       ascend(options?: AscendParameterOptions<Node, NodeParentAttr>, attr?: boolean | string | ((item: Node) => boolean), error?: (item: Node) => boolean): Node[];
       ascendOne(options?: AscendParameterOptions<Node, NodeParentAttr>, attr?: boolean | string | ((item: Node) => boolean), error?: (item: Node) => boolean): Node | undefined;
       descend(options?: DescendParameterOptions<Node>): Node[];
@@ -239,6 +241,8 @@ Interface
 .. versionadded:: 5.3.0
 
   - *Node* property getter **nowrapWhiteSpace** for detection using :alt:`text-wrap` was created.
+  - *Node* method **resetCache** for property cache values was created.
+  - *Node* method **resetState** for property state values was created.
 
 .. versionadded:: 5.2.1
 

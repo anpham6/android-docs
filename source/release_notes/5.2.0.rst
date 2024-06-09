@@ -7,6 +7,7 @@
 
   5.2.1
   5.2.2
+  5.2.3
 
 :right:`2024-04-29`
 
@@ -279,7 +280,7 @@ ADDED
 
   class SvgBuild {
       static isPaint(object: unknown): object is SvgPaint;
-      static drawShapes(element: SVGGraphicsElement, values: ArrayOf<string>, options?: SvgDrawShapesOptions<SvgContainer>): SvgShapePath[];
+      static drawShapes(element: SVGGraphicsElement, values: string | string[], options?: SvgDrawShapesOptions<SvgContainer>): SvgShapePath[];
       static transformPoints(values: SvgPoint[], transforms: SvgTransform[], options?: SvgTransformPointsOptions): SvgPoint[];
   }
 
@@ -518,7 +519,7 @@ DEPRECATED
 
   /* css */
 
-  function measureTextWidth(element: StyleElement, value: string, options?: MeasureTextOptions): number; // measureText
+  function measureTextWidth(element: HTMLElement | SVGElement, value: string, options?: MeasureTextOptions): number; // measureText
 
   /* supports */
 

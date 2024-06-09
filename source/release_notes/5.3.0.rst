@@ -35,22 +35,6 @@ BREAKING
       name: "Chrome" | "Chromium"; // getUserAgentData
   }
 
-.. code-block::
-  :caption: squared.lib.css
-  :emphasize-lines: 9
-
-  /*
-    switch (attr) {
-      case "width":
-      case "maxWidth":
-      case "minWidth": 
-      case "height":
-      case "maxHeight":
-      case "minHeight":
-        return "px" | "%";
-  */
-  function calculateStyle(element: StyleElement, attr: string, value: string, boundingBox?: Null<Dimension>): string;
-
 ADDED
 =====
 
@@ -85,10 +69,14 @@ ADDED
   }
 
   class Node {
+      resetCache(): void;
+      resetState(): void;
       get nowrapWhiteSpace(): boolean;
   }
 
   class NodeUI {
+      actualRect(position: PositionAttr, dimension?: BoxType): number;
+      hasFixedDimension(dimension: DimensionAttr): boolean;
       hasOptimization(value: number): boolean;
       get afterLineBreak(): boolean;
       get wordSpacing(): number;
@@ -118,12 +106,28 @@ ADDED
   function causesLineBreak(element: Element): boolean;
 
 .. code-block::
-  :caption: squared.lib.client
+  :caption: squared.lib
+
+  /* client */
 
   interface UserAgentFeatures {
       RULES: {
           ADOPTED_STYLE_SHEET: boolean;
       };
+  }
+
+  /* css */
+
+  function roundPx(value: number, min?: number, precision?: number): string;
+
+.. code-block::
+  :caption: android.base
+
+  interface ExtensionComposeViewElement {
+      selector?: string;
+      android?: Record<string, string>;
+      app?: Record<string, string>;
+      tools?: Record<string, string>;
   }
 
 .. code-block::
@@ -156,6 +160,15 @@ MODIFIED
       type?: number; // CSS_UNIT.DECIMAL | CSS_UNIT.INTEGER
   }
 
+  interface CacheStateUI {
+      plainText?: boolean; // Relocated from CacheState
+      firstLineStyle?: CssStyleMap | null;
+      firstLetterStyle?: CssStyleMap | null;
+      flowChildren?: NodeUI[];
+      extensions?: string[];
+      causesLineBreak?: boolean; // Relocated from CacheValueUI
+  }
+
 DEPRECATED
 ==========
 
@@ -169,3 +182,21 @@ DEPRECATED
   class ApplicationUI {
       get layouts(): FileAsset[]; // ApplicationUI.getProject().layouts
   }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function formatPX(value: number): string; // roundPx
+
+  /* error */
+
+  const FRAMEWORK_NOT_INSTALLED: string; // squared.lib.internal.MESSAGE
+  const SERVER_REQUIRED: string;
+  const DIRECTORY_NOT_PROVIDED: string;
+  const UNABLE_TO_FINALIZE_DOCUMENT: string;
+  const INVALID_ASSET_REQUEST: string;
+  const OPERATION_NOT_SUPPORTED: string;
+  const ELEMENT_NOT_FOUND: string;
+  const CSS_CANNOT_BE_PARSED: string;
