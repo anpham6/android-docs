@@ -250,9 +250,10 @@ https://unpkg.com/squared/types/android/file.d.ts
 
 https://unpkg.com/squared/types/android/extension.d.ts
   | `ExtensionAttributeElement <search.html?q=ExtensionAttributeElement>`_
+  | `ExtensionComposeViewElement <search.html?q=ExtensionComposeViewElement>`_
   | `ExtensionFragmentElement <search.html?q=ExtensionFragmentElement>`_
   | `ExtensionIncludeElement <search.html?q=ExtensionIncludeElement>`_
-  | `ExtensionSubtituteElement <search.html?q=ExtensionSubtituteElement>`_
+  | `ExtensionSubstituteElement <search.html?q=ExtensionSubstituteElement>`_
   | `ExtensionViewModelElement <search.html?q=ExtensionViewModelElement>`_
 
 .. _references-android-node:

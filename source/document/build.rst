@@ -76,12 +76,14 @@ Android
 Interface
 ---------
 
-::
+.. code-block::
+  :emphasize-lines: 15
 
   interface DocumentOutput {
       targetAPI?: number | string;
       manifest?: ManifestData;
       namespace?: string;
+      applicationId?: string;
       profileable?: boolean | string | string[];
       dependencies?: string[];
       dependencyScopes?: boolean | 1 | DependencyScopes | "snapshot" | (DependencyScopes | "snapshot")[];
@@ -91,6 +93,7 @@ Interface
       mainSrcDir?: string;
       mainActivityFile?: string;
       javaVersion?: number | string;
+      jvmToolchain?: number | string;
       versionName?: string;
       versionCode?: number;
       dataBinding?: boolean;
@@ -99,9 +102,13 @@ Interface
       updateXmlOnly?: boolean;
   }
 
+.. versionadded:: 5.3.0
+
+  - *DocumentOutput* property **jvmToolchain** for :alt:`build.gradle` upgrades was created.
+
 .. versionadded:: 5.2.0
 
-  - **dependencyScopes** with the "snapshot" number value "**1**" for all scopes.
+  - *DocumentOutput* property **dependencyScopes** with the :target:`snapshot` number value **1** for all scopes was amended.
 
 Example usage
 -------------
@@ -141,6 +148,7 @@ Example usage
     mainActivityFile: "MainActivity.java", // "MainActivity.*" | "/path/user/project/MainActivity.java" | "app/path/MainActivity.java"
     javaVersion: 1.8, // JavaVersion.VERSION_1_8
     javaVersion: 11, // JavaVersion.VERSION_11
+    jvmToolchain: 17,
     versionName: "1.0",
     versionCode: 1,
     dataBinding: true, // android.buildFeatures.dataBinding
@@ -239,7 +247,7 @@ Interface
 
 .. versionadded:: 5.2.0
 
-  - *FileActionOptions* property **removeUnusedScope** was created.
+  - *FileActionOptions* property **removeUnusedScope** for :alt:`@scope` removal was created.
 
 Example usage
 -------------

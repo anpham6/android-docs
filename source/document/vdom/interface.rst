@@ -264,7 +264,7 @@ Interface
 .. code-block::
   :caption: squared.lib.js
 
-  class Container {
+  class Container<T> {
       addAt(index: number, ...items: T[]): this;
       removeAt(index: number): T | undefined;
       sortBy(...attrs: [...string[], boolean?]): this;

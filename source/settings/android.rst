@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 16,27,39
+  :emphasize-lines: 15,16,27,39
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -22,7 +22,7 @@ Interface
       includableElements: ExtensionIncludeElement[];
       substitutableElements: ExtensionSubtituteElement[];
       fragmentableElements: (string | ExtensionFragmentElement)[];
-      composableElements: string[];
+      composableElements: (string | ExtensionComposeViewElement)[];
       baseLayoutAsFragment: boolean | string | string[] | ExtensionFragmentElement;
       convertPixels: ResolutionUnit;
       lineHeightAdjust: number;
@@ -53,11 +53,15 @@ Interface
       manifestPackage?: string;
   }
 
+.. versionadded:: 5.3.0
+
+  - **ExtensionComposeViewElement** extends the :target:`ViewAttribute` interface.
+
 .. versionadded:: 5.2.0
 
   - *UserResourceSettingsUI* property **showAttributes** accepts a map to globally replace layout attributes.
   - *UserResourceSettingsUI* property **resourceSystemColors** device color translation map was created.
-  - *ExtensionFragmentElement* extends the *ViewAttribute* interface.
+  - **ExtensionFragmentElement** extends the :target:`ViewAttribute` interface.
 
 Example usage
 =============

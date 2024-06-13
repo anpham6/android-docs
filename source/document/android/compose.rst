@@ -10,6 +10,17 @@ Method
 ::
 
   squared.settings.composableElements = ["main", "#content", "--boxShadow", "--height=300px"];
+
+  squared.settings.composableElements = [{
+    selector: "main",
+    android: {
+      layout_width: "match_parent"
+    },
+    tools: {
+      composableName: "com.example.compose.Preview"
+    }
+  }];
+
   squared.settings.createBuildDependencies = true; // Optional
 
 You can also do it using the ``android.substitute`` extension directly inside the *HTML* element.
