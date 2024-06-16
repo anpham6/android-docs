@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 54,63,94,151,174,194-195,213,214,221,270-271
+  :emphasize-lines: 54,63,92,95,152,175,195-196,214-215,222,271-272
 
   class NodeUI extends Node {
       static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
@@ -98,6 +98,7 @@ Interface
       flex(attr: "grow" | "shrink" | "order", parent?: boolean | NodeUI, wrapped?: boolean): number;
       flex(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
+      getPositionOffset(name: "sticky"): Point;
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): CssStyleMap | string | null;
       hasFixedDimension(dimension: DimensionAttr): boolean;
@@ -306,6 +307,7 @@ Interface
 .. versionadded:: 5.3.0
 
   - *NodeUI* method **hasOptimization** for bypassing incorrect adjustments was created.
+  - *NodeUI* method **getPositionOffset** for static position difference was created.
   - *NodeUI* method **actualRect** was migrated from :target:`View` and is no longer abstract.
   - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.

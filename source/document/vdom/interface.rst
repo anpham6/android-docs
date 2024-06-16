@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 39-40,51,69-74,136,190,222
+  :emphasize-lines: 39-40,51,69-74,136,190,205-206,224
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -121,7 +121,7 @@ Interface
       get childIndex(): number;
       get naturalChildren(): Node[];
       get naturalElements(): Node[];
-      get dir(): string;
+      get dir(): TextDirection;
       get textBounds(): BoxRectDimension | null;
       get box(): BoxRectDimension;
       get bounds(): BoxRectDimension;
@@ -211,6 +211,8 @@ Interface
       get actualWidth(): number;
       get actualHeight(): number;
       get actualDimension(): Dimension;
+      get leftPos(): number;
+      get rightPos(): number;
       get containerDimension(): Readonly<ContainerDimension>[] | null;
       get containerHeight(): boolean;
       get percentWidth(): number;
@@ -240,6 +242,7 @@ Interface
 
 .. versionadded:: 5.3.0
 
+  - *Node* property getters **leftPos** | **rightPos** for direction precedence was created.
   - *Node* property getter **nowrapWhiteSpace** for detection using :alt:`text-wrap` was created.
   - *Node* method **resetCache** for property cache values was created.
   - *Node* method **resetState** for property state values was created.

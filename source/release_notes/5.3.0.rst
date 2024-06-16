@@ -71,11 +71,14 @@ ADDED
   class Node {
       resetCache(): void;
       resetState(): void;
+      get leftPos(): number;
+      get rightPos(): number;
       get nowrapWhiteSpace(): boolean;
   }
 
   class NodeUI {
-      actualRect(position: PositionAttr, dimension?: BoxType): number;
+      actualRect(position: PositionAttr, dimension?: BoxType): number; // Formerly abstract
+      getPositionOffset(name: "sticky"): Point;
       hasFixedDimension(dimension: DimensionAttr): boolean;
       hasOptimization(value: number): boolean;
       get afterLineBreak(): boolean;
@@ -167,6 +170,10 @@ MODIFIED
       flowChildren?: NodeUI[];
       extensions?: string[];
       causesLineBreak?: boolean; // Relocated from CacheValueUI
+  }
+
+  class Node {
+      get dir(): TextDirection; // "ltr" | "rtl" | ""
   }
 
 DEPRECATED
