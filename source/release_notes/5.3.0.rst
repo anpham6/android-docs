@@ -68,6 +68,10 @@ ADDED
       inherit?: boolean;
   }
 
+  interface HasUnitOptions {
+      not?: string | string[];
+  }
+
   class Node {
       resetCache(): void;
       resetState(): void;
@@ -77,6 +81,7 @@ ADDED
   }
 
   class NodeUI {
+      static baselineElement(node: NodeUI): boolean;
       actualRect(position: PositionAttr, dimension?: BoxType): number; // Formerly abstract
       getPositionOffset(name: "sticky"): Point;
       hasFixedDimension(dimension: DimensionAttr): boolean;
@@ -101,7 +106,8 @@ ADDED
       BASELINE = 128,
       WHITESPACE = 256,
       TRANSLATE = 512,
-      TRANSFORM = 1024
+      TRANSFORM = 1024,
+      SCALING = 2048
   }
 
   /* dom */
@@ -122,6 +128,12 @@ ADDED
   /* css */
 
   function roundPx(value: number, min?: number, precision?: number): string;
+
+  /* dom */
+
+  interface BoxRectDimension {
+      columns?: Dimension[] | null; // getRangeClientRect
+  }
 
 .. code-block::
   :caption: android.base
@@ -174,6 +186,20 @@ MODIFIED
 
   class Node {
       get dir(): TextDirection; // "ltr" | "rtl" | ""
+  }
+
+.. code-block::
+  :caption: android.base
+
+  interface ExtensionComposeViewElement {
+      selector?: string;
+      android?: Record<string, string>;
+      app?: Record<string, string>;
+      tools?: Record<string, string>;
+  }
+
+  interface View {
+      setLayoutPercent(value: number | string, horizontal?: boolean, includeMargin?: boolean): void; // includeMargin
   }
 
 DEPRECATED

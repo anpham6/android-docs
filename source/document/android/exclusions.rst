@@ -54,7 +54,8 @@ Interface
       BASELINE = 128,
       WHITESPACE = 256,
       TRANSLATE = 512,
-      TRANSFORM = 1024
+      TRANSFORM = 1024,
+      SCALING = 2048
   }
 
 Method

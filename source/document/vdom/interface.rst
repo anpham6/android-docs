@@ -243,9 +243,9 @@ Interface
 .. versionadded:: 5.3.0
 
   - *Node* property getters **leftPos** | **rightPos** for direction precedence was created.
-  - *Node* property getter **nowrapWhiteSpace** for detection using :alt:`text-wrap` was created.
-  - *Node* method **resetCache** for property cache values was created.
-  - *Node* method **resetState** for property state values was created.
+  - *Node* property getter **nowrapWhiteSpace** for :alt:`text-wrap` detection was created.
+  - *Node* method **resetCache** for all property cache values was created.
+  - *Node* method **resetState** for all property state values was created.
 
 .. versionadded:: 5.2.1
 

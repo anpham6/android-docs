@@ -5,11 +5,12 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 54,63,92,95,152,175,195-196,214-215,222,271-272
+  :emphasize-lines: 3,55,64,93,96,153,176,196-197,215-216,223,272-273
 
   class NodeUI extends Node {
-      static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
+      static baselineElement(node: NodeUI): boolean;
+      static linearData(list: NodeUI[], cleared?: Map<NodeUI, string> | null, absolute?: boolean): LinearData;
       static partitionRows(list: NodeUI[], cleared?: Map<NodeUI, string> | null): NodeUI[][];
       alignmentType: number;
       contentAltered: boolean;
@@ -259,7 +260,7 @@ Interface
       combine(...values: string[]): string[];
       setLayoutWidth(value: string, overwrite?: boolean): void;
       setLayoutHeight(value: string, overwrite?: boolean): void;
-      setLayoutPercent(value: string, horizontal?: boolean): void;
+      setLayoutPercent(value: string, horizontal?: boolean, includeMargin?: boolean): void;
       setSingleLine(maxLines: boolean, ellipsize?: boolean): void;
       setConstraintDimension(percentAvailable?: number): number;
       setFlexDimension(dimension: DimensionAttr, percentAvailable?: number, weight?: number): number;
@@ -305,10 +306,10 @@ Interface
   }
 
 .. versionadded:: 5.3.0
-
-  - *NodeUI* method **hasOptimization** for bypassing incorrect adjustments was created.
-  - *NodeUI* method **getPositionOffset** for static position difference was created.
-  - *NodeUI* method **actualRect** was migrated from :target:`View` and is no longer abstract.
+  - *NodeUI* static method **baselineElement** for qualified elements was created.
+  - *NodeUI* method **hasOptimization** for applying built-in optimizations was created.
+  - *NodeUI* method **getPositionOffset** for non-static coordinates was created.
+  - *NodeUI* method **actualRect** is no longer abstract.
   - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
   - *NodeUI* property getter **wordSpacing** for trailing margin was created.
