@@ -56,4 +56,26 @@ Inline
     content content content content content content content content
   </p>
 
-.. tip:: *CSS* style property ``initial-letter`` uses the :target:`multiline` extension for detection and rendering.
+.. tip:: *CSS* ``initial-letter`` uses the :target:`multiline` extension for detection and rendering.
+
+Column
+======
+
+The amount of spacing between words cannot be accurately measured due to the font size differences on the output device. Inline properties can be used to modify when a block of text is to be segmented into another column when using *CSS* ``column-width`` or ``column-spacing``.
+
+::
+
+  <p data-android-column-word-spacing="0.25">
+    content content content content
+    content content content content
+  </p>
+
+.. code-block::
+  :caption: text-align: justify
+
+  <p data-android-column-justify-spacing="4">
+    content content content content
+    content content content content
+  </p>
+
+.. note:: *CSS* ``word-spacing`` is not implemented when using column layout.
