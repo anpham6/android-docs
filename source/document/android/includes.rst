@@ -54,7 +54,7 @@ Inline
     <div id="item5" data-android-include="filename2" data-android-include-end="true" data-android-include-viewmodel="exampleData">Item 5</div>
   </div>
 
-.. tip:: ``data-pathname-android`` AND ``data-filename-android`` can also be used with any :func:`parseDocument` root element.
+.. tip:: ``data-pathname-android`` AND ``data-filename-android`` can also be used with any :func:`parseDocument` root element. The ``-android`` suffix is optional when using only one framework.
 
 .. code-block:: xml
   :caption: Output

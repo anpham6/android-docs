@@ -86,4 +86,26 @@ Sometimes it is necessary to extract elements and append them into other contain
 
 .. note:: Using **target** into a *ConstraintLayout* or *RelativeLayout* container will not include automatic positioning. Redirection will fail if the :target:`target location` is not a block/container element.
 
+Hidden Elements
+===============
+
+Usually anything that is off-screen or set to ``display: none`` is not processed to minimize performance issues with nested tree depth. This behavior can be overridden only through a dataset property set directly onto the parent element.
+
+.. code-block:: html
+  :emphasize-lines: 2,4-5
+
+  <div>
+    <h3>Title</h3>
+    <menu style="display: none;" data-cascade-all-android="true">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <menu style="display: none;" data-cascade-all="false">
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </menu>
+    </menu>
+  <div>
+
+.. note:: The ``data-cascade-all`` applies the setting to all UI frameworks.
+
 .. [#] https://source.android.com/docs/core/display/dynamic-color
