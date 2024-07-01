@@ -306,6 +306,7 @@ Interface
   }
 
 .. versionadded:: 5.3.0
+
   - *NodeUI* static method **baselineElement** for qualified elements was created.
   - *NodeUI* method **hasOptimization** for applying built-in optimizations was created.
   - *NodeUI* method **getPositionOffset** for non-static coordinates was created.

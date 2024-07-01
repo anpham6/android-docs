@@ -215,6 +215,7 @@ Interface
 
   interface DocumentOutput {
       productionRelease?: boolean | string;
+      productionIncremental?: boolean;
       useOriginalHtmlPage?: boolean | string;
       useUnsafeHtmlReplace?: boolean;
       useSessionCache?: boolean;
