@@ -81,7 +81,7 @@ Example usage
     supportNegativeLeftTop: true,
     preloadImages: true,
     preloadFonts: true,
-    preloadLocalFonts: true, // Chromium
+    preloadLocalFonts: true, // window.queryLocalFonts (Chromium)
     preloadCustomElements: true, // pierceShadowRoot = true
     enabledSVG: true, // android.resource.svg
     enabledMultiline: true, // android.delegate.multiline
@@ -165,7 +165,7 @@ Example usage
 
 .. code-block::
   :caption: Global
-  :emphasize-lines: 9
+  :emphasize-lines: 9,31
 
   squared.settings = {
     builtInExtensions: [
@@ -197,7 +197,7 @@ Example usage
       "android.resource.data"
     ],
     convertImages: "png", // jpeg | webp | gif | bmp
-    compressImages: false, // TinyPNG (https://tinypng.com/developers)
+    compressImages: false, // npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)
     showAttributes: {
       "android:hyphenationFrequency": "full", // Replace all
       "android:fontFeatureSettings": null // Delete all
