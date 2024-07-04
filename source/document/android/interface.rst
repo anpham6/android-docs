@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 3,55,64,93,96,153,176,196-197,215-216,223,272-273
+  :emphasize-lines: 3,55,64,93,96,153,196-197,216
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -306,6 +306,7 @@ Interface
   }
 
 .. versionadded:: 5.3.0
+
   - *NodeUI* static method **baselineElement** for qualified elements was created.
   - *NodeUI* method **hasOptimization** for applying built-in optimizations was created.
   - *NodeUI* method **getPositionOffset** for non-static coordinates was created.

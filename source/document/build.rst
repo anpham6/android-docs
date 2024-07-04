@@ -184,7 +184,7 @@ Interface
 ---------
 
 .. code-block::
-  :emphasize-lines: 25
+  :emphasize-lines: 9-11,19,35
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -194,6 +194,9 @@ Interface
           link?: SaveAsOptions;
           image?: SaveAsOptions;
           font?: SaveAsOptions;
+          video?: SaveAsOptions;
+          audio?: SaveAsOptions;
+          raw?: SaveAsOptions;
       };
       downloadOnly?: boolean;
       excluding?: HTMLElement[];
@@ -201,6 +204,7 @@ Interface
       preserveCrossOrigin?: boolean | URLData;
       addResourceHints?: boolean | ResourceHintType | ResourceHintType[];
       retainUsedStyles?: (string | RegExp)[] | UsedStylesData;
+      removeBinaries?: boolean;
       removeInlineStyles?: boolean;
       removeUnusedClasses?: boolean;
       removeUnusedPseudoClasses?: boolean;
@@ -215,6 +219,8 @@ Interface
 
   interface DocumentOutput {
       productionRelease?: boolean | string;
+      productionIncremental?: boolean;
+      serverRootMapping?: StringMap;
       useOriginalHtmlPage?: boolean | string;
       useUnsafeHtmlReplace?: boolean;
       useSessionCache?: boolean;
@@ -244,6 +250,19 @@ Interface
       unusedScope?: string[];
       unusedAtRules?: UnusedAtRule[];
   }
+
+.. versionadded:: 5.3.0
+
+  - *FileActionOptions* property **removeBinaries** for :alt:`squared.js` <script> exclusion was created.
+  - *DocumentOutput* property **serverRootMapping** for local path rewriting in :alt:`productionRelease` was created.
+  - *DocumentOutput* property **saveAs** with sub-properties as :alt:`SaveAsOptions` was amended:
+
+    .. hlist::
+      :columns: 3
+
+      - video
+      - audio
+      - raw
 
 .. versionadded:: 5.2.0
 

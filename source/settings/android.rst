@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 15,16,27,39
+  :emphasize-lines: 15
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -68,7 +68,6 @@ Example usage
 
 .. code-block::
   :caption: Customizable (project/all)
-  :emphasize-lines: 7,44
 
   squared.settings = {
     targetAPI: 34,
@@ -141,7 +140,6 @@ Example usage
 
 .. code-block::
   :caption: Customizable (project/main)
-  :emphasize-lines: 3-7
 
   squared.settings = {
     resourceQualifier: "land", // "res/layout-land"
@@ -165,7 +163,7 @@ Example usage
 
 .. code-block::
   :caption: Global
-  :emphasize-lines: 9,31
+  :emphasize-lines: 31
 
   squared.settings = {
     builtInExtensions: [

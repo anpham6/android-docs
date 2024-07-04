@@ -7,7 +7,6 @@ These settings are available in the global variable ``squared`` to customize you
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 5
 
   interface UserSettings {
       builtInExtensions: string[];
@@ -43,7 +42,6 @@ These settings are available in the global variable ``squared`` to customize you
   }
 
 .. code-block::
-  :emphasize-lines: 4,11
 
   interface UserResourceSettingsUI extends UserResourceSettings {
       enabledSVG: boolean;
