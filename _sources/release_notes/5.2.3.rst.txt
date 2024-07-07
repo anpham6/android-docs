@@ -1,0 +1,61 @@
+=====
+5.2.3
+=====
+
+.. toctree::
+  :maxdepth: 1
+
+  5.2.4
+
+:right:`2024-06-16`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared.lib.css
+  :emphasize-lines: 30
+
+  /*
+    switch (attr) {
+      case "width":
+      case "minWidth":
+      case "maxWidth":      
+      case "paddingTop":
+      case "paddingRight":
+      case "paddingBottom":
+      case "paddingLeft":
+      case "scrollPaddingTop":
+      case "scrollPaddingRight":
+      case "scrollPaddingBottom":
+      case "scrollPaddingLeft":
+      case "left":
+      case "right":
+      case "marginTop":
+      case "marginBottom":
+      case "marginRight":
+      case "marginLeft":
+      case "scrollMarginTop":
+      case "scrollMarginBottom":
+      case "scrollMarginRight":
+      case "scrollMarginLeft":
+      case "height":
+      case "minHeight"
+      case "maxHeight":      
+      case "top":
+      case "bottom":
+      case "verticalAlign":
+        return "px" | "%";
+    }
+  */
+  function calculateStyle(element: HTMLElement | SVGElement, attr: string, value: string, boundingBox?: Dimension | null, percent?: boolean): string; // percent
+  function checkStyleValue(element: HTMLElement | SVGElement, attr: string, value: string, percent?: boolean): string; // percent
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  function calculateStyle(element: HTMLElement | SVGElement, attr: string, value: string, percent?: boolean): string; // percent

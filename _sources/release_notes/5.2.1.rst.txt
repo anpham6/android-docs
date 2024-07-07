@@ -1,0 +1,41 @@
+=====
+5.2.1
+=====
+
+.. toctree::
+  :maxdepth: 1
+
+  5.2.2
+  5.2.3
+
+:right:`2024-05-03`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface HasUnitOptions {
+      inherit?: boolean;
+      ignoreZero?: boolean;
+  }
+
+  class Node {
+      as(target: typeof Element): InstanceType<typeof Element> | null;
+  }
+
+  class NodeUI {
+      get textMetrics(): TextMetrics | null;
+  }
+
+.. code-block::
+  :caption: android.extensions.resource
+
+  interface ResourceSvgOptions {
+      dependencyVectorDrawable: "animated" | "seekable";
+  }

@@ -1,0 +1,20 @@
+=====
+5.2.4
+=====
+
+:right:`2024-06-30`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      get width(): number; // "auto" does not attempt to determine intrinsic size (e.g. img)
+      get height(): number;
+  }

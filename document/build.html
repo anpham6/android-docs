@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Options &mdash; squared 5.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
+      <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=2953445b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Release Notes" href="../release_notes/index.html" />
+    <link rel="prev" title="Interface" href="vdom/interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            squared
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Document</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="android/index.html">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chrome.html">Chrome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdom/index.html">VDOM</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Build Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chrome">Chrome</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">squared</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Document</a></li>
+      <li class="breadcrumb-item active">Build Options</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/document/build.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="build-options">
+<h1>Build Options<a class="headerlink" href="#build-options" title="Link to this heading"></a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">squared<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">squared-express<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-android-file"><span class="std std-ref">DocumentOutput</span></a></p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">RequestData</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">FileActionOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">pid?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fetchMode?</span><span class="o">:</span><span class="w"> </span><span class="kt">RequestMode</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">timeout?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">config?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">FileActionConfig</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">incrementalMap</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">pathname?</span><span class="o">:</span><span class="w"> </span><span class="kt">IncrementalData</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">extension?</span><span class="o">:</span><span class="w"> </span><span class="kt">IncrementalData</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">mime?</span><span class="o">:</span><span class="w"> </span><span class="kt">IncrementalData</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">outgoing?</span><span class="o">:</span><span class="w"> </span><span class="kt">OutgoingHeaders</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">exclusions?</span><span class="o">:</span><span class="w"> </span><span class="kt">Exclusions</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">)[];</span>
+<span class="w">    </span><span class="nx">broadcast?</span><span class="o">:</span><span class="w"> </span><span class="kt">BroadcastSocket</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">BroadcastMessageCallback</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">throwErrors?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">filter</span><span class="o">?:</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="kt">FileAsset</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="o">:</span><span class="w"> </span><span class="kt">FileAsset</span><span class="p">[])</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">unknown</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">RequestData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">projectId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">assets?</span><span class="o">:</span><span class="w"> </span><span class="kt">FileAsset</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">dataSource?</span><span class="o">:</span><span class="w"> </span><span class="kt">DataSource</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">document?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">task?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="kr">module</span><span class="nx">s?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">update?</span><span class="o">:</span><span class="w"> </span><span class="kt">WatchInterval</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">incremental?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;staging&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;etag&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;exists&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">checksum?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ChecksumOutput</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">imports?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">headers?</span><span class="o">:</span><span class="w"> </span><span class="kt">OutgoingHeaders</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">watch?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">cache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">PlainObject</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">log?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">LogOptions</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">baseUrl?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">priority?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">broadcastId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">error</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">abort?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="nx">fatal?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">ignoreExtensions?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">FileCopyingOptions</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">FileActionOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">pathname?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">emptyDir?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">modified?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">FileArchivingOptions</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">FileActionOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">filename?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">format?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">copyTo?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="android">
+<h2>Android<a class="headerlink" href="#android" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Interface<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">DocumentOutput</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">targetAPI?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">manifest?</span><span class="o">:</span><span class="w"> </span><span class="kt">ManifestData</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">namespace?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">applicationId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">profileable?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">dependencies?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">dependencyScopes?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DependencyScopes</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;snapshot&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="nx">DependencyScopes</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;snapshot&quot;</span><span class="p">)[];</span>
+<span class="w">    </span><span class="nx">directories?</span><span class="o">:</span><span class="w"> </span><span class="kt">ControllerSettingsDirectoryUI</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">projectName?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mainParentDir?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mainSrcDir?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mainActivityFile?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">javaVersion?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">jvmToolchain?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">versionName?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">versionCode?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">dataBinding?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">commands?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[])[];</span>
+<span class="w">    </span><span class="nx">extensionData?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">PlainObject</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">updateXmlOnly?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.3.0: </span></p>
+<ul class="simple">
+<li><p><em>DocumentOutput</em> property <strong>jvmToolchain</strong> for <em class="alt">build.gradle</em> upgrades was created.</p></li>
+</ul>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.2.0: </span></p>
+<ul class="simple">
+<li><p><em>DocumentOutput</em> property <strong>dependencyScopes</strong> with the <em class="target">snapshot</em> number value <strong>1</strong> for all scopes was amended.</p></li>
+</ul>
+</div>
+</section>
+<section id="example-usage">
+<h3>Example usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span><span class="w"> </span><span class="c1">// Override settings.targetAPI</span>
+<span class="w">  </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Tiramisu&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">package</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;com.example.demo&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;manifest package=&quot;com.example.demo&quot;&gt;</span>
+<span class="w">    </span><span class="nx">application</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app_name&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">supportsRtl</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;AppTheme&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">namespace</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;com.example.demo&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.defaultConfig.applicationId (app/build.gradle)</span>
+<span class="w">  </span><span class="nx">profileable</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;profileable android:enabled=&quot;[false|true]&quot; /&gt;</span>
+<span class="w">  </span><span class="nx">profileable</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;debug&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.buildTypes.release.signingConfig = signingConfigs.debug</span>
+<span class="w">  </span><span class="nx">profileable</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;--warn-manifest-validation&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// aaptOptions.additionalParameters (--prefix)</span>
+<span class="w">  </span><span class="nx">profileable</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;release&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--warn-manifest-validation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--no-version-vectors&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// signingConfig + additionalParameters (multiple --args)</span>
+<span class="w">  </span><span class="nx">dependencies</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;androidx.appcompat:appcompat:1.6.0&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// All first-level dependencies</span>
+<span class="w">  </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;compile&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// implementation=&quot;compile&quot; | compileOnly=&quot;provided&quot; | runtimeOnly=&quot;runtime&quot; | testImplementation=&quot;test&quot;</span>
+<span class="w">  </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;compile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;runtime&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;snapshot&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use latest published release</span>
+<span class="w">  </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="c1">// true + &quot;snapshot&quot;</span>
+<span class="w">  </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;snapshot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;compile&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">directories</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/to/res/layout&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">string</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/to/res/values&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">projectName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Example Project&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// rootProject.name (settings.gradle)</span>
+<span class="w">  </span><span class="nx">mainParentDir</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Override settings.outputDirectory</span>
+<span class="w">  </span><span class="nx">mainSrcDir</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;src/main&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">mainActivityFile</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MainActivity.java&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &quot;MainActivity.*&quot; | &quot;/path/user/project/MainActivity.java&quot; | &quot;app/path/MainActivity.java&quot;</span>
+<span class="w">  </span><span class="nx">javaVersion</span><span class="o">:</span><span class="w"> </span><span class="mf">1.8</span><span class="p">,</span><span class="w"> </span><span class="c1">// JavaVersion.VERSION_1_8</span>
+<span class="w">  </span><span class="nx">javaVersion</span><span class="o">:</span><span class="w"> </span><span class="mf">11</span><span class="p">,</span><span class="w"> </span><span class="c1">// JavaVersion.VERSION_11</span>
+<span class="w">  </span><span class="nx">jvmToolchain</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">versionName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">versionCode</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">dataBinding</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.buildFeatures.dataBinding</span>
+<span class="w">  </span><span class="nx">commands</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// gradlew build</span>
+<span class="w">  </span><span class="nx">commands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deploy&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// gradlew test deploy</span>
+<span class="w">  </span><span class="nx">commands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;lint&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--rerun-tasks&quot;</span><span class="p">]],</span><span class="w"> </span><span class="c1">// gradlew lint &amp;&amp; gradlew test --rerun-tasks</span>
+<span class="w">  </span><span class="nx">updateXmlOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c1">// Copy only auto-generated content</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">With assets</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app/src/main/res/drawable&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ic_launcher_background.xml&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/ic_launcher_background.xml&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app/src/main/res/drawable-v24&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ic_launcher_foreground.xml&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/ic_launcher_foreground.xml&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="chrome">
+<h2>Chrome<a class="headerlink" href="#chrome" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Interface<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">FileActionOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">baseHref?</span><span class="o">:</span><span class="w"> </span><span class="kt">URL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">saveAs</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">html?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">script?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">link?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">image?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">font?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="hll"><span class="w">        </span><span class="nx">video?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+</span><span class="hll"><span class="w">        </span><span class="nx">audio?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+</span><span class="hll"><span class="w">        </span><span class="nx">raw?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+</span><span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">downloadOnly?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">excluding?</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">observe?</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">MutationCallback</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">preserveCrossOrigin?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">URLData</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">addResourceHints?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ResourceHintType</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ResourceHintType</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">retainUsedStyles</span><span class="o">?:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">)[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">UsedStylesData</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">removeBinaries?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">removeInlineStyles?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedClasses?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedPseudoClasses?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedVariables?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedFontFace?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedKeyframes?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedMedia?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedSupports?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedContainer?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeUnusedScope?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">DocumentOutput</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">productionRelease?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">productionIncremental?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">serverRootMapping?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">useOriginalHtmlPage?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">useUnsafeHtmlReplace?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">useSessionCache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">stripCommentsAndCDATA?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">normalizeHtmlOutput?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">escapeReservedCharacters?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">webBundle</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">rootDirAlias?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">baseUrl?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">primaryUrl?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">copyTo?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">rewriteHtmlPage?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">excludeHtmlPage?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">includeScopes?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">        </span><span class="nx">excludeScopes?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">templateMap?</span><span class="o">:</span><span class="w"> </span><span class="kt">TemplateMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">userAgentData?</span><span class="o">:</span><span class="w"> </span><span class="kt">UserAgentData</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/* Auto-generated from &quot;removeUnused&quot; */</span>
+<span class="w">    </span><span class="nx">usedVariables?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// User supplied prepended</span>
+<span class="w">    </span><span class="nx">usedFontFace?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">usedKeyframes?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">unusedStyles?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">unusedMedia?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">unusedSupports?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">unusedContainer?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">unusedScope?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">unusedAtRules?</span><span class="o">:</span><span class="w"> </span><span class="kt">UnusedAtRule</span><span class="p">[];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.3.0: </span></p>
+<ul>
+<li><p><em>FileActionOptions</em> property <strong>removeBinaries</strong> for <em class="alt">squared.js</em> &lt;script&gt; exclusion was created.</p></li>
+<li><p><em>DocumentOutput</em> property <strong>serverRootMapping</strong> for local path rewriting in <em class="alt">productionRelease</em> was created.</p></li>
+<li><p><em>DocumentOutput</em> property <strong>saveAs</strong> with sub-properties as <em class="alt">SaveAsOptions</em> was amended:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>video</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>audio</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>raw</p></li>
+</ul>
+</td></tr></table>
+</li>
+</ul>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.2.0: </span></p>
+<ul class="simple">
+<li><p><em>FileActionOptions</em> property <strong>removeUnusedScope</strong> for <em class="alt">&#64;scope</em> removal was created.</p></li>
+</ul>
+</div>
+</section>
+<section id="id3">
+<h3>Example usage<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">cache</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Not recommended when using watch</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// &quot;etag&quot; (not bundled) + string comparison by URL (single page)</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;etag&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// request.cache OR request.buffer.expires (required)</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;md5&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;sha1&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;sha224&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;sha256&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;sha384&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;sha512&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Multi-[user|page] + Inline content (includes &quot;etag&quot;)</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2h&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Expires in 2 hrs since creation</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1h&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">renew</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Expires from 1 hr of last time accessed</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">algorithm</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;md5&quot;</span><span class="w"> </span><span class="cm">/* etag */</span><span class="p">,</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2h&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">limit</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;5mb&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Set expiration and content size limit</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">html</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">js</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bundle-es6&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Format names per type</span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">css</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">js</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bundle&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">checksum</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// sha256 + recursive</span>
+<span class="w">  </span><span class="nx">checksum</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="c1">// sha256 + recursive = 1</span>
+<span class="w">  </span><span class="nx">checksum</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sha512&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// checksum.sha512</span>
+<span class="w">  </span><span class="nx">checksum</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;filename.sha384&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// sha384</span>
+<span class="w">  </span><span class="nx">checksum</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">algorithm</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;md5&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Default is &quot;sha256&quot;</span>
+<span class="w">    </span><span class="nx">digest</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;base64&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Default is &quot;hex&quot;</span>
+<span class="w">    </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;checksum.crc&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Default is &quot;checksum&quot; + algorithm</span>
+<span class="w">    </span><span class="nx">recursive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Default is &quot;false&quot;</span>
+<span class="w">    </span><span class="nx">recursive</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ignore nested checksum files</span>
+<span class="w">    </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;**/*.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Has precedence</span>
+<span class="w">    </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;**/*.css&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;http://localhost:3000/build/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./build&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Starts with &quot;http&quot;</span>
+<span class="w">    </span><span class="s2">&quot;http://localhost:3000/dist/chrome.framework.js&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/project/build/framework/chrome/src/main.js&quot;</span><span class="w"> </span><span class="c1">// Full file path</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">webBundle</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Chromium</span>
+<span class="w">    </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://hostname/dir/&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Resolves to current host and directory</span>
+<span class="w">    </span><span class="nx">rewriteHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Hide or rename main page</span>
+<span class="w">    </span><span class="nx">excludeHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Exclude HTML page from WBN archive</span>
+<span class="w">    </span><span class="nx">excludeTransforms</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Exclude transformed files not used in HTML page</span>
+<span class="w">    </span><span class="nx">includeScopes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.css&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// http://localhost:3000/dir/**/*.css (hides &quot;excludeTransforms&quot; + &quot;excludeScopes&quot;)</span>
+<span class="w">    </span><span class="nx">excludeScopes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/**/*.js&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// http://localhost:3000/**/*.js</span>
+<span class="w">    </span><span class="nx">copyTo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Copy archive (absolute + permission)</span>
+<span class="w">    </span><span class="nx">rootDirAlias</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;__serverroot__&quot;</span><span class="w"> </span><span class="c1">// Internal</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">baseHref</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://hostname/prod/example.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Additional hostname to use for parsing local files</span>
+<span class="w">  </span><span class="nx">retainUsedStyles</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="sr">/^a:[a-z]/i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--property-name&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">downloadOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Do not transform HTML and CSS files</span>
+<span class="w">  </span><span class="nx">excluding</span><span class="o">:</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;video, audio&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">// Elements to remove from HTML</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://e-mc.readthedocs.io/en/latest/index.html" title="(in E-mc)"><span class="xref std std-doc">E-mc</span></a> / <a class="reference external" href="https://e-mc.readthedocs.io/en/latest/build.html" title="(in E-mc)"><span class="xref std std-doc">Build Options</span></a></p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vdom/interface.html" class="btn btn-neutral float-left" title="Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../release_notes/index.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

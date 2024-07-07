@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>android &mdash; squared 5.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
+      <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=2953445b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="chrome" href="chrome.html" />
+    <link rel="prev" title="squared" href="squared.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            squared
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Methods</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="squared.html">squared</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">android</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#android.setViewModel"><code class="docutils literal notranslate"><span class="pre">setViewModel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.setViewModelByProject"><code class="docutils literal notranslate"><span class="pre">setViewModelByProject()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.addDependency"><code class="docutils literal notranslate"><span class="pre">addDependency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.addDependencyByProject"><code class="docutils literal notranslate"><span class="pre">addDependencyByProject()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.addFontProvider"><code class="docutils literal notranslate"><span class="pre">addFontProvider()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.addXmlNs"><code class="docutils literal notranslate"><span class="pre">addXmlNs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.customize"><code class="docutils literal notranslate"><span class="pre">customize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.loadCustomizations"><code class="docutils literal notranslate"><span class="pre">loadCustomizations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.saveCustomizations"><code class="docutils literal notranslate"><span class="pre">saveCustomizations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.resetCustomizations"><code class="docutils literal notranslate"><span class="pre">resetCustomizations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.setResolutionByDeviceName"><code class="docutils literal notranslate"><span class="pre">setResolutionByDeviceName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.getLocalSettings"><code class="docutils literal notranslate"><span class="pre">getLocalSettings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android.removeObserver"><code class="docutils literal notranslate"><span class="pre">removeObserver()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chrome.html">chrome</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">squared</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Methods</a></li>
+      <li class="breadcrumb-item active">android</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/methods/android.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-android">
+<span id="android"></span><h1>android<a class="headerlink" href="#module-android" title="Link to this heading"></a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="android.setViewModel">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewModel</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sessionId</span> <span class="pre">=</span> <span class="pre">&quot;0&quot;</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.setViewModel" title="Link to this definition"></a></dt>
+<dd><p>Imports to be used for layout bindings associated by session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – See <a class="reference internal" href="../references.html#references-android-main"><span class="std std-ref">AppViewModel</span></a></p></li>
+<li><p><strong>sessionId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Names a session to be used for storage</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">android</span><span class="p">.</span><span class="nx">setViewModel</span><span class="p">(</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">import</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java.util.Map&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">variable</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;map&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Map&amp;lt;String, String&gt;&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">()</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.setViewModelByProject">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewModelByProject</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">projectId</span> <span class="pre">=</span> <span class="pre">&quot;_&quot;</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.setViewModelByProject" title="Link to this definition"></a></dt>
+<dd><p>Imports to be used for layout bindings associated by project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – See <a class="reference internal" href="../references.html#references-android-main"><span class="std std-ref">AppViewModel</span></a></p></li>
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Names a project to be used for storage</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">setViewModelByProject</span><span class="p">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">import</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java.util.Map&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">variable</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;map&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Map&amp;lt;String, String&gt;&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;project-1&quot;</span>
+<span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.addDependency">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addDependency</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.addDependency" title="Link to this definition"></a></dt>
+<dd><p>Include a dependency by group and name to an existing or newly created <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>. Uses the default project “_” for storage. Any existing dependency with the same group and name will be overwritten.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of library</p></li>
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Componenent name in library</p></li>
+<li><p><strong>version</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (<abbr class="sub" title="type">optional</abbr>) Exact version requested</p></li>
+<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Dependency namespace method in Gradle</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">Requirements<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>createBuildDependencies</strong> = <em>true</em></p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">addDependency</span><span class="p">(</span><span class="s2">&quot;androidx.core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1.12.0&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Default is &quot;implementation&quot;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Will also include first-level sub-dependencies (optional)</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">addDependency</span><span class="p">(</span><span class="s2">&quot;androidx.core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;core&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">DEPENDENCY_TYPE</span><span class="p">.</span><span class="nx">COMPILE_ONLY</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses latest Maven published release</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;snapshot&quot;</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.addDependencyByProject">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addDependencyByProject</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.addDependencyByProject" title="Link to this definition"></a></dt>
+<dd><p>Include a dependency to a project by group and name of an existing or newly created <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>. Any existing dependency in the project with the same group and name will be overwritten.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Names a project to be used for storage</p></li>
+<li><p><strong>group</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of library</p></li>
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Componenent name in library</p></li>
+<li><p><strong>version</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (<abbr class="sub" title="type">optional</abbr>) Exact version requested</p></li>
+<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Dependency namespace method in Gradle</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">Requirements<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>createBuildDependencies</strong> = <em>true</em></p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">addDependencyByProject</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;androidx.core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1.12.0&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Default is &quot;implementation&quot;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Will also include first-level sub-dependencies (optional)</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">addDependencyByProject</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;androidx.core&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;core&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">DEPENDENCY_TYPE</span><span class="p">.</span><span class="nx">COMPILE_ONLY</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses latest Maven published release</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">dependencyScopes</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;snapshot&quot;</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.addFontProvider">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addFontProvider</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webFonts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.addFontProvider" title="Link to this definition"></a></dt>
+<dd><p>Add additional <a class="reference external" href="https://developer.android.com/develop/ui/views/text-and-emoji/downloadable-fonts#using-downloadable-fonts-as-resources">Web fonts</a> that can be searched for when resolving first available font family. <a class="reference external" href="https://developers.google.com/fonts/docs/developer_api">Google Fonts</a> is already included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>authority</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Class of font provider library</p></li>
+<li><p><strong>package</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of font provider</p></li>
+<li><p><strong>certs</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">array()</span></code></span>) – List of certificates the font provider is signed with</p></li>
+<li><p><strong>webFonts</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Web font service URL</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean | Promise&lt;boolean&gt;</p>
+</dd>
+<dt class="field-odd">Requirements<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targetAPI</strong> &gt;= <em>26</em></p></li>
+<li><p><strong>createDownloadableFonts</strong> = <em>true</em></p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">android</span><span class="p">.</span><span class="nx">addFontProvider</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;com.google.android.gms.fonts&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;com.google.android.gms&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="s2">&quot;MIIEqDCCA5CgAwIBAgIJANWFuGx9007...&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MIIEQzCCAyugAwIBAgIJAMLgh0Zk...&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;https://www.googleapis.com/webfonts/v1/webfonts?key=1234567890&quot;</span><span class="w"> </span><span class="c1">// Pre-built JSON object is synchronous</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.addXmlNs">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addXmlNs</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.addXmlNs" title="Link to this definition"></a></dt>
+<dd><p>Aliases of global namespaces for third-party controls used when resolving layout attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Prefix to be used with attribute</p></li>
+<li><p><strong>uri</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Full URL namespace of schema</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">addXmlNs</span><span class="p">(</span><span class="s2">&quot;tools&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;http://schemas.android.com/tools&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// https://developer.android.com/studio/write/tool-attributes</span>
+<span class="nx">android</span><span class="p">.</span><span class="nx">customize</span><span class="p">(</span><span class="mf">16</span><span class="w"> </span><span class="cm">/* Jelly Bean */</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ImageView&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">tools</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ignore</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ContentDescription&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">targetApi</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;16&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;FrameLayout</span><span class="w"> </span><span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ImageView</span><span class="w"> </span><span class="na">tools:ignore=</span><span class="s">&quot;ContentDescription&quot;</span><span class="w"> </span><span class="na">tools:targetApi=</span><span class="s">&quot;16&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/FrameLayout&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.customize">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">customize</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.customize" title="Link to this definition"></a></dt>
+<dd><p>Global attributes to be applied to every qualifying layout control possibly overwriting any auto-generated attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – Android SDK build API version</p></li>
+<li><p><strong>widget</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of layout control</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Attributes to be applied to control</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Record&lt;string, StringMap&gt; | undefined</p>
+</dd>
+<dt class="field-odd">Requirements<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>customizationsBaseAPI</strong> &gt;= <em>0</em></p></li>
+<li><p><strong>customizationsOverwritePrivilege</strong> = <em>true</em></p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">customize</span><span class="p">(</span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">ALL</span><span class="w"> </span><span class="cm">/* 0 */</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">minWidth</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;35px&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">minHeight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;25px&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;_&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Non-namespaced attributes</span>
+<span class="w">    </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;@style/Widget.Material3.Button.TextButton&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Button</span>
+<span class="w">  </span><span class="na">android:minWidth=</span><span class="s">&quot;35dp&quot;</span>
+<span class="w">  </span><span class="na">android:minHeight=</span><span class="s">&quot;25dp&quot;</span>
+<span class="w">  </span><span class="na">style=</span><span class="s">&quot;@style/Widget.Material3.Button.TextButton&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.loadCustomizations">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">loadCustomizations</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.loadCustomizations" title="Link to this definition"></a></dt>
+<dd><p>Will merge any saved customizations from the same origin. Any previous calls to <a class="reference internal" href="#android.customize" title="android.customize"><code class="xref js js-func docutils literal notranslate"><span class="pre">android.customize()</span></code></a> may be overwritten.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Unique identifier to be used for local storage</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">targetAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">T</span><span class="p">;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">customizationsBaseAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Apply all customizations</span>
+
+<span class="nx">android</span><span class="p">.</span><span class="nx">loadCustomizations</span><span class="p">(</span><span class="s2">&quot;customize-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+
+<span class="nx">android</span><span class="p">.</span><span class="nx">customize</span><span class="p">(</span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">minWidth</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;25px&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+<span class="nx">android</span><span class="p">.</span><span class="nx">customize</span><span class="p">(</span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">LATEST</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">minWidth</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;30px&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">android:minWidth=</span><span class="s">&quot;25dp&quot;</span><span class="w"> </span><span class="na">android:minHeight=</span><span class="s">&quot;25dp&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">targetAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">T</span><span class="p">;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">customizationsBaseAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">LATEST</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">android:minWidth=</span><span class="s">&quot;30dp&quot;</span><span class="w"> </span><span class="na">android:minHeight=</span><span class="s">&quot;25dp&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.saveCustomizations">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">saveCustomizations</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.saveCustomizations" title="Link to this definition"></a></dt>
+<dd><p>Any valid customizations created using <a class="reference internal" href="#android.customize" title="android.customize"><code class="xref js js-func docutils literal notranslate"><span class="pre">android.customize()</span></code></a> will be saved to local storage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Unique identifier to be used for local storage</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">customize</span><span class="p">(</span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">ALL</span><span class="w"> </span><span class="cm">/* 0 */</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">minWidth</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;35px&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">minHeight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;25px&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">android</span><span class="p">.</span><span class="nx">customize</span><span class="p">(</span><span class="nx">BUILD_VERSION</span><span class="p">.</span><span class="nx">NEXT</span><span class="w"> </span><span class="cm">/* 35 */</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Invalid</span>
+<span class="w">  </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">minWidth</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;35px&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">minHeight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;25px&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.resetCustomizations">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">resetCustomizations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#android.resetCustomizations" title="Link to this definition"></a></dt>
+<dd><p>All customizations currently being used are deleted. Saved customizations in local storage are not affected.</p>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">resetCustomizations</span><span class="p">();</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.setResolutionByDeviceName">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setResolutionByDeviceName</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.setResolutionByDeviceName" title="Link to this definition"></a></dt>
+<dd><p>Sets the resolution when converting browser dimensions into Android device dimensions.</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>Phone</p></li>
+<li><p>Medium Phone</p></li>
+<li><p>Foldable</p></li>
+<li><p>Tablet</p></li>
+<li><p>Medium Tablet</p></li>
+<li><p>Small Desktop</p></li>
+<li><p>Medium Desktop</p></li>
+<li><p>Desktop</p></li>
+<li><p>Large Desktop</p></li>
+<li><p>Pixel</p></li>
+<li><p>Pixel XL</p></li>
+<li><p>Pixel 2</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Pixel 2 XL</p></li>
+<li><p>Pixel 3</p></li>
+<li><p>Pixel 3a</p></li>
+<li><p>Pixel 3 XL</p></li>
+<li><p>Pixel 3a XL</p></li>
+<li><p>Pixel 4</p></li>
+<li><p>Pixel 4 XL</p></li>
+<li><p>Pixel 4a</p></li>
+<li><p>Pixel 5</p></li>
+<li><p>Pixel 6</p></li>
+<li><p>Pixel 6a</p></li>
+<li><p>Pixel 6 Pro</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Pixel 7</p></li>
+<li><p>Pixel 7a</p></li>
+<li><p>Pixel 7 Pro</p></li>
+<li><p>Pixel 8</p></li>
+<li><p>Pixel 8 Pro</p></li>
+<li><p>Pixel C</p></li>
+<li><p>Pixel Fold</p></li>
+<li><p>Nexus 5X</p></li>
+<li><p>Nexus 6</p></li>
+<li><p>Nexus 6P</p></li>
+<li><p>Nexus 7 2012</p></li>
+<li><p>Nexus 7 (2012)</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>Nexus 7</p></li>
+<li><p>Nexus 9</p></li>
+<li><p>Nexus 10</p></li>
+<li><p>TV 4K</p></li>
+<li><p>TV 1080p</p></li>
+<li><p>Television (4K)</p></li>
+<li><p>Television (1080p)</p></li>
+<li><p>TV 720p</p></li>
+<li><p>Television (720p)</p></li>
+<li><p>Automotive</p></li>
+<li><p>Automotive (1024p landscape)</p></li>
+</ul>
+</td></tr></table>
+<p>The exact configuration for each device can be found in the latest Android Studio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Predefined device name or generic layout</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">setResolutionByDeviceName</span><span class="p">(</span><span class="s2">&quot;Pixel 3a XL&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">resolutionDPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">411</span><span class="p">;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">resolutionScreenWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">846</span><span class="p">;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">resolutionScreenHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">560</span><span class="p">;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.getLocalSettings">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getLocalSettings</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#android.getLocalSettings" title="Link to this definition"></a></dt>
+<dd><p>Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to <a class="reference internal" href="squared.html#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../references.html#references-android-application"><span class="std std-ref">ControllerSettingsUI</span></a></p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">directory</span><span class="p">,</span><span class="w"> </span><span class="nx">filename</span><span class="p">,</span><span class="w"> </span><span class="nx">style</span><span class="p">,</span><span class="w"> </span><span class="nx">mimeType</span><span class="p">,</span><span class="w"> </span><span class="nx">unsupported</span><span class="p">,</span><span class="w"> </span><span class="nx">deviations</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">android</span><span class="p">.</span><span class="nx">getLocalSettings</span><span class="p">();</span>
+
+<span class="nx">layout</span><span class="p">.</span><span class="nx">fileExtension</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;.xml&quot;</span><span class="p">;</span>
+<span class="nx">directory</span><span class="p">.</span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;res/values&quot;</span><span class="p">;</span>
+<span class="nx">style</span><span class="p">.</span><span class="nx">buttonBorderStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;inset&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="android.removeObserver">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">removeObserver</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.removeObserver" title="Link to this definition"></a></dt>
+<dd><p>Forwards the target element to <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> which will stop it from being monitored for changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – <em>HTMLElement</em> instance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">observe</span><span class="p">(</span><span class="nx">mutations</span><span class="p">,</span><span class="w"> </span><span class="nx">observer</span><span class="p">,</span><span class="w"> </span><span class="nx">settings</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">});</span>
+
+<span class="nx">android</span><span class="p">.</span><span class="nx">removeObserver</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="squared.html" class="btn btn-neutral float-left" title="squared" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chrome.html" class="btn btn-neutral float-right" title="chrome" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

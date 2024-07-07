@@ -1,0 +1,235 @@
+=====
+5.3.0
+=====
+
+:right:`2024-08-06`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Uses Node.valueOf without options
+      toInt(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number;
+      get plainText(): boolean; // Set in the constructor
+  }
+
+  class NodeUI {
+      get textIndent(): number; // Detection for "each-line" and "hanging"
+      get plainText(): boolean; // Modifiable using NodeUI.setCacheState
+  }
+
+.. code-block::
+  :caption: squared.lib.client
+  :emphasize-lines: 4
+
+  interface UserAgentData {
+      name: "Chrome";
+
+      name: "Chrome" | "Chromium"; // getUserAgentData
+  }
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface ControllerSettingsStyleUI {
+      inputFontSize?: string;
+      buttonFontSize?: string;
+      textareaFontSize?: string;
+      selectFontSize?: string;
+      h1FontSize?: string;
+      h2FontSize?: string;
+      h3FontSize?: string;
+      h4FontSize?: string;
+      h5FontSize?: string;
+      h6FontSize?: string;
+      rtFontSize?: string;
+  }
+
+  interface ExcludeOptions {
+      optimization?: number;
+  }
+
+  interface AutoMargin {
+      leftRightAnchor?: boolean;
+      topBottomAnchor?: boolean;
+  }
+
+  interface HasOptions {
+      inherit?: boolean;
+  }
+
+  interface HasUnitOptions {
+      not?: string | string[];
+  }
+
+  class Node {
+      resetCache(): void;
+      resetState(): void;
+      get leftPos(): number;
+      get rightPos(): number;
+      get nowrapWhiteSpace(): boolean;
+  }
+
+  class NodeUI {
+      static baselineElement(node: NodeUI): boolean;
+      actualRect(position: PositionAttr, dimension?: BoxType): number; // Formerly abstract
+      getPositionOffset(name: "sticky"): Point;
+      hasFixedDimension(dimension: DimensionAttr): boolean;
+      hasOptimization(value: number): boolean;
+      get afterLineBreak(): boolean;
+      get wordSpacing(): number;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* constant */
+
+  enum STAGE_OPTIMIZATION {
+      EXCLUDE = 1,
+      INHERIT = 2,
+      ALIGNMENT = 4,
+      POSITION = 8,
+      DIMENSION = 16,
+      MARGIN = 32,
+      PADDING = 64,
+      BASELINE = 128,
+      WHITESPACE = 256,
+      TRANSLATE = 512,
+      TRANSFORM = 1024,
+      SCALING = 2048
+  }
+
+  /* dom */
+
+  function causesLineBreak(element: Element): boolean;
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          ADOPTED_STYLE_SHEET: boolean;
+      };
+  }
+
+  /* css */
+
+  function roundPx(value: number, min?: number, precision?: number): string;
+
+  /* dom */
+
+  interface BoxRectDimension {
+      columns?: Dimension[] | null; // getRangeClientRect
+  }
+
+.. code-block::
+  :caption: android.base
+
+  interface ExtensionComposeViewElement {
+      selector?: string;
+      android?: Record<string, string>;
+      app?: Record<string, string>;
+      tools?: Record<string, string>;
+  }
+
+.. code-block::
+  :caption: chrome.base
+
+  interface FileActionOptions {
+      removeBinaries?: boolean;
+  }
+
+  interface FileActionAttribute {
+      saveAs?: {
+          video?: SaveAsOptions;
+          audio?: SaveAsOptions;
+          raw?: SaveAsOptions;
+      };
+  }
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared
+
+  function toString(projectId?: string): string; // projectId
+
+.. code-block::
+  :caption: squared.base
+
+  interface HasOptions {
+      type?: number; // CSS_UNIT.DECIMAL | CSS_UNIT.INTEGER
+  }
+
+  interface CacheStateUI {
+      plainText?: boolean; // Relocated from CacheState
+      firstLineStyle?: CssStyleMap | null;
+      firstLetterStyle?: CssStyleMap | null;
+      flowChildren?: NodeUI[];
+      extensions?: string[];
+      causesLineBreak?: boolean; // Relocated from CacheValueUI
+  }
+
+  class Node {
+      get dir(): TextDirection; // "ltr" | "rtl" | ""
+  }
+
+.. code-block::
+  :caption: android.base
+
+  interface ExtensionComposeViewElement {
+      selector?: string;
+      android?: Record<string, string>;
+      app?: Record<string, string>;
+      tools?: Record<string, string>;
+  }
+
+  interface View {
+      setLayoutPercent(value: number | string, horizontal?: boolean, includeMargin?: boolean): void; // includeMargin
+  }
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  interface ControllerSettingsStyleUI {
+      formFontSize: string;
+  }
+
+  class ApplicationUI {
+      get layouts(): FileAsset[]; // ApplicationUI.getProject().layouts
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function formatPX(value: number): string; // roundPx
+
+  /* error */
+
+  const FRAMEWORK_NOT_INSTALLED: string; // squared.lib.internal.MESSAGE
+  const SERVER_REQUIRED: string;
+  const DIRECTORY_NOT_PROVIDED: string;
+  const UNABLE_TO_FINALIZE_DOCUMENT: string;
+  const INVALID_ASSET_REQUEST: string;
+  const OPERATION_NOT_SUPPORTED: string;
+  const ELEMENT_NOT_FOUND: string;
+  const CSS_CANNOT_BE_PARSED: string;

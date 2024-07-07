@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>squared &mdash; squared 5.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
+      <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=2953445b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="android" href="android.html" />
+    <link rel="prev" title="Interface" href="interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            squared
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Methods</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">squared</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setHostname"><code class="docutils literal notranslate"><span class="pre">setHostname()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setEndpoint"><code class="docutils literal notranslate"><span class="pre">setEndpoint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setLocalAddress"><code class="docutils literal notranslate"><span class="pre">setLocalAddress()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auth"><code class="docutils literal notranslate"><span class="pre">auth()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kill"><code class="docutils literal notranslate"><span class="pre">kill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#broadcast"><code class="docutils literal notranslate"><span class="pre">broadcast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setFramework"><code class="docutils literal notranslate"><span class="pre">setFramework()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extend"><code class="docutils literal notranslate"><span class="pre">extend()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear"><code class="docutils literal notranslate"><span class="pre">clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add"><code class="docutils literal notranslate"><span class="pre">add()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remove"><code class="docutils literal notranslate"><span class="pre">remove()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get"><code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attr"><code class="docutils literal notranslate"><span class="pre">attr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prefetch"><code class="docutils literal notranslate"><span class="pre">prefetch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parseDocument"><code class="docutils literal notranslate"><span class="pre">parseDocument()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parseDocumentSync"><code class="docutils literal notranslate"><span class="pre">parseDocumentSync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#findDocumentNode"><code class="docutils literal notranslate"><span class="pre">findDocumentNode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#latest"><code class="docutils literal notranslate"><span class="pre">latest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#close"><code class="docutils literal notranslate"><span class="pre">close()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reset"><code class="docutils literal notranslate"><span class="pre">reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save"><code class="docutils literal notranslate"><span class="pre">save()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saveAs"><code class="docutils literal notranslate"><span class="pre">saveAs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appendTo"><code class="docutils literal notranslate"><span class="pre">appendTo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copyTo"><code class="docutils literal notranslate"><span class="pre">copyTo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saveFiles"><code class="docutils literal notranslate"><span class="pre">saveFiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appendFiles"><code class="docutils literal notranslate"><span class="pre">appendFiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copyFiles"><code class="docutils literal notranslate"><span class="pre">copyFiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toString"><code class="docutils literal notranslate"><span class="pre">toString()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getElementById"><code class="docutils literal notranslate"><span class="pre">getElementById()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#querySelector"><code class="docutils literal notranslate"><span class="pre">querySelector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#querySelectorAll"><code class="docutils literal notranslate"><span class="pre">querySelectorAll()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fromElement"><code class="docutils literal notranslate"><span class="pre">fromElement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fromNode"><code class="docutils literal notranslate"><span class="pre">fromNode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#observe"><code class="docutils literal notranslate"><span class="pre">observe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#observeSrc"><code class="docutils literal notranslate"><span class="pre">observeSrc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android.html">android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chrome.html">chrome</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">squared</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Methods</a></li>
+      <li class="breadcrumb-item active">squared</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/methods/squared.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="squared">
+<h1>squared<a class="headerlink" href="#squared" title="Link to this heading"></a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="setHostname">
+<span class="sig-name descname"><span class="n"><span class="pre">setHostname</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setHostname" title="Link to this definition"></a></dt>
+<dd><p>Use another <abbr title="Cross-Origin Resource Sharing">CORS</abbr>-enabled server for processing assets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – http(s)://hostname(:port)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setHostname</span><span class="p">(</span><span class="s2">&quot;https://localhost:8000&quot;</span><span class="p">);</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setHostname</span><span class="p">();</span><span class="w"> </span><span class="c1">// Reset to window.location (e.g. localhost:3000)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="setEndpoint">
+<span class="sig-name descname"><span class="n"><span class="pre">setEndpoint</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setEndpoint" title="Link to this definition"></a></dt>
+<dd><p>Set alternate pathname for API v1 functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <em>ASSETS_COPY</em> | <em>ASSETS_ARCHIVE</em> | <em>LOADER_DATA</em> | <em>THREADS_KILL</em> | <em>WEBSOCKET_OBSERVE</em></p></li>
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Absolute path to server <em>GET/POST</em> method</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setEndpoint</span><span class="p">(</span><span class="s2">&quot;ASSETS_COPY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/api/v2/assets/copy&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="setLocalAddress">
+<span class="sig-name descname"><span class="n"><span class="pre">setLocalAddress</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setLocalAddress" title="Link to this definition"></a></dt>
+<dd><p>Additional hostnames which are interpreted as localhost. Protocol and port are not required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Same format as URL.hostname</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setLocalAddress</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;nodejs-001&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setLocalAddress</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">&quot;http://0.0.0.0&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="auth">
+<span class="sig-name descname"><span class="n"><span class="pre">auth</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth" title="Link to this definition"></a></dt>
+<dd><p>Set <abbr title="JSON Web Token">JWT</abbr> authorization token for all requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Three concatenated Base64url-encoded strings separated by dots</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">auth</span><span class="p">(</span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNxdWFyZWQiLCJwYXNzd29yZCI6Imp3dDEyMyIsImlhdCI6MTY1MjcxNDQwMH0.xqwQ96LsItilsB1dskzJQqXORaZ4mGMu0FeZezo297c&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="kill">
+<span class="sig-name descname"><span class="n"><span class="pre">kill</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#kill" title="Link to this definition"></a></dt>
+<dd><p>Abort request if not completed in the given amount of time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pid</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) File request self-assigned number <em class="alt">(options.pid)</em></p></li>
+<li><p><strong>timeout</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Seconds until request expires</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;number&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;example.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pid</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">});</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="mf">100</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* KILLED */</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">();</span><span class="w"> </span><span class="c1">// Terminate previous request</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// By username (auth required)</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate previous request in 10 seconds</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="kc">NaN</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate next request in 500 milliseconds</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;10s&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate previous request in 10 seconds</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="s2">&quot;500ms&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate next request in 500 milliseconds</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="broadcast">
+<span class="sig-name descname"><span class="n"><span class="pre">broadcast</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socketId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#broadcast" title="Link to this definition"></a></dt>
+<dd><p>Redirect stdout messages to DevTools console.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – See <a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">BroadcastMessageCallback</span></a></p></li>
+<li><p><strong>socketId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Unique identifier assigned during server initialization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses &quot;socketId&quot;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;222-222-222&quot;</span><span class="p">);</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">broadcastId</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;111-111-111&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;222-222-222&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">broadcast</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">callback</span><span class="o">:</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Messages sent from another API (FileBroadcastOptions)</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Uses &quot;socket_id&quot;</span>
+<span class="w">  </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;333-333-333&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">socketKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;socket_id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.1.1.1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="setFramework">
+<span class="sig-name descname"><span class="n"><span class="pre">setFramework</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#setFramework" title="Link to this definition"></a></dt>
+<dd><p>Install application interpreter. <em class="alt">(e.g. android.framework.js)</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Global object implementing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">AppFramework</span></a></p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) Initialize settings with non-default values</p></li>
+<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Load previous cached instance and settings</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Used when switching frameworks</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html&quot;</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">26</span><span class="p">,</span><span class="w"> </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Local storage</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="extend">
+<span class="sig-name descname"><span class="n"><span class="pre">extend</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#extend" title="Link to this definition"></a></dt>
+<dd><p>Add functions and initial variables to the <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> prototype including overwriting preexisting class definitions. Accessor properties are supported using the <em>get/set</em> object syntax.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>map</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Attribute object consisting of extensions and overrides</p></li>
+<li><p><strong>framework</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">APP_FRAMEWORK</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">altId</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">_id</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">customId</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">configurable</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">enumerable</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">addEvent</span><span class="p">(</span><span class="nx">eventName</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">eventName</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">vdom</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">altId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">altId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 5</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="w"> </span><span class="nx">_preferInitial</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">VDOM</span><span class="w"> </span><span class="cm">/* 1 */</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">CHROME</span><span class="w"> </span><span class="cm">/* 4 */</span><span class="p">);</span><span class="w"> </span><span class="c1">// squared.base.lib.constant</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">chrome</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="clear">
+<span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#clear" title="Link to this definition"></a></dt>
+<dd><p>Calls <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a>.clear() for any loaded frameworks and deletes all cached sessions.</p>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="add">
+<span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#add" title="Link to this definition"></a></dt>
+<dd><p>Include extensions to be processed with any built-in extensions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> – Name of disabled extension or control implementing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a></p></li>
+<li><p><strong>targets</strong> – Tuple of extension and configuration object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>number</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Drawer</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">ExtensionUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">framework</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">framework</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nx">resource</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nx">self</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nx">navigationView</span><span class="o">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">documentBase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android.external&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">leading</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;android.widget.menu&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;android.widget.coordinator&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Drawer</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">constant</span><span class="p">.</span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">ANDROID</span><span class="w"> </span><span class="cm">/* 2 */</span><span class="p">);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
+
+<span class="c1">// Built-in</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;android.resource.includes&quot;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">layout_width</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">([</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">]);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="remove">
+<span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#remove" title="Link to this definition"></a></dt>
+<dd><p>Exclude extensions by name or control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> – Name or control of extensions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>number</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Drawer</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
+<span class="cm">/* OR */</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="get">
+<span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get" title="Link to this definition"></a></dt>
+<dd><p>Retrieve extensions by name only.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of extension</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a> | undefined</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>[] <em class="alt">(multiple)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">drawer</span><span class="p">,</span><span class="w"> </span><span class="nx">menu</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android.widget.menu&quot;</span><span class="p">);</span>
+
+<span class="nx">drawer</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">navigationView</span><span class="p">.</span><span class="nx">android</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fitsSystemWindows</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="nx">menu</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementId</span><span class="p">(</span><span class="s2">&quot;child-item-id&quot;</span><span class="p">),</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/drawer/menu.json&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="cm">/* optional */</span><span class="p">);</span><span class="w"> </span><span class="c1">// Add project data</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="attr">
+<span class="sig-name descname"><span class="n"><span class="pre">attr</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#attr" title="Link to this definition"></a></dt>
+<dd><p>Set or get extension options. <strong>typeof</strong> is enforced and will only set existing attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – Name or control of extension</p></li>
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of attribute in <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>.options</p></li>
+<li><p><strong>value</strong> – Any value of an existing attribute</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>unknown</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;viewAttributes&quot;</span><span class="w"> </span><span class="cm">/* string[] */</span><span class="p">);</span>
+<span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;hint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;buttonTint&quot;</span><span class="p">);</span>
+<span class="cm">/* OR */</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;viewAttributes&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">concat</span><span class="p">([</span><span class="s2">&quot;hint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;buttonTint&quot;</span><span class="p">]));</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;attributeMapping&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;android:src&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app:srcCompat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;icon&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;navigationIcon&quot;</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Set only and does not merge</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="apply">
+<span class="sig-name descname"><span class="n"><span class="pre">apply</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#apply" title="Link to this definition"></a></dt>
+<dd><p>Find extension and merge a configuration object with existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>.options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – Name or control of extension</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Overriding configuration values</p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name to use when saving to local storage</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="s2">&quot;android.widget.toolbar&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;toolbar-id&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">background</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;?android:attr/windowBackground&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">appBar</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;toolbar-example&quot;</span><span class="w"> </span><span class="c1">// Save</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="s2">&quot;android.widget.toolbar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbar-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Load</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="prefetch">
+<span class="sig-name descname"><span class="n"><span class="pre">prefetch</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">all</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#prefetch" title="Link to this definition"></a></dt>
+<dd><p>Downloads assets to a memory cache which can be used by an <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> framework. Provides cross-origin support for <em>CSS</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <em>css</em> | <em>javascript</em> | <em>image</em> | <em>svg</em></p></li>
+<li><p><strong>all</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (<abbr class="sub" title="targets">optional</abbr>) Accept request from any origin</p></li>
+<li><p><strong>targets</strong> – (optional) URL string or root element of a contained Document</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">PrefetchItem</span></a>[]&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">());</span><span class="w"> </span><span class="c1">// Cross-origin support</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">),</span><span class="w"> </span><span class="c1">// All stylesheets</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./undetected.css&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;shadow-id&quot;</span><span class="p">).</span><span class="nx">shadowRoot</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;http://example.com/icon.svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;../images/android.svg&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">());</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="parseDocument">
+<span class="sig-name descname"><span class="n"><span class="pre">parseDocument</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parseDocument" title="Link to this definition"></a></dt>
+<dd><p>Starts at the root target element and creates a virtual <em>DOM</em> structure by cascading into all the children. Assets can be preloaded <em class="alt">(e.g. images)</em> which is required with the <a class="reference internal" href="../framework/android.html"><span class="doc">android</span></a> framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>elements</strong> – (optional) <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
+<li><p><strong>elements</strong> – (optional) See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">ElementSettings</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | void&gt;</p></li>
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[]&gt; <em class="alt">(multiple)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">section</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;section-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sqd&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">resourceQualifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;land&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="parseDocumentSync">
+<span class="sig-name descname"><span class="n"><span class="pre">parseDocumentSync</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parseDocumentSync" title="Link to this definition"></a></dt>
+<dd><p>Starts at the root target element and creates a virtual <em>DOM</em> structure by cascading into all the children. No assets are preloaded which is sufficient for the <a class="reference internal" href="../framework/vdom.html"><span class="doc">vdom</span></a> framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>elements</strong> – (optional) <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
+<li><p><strong>elements</strong> – (optional) See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">ElementSettings</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | undefined</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] <em class="alt">(multiple)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocumentSync</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocumentSync</span><span class="p">(</span><span class="s2">&quot;content-1&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="findDocumentNode">
+<span class="sig-name descname"><span class="n"><span class="pre">findDocumentNode</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">all</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#findDocumentNode" title="Link to this definition"></a></dt>
+<dd><p>Can be used before saving rendered document to modify auto-generated <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em> (selectors are supported)</p></li>
+<li><p><strong>all</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (<abbr class="sub" title="projectId">optional</abbr>) Uses filter to return multiple results</p></li>
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Uses an existing project in the current framework</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | undefined</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] <em class="alt">(all)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;content-1&quot;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">section1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;section&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Only if no element has id=&quot;section&quot;</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">section2</span><span class="p">,</span><span class="w"> </span><span class="nx">section3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;main &gt; section&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Always an array with &quot;all&quot;</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;relativelayout-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Control id</span>
+<span class="nx">layout</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">&quot;layout_width&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="latest">
+<span class="sig-name descname"><span class="n"><span class="pre">latest</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">count</span> <span class="pre">=</span> <span class="pre">1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#latest" title="Link to this definition"></a></dt>
+<dd><p>Get any stored session ids from <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> since the last time <a class="reference internal" href="#clear" title="clear"><code class="xref js js-func docutils literal notranslate"><span class="pre">clear()</span></code></a> was called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>count</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) How many ids at most to be retrieved</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>string | string[] | undefined</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="s2">&quot;id-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;id-2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;id-3&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// [&quot;00001&quot;, &quot;00002&quot;, &quot;00003&quot;]</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">id3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">id2</span><span class="p">,</span><span class="w"> </span><span class="nx">id3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">id2</span><span class="p">,</span><span class="w"> </span><span class="nx">id1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="close">
+<span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#close" title="Link to this definition"></a></dt>
+<dd><p>Ends the current session or selected project preventing any further modifications. It is called internally when saving or copying.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the latest</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;boolean&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// Optional</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="reset">
+<span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#reset" title="Link to this definition"></a></dt>
+<dd><p>Abandons all stored projects and sets a loaded <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> to its initial state. The current user settings are retained.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the latest</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span><span class="w"> </span><span class="c1">// Optional</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="save">
+<span class="sig-name descname"><span class="n"><span class="pre">save</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#save" title="Link to this definition"></a></dt>
+<dd><p>Uses the default <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a>.settings to generate an archive of the current session or selected project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the default project</p></li>
+<li><p><strong>timeout</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Maximum time in seconds for build to complete</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span><span class="w"> </span><span class="c1">// Default project &quot;_&quot; is used</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10 seconds for &quot;project-1&quot; to build</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// broadcastId</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="saveAs">
+<span class="sig-name descname"><span class="n"><span class="pre">saveAs</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveAs" title="Link to this definition"></a></dt>
+<dd><p>Save current session or selected project as a new archive using <em>filename</em> extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Uses default unnamed project &quot;_&quot;</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;project-1.7z&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">throwErrors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Will cancel partial archive download</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;saveAs&quot; namespace</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="appendTo">
+<span class="sig-name descname"><span class="n"><span class="pre">appendTo</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#appendTo" title="Link to this definition"></a></dt>
+<dd><p>Save current session or selected project into a copy of an existing archive if found or as a new archive using the file extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uri</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/archives/android.001&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tar&quot;</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// &quot;tar&quot; is explicit (ignored filename)</span>
+<span class="p">});</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;../data/project-1.7z&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Uses NodeJS process.cwd() resolution</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;./android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;appendTo&quot; namespace</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;./android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="copyTo">
+<span class="sig-name descname"><span class="n"><span class="pre">copyTo</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copyTo" title="Link to this definition"></a></dt>
+<dd><p>Save current session or selected project to a local directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pathname</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of a directory accessible to the server process</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">([</span><span class="s2">&quot;/path/project1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/path/project2&quot;</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Copies processed files to &quot;project1&quot; and &quot;project2&quot;</span>
+
+<span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;copyTo&quot; namespace</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="saveFiles">
+<span class="sig-name descname"><span class="n"><span class="pre">saveFiles</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveFiles" title="Link to this definition"></a></dt>
+<dd><p>Save selected assets as a new archive using <em>filename</em> extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android.png&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-ldpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-ldpi.png&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-hdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-hdpi.png&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">};</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;saveFiles&quot; namespace</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="appendFiles">
+<span class="sig-name descname"><span class="n"><span class="pre">appendFiles</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#appendFiles" title="Link to this definition"></a></dt>
+<dd><p>Save selected assets into a copy of an existing archive if found or as a new archive using the file extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uri</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;7z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xhdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xhdpi.png&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxhdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxhdpi.png&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxxhdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxxhdpi.png&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">};</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/archives/android.001&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;appendFiles&quot; namespace</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="copyFiles">
+<span class="sig-name descname"><span class="n"><span class="pre">copyFiles</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copyFiles" title="Link to this definition"></a></dt>
+<dd><p>Save selected assets to a local directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pathname</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of a directory accessible to the server process</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
+<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xhdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xhdpi.png&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxhdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxhdpi.png&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxxhdpi.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxxhdpi.png&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">};</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">([</span><span class="s2">&quot;/path/project1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/path/project2&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span><span class="w"> </span><span class="c1">// Copies assets to &quot;project1&quot; and &quot;project2&quot;</span>
+
+<span class="c1">// Save</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;copyFiles&quot; namespace</span>
+
+<span class="c1">// Load</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="toString">
+<span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#toString" title="Link to this definition"></a></dt>
+<dd><p>Writes the system name of the currently installed non-UI framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the default project</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">chrome</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">systemName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// &quot;chrome&quot;</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">activityMain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// XML content</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="getElementById">
+<span class="sig-name descname"><span class="n"><span class="pre">getElementById</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getElementById" title="Link to this definition"></a></dt>
+<dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.getElementById</span></code> <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> except returns a <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Case-sensitive match against <em>Element</em>.id property</p></li>
+<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null <em class="alt">(sync)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="o">?</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">elementId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;child-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cascade</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="querySelector">
+<span class="sig-name descname"><span class="n"><span class="pre">querySelector</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelector" title="Link to this definition"></a></dt>
+<dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.querySelector</span></code> <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> except returns a <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Selector or selectors matching one or more elements</p></li>
+<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null <em class="alt">(sync)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;section img[src=vdom.png]&quot;</span><span class="p">);</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;body &gt; p&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Synchronous</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">inline</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;display&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;inline-block&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="querySelectorAll">
+<span class="sig-name descname"><span class="n"><span class="pre">querySelectorAll</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelectorAll" title="Link to this definition"></a></dt>
+<dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.querySelectorAll</span></code> <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> except returns an array of <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Selector or selectors matching one or more elements</p></li>
+<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null <em class="alt">(sync)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">img1</span><span class="p">,</span><span class="w"> </span><span class="nx">img2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;section img&quot;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="fromElement">
+<span class="sig-name descname"><span class="n"><span class="pre">fromElement</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fromElement" title="Link to this definition"></a></dt>
+<dd><p>Same behavior as <a class="reference internal" href="#getElementById" title="getElementById"><code class="xref js js-func docutils literal notranslate"><span class="pre">getElementById()</span></code></a> except it also accepts a native <em>Element</em>. The <strong>cache</strong> parameter by default is not enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
+<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null <em class="alt">(sync)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="o">?</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">elementId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;child-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cascade</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="fromNode">
+<span class="sig-name descname"><span class="n"><span class="pre">fromNode</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fromNode" title="Link to this definition"></a></dt>
+<dd><p>Uses an existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance and creates a new instance with any modifications. The <strong>cache</strong> parameter by default is not enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a></p></li>
+<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null <em class="alt">(sync)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;body div&quot;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">item</span><span class="p">));</span>
+<span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromNode</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromNode</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">imageElement</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="observe">
+<span class="sig-name descname"><span class="n"><span class="pre">observe</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">enable</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observe" title="Link to this definition"></a></dt>
+<dd><p>Uses <a class="reference internal" href="../references.html#references-typescript-dom-generated"><span class="std std-ref">MutationObserver</span></a> to watch for any changes to the <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> root element. Start after <em>DOM</em> and third-party libraries are initialized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enable</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Start or stop all root elements who are monitoring</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">observe</span><span class="p">(</span><span class="nx">mutations</span><span class="p">,</span><span class="w"> </span><span class="nx">observer</span><span class="p">,</span><span class="w"> </span><span class="nx">settings</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modified</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">useOriginalHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observe</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">squared</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Discontinue monitoring for changes</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">observe</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">subtree</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">childList</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">attributes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">characterData</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">attributeOldValue</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">characterDataOldValue</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="observeSrc">
+<span class="sig-name descname"><span class="n"><span class="pre">observeSrc</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observeSrc" title="Link to this definition"></a></dt>
+<dd><p>Can be used to watch external elements which contain modifiable source files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> – Elements by either selector or <em>HTMLElement</em> (<strong>src</strong> or <strong>href</strong> attribute is required)</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – (<em class="alt">optional (options)</em>) Method to call when a <code class="docutils literal notranslate"><span class="pre">modified</span></code> event is received</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileObserveOptions</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-internal"><span class="std std-ref">ObserveSocket</span></a> | <a class="reference internal" href="../references.html#references-squared-internal"><span class="std std-ref">ObserveSocket</span></a>[]&gt;</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observeSrc</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">&quot;link[rel=stylesheet]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">ev</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span><span class="w"> </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reload&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1h&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observeSrc</span><span class="p">(</span><span class="s2">&quot;link[rel=stylesheet]&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Will call location.reload()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://developer.mozilla.org/docs/Web/API/Document/getElementById">https://developer.mozilla.org/docs/Web/API/Document/getElementById</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://developer.mozilla.org/docs/Web/API/Document/querySelector">https://developer.mozilla.org/docs/Web/API/Document/querySelector</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://developer.mozilla.org/docs/Web/API/Document/querySelectorAll">https://developer.mozilla.org/docs/Web/API/Document/querySelectorAll</a></p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interface.html" class="btn btn-neutral float-left" title="Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="android.html" class="btn btn-neutral float-right" title="android" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

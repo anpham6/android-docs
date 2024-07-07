@@ -1,0 +1,562 @@
+=====
+5.2.0
+=====
+
+.. toctree::
+  :maxdepth: 1
+
+  5.2.1
+  5.2.2
+  5.2.3
+
+:right:`2024-04-29`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      toElementInt(attr: string, fallback?: number): number; // Uses Math.trunc (rounds to 0)
+  }
+
+.. code-block::
+  :caption: squared.lib.client
+  :emphasize-lines: 5
+
+  interface UserAgentData {
+      browser: Chrome = 1;
+      browser: Edge = 8;
+
+      browser: Edge = 1 & 8; // getUserAgentData
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  class Svg {
+      constructor(element: SVGSVGElement, documentRoot?: boolean); // documentRoot not "true" by default (parentElement instanceof HTMLElement)
+  }
+
+  class SvgAnimateTransform {
+      get attributeName(): string; // "transform" for <animateTransform>
+      get attributeName(): string; // "translate" | "scale" | "rotate" | "skewX" | "skewY" for CSS animation
+  }
+
+  class SvgAnimateMotion {
+      set path(value); // Will refit path automatically
+  }
+
+.. code-block::
+  :caption: types/base/squared.d.ts
+  :emphasize-lines: 10,18,25-26
+
+  /* 5.1 */
+
+  type UserSettingMethod<T, U, V> = <W = unknown>(id: number | string | undefined, name: keyof U, fallback?: W) => V extends true ? W : W | undefined;
+
+  class Application<T, U, V, W extends UserResourceSettings> {
+      getUserSetting: UserSettingMethod<T, W, true>; // Without undefined
+      getCustomSetting: UserSettingMethod<T, W, false>; // With undefined
+  }
+
+  class Extension<T, K, V> {
+      readonly project: ProjectMap<K, V>;
+      getUserSetting: UserSettingMethod<T, PlainObject, false>;
+      getCustomSetting: UserSettingMethod<T, PlainObject, false>;
+  }
+
+  /* 5.2 */
+
+  type UserSettingMethod<T, U> = <V extends keyof U>(id: number | string | undefined, name: V, fallback?: NoInfer<U[V]>) => U[V] | undefined; // TypeScript 5.4
+
+  class Application<T, U, V, W extends UserResourceSettings>  {
+      getUserSetting: UserSettingMethod<T, W>; // With undefined
+      getCustomSetting: UserSettingMethod<T, W>; // With undefined
+  }
+
+  class Extension<T, U extends PlainObject, K, V> {
+      readonly options: U;
+      readonly project: ProjectMap<K, V>;
+      getUserSetting: UserSettingMethod<T, U>;
+      getCustomSetting: UserSettingMethod<T, U>;
+  }
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared
+
+  interface Point {
+      z?: number;
+  }
+
+.. code-block::
+  :caption: squared.base
+
+  interface UserSettings {
+      adaptStyleMap: boolean;
+  }
+
+  interface UserResourceSettingsUI {
+      useShapeGeometryBox?: boolean;
+  }
+
+  interface ControllerSettingsUI {
+      baseStyle?: ControllerSettingsBaseStyleUI;
+  }
+
+  interface ControllerSettingsBaseStyleUI {
+      math?: CssStyleMap;
+  }
+
+  interface Flexbox {
+      enabled: boolean;
+  }
+
+  interface NodeParseColorOptions {
+      opacity?: number;
+      ignoreWhite?: boolean;
+      ignoreBlack?: boolean;
+      ignoreTransparent?: boolean;
+  }
+
+  interface RequestData {
+      log?: { showProgress?: boolean };
+  }
+
+  class ResourceUI {
+      static findStoredAsset(resourceId: number, type: string, name: string, remove?: boolean): unknown;
+  }
+
+  class Node {
+      parseColor(value: string, opacity: number): ColorRGB | null;
+      parseColor(value: string, options?: NodeParseColorOptions): ColorRGB | null;
+      withDisplay(type: number, ...values: string[]): boolean;
+      withDisplay(...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" | number, type: number, ...values: string[]): boolean;
+      withLayout(outside: "block" | "inline" | number, ...values: string[]): boolean;
+      flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | Node): boolean;
+      flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | Node): string;
+      flex(attr: "grow" | "shrink" | "order", parent?: boolean | Node): number;
+      get mathElement(): boolean;
+  }
+
+  class NodeUI {
+      get tagDisplay(): string;
+      get alignContent(): "start" | "end" | "center" | "baseline" | "";
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* constant */
+
+  const enum TRANSFORM_METHOD {
+      NONE = 0,
+      TRANSLATE_X = 1,
+      ROTATE_X = 2,
+      SCALE_X = 4,
+      SKEW_X = 8,
+      TRANSLATE_Y = 16,
+      ROTATE_Y = 32,
+      SCALE_Y = 64,
+      SKEW_Y = 128,
+      TRANSLATE_Z = 256,
+      ROTATE_Z = 512,
+      SCALE_Z = 1024,
+      TRANSLATE_2D = TRANSLATE_X | TRANSLATE_Y,
+      SCALE_2D = SCALE_X | SCALE_Y,
+      ROTATE_2D = ROTATE_X | ROTATE_Y,
+      TRANSLATE = TRANSLATE_2D | TRANSLATE_Z,
+      ROTATE = ROTATE_2D | ROTATE_Z,
+      SCALE = SCALE_2D | SCALE_Z,
+      SKEW = SKEW_X | SKEW_Y,
+      ALL = TRANSLATE | ROTATE | SCALE | SKEW,
+      ALL_2D = TRANSLATE_2D | ROTATE | SCALE_2D | SKEW
+  }
+
+  /* css */
+
+  function parseBorderRadius(value: string, options?: ParseBorderRadiusOptions): [number, number, number, number][] | null;
+
+  /* util */
+
+  function addMimeType(types: StringMap): void;
+  function addMimeType(name: string, value: string): void;
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentData {
+      name: string;
+      majorVersion: number;
+      mobile: boolean;
+  }
+
+  function getUserAgentFeatures(): UserAgentFeatures;
+
+  /* color */
+
+  function isColor(value: unknown): value is ColorRGB;
+
+  /* constant */
+
+  const enum CSS_DISPLAY {
+      INLINE = 1,
+      INLINE_START = 2,
+      FLOW = 4,
+      FLOW_START = 8,
+      TABLE = 16,
+      TABLE_START = 32,
+      RUBY = 64,
+      RUBY_START = 128
+  }
+
+  const enum CSS_LAYOUT {
+      NONE = 0,
+      BLOCK = 1,
+      INLINE = 2,
+      FLOW = 4,
+      FLOW_ROOT = 8,
+      TABLE = 16,
+      FLEX = 32,
+      GRID = 64,
+      RUBY = 128,
+      MATH = 256,
+      LIST_ITEM = 512
+  }
+
+  /* container */
+
+  interface ContainerRangeOptions {
+      isEmpty?: boolean
+  }
+
+  /* css */
+
+  function measureText(element: HTMLElement, value: string, options?: MeasureTextOptions): number;
+
+  /* math */
+
+  function oppositeAngle(angle: number, x: number, y: number, center?: Point | null, relative?: boolean): number;
+  function truncateAngle(angle: number): number;
+  function distance(start: Point, end: Point): number;
+  function containPoint(angle: number, x: number, y: number, rect: BoxRect | DOMRect): Point;
+  function hasPoint(x: number, y: number, rect: BoxRect | DOMRect, offset?: number): boolean;
+
+  /* regex */
+
+  const CSS: {
+      LIGHT_DARK: RegExp;
+      CUSTOM_ELEMENT: RegExp;
+  };
+
+  /* util */
+
+  function selectSet(value: string, delimiter: string | RegExp, ...items: string[]): Set<string>;
+
+.. code-block::
+  :caption: squared.svg
+
+  type SvgGeometryBoxValue = "border-box" | "fill-box" | "stroke-box" | "view-box" | "margin-box" | "padding-box" | "content-box";
+
+  interface SvgPaint {
+      clipRule: string;
+      getBoundingBox(paths?: string[] | DOMRect, geometryBox?: SvgGeometryBoxValue): DOMRect;
+      getStrokeWidth(fallback: number): number;
+      getStrokeWidth(method?: SvgMathRounding, fallback?: number): number;
+  }
+
+  class SvgBuild {
+      static isPaint(object: unknown): object is SvgPaint;
+      static drawShapes(element: SVGGraphicsElement, values: string | string[], options?: SvgDrawShapesOptions<SvgContainer>): SvgShapePath[];
+      static transformPoints(values: SvgPoint[], transforms: SvgTransform[], options?: SvgTransformPointsOptions): SvgPoint[];
+  }
+
+  class SvgContainer {
+      findViewBox(element?: SVGElement): SVGSVGElement | SVGSymbolElement | undefined;
+      setAspectRatio(container?: Svg | SvgUseSymbol | null, options?: SvgAspectRatioOptions): void;
+      refitRect(x1: number, y1: number, width: number, height: number): DOMRect;
+  }
+
+  class SvgPath {
+      draw(options?: SvgBuildOptions): string;
+      get transformOrigin(): Point | null;
+  }
+
+  class SvgShape {
+      get transformOrigin(): Point | null;
+  }
+
+  class SvgUseShape {
+      get transformOrigin(): Point | null;
+  }
+
+  class SvgAnimation {
+      refitPoint(value: Point | null): void;
+      get precision(): number | undefined;
+  }
+
+  class SvgAnimate {
+      startValues: StringMap | null;
+      readonly replaceType: Map<number, string>;
+  }
+
+  class SvgAnimateTransform {
+      setReplaceValues(): void;
+  }
+
+  class SvgAnimateMotion {
+      positionData: NumberValue[] | null;
+      set anchor(value);
+      get anchor(): Point | null;
+      set position(value);
+      get position(): Point | null;
+      get cssPath(): string;
+      get rotateOutput(): SvgRotatePoint[] | null;
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  const SVG: {
+      geometry(element: Element): element is SVGGeometryElement;
+  };
+
+  const TRANSFORM: {
+      parseStyle(element: SVGElement, all?: boolean, type?: number): SvgTransform[] | null;
+      fromList(values: SVGTransformList): SvgTransform[];
+      nameAsType(value: string): number;
+  };
+
+  function getColorValue(element: SVGElement, options: SvgColorValueOptions): ColorRGB | null;
+  function getColorValue(element: SVGElement, value: string, options?: SvgColorValueOptions): ColorRGB | null;
+  function copyRect(target: DOMRect): SvgRect & BoxRect;
+  function isObjectBoundingBox(element: SVGElement): element is SVGClipPathElement | SVGPatternElement;
+  function getBoundingBox(element: SVGGraphicsElement, geometryBox?: SvgGeometryBoxValue): DOMRect;
+  function getBoundingLength(element: SVGGraphicsElement, value: string, dimension: number | DimensionAttr, precision: number): number;
+  function getBoundingLength(element: SVGGraphicsElement, value: string, dimension?: number | DimensionAttr, geometryBox?: SvgGeometryBoxValue, precision?: number): number;
+  function getBoxPosition(element: SVGElement, attr: SvgBoxPositionAttr, value?: string): Point | null;
+  function formatRotate(value: string, type?: number): string;
+  function formatScale(value: string, type?: number): string;
+  function formatTranslate(value: string, type?: number): string;
+  function isNone(value: unknown): boolean;
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      resourceSystemColors?: Record<string, string | [string, number] | ColorRGB>;
+  }
+
+  interface LocalSettingsUI {
+      useSystemColors: boolean;
+  }
+
+  interface AddColorOptions extends NodeParseColorOptions {
+      prefix?: sring;
+      ignoreSystemColors?: boolean;
+  }
+
+  interface AddThemeOptions extends AddColorOptions {/* Empty */}
+
+  class View {
+      set useSystemColors(value);
+      get useSystemColors(): boolean;
+  }
+
+.. code-block::
+  :caption: android.extensions.resource
+
+  interface ResourceSvgOptions {
+      mergeClipPath: boolean;
+      mergeVectorDrawable: boolean;
+  }
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const MATERIAL_TAGNAME: {
+      IMAGE: string;
+      LINE: string;
+  };
+  const SUPPORT_TAGNAME_X: {
+      APPBAR_TOOLBAR: string;
+  };
+  const XML_PROLOG: string;
+  const SYSTEM_COLOR: string[];
+  const ATTRIBUTE_COLOR: string[];
+
+.. rst-class:: release-notes
+
+MODIFIED
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      extractAttributes(depth?: number, replaceWith?: AnyObject): string; // replaceWith
+      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): string | CssStyleMap | null; // PseudoStyleElt
+      flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | NodeUI, wrapped?: boolean): boolean; // parent
+      flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | NodeUI, wrapped?: boolean): string;
+      flex(attr: "grow" | "shrink" | "order", parent?: boolean | NodeUI, wrapped?: boolean): number;
+  }
+
+.. code-block::
+  :caption: squared.lib.base
+
+  class Container {
+      removeIf(predicate: IteratorPredicate<unknown, unknown>, options?: ContainerRemoveIfOptions | IteratorPredicate<unknown, boolean>): T[]; // options
+      cascade(predicate?: IteratorPredicate<unknown, unknown>, options?: ContainerCascadeOptions | IteratorPredicate<unknown, boolean>): T[];
+  }
+
+.. code-block::
+  :caption: squared.lib.math
+
+  function triangulate(a: number, b: number, clen: number, contain?: boolean): number; // contain
+  function hypotenuse(a: number, b: number, subtract?: boolean): number; // subtract
+
+.. code-block::
+  :caption: squared.lib.regex
+
+  const CSS: {
+      COLOR: RegExp; // flags "gi"
+  };
+
+.. code-block::
+  :caption: squared.svg
+
+  interface SvgPaint {
+      geometryBox: SvgGeometryBoxValue;
+      setPaint(options: SvgBuildOptions): void; // options
+      setPaint(d: string[] | null, options: SvgBuildOptions): void;
+  }
+
+  class SvgBuild {
+      static drawRect(rect: BoxRect | DOMRect, options?: SvgDrawRectOptions): string; // DOMRect | options
+      static drawRect(width: number, height: number, x: number, y: number, options: SvgDrawRectOptions): string; // options
+      static toOffsetPath(value: string, rotation?: string, options?: SvgOffsetPathOptions): SvgOffsetPath[]; // options
+      static syncPath(values: SvgPathCommand[], points: SvgPoint[], options?: SvgSyncPathOptions): SvgPathCommand[]; // options
+      static boxRectOf(value: string[] | DOMRect, strokeWidth?: number | string): BoxRectDimension; // DOMRect | BoxRectDimension
+  }
+
+  class SvgPath {
+      static extrapolate(attr: string, value: string, values: string[], precision: number): string[];
+      static extrapolate(attr: string, value: string, values: string[], options?: SvgPathExtrapolateOptions<SvgShape>): string[]; // options
+  }
+
+  class SvgAnimateMotion {
+      rotateData: NumberValue[] | null; // undefined
+      set distance(value); // Uses current CSS value except when set explicitly
+      get distance(): string;
+      set rotate(value); // Same
+      get rotate(): string;
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  class TRANSFORM: {
+      parse(element: SVGElement, type: number): SvgTransform[] | null;
+      parse(element: SVGElement, value?: string, type?: number): SvgTransform[] | null;
+  };
+
+  function containsViewBox(element: SVGElement | null, outer?: boolean): element is SVGSVGElement | SVGSymbolElement | SVGPatternElement | SVGMarkerElement; // outer
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      builtInExtensions: [
+          "android.delegate.content" // CSS: contain | align-content
+      ],
+      showAttributes: boolean | Record<string, string | null | (string | null)[]>; // Record
+      baseLayoutAsFragment: boolean | string | string[] | ExtensionFragmentElement; // ExtensionFragmentElement extends ViewAttribute
+  }
+
+  class Resource {
+      static formatOptions(resourceId: number, data: ViewAttribute, options?: AddColorOptions): ViewAttribute; // options
+      static addColor(resourceId: number, value: ColorRGB | string, options?: AddColorOptions): string; // options
+  }
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      get flexdata(): FlexboxLayout; // Node.flex(attr, parent)
+  }
+
+  class NodeUI {
+      get flexRow(): boolean; // NodeUI.flex("row")
+      get flexColumn(): boolean; // NodeUI.flex("column")
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentData {
+      brand: string;
+  }
+
+  /* css */
+
+  function measureTextWidth(element: HTMLElement | SVGElement, value: string, options?: MeasureTextOptions): number; // measureText
+
+  /* supports */
+
+  function hasLookbehind(): boolean; // client.getUserAgentFeatures
+  function hasCascadeLayers(): boolean;
+  function hasContainerQueries(): boolean;
+  function hasStyleNesting(): boolean;
+  function hasStyleSheet(): boolean;
+  function hasStyleProperty(): boolean;
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgBuild {
+      static convertTransforms(transforms: SVGTransformList): SvgTransform[]; // lib.util.TRANSFORM.fromList
+      static applyTransforms(transforms: SvgTransform[], points: Point[], origin?: Point | null): SvgPoint[]; // transformPoints
+  }
+
+  class SvgPath {
+      static extrapolate(attr: string, value: string, values: string[], transforms?: SvgTransform[] | null, parent?: SvgShape | null, precision?: number): string[]; // options
+  }
+
+  class SvgAnimateMotion {
+      get rotateValues(): number[] | null; // rotateOutput.angle
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  class TRANSFORM: {
+      parse(element: SVGElement, with3d: boolean): SvgTransform[] | null; // type
+      parse(element: SVGElement, value?: string, with3d?: boolean): SvgTransform[] | null; // type
+  };
+
+.. code-block::
+  :caption: android.base
+
+  class Resource {
+      static addColor(resourceId: number, value: ColorRGB | string, transparent?: boolean): string; // options
+  }

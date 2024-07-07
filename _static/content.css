@@ -1,0 +1,37 @@
+table.versions th.head {
+    min-width: 75px;
+    text-align: right;
+}
+
+table.versions th.head:nth-child(1) {
+    text-align: center;
+}
+
+table.versions td {
+    text-align: right;
+}
+
+.block-list a, .block-list .rst-content dl dt {
+    font-weight: 400;
+}
+
+.block-list .line {
+    font-size: 90%;
+}
+
+.installation-workspace .caption-text {
+    color: crimson;
+}
+
+.installation-workspace pre {
+    font-weight: 700;
+    color: peachpuff;
+}
+
+section.release-notes > h2 {
+    color: white;
+    font-size: 125%;
+    padding: 6px 8px;
+    background-color: steelblue;
+    border: 2px solid cornflowerblue;
+}

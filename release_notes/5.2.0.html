@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.2.0 &mdash; squared 5.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
+      <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=2953445b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.2.1" href="5.2.1.html" />
+    <link rel="prev" title="5.3.0" href="5.3.0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            squared
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5.2.1.html">5.2.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.2.2.html">5.2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.2.3.html">5.2.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#breaking">BREAKING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#added">ADDED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modified">MODIFIED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deprecated">DEPRECATED</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="5.1.0.html">5.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.0.0.html">5.0.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">squared</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
+      <li class="breadcrumb-item active">5.2.0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/release_notes/5.2.0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>5.2.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="5.2.1.html">5.2.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.2.2.html">5.2.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.2.3.html">5.2.3</a></li>
+</ul>
+</div>
+<p><strong class="right">2024-04-29</strong></p>
+<section class="release-notes" id="breaking">
+<h2>BREAKING<a class="headerlink" href="#breaking" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">toElementInt</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">fallback?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// Uses Math.trunc (rounds to 0)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">squared.lib.client</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">browser</span><span class="o">:</span><span class="w"> </span><span class="kt">Chrome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">browser</span><span class="o">:</span><span class="w"> </span><span class="kt">Edge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+
+<span class="hll"><span class="w">    </span><span class="nx">browser</span><span class="o">:</span><span class="w"> </span><span class="kt">Edge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// getUserAgentData</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Svg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">documentRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">);</span><span class="w"> </span><span class="c1">// documentRoot not &quot;true&quot; by default (parentElement instanceof HTMLElement)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateTransform</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">attributeName</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;transform&quot; for &lt;animateTransform&gt;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">attributeName</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;translate&quot; | &quot;scale&quot; | &quot;rotate&quot; | &quot;skewX&quot; | &quot;skewY&quot; for CSS animation</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateMotion</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">path</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// Will refit path automatically</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">types/base/squared.d.ts</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* 5.1 */</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">unknown</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">keyof</span><span class="w"> </span><span class="nx">U</span><span class="p">,</span><span class="w"> </span><span class="nx">fallback?</span><span class="o">:</span><span class="w"> </span><span class="kt">W</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">W</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">W</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Application</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">W</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">UserResourceSettings</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">getUserSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">W</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Without undefined</span>
+<span class="w">    </span><span class="nx">getCustomSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">W</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// With undefined</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="kd">class</span><span class="w"> </span><span class="nx">Extension</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">K</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">project</span><span class="o">:</span><span class="w"> </span><span class="kt">ProjectMap</span><span class="o">&lt;</span><span class="nx">K</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getUserSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">PlainObject</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getCustomSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">PlainObject</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* 5.2 */</span>
+
+<span class="hll"><span class="kr">type</span><span class="w"> </span><span class="nx">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">V</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">keyof</span><span class="w"> </span><span class="nx">U</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">V</span><span class="p">,</span><span class="w"> </span><span class="nx">fallback?</span><span class="o">:</span><span class="w"> </span><span class="kt">NoInfer</span><span class="o">&lt;</span><span class="nx">U</span><span class="p">[</span><span class="nx">V</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">U</span><span class="p">[</span><span class="nx">V</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w"> </span><span class="c1">// TypeScript 5.4</span>
+</span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Application</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">W</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">UserResourceSettings</span><span class="o">&gt;</span><span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">getUserSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">W</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// With undefined</span>
+<span class="w">    </span><span class="nx">getCustomSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">W</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// With undefined</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="kd">class</span><span class="w"> </span><span class="nx">Extension</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">PlainObject</span><span class="p">,</span><span class="w"> </span><span class="nx">K</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">U</span><span class="p">;</span>
+</span><span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">project</span><span class="o">:</span><span class="w"> </span><span class="kt">ProjectMap</span><span class="o">&lt;</span><span class="nx">K</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getUserSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getCustomSetting</span><span class="o">:</span><span class="w"> </span><span class="kt">UserSettingMethod</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span><span class="w"> </span><span class="nx">U</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="added">
+<h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">squared</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">z?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserSettings</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">adaptStyleMap</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">useShapeGeometryBox?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">baseStyle?</span><span class="o">:</span><span class="w"> </span><span class="kt">ControllerSettingsBaseStyleUI</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsBaseStyleUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">math?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">Flexbox</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">enabled</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">NodeParseColorOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">opacity?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ignoreWhite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ignoreBlack?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ignoreTransparent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">RequestData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">log</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showProgress?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">ResourceUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">findStoredAsset</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">remove?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">parseColor</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">parseColor</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">NodeParseColorOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">withDisplay</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">...values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">withDisplay</span><span class="p">(</span><span class="nx">...values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">withLayout</span><span class="p">(</span><span class="nx">outside</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;block&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;inline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">...values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">withLayout</span><span class="p">(</span><span class="nx">outside</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;block&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;inline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">...values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;inline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;row&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;column&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;reverse&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrap&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrapReverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;alignContent&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;justifyContent&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;basis&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;alignSelf&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;justifySelf&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;grow&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;shrink&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;order&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">mathElement</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">tagDisplay</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">alignContent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;end&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">squared.base.lib</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* constant */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">TRANSFORM_METHOD</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSLATE_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ROTATE_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SCALE_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SKEW_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSLATE_Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ROTATE_Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SCALE_Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SKEW_Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">128</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSLATE_Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">256</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ROTATE_Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">512</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SCALE_Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1024</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSLATE_2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TRANSLATE_X</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">TRANSLATE_Y</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SCALE_2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SCALE_X</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SCALE_Y</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ROTATE_2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ROTATE_X</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ROTATE_Y</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TRANSLATE_2D</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">TRANSLATE_Z</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ROTATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ROTATE_2D</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ROTATE_Z</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SCALE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SCALE_2D</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SCALE_Z</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SKEW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SKEW_X</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SKEW_Y</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ALL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TRANSLATE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ROTATE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SCALE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SKEW</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ALL_2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TRANSLATE_2D</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ROTATE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SCALE_2D</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SKEW</span>
+<span class="p">}</span>
+
+<span class="cm">/* css */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseBorderRadius</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">ParseBorderRadiusOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">][]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="cm">/* util */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">addMimeType</span><span class="p">(</span><span class="nx">types</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">addMimeType</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">majorVersion</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mobile</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">getUserAgentFeatures</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="p">;</span>
+
+<span class="cm">/* color */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">isColor</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="p">;</span>
+
+<span class="cm">/* constant */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">CSS_DISPLAY</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">INLINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">INLINE_START</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">FLOW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">FLOW_START</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TABLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TABLE_START</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">RUBY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">RUBY_START</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">128</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">CSS_LAYOUT</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">BLOCK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">INLINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">FLOW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">FLOW_ROOT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TABLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">FLEX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">GRID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">RUBY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">128</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">256</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">LIST_ITEM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">512</span>
+<span class="p">}</span>
+
+<span class="cm">/* container */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ContainerRangeOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">isEmpty?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span>
+<span class="p">}</span>
+
+<span class="cm">/* css */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">measureText</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">MeasureTextOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="cm">/* math */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">oppositeAngle</span><span class="p">(</span><span class="nx">angle</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">center?</span><span class="o">:</span><span class="w"> </span><span class="kt">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">relative?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">truncateAngle</span><span class="p">(</span><span class="nx">angle</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">distance</span><span class="p">(</span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="kt">Point</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="kt">Point</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">containPoint</span><span class="p">(</span><span class="nx">angle</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">rect</span><span class="o">:</span><span class="w"> </span><span class="kt">BoxRect</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasPoint</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">rect</span><span class="o">:</span><span class="w"> </span><span class="kt">BoxRect</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">,</span><span class="w"> </span><span class="nx">offset?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+
+<span class="cm">/* regex */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">LIGHT_DARK</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">CUSTOM_ELEMENT</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cm">/* util */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">selectSet</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">delimiter</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">,</span><span class="w"> </span><span class="nx">...items</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nb">Set</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">type</span><span class="w"> </span><span class="nx">SvgGeometryBoxValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;border-box&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;fill-box&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;stroke-box&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;view-box&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;margin-box&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;padding-box&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;content-box&quot;</span><span class="p">;</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">SvgPaint</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">clipRule</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getBoundingBox</span><span class="p">(</span><span class="nx">paths?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">,</span><span class="w"> </span><span class="nx">geometryBox?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgGeometryBoxValue</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getStrokeWidth</span><span class="p">(</span><span class="nx">fallback</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getStrokeWidth</span><span class="p">(</span><span class="nx">method?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgMathRounding</span><span class="p">,</span><span class="w"> </span><span class="nx">fallback?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgBuild</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">isPaint</span><span class="p">(</span><span class="nx">object</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">SvgPaint</span><span class="p">;</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">drawShapes</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGGraphicsElement</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgDrawShapesOptions</span><span class="o">&lt;</span><span class="nx">SvgContainer</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgShapePath</span><span class="p">[];</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">transformPoints</span><span class="p">(</span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgPoint</span><span class="p">[],</span><span class="w"> </span><span class="nx">transforms</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgTransform</span><span class="p">[],</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgTransformPointsOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgPoint</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgContainer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">findViewBox</span><span class="p">(</span><span class="nx">element?</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SVGSVGElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGSymbolElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">setAspectRatio</span><span class="p">(</span><span class="nx">container?</span><span class="o">:</span><span class="w"> </span><span class="kt">Svg</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SvgUseSymbol</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgAspectRatioOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">refitRect</span><span class="p">(</span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgPath</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">draw</span><span class="p">(</span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgBuildOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformOrigin</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgShape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformOrigin</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgUseShape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformOrigin</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimation</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">refitPoint</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">precision</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">startValues</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">replaceType</span><span class="o">:</span><span class="w"> </span><span class="kt">Map</span><span class="o">&lt;</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateTransform</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">setReplaceValues</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateMotion</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">positionData</span><span class="o">:</span><span class="w"> </span><span class="kt">NumberValue</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">anchor</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">anchor</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">position</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">position</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">cssPath</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">rotateOutput</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgRotatePoint</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">squared.svg.lib.util</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SVG</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">geometry</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">Element</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">SVGGeometryElement</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">TRANSFORM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">parseStyle</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">all?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fromList</span><span class="p">(</span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGTransformList</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">nameAsType</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">getColorValue</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgColorValueOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getColorValue</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgColorValueOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">copyRect</span><span class="p">(</span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="kt">DOMRect</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgRect</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">BoxRect</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isObjectBoundingBox</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">SVGClipPathElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGPatternElement</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getBoundingBox</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGGraphicsElement</span><span class="p">,</span><span class="w"> </span><span class="nx">geometryBox?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgGeometryBoxValue</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getBoundingLength</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGGraphicsElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DimensionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">precision</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getBoundingLength</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGGraphicsElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DimensionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">geometryBox?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgGeometryBoxValue</span><span class="p">,</span><span class="w"> </span><span class="nx">precision?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getBoxPosition</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgBoxPositionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">formatRotate</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">formatScale</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">formatTranslate</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isNone</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">resourceSystemColors?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">LocalSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">useSystemColors</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AddColorOptions</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">NodeParseColorOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">prefix?</span><span class="o">:</span><span class="w"> </span><span class="kt">sring</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ignoreSystemColors?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AddThemeOptions</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">AddColorOptions</span><span class="w"> </span><span class="p">{</span><span class="cm">/* Empty */</span><span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">useSystemColors</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">useSystemColors</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">android.extensions.resource</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ResourceSvgOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mergeClipPath</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mergeVectorDrawable</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">MATERIAL_TAGNAME</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">IMAGE</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">LINE</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SUPPORT_TAGNAME_X</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">APPBAR_TOOLBAR</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">XML_PROLOG</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SYSTEM_COLOR</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">ATTRIBUTE_COLOR</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="modified">
+<h2>MODIFIED<a class="headerlink" href="#modified" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extractAttributes</span><span class="p">(</span><span class="nx">depth?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">replaceWith?</span><span class="o">:</span><span class="w"> </span><span class="kt">AnyObject</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// replaceWith</span>
+<span class="w">    </span><span class="nx">getPseudoElement</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">PseudoElt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">PseudoStyleElt</span><span class="p">,</span><span class="w"> </span><span class="nx">attr?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// PseudoStyleElt</span>
+<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;inline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;row&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;column&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;reverse&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrap&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrapReverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">NodeUI</span><span class="p">,</span><span class="w"> </span><span class="nx">wrapped?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// parent</span>
+<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;alignContent&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;justifyContent&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;basis&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;alignSelf&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;justifySelf&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">NodeUI</span><span class="p">,</span><span class="w"> </span><span class="nx">wrapped?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;grow&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;shrink&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;order&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">NodeUI</span><span class="p">,</span><span class="w"> </span><span class="nx">wrapped?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">squared.lib.base</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">removeIf</span><span class="p">(</span><span class="nx">predicate</span><span class="o">:</span><span class="w"> </span><span class="kt">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="p">,</span><span class="w"> </span><span class="nx">unknown</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">ContainerRemoveIfOptions</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">T</span><span class="p">[];</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="nx">cascade</span><span class="p">(</span><span class="nx">predicate?</span><span class="o">:</span><span class="w"> </span><span class="kt">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="p">,</span><span class="w"> </span><span class="nx">unknown</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">ContainerCascadeOptions</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">T</span><span class="p">[];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">squared.lib.math</span><a class="headerlink" href="#id17" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">triangulate</span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">clen</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">contain?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// contain</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hypotenuse</span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">subtract?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// subtract</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">squared.lib.regex</span><a class="headerlink" href="#id18" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">COLOR</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// flags &quot;gi&quot;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id19" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">SvgPaint</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">geometryBox</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgGeometryBoxValue</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">setPaint</span><span class="p">(</span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgBuildOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="nx">setPaint</span><span class="p">(</span><span class="nx">d</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgBuildOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgBuild</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">drawRect</span><span class="p">(</span><span class="nx">rect</span><span class="o">:</span><span class="w"> </span><span class="kt">BoxRect</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgDrawRectOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// DOMRect | options</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">drawRect</span><span class="p">(</span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgDrawRectOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">toOffsetPath</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">rotation?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgOffsetPathOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgOffsetPath</span><span class="p">[];</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">syncPath</span><span class="p">(</span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgPathCommand</span><span class="p">[],</span><span class="w"> </span><span class="nx">points</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgPoint</span><span class="p">[],</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgSyncPathOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgPathCommand</span><span class="p">[];</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">boxRectOf</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DOMRect</span><span class="p">,</span><span class="w"> </span><span class="nx">strokeWidth?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="p">;</span><span class="w"> </span><span class="c1">// DOMRect | BoxRectDimension</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgPath</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">extrapolate</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">precision</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">extrapolate</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgPathExtrapolateOptions</span><span class="o">&lt;</span><span class="nx">SvgShape</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateMotion</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">rotateData</span><span class="o">:</span><span class="w"> </span><span class="kt">NumberValue</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// undefined</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">distance</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses current CSS value except when set explicitly</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">distance</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">rotate</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// Same</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">rotate</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">squared.svg.lib.util</span><a class="headerlink" href="#id20" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">TRANSFORM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">parse</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">parse</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">containsViewBox</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">outer?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">SVGSVGElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGSymbolElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGPatternElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGMarkerElement</span><span class="p">;</span><span class="w"> </span><span class="c1">// outer</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id21" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">builtInExtensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;android.delegate.content&quot;</span><span class="w"> </span><span class="c1">// CSS: contain | align-content</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">showAttributes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)[]</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Record</span>
+<span class="w">    </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionFragmentElement</span><span class="p">;</span><span class="w"> </span><span class="c1">// ExtensionFragmentElement extends ViewAttribute</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">formatOptions</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">ViewAttribute</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">AddColorOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ViewAttribute</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">addColor</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorRGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">AddColorOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="deprecated">
+<h2>DEPRECATED<a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id22" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">flexdata</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">FlexboxLayout</span><span class="p">;</span><span class="w"> </span><span class="c1">// Node.flex(attr, parent)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">flexRow</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// NodeUI.flex(&quot;row&quot;)</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">flexColumn</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// NodeUI.flex(&quot;column&quot;)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id23" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">brand</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* css */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">measureTextWidth</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">MeasureTextOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// measureText</span>
+
+<span class="cm">/* supports */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasLookbehind</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// client.getUserAgentFeatures</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasCascadeLayers</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasContainerQueries</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasStyleNesting</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasStyleSheet</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasStyleProperty</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id24" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">SvgBuild</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">convertTransforms</span><span class="p">(</span><span class="nx">transforms</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGTransformList</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[];</span><span class="w"> </span><span class="c1">// lib.util.TRANSFORM.fromList</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">applyTransforms</span><span class="p">(</span><span class="nx">transforms</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgTransform</span><span class="p">[],</span><span class="w"> </span><span class="nx">points</span><span class="o">:</span><span class="w"> </span><span class="kt">Point</span><span class="p">[],</span><span class="w"> </span><span class="nx">origin?</span><span class="o">:</span><span class="w"> </span><span class="kt">Point</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgPoint</span><span class="p">[];</span><span class="w"> </span><span class="c1">// transformPoints</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgPath</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">extrapolate</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">transforms?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgShape</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">precision?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateMotion</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">rotateValues</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// rotateOutput.angle</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">squared.svg.lib.util</span><a class="headerlink" href="#id25" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">TRANSFORM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">parse</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">with3d</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// type</span>
+<span class="w">    </span><span class="nx">parse</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">with3d?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// type</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id26" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">addColor</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorRGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">transparent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="5.3.0.html" class="btn btn-neutral float-left" title="5.3.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="5.2.1.html" class="btn btn-neutral float-right" title="5.2.1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

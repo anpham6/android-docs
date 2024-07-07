@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android &mdash; squared 5.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
+      <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=2953445b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chrome" href="chrome.html" />
+    <link rel="prev" title="Interface" href="interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            squared
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">Framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Settings</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Android</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-usage">Example usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chrome.html">Chrome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdom.html">VDOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local-storage.html">Local Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/001.png)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">squared</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Settings</a></li>
+      <li class="breadcrumb-item active">Android</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/settings/android.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="android">
+<h1>Android<a class="headerlink" href="#android" title="Link to this heading"></a></h1>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">supportRTL</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledViewModel</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledSubstitute</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledCompose</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">dataBindableElements</span><span class="o">:</span><span class="w"> </span><span class="kt">ExtensionViewModelElement</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">includableElements</span><span class="o">:</span><span class="w"> </span><span class="kt">ExtensionIncludeElement</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">substitutableElements</span><span class="o">:</span><span class="w"> </span><span class="kt">ExtensionSubtituteElement</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">fragmentableElements</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionFragmentElement</span><span class="p">)[];</span>
+<span class="hll"><span class="w">    </span><span class="nx">composableElements</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="p">)[];</span>
+</span><span class="w">    </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionFragmentElement</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">convertPixels</span><span class="o">:</span><span class="w"> </span><span class="kt">ResolutionUnit</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">lineHeightAdjust</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fontMeasureAdjust</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">lockElementSettings</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">customizationsBaseAPI</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">customizationsOverwritePrivilege</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeDeprecatedAttributes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">removeUnusedResourceViewId</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">preferMaterialDesign</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;MaterialComponents&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;Material3&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="kt">NamingStyles</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">showAttributes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">createDownloadableFonts</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">manifestActivityName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">manifestLabelAppName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">manifestThemeName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">manifestParentThemeName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">createManifest</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;ktx&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="p">)[];</span>
+<span class="w">    </span><span class="nx">outputMainFileName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">outputFragmentFileName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">resolutionDPI?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">resourceQualifier?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ResourceQualifierMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">resourceSystemColors?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">convertImages?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">convertLineHeight?</span><span class="o">:</span><span class="w"> </span><span class="kt">ResolutionUnit</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">baseLayoutToolsIgnore?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">manifestPackage?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.3.0: </span></p>
+<ul class="simple">
+<li><p><strong>ExtensionComposeViewElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
+</ul>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.2.0: </span></p>
+<ul class="simple">
+<li><p><em>UserResourceSettingsUI</em> property <strong>showAttributes</strong> accepts a map to globally replace layout attributes.</p></li>
+<li><p><em>UserResourceSettingsUI</em> property <strong>resourceSystemColors</strong> device color translation map was created.</p></li>
+<li><p><strong>ExtensionFragmentElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
+</ul>
+</div>
+</section>
+<section id="example-usage">
+<h2>Example usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Customizable (project/all)</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">resolutionDPI</span><span class="o">:</span><span class="w"> </span><span class="mf">160</span><span class="p">,</span><span class="w"> </span><span class="c1">// 320dpi = 2560x1600</span>
+<span class="w">  </span><span class="nx">resolutionScreenWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">1280</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">resolutionScreenHeight</span><span class="o">:</span><span class="w"> </span><span class="mf">800</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">framesPerSecond</span><span class="o">:</span><span class="w"> </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="c1">// SVG animation only</span>
+<span class="w">  </span><span class="nx">useShapeGeometryBox</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Dimensions use native SVG method getBbox</span>
+<span class="w">  </span><span class="nx">supportRTL</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">supportNegativeLeftTop</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">preloadImages</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">preloadFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">preloadLocalFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// window.queryLocalFonts (Chromium)</span>
+<span class="w">  </span><span class="nx">preloadCustomElements</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// pierceShadowRoot = true</span>
+<span class="w">  </span><span class="nx">enabledSVG</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.resource.svg</span>
+<span class="w">  </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.delegate.multiline</span>
+<span class="w">  </span><span class="nx">enabledViewModel</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.resource.data</span>
+<span class="w">  </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.resource.includes</span>
+<span class="w">  </span><span class="nx">enabledSubstitute</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.resource.fragment</span>
+<span class="w">  </span><span class="nx">enabledFragment</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.substitute</span>
+<span class="w">  </span><span class="nx">enabledCompose</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// android.compose.view</span>
+<span class="w">  </span><span class="nx">dataBindableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="cm">/* ExtensionViewModelElement */</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">includableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="cm">/* ExtensionIncludeElement */</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">substitutableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="cm">/* ExtensionSubtituteElement */</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">fragmentableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="cm">/* &quot;selector&quot; | ExtensionFragmentElement */</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">composableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="cm">/* &quot;selector&quot; | &quot;--property&quot; */</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fragment-name&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;fragment-name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;fragment-tag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;document_id&quot;</span><span class="w"> </span><span class="cm">/* Optional */</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// ExtensionFragmentElement</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;androidx.navigation.fragment.NavHostFragment&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">documentId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;main_content&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">navGraph</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;@navigation/product_list_graph&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">defaultNavHost</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">baseLayoutToolsIgnore</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TooManyViews, HardcodedText&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Android Studio Editor</span>
+<span class="w">  </span><span class="nx">fontMeasureAdjust</span><span class="o">:</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="c1">// thicker &lt; 0 | thinner &gt; 0</span>
+<span class="w">  </span><span class="nx">lineHeightAdjust</span><span class="o">:</span><span class="w"> </span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="c1">// shorter &lt; 1 | taller &gt; 1</span>
+<span class="w">  </span><span class="nx">preferMaterialDesign</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// &quot;Material3&quot;</span>
+<span class="w">  </span><span class="nx">preferMaterialDesign</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MaterialComponents&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">createDownloadableFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">createElementMap</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Cache not used with NodeUI</span>
+<span class="w">  </span><span class="nx">pierceShadowRoot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">adaptStyleMap</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use rendered values for output</span>
+<span class="w">  </span><span class="nx">lockElementSettings</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Modify Node before rendering (LocalSettingsUI)</span>
+<span class="w">  </span><span class="nx">customizationsBaseAPI</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="c1">// None</span>
+<span class="w">  </span><span class="nx">customizationsBaseAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// All (14 - 34)</span>
+<span class="w">  </span><span class="nx">customizationsBaseAPI</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">33</span><span class="p">,</span><span class="w"> </span><span class="mf">34</span><span class="p">],</span><span class="w"> </span><span class="c1">// Multiple with ordering</span>
+<span class="w">  </span><span class="nx">customizationsOverwritePrivilege</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Existing auto-generated attributes (e.g. layout_width)</span>
+<span class="w">  </span><span class="nx">removeDeprecatedAttributes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Remove all</span>
+<span class="w">  </span><span class="nx">removeDeprecatedAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;singleLine&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Remove all except the listed values</span>
+<span class="w">  </span><span class="nx">removeUnusedResourceViewId</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use layout name</span>
+<span class="w">  </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use tagName</span>
+<span class="w">  </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;__default__&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="w">    </span><span class="s2">&quot;DIV&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;comments&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// HTML is uppercase (comments_1 then comments_2)</span>
+<span class="w">    </span><span class="s2">&quot;svg&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;vector&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="c1">// SVG is lowercase (vector_0 then vector_1)</span>
+<span class="w">    </span><span class="s2">&quot;#text&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Plain text</span>
+<span class="w">    </span><span class="s2">&quot;::first-letter&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dropcap&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Pseudo element</span>
+<span class="w">    </span><span class="s2">&quot;main &gt; section&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">],</span><span class="w"> </span><span class="c1">// content_1 then content_3</span>
+<span class="w">    </span><span class="s2">&quot;form input[type=submit]&quot;</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;submit_&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">node</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">outputMainFileName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;activity_main.xml&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">outputFragmentFileName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fragment_main.xml&quot;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Customizable (project/main)</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">resourceQualifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;land&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &quot;res/layout-land&quot;</span>
+<span class="w">  </span><span class="nx">resourceSystemColors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;system_accent1_100&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Will be converted to ARGB</span>
+<span class="w">      </span><span class="s2">&quot;system_accent1_200&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#ff0000&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75</span><span class="p">],</span><span class="w"> </span><span class="c1">// opacity</span>
+<span class="w">      </span><span class="s2">&quot;system_accent1_300&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">parseColor</span><span class="p">(</span><span class="s2">&quot;#000&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">manifestPackage</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;manifest package=&quot;example&quot;&gt; (OR: RequestData&lt;{ namespace: &quot;android.application.id&quot; }&gt;)</span>
+<span class="w">  </span><span class="nx">manifestLabelAppName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;application android:label=&quot;@string/android&quot;&gt;</span>
+<span class="w">  </span><span class="nx">manifestThemeName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;AppTheme&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;application android:theme=&quot;@style/AppTheme&quot;&gt; (overrides manifestParentThemeName)</span>
+<span class="w">  </span><span class="nx">manifestParentThemeName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Theme.AppCompat.Light.NoActionBar&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;style parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt; [res/values/styles.xml]</span>
+<span class="w">  </span><span class="nx">manifestActivityName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;.MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;activity android:name=&quot;.MainActivity&quot;&gt;</span>
+<span class="w">  </span><span class="nx">outputDocumentEditing</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// RequestData&lt;{ targetAPI + dependencies + mainParentDir + mainSrcDir + directories + dataBinding + elements }&gt; (append without overwrite)</span>
+<span class="w">  </span><span class="nx">outputDocumentCSS</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="c1">// CSS properties to be processed with a server extension (e.g. &quot;boxShadow&quot;)</span>
+<span class="w">  </span><span class="nx">outputDirectory</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app/src/main&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">createManifest</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Update AndroidManifest.xml</span>
+<span class="w">  </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// build.gradle</span>
+<span class="w">  </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ktx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Global</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">builtInExtensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;squared.accessibility&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.background&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.negative-x&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.positive-x&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.max-width-height&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.percent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.content&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.scrollbar&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.radiogroup&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.multiline&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.relative&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.css-grid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.flexbox&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.table&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.column&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.list&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.grid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.sprite&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.whitespace&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.background&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.svg&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.strings&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.fonts&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.dimens&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.styles&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.data&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">convertImages</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// jpeg | webp | gif | bmp</span>
+<span class="hll"><span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)</span>
+</span><span class="w">  </span><span class="nx">showAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;android:hyphenationFrequency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace all</span>
+<span class="w">    </span><span class="s2">&quot;android:fontFeatureSettings&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Delete all</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">showComments</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;!-- TODO in layout.xml --&gt;</span>
+<span class="w">  </span><span class="nx">showComments</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;boxShadow&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">showComments</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">self</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;boxShadow&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">nextSibling</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;marginBottom&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">previousSibling</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;marginTop&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">parent</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">showComments</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">self</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;boxShadow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.className&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">tagName</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// [&quot;button&quot;]</span>
+<span class="w">      </span><span class="nx">attributes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// [&quot;id&quot;, &quot;style&quot;]</span>
+<span class="w">      </span><span class="nx">dataset</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">bounds</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">showErrorMessages</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">convertPixels</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dp&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ResolutionUnit</span>
+<span class="w">  </span><span class="nx">convertLineHeight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sp&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ResolutionUnit</span>
+<span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// tabs</span>
+<span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="c1">// per tab</span>
+<span class="w">  </span><span class="nx">outputDocumentHandler</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">outputEmptyCopyDirectory</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Sub directories within target directory (OR: RequestData&lt;{ emptyDir: false }&gt;)</span>
+<span class="w">  </span><span class="nx">outputSummaryModal</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Affected files in base output directory</span>
+<span class="w">  </span><span class="nx">outputSummaryModal</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;path/summary.css&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use custom style sheet</span>
+<span class="w">  </span><span class="nx">outputSummaryModal</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;.status-4 { color: purple; }&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use inline style sheet</span>
+<span class="w">  </span><span class="nx">outputTasks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;**/drawable/*.xml&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">handler</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;gulp&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;minify&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">outputWatch</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;**/drawable/*.png&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;**/drawable/*.jpg&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">interval</span><span class="o">:</span><span class="w"> </span><span class="mf">1000</span><span class="p">,</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2h&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">outputArchiveName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xml&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// squared.saveAs</span>
+<span class="w">  </span><span class="nx">outputArchiveFormat</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// tar | 7z | gz</span>
+<span class="w">  </span><span class="nx">outputArchiveCache</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// Downloadable URL in ResponseData&lt;downloadUrl&gt;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Global (optional)</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">builtInExtensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.includes&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// enabledIncludes</span>
+<span class="w">    </span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// enabledSubstitute</span>
+<span class="w">    </span><span class="s2">&quot;android.resource.fragment&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// enabledFragment</span>
+<span class="w">    </span><span class="s2">&quot;jetpack.compose.view&quot;</span><span class="w"> </span><span class="c1">// enabledCompose</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interface.html" class="btn btn-neutral float-left" title="Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chrome.html" class="btn btn-neutral float-right" title="Chrome" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
