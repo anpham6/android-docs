@@ -148,7 +148,7 @@ ADDED
 .. code-block::
   :caption: chrome.base
 
-  interface FileActionOptions {
+  interface DocumentOutput {
       removeBinaries?: boolean;
   }
 
