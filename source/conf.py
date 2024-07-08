@@ -17,7 +17,7 @@ release = '5.2.4'
 extensions = ['sphinx.ext.intersphinx']
 
 intersphinx_mapping = {
-  'chrome': ('https://e-mc.readthedocs.io/en/latest', ('../../chrome-docs/build/html/objects.inv', None)),
+  'chrome': ('https://e-mc.readthedocs.io/en/latest', None),
 }
 
 templates_path = ['_templates']
