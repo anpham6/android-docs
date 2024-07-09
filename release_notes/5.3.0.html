@@ -242,7 +242,14 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">chrome.base</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">LAYOUT_RELATIVE</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">LAYOUT_CONSTRAINT</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">chrome.base</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">DocumentOutput</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">removeBinaries?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="p">}</span>
@@ -260,14 +267,14 @@
 </section>
 <section id="modified">
 <h2>MODIFIED<a class="headerlink" href="#modified" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">squared</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">squared</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">toString</span><span class="p">(</span><span class="nx">projectId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// projectId</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">HasOptions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// CSS_UNIT.DECIMAL | CSS_UNIT.INTEGER</span>
 <span class="p">}</span>
@@ -287,8 +294,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">selector?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">android?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
@@ -305,8 +312,8 @@
 </section>
 <section id="deprecated">
 <h2>DEPRECATED<a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsStyleUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">formFontSize</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
@@ -317,8 +324,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">formatPX</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// roundPx</span>
@@ -333,6 +340,13 @@
 <span class="kd">const</span><span class="w"> </span><span class="nx">OPERATION_NOT_SUPPORTED</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">ELEMENT_NOT_FOUND</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">CSS_CANNOT_BE_PARSED</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">LAYOUT_ALIGNMENT</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// LAYOUT_RELATIVE</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">LAYOUT_ALIGNMENT_APP</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// LAYOUT_CONSTRAINT</span>
 </pre></div>
 </div>
 </div>

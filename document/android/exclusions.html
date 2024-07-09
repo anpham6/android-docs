@@ -152,17 +152,18 @@
 
 <span class="kd">enum</span><span class="w"> </span><span class="nx">STAGE_OPTIMIZATION</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">EXCLUDE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">INHERIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">ALIGNMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">POSITION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">DIMENSION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">PADDING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">BASELINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">128</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">WHITESPACE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">256</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">TRANSLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">512</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">TRANSFORM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1024</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">SCALING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2048</span>
+<span class="w">    </span><span class="nx">CONTAINER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MERGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ALIGNMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">POSITION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">DIMENSION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">PADDING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">128</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">BASELINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">256</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">WHITESPACE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">512</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1024</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TRANSFORM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2048</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">SCALING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4096</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -170,7 +171,7 @@
 </section>
 <section id="method">
 <h2>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NODE_RESOURCE</span><span class="p">,</span><span class="w"> </span><span class="nx">NODE_PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="nx">APP_SECTION</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">constant</span><span class="p">;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NODE_RESOURCE</span><span class="p">,</span><span class="w"> </span><span class="nx">NODE_PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="nx">APP_SECTION</span><span class="p">,</span><span class="w"> </span><span class="nx">STAGE_OPTIMIZATION</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">constant</span><span class="p">;</span>
 
 <span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
 <span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
@@ -184,6 +185,7 @@
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;p &gt; span&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">resource</span><span class="o">:</span><span class="w"> </span><span class="nx">NODE_RESOURCE</span><span class="p">.</span><span class="nx">FONT_STYLE</span>
+<span class="w">      </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="nx">STAGE_OPTIMIZATION</span><span class="p">.</span><span class="nx">EXCLUDE</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#cb1&quot;</span><span class="p">,</span>
@@ -199,7 +201,7 @@
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">data-exclude-section</span><span class="o">=</span><span class="s">&quot;DOM_TRAVERSE | EXTENSION&quot;</span>
     <span class="na">data-exclude-resource</span><span class="o">=</span><span class="s">&quot;BOX_SPACING | FONT_STYLE&quot;</span>
     <span class="na">data-exclude-procedure</span><span class="o">=</span><span class="s">&quot;CONSTRAINT | LOCALIZATION | CUSTOMIZATION | OPTIMIZATION&quot;</span>
-    <span class="na">data-exclude-optimization</span><span class="o">=</span><span class="s">&quot;INHERIT | ALIGNMENT&quot;</span><span class="p">&gt;</span>
+    <span class="na">data-exclude-optimization</span><span class="o">=</span><span class="s">&quot;MERGE | ALIGNMENT&quot;</span><span class="p">&gt;</span>
   title
 <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
