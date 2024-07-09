@@ -146,6 +146,12 @@ ADDED
   }
 
 .. code-block::
+  :caption: android.lib.constant
+
+  const LAYOUT_RELATIVE: string[];
+  const LAYOUT_CONSTRAINT: string[];
+
+.. code-block::
   :caption: chrome.base
 
   interface DocumentOutput {
@@ -233,3 +239,9 @@ DEPRECATED
   const OPERATION_NOT_SUPPORTED: string;
   const ELEMENT_NOT_FOUND: string;
   const CSS_CANNOT_BE_PARSED: string;
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const LAYOUT_ALIGNMENT: string[]; // LAYOUT_RELATIVE
+  const LAYOUT_ALIGNMENT_APP: string[]; // LAYOUT_CONSTRAINT

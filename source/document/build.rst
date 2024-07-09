@@ -86,7 +86,7 @@ Interface
       applicationId?: string;
       profileable?: boolean | string | string[];
       dependencies?: string[];
-      dependencyScopes?: boolean | 1 | DependencyScopes | "snapshot" | (DependencyScopes | "snapshot")[];
+      dependencyScopes?: boolean | 1 | DependencyScopes | "snapshot" | "constraints" | (DependencyScopes | "snapshot" | "constraints")[];
       directories?: ControllerSettingsDirectoryUI;
       projectName?: string;
       mainParentDir?: string;
@@ -105,6 +105,7 @@ Interface
 .. versionadded:: 5.3.0
 
   - *DocumentOutput* property **jvmToolchain** for :alt:`build.gradle` upgrades was created.
+  - *DocumentOutput* property **dependencyScopes** with the :target:`constraints` value type for versioning was amended.
 
 .. versionadded:: 5.2.0
 

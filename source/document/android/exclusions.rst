@@ -45,17 +45,18 @@ Interface
 
   enum STAGE_OPTIMIZATION {
       EXCLUDE = 1,
-      INHERIT = 2,
-      ALIGNMENT = 4,
-      POSITION = 8,
-      DIMENSION = 16,
-      MARGIN = 32,
-      PADDING = 64,
-      BASELINE = 128,
-      WHITESPACE = 256,
-      TRANSLATE = 512,
-      TRANSFORM = 1024,
-      SCALING = 2048
+      CONTAINER = 2,
+      MERGE = 4,
+      ALIGNMENT = 8,
+      POSITION = 16,
+      DIMENSION = 32,
+      MARGIN = 64,
+      PADDING = 128,
+      BASELINE = 256,
+      WHITESPACE = 512,
+      TRANSLATE = 1024,
+      TRANSFORM = 2048,
+      SCALING = 4096
   }
 
 Method
@@ -63,7 +64,7 @@ Method
 
 ::
 
-    const { NODE_RESOURCE, NODE_PROCEDURE, APP_SECTION } = squared.base.lib.constant;
+    const { NODE_RESOURCE, NODE_PROCEDURE, APP_SECTION, STAGE_OPTIMIZATION } = squared.base.lib.constant;
 
     await squared.parseDocument({
       element: document.body,
@@ -77,6 +78,7 @@ Method
         {
           selector: "p > span",
           resource: NODE_RESOURCE.FONT_STYLE
+          optimization: STAGE_OPTIMIZATION.EXCLUDE
         },
         {
           selector: "#cb1",
@@ -93,7 +95,7 @@ Inline
   <h1 data-exclude-section="DOM_TRAVERSE | EXTENSION"
       data-exclude-resource="BOX_SPACING | FONT_STYLE"
       data-exclude-procedure="CONSTRAINT | LOCALIZATION | CUSTOMIZATION | OPTIMIZATION"
-      data-exclude-optimization="INHERIT | ALIGNMENT">
+      data-exclude-optimization="MERGE | ALIGNMENT">
     title
   </h1>
   <p>
