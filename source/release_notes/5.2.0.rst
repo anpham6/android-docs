@@ -400,8 +400,8 @@ ADDED
 
 .. rst-class:: release-notes
 
-MODIFIED
-========
+CHANGED
+=======
 
 .. code-block::
   :caption: squared.base

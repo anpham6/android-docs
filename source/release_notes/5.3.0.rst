@@ -166,8 +166,8 @@ ADDED
       };
   }
 
-MODIFIED
-========
+CHANGED
+=======
 
 .. code-block::
   :caption: squared
