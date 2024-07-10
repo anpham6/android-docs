@@ -103,8 +103,8 @@
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">supportRTL</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledViewModel</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -150,12 +150,13 @@
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
 <li><p><strong>ExtensionComposeViewElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
+<li><p><em>UserResourceSettingsUI</em> property <strong>compressImages</strong> accepts a <em class="alt">string</em> to use as an API key.</p></li>
 </ul>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.2.0: </span></p>
 <ul class="simple">
-<li><p><em>UserResourceSettingsUI</em> property <strong>showAttributes</strong> accepts a map to globally replace layout attributes.</p></li>
+<li><p><em>UserResourceSettingsUI</em> property <strong>showAttributes</strong> accepts a <em class="alt">object map</em> to globally replace layout attributes.</p></li>
 <li><p><em>UserResourceSettingsUI</em> property <strong>resourceSystemColors</strong> device color translation map was created.</p></li>
 <li><p><strong>ExtensionFragmentElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
 </ul>
@@ -292,8 +293,9 @@
 <span class="w">    </span><span class="s2">&quot;android.resource.data&quot;</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="nx">convertImages</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// jpeg | webp | gif | bmp</span>
-<span class="hll"><span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)</span>
-</span><span class="w">  </span><span class="nx">showAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)</span>
+</span><span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;****************&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Tinify API key</span>
+<span class="w">  </span><span class="nx">showAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="s2">&quot;android:hyphenationFrequency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace all</span>
 <span class="w">    </span><span class="s2">&quot;android:fontFeatureSettings&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Delete all</span>
 <span class="w">  </span><span class="p">},</span>

@@ -6,12 +6,12 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 15
+  :emphasize-lines: 4,15
 
   interface UserResourceSettingsUI {
       targetAPI: number;
       supportRTL: boolean;
-      compressImages: boolean;
+      compressImages: boolean | string;
       enabledMultiline: boolean;
       enabledViewModel: boolean;
       enabledIncludes: boolean;
@@ -56,10 +56,11 @@ Interface
 .. versionadded:: 5.3.0
 
   - **ExtensionComposeViewElement** extends the :target:`ViewAttribute` interface.
+  - *UserResourceSettingsUI* property **compressImages** accepts a :alt:`string` to use as an API key.
 
 .. versionadded:: 5.2.0
 
-  - *UserResourceSettingsUI* property **showAttributes** accepts a map to globally replace layout attributes.
+  - *UserResourceSettingsUI* property **showAttributes** accepts a :alt:`object map` to globally replace layout attributes.
   - *UserResourceSettingsUI* property **resourceSystemColors** device color translation map was created.
   - **ExtensionFragmentElement** extends the :target:`ViewAttribute` interface.
 
@@ -195,7 +196,8 @@ Example usage
       "android.resource.data"
     ],
     convertImages: "png", // jpeg | webp | gif | bmp
-    compressImages: false, // npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)
+    compressImages: true, // npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)
+    compressImages: "****************", // Tinify API key
     showAttributes: {
       "android:hyphenationFrequency": "full", // Replace all
       "android:fontFeatureSettings": null // Delete all
