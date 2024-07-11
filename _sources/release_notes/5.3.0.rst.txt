@@ -97,17 +97,18 @@ ADDED
 
   enum STAGE_OPTIMIZATION {
       EXCLUDE = 1,
-      INHERIT = 2,
-      ALIGNMENT = 4,
-      POSITION = 8,
-      DIMENSION = 16,
-      MARGIN = 32,
-      PADDING = 64,
-      BASELINE = 128,
-      WHITESPACE = 256,
-      TRANSLATE = 512,
-      TRANSFORM = 1024,
-      SCALING = 2048
+      MERGE = 2,
+      CONTAINER = 4,
+      ALIGNMENT = 8,
+      POSITION = 16,
+      DIMENSION = 32,
+      MARGIN = 64,
+      PADDING = 128,
+      BASELINE = 256,
+      WHITESPACE = 512,
+      TRANSLATE = 1024,
+      TRANSFORM = 2048,
+      SCALING = 4096
   }
 
   /* dom */
@@ -124,6 +125,27 @@ ADDED
           ADOPTED_STYLE_SHEET: boolean;
       };
   }
+
+  /* color */
+
+  type ColorCoordinates = [number, number, number];
+
+  interface ColorRGB {
+      to(name: string): Null<ColorCoordinates>;
+      get linear(): ColorCoordinates;
+      get lab(): ColorCoordinates;
+      get lch(): ColorCoordinates;
+      get oklab(): ColorCoordinates;
+      get oklch(): ColorCoordinates;
+      get linearAsString(): string;
+      get labAsString(): string;
+      get lchAsString(): string;
+      get oklabAsString(): string;
+      get oklchAsString(): string;
+  }
+
+  function formatColor(name: string, values: ColorCoordinates, alpha?: number, precision?: number): string;
+  function setColorPrecision(value: number): void;
 
   /* css */
 
@@ -223,6 +245,18 @@ DEPRECATED
   }
 
 .. code-block::
+  :caption: squared.base.lib.regex
+
+  const CSS: {
+      ANGLE_G: RegExp;
+      BACKGROUNDIMAGE_G: RegExp;
+  };
+  const DOM: {
+      ENTITY_G: RegExp;
+      AMPERSAND_G: RegExp;
+  };
+
+.. code-block::
   :caption: squared.lib
 
   /* css */
@@ -239,6 +273,12 @@ DEPRECATED
   const OPERATION_NOT_SUPPORTED: string;
   const ELEMENT_NOT_FOUND: string;
   const CSS_CANNOT_BE_PARSED: string;
+
+  /* regex */
+
+  const CSS: {
+      SELECTOR_G: RegExp;
+  };
 
 .. code-block::
   :caption: android.lib.constant
