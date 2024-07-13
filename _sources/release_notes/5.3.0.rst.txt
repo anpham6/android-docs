@@ -128,14 +128,16 @@ ADDED
 
   /* color */
 
+  type ColorOut = "rgb" | "hsl" | "hwb";
+  type ColorSRGB = "srgb" | "srgb-linear";
   type ColorLAB = "lab" | "lch" | "oklab" | "oklch";
   type ColorXYZ = "xyz" | "xyz-d50" | "xyz-d65";
-  type ColorCoords = "srgb" | "srgb-linear" | ColorLAB | ColorXYZ;
+  type ColorCoords = ColorSRGB | ColorLAB | ColorXYZ | "a98-rgb" | "prophoto-rgb" | "display-p3" | "rec2020";
   type ColorCoordinates = [number, number, number];
 
   interface ColorRGB {
-      to(name: string): Null<ColorCoordinates>;
-      toString(name?: string, precision?: number): string;
+      to(name: ColorCoords): ColorCoordinates | null;
+      toString(name?: ColorCoords | ColorOut, precision?: number): string;
       get srgb: ColorCoordinates;
       get "srgb-linear"(): ColorCoordinates;
       get xyz: ColorCoordinates;
@@ -147,8 +149,8 @@ ADDED
       get oklch(): ColorCoordinates;
   }
 
-  function formatColor(name: string, values: ColorCoordinates, alpha?: number, precision?: number): string;
-  function setColorPrecision(value: number): void;
+  function formatCoords(name: string, values: ColorCoordinates, alpha?: number, precision?: number): string;
+  function setPrecision(value: number): void;
 
   /* css */
 
