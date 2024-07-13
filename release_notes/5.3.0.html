@@ -221,20 +221,23 @@
 
 <span class="cm">/* color */</span>
 
+<span class="kr">type</span><span class="w"> </span><span class="nx">ColorLAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lab&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;lch&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;oklab&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;oklch&quot;</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">ColorXYZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xyz&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;xyz-d50&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;xyz-d65&quot;</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">ColorCoords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;srgb&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;srgb-linear&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ColorLAB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ColorXYZ</span><span class="p">;</span>
 <span class="kr">type</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">];</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">to</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Null</span><span class="o">&lt;</span><span class="nx">ColorCoordinates</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">linear</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">toString</span><span class="p">(</span><span class="nx">name?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">precision?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">srgb</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorCoordinates</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="s2">&quot;srgb-linear&quot;</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">xyz</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorCoordinates</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="s2">&quot;xyz-d50&quot;</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="s2">&quot;xyz-d65&quot;</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">lab</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">lch</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">oklab</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">oklch</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">linearAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">labAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">lchAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">oklabAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">oklchAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">formatColor</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorCoordinates</span><span class="p">,</span><span class="w"> </span><span class="nx">alpha?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">precision?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
@@ -317,7 +320,17 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">squared.lib.color</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">scheme</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;light&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// readonly</span>
+
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">scheme</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">selector?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">android?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
@@ -334,8 +347,8 @@
 </section>
 <section id="deprecated">
 <h2>DEPRECATED<a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsStyleUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">formFontSize</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
@@ -346,8 +359,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-text">squared.base.lib.regex</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">squared.base.lib.regex</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">ANGLE_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">BACKGROUNDIMAGE_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
@@ -359,8 +372,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id15">
-<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">formatPX</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// roundPx</span>
@@ -384,8 +397,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id17" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">LAYOUT_ALIGNMENT</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// LAYOUT_RELATIVE</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">LAYOUT_ALIGNMENT_APP</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span><span class="w"> </span><span class="c1">// LAYOUT_CONSTRAINT</span>
 </pre></div>

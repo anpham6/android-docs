@@ -128,20 +128,23 @@ ADDED
 
   /* color */
 
+  type ColorLAB = "lab" | "lch" | "oklab" | "oklch";
+  type ColorXYZ = "xyz" | "xyz-d50" | "xyz-d65";
+  type ColorCoords = "srgb" | "srgb-linear" | ColorLAB | ColorXYZ;
   type ColorCoordinates = [number, number, number];
 
   interface ColorRGB {
       to(name: string): Null<ColorCoordinates>;
-      get linear(): ColorCoordinates;
+      toString(name?: string, precision?: number): string;
+      get srgb: ColorCoordinates;
+      get "srgb-linear"(): ColorCoordinates;
+      get xyz: ColorCoordinates;
+      get "xyz-d50"(): ColorCoordinates;
+      get "xyz-d65"(): ColorCoordinates;
       get lab(): ColorCoordinates;
       get lch(): ColorCoordinates;
       get oklab(): ColorCoordinates;
       get oklch(): ColorCoordinates;
-      get linearAsString(): string;
-      get labAsString(): string;
-      get lchAsString(): string;
-      get oklabAsString(): string;
-      get oklchAsString(): string;
   }
 
   function formatColor(name: string, values: ColorCoordinates, alpha?: number, precision?: number): string;
@@ -214,6 +217,15 @@ CHANGED
 
   class Node {
       get dir(): TextDirection; // "ltr" | "rtl" | ""
+  }
+
+.. code-block::
+  :caption: squared.lib.color
+
+  interface ColorRGB {
+      get scheme(): "light" | "dark" | ""; // readonly
+
+      set scheme(value);
   }
 
 .. code-block::
