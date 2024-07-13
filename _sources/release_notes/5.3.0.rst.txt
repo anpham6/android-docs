@@ -39,6 +39,14 @@ ADDED
 =====
 
 .. code-block::
+  :caption: squared
+
+  interface FileActionConfig {
+      inherit?: boolean | "append" | "merge"; // "merge"
+      dataSource?: DataSource | DataSource[];
+  }
+
+.. code-block::
   :caption: squared.base
 
   interface ControllerSettingsStyleUI {
@@ -272,6 +280,17 @@ DEPRECATED
 
 .. code-block::
   :caption: squared.lib
+
+  /* color */
+
+  interface ColorRGB {
+      get hslaAsString(): string; // toString(name: ColorOut)
+      get rgbAsString(): string;
+      get hslAsString(): string;
+      get hwbAsString(): string;
+  }
+
+  function formatHSLA(value: HSL, precision?: number): string; // formatHSL
 
   /* css */
 
