@@ -42,7 +42,7 @@ ADDED
   :caption: squared
 
   interface FileActionConfig {
-      inherit?: boolean | "append" | "merge"; // "merge"
+      inherit?: boolean | "append" | "preserve"; // "preserve"
       dataSource?: DataSource | DataSource[];
   }
 
@@ -145,7 +145,7 @@ ADDED
 
   interface ColorRGB {
       to(name: ColorCoords): ColorCoordinates | null;
-      toString(name?: ColorCoords | ColorOut, precision?: number): string;
+      toString(name?: ColorCoords | ColorOut, alpha?: number | null, precision?: number): string;
       get srgb: ColorCoordinates;
       get "srgb-linear"(): ColorCoordinates;
       get xyz: ColorCoordinates;
@@ -238,6 +238,10 @@ CHANGED
       set scheme(value);
   }
 
+  function convertHSLA(value: RGB, opacity?: number): HSLA; // opacity
+  function convertHWBA(value: RGB, opacity?: number): HWBA;
+  function convertRGBA(value: HSL | HWB, opacity?: number): RGBA;
+
 .. code-block::
   :caption: android.base
 
@@ -284,10 +288,10 @@ DEPRECATED
   /* color */
 
   interface ColorRGB {
-      get hslaAsString(): string; // toString(name: ColorOut)
-      get rgbAsString(): string;
-      get hslAsString(): string;
-      get hwbAsString(): string;
+      get hslaAsString(): string; // toString("hsl", 1)
+      get rgbAsString(): string; // toString("rgb")
+      get hslAsString(): string; // toString("hsl")
+      get hwbAsString(): string; // toString("hwb")
   }
 
   function formatHSLA(value: HSL, precision?: number): string; // formatHSL
