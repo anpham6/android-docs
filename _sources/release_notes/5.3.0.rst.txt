@@ -26,14 +26,22 @@ BREAKING
   }
 
 .. code-block::
-  :caption: squared.lib.client
+  :caption: squared.lib
   :emphasize-lines: 4
+
+  /* client */
 
   interface UserAgentData {
       name: "Chrome";
 
       name: "Chrome" | "Chromium"; // getUserAgentData
   }
+
+  /* regex */
+
+  const STRING: {
+      CSS_COLOR_PROFILE: string; // capture group removed
+  };
 
 ADDED
 =====

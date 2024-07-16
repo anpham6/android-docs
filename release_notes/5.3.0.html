@@ -118,12 +118,20 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">squared.lib.client</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentData</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="p">;</span>
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
 
-<span class="hll"><span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;Chromium&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// getUserAgentData</span>
-</span><span class="p">}</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentData</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="p">;</span>
+</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;Chromium&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// getUserAgentData</span>
+<span class="p">}</span>
+
+<span class="cm">/* regex */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">STRING</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">CSS_COLOR_PROFILE</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// capture group removed</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 </div>
