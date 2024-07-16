@@ -148,7 +148,7 @@ ADDED
   type ColorSRGB = "srgb" | "srgb-linear";
   type ColorLAB = "lab" | "lch" | "oklab" | "oklch";
   type ColorXYZ = "xyz" | "xyz-d50" | "xyz-d65";
-  type ColorCoords = ColorSRGB | ColorLAB | ColorXYZ | "a98-rgb" | "prophoto-rgb" | "display-p3" | "rec2020";
+  type ColorCoords = ColorSRGB | ColorLAB | ColorXYZ | "display-p3" | "rec2020" | "a98-rgb" | "prophoto-rgb";
   type ColorCoordinates = [number, number, number];
 
   interface ColorRGB {
@@ -156,15 +156,19 @@ ADDED
       toString(precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
       toString(name: ColorCoords | ColorOut, precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
       toString(name?: ColorCoords | ColorOut, alpha?: number, precision?: number): string;
+      get lab(): ColorCoordinates;
+      get lch(): ColorCoordinates;
+      get oklab(): ColorCoordinates;
+      get oklch(): ColorCoordinates;
       get srgb: ColorCoordinates;
       get "srgb-linear"(): ColorCoordinates;
       get xyz: ColorCoordinates;
       get "xyz-d50"(): ColorCoordinates;
       get "xyz-d65"(): ColorCoordinates;
-      get lab(): ColorCoordinates;
-      get lch(): ColorCoordinates;
-      get oklab(): ColorCoordinates;
-      get oklch(): ColorCoordinates;
+      get "display-p3"(): ColorCoordinates;
+      get rec2020(): ColorCoordinates;
+      get "a98-rgb"(): ColorCoordinates;
+      get "prophoto-rgb"(): ColorCoordinates;
   }
 
   function formatCoords(name: string, values: ColorCoordinates, alpha?: number, precision?: number): string;
@@ -181,6 +185,12 @@ ADDED
   interface BoxRectDimension {
       columns?: Dimension[] | null; // getRangeClientRect
   }
+
+  /* regex */
+
+  const STRING: {
+      CSS_COLOR_INTERPOLATION: string;
+  };
 
 .. code-block::
   :caption: android.base
@@ -301,7 +311,7 @@ DEPRECATED
 
   interface ColorRGB {
       get hslaAsString(): string; // toString("hsl", 1)
-      get rgbAsString(): string; // toString("rgb")
+      get rgbAsString(): string; // toString()
       get hslAsString(): string; // toString("hsl")
       get hwbAsString(): string; // toString("hwb")
   }
