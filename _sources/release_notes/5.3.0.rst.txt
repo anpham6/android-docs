@@ -305,6 +305,7 @@ DEPRECATED
       ANGLE_G: RegExp; // Deleted
       BACKGROUNDIMAGE_G: RegExp; // Deleted
   };
+
   const DOM: {
       ENTITY_G: RegExp; // Renamed to ENTITY
       AMPERSAND_G: RegExp; // Deleted
