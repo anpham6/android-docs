@@ -360,9 +360,15 @@
 <span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">scheme</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
 <span class="p">}</span>
 
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ColorSpace</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">out?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// ColorCoordinates</span>
+<span class="p">}</span>
+
 <span class="kd">function</span><span class="w"> </span><span class="nx">convertHSLA</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">RGB</span><span class="p">,</span><span class="w"> </span><span class="nx">opacity?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">HSLA</span><span class="p">;</span><span class="w"> </span><span class="c1">// opacity</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">convertHWBA</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">RGB</span><span class="p">,</span><span class="w"> </span><span class="nx">opacity?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">HWBA</span><span class="p">;</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">convertRGBA</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">HSL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">HWB</span><span class="p">,</span><span class="w"> </span><span class="nx">opacity?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">RGBA</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">intoRGB</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorSpace</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">RGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// [string, ColorCoordinates]</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">intoRelativeRGB</span><span class="p">(</span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">relative</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorRGB</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">profile?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">RGB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">ColorCoordinates</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -399,12 +405,12 @@
 <div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-text">squared.base.lib.regex</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">ANGLE_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;G&quot; suffix will be removed</span>
-<span class="w">    </span><span class="nx">BACKGROUNDIMAGE_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ANGLE_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// Deleted</span>
+<span class="w">    </span><span class="nx">BACKGROUNDIMAGE_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// Deleted</span>
 <span class="p">};</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">DOM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">ENTITY_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">AMPERSAND_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ENTITY_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// Renamed to ENTITY</span>
+<span class="w">    </span><span class="nx">AMPERSAND_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// Deleted</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -440,8 +446,8 @@
 <span class="cm">/* regex */</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">HWBA</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;A&quot; suffix will be removed</span>
-<span class="w">    </span><span class="nx">SELECTOR_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">HWBA</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// Renamed to HWB</span>
+<span class="w">    </span><span class="nx">SELECTOR_G</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span><span class="w"> </span><span class="c1">// Renamed to SELECTOR</span>
 <span class="p">};</span>
 </pre></div>
 </div>

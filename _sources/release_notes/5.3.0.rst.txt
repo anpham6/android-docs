@@ -260,9 +260,15 @@ CHANGED
       set scheme(value);
   }
 
+  interface ColorSpace {
+      out?: string | ColorCoordinates | null; // ColorCoordinates
+  }
+
   function convertHSLA(value: RGB, opacity?: number): HSLA; // opacity
   function convertHWBA(value: RGB, opacity?: number): HWBA;
   function convertRGBA(value: HSL | HWB, opacity?: number): RGBA;
+  function intoRGB(value: ColorSpace): RGB | [string, ColorCoordinates] | null; // [string, ColorCoordinates]
+  function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | [string, ColorCoordinates] | null;
 
 .. code-block::
   :caption: android.base
@@ -296,12 +302,12 @@ DEPRECATED
   :caption: squared.base.lib.regex
 
   const CSS: {
-      ANGLE_G: RegExp; // "G" suffix will be removed
-      BACKGROUNDIMAGE_G: RegExp;
+      ANGLE_G: RegExp; // Deleted
+      BACKGROUNDIMAGE_G: RegExp; // Deleted
   };
   const DOM: {
-      ENTITY_G: RegExp;
-      AMPERSAND_G: RegExp;
+      ENTITY_G: RegExp; // Renamed to ENTITY
+      AMPERSAND_G: RegExp; // Deleted
   };
 
 .. code-block::
@@ -336,8 +342,8 @@ DEPRECATED
   /* regex */
 
   const CSS: {
-      HWBA: RegExp; // "A" suffix will be removed
-      SELECTOR_G: RegExp;
+      HWBA: RegExp; // Renamed to HWB
+      SELECTOR_G: RegExp; // Renamed to SELECTOR
   };
 
 .. code-block::
