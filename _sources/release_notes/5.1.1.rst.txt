@@ -53,12 +53,12 @@ ADDED
   :caption: android.lib.constant
 
   const enum DEPENDENCY_TYPE {
-      IMPLEMENTATION,
-      API,
-      COMPILE_ONLY,
-      RUNTIME_ONLY,
-      TEST_IMPLEMENTATION,
-      ANDROID_TEST_IMPLEMENTATION
+      IMPLEMENTATION = 0,
+      API = 1,
+      COMPILE_ONLY = 2,
+      RUNTIME_ONLY = 3,
+      TEST_IMPLEMENTATION = 4,
+      ANDROID_TEST_IMPLEMENTATION = 5
   }
 
 .. code-block::

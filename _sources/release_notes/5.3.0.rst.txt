@@ -50,7 +50,7 @@ ADDED
   :caption: squared
 
   interface FileActionConfig {
-      inherit?: boolean | "append" | "preserve"; // "preserve"
+      inherit?: boolean | "append" | "preserve" | { append?: boolean; preserve?: boolean; depth?: number };
       dataSource?: DataSource | DataSource[];
   }
 
@@ -144,18 +144,18 @@ ADDED
 
   /* color */
 
-  type ColorOut = "rgb" | "hsl" | "hwb";
-  type ColorSRGB = "srgb" | "srgb-linear";
   type ColorLAB = "lab" | "lch" | "oklab" | "oklch";
-  type ColorXYZ = "xyz" | "xyz-d50" | "xyz-d65";
-  type ColorCoords = ColorSRGB | ColorLAB | ColorXYZ | "display-p3" | "rec2020" | "a98-rgb" | "prophoto-rgb";
+  type ColorMethod = "rgb" | "hsl" | "hwb" | ColorLAB;
+  type ColorSpaceRGB = "srgb" | "srgb-linear" | "display-p3" | "rec2020" | "a98-rgb" | "prophoto-rgb";
+  type ColorSpaceXYZ = "xyz" | "xyz-d65" | "xyz-d50";
+  type ColorCoords = ColorLAB | ColorSpaceRGB | ColorSpaceXYZ;
   type ColorCoordinates = [number, number, number];
 
   interface ColorRGB {
       toString(alpha: number, precision?: number): string;
       toString(precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
-      toString(name: ColorCoords | ColorOut, precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
-      toString(name?: ColorCoords | ColorOut, alpha?: number, precision?: number): string;
+      toString(name: ColorCoords | ColorMethod, precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
+      toString(name?: ColorCoords | ColorMethod, alpha?: number, precision?: number): string;
       get lab(): ColorCoordinates;
       get lch(): ColorCoordinates;
       get oklab(): ColorCoordinates;
@@ -210,6 +210,10 @@ ADDED
 
 .. code-block::
   :caption: chrome.base
+
+  interface RequestData {
+      log?: { showDiff?: string[] };
+  }
 
   interface DocumentOutput {
       removeBinaries?: boolean;
@@ -267,8 +271,8 @@ CHANGED
   function convertHSLA(value: RGB, opacity?: number): HSLA; // opacity
   function convertHWBA(value: RGB, opacity?: number): HWBA;
   function convertRGBA(value: HSL | HWB, opacity?: number): RGBA;
-  function intoRGB(value: ColorSpace): RGB | [string, ColorCoordinates] | null; // [string, ColorCoordinates]
-  function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | [string, ColorCoordinates] | null;
+  function intoRGB(value: ColorSpace): RGB | [ColorCoords, ColorCoordinates] | null; // [ColorCoords, ColorCoordinates]
+  function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | [ColorCoords, ColorCoordinates] | null;
 
 .. code-block::
   :caption: android.base
@@ -302,13 +306,13 @@ DEPRECATED
   :caption: squared.base.lib.regex
 
   const CSS: {
-      ANGLE_G: RegExp; // Deleted
-      BACKGROUNDIMAGE_G: RegExp; // Deleted
+      ANGLE_G: RegExp; // Delete
+      BACKGROUNDIMAGE_G: RegExp; // Delete
   };
 
   const DOM: {
-      ENTITY_G: RegExp; // Renamed to ENTITY
-      AMPERSAND_G: RegExp; // Deleted
+      ENTITY_G: RegExp; // Renaming to ENTITY
+      AMPERSAND_G: RegExp; // Delete
   };
 
 .. code-block::
@@ -343,8 +347,8 @@ DEPRECATED
   /* regex */
 
   const CSS: {
-      HWBA: RegExp; // Renamed to HWB
-      SELECTOR_G: RegExp; // Renamed to SELECTOR
+      HWBA: RegExp; // Renaming to HWB
+      SELECTOR_G: RegExp; // Renaming to SELECTOR
   };
 
 .. code-block::
