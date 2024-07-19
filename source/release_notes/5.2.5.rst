@@ -1,0 +1,20 @@
+=====
+5.2.5
+=====
+
+:right:`2024-07-24`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      hasUnit(attr: CssStyleAttr, options?: HasUnitOptions | boolean): boolean; // Node.inlineStatic for "width" and "height" are always false
+      get inlineStatic(): number; // Does not include SVG elements
+  }

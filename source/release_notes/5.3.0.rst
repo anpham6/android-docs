@@ -21,13 +21,14 @@ BREAKING
   }
 
   class NodeUI {
-      get textIndent(): number; // Detection for "each-line" and "hanging"
       get plainText(): boolean; // Modifiable using NodeUI.setCacheState
   }
 
 .. code-block::
-  :caption: squared.lib.client
+  :caption: squared.lib
   :emphasize-lines: 4
+
+  /* client */
 
   interface UserAgentData {
       name: "Chrome";
@@ -35,8 +36,24 @@ BREAKING
       name: "Chrome" | "Chromium"; // getUserAgentData
   }
 
+  /* regex */
+
+  const STRING: {
+      CSS_COLOR_PROFILE: string; // capture group removed
+  };
+
+.. rst-class:: release-notes
+
 ADDED
 =====
+
+.. code-block::
+  :caption: squared
+
+  interface FileActionConfig {
+      inherit?: boolean | "append" | "preserve" | { append?: boolean; preserve?: boolean; depth?: number };
+      dataSource?: DataSource | DataSource[];
+  }
 
 .. code-block::
   :caption: squared.base
@@ -82,12 +99,13 @@ ADDED
 
   class NodeUI {
       static baselineElement(node: NodeUI): boolean;
-      actualRect(position: PositionAttr, dimension?: BoxType): number; // Formerly abstract
+      actualRect(position: PositionAttr, dimension?: BoxType): number; // abstract
       getPositionOffset(name: "sticky"): Point;
       hasFixedDimension(dimension: DimensionAttr): boolean;
       hasOptimization(value: number): boolean;
       get afterLineBreak(): boolean;
       get wordSpacing(): number;
+      get locales(): string[] | null;
   }
 
 .. code-block::
@@ -97,17 +115,18 @@ ADDED
 
   enum STAGE_OPTIMIZATION {
       EXCLUDE = 1,
-      INHERIT = 2,
-      ALIGNMENT = 4,
-      POSITION = 8,
-      DIMENSION = 16,
-      MARGIN = 32,
-      PADDING = 64,
-      BASELINE = 128,
-      WHITESPACE = 256,
-      TRANSLATE = 512,
-      TRANSFORM = 1024,
-      SCALING = 2048
+      MERGE = 2,
+      CONTAINER = 4,
+      ALIGNMENT = 8,
+      POSITION = 16,
+      DIMENSION = 32,
+      MARGIN = 64,
+      PADDING = 128,
+      BASELINE = 256,
+      WHITESPACE = 512,
+      TRANSLATE = 1024,
+      TRANSFORM = 2048,
+      SCALING = 4096
   }
 
   /* dom */
@@ -125,6 +144,40 @@ ADDED
       };
   }
 
+  /* color */
+
+  type ColorLAB = "lab" | "lch" | "oklab" | "oklch";
+  type ColorMethod = "rgb" | "hsl" | "hwb" | ColorLAB;
+  type ColorSpaceRGB = "srgb" | "srgb-linear" | "display-p3" | "rec2020" | "a98-rgb" | "prophoto-rgb";
+  type ColorSpaceXYZ = "xyz" | "xyz-d65" | "xyz-d50";
+  type ColorCoords = ColorLAB | ColorSpaceRGB | ColorSpaceXYZ;
+  type ColorCoordinates = [number, number, number];
+
+  interface ColorRGB {
+      toString(alpha: number, precision?: number): string;
+      toString(precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
+      toString(name: ColorCoords | ColorMethod, precision: 2 | 3 | 4 | 5 | 6 | 7 | 8): string;
+      toString(name?: ColorCoords | ColorMethod, alpha?: number, precision?: number): string;
+      get lab(): ColorCoordinates;
+      get lch(): ColorCoordinates;
+      get oklab(): ColorCoordinates;
+      get oklch(): ColorCoordinates;
+      get srgb: ColorCoordinates;
+      get "srgb-linear"(): ColorCoordinates;
+      get xyz: ColorCoordinates;
+      get "xyz-d50"(): ColorCoordinates;
+      get "xyz-d65"(): ColorCoordinates;
+      get "display-p3"(): ColorCoordinates;
+      get rec2020(): ColorCoordinates;
+      get "a98-rgb"(): ColorCoordinates;
+      get "prophoto-rgb"(): ColorCoordinates;
+  }
+
+  function formatCoords(name: string, values: ColorCoordinates, alpha?: number, precision?: number): string;
+  function fromRGB(value: RGB | HSL | HWB, opacity?: number): ColorRGB;
+  function fromCoords(name: string, values: ColorCoordinates, alpha?: number, precision?: number): ColorRGB | null;
+  function setPrecision(value: number): void;
+
   /* css */
 
   function roundPx(value: number, min?: number, precision?: number): string;
@@ -134,6 +187,12 @@ ADDED
   interface BoxRectDimension {
       columns?: Dimension[] | null; // getRangeClientRect
   }
+
+  /* regex */
+
+  const STRING: {
+      CSS_COLOR_INTERPOLATION: string;
+  };
 
 .. code-block::
   :caption: android.base
@@ -146,9 +205,19 @@ ADDED
   }
 
 .. code-block::
+  :caption: android.lib.constant
+
+  const LAYOUT_RELATIVE: string[];
+  const LAYOUT_CONSTRAINT: string[];
+
+.. code-block::
   :caption: chrome.base
 
-  interface FileActionOptions {
+  interface RequestData {
+      log?: { showDiff?: string[] };
+  }
+
+  interface DocumentOutput {
       removeBinaries?: boolean;
   }
 
@@ -160,8 +229,10 @@ ADDED
       };
   }
 
-MODIFIED
-========
+.. rst-class:: release-notes
+
+CHANGED
+=======
 
 .. code-block::
   :caption: squared
@@ -189,6 +260,25 @@ MODIFIED
   }
 
 .. code-block::
+  :caption: squared.lib.color
+
+  interface ColorRGB {
+      get scheme(): "light" | "dark" | ""; // readonly
+
+      set scheme(value);
+  }
+
+  interface ColorSpace {
+      out?: string | ColorCoordinates | null; // ColorCoordinates
+  }
+
+  function convertHSLA(value: RGB, opacity?: number): HSLA; // opacity
+  function convertHWBA(value: RGB, opacity?: number): HWBA;
+  function convertRGBA(value: HSL | HWB, opacity?: number): RGBA;
+  function intoRGB(value: ColorSpace): RGB | [ColorCoords, ColorCoordinates] | null; // [ColorCoords, ColorCoordinates]
+  function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | [ColorCoords, ColorCoordinates] | null;
+
+.. code-block::
   :caption: android.base
 
   interface ExtensionComposeViewElement {
@@ -201,6 +291,8 @@ MODIFIED
   interface View {
       setLayoutPercent(value: number | string, horizontal?: boolean, includeMargin?: boolean): void; // includeMargin
   }
+
+.. rst-class:: release-notes
 
 DEPRECATED
 ==========
@@ -217,7 +309,33 @@ DEPRECATED
   }
 
 .. code-block::
+  :caption: squared.base.lib.regex
+
+  const CSS: {
+      ANGLE_G: RegExp; // Delete
+      BACKGROUNDIMAGE_G: RegExp; // Delete
+  };
+
+  const DOM: {
+      ENTITY_G: RegExp; // Renaming to ENTITY
+      AMPERSAND_G: RegExp; // Delete
+  };
+
+.. code-block::
   :caption: squared.lib
+
+  /* color */
+
+  interface ColorRGB {
+      get rgbaAsString(): string; // toString("rgb", 1)
+      get hslaAsString(): string; // toString("hsl", 1)
+      get rgbAsString(): string; // toString()
+      get hslAsString(): string; // toString("hsl")
+      get hwbAsString(): string; // toString("hwb")
+  }
+
+  function formatRGBA(value: RGB, precision?: number): string; // formatRGB
+  function formatHSLA(value: HSL, precision?: number): string; // formatHSL
 
   /* css */
 
@@ -233,3 +351,16 @@ DEPRECATED
   const OPERATION_NOT_SUPPORTED: string;
   const ELEMENT_NOT_FOUND: string;
   const CSS_CANNOT_BE_PARSED: string;
+
+  /* regex */
+
+  const CSS: {
+      HWBA: RegExp; // Renaming to HWB
+      SELECTOR_G: RegExp; // Renaming to SELECTOR
+  };
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const LAYOUT_ALIGNMENT: string[]; // LAYOUT_RELATIVE
+  const LAYOUT_ALIGNMENT_APP: string[]; // LAYOUT_CONSTRAINT
