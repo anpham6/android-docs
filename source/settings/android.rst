@@ -53,6 +53,9 @@ Interface
       manifestPackage?: string;
   }
 
+Changelog
+=========
+
 .. versionadded:: 5.3.0
 
   - **ExtensionComposeViewElement** extends the :target:`ViewAttribute` interface.

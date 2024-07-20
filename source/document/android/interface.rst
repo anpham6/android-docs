@@ -305,6 +305,9 @@ Interface
       get support(): SupportUI;
   }
 
+Changelog
+=========
+
 .. versionadded:: 5.3.0
 
   - *NodeUI* static method **baselineElement** for qualified elements was created.

@@ -104,6 +104,7 @@ ADDED
       hasOptimization(value: number): boolean;
       get afterLineBreak(): boolean;
       get wordSpacing(): number;
+      get locales(): string[] | null;
   }
 
 .. code-block::
@@ -321,12 +322,14 @@ DEPRECATED
   /* color */
 
   interface ColorRGB {
+      get rgbaAsString(): string; // toString("rgb", 1)
       get hslaAsString(): string; // toString("hsl", 1)
       get rgbAsString(): string; // toString()
       get hslAsString(): string; // toString("hsl")
       get hwbAsString(): string; // toString("hwb")
   }
 
+  function formatRGBA(value: RGB, precision?: number): string; // formatRGB
   function formatHSLA(value: HSL, precision?: number): string; // formatHSL
 
   /* css */

@@ -373,6 +373,12 @@ https://github.com/microsoft/TypeScript/blob/main/src/lib/es2015.iterable.d.ts
 MDN
 ===
 
+.. _references-mdn-intl-locales_argument:
+.. rst-class:: block-list
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument
+  | `Intl.LocalesArgument <search.html?q=Intl.LocalesArgument>`_
+
 .. _references-mdn-request-mode:
 .. rst-class:: block-list
 
