@@ -2,12 +2,12 @@
 5.1.2
 =====
 
+:right:`2023-12-23`
+
 .. toctree::
   :maxdepth: 1
 
   5.1.7
-
-:right:`2023-12-23`
 
 .. highlight:: typescript
 

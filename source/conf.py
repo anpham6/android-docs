@@ -59,4 +59,5 @@ html_context = {
   'display_github': False,
   'commit': False,
 }
+html_show_sourcelink = False
 html_show_copyright = False
