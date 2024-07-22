@@ -102,6 +102,9 @@ Interface
       updateXmlOnly?: boolean;
   }
 
+Changelog
+---------
+
 .. versionadded:: 5.3.0
 
   - *DocumentOutput* property **jvmToolchain** for :alt:`build.gradle` upgrades was created.
@@ -251,6 +254,9 @@ Interface
       unusedScope?: string[];
       unusedAtRules?: UnusedAtRule[];
   }
+
+Changelog
+---------
 
 .. versionadded:: 5.3.0
 

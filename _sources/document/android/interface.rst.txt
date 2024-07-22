@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 3,55,64,93,96,153,196-197,216
+  :emphasize-lines: 3,55,64,93,96,153,196-197,216,226-227
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -232,6 +232,8 @@ Interface
       get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
       get outerRegion(): BoxRectDimension;
+      set locales(value);
+      get locales(): string[] | null;
   }
 
   class View extends NodeUI {
@@ -305,6 +307,9 @@ Interface
       get support(): SupportUI;
   }
 
+Changelog
+=========
+
 .. versionadded:: 5.3.0
 
   - *NodeUI* static method **baselineElement** for qualified elements was created.
@@ -312,6 +317,7 @@ Interface
   - *NodeUI* method **getPositionOffset** for non-static coordinates was created.
   - *NodeUI* method **actualRect** is no longer abstract.
   - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
+  - *NodeUI* property accessor **locales** for *Intl* functionality was created.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
   - *NodeUI* property getter **wordSpacing** for trailing margin was created.
 

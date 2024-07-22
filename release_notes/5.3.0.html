@@ -7,10 +7,10 @@
   <title>5.3.0 &mdash; squared 5.2.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=2953445b" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=893c66c6" />
 
   
   <!--[if lt IE 9]>
@@ -89,7 +89,6 @@
           <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
       <li class="breadcrumb-item active">5.3.0</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/release_notes/5.3.0.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -111,7 +110,6 @@
 <span class="p">}</span>
 
 <span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">textIndent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// Detection for &quot;each-line&quot; and &quot;hanging&quot;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">plainText</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modifiable using NodeUI.setCacheState</span>
 <span class="p">}</span>
 </pre></div>
@@ -136,7 +134,7 @@
 </div>
 </div>
 </section>
-<section id="added">
+<section class="release-notes" id="added">
 <h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">squared</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
@@ -196,6 +194,7 @@
 <span class="w">    </span><span class="nx">hasOptimization</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">afterLineBreak</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">wordSpacing</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">locales</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -327,7 +326,7 @@
 </div>
 </div>
 </section>
-<section id="changed">
+<section class="release-notes" id="changed">
 <h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id11">
 <div class="code-block-caption"><span class="caption-text">squared</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
@@ -392,7 +391,7 @@
 </div>
 </div>
 </section>
-<section id="deprecated">
+<section class="release-notes" id="deprecated">
 <h2>DEPRECATED<a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id15">
 <div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
@@ -425,12 +424,14 @@
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* color */</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">rgbaAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// toString(&quot;rgb&quot;, 1)</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">hslaAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// toString(&quot;hsl&quot;, 1)</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">rgbAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// toString()</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">hslAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// toString(&quot;hsl&quot;)</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">hwbAsString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// toString(&quot;hwb&quot;)</span>
 <span class="p">}</span>
 
+<span class="kd">function</span><span class="w"> </span><span class="nx">formatRGBA</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">RGB</span><span class="p">,</span><span class="w"> </span><span class="nx">precision?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// formatRGB</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">formatHSLA</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">HSL</span><span class="p">,</span><span class="w"> </span><span class="nx">precision?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// formatHSL</span>
 
 <span class="cm">/* css */</span>

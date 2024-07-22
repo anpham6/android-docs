@@ -7,10 +7,10 @@
   <title>Interface &mdash; squared 5.2.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=2953445b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=893c66c6" />
 
   
   <!--[if lt IE 9]>
@@ -100,7 +100,6 @@
           <li class="breadcrumb-item"><a href="index.html">Android</a></li>
       <li class="breadcrumb-item active">Interface</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/document/android/interface.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -335,7 +334,9 @@
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">alignContent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;end&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformValue</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">outerRegion</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="hll"><span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">locales</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">locales</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span class="p">}</span>
 
 <span class="kd">class</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">availablePercent</span><span class="p">(</span><span class="nx">nodes</span><span class="o">:</span><span class="w"> </span><span class="kt">View</span><span class="p">[],</span><span class="w"> </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">boxSize</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">flexContainer?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
@@ -409,6 +410,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<section id="changelog">
+<h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
@@ -417,6 +420,7 @@
 <li><p><em>NodeUI</em> method <strong>getPositionOffset</strong> for non-static coordinates was created.</p></li>
 <li><p><em>NodeUI</em> method <strong>actualRect</strong> is no longer abstract.</p></li>
 <li><p><em>NodeUI</em> method <strong>hasFixedDimension</strong> was migrated from <em class="target">View</em>.</p></li>
+<li><p><em>NodeUI</em> property accessor <strong>locales</strong> for <em>Intl</em> functionality was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>afterLineBreak</strong> for start of line detection was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>wordSpacing</strong> for trailing margin was created.</p></li>
 </ul>
@@ -445,6 +449,7 @@
 <li><p><em>NodeUI</em> property getter <strong>flexColumn</strong> as <em class="alt">NodeUI.flex(“column”)</em> is pending removal.</p></li>
 </ul>
 </div>
+</section>
 </section>
 
 

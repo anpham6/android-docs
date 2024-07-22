@@ -21,7 +21,6 @@ BREAKING
   }
 
   class NodeUI {
-      get textIndent(): number; // Detection for "each-line" and "hanging"
       get plainText(): boolean; // Modifiable using NodeUI.setCacheState
   }
 
@@ -42,6 +41,8 @@ BREAKING
   const STRING: {
       CSS_COLOR_PROFILE: string; // capture group removed
   };
+
+.. rst-class:: release-notes
 
 ADDED
 =====
@@ -104,6 +105,7 @@ ADDED
       hasOptimization(value: number): boolean;
       get afterLineBreak(): boolean;
       get wordSpacing(): number;
+      get locales(): string[] | null;
   }
 
 .. code-block::
@@ -227,6 +229,8 @@ ADDED
       };
   }
 
+.. rst-class:: release-notes
+
 CHANGED
 =======
 
@@ -288,6 +292,8 @@ CHANGED
       setLayoutPercent(value: number | string, horizontal?: boolean, includeMargin?: boolean): void; // includeMargin
   }
 
+.. rst-class:: release-notes
+
 DEPRECATED
 ==========
 
@@ -321,12 +327,14 @@ DEPRECATED
   /* color */
 
   interface ColorRGB {
+      get rgbaAsString(): string; // toString("rgb", 1)
       get hslaAsString(): string; // toString("hsl", 1)
       get rgbAsString(): string; // toString()
       get hslAsString(): string; // toString("hsl")
       get hwbAsString(): string; // toString("hwb")
   }
 
+  function formatRGBA(value: RGB, precision?: number): string; // formatRGB
   function formatHSLA(value: HSL, precision?: number): string; // formatHSL
 
   /* css */

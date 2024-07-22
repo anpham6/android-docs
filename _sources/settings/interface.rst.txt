@@ -58,6 +58,9 @@ These settings are available in the global variable ``squared`` to customize you
       resolutionScreenHeight?: number;
   }
 
+Changelog
+=========
+
 .. versionadded:: 5.2.0
 
   - *UserSettings* property **adaptStyleMap** for the rendered value was created.

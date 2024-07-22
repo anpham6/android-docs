@@ -17,9 +17,10 @@ abbr.sub {
 }
 
 strong.right {
-    font-size: 115%;
     display: block;
+    font-size: 90%;
     text-align: end;
+    margin-right: 20px;
 }
 
 p:has(strong.right) {
@@ -28,5 +29,5 @@ p:has(strong.right) {
 
 section:has(p:nth-child(2) > strong.right) > :is(h1, h2):nth-child(1),
 section:has(.toctree-wrapper:nth-child(2)):has(p:nth-child(3) > strong.right) > .toctree-wrapper > ul {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
 }

@@ -240,6 +240,9 @@ Interface
       constructor(id: number, sessionId?: string, element?: Element, children?: Node[]);
   }
 
+Changelog
+=========
+
 .. versionadded:: 5.3.0
 
   - *Node* property getters **leftPos** | **rightPos** for direction precedence was created.

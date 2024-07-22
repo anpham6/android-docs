@@ -62,6 +62,7 @@ Interface
 
   interface DelegateMultilineOptions {
       mergeSingleLine: boolean;
+      intlLocales: Intl.LocaleArguments | null;
   }
 
 .. code-block::
@@ -155,6 +156,48 @@ Interface
       renderChildren: boolean;
   }
 
+Changelog
+=========
+
+.. versionadded:: 5.3.0
+
+  - *DelegateMultilineOptions* property **intlLocales** as :alt:`Intl.LocaleArguments | null` was created.
+
+.. versionadded:: 5.2.1
+
+  - *ResourceSvgOptions* property **dependencyVectorDrawable** as :alt:`string` was created.
+
+.. versionadded:: 5.2.0
+
+  - *ExtensionListOptions* properties were created:
+
+    .. hlist::
+      :columns: 3
+
+      - symbolDisc
+      - symbolSquare
+      - symbolCircle
+      - symbolDisclosureOpen
+      - symbolDisclosureClosed
+      - symbolFallback
+      - markerStyle
+
+  - *DelegateScrollbarOptions* properties were created:
+
+    .. hlist::
+      :columns: 3
+
+      - alwaysDrawHorizontalTrack
+      - alwaysDrawVerticalTrack
+      - style
+      - size
+      - thinSize
+      - fadeDuration
+      - delayBeforeFade
+
+  - *ResourceSvgOptions* properties **mergeClipPath** | **mergeVectorDrawable** as :alt:`boolean` were created.
+  - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 
+
 .. note:: These are the built-in extensions which have configurable settings.
 
 Example usage
@@ -207,38 +250,3 @@ Some extensions have a few settings which can be configured. The default setting
   ext.project.set(element, await fetch(url?id=2), "project-1");
 
   const data = ext.project.get(element, "project-2"); // Returns data from default project (id=1)
-
-.. versionadded:: 5.2.1
-
-  - *ResourceSvgOptions* properties **dependencyVectorDrawable** as :alt:`string` was created.
-
-.. versionadded:: 5.2.0
-
-  - *ExtensionListOptions* properties were created:
-
-    .. hlist::
-      :columns: 3
-
-      - symbolDisc
-      - symbolSquare
-      - symbolCircle
-      - symbolDisclosureOpen
-      - symbolDisclosureClosed
-      - symbolFallback
-      - markerStyle
-
-  - *DelegateScrollbarOptions* properties were created:
-
-    .. hlist::
-      :columns: 3
-
-      - alwaysDrawHorizontalTrack
-      - alwaysDrawVerticalTrack
-      - style
-      - size
-      - thinSize
-      - fadeDuration
-      - delayBeforeFade
-
-  - *ResourceSvgOptions* properties **mergeClipPath** | **mergeVectorDrawable** as :alt:`boolean` were created.
-  - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 

@@ -7,10 +7,10 @@
   <title>Multiline &mdash; squared 5.2.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=599d51e9" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=2953445b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=893c66c6" />
 
   
   <!--[if lt IE 9]>
@@ -100,7 +100,6 @@
           <li class="breadcrumb-item"><a href="index.html">Android</a></li>
       <li class="breadcrumb-item active">Multiline</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/document/android/multiline.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -110,17 +109,69 @@
              
   <section id="multiline">
 <h1>Multiline<a class="headerlink" href="#multiline" title="Link to this heading"></a></h1>
+<section id="intl-locales">
+<h2>Intl Locales<a class="headerlink" href="#intl-locales" title="Link to this heading"></a></h2>
+<section id="extension">
+<h3>Extension<a class="headerlink" href="#extension" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Global</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.delegate.multiline&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;intlLocales&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ja-JP&quot;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Root element</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;android.delegate.multiline&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">intlLocales</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ja-JP&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first supported locale is applied to all text elements only when there is word wrapping.</p>
+</div>
+</section>
+<section id="inline">
+<h3>Inline<a class="headerlink" href="#inline" title="Link to this heading"></a></h3>
+<p>Setting anything inline overrides all inherited global settings and can also prevent an element from being interpreted.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Source</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-intl-locales-android</span><span class="o">=</span><span class="s">&quot;ja-JP-u-ca, ja-JP&quot;</span><span class="p">&gt;</span>
+  吾輩は猫である。名前はたぬき。
+  吾輩は猫である。名前はたぬき。
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-intl-locales-android</span><span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">&gt;</span>
+  吾輩は猫である。名前はたぬき。
+  吾輩は猫である。名前はたぬき。
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">-android</span></code> suffix is optional when using only one framework.</p>
+</div>
+</section>
+</section>
+<section id="font-adjustment">
+<h2>Font Adjustment<a class="headerlink" href="#font-adjustment" title="Link to this heading"></a></h2>
 <p>Browser to device measurements are not expected to be accurate due to issues with font availability and screen resolutions. Text wrapping can be adjusted at the global and element level.</p>
 <section id="global">
-<h2>Global<a class="headerlink" href="#global" title="Link to this heading"></a></h2>
+<h3>Global<a class="headerlink" href="#global" title="Link to this heading"></a></h3>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">fontMeasureAdjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1px added per character to width</span>
 </pre></div>
 </div>
 </section>
-<section id="inline">
-<h2>Inline<a class="headerlink" href="#inline" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Source</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<section id="id1">
+<h3>Inline<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Source</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
   content content content content
   content content content content
@@ -128,8 +179,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Wrap late &lt; 0</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Wrap late &lt; 0</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-android-font-measure-adjust</span><span class="o">=</span><span class="s">&quot;-0.5&quot;</span><span class="p">&gt;</span>
   content content content content content
   content content content
@@ -137,8 +188,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Wrap early &gt; 0</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Wrap early &gt; 0</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-android-font-measure-adjust</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
   content content content
   content content content
@@ -147,8 +198,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">No adjustment = 0</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">No adjustment = 0</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-android-font-measure-adjust</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
   content content content content
   content content content content
@@ -156,8 +207,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Ignore</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Ignore</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-android-font-measure-adjust</span><span class="o">=</span><span class="s">&quot;false&quot;</span><span class="p">&gt;</span>
   content content content content content content content content
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -169,8 +220,9 @@
 <p><em>CSS</em> <code class="docutils literal notranslate"><span class="pre">initial-letter</span></code> uses the <em class="target">multiline</em> extension for detection and rendering.</p>
 </div>
 </section>
-<section id="column">
-<h2>Column<a class="headerlink" href="#column" title="Link to this heading"></a></h2>
+</section>
+<section id="column-spacing">
+<h2>Column Spacing<a class="headerlink" href="#column-spacing" title="Link to this heading"></a></h2>
 <p>The amount of spacing between words cannot be accurately measured due to the font size differences on the output device. Inline properties can be used to modify when a block of text is to be segmented into another column when using <em>CSS</em> <code class="docutils literal notranslate"><span class="pre">column-width</span></code> or <code class="docutils literal notranslate"><span class="pre">column-spacing</span></code>.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-android-column-word-spacing</span><span class="o">=</span><span class="s">&quot;0.25&quot;</span><span class="p">&gt;</span>
   content content content content
@@ -178,8 +230,8 @@
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">text-align: justify</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">text-align: justify</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">data-android-column-justify-spacing</span><span class="o">=</span><span class="s">&quot;4&quot;</span><span class="p">&gt;</span>
   content content content content
   content content content content
