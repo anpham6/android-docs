@@ -259,6 +259,10 @@ CHANGED
       get dir(): TextDirection; // "ltr" | "rtl" | ""
   }
 
+  class NodeUI {
+      renderEach(predicate: IteratorPredicate<NodeUI, void | true>): this; // true
+  }
+
 .. code-block::
   :caption: squared.lib.color
 
