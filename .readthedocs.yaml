@@ -26,10 +26,10 @@ search:
     document/android/*: 9
     framework/*: 8
     document/*: 7
-    document/vdom/interface.html: 6
     installation.html: 5
     release_notes/*: 4
     references.html: 3
+    "*/settings.html": 2
     "*/interface.html": 0
     browser.html: -1
   ignore:
