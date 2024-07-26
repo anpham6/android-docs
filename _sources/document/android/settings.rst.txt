@@ -8,7 +8,7 @@ These are the latest server default settings for the :target:`android` framework
   :caption: squared.json [#]_
 
   {
-    "apiVersion": "1.4.0",
+    "apiVersion": "1.5.0",
     "document": {
       "android": {
         "handler": "@pi-r/android",
@@ -52,36 +52,9 @@ These are the latest server default settings for the :target:`android` framework
     }
   }
 
-Interface
-=========
+References
+==========
 
-.. code-block:: typescript
-  :caption: :external+chrome:doc:`View Module <modules/document>`
-
-  interface DocumentModule {
-      handler: "@pi-r/android";
-      extensions?: string[];
-      versions?: StringMap;
-      settings?: {
-          broadcast_id?: string | string[];
-          users?: Record<string, Record<string, unknown>>;
-          extensions?: {
-              task?: {
-                  exec?: {
-                      uid?: number | string;
-                      gid?: number | string;
-                  };
-                  command?: string;
-              };
-          };
-          language?: {
-              gradle?: "java" | "kotlin" | "java+kotlin";
-          };
-          directory?: {
-              template?: string;
-          };
-      };
-      permission: PermittedDirectories;
-  }
+- https://www.unpkg.com/@pi-r/android/types/index.d.ts
 
 .. [#] https://www.unpkg.com/squared-express/dist/squared.json
