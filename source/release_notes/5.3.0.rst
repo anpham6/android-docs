@@ -292,7 +292,11 @@ CHANGED
       tools?: Record<string, string>;
   }
 
-  interface View {
+  class Resource {
+      addFontProvider(authority: string, package: string, certs: string[], webFonts: string | FontProviderFonts, verified?: boolean): Promise<boolean>; // Promise<boolean>
+  }
+
+  class View {
       setLayoutPercent(value: number | string, horizontal?: boolean, includeMargin?: boolean): void; // includeMargin
   }
 

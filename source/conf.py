@@ -9,7 +9,7 @@
 project = 'squared'
 copyright = 'squared 2024'
 author = 'An Pham'
-release = '5.2.4'
+release = '5.2.5'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -20,21 +20,28 @@ intersphinx_mapping = {
   'chrome': ('https://e-mc.readthedocs.io/en/latest', None),
 }
 
+nitpick_ignore = [
+  ('py:class', 'string'),
+  ('py:class', 'string?'),
+  ('py:class', 'number'),
+  ('py:class', 'number?'),
+  ('py:class', 'boolean'),
+  ('py:class', 'boolean?'),
+  ('py:class', 'object'),
+  ('py:class', 'object?'),
+  ('py:class', 'array'),
+  ('py:class', 'undefined'),
+  ('py:class', 'unknown'),
+  ('py:class', 'Promise<number>'),
+  ('py:class', 'Promise<boolean>'),
+]
+
 templates_path = ['_templates']
 exclude_patterns = []
 
-primary_domain = 'js'
+primary_domain = 'py'
 highlight_language = 'javascript'
 pygments_style = 'abap'
-
-nitpick_ignore = [
-  ('js:func', 'string'),
-  ('js:func', 'number'),
-  ('js:func', 'boolean'),
-  ('js:func', 'function'),
-  ('js:func', 'object'),
-  ('js:func', 'array'),
-]
 
 rst_prolog = """
 .. role:: alt(emphasis)

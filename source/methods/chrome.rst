@@ -9,7 +9,8 @@ chrome
   Forwards the target element to |Application| which will stop it from being monitored for changes.
 
   :param element: *HTMLElement* instance
-  :returns: boolean
+  :returns: Success when observed
+  :rtype: boolean
 
   Usage::
 
