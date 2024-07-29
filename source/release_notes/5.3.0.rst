@@ -15,7 +15,7 @@ BREAKING
   :caption: squared.base
 
   class Node {
-      toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Uses Node.valueOf without options
+      toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Without options uses Node.valueOf and not Node.cssInitial
       toInt(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number;
       get plainText(): boolean; // Set in the constructor
   }
