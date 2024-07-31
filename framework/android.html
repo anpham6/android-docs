@@ -4,13 +4,13 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Android &mdash; squared 5.2.4 documentation</title>
+  <title>Android &mdash; squared 5.2.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=8f183172" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=e4318fd4" />
 
   
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/documentation_options.js?v=75d7ccae"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -94,10 +94,10 @@
              
   <section id="android">
 <h1>Android<a class="headerlink" href="#android" title="Link to this heading"></a></h1>
-<p>The primary function <a class="reference internal" href="../methods/squared.html#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.</p>
+<p>The primary function <a class="reference internal" href="../methods/squared.html#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> can be called on multiple elements and multiple times per session. The application will continuously and progressively build the layout files into a single entity with combined shared resources.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Calling <a class="reference internal" href="../methods/squared.html#saveAs" title="saveAs"><code class="xref js js-func docutils literal notranslate"><span class="pre">saveAs()</span></code></a> or <a class="reference internal" href="../methods/squared.html#copyTo" title="copyTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">copyTo()</span></code></a> methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous <a class="reference internal" href="../methods/squared.html#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> and not <a class="reference internal" href="../methods/squared.html#parseDocumentSync" title="parseDocumentSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocumentSync()</span></code></a>.</p>
+<p>Calling <a class="reference internal" href="../methods/squared.html#saveAs" title="saveAs"><code class="xref py py-func docutils literal notranslate"><span class="pre">saveAs()</span></code></a> or <a class="reference internal" href="../methods/squared.html#copyTo" title="copyTo"><code class="xref py py-func docutils literal notranslate"><span class="pre">copyTo()</span></code></a> methods before the images or fonts have completely loaded can cause them to be excluded from the generated layout. In these cases you should use the asynchronous <a class="reference internal" href="../methods/squared.html#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> and not <a class="reference internal" href="../methods/squared.html#parseDocumentSync" title="parseDocumentSync"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocumentSync()</span></code></a>.</p>
 </div>
 <section id="example-usage">
 <h2>Example usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>

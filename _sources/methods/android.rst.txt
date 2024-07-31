@@ -8,8 +8,9 @@ android
 
   Imports to be used for layout bindings associated by session.
 
-  :param object data: See |AppViewModel|
-  :param string sessionId: (optional) Names a session to be used for storage
+  :param data: Dictionary of imports and variables
+  :type data: |AppViewModel|
+  :param string? sessionId: Names a session to be used for storage
 
   Usage::
 
@@ -27,8 +28,9 @@ android
 
   Imports to be used for layout bindings associated by project.
 
-  :param object data: See |AppViewModel|
-  :param string projectId: (optional) |projectId|
+  :param data: Dictionary of imports and variables
+  :type data: |AppViewModel|
+  :param string? projectId: |projectId|
 
   Usage::
 
@@ -47,9 +49,10 @@ android
 
   :param string group: Namespace of library
   :param string name: Componenent name in library
-  :param string version: (:sub:`optional (type)`) Exact version requested
-  :param number type: (optional) Dependency namespace method in Gradle
-  :returns: string
+  :param string version: |VersionDependency|
+  :param number? type: |GradleDependency|
+  :returns: Dictionary key or ""
+  :rtype: string
   :requirements:
     - **createBuildDependencies** = *true*
 
@@ -70,9 +73,10 @@ android
   :param string projectId: |projectId|
   :param string group: Namespace of library
   :param string name: Componenent name in library
-  :param string version: (:sub:`optional (type)`) Exact version requested
-  :param number type: (optional) Dependency namespace method in Gradle
-  :returns: string
+  :param string version: |VersionDependency|
+  :param number? type: |GradleDependency|
+  :returns: Dictionary key or ""
+  :rtype: string
   :requirements:
     - **createBuildDependencies** = *true*
 
@@ -94,7 +98,8 @@ android
   :param string package: Namespace of font provider
   :param array certs: List of certificates the font provider is signed with
   :param string webFonts: Web font service URL
-  :returns: boolean | Promise<boolean>
+  :returns: Success when installed
+  :rtype: Promise<boolean>
   :requirements:
     - **targetAPI** >= *26*
     - **createDownloadableFonts** = *true*
@@ -140,7 +145,8 @@ android
   :param number api: Android SDK build API version
   :param string widget: Namespace of layout control
   :param object options: Attributes to be applied to control
-  :returns: Record<string, StringMap> | undefined
+  :returns: Current state of API and widget
+  :rtype: object or undefined
   :requirements:
     - **customizationsBaseAPI** >= *0*
     - **customizationsOverwritePrivilege** = *true*
@@ -286,7 +292,8 @@ android
   The exact configuration for each device can be found in the latest Android Studio.
 
   :param string name: Predefined device name or generic layout
-  :returns: boolean
+  :returns: Success when applied
+  :rtype: boolean
 
   Usage::
 
@@ -302,7 +309,8 @@ android
 
   Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to :func:`parseDocument`.
 
-  :returns: |ControllerSettingsUI|
+  :returns: Current modifiable state of settings
+  :rtype: |ControllerSettingsUI|
 
   Usage::
 
@@ -317,7 +325,8 @@ android
   Forwards the target element to |Application| which will stop it from being monitored for changes.
 
   :param element: *HTMLElement* instance
-  :returns: boolean
+  :returns: Success when observed
+  :rtype: boolean
 
   Usage::
 
@@ -329,6 +338,8 @@ android
     android.removeObserver(document.body);
 
 .. |projectId| replace:: Names a project to be used for storage
+.. |GradleDependency| replace:: Dependency namespace method in Gradle
+.. |VersionDependency| replace:: (:sub:`optional (type)`) Exact version requested
 .. |AppViewModel| replace:: :ref:`AppViewModel <references-android-main>`
 .. |Application| replace:: :ref:`Application <references-squared-base>`
 .. |ControllerSettingsUI| replace:: :ref:`ControllerSettingsUI <references-android-application>`

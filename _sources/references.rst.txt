@@ -121,6 +121,7 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `TaskCommand <search.html?q=TaskCommand>`_
   | `WatchInterval <search.html?q=WatchInterval>`_
   | `WebSocketClient <search.html?q=WebSocketClient>`_
+  | `WebSocketMessageChange <search.html?q=WebSocketMessageChange>`_
 
 .. _references-squared-base-options:
 .. rst-class:: block-list

@@ -18,7 +18,7 @@ squared
 
   Set alternate pathname for API v1 functions.
 
-  :param string name: *ASSETS_COPY* | *ASSETS_ARCHIVE* | *LOADER_DATA* | *THREADS_KILL* | *WEBSOCKET_OBSERVE*
+  :param string name: "ASSETS_COPY" or "ASSETS_ARCHIVE" or "LOADER_DATA" or "THREADS_KILL" or "WEBSOCKET_OBSERVE"
   :param string value: Absolute path to server *GET/POST* method
 
   Usage::
@@ -53,9 +53,10 @@ squared
 
   Abort request if not completed in the given amount of time.
 
-  :param number pid: (optional) File request self-assigned number :alt:`(options.pid)`
-  :param number timeout: (optional) Seconds until request expires
-  :returns: Promise<number>
+  :param number? pid: File request self-assigned number :alt:`(options.pid)`
+  :param number? timeout: Seconds until request expires
+  :returns: PID of 1 or greater when successful
+  :rtype: Promise<number>
 
   Usage::
 
@@ -81,9 +82,11 @@ squared
 
   Redirect stdout messages to DevTools console.
 
-  :param function callback: See |BroadcastMessageCallback|
+  :param callback: Void function for incoming data
+  :type callback: |BroadcastMessageCallback|
   :param string socketId: Unique identifier assigned during server initialization
-  :returns: boolean
+  :returns: Success when connection established
+  :rtype: boolean
 
   Usage::
 
@@ -116,9 +119,10 @@ squared
 
   Install application interpreter. :alt:`(e.g. android.framework.js)`
 
-  :param object target: Global object implementing |AppFramework|
-  :param object options: (optional) Initialize settings with non-default values
-  :param boolean cache: (optional) Load previous cached instance and settings
+  :param target: Global object implementation of base functionality
+  :type target: |AppFramework|
+  :param object? options: Initialize settings with non-default values
+  :param boolean? cache: Load previous cached instance and settings
 
   Usage::
 
@@ -139,7 +143,8 @@ squared
   Add functions and initial variables to the |Node| prototype including overwriting preexisting class definitions. Accessor properties are supported using the *get/set* object syntax.
 
   :param object map: Attribute object consisting of extensions and overrides
-  :param number framework: (optional) See |APP_FRAMEWORK|
+  :param framework: Bit mask of supported frameworks
+  :type framework: |APP_FRAMEWORK|?
 
   Usage::
 
@@ -186,9 +191,10 @@ squared
 
   Include extensions to be processed with any built-in extensions.
 
-  :param targets: Name of disabled extension or control implementing |Extension|
-  :param targets: Tuple of extension and configuration object
-  :returns: number
+  :param targets: Name of disabled extension or control implementing |Extension|. With a configuration object use a tuple wrapper.
+  :type targets: string or |Extension| or \[string \| |Extension|, object\]
+  :returns: Number of extensions to be installed
+  :rtype: number
 
   Usage:
 
@@ -228,7 +234,8 @@ squared
   Exclude extensions by name or control.
 
   :param targets: Name or control of extensions
-  :returns: number
+  :returns: Number of extensions removed
+  :rtype: number
 
   Usage::
 
@@ -244,8 +251,9 @@ squared
   Retrieve extensions by name only.
 
   :param string targets: Name of extension
-  :returns:
-    - |Extension| | undefined
+  :returns: Installed extensions in current framework
+  :rtype:
+    - |Extension| or undefined
     - |Extension|\[\] :alt:`(multiple)`
 
   Usage::
@@ -263,7 +271,8 @@ squared
   :param target: Name or control of extension
   :param string name: Name of attribute in |Extension|.options
   :param value: Any value of an existing attribute
-  :returns: unknown
+  :returns: Resultant value of attempted action
+  :rtype: unknown
 
   Usage::
 
@@ -280,8 +289,9 @@ squared
 
   :param target: Name or control of extension
   :param object options: Overriding configuration values
-  :param string setting: (optional) Name to use when saving to local storage
-  :returns: boolean
+  :param string? setting: Name to use when saving to local storage
+  :returns: Success when modified
+  :rtype: boolean
 
   Usage::
 
@@ -309,10 +319,12 @@ squared
 
   Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for *CSS*.
 
-  :param string type: *css* | *javascript* | *image* | *svg*
-  :param boolean all: (:sub:`optional (targets)`) Accept request from any origin
-  :param targets: (optional) URL string or root element of a contained Document
-  :returns: Promise<|PrefetchItem|\[\]>
+  :param string type: *css* or *javascript* or *image* or *svg*
+  :param boolean? all: (:sub:`optional (targets)`) Accept request from any origin
+  :param targets: URL string or root element of a contained Document
+  :type targets: string? or *Element*?
+  :returns: Data as string or Blob of each resource
+  :rtype: Promise<|PrefetchItem|\[\]>
 
   Usage::
 
@@ -329,10 +341,11 @@ squared
 
   Starts at the root target element and creates a virtual *DOM* structure by cascading into all the children. Assets can be preloaded :alt:`(e.g. images)` which is required with the :doc:`android </framework/android>` framework.
 
-  :param elements: (optional) |targetElement|
-  :param elements: (optional) See |ElementSettings|
-  :returns:
-    - Promise<|Node| | void>
+  :param elements: |targetElement|
+  :type elements: string or *HTMLElement* or |ElementSettings|
+  :returns: Root element of document as *Node* instance
+  :rtype:
+    - Promise<|Node|> or Promise<void>
     - Promise<|Node|\[\]> :alt:`(multiple)`
 
   Usage::
@@ -350,10 +363,11 @@ squared
 
   Starts at the root target element and creates a virtual *DOM* structure by cascading into all the children. No assets are preloaded which is sufficient for the :doc:`vdom </framework/vdom>` framework.
 
-  :param elements: (optional) |targetElement|
-  :param elements: (optional) See |ElementSettings|
-  :returns:
-    - |Node| | undefined
+  :param elements: |targetElement|
+  :type elements: string or *HTMLElement* or |ElementSettings|
+  :returns: Root element of document as *Node* instance
+  :rtype:
+    - |Node| or undefined
     - |Node|\[\] :alt:`(multiple)`
 
   Usage::
@@ -367,10 +381,11 @@ squared
   Can be used before saving rendered document to modify auto-generated |Node| attributes.
 
   :param target: |targetElement| (selectors are supported)
-  :param boolean all: (:sub:`optional (projectId)`) Uses filter to return multiple results
-  :param string projectId: (optional) Uses an existing project in the current framework
-  :returns:
-    - |Node| | undefined
+  :param boolean? all: (:sub:`optional (projectId)`) Uses filter to return multiple results
+  :param string? projectId: Uses an existing project in the current framework
+  :returns: |resultElement|
+  :rtype:
+    - |Node| or undefined
     - |Node|\[\] :alt:`(all)`
 
   Usage::
@@ -390,8 +405,9 @@ squared
 
   Get any stored session ids from :func:`parseDocument` since the last time :func:`clear` was called.
 
-  :param number count: (optional) How many ids at most to be retrieved
-  :returns: string | string[] | undefined
+  :param number? count: How many ids at most to be retrieved
+  :returns: List of sequential ids
+  :rtype: string or string[] or undefined
 
   Usage::
 
@@ -407,8 +423,9 @@ squared
 
   Ends the current session or selected project preventing any further modifications. It is called internally when saving or copying.
 
-  :param string projectId: (optional) Targets a project that is not the latest
-  :returns: Promise<boolean>
+  :param string? projectId: Targets a project that is not the latest
+  :returns: Success when in finalizable state
+  :rtype: Promise<boolean>
 
   Usage::
 
@@ -418,7 +435,7 @@ squared
 
   Abandons all stored projects and sets a loaded |Application| to its initial state. The current user settings are retained.
 
-  :param string projectId: (optional) Targets a project that is not the latest
+  :param string? projectId: Targets a project that is not the latest
 
   Usage::
 
@@ -428,9 +445,10 @@ squared
 
   Uses the default |Application|.settings to generate an archive of the current session or selected project.
 
-  :param string projectId: (optional) Targets a project that is not the default project
-  :param number timeout: (optional) Maximum time in seconds for build to complete
-  :returns: |ResponseData|
+  :param string? projectId: Targets a project that is not the default project
+  :param number? timeout: Maximum time in seconds for build to complete
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -448,10 +466,12 @@ squared
   Save current session or selected project as a new archive using *filename* extension.
 
   :param string filename: Name of file with a valid archive extension
-  :param object options: (optional) See |FileActionOptions|
-  :param string setting: (optional) Name of setting for local storage
-  :param boolean overwrite: (optional) Will not merge previously saved settings with *options*
-  :returns: |ResponseData|
+  :param options: Object of framework specific functionality to be applied
+  :param string? setting: Name of setting for local storage
+  :param boolean? overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|?
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -476,10 +496,12 @@ squared
   Save current session or selected project into a copy of an existing archive if found or as a new archive using the file extension.
 
   :param string uri: Location of file with a valid archive extension
-  :param object options: (optional) See |FileActionOptions|
-  :param string setting: (optional) Name of setting for local storage
-  :param boolean overwrite: (optional) Will not merge previously saved settings with *options*
-  :returns: |ResponseData|
+  :param options: Object of framework specific functionality to be applied
+  :param string? setting: Name of setting for local storage
+  :param boolean? overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|?
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -505,10 +527,12 @@ squared
   Save current session or selected project to a local directory.
 
   :param string pathname: Location of a directory accessible to the server process
-  :param object options: (optional) See |FileActionOptions|
-  :param string setting: (optional) Name of setting for local storage
-  :param boolean overwrite: (optional) Will not merge previously saved settings with *options*
-  :returns: |ResponseData|
+  :param options: Object of framework specific functionality to be applied
+  :param string? setting: Name of setting for local storage
+  :param boolean? overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|?
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -535,10 +559,12 @@ squared
   Save selected assets as a new archive using *filename* extension.
 
   :param string filename: Name of file with a valid archive extension
-  :param object options: (optional) See |FileActionOptions|
-  :param string setting: (optional) Name of setting for local storage
-  :param boolean overwrite: (optional) Will not merge previously saved settings with *options*
-  :returns: |ResponseData|
+  :param options: Object of file saving functionality to be applied
+  :param string? setting: Name of setting for local storage
+  :param boolean? overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|?
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -547,17 +573,16 @@ squared
         {
           pathname: "images",
           filename: "android.png",
-          uri: "http://localhost:3000/common/images/android.png"
+          uri: "http://localhost:3000/common/images/android.png" // ./images/android.png
         },
         {
           pathname: "images",
-          filename: "android-ldpi.png",
-          uri: "http://localhost:3000/common/images/android-ldpi.png"
+          uri: "http://localhost:3000/common/images/android-ldpi.png", // ./images/android-ldpi.png
+          document: undefined
         },
         {
-          pathname: "images",
-          filename: "android-hdpi.png",
-          uri: "http://localhost:3000/common/images/android-hdpi.png"
+          uri: "http://localhost:3000/common/images/android-hdpi.png", // ./android-hdpi.png
+          document: undefined
         }
       ]
     };
@@ -576,10 +601,12 @@ squared
   Save selected assets into a copy of an existing archive if found or as a new archive using the file extension.
 
   :param string uri: Location of file with a valid archive extension
-  :param object options: (optional) See |FileActionOptions|
-  :param string setting: (optional) Name of setting for local storage
-  :param boolean overwrite: (optional) Will not merge previously saved settings with *options*
-  :returns: |ResponseData|
+  :param options: Object of file appending functionality to be applied
+  :param string? setting: Name of setting for local storage
+  :param boolean? overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|?
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -588,17 +615,14 @@ squared
       assets: [
         {
           pathname: "images",
-          filename: "android-xhdpi.png",
           uri: "http://localhost:3000/common/images/android-xhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxxhdpi.png"
         }
       ]
@@ -618,10 +642,12 @@ squared
   Save selected assets to a local directory.
 
   :param string pathname: Location of a directory accessible to the server process
-  :param object options: (optional) See |FileActionOptions|
-  :param string setting: (optional) Name of setting for local storage
-  :param boolean overwrite: (optional) Will not merge previously saved settings with *options*
-  :returns: |ResponseData|
+  :param options: Object of file copying functionality to be applied
+  :param string? setting: Name of setting for local storage
+  :param boolean? overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|?
+  :returns: Server response of requested action
+  :rtype: |ResponseData|
 
   Usage::
 
@@ -629,17 +655,14 @@ squared
       assets: [
         {
           pathname: "images",
-          filename: "android-xhdpi.png",
           uri: "http://localhost:3000/common/images/android-xhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxxhdpi.png"
         }
       ]
@@ -661,8 +684,9 @@ squared
 
   Writes the system name of the currently installed non-UI framework.
 
-  :param string projectId: (optional) Targets a project that is not the default project
-  :returns: string
+  :param string? projectId: Targets a project that is not the default project
+  :returns: Framework defined :alt:`(UI)` or system name
+  :rtype: string
 
   Usage::
 
@@ -681,11 +705,12 @@ squared
   Same behavior as native ``document.getElementById`` [#]_ except returns a |Node| instance.
 
   :param string value: Case-sensitive match against *Element*.id property
-  :param boolean sync: (optional) Will block and not wrap query in a Promise
-  :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns:
-    - Promise<|Node| | null>
-    - |Node| | null :alt:`(sync)`
+  :param boolean? sync: Will block and not wrap query in a Promise
+  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :returns: |resultElement|
+  :rtype:
+    - Promise<|Node|> or Promise<null>
+    - |Node| or null :alt:`(sync)`
 
   Usage::
 
@@ -699,11 +724,12 @@ squared
   Same behavior as native ``document.querySelector`` [#]_ except returns a |Node| instance.
 
   :param string selector: Selector or selectors matching one or more elements
-  :param boolean sync: (optional) Will block and not wrap query in a Promise
-  :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns:
-    - Promise<|Node| | null>
-    - |Node| | null :alt:`(sync)`
+  :param boolean? sync: Will block and not wrap query in a Promise
+  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :returns: |resultElement|
+  :rtype:
+    - Promise<|Node|> or Promise<null>
+    - |Node| or null :alt:`(sync)`
 
   Usage::
 
@@ -720,11 +746,12 @@ squared
   Same behavior as native ``document.querySelectorAll`` [#]_ except returns an array of |Node| instances.
 
   :param string selector: Selector or selectors matching one or more elements
-  :param boolean sync: (optional) Will block and not wrap query in a Promise
-  :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns:
-    - Promise<|Node|\[\] | null>
-    - |Node|\[\] | null :alt:`(sync)`
+  :param boolean? sync: Will block and not wrap query in a Promise
+  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :returns: |resultElement|
+  :rtype:
+    - Promise<|Node|\[\]> or Promise<null>
+    - |Node|\[\] or null :alt:`(sync)`
 
   Usage::
 
@@ -737,11 +764,12 @@ squared
   Same behavior as :func:`getElementById` except it also accepts a native *Element*. The **cache** parameter by default is not enabled.
 
   :param element: |targetElement|
-  :param boolean sync: (optional) Will block and not wrap query in a Promise
-  :param boolean cache: (optional) Use any existing |Node| instance of *Element*
-  :returns:
-    - Promise<|Node|\[\] | null>
-    - |Node|\[\] | null :alt:`(sync)`
+  :param boolean? sync: Will block and not wrap query in a Promise
+  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :returns: |resultElement|
+  :rtype:
+    - Promise<|Node|> or Promise<null>
+    - |Node| or null :alt:`(sync)`
 
   Usage::
 
@@ -754,12 +782,14 @@ squared
 
   Uses an existing |Node| instance and creates a new instance with any modifications. The **cache** parameter by default is not enabled.
 
-  :param object node: See |Node|
-  :param boolean sync: (optional) Will block and not wrap query in a Promise
-  :param boolean cache: (optional) Use any existing |Node| instance
-  :returns:
-    - Promise<|Node|\[\] | null>
-    - |Node|\[\] | null :alt:`(sync)`
+  :param node: Reference to a *Node*
+  :param boolean? sync: Will block and not wrap query in a Promise
+  :param boolean? cache: Use any existing *Node* instance
+  :type node: |Node|
+  :returns: |resultElement|
+  :rtype:
+    - Promise<|Node|> or Promise<null>
+    - |Node| or null :alt:`(sync)`
 
   Usage::
 
@@ -773,7 +803,7 @@ squared
 
   Uses |MutationObserver| to watch for any changes to the :func:`parseDocument` root element. Start after *DOM* and third-party libraries are initialized.
 
-  :param boolean enable: (optional) Start or stop all root elements who are monitoring
+  :param boolean? enable: Start or stop all root elements who are monitoring
 
   Usage::
 
@@ -810,9 +840,12 @@ squared
   Can be used to watch external elements which contain modifiable source files.
 
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
-  :param function callback: (:alt:`optional (options)`) Method to call when a ``modified`` event is received
-  :param object options: (optional) See |FileObserveOptions|
-  :returns: Promise<|ObserveSocket| | |ObserveSocket|\[\]>
+  :param callback: (:sub:`optional (options)`) Function to call when a ``modified`` event is received
+  :param options: Connection attributes overrides sent to server
+  :type callback: |WebSocketMessageChange|?
+  :type options: |FileObserveOptions|?
+  :returns: Connected locations with external source
+  :rtype: Promise<|ObserveSocket|> or Promise<|ObserveSocket|\[\]>
 
   Usage::
 
@@ -833,6 +866,7 @@ squared
     await squared.observeSrc("link[rel=stylesheet]"); // Will call location.reload()
 
 .. |targetElement| replace:: *Element* target by either an ``id`` string or *HTMLElement*
+.. |resultElement| replace:: Target element(s) as *Node* instance
 .. |Application| replace:: :ref:`Application <references-squared-base>`
 .. |Node| replace:: :ref:`Node <references-squared-base>`
 .. |Extension| replace:: :ref:`Extension <references-squared-base>`
@@ -846,6 +880,7 @@ squared
 .. |PrefetchItem| replace:: :ref:`PrefetchItem <references-squared-main>`
 .. |MutationObserver| replace:: :ref:`MutationObserver <references-typescript-dom-generated>`
 .. |FileObserveOptions| replace:: :ref:`FileObserveOptions <references-squared-main>`
+.. |WebSocketMessageChange| replace:: :ref:`WebSocketMessageChange <references-squared-base-file>`
 
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/getElementById
 .. [#] https://developer.mozilla.org/docs/Web/API/Document/querySelector

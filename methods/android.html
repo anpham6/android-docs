@@ -4,13 +4,13 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>android &mdash; squared 5.2.4 documentation</title>
+  <title>android &mdash; squared 5.2.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=8f183172" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=e4318fd4" />
 
   
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/documentation_options.js?v=75d7ccae"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -107,15 +107,15 @@
              
   <section id="module-android">
 <span id="android"></span><h1>android<a class="headerlink" href="#module-android" title="Link to this heading"></a></h1>
-<dl class="js function">
-<dt class="sig sig-object js" id="android.setViewModel">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewModel</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sessionId</span> <span class="pre">=</span> <span class="pre">&quot;0&quot;</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.setViewModel" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.setViewModel">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">setViewModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sessionId</span> <span class="pre">=</span> <span class="pre">&quot;0&quot;</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.setViewModel" title="Link to this definition"></a></dt>
 <dd><p>Imports to be used for layout bindings associated by session.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – See <a class="reference internal" href="../references.html#references-android-main"><span class="std std-ref">AppViewModel</span></a></p></li>
-<li><p><strong>sessionId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Names a session to be used for storage</p></li>
+<li><p><strong>data</strong> (<a class="reference internal" href="../references.html#references-android-main"><span class="std std-ref">AppViewModel</span></a>) – Dictionary of imports and variables</p></li>
+<li><p><strong>sessionId</strong> (<em>string?</em>) – Names a session to be used for storage</p></li>
 </ul>
 </dd>
 </dl>
@@ -133,15 +133,15 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.setViewModelByProject">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewModelByProject</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">projectId</span> <span class="pre">=</span> <span class="pre">&quot;_&quot;</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.setViewModelByProject" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.setViewModelByProject">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">setViewModelByProject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">projectId</span> <span class="pre">=</span> <span class="pre">&quot;_&quot;</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.setViewModelByProject" title="Link to this definition"></a></dt>
 <dd><p>Imports to be used for layout bindings associated by project.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – See <a class="reference internal" href="../references.html#references-android-main"><span class="std std-ref">AppViewModel</span></a></p></li>
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Names a project to be used for storage</p></li>
+<li><p><strong>data</strong> (<a class="reference internal" href="../references.html#references-android-main"><span class="std std-ref">AppViewModel</span></a>) – Dictionary of imports and variables</p></li>
+<li><p><strong>projectId</strong> (<em>string?</em>) – Names a project to be used for storage</p></li>
 </ul>
 </dd>
 </dl>
@@ -158,24 +158,27 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.addDependency">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addDependency</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.addDependency" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.addDependency">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">addDependency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.addDependency" title="Link to this definition"></a></dt>
 <dd><p>Include a dependency by group and name to an existing or newly created <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>. Uses the default project “_” for storage. Any existing dependency with the same group and name will be overwritten.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>group</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of library</p></li>
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Componenent name in library</p></li>
-<li><p><strong>version</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (<abbr class="sub" title="type">optional</abbr>) Exact version requested</p></li>
-<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Dependency namespace method in Gradle</p></li>
+<li><p><strong>group</strong> (<em>string</em>) – Namespace of library</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Componenent name in library</p></li>
+<li><p><strong>version</strong> (<em>string</em>) – (<abbr class="sub" title="type">optional</abbr>) Exact version requested</p></li>
+<li><p><strong>type</strong> (<em>number?</em>) – Dependency namespace method in Gradle</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>string</p>
+<dd class="field-even"><p>Dictionary key or “”</p>
 </dd>
-<dt class="field-odd">Requirements<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">Requirements<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>createBuildDependencies</strong> = <em>true</em></p></li>
 </ul>
 </dd>
@@ -192,25 +195,28 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.addDependencyByProject">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addDependencyByProject</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.addDependencyByProject" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.addDependencyByProject">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">addDependencyByProject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#android.addDependencyByProject" title="Link to this definition"></a></dt>
 <dd><p>Include a dependency to a project by group and name of an existing or newly created <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>. Any existing dependency in the project with the same group and name will be overwritten.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Names a project to be used for storage</p></li>
-<li><p><strong>group</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of library</p></li>
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Componenent name in library</p></li>
-<li><p><strong>version</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (<abbr class="sub" title="type">optional</abbr>) Exact version requested</p></li>
-<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Dependency namespace method in Gradle</p></li>
+<li><p><strong>projectId</strong> (<em>string</em>) – Names a project to be used for storage</p></li>
+<li><p><strong>group</strong> (<em>string</em>) – Namespace of library</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Componenent name in library</p></li>
+<li><p><strong>version</strong> (<em>string</em>) – (<abbr class="sub" title="type">optional</abbr>) Exact version requested</p></li>
+<li><p><strong>type</strong> (<em>number?</em>) – Dependency namespace method in Gradle</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>string</p>
+<dd class="field-even"><p>Dictionary key or “”</p>
 </dd>
-<dt class="field-odd">Requirements<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">Requirements<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>createBuildDependencies</strong> = <em>true</em></p></li>
 </ul>
 </dd>
@@ -227,24 +233,27 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.addFontProvider">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addFontProvider</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webFonts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.addFontProvider" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.addFontProvider">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">addFontProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webFonts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.addFontProvider" title="Link to this definition"></a></dt>
 <dd><p>Add additional <a class="reference external" href="https://developer.android.com/develop/ui/views/text-and-emoji/downloadable-fonts#using-downloadable-fonts-as-resources">Web fonts</a> that can be searched for when resolving first available font family. <a class="reference external" href="https://developers.google.com/fonts/docs/developer_api">Google Fonts</a> is already included.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>authority</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Class of font provider library</p></li>
-<li><p><strong>package</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of font provider</p></li>
-<li><p><strong>certs</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">array()</span></code></span>) – List of certificates the font provider is signed with</p></li>
-<li><p><strong>webFonts</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Web font service URL</p></li>
+<li><p><strong>authority</strong> (<em>string</em>) – Class of font provider library</p></li>
+<li><p><strong>package</strong> (<em>string</em>) – Namespace of font provider</p></li>
+<li><p><strong>certs</strong> (<em>array</em>) – List of certificates the font provider is signed with</p></li>
+<li><p><strong>webFonts</strong> (<em>string</em>) – Web font service URL</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boolean | Promise&lt;boolean&gt;</p>
+<dd class="field-even"><p>Success when installed</p>
 </dd>
-<dt class="field-odd">Requirements<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;boolean&gt;</p>
+</dd>
+<dt class="field-even">Requirements<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>targetAPI</strong> &gt;= <em>26</em></p></li>
 <li><p><strong>createDownloadableFonts</strong> = <em>true</em></p></li>
 </ul>
@@ -261,15 +270,15 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.addXmlNs">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addXmlNs</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.addXmlNs" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.addXmlNs">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">addXmlNs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.addXmlNs" title="Link to this definition"></a></dt>
 <dd><p>Aliases of global namespaces for third-party controls used when resolving layout attributes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Prefix to be used with attribute</p></li>
-<li><p><strong>uri</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Full URL namespace of schema</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Prefix to be used with attribute</p></li>
+<li><p><strong>uri</strong> (<em>string</em>) – Full URL namespace of schema</p></li>
 </ul>
 </dd>
 </dl>
@@ -291,23 +300,26 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.customize">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">customize</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.customize" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.customize">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">customize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.customize" title="Link to this definition"></a></dt>
 <dd><p>Global attributes to be applied to every qualifying layout control possibly overwriting any auto-generated attributes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>api</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – Android SDK build API version</p></li>
-<li><p><strong>widget</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Namespace of layout control</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Attributes to be applied to control</p></li>
+<li><p><strong>api</strong> (<em>number</em>) – Android SDK build API version</p></li>
+<li><p><strong>widget</strong> (<em>string</em>) – Namespace of layout control</p></li>
+<li><p><strong>options</strong> (<em>object</em>) – Attributes to be applied to control</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Record&lt;string, StringMap&gt; | undefined</p>
+<dd class="field-even"><p>Current state of API and widget</p>
 </dd>
-<dt class="field-odd">Requirements<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>object or undefined</p>
+</dd>
+<dt class="field-even">Requirements<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>customizationsBaseAPI</strong> &gt;= <em>0</em></p></li>
 <li><p><strong>customizationsOverwritePrivilege</strong> = <em>true</em></p></li>
 </ul>
@@ -334,15 +346,13 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.loadCustomizations">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">loadCustomizations</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.loadCustomizations" title="Link to this definition"></a></dt>
-<dd><p>Will merge any saved customizations from the same origin. Any previous calls to <a class="reference internal" href="#android.customize" title="android.customize"><code class="xref js js-func docutils literal notranslate"><span class="pre">android.customize()</span></code></a> may be overwritten.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.loadCustomizations">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">loadCustomizations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.loadCustomizations" title="Link to this definition"></a></dt>
+<dd><p>Will merge any saved customizations from the same origin. Any previous calls to <a class="reference internal" href="#android.customize" title="android.customize"><code class="xref py py-func docutils literal notranslate"><span class="pre">android.customize()</span></code></a> may be overwritten.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Unique identifier to be used for local storage</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Unique identifier to be used for local storage</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -370,15 +380,13 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.saveCustomizations">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">saveCustomizations</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.saveCustomizations" title="Link to this definition"></a></dt>
-<dd><p>Any valid customizations created using <a class="reference internal" href="#android.customize" title="android.customize"><code class="xref js js-func docutils literal notranslate"><span class="pre">android.customize()</span></code></a> will be saved to local storage.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.saveCustomizations">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">saveCustomizations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.saveCustomizations" title="Link to this definition"></a></dt>
+<dd><p>Any valid customizations created using <a class="reference internal" href="#android.customize" title="android.customize"><code class="xref py py-func docutils literal notranslate"><span class="pre">android.customize()</span></code></a> will be saved to local storage.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Unique identifier to be used for local storage</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Unique identifier to be used for local storage</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -398,9 +406,9 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.resetCustomizations">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">resetCustomizations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#android.resetCustomizations" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.resetCustomizations">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">resetCustomizations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#android.resetCustomizations" title="Link to this definition"></a></dt>
 <dd><p>All customizations currently being used are deleted. Saved customizations in local storage are not affected.</p>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">resetCustomizations</span><span class="p">();</span>
@@ -408,9 +416,9 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.setResolutionByDeviceName">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setResolutionByDeviceName</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.setResolutionByDeviceName" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.setResolutionByDeviceName">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">setResolutionByDeviceName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.setResolutionByDeviceName" title="Link to this definition"></a></dt>
 <dd><p>Sets the resolution when converting browser dimensions into Android device dimensions.</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p>Phone</p></li>
@@ -470,13 +478,14 @@
 </td></tr></table>
 <p>The exact configuration for each device can be found in the latest Android Studio.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Predefined device name or generic layout</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Predefined device name or generic layout</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boolean</p>
+<dd class="field-even"><p>Success when applied</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -491,13 +500,16 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.getLocalSettings">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getLocalSettings</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#android.getLocalSettings" title="Link to this definition"></a></dt>
-<dd><p>Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to <a class="reference internal" href="squared.html#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.getLocalSettings">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">getLocalSettings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#android.getLocalSettings" title="Link to this definition"></a></dt>
+<dd><p>Controller settings which are based on browser defaults can be modified. These are global changes and affect every call to <a class="reference internal" href="squared.html#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="../references.html#references-android-application"><span class="std std-ref">ControllerSettingsUI</span></a></p>
+<dd class="field-odd"><p>Current modifiable state of settings</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../references.html#references-android-application"><span class="std std-ref">ControllerSettingsUI</span></a></p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -510,18 +522,19 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="android.removeObserver">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">android</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">removeObserver</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.removeObserver" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="android.removeObserver">
+<span class="sig-prename descclassname"><span class="pre">android.</span></span><span class="sig-name descname"><span class="pre">removeObserver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#android.removeObserver" title="Link to this definition"></a></dt>
 <dd><p>Forwards the target element to <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> which will stop it from being monitored for changes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>element</strong> – <em>HTMLElement</em> instance</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> – <em>HTMLElement</em> instance</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boolean</p>
+<dd class="field-even"><p>Success when observed</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
 </dd>
 </dl>
 <p>Usage:</p>

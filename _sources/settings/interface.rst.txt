@@ -6,7 +6,7 @@ These settings are available in the global variable ``squared`` to customize you
 
 .. highlight:: typescript
 
-.. code-block::
+::
 
   interface UserSettings {
       builtInExtensions: string[];
@@ -41,7 +41,7 @@ These settings are available in the global variable ``squared`` to customize you
       broadcastSecurePort?: number;
   }
 
-.. code-block::
+::
 
   interface UserResourceSettingsUI extends UserResourceSettings {
       enabledSVG: boolean;
@@ -70,7 +70,9 @@ Changelog
 Example usage
 =============
 
-.. code-block:: javascript
+.. highlight:: javascript
+
+.. code-block::
   :caption: All
 
   squared.settings = {
@@ -83,7 +85,7 @@ Example usage
 
 .. note:: The native ``document.querySelector`` does not enter :ref:`ShadowRoot <references-typescript-dom-generated>` elements.
 
-.. code-block:: javascript
+.. code-block::
   :caption: Resource
 
   squared.settings = {

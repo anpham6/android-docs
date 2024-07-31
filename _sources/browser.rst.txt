@@ -12,14 +12,14 @@ android
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/android.framework.min.js
+- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2020)`
 
 chrome
 ------
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/chrome.framework.min.js
+- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2020)`
 
 vdom
 ----

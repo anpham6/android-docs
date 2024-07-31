@@ -15,7 +15,7 @@ BREAKING
   :caption: squared.base
 
   class Node {
-      toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Uses Node.valueOf without options
+      toFloat(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number; // Without options uses Node.valueOf and not Node.cssInitial
       toInt(attr: CssStyleAttr, fallback?: number, options?: CssInitialOptions): number;
       get plainText(): boolean; // Set in the constructor
   }
@@ -141,6 +141,7 @@ ADDED
   interface UserAgentFeatures {
       RULES: {
           ADOPTED_STYLE_SHEET: boolean;
+          STARTING_STYLES: boolean;
       };
   }
 
@@ -256,10 +257,12 @@ CHANGED
   }
 
   class Node {
+      cssSpecificity(attr: CssStyleAttr, context?: string): Specificity | undefined; // context
       get dir(): TextDirection; // "ltr" | "rtl" | ""
   }
 
   class NodeUI {
+      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null; // context
       renderEach(predicate: IteratorPredicate<NodeUI, void | true>): this; // true
   }
 
@@ -292,7 +295,11 @@ CHANGED
       tools?: Record<string, string>;
   }
 
-  interface View {
+  class Resource {
+      addFontProvider(authority: string, package: string, certs: string[], webFonts: string | FontProviderFonts, verified?: boolean): Promise<boolean>; // Promise<boolean>
+  }
+
+  class View {
       setLayoutPercent(value: number | string, horizontal?: boolean, includeMargin?: boolean): void; // includeMargin
   }
 

@@ -4,13 +4,13 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>squared &mdash; squared 5.2.4 documentation</title>
+  <title>squared &mdash; squared 5.2.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=8f183172" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=e4318fd4" />
 
   
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../_static/documentation_options.js?v=75d7ccae"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -130,15 +130,13 @@
              
   <section id="squared">
 <h1>squared<a class="headerlink" href="#squared" title="Link to this heading"></a></h1>
-<dl class="js function">
-<dt class="sig sig-object js" id="setHostname">
-<span class="sig-name descname"><span class="n"><span class="pre">setHostname</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setHostname" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="setHostname">
+<span class="sig-name descname"><span class="pre">setHostname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setHostname" title="Link to this definition"></a></dt>
 <dd><p>Use another <abbr title="Cross-Origin Resource Sharing">CORS</abbr>-enabled server for processing assets.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – http(s)://hostname(:port)</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>string</em>) – http(s)://hostname(:port)</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -149,15 +147,15 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="setEndpoint">
-<span class="sig-name descname"><span class="n"><span class="pre">setEndpoint</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setEndpoint" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="setEndpoint">
+<span class="sig-name descname"><span class="pre">setEndpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setEndpoint" title="Link to this definition"></a></dt>
 <dd><p>Set alternate pathname for API v1 functions.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <em>ASSETS_COPY</em> | <em>ASSETS_ARCHIVE</em> | <em>LOADER_DATA</em> | <em>THREADS_KILL</em> | <em>WEBSOCKET_OBSERVE</em></p></li>
-<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Absolute path to server <em>GET/POST</em> method</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – “ASSETS_COPY” or “ASSETS_ARCHIVE” or “LOADER_DATA” or “THREADS_KILL” or “WEBSOCKET_OBSERVE”</p></li>
+<li><p><strong>value</strong> (<em>string</em>) – Absolute path to server <em>GET/POST</em> method</p></li>
 </ul>
 </dd>
 </dl>
@@ -167,15 +165,13 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="setLocalAddress">
-<span class="sig-name descname"><span class="n"><span class="pre">setLocalAddress</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setLocalAddress" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="setLocalAddress">
+<span class="sig-name descname"><span class="pre">setLocalAddress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setLocalAddress" title="Link to this definition"></a></dt>
 <dd><p>Additional hostnames which are interpreted as localhost. Protocol and port are not required.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>values</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Same format as URL.hostname</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>string</em>) – Same format as URL.hostname</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -188,15 +184,13 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="auth">
-<span class="sig-name descname"><span class="n"><span class="pre">auth</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="auth">
+<span class="sig-name descname"><span class="pre">auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth" title="Link to this definition"></a></dt>
 <dd><p>Set <abbr title="JSON Web Token">JWT</abbr> authorization token for all requests</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Three concatenated Base64url-encoded strings separated by dots</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>string</em>) – Three concatenated Base64url-encoded strings separated by dots</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -205,19 +199,22 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="kill">
-<span class="sig-name descname"><span class="n"><span class="pre">kill</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#kill" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="kill">
+<span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#kill" title="Link to this definition"></a></dt>
 <dd><p>Abort request if not completed in the given amount of time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pid</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) File request self-assigned number <em class="alt">(options.pid)</em></p></li>
-<li><p><strong>timeout</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Seconds until request expires</p></li>
+<li><p><strong>pid</strong> (<em>number?</em>) – File request self-assigned number <em class="alt">(options.pid)</em></p></li>
+<li><p><strong>timeout</strong> (<em>number?</em>) – Seconds until request expires</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;number&gt;</p>
+<dd class="field-even"><p>PID of 1 or greater when successful</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;number&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -242,19 +239,22 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="broadcast">
-<span class="sig-name descname"><span class="n"><span class="pre">broadcast</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socketId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#broadcast" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="broadcast">
+<span class="sig-name descname"><span class="pre">broadcast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socketId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#broadcast" title="Link to this definition"></a></dt>
 <dd><p>Redirect stdout messages to DevTools console.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – See <a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">BroadcastMessageCallback</span></a></p></li>
-<li><p><strong>socketId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Unique identifier assigned during server initialization</p></li>
+<li><p><strong>callback</strong> (<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">BroadcastMessageCallback</span></a>) – Void function for incoming data</p></li>
+<li><p><strong>socketId</strong> (<em>string</em>) – Unique identifier assigned during server initialization</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boolean</p>
+<dd class="field-even"><p>Success when connection established</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -286,16 +286,16 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="setFramework">
-<span class="sig-name descname"><span class="n"><span class="pre">setFramework</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#setFramework" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="setFramework">
+<span class="sig-name descname"><span class="pre">setFramework</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#setFramework" title="Link to this definition"></a></dt>
 <dd><p>Install application interpreter. <em class="alt">(e.g. android.framework.js)</em></p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Global object implementing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">AppFramework</span></a></p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) Initialize settings with non-default values</p></li>
-<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Load previous cached instance and settings</p></li>
+<li><p><strong>target</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">AppFramework</span></a>) – Global object implementation of base functionality</p></li>
+<li><p><strong>options</strong> (<em>object?</em>) – Initialize settings with non-default values</p></li>
+<li><p><strong>cache</strong> (<em>boolean?</em>) – Load previous cached instance and settings</p></li>
 </ul>
 </dd>
 </dl>
@@ -315,15 +315,15 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="extend">
-<span class="sig-name descname"><span class="n"><span class="pre">extend</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#extend" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">framework</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#extend" title="Link to this definition"></a></dt>
 <dd><p>Add functions and initial variables to the <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> prototype including overwriting preexisting class definitions. Accessor properties are supported using the <em>get/set</em> object syntax.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>map</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Attribute object consisting of extensions and overrides</p></li>
-<li><p><strong>framework</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">APP_FRAMEWORK</span></a></p></li>
+<li><p><strong>map</strong> (<em>object</em>) – Attribute object consisting of extensions and overrides</p></li>
+<li><p><strong>framework</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">APP_FRAMEWORK</span></a>?) – Bit mask of supported frameworks</p></li>
 </ul>
 </dd>
 </dl>
@@ -362,9 +362,9 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="clear">
-<span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#clear" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#clear" title="Link to this definition"></a></dt>
 <dd><p>Calls <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a>.clear() for any loaded frameworks and deletes all cached sessions.</p>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
@@ -372,19 +372,19 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="add">
-<span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#add" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#add" title="Link to this definition"></a></dt>
 <dd><p>Include extensions to be processed with any built-in extensions.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>targets</strong> – Name of disabled extension or control implementing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a></p></li>
-<li><p><strong>targets</strong> – Tuple of extension and configuration object</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>targets</strong> (string or <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a> or [string | <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>, object]) – Name of disabled extension or control implementing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>. With a configuration object use a tuple wrapper.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>number</p>
+<dd class="field-even"><p>Number of extensions to be installed</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>number</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -420,18 +420,19 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="remove">
-<span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#remove" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#remove" title="Link to this definition"></a></dt>
 <dd><p>Exclude extensions by name or control.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>targets</strong> – Name or control of extensions</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>targets</strong> – Name or control of extensions</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>number</p>
+<dd class="field-even"><p>Number of extensions removed</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>number</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -445,19 +446,20 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="get">
-<span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get" title="Link to this definition"></a></dt>
 <dd><p>Retrieve extensions by name only.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>targets</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of extension</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>targets</strong> (<em>string</em>) – Name of extension</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a> | undefined</p></li>
+<dd class="field-even"><p>Installed extensions in current framework</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a> or undefined</p></li>
 <li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>[] <em class="alt">(multiple)</em></p></li>
 </ul>
 </p>
@@ -473,20 +475,23 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="attr">
-<span class="sig-name descname"><span class="n"><span class="pre">attr</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#attr" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="attr">
+<span class="sig-name descname"><span class="pre">attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#attr" title="Link to this definition"></a></dt>
 <dd><p>Set or get extension options. <strong>typeof</strong> is enforced and will only set existing attributes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> – Name or control of extension</p></li>
-<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of attribute in <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>.options</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name of attribute in <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>.options</p></li>
 <li><p><strong>value</strong> – Any value of an existing attribute</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>unknown</p>
+<dd class="field-even"><p>Resultant value of attempted action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>unknown</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -500,20 +505,23 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="apply">
-<span class="sig-name descname"><span class="n"><span class="pre">apply</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#apply" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="apply">
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#apply" title="Link to this definition"></a></dt>
 <dd><p>Find extension and merge a configuration object with existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Extension</span></a>.options.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> – Name or control of extension</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Overriding configuration values</p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name to use when saving to local storage</p></li>
+<li><p><strong>options</strong> (<em>object</em>) – Overriding configuration values</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name to use when saving to local storage</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boolean</p>
+<dd class="field-even"><p>Success when modified</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -540,20 +548,23 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="prefetch">
-<span class="sig-name descname"><span class="n"><span class="pre">prefetch</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">all</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#prefetch" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="prefetch">
+<span class="sig-name descname"><span class="pre">prefetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">all</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...targets</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#prefetch" title="Link to this definition"></a></dt>
 <dd><p>Downloads assets to a memory cache which can be used by an <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> framework. Provides cross-origin support for <em>CSS</em>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <em>css</em> | <em>javascript</em> | <em>image</em> | <em>svg</em></p></li>
-<li><p><strong>all</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (<abbr class="sub" title="targets">optional</abbr>) Accept request from any origin</p></li>
-<li><p><strong>targets</strong> – (optional) URL string or root element of a contained Document</p></li>
+<li><p><strong>type</strong> (<em>string</em>) – <em>css</em> or <em>javascript</em> or <em>image</em> or <em>svg</em></p></li>
+<li><p><strong>all</strong> (<em>boolean?</em>) – (<abbr class="sub" title="targets">optional</abbr>) Accept request from any origin</p></li>
+<li><p><strong>targets</strong> (string? or <em>Element</em>?) – URL string or root element of a contained Document</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">PrefetchItem</span></a>[]&gt;</p>
+<dd class="field-even"><p>Data as string or Blob of each resource</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">PrefetchItem</span></a>[]&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -569,20 +580,20 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="parseDocument">
-<span class="sig-name descname"><span class="n"><span class="pre">parseDocument</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parseDocument" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="parseDocument">
+<span class="sig-name descname"><span class="pre">parseDocument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parseDocument" title="Link to this definition"></a></dt>
 <dd><p>Starts at the root target element and creates a virtual <em>DOM</em> structure by cascading into all the children. Assets can be preloaded <em class="alt">(e.g. images)</em> which is required with the <a class="reference internal" href="../framework/android.html"><span class="doc">android</span></a> framework.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>elements</strong> – (optional) <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
-<li><p><strong>elements</strong> – (optional) See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">ElementSettings</span></a></p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>elements</strong> (string or <em>HTMLElement</em> or <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">ElementSettings</span></a>) – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | void&gt;</p></li>
+<dd class="field-even"><p>Root element of document as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>&gt; or Promise&lt;void&gt;</p></li>
 <li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[]&gt; <em class="alt">(multiple)</em></p></li>
 </ul>
 </p>
@@ -601,20 +612,20 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="parseDocumentSync">
-<span class="sig-name descname"><span class="n"><span class="pre">parseDocumentSync</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parseDocumentSync" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="parseDocumentSync">
+<span class="sig-name descname"><span class="pre">parseDocumentSync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parseDocumentSync" title="Link to this definition"></a></dt>
 <dd><p>Starts at the root target element and creates a virtual <em>DOM</em> structure by cascading into all the children. No assets are preloaded which is sufficient for the <a class="reference internal" href="../framework/vdom.html"><span class="doc">vdom</span></a> framework.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>elements</strong> – (optional) <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
-<li><p><strong>elements</strong> – (optional) See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">ElementSettings</span></a></p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>elements</strong> (string or <em>HTMLElement</em> or <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">ElementSettings</span></a>) – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | undefined</p></li>
+<dd class="field-even"><p>Root element of document as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> or undefined</p></li>
 <li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] <em class="alt">(multiple)</em></p></li>
 </ul>
 </p>
@@ -628,21 +639,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="findDocumentNode">
-<span class="sig-name descname"><span class="n"><span class="pre">findDocumentNode</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">all</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#findDocumentNode" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="findDocumentNode">
+<span class="sig-name descname"><span class="pre">findDocumentNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">all</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#findDocumentNode" title="Link to this definition"></a></dt>
 <dd><p>Can be used before saving rendered document to modify auto-generated <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> attributes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em> (selectors are supported)</p></li>
-<li><p><strong>all</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (<abbr class="sub" title="projectId">optional</abbr>) Uses filter to return multiple results</p></li>
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Uses an existing project in the current framework</p></li>
+<li><p><strong>all</strong> (<em>boolean?</em>) – (<abbr class="sub" title="projectId">optional</abbr>) Uses filter to return multiple results</p></li>
+<li><p><strong>projectId</strong> (<em>string?</em>) – Uses an existing project in the current framework</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | undefined</p></li>
+<dd class="field-even"><p>Target element(s) as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> or undefined</p></li>
 <li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] <em class="alt">(all)</em></p></li>
 </ul>
 </p>
@@ -663,18 +677,19 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="latest">
-<span class="sig-name descname"><span class="n"><span class="pre">latest</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">count</span> <span class="pre">=</span> <span class="pre">1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#latest" title="Link to this definition"></a></dt>
-<dd><p>Get any stored session ids from <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> since the last time <a class="reference internal" href="#clear" title="clear"><code class="xref js js-func docutils literal notranslate"><span class="pre">clear()</span></code></a> was called.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="latest">
+<span class="sig-name descname"><span class="pre">latest</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">count</span> <span class="pre">=</span> <span class="pre">1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#latest" title="Link to this definition"></a></dt>
+<dd><p>Get any stored session ids from <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> since the last time <a class="reference internal" href="#clear" title="clear"><code class="xref py py-func docutils literal notranslate"><span class="pre">clear()</span></code></a> was called.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>count</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) How many ids at most to be retrieved</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>count</strong> (<em>number?</em>) – How many ids at most to be retrieved</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>string | string[] | undefined</p>
+<dd class="field-even"><p>List of sequential ids</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string or string[] or undefined</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -689,18 +704,19 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="close">
-<span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#close" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#close" title="Link to this definition"></a></dt>
 <dd><p>Ends the current session or selected project preventing any further modifications. It is called internally when saving or copying.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the latest</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the latest</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;boolean&gt;</p>
+<dd class="field-even"><p>Success when in finalizable state</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;boolean&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -709,15 +725,13 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="reset">
-<span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#reset" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#reset" title="Link to this definition"></a></dt>
 <dd><p>Abandons all stored projects and sets a loaded <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> to its initial state. The current user settings are retained.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the latest</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the latest</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -726,19 +740,22 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="save">
-<span class="sig-name descname"><span class="n"><span class="pre">save</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#save" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#save" title="Link to this definition"></a></dt>
 <dd><p>Uses the default <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a>.settings to generate an archive of the current session or selected project.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the default project</p></li>
-<li><p><strong>timeout</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – (optional) Maximum time in seconds for build to complete</p></li>
+<li><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the default project</p></li>
+<li><p><strong>timeout</strong> (<em>number?</em>) – Maximum time in seconds for build to complete</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -754,21 +771,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="saveAs">
-<span class="sig-name descname"><span class="n"><span class="pre">saveAs</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveAs" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="saveAs">
+<span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveAs" title="Link to this definition"></a></dt>
 <dd><p>Save current session or selected project as a new archive using <em>filename</em> extension.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>filename</strong> (<em>string</em>) – Name of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of framework specific functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -791,21 +811,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="appendTo">
-<span class="sig-name descname"><span class="n"><span class="pre">appendTo</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#appendTo" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="appendTo">
+<span class="sig-name descname"><span class="pre">appendTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#appendTo" title="Link to this definition"></a></dt>
 <dd><p>Save current session or selected project into a copy of an existing archive if found or as a new archive using the file extension.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>uri</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>uri</strong> (<em>string</em>) – Location of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of framework specific functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -829,21 +852,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="copyTo">
-<span class="sig-name descname"><span class="n"><span class="pre">copyTo</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copyTo" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="copyTo">
+<span class="sig-name descname"><span class="pre">copyTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copyTo" title="Link to this definition"></a></dt>
 <dd><p>Save current session or selected project to a local directory.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pathname</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of a directory accessible to the server process</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>pathname</strong> (<em>string</em>) – Location of a directory accessible to the server process</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of framework specific functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -868,21 +894,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="saveFiles">
-<span class="sig-name descname"><span class="n"><span class="pre">saveFiles</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveFiles" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="saveFiles">
+<span class="sig-name descname"><span class="pre">saveFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveFiles" title="Link to this definition"></a></dt>
 <dd><p>Save selected assets as a new archive using <em>filename</em> extension.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Name of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>filename</strong> (<em>string</em>) – Name of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of file saving functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -891,17 +920,16 @@
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android.png&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android.png&quot;</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android.png&quot;</span><span class="w"> </span><span class="c1">// ./images/android.png</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-ldpi.png&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-ldpi.png&quot;</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-ldpi.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ./images/android-ldpi.png</span>
+<span class="w">      </span><span class="nb">document</span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-hdpi.png&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-hdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-hdpi.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ./android-hdpi.png</span>
+<span class="w">      </span><span class="nb">document</span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">};</span>
@@ -918,21 +946,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="appendFiles">
-<span class="sig-name descname"><span class="n"><span class="pre">appendFiles</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#appendFiles" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="appendFiles">
+<span class="sig-name descname"><span class="pre">appendFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#appendFiles" title="Link to this definition"></a></dt>
 <dd><p>Save selected assets into a copy of an existing archive if found or as a new archive using the file extension.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>uri</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>uri</strong> (<em>string</em>) – Location of file with a valid archive extension</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of file appending functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -941,17 +972,14 @@
 <span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xhdpi.png&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xhdpi.png&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxhdpi.png&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxhdpi.png&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxxhdpi.png&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxxhdpi.png&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -969,21 +997,24 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="copyFiles">
-<span class="sig-name descname"><span class="n"><span class="pre">copyFiles</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copyFiles" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="copyFiles">
+<span class="sig-name descname"><span class="pre">copyFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copyFiles" title="Link to this definition"></a></dt>
 <dd><p>Save selected assets to a local directory.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pathname</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Location of a directory accessible to the server process</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a></p></li>
-<li><p><strong>setting</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>pathname</strong> (<em>string</em>) – Location of a directory accessible to the server process</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of file copying functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
+<dd class="field-even"><p>Server response of requested action</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">ResponseData</span></a>&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -991,17 +1022,14 @@
 <span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xhdpi.png&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xhdpi.png&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxhdpi.png&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxhdpi.png&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android-xxxhdpi.png&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxxhdpi.png&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -1022,18 +1050,19 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="toString">
-<span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#toString" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="toString">
+<span class="sig-name descname"><span class="pre">toString</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">projectId</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#toString" title="Link to this definition"></a></dt>
 <dd><p>Writes the system name of the currently installed non-UI framework.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>projectId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – (optional) Targets a project that is not the default project</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the default project</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>string</p>
+<dd class="field-even"><p>Framework defined <em class="alt">(UI)</em> or system name</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -1050,22 +1079,25 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="getElementById">
-<span class="sig-name descname"><span class="n"><span class="pre">getElementById</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getElementById" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="getElementById">
+<span class="sig-name descname"><span class="pre">getElementById</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getElementById" title="Link to this definition"></a></dt>
 <dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.getElementById</span></code> <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> except returns a <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Case-sensitive match against <em>Element</em>.id property</p></li>
-<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+<li><p><strong>value</strong> (<em>string</em>) – Case-sensitive match against <em>Element</em>.id property</p></li>
+<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null&gt;</p></li>
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null <em class="alt">(sync)</em></p></li>
+<dd class="field-even"><p>Target element(s) as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>&gt; or Promise&lt;null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> or null <em class="alt">(sync)</em></p></li>
 </ul>
 </p>
 </dd>
@@ -1079,22 +1111,25 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="querySelector">
-<span class="sig-name descname"><span class="n"><span class="pre">querySelector</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelector" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="querySelector">
+<span class="sig-name descname"><span class="pre">querySelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelector" title="Link to this definition"></a></dt>
 <dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.querySelector</span></code> <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> except returns a <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>selector</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Selector or selectors matching one or more elements</p></li>
-<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+<li><p><strong>selector</strong> (<em>string</em>) – Selector or selectors matching one or more elements</p></li>
+<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null&gt;</p></li>
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> | null <em class="alt">(sync)</em></p></li>
+<dd class="field-even"><p>Target element(s) as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>&gt; or Promise&lt;null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> or null <em class="alt">(sync)</em></p></li>
 </ul>
 </p>
 </dd>
@@ -1111,22 +1146,25 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="querySelectorAll">
-<span class="sig-name descname"><span class="n"><span class="pre">querySelectorAll</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelectorAll" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="querySelectorAll">
+<span class="sig-name descname"><span class="pre">querySelectorAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelectorAll" title="Link to this definition"></a></dt>
 <dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.querySelectorAll</span></code> <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> except returns an array of <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instances.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>selector</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Selector or selectors matching one or more elements</p></li>
-<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+<li><p><strong>selector</strong> (<em>string</em>) – Selector or selectors matching one or more elements</p></li>
+<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null&gt;</p></li>
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null <em class="alt">(sync)</em></p></li>
+<dd class="field-even"><p>Target element(s) as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[]&gt; or Promise&lt;null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] or null <em class="alt">(sync)</em></p></li>
 </ul>
 </p>
 </dd>
@@ -1139,22 +1177,25 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="fromElement">
-<span class="sig-name descname"><span class="n"><span class="pre">fromElement</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fromElement" title="Link to this definition"></a></dt>
-<dd><p>Same behavior as <a class="reference internal" href="#getElementById" title="getElementById"><code class="xref js js-func docutils literal notranslate"><span class="pre">getElementById()</span></code></a> except it also accepts a native <em>Element</em>. The <strong>cache</strong> parameter by default is not enabled.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fromElement">
+<span class="sig-name descname"><span class="pre">fromElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fromElement" title="Link to this definition"></a></dt>
+<dd><p>Same behavior as <a class="reference internal" href="#getElementById" title="getElementById"><code class="xref py py-func docutils literal notranslate"><span class="pre">getElementById()</span></code></a> except it also accepts a native <em>Element</em>. The <strong>cache</strong> parameter by default is not enabled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element</strong> – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
-<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance of <em>Element</em></p></li>
+<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null&gt;</p></li>
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null <em class="alt">(sync)</em></p></li>
+<dd class="field-even"><p>Target element(s) as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>&gt; or Promise&lt;null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> or null <em class="alt">(sync)</em></p></li>
 </ul>
 </p>
 </dd>
@@ -1168,22 +1209,25 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="fromNode">
-<span class="sig-name descname"><span class="n"><span class="pre">fromNode</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fromNode" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="fromNode">
+<span class="sig-name descname"><span class="pre">fromNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fromNode" title="Link to this definition"></a></dt>
 <dd><p>Uses an existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance and creates a new instance with any modifications. The <strong>cache</strong> parameter by default is not enabled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>node</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – See <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a></p></li>
-<li><p><strong>sync</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Use any existing <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance</p></li>
+<li><p><strong>node</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>) – Reference to a <em>Node</em></p></li>
+<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null&gt;</p></li>
-<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>[] | null <em class="alt">(sync)</em></p></li>
+<dd class="field-even"><p>Target element(s) as <em>Node</em> instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>&gt; or Promise&lt;null&gt;</p></li>
+<li><p><a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> or null <em class="alt">(sync)</em></p></li>
 </ul>
 </p>
 </dd>
@@ -1198,15 +1242,13 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="observe">
-<span class="sig-name descname"><span class="n"><span class="pre">observe</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">enable</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observe" title="Link to this definition"></a></dt>
-<dd><p>Uses <a class="reference internal" href="../references.html#references-typescript-dom-generated"><span class="std std-ref">MutationObserver</span></a> to watch for any changes to the <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref js js-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> root element. Start after <em>DOM</em> and third-party libraries are initialized.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="observe">
+<span class="sig-name descname"><span class="pre">observe</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">enable</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observe" title="Link to this definition"></a></dt>
+<dd><p>Uses <a class="reference internal" href="../references.html#references-typescript-dom-generated"><span class="std std-ref">MutationObserver</span></a> to watch for any changes to the <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> root element. Start after <em>DOM</em> and third-party libraries are initialized.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>enable</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – (optional) Start or stop all root elements who are monitoring</p></li>
-</ul>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> (<em>boolean?</em>) – Start or stop all root elements who are monitoring</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -1241,20 +1283,23 @@
 </div>
 </dd></dl>
 
-<dl class="js function">
-<dt class="sig sig-object js" id="observeSrc">
-<span class="sig-name descname"><span class="n"><span class="pre">observeSrc</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observeSrc" title="Link to this definition"></a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="observeSrc">
+<span class="sig-name descname"><span class="pre">observeSrc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observeSrc" title="Link to this definition"></a></dt>
 <dd><p>Can be used to watch external elements which contain modifiable source files.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>targets</strong> – Elements by either selector or <em>HTMLElement</em> (<strong>src</strong> or <strong>href</strong> attribute is required)</p></li>
-<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – (<em class="alt">optional (options)</em>) Method to call when a <code class="docutils literal notranslate"><span class="pre">modified</span></code> event is received</p></li>
-<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – (optional) See <a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileObserveOptions</span></a></p></li>
+<li><p><strong>callback</strong> (<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">WebSocketMessageChange</span></a>?) – (<abbr class="sub" title="options">optional</abbr>) Function to call when a <code class="docutils literal notranslate"><span class="pre">modified</span></code> event is received</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileObserveOptions</span></a>?) – Connection attributes overrides sent to server</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-internal"><span class="std std-ref">ObserveSocket</span></a> | <a class="reference internal" href="../references.html#references-squared-internal"><span class="std std-ref">ObserveSocket</span></a>[]&gt;</p>
+<dd class="field-even"><p>Connected locations with external source</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Promise&lt;<a class="reference internal" href="../references.html#references-squared-internal"><span class="std std-ref">ObserveSocket</span></a>&gt; or Promise&lt;<a class="reference internal" href="../references.html#references-squared-internal"><span class="std std-ref">ObserveSocket</span></a>[]&gt;</p>
 </dd>
 </dl>
 <p>Usage:</p>

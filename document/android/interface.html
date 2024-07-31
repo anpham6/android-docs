@@ -4,13 +4,13 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interface &mdash; squared 5.2.4 documentation</title>
+  <title>Interface &mdash; squared 5.2.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=8f183172" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=e4318fd4" />
 
   
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=d1af48b7"></script>
+        <script src="../../_static/documentation_options.js?v=75d7ccae"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -203,8 +203,8 @@
 <span class="w">    </span><span class="nx">getBoxSpacing</span><span class="p">(</span><span class="nx">region?</span><span class="o">:</span><span class="w"> </span><span class="kt">BOX_STANDARD</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">];</span>
 <span class="hll"><span class="w">    </span><span class="nx">getPositionOffset</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sticky&quot;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="p">;</span>
 </span><span class="w">    </span><span class="nx">getAnchoredSiblings</span><span class="p">(</span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="kt">OrientationAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">NodeUI</span><span class="p">[];</span>
-<span class="w">    </span><span class="nx">getPseudoElement</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">PseudoElt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">PseudoStyleElt</span><span class="p">,</span><span class="w"> </span><span class="nx">attr?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">hasFixedDimension</span><span class="p">(</span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">getPseudoElement</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">PseudoElt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">PseudoStyleElt</span><span class="p">,</span><span class="w"> </span><span class="nx">attr?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">context?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">hasFixedDimension</span><span class="p">(</span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 </span><span class="w">    </span><span class="nx">isResizable</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionSizableAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">not?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">fitToScreen</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">Dimension</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Dimension</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">getComments</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">ReferenceType</span><span class="p">,</span><span class="w"> </span><span class="nx">attrs?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">];</span>
@@ -420,6 +420,7 @@
 <li><p><em>NodeUI</em> method <strong>getPositionOffset</strong> for non-static coordinates was created.</p></li>
 <li><p><em>NodeUI</em> method <strong>actualRect</strong> is no longer abstract.</p></li>
 <li><p><em>NodeUI</em> method <strong>hasFixedDimension</strong> was migrated from <em class="target">View</em>.</p></li>
+<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <strong>context</strong> as <em class="alt">string</em> was implemented.</p></li>
 <li><p><em>NodeUI</em> property accessor <strong>locales</strong> for <em>Intl</em> functionality was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>afterLineBreak</strong> for start of line detection was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>wordSpacing</strong> for trailing margin was created.</p></li>
