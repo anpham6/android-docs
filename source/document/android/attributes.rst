@@ -17,7 +17,12 @@ Settings
     "app:menu": [
       "@menu/menu_1", "@menu/menu_2", // Replace with "@menu/menu_2" when value is "@menu/menu_1"
       "@menu/menu_3", null // Delete attribute when value is "@menu/menu_3"
-    ]
+    ],
+    /* OR */
+    "app:menu": {
+      "@menu/menu_1": "@menu/menu_2",
+      "@menu/menu_3": null
+    }
   };
 
 Method

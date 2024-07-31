@@ -6,6 +6,7 @@ These are the latest server default settings for the :target:`android` framework
 
 .. code-block:: json
   :caption: squared.json [#]_
+  :emphasize-lines: 39
 
   {
     "apiVersion": "1.5.0",
@@ -21,7 +22,7 @@ These are the latest server default settings for the :target:`android` framework
         ],
         "versions": {
           "org.jetbrains.kotlin:kotlin-stdlib": "2.0.0",
-          "kotlinCompilerExtensionVersion": "1.5.14",
+          "kotlinCompilerExtensionVersion": "",
           "buildToolsVersion": ""
         },
         "settings": {
@@ -44,13 +45,21 @@ These are the latest server default settings for the :target:`android` framework
             "gradle": "kotlin"
           },
           "directory": {
-            "template": ""
+            "template": "",
+            "project": ""
           }
         },
         "permission": {}
       }
     }
   }
+
+Changelog
+=========
+
+.. versionadded:: 5.3.0
+
+  - *DocumentDirectory* property **project** for alternate static resources was implemented.
 
 References
 ==========

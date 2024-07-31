@@ -18,7 +18,7 @@ squared
 
   Set alternate pathname for API v1 functions.
 
-  :param string name: *ASSETS_COPY* | *ASSETS_ARCHIVE* | *LOADER_DATA* | *THREADS_KILL* | *WEBSOCKET_OBSERVE*
+  :param string name: "ASSETS_COPY" or "ASSETS_ARCHIVE" or "LOADER_DATA" or "THREADS_KILL" or "WEBSOCKET_OBSERVE"
   :param string value: Absolute path to server *GET/POST* method
 
   Usage::
@@ -192,7 +192,7 @@ squared
   Include extensions to be processed with any built-in extensions.
 
   :param targets: Name of disabled extension or control implementing |Extension|. With a configuration object use a tuple wrapper.
-  :type targets: string or |Extension| or \[string | Extension, object\]
+  :type targets: string or |Extension| or \[string \| |Extension|, object\]
   :returns: Number of extensions to be installed
   :rtype: number
 
@@ -319,7 +319,7 @@ squared
 
   Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for *CSS*.
 
-  :param string type: *css* | *javascript* | *image* | *svg*
+  :param string type: *css* or *javascript* or *image* or *svg*
   :param boolean? all: (:sub:`optional (targets)`) Accept request from any origin
   :param targets: URL string or root element of a contained Document
   :type targets: string? or *Element*?
@@ -342,7 +342,7 @@ squared
   Starts at the root target element and creates a virtual *DOM* structure by cascading into all the children. Assets can be preloaded :alt:`(e.g. images)` which is required with the :doc:`android </framework/android>` framework.
 
   :param elements: |targetElement|
-  :type elements: string? or *HTMLElement*? or |ElementSettings|?
+  :type elements: string or *HTMLElement* or |ElementSettings|
   :returns: Root element of document as *Node* instance
   :rtype:
     - Promise<|Node|> or Promise<void>
@@ -364,7 +364,7 @@ squared
   Starts at the root target element and creates a virtual *DOM* structure by cascading into all the children. No assets are preloaded which is sufficient for the :doc:`vdom </framework/vdom>` framework.
 
   :param elements: |targetElement|
-  :type elements: string? or *HTMLElement*? or |ElementSettings|?
+  :type elements: string or *HTMLElement* or |ElementSettings|
   :returns: Root element of document as *Node* instance
   :rtype:
     - |Node| or undefined
@@ -573,17 +573,16 @@ squared
         {
           pathname: "images",
           filename: "android.png",
-          uri: "http://localhost:3000/common/images/android.png"
+          uri: "http://localhost:3000/common/images/android.png" // ./images/android.png
         },
         {
           pathname: "images",
-          filename: "android-ldpi.png",
-          uri: "http://localhost:3000/common/images/android-ldpi.png"
+          uri: "http://localhost:3000/common/images/android-ldpi.png", // ./images/android-ldpi.png
+          document: undefined
         },
         {
-          pathname: "images",
-          filename: "android-hdpi.png",
-          uri: "http://localhost:3000/common/images/android-hdpi.png"
+          uri: "http://localhost:3000/common/images/android-hdpi.png", // ./android-hdpi.png
+          document: undefined
         }
       ]
     };
@@ -616,17 +615,14 @@ squared
       assets: [
         {
           pathname: "images",
-          filename: "android-xhdpi.png",
           uri: "http://localhost:3000/common/images/android-xhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxxhdpi.png"
         }
       ]
@@ -659,17 +655,14 @@ squared
       assets: [
         {
           pathname: "images",
-          filename: "android-xhdpi.png",
           uri: "http://localhost:3000/common/images/android-xhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxhdpi.png"
         },
         {
           pathname: "images",
-          filename: "android-xxxhdpi.png",
           uri: "http://localhost:3000/common/images/android-xxxhdpi.png"
         }
       ]

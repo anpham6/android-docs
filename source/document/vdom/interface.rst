@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 39-40,190,205-206,224
+  :emphasize-lines: 39-40,57,190,205-206,224
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -63,7 +63,7 @@ Interface
       cssAny(attr: CssStyleAttr, values: string[], options?: CssAnyOptions): boolean;
       cssAscend(attr: CssStyleAttr, options?: CssAscendOptions): string;
       cssSort(attr: CssStyleAttr, options?: CssSortOptions): Node[];
-      cssSpecificity(attr: CssStyleAttr): Specificity | undefined;
+      cssSpecificity(attr: CssStyleAttr, context?: string): Specificity | undefined;
       cssParent(attr: CssStyleAttr, value?: string, cache?: boolean): string;
       cssUnit(attr: CssStyleAttr, options?: CssUnitOptions): number;
       cssAsTuple(...attrs: CssStyleAttr[]): string[];
@@ -249,6 +249,7 @@ Changelog
   - *Node* property getter **nowrapWhiteSpace** for :alt:`text-wrap` detection was created.
   - *Node* method **resetCache** for all property cache values was created.
   - *Node* method **resetState** for all property state values was created.
+  - *Node* method **cssSpecificity** argument **context** as :alt:`string` was implemented.
 
 .. versionadded:: 5.2.1
 

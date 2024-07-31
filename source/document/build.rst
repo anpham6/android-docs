@@ -77,7 +77,7 @@ Interface
 ---------
 
 .. code-block::
-  :emphasize-lines: 15
+  :emphasize-lines: 15-16
 
   interface DocumentOutput {
       targetAPI?: number | string;
@@ -94,6 +94,7 @@ Interface
       mainActivityFile?: string;
       javaVersion?: number | string;
       jvmToolchain?: number | string;
+      versionCatalog?: boolean;
       versionName?: string;
       versionCode?: number;
       dataBinding?: boolean;
@@ -108,6 +109,7 @@ Changelog
 .. versionadded:: 5.3.0
 
   - *DocumentOutput* property **jvmToolchain** for :alt:`build.gradle` upgrades was created.
+  - *DocumentOutput* property **versionCatalog** for :alt:`libs.versions.toml` integration was created.
   - *DocumentOutput* property **dependencyScopes** with the :target:`constraints` value type for versioning was amended.
 
 .. versionadded:: 5.2.0
@@ -188,7 +190,7 @@ Interface
 ---------
 
 .. code-block::
-  :emphasize-lines: 9-11,19,35
+  :emphasize-lines: 9-11,19,35,43
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -231,6 +233,8 @@ Interface
       stripCommentsAndCDATA?: boolean | string;
       normalizeHtmlOutput?: boolean | string;
       escapeReservedCharacters?: boolean;
+      ignoreServerCodeBlocks?: string[];
+      sanitizeFramework?: string[];
       webBundle?: {
           rootDirAlias?: string;
           baseUrl?: string;
@@ -262,6 +266,7 @@ Changelog
 
   - *FileActionOptions* property **removeBinaries** for :alt:`squared.js` <script> exclusion was created.
   - *DocumentOutput* property **serverRootMapping** for local path rewriting in :alt:`productionRelease` was created.
+  - *DocumentOutput* property **sanitizeFramework** for dataset attribute removal was created.
   - *DocumentOutput* property **saveAs** with sub-properties as :alt:`SaveAsOptions` was amended:
 
     .. hlist::

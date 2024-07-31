@@ -141,6 +141,7 @@ ADDED
   interface UserAgentFeatures {
       RULES: {
           ADOPTED_STYLE_SHEET: boolean;
+          STARTING_STYLES: boolean;
       };
   }
 
@@ -218,6 +219,10 @@ ADDED
   }
 
   interface DocumentOutput {
+      sanitizeFramework?: string[];
+  }
+
+  interface FileRequestAttribute {
       removeBinaries?: boolean;
   }
 
@@ -256,10 +261,12 @@ CHANGED
   }
 
   class Node {
+      cssSpecificity(attr: CssStyleAttr, context?: string): Specificity | undefined; // context
       get dir(): TextDirection; // "ltr" | "rtl" | ""
   }
 
   class NodeUI {
+      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null; // context
       renderEach(predicate: IteratorPredicate<NodeUI, void | true>): this; // true
   }
 
@@ -284,6 +291,10 @@ CHANGED
 
 .. code-block::
   :caption: android.base
+
+  interface UserResourceSettingsUI {
+      showAttributes: boolean | Record<string, string | null | (string | null)[] | Record<string, string | null>>; // Record<string, string | null>
+  }
 
   interface ExtensionComposeViewElement {
       selector?: string;

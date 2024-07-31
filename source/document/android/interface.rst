@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 3,55,64,93,96,153,196-197,216,226-227
+  :emphasize-lines: 3,55,64,93,95-96,153,196-197,216,226-227
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -101,7 +101,7 @@ Interface
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getPositionOffset(name: "sticky"): Point;
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
-      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr): CssStyleMap | string | null;
+      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
       hasFixedDimension(dimension: DimensionAttr): boolean;
       isResizable(attr: DimensionSizableAttr, not?: string | string[]): boolean;
       fitToScreen(value: Dimension): Dimension;
@@ -317,6 +317,7 @@ Changelog
   - *NodeUI* method **getPositionOffset** for non-static coordinates was created.
   - *NodeUI* method **actualRect** is no longer abstract.
   - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
+  - *NodeUI* method **getPseudoElement** argument **context** as :alt:`string` was implemented.
   - *NodeUI* property accessor **locales** for *Intl* functionality was created.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
   - *NodeUI* property getter **wordSpacing** for trailing margin was created.
