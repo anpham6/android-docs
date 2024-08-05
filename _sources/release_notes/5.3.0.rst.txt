@@ -219,6 +219,10 @@ ADDED
   }
 
   interface DocumentOutput {
+      sanitizeFramework?: string[];
+  }
+
+  interface FileRequestAttribute {
       removeBinaries?: boolean;
   }
 
