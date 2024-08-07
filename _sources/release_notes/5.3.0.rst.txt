@@ -292,6 +292,10 @@ CHANGED
 .. code-block::
   :caption: android.base
 
+  interface UserResourceSettingsUI {
+      showAttributes: boolean | Record<string, string | null | (string | null)[] | Record<string, string | null>>; // Record<string, string | null>
+  }
+
   interface ExtensionComposeViewElement {
       selector?: string;
       android?: Record<string, string>;
