@@ -1,5 +1,5 @@
 ===========
-squared 5.2
+squared 5.3
 ===========
 
 .. toctree::
@@ -18,4 +18,4 @@ squared 5.2
 License
 =======
 
-Apache 2.0
+BSD 3-Clause

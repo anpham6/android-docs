@@ -53,8 +53,8 @@ squared
 
   Abort request if not completed in the given amount of time.
 
-  :param number? pid: File request self-assigned number :alt:`(options.pid)`
-  :param number? timeout: Seconds until request expires
+  :param number pid: File request self-assigned number :alt:`(options.pid)`
+  :param number timeout: Seconds until request expires
   :returns: PID of 1 or greater when successful
   :rtype: Promise<number>
 
@@ -121,8 +121,8 @@ squared
 
   :param target: Global object implementation of base functionality
   :type target: |AppFramework|
-  :param object? options: Initialize settings with non-default values
-  :param boolean? cache: Load previous cached instance and settings
+  :param object options: Initialize settings with non-default values
+  :param boolean cache: Load previous cached instance and settings
 
   Usage::
 
@@ -144,7 +144,7 @@ squared
 
   :param object map: Attribute object consisting of extensions and overrides
   :param framework: Bit mask of supported frameworks
-  :type framework: |APP_FRAMEWORK|?
+  :type framework: |APP_FRAMEWORK|
 
   Usage::
 
@@ -289,7 +289,7 @@ squared
 
   :param target: Name or control of extension
   :param object options: Overriding configuration values
-  :param string? setting: Name to use when saving to local storage
+  :param string setting: Name to use when saving to local storage
   :returns: Success when modified
   :rtype: boolean
 
@@ -320,9 +320,9 @@ squared
   Downloads assets to a memory cache which can be used by an |Application| framework. Provides cross-origin support for *CSS*.
 
   :param string type: *css* or *javascript* or *image* or *svg*
-  :param boolean? all: (:sub:`optional (targets)`) Accept request from any origin
+  :param boolean all: (:sub:`optional (targets)`) Accept request from any origin
   :param targets: URL string or root element of a contained Document
-  :type targets: string? or *Element*?
+  :type targets: string or *Element*
   :returns: Data as string or Blob of each resource
   :rtype: Promise<|PrefetchItem|\[\]>
 
@@ -381,8 +381,8 @@ squared
   Can be used before saving rendered document to modify auto-generated |Node| attributes.
 
   :param target: |targetElement| (selectors are supported)
-  :param boolean? all: (:sub:`optional (projectId)`) Uses filter to return multiple results
-  :param string? projectId: Uses an existing project in the current framework
+  :param boolean all: (:sub:`optional (projectId)`) Uses filter to return multiple results
+  :param string projectId: Uses an existing project in the current framework
   :returns: |resultElement|
   :rtype:
     - |Node| or undefined
@@ -405,7 +405,7 @@ squared
 
   Get any stored session ids from :func:`parseDocument` since the last time :func:`clear` was called.
 
-  :param number? count: How many ids at most to be retrieved
+  :param number count: How many ids at most to be retrieved
   :returns: List of sequential ids
   :rtype: string or string[] or undefined
 
@@ -423,7 +423,7 @@ squared
 
   Ends the current session or selected project preventing any further modifications. It is called internally when saving or copying.
 
-  :param string? projectId: Targets a project that is not the latest
+  :param string projectId: Targets a project that is not the latest
   :returns: Success when in finalizable state
   :rtype: Promise<boolean>
 
@@ -435,7 +435,7 @@ squared
 
   Abandons all stored projects and sets a loaded |Application| to its initial state. The current user settings are retained.
 
-  :param string? projectId: Targets a project that is not the latest
+  :param string projectId: Targets a project that is not the latest
 
   Usage::
 
@@ -445,8 +445,8 @@ squared
 
   Uses the default |Application|.settings to generate an archive of the current session or selected project.
 
-  :param string? projectId: Targets a project that is not the default project
-  :param number? timeout: Maximum time in seconds for build to complete
+  :param string projectId: Targets a project that is not the default project
+  :param number timeout: Maximum time in seconds for build to complete
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -467,9 +467,9 @@ squared
 
   :param string filename: Name of file with a valid archive extension
   :param options: Object of framework specific functionality to be applied
-  :param string? setting: Name of setting for local storage
-  :param boolean? overwrite: Will not merge previously saved settings with *options*
-  :type options: |FileActionOptions|?
+  :param string setting: Name of setting for local storage
+  :param boolean overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -497,9 +497,9 @@ squared
 
   :param string uri: Location of file with a valid archive extension
   :param options: Object of framework specific functionality to be applied
-  :param string? setting: Name of setting for local storage
-  :param boolean? overwrite: Will not merge previously saved settings with *options*
-  :type options: |FileActionOptions|?
+  :param string setting: Name of setting for local storage
+  :param boolean overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -528,9 +528,9 @@ squared
 
   :param string pathname: Location of a directory accessible to the server process
   :param options: Object of framework specific functionality to be applied
-  :param string? setting: Name of setting for local storage
-  :param boolean? overwrite: Will not merge previously saved settings with *options*
-  :type options: |FileActionOptions|?
+  :param string setting: Name of setting for local storage
+  :param boolean overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -560,9 +560,9 @@ squared
 
   :param string filename: Name of file with a valid archive extension
   :param options: Object of file saving functionality to be applied
-  :param string? setting: Name of setting for local storage
-  :param boolean? overwrite: Will not merge previously saved settings with *options*
-  :type options: |FileActionOptions|?
+  :param string setting: Name of setting for local storage
+  :param boolean overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -602,9 +602,9 @@ squared
 
   :param string uri: Location of file with a valid archive extension
   :param options: Object of file appending functionality to be applied
-  :param string? setting: Name of setting for local storage
-  :param boolean? overwrite: Will not merge previously saved settings with *options*
-  :type options: |FileActionOptions|?
+  :param string setting: Name of setting for local storage
+  :param boolean overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -643,9 +643,9 @@ squared
 
   :param string pathname: Location of a directory accessible to the server process
   :param options: Object of file copying functionality to be applied
-  :param string? setting: Name of setting for local storage
-  :param boolean? overwrite: Will not merge previously saved settings with *options*
-  :type options: |FileActionOptions|?
+  :param string setting: Name of setting for local storage
+  :param boolean overwrite: Will not merge previously saved settings with *options*
+  :type options: |FileActionOptions|
   :returns: Server response of requested action
   :rtype: |ResponseData|
 
@@ -684,7 +684,7 @@ squared
 
   Writes the system name of the currently installed non-UI framework.
 
-  :param string? projectId: Targets a project that is not the default project
+  :param string projectId: Targets a project that is not the default project
   :returns: Framework defined :alt:`(UI)` or system name
   :rtype: string
 
@@ -705,8 +705,8 @@ squared
   Same behavior as native ``document.getElementById`` [#]_ except returns a |Node| instance.
 
   :param string value: Case-sensitive match against *Element*.id property
-  :param boolean? sync: Will block and not wrap query in a Promise
-  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :param boolean sync: Will block and not wrap query in a Promise
+  :param boolean cache: Use any existing *Node* instance of *Element*
   :returns: |resultElement|
   :rtype:
     - Promise<|Node|> or Promise<null>
@@ -724,8 +724,8 @@ squared
   Same behavior as native ``document.querySelector`` [#]_ except returns a |Node| instance.
 
   :param string selector: Selector or selectors matching one or more elements
-  :param boolean? sync: Will block and not wrap query in a Promise
-  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :param boolean sync: Will block and not wrap query in a Promise
+  :param boolean cache: Use any existing *Node* instance of *Element*
   :returns: |resultElement|
   :rtype:
     - Promise<|Node|> or Promise<null>
@@ -746,8 +746,8 @@ squared
   Same behavior as native ``document.querySelectorAll`` [#]_ except returns an array of |Node| instances.
 
   :param string selector: Selector or selectors matching one or more elements
-  :param boolean? sync: Will block and not wrap query in a Promise
-  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :param boolean sync: Will block and not wrap query in a Promise
+  :param boolean cache: Use any existing *Node* instance of *Element*
   :returns: |resultElement|
   :rtype:
     - Promise<|Node|\[\]> or Promise<null>
@@ -764,8 +764,8 @@ squared
   Same behavior as :func:`getElementById` except it also accepts a native *Element*. The **cache** parameter by default is not enabled.
 
   :param element: |targetElement|
-  :param boolean? sync: Will block and not wrap query in a Promise
-  :param boolean? cache: Use any existing *Node* instance of *Element*
+  :param boolean sync: Will block and not wrap query in a Promise
+  :param boolean cache: Use any existing *Node* instance of *Element*
   :returns: |resultElement|
   :rtype:
     - Promise<|Node|> or Promise<null>
@@ -783,8 +783,8 @@ squared
   Uses an existing |Node| instance and creates a new instance with any modifications. The **cache** parameter by default is not enabled.
 
   :param node: Reference to a *Node*
-  :param boolean? sync: Will block and not wrap query in a Promise
-  :param boolean? cache: Use any existing *Node* instance
+  :param boolean sync: Will block and not wrap query in a Promise
+  :param boolean cache: Use any existing *Node* instance
   :type node: |Node|
   :returns: |resultElement|
   :rtype:
@@ -803,7 +803,7 @@ squared
 
   Uses |MutationObserver| to watch for any changes to the :func:`parseDocument` root element. Start after *DOM* and third-party libraries are initialized.
 
-  :param boolean? enable: Start or stop all root elements who are monitoring
+  :param boolean enable: Start or stop all root elements who are monitoring
 
   Usage::
 
@@ -842,8 +842,8 @@ squared
   :param targets: Elements by either selector or *HTMLElement* (**src** or **href** attribute is required)
   :param callback: (:sub:`optional (options)`) Function to call when a ``modified`` event is received
   :param options: Connection attributes overrides sent to server
-  :type callback: |WebSocketMessageChange|?
-  :type options: |FileObserveOptions|?
+  :type callback: |WebSocketMessageChange|
+  :type options: |FileObserveOptions|
   :returns: Connected locations with external source
   :rtype: Promise<|ObserveSocket|> or Promise<|ObserveSocket|\[\]>
 

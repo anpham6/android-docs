@@ -9,7 +9,7 @@
 project = 'squared'
 copyright = 'squared 2024'
 author = 'An Pham'
-release = '5.2.5'
+release = '5.3.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -22,13 +22,9 @@ intersphinx_mapping = {
 
 nitpick_ignore = [
   ('py:class', 'string'),
-  ('py:class', 'string?'),
   ('py:class', 'number'),
-  ('py:class', 'number?'),
   ('py:class', 'boolean'),
-  ('py:class', 'boolean?'),
   ('py:class', 'object'),
-  ('py:class', 'object?'),
   ('py:class', 'array'),
   ('py:class', 'undefined'),
   ('py:class', 'unknown'),
@@ -56,7 +52,7 @@ rst_prolog = """
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/001.png)',
+  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/002.png)',
   'navigation_depth': 3,
   'includehidden': False,
 }
