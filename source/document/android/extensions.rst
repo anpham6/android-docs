@@ -59,6 +59,7 @@ Interface
 
 .. code-block::
   :caption: android.delegate.multiline
+  :emphasize-lines: 3
 
   interface DelegateMultilineOptions {
       mergeSingleLine: boolean;
@@ -156,6 +157,8 @@ Interface
       renderChildren: boolean;
   }
 
+.. note:: These are the built-in extensions which have configurable settings.
+
 Changelog
 =========
 
@@ -196,9 +199,10 @@ Changelog
       - delayBeforeFade
 
   - *ResourceSvgOptions* properties **mergeClipPath** | **mergeVectorDrawable** as :alt:`boolean` were created.
-  - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 
 
-.. note:: These are the built-in extensions which have configurable settings.
+.. versionchanged:: 5.2.0
+
+  - *ProjectMap* methods **get** | **has** will also check default project "_" for key. 
 
 Example usage
 =============
