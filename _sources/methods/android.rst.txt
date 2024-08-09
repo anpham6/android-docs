@@ -10,7 +10,7 @@ android
 
   :param data: Dictionary of imports and variables
   :type data: |AppViewModel|
-  :param string? sessionId: Names a session to be used for storage
+  :param string sessionId: Names a session to be used for storage
 
   Usage::
 
@@ -30,7 +30,7 @@ android
 
   :param data: Dictionary of imports and variables
   :type data: |AppViewModel|
-  :param string? projectId: |projectId|
+  :param string projectId: |projectId|
 
   Usage::
 
@@ -50,7 +50,7 @@ android
   :param string group: Namespace of library
   :param string name: Componenent name in library
   :param string version: |VersionDependency|
-  :param number? type: |GradleDependency|
+  :param number type: |GradleDependency|
   :returns: Dictionary key or ""
   :rtype: string
   :requirements:
@@ -74,7 +74,7 @@ android
   :param string group: Namespace of library
   :param string name: Componenent name in library
   :param string version: |VersionDependency|
-  :param number? type: |GradleDependency|
+  :param number type: |GradleDependency|
   :returns: Dictionary key or ""
   :rtype: string
   :requirements:

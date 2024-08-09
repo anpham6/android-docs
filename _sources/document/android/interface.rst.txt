@@ -315,12 +315,15 @@ Changelog
   - *NodeUI* static method **baselineElement** for qualified elements was created.
   - *NodeUI* method **hasOptimization** for applying built-in optimizations was created.
   - *NodeUI* method **getPositionOffset** for non-static coordinates was created.
-  - *NodeUI* method **actualRect** is no longer abstract.
   - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
   - *NodeUI* method **getPseudoElement** argument **context** as :alt:`string` was implemented.
   - *NodeUI* property accessor **locales** for *Intl* functionality was created.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
   - *NodeUI* property getter **wordSpacing** for trailing margin was created.
+
+.. versionchanged:: 5.3.0
+
+  - *NodeUI* method **actualRect** is no longer abstract.
 
 .. versionadded:: 5.2.1
 
@@ -331,9 +334,12 @@ Changelog
   - *NodeUI* property getter **tagDisplay** for rendered behavior was created.
   - *NodeUI* property getter **alignContent** for vertical layout position was created.
   - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was implemented.
-  - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.
-  - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was amended.
   - *View* property getter **useSystemColors** for device color translation was created.
+
+.. versionchanged:: 5.2.0
+
+  - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was amended.
+  - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.
 
 .. deprecated:: 5.2.0
 

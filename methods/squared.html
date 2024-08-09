@@ -206,8 +206,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pid</strong> (<em>number?</em>) – File request self-assigned number <em class="alt">(options.pid)</em></p></li>
-<li><p><strong>timeout</strong> (<em>number?</em>) – Seconds until request expires</p></li>
+<li><p><strong>pid</strong> (<em>number</em>) – File request self-assigned number <em class="alt">(options.pid)</em></p></li>
+<li><p><strong>timeout</strong> (<em>number</em>) – Seconds until request expires</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -294,8 +294,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">AppFramework</span></a>) – Global object implementation of base functionality</p></li>
-<li><p><strong>options</strong> (<em>object?</em>) – Initialize settings with non-default values</p></li>
-<li><p><strong>cache</strong> (<em>boolean?</em>) – Load previous cached instance and settings</p></li>
+<li><p><strong>options</strong> (<em>object</em>) – Initialize settings with non-default values</p></li>
+<li><p><strong>cache</strong> (<em>boolean</em>) – Load previous cached instance and settings</p></li>
 </ul>
 </dd>
 </dl>
@@ -323,7 +323,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>map</strong> (<em>object</em>) – Attribute object consisting of extensions and overrides</p></li>
-<li><p><strong>framework</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">APP_FRAMEWORK</span></a>?) – Bit mask of supported frameworks</p></li>
+<li><p><strong>framework</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">APP_FRAMEWORK</span></a>) – Bit mask of supported frameworks</p></li>
 </ul>
 </dd>
 </dl>
@@ -514,7 +514,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> – Name or control of extension</p></li>
 <li><p><strong>options</strong> (<em>object</em>) – Overriding configuration values</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name to use when saving to local storage</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name to use when saving to local storage</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -556,8 +556,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> (<em>string</em>) – <em>css</em> or <em>javascript</em> or <em>image</em> or <em>svg</em></p></li>
-<li><p><strong>all</strong> (<em>boolean?</em>) – (<abbr class="sub" title="targets">optional</abbr>) Accept request from any origin</p></li>
-<li><p><strong>targets</strong> (string? or <em>Element</em>?) – URL string or root element of a contained Document</p></li>
+<li><p><strong>all</strong> (<em>boolean</em>) – (<abbr class="sub" title="targets">optional</abbr>) Accept request from any origin</p></li>
+<li><p><strong>targets</strong> (string or <em>Element</em>) – URL string or root element of a contained Document</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -647,8 +647,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em> (selectors are supported)</p></li>
-<li><p><strong>all</strong> (<em>boolean?</em>) – (<abbr class="sub" title="projectId">optional</abbr>) Uses filter to return multiple results</p></li>
-<li><p><strong>projectId</strong> (<em>string?</em>) – Uses an existing project in the current framework</p></li>
+<li><p><strong>all</strong> (<em>boolean</em>) – (<abbr class="sub" title="projectId">optional</abbr>) Uses filter to return multiple results</p></li>
+<li><p><strong>projectId</strong> (<em>string</em>) – Uses an existing project in the current framework</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -683,7 +683,7 @@
 <dd><p>Get any stored session ids from <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> since the last time <a class="reference internal" href="#clear" title="clear"><code class="xref py py-func docutils literal notranslate"><span class="pre">clear()</span></code></a> was called.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>count</strong> (<em>number?</em>) – How many ids at most to be retrieved</p>
+<dd class="field-odd"><p><strong>count</strong> (<em>number</em>) – How many ids at most to be retrieved</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of sequential ids</p>
@@ -710,7 +710,7 @@
 <dd><p>Ends the current session or selected project preventing any further modifications. It is called internally when saving or copying.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the latest</p>
+<dd class="field-odd"><p><strong>projectId</strong> (<em>string</em>) – Targets a project that is not the latest</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Success when in finalizable state</p>
@@ -731,7 +731,7 @@
 <dd><p>Abandons all stored projects and sets a loaded <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> to its initial state. The current user settings are retained.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the latest</p>
+<dd class="field-odd"><p><strong>projectId</strong> (<em>string</em>) – Targets a project that is not the latest</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -747,8 +747,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the default project</p></li>
-<li><p><strong>timeout</strong> (<em>number?</em>) – Maximum time in seconds for build to complete</p></li>
+<li><p><strong>projectId</strong> (<em>string</em>) – Targets a project that is not the default project</p></li>
+<li><p><strong>timeout</strong> (<em>number</em>) – Maximum time in seconds for build to complete</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -779,9 +779,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>string</em>) – Name of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of framework specific functionality to be applied</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>) – Object of framework specific functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -819,9 +819,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uri</strong> (<em>string</em>) – Location of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of framework specific functionality to be applied</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>) – Object of framework specific functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -860,9 +860,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pathname</strong> (<em>string</em>) – Location of a directory accessible to the server process</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of framework specific functionality to be applied</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>) – Object of framework specific functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -902,9 +902,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>string</em>) – Name of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of file saving functionality to be applied</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>) – Object of file saving functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -954,9 +954,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uri</strong> (<em>string</em>) – Location of file with a valid archive extension</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of file appending functionality to be applied</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>) – Object of file appending functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1005,9 +1005,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pathname</strong> (<em>string</em>) – Location of a directory accessible to the server process</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>?) – Object of file copying functionality to be applied</p></li>
-<li><p><strong>setting</strong> (<em>string?</em>) – Name of setting for local storage</p></li>
-<li><p><strong>overwrite</strong> (<em>boolean?</em>) – Will not merge previously saved settings with <em>options</em></p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileActionOptions</span></a>) – Object of file copying functionality to be applied</p></li>
+<li><p><strong>setting</strong> (<em>string</em>) – Name of setting for local storage</p></li>
+<li><p><strong>overwrite</strong> (<em>boolean</em>) – Will not merge previously saved settings with <em>options</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1056,7 +1056,7 @@
 <dd><p>Writes the system name of the currently installed non-UI framework.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>projectId</strong> (<em>string?</em>) – Targets a project that is not the default project</p>
+<dd class="field-odd"><p><strong>projectId</strong> (<em>string</em>) – Targets a project that is not the default project</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Framework defined <em class="alt">(UI)</em> or system name</p>
@@ -1087,8 +1087,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> (<em>string</em>) – Case-sensitive match against <em>Element</em>.id property</p></li>
-<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
+<li><p><strong>sync</strong> (<em>boolean</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1119,8 +1119,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>selector</strong> (<em>string</em>) – Selector or selectors matching one or more elements</p></li>
-<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
+<li><p><strong>sync</strong> (<em>boolean</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1154,8 +1154,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>selector</strong> (<em>string</em>) – Selector or selectors matching one or more elements</p></li>
-<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
+<li><p><strong>sync</strong> (<em>boolean</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1185,8 +1185,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element</strong> – <em>Element</em> target by either an <code class="docutils literal notranslate"><span class="pre">id</span></code> string or <em>HTMLElement</em></p></li>
-<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
+<li><p><strong>sync</strong> (<em>boolean</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean</em>) – Use any existing <em>Node</em> instance of <em>Element</em></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1217,8 +1217,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>node</strong> (<a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a>) – Reference to a <em>Node</em></p></li>
-<li><p><strong>sync</strong> (<em>boolean?</em>) – Will block and not wrap query in a Promise</p></li>
-<li><p><strong>cache</strong> (<em>boolean?</em>) – Use any existing <em>Node</em> instance</p></li>
+<li><p><strong>sync</strong> (<em>boolean</em>) – Will block and not wrap query in a Promise</p></li>
+<li><p><strong>cache</strong> (<em>boolean</em>) – Use any existing <em>Node</em> instance</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1248,7 +1248,7 @@
 <dd><p>Uses <a class="reference internal" href="../references.html#references-typescript-dom-generated"><span class="std std-ref">MutationObserver</span></a> to watch for any changes to the <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> root element. Start after <em>DOM</em> and third-party libraries are initialized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>enable</strong> (<em>boolean?</em>) – Start or stop all root elements who are monitoring</p>
+<dd class="field-odd"><p><strong>enable</strong> (<em>boolean</em>) – Start or stop all root elements who are monitoring</p>
 </dd>
 </dl>
 <p>Usage:</p>
@@ -1291,8 +1291,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>targets</strong> – Elements by either selector or <em>HTMLElement</em> (<strong>src</strong> or <strong>href</strong> attribute is required)</p></li>
-<li><p><strong>callback</strong> (<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">WebSocketMessageChange</span></a>?) – (<abbr class="sub" title="options">optional</abbr>) Function to call when a <code class="docutils literal notranslate"><span class="pre">modified</span></code> event is received</p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileObserveOptions</span></a>?) – Connection attributes overrides sent to server</p></li>
+<li><p><strong>callback</strong> (<a class="reference internal" href="../references.html#references-squared-base-file"><span class="std std-ref">WebSocketMessageChange</span></a>) – (<abbr class="sub" title="options">optional</abbr>) Function to call when a <code class="docutils literal notranslate"><span class="pre">modified</span></code> event is received</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="../references.html#references-squared-main"><span class="std std-ref">FileObserveOptions</span></a>) – Connection attributes overrides sent to server</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
