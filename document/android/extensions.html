@@ -169,8 +169,8 @@
 <div class="code-block-caption"><span class="caption-text">android.delegate.multiline</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">DelegateMultilineOptions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">mergeSingleLine</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">intlLocales</span><span class="o">:</span><span class="w"> </span><span class="kt">Intl.LocaleArguments</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="hll"><span class="w">    </span><span class="nx">intlLocales</span><span class="o">:</span><span class="w"> </span><span class="kt">Intl.LocaleArguments</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -274,6 +274,10 @@
 </pre></div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These are the built-in extensions which have configurable settings.</p>
+</div>
 </section>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
@@ -325,12 +329,13 @@
 </td></tr></table>
 </li>
 <li><p><em>ResourceSvgOptions</em> properties <strong>mergeClipPath</strong> | <strong>mergeVectorDrawable</strong> as <em class="alt">boolean</em> were created.</p></li>
-<li><p><em>ProjectMap</em> methods <strong>get</strong> | <strong>has</strong> will also check default project “_” for key.</p></li>
 </ul>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These are the built-in extensions which have configurable settings.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 5.2.0: </span></p>
+<ul class="simple">
+<li><p><em>ProjectMap</em> methods <strong>get</strong> | <strong>has</strong> will also check default project “_” for key.</p></li>
+</ul>
 </div>
 </section>
 <section id="example-usage">
