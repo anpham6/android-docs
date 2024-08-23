@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 39-40,57,190,205-206,224
+  :emphasize-lines: 39-40,57,91,191,206-207,225
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -97,6 +97,7 @@ Interface
       setBounds(cache?: boolean): BoxRectDimension | null;
       resetBounds(recalibrate?: boolean): void;
       getContainerSize(options?: NodeUnitOptions): number;
+      getLayoutAlign(value: string, dimension?: DimensionAttr): string;
       flex(attr: "inline" | "row" | "column" | "reverse" | "wrap" | "wrapReverse", parent?: boolean | Node): boolean;
       flex(attr: "alignContent" | "justifyContent" | "basis" | "alignSelf" | "justifySelf", parent?: boolean | Node): string;
       flex(attr: "grow" | "shrink" | "order", parent?: boolean | Node): number;
@@ -243,6 +244,10 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.3.1
+
+  - *Node* method **getLayoutAlign** for setting safe alignment values was created.
+
 .. versionadded:: 5.3.0
 
   - *Node* property getters **leftPos** | **rightPos** for direction precedence was created.
@@ -262,7 +267,7 @@ Changelog
   - *Node* method **parseColor** for color scheme detection was created.
   - *Node* method **flex** for parsed Flexbox values was created.
   - *Node* property getter **mathElement** for MathML elements was created.
-  - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was amended.
+  - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was implemented.
 
 .. deprecated:: 5.2.0
 

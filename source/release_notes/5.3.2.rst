@@ -1,0 +1,29 @@
+=====
+5.3.2
+=====
+
+:right:`2024-08-24`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      getLayoutAlign(value: string, dimension?: DimensionAttr): string;
+  }
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: android.base
+
+  class View {
+      mergeGravity(attr: LayoutGravityAttr, alignment: LayoutGravityValue, options: MergeGravityOptions): void; // options
+  }

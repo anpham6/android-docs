@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 3,55,64,93,95-96,153,196-197,216,226-227
+  :emphasize-lines: 3,55,64,93,95-96,153,196-197,216,226-227,241
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -247,6 +247,7 @@ Interface
       applyOptimizations(): boolean;
       applyCustomizations(overwrite?: boolean): void;
       formatted(value: string, overwrite?: boolean): void;
+      mergeGravity(attr: LayoutGravityAttr, alignment: LayoutGravityValue, options: MergeGravityOptions): void;
       mergeGravity(attr: LayoutGravityAttr, alignment: LayoutGravityDirectionAttr, overwrite?: boolean): void;
       anchor(position: AnchorPositionAttr, documentId?: string, overwrite?: boolean): boolean;
       anchorChain(...values: PositionAttr[]): View[];
@@ -310,6 +311,10 @@ Interface
 Changelog
 =========
 
+.. versionchanged:: 5.3.2
+
+  - *NodeUI* method **mergeGravity** *optional* argument **options** as :alt:`MergeGravityOptions` was implemented.
+
 .. versionadded:: 5.3.0
 
   - *NodeUI* static method **baselineElement** for qualified elements was created.
@@ -338,8 +343,8 @@ Changelog
 
 .. versionchanged:: 5.2.0
 
-  - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was amended.
-  - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was amended.
+  - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was implemented.
+  - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was implemented.
 
 .. deprecated:: 5.2.0
 
