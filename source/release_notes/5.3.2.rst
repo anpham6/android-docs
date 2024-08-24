@@ -18,6 +18,8 @@ ADDED
       getLayoutAlign(value: string, dimension?: DimensionAttr): string;
   }
 
+.. rst-class:: release-notes
+
 CHANGED
 =======
 
