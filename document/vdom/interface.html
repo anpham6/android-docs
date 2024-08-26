@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interface &mdash; squared 5.3.0 documentation</title>
+  <title>Interface &mdash; squared 5.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=12562455" />
@@ -19,7 +19,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=5c0b1849"></script>
+        <script src="../../_static/documentation_options.js?v=cf8b163a"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -186,7 +186,8 @@
 <span class="w">    </span><span class="nx">setBounds</span><span class="p">(</span><span class="nx">cache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">resetBounds</span><span class="p">(</span><span class="nx">recalibrate?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">getContainerSize</span><span class="p">(</span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">NodeUnitOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;inline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;row&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;column&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;reverse&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrap&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrapReverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">getLayoutAlign</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension?</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;inline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;row&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;column&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;reverse&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrap&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;wrapReverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;alignContent&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;justifyContent&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;basis&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;alignSelf&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;justifySelf&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;grow&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;shrink&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;order&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">flex</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
@@ -333,6 +334,12 @@
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
 <div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.3.1: </span></p>
+<ul class="simple">
+<li><p><em>Node</em> method <strong>getLayoutAlign</strong> for setting safe alignment values was created.</p></li>
+</ul>
+</div>
+<div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
 <li><p><em>Node</em> property getters <strong>leftPos</strong> | <strong>rightPos</strong> for direction precedence was created.</p></li>
@@ -356,7 +363,7 @@
 <li><p><em>Node</em> method <strong>parseColor</strong> for color scheme detection was created.</p></li>
 <li><p><em>Node</em> method <strong>flex</strong> for parsed Flexbox values was created.</p></li>
 <li><p><em>Node</em> property getter <strong>mathElement</strong> for MathML elements was created.</p></li>
-<li><p><em>Container</em> methods <strong>removeIf</strong> | <strong>cascade</strong> argument <strong>options</strong> with <em class="alt">IteratorPredicate</em> was amended.</p></li>
+<li><p><em>Container</em> methods <strong>removeIf</strong> | <strong>cascade</strong> argument <strong>options</strong> with <em class="alt">IteratorPredicate</em> was implemented.</p></li>
 </ul>
 </div>
 <div class="deprecated">

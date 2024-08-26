@@ -110,11 +110,11 @@ Changelog
 
   - *DocumentOutput* property **jvmToolchain** for :alt:`build.gradle` upgrades was created.
   - *DocumentOutput* property **versionCatalog** for :alt:`libs.versions.toml` integration was created.
-  - *DocumentOutput* property **dependencyScopes** with the :target:`constraints` value type for versioning was amended.
+  - *DocumentOutput* property **dependencyScopes** with the :target:`constraints` value type for versioning was implemented.
 
 .. versionadded:: 5.2.0
 
-  - *DocumentOutput* property **dependencyScopes** with the :target:`snapshot` number value **1** for all scopes was amended.
+  - *DocumentOutput* property **dependencyScopes** with the :target:`snapshot` number value **1** for all scopes was implemented.
 
 Example usage
 -------------
@@ -122,8 +122,9 @@ Example usage
 .. code-block:: javascript
 
   squared.saveAs("android.zip", {
-    targetAPI: 32, // Override settings.targetAPI
-    targetAPI: "Tiramisu",
+    targetAPI: 35, // Override settings.targetAPI
+    targetAPI: 0, // "buildToolsVersion"
+    targetAPI: "Tiramisu", // "buildToolsVersion-Tiramisu"
     manifest: {
       package: "com.example.demo", // <manifest package="com.example.demo">
       application: {

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interface &mdash; squared 5.3.0 documentation</title>
+  <title>Interface &mdash; squared 5.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=12562455" />
@@ -19,7 +19,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=5c0b1849"></script>
+        <script src="../../_static/documentation_options.js?v=cf8b163a"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -349,7 +349,8 @@
 <span class="w">    </span><span class="nx">applyOptimizations</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">applyCustomizations</span><span class="p">(</span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">formatted</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityDirectionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityValue</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">MergeGravityOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityDirectionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">anchor</span><span class="p">(</span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="kt">AnchorPositionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">documentId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">anchorChain</span><span class="p">(</span><span class="nx">...values</span><span class="o">:</span><span class="w"> </span><span class="kt">PositionAttr</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">View</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">anchorParent</span><span class="p">(</span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="kt">OrientationAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">bias</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -412,6 +413,12 @@
 </div>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 5.3.2: </span></p>
+<ul class="simple">
+<li><p><em>NodeUI</em> method <strong>mergeGravity</strong> <em>optional</em> argument <strong>options</strong> as <em class="alt">MergeGravityOptions</em> was implemented.</p></li>
+</ul>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
@@ -449,8 +456,8 @@
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 5.2.0: </span></p>
 <ul class="simple">
-<li><p><em>NodeUI</em> method <strong>flex</strong> argument <strong>parent</strong> with <em class="alt">NodeUI</em> was amended.</p></li>
-<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <strong>name</strong> with <em class="alt">PseudoStyleElt</em> was amended.</p></li>
+<li><p><em>NodeUI</em> method <strong>flex</strong> argument <strong>parent</strong> with <em class="alt">NodeUI</em> was implemented.</p></li>
+<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <strong>name</strong> with <em class="alt">PseudoStyleElt</em> was implemented.</p></li>
 </ul>
 </div>
 <div class="deprecated">
