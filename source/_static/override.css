@@ -4,18 +4,6 @@
     border-bottom: 1px solid #e1e4e5;
 }
 
-.rst-content section > section:nth-of-type(1):not(.release-notes) h2 {
-    border-bottom: 1px dashed lightslategray;
-    padding-bottom: 8px;
-}
-
-.rst-content section > section:nth-of-type(n+2):not(.release-notes) h2, .rst-content section > :not(h1) + section:not(.release-notes) h2 {
-    border-top: 1px dashed lightslategray;
-    border-bottom: none !important;
-    padding-top: 8px;
-    padding-bottom: 0px !important;
-}
-
 .rst-content .code-block-caption {
     font-size: 90%;
     text-align: left;
@@ -26,8 +14,9 @@
     border-top-color: slategray !important;
 }
 
-.rst-content dl[class] .descclassname {
-    display: none;
+.rst-content code.xref {
+    color: darkred;
+    border: none;
 }
 
 .rst-content code.literal:not(.xref) {
@@ -35,14 +24,34 @@
     border-color: lightsteelblue;
 }
 
-.rst-content code.xref {
-    color: darkred;
-    border: none;
-}
-
 .rst-content a.reference code.xref {
     color: #444444;
     border: 1px solid gainsboro;
+}
+
+.hlist ul.simple li, .hlist ul.simple p {
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.versionadded  blockquote .hlist ul.simple {
+    margin-bottom: 0px;
+}
+
+.rst-content section > section:nth-of-type(1):not(.release-notes) h2 {
+    border-bottom: 1px dashed darkgray;
+    padding-bottom: 8px;
+}
+
+.rst-content section > section:nth-of-type(n+2):not(.release-notes) h2, .rst-content section > :not(h1) + section:not(.release-notes) h2 {
+    border-top: 1px dashed darkgray;
+    border-bottom: none !important;
+    padding-top: 8px;
+    padding-bottom: 0px !important;
+}
+
+.rst-content dl[class] .descclassname {
+    display: none;
 }
 
 .section-caption .code-block-caption {
@@ -54,13 +63,4 @@
 .section-caption .code-block-caption em {
     font-size: 85%;
     font-weight: 400;
-}
-
-.hlist ul.simple li, .hlist ul.simple p {
-    line-height: 20px;
-    font-size: 12px;
-}
-
-.versionadded  blockquote .hlist ul.simple {
-    margin-bottom: 0px;
 }

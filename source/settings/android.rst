@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 4,15
+  :emphasize-lines: 4,15,42
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -49,12 +49,17 @@ Interface
       resourceSystemColors?: Record<string, string | [string, number] | ColorRGB>;
       convertImages?: string;
       convertLineHeight?: ResolutionUnit;
+      convertEntities?: ("numeric" | "codepoints" | "characters" | AnyObject)[];
       baseLayoutToolsIgnore?: string;
       manifestPackage?: string;
   }
 
 Changelog
 =========
+
+.. versionadded:: 5.4.0
+
+  - *UserResourceSettingsUI* property **convertEntities** for symbol translation was created.
 
 .. versionadded:: 5.3.0
 
@@ -64,7 +69,7 @@ Changelog
 .. versionadded:: 5.2.0
 
   - *UserResourceSettingsUI* property **showAttributes** accepts a :alt:`object map` to globally replace layout attributes.
-  - *UserResourceSettingsUI* property **resourceSystemColors** device color translation map was created.
+  - *UserResourceSettingsUI* property **resourceSystemColors** for device color translation map was created.
   - **ExtensionFragmentElement** extends the :target:`ViewAttribute` interface.
 
 Example usage
@@ -167,7 +172,7 @@ Example usage
 
 .. code-block::
   :caption: Global
-  :emphasize-lines: 31
+  :emphasize-lines: 31,57-58
 
   squared.settings = {
     builtInExtensions: [
@@ -225,6 +230,8 @@ Example usage
     showErrorMessages: false,
     convertPixels: "dp", // ResolutionUnit
     convertLineHeight: "sp", // ResolutionUnit
+    convertEntities: ["numeric"],
+    convertEntities: ["numeric", "codepoints", {/* JSON (last) */}], // https://html.spec.whatwg.org/entities.json
     insertSpaces: 0, // tabs
     insertSpaces: 4, // per tab
     outputDocumentHandler: "android",

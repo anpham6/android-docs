@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 3,55,64,93,95-96,153,196-197,216,226-227,241
+  :emphasize-lines: 3,55,64,93,95-96,153,196-197,216,223-224,226-227,241
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -229,6 +229,8 @@ Interface
       get firstLetterStyle(): CssStyleMap | null;
       get textAlignLast(): string;
       get textJustified(): boolean;
+      get fontFeatureSettings(): string[];
+      get fontVariationSettings(): string[];
       get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
       get outerRegion(): BoxRectDimension;
@@ -311,9 +313,14 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.4.0
+
+  - *NodeUI* property getter **fontFeatureSettings** for advanced typographic features was created.
+  - *NodeUI* property getter **fontVariationSettings** for low-level control over font characteristics was created.
+
 .. versionchanged:: 5.3.2
 
-  - *NodeUI* method **mergeGravity** *optional* argument **options** as :alt:`MergeGravityOptions` was implemented.
+  - *NodeUI* method **mergeGravity** argument :target:`options` as :alt:`MergeGravityOptions` was implemented.
 
 .. versionadded:: 5.3.0
 
@@ -321,7 +328,7 @@ Changelog
   - *NodeUI* method **hasOptimization** for applying built-in optimizations was created.
   - *NodeUI* method **getPositionOffset** for non-static coordinates was created.
   - *NodeUI* method **hasFixedDimension** was migrated from :target:`View`.
-  - *NodeUI* method **getPseudoElement** argument **context** as :alt:`string` was implemented.
+  - *NodeUI* method **getPseudoElement** argument :target:`context` as :alt:`string` was implemented.
   - *NodeUI* property accessor **locales** for *Intl* functionality was created.
   - *NodeUI* property getter **afterLineBreak** for start of line detection was created.
   - *NodeUI* property getter **wordSpacing** for trailing margin was created.
@@ -338,13 +345,13 @@ Changelog
 
   - *NodeUI* property getter **tagDisplay** for rendered behavior was created.
   - *NodeUI* property getter **alignContent** for vertical layout position was created.
-  - *NodeUI* method **extractAttributes** *optional* argument **replaceWith** as :alt:`AnyObject` was implemented.
+  - *NodeUI* method **extractAttributes** argument :target:`replaceWith` as :alt:`AnyObject` was implemented.
   - *View* property getter **useSystemColors** for device color translation was created.
 
 .. versionchanged:: 5.2.0
 
-  - *NodeUI* method **flex** argument **parent** with :alt:`NodeUI` was implemented.
-  - *NodeUI* method **getPseudoElement** argument **name** with :alt:`PseudoStyleElt` was implemented.
+  - *NodeUI* method **flex** argument :target:`parent` with :alt:`NodeUI` was implemented.
+  - *NodeUI* method **getPseudoElement** argument :target:`name` with :alt:`PseudoStyleElt` was implemented.
 
 .. deprecated:: 5.2.0
 

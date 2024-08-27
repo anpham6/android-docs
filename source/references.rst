@@ -235,6 +235,10 @@ https://unpkg.com/squared/types/android/application.d.ts
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/android/resource.d.ts
+  | `AddArrayOptions <search.html?q=AddArrayOptions>`_
+  | `AddImageOptions <search.html?q=AddImageOptions>`_
+  | `AddStringOptions <search.html?q=AddStringOptions>`_
+  | `AddThemeOptions <search.html?q=AddThemeOptions>`_
   | `FontProviderFonts <search.html?q=FontProviderFonts>`_
   | `ManifestData <search.html?q=ManifestData>`_
   | `ResourceQualifierMap <search.html?q=ResourceQualifierMap>`_
@@ -292,6 +296,7 @@ https://unpkg.com/squared/types/android/type.d.ts
   | `LayoutGravityAttr <search.html?q=LayoutGravityAttr>`_
   | `LayoutGravityDirectionAttr <search.html?q=LayoutGravityDirectionAttr>`_
   | `ResolutionUnit <search.html?q=ResolutionUnit>`_
+  | `XmlEncoding <search.html?q=XmlEncoding>`_
 
 .. _references-chrome:
 
@@ -360,6 +365,7 @@ https://github.com/microsoft/TypeScript/blob/main/src/lib/dom.generated.d.ts
   | `Element <search.html?q=Element>`_
   | `HTMLElement <search.html?q=HTMLElement>`_
   | `MutationObserverInit <search.html?q=MutationObserverInit>`_
+  | `RequestInit <search.html?q=RequestInit>`_
   | `ShadowRoot <search.html?q=DOMRect>`_
 
 .. _references-typescript-es2015-iterable:

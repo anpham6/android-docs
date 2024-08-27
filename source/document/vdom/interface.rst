@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 39-40,57,91,191,206-207,225
+  :emphasize-lines: 14-15,41-42,59,93,193,208-209,227
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -20,6 +20,8 @@ Interface
       every(predicate: IteratorPredicate<T, unknown>, options?: ContainerRangeOptions): boolean;
       removeIf(predicate: IteratorPredicate<T, unknown>, options?: ContainerRemoveIfOptions<T> | IteratorPredicate<T, boolean>): T[];
       find(predicate: IteratorPredicate<T, unknown>, options?: ContainerFindOptions<T>): T | undefined;
+      takeWhile(predicate: IteratorPredicate<T, unknown>, options?: ContainerTakeWhileOptions): T[];
+      dropWhile(predicate: IteratorPredicate<T, unknown>, options?: ContainerEachOptions): T[];
       includes(item: T, cascade: boolean): boolean;
       includes(item: T, options?: ContainerIncludesOptions<T>): boolean;
       cascade(predicate?: IteratorPredicate<T, unknown>, options?: ContainerCascadeOptions<T> | IteratorPredicate<T, boolean>): T[];
@@ -244,6 +246,10 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.4.0
+
+  - *Container* methods **takeWhile** | **dropWhile** for filter termination were created.
+
 .. versionadded:: 5.3.1
 
   - *Node* method **getLayoutAlign** for setting safe alignment values was created.
@@ -254,7 +260,7 @@ Changelog
   - *Node* property getter **nowrapWhiteSpace** for :alt:`text-wrap` detection was created.
   - *Node* method **resetCache** for all property cache values was created.
   - *Node* method **resetState** for all property state values was created.
-  - *Node* method **cssSpecificity** argument **context** as :alt:`string` was implemented.
+  - *Node* method **cssSpecificity** argument :target:`context` as :alt:`string` was implemented.
 
 .. versionadded:: 5.2.1
 
@@ -265,13 +271,13 @@ Changelog
   - *Node* method **withDisplay** for group display values was created.
   - *Node* method **withLayout** for display outside and inside values was created.
   - *Node* method **parseColor** for color scheme detection was created.
-  - *Node* method **flex** for parsed Flexbox values was created.
-  - *Node* property getter **mathElement** for MathML elements was created.
-  - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was implemented.
+  - *Node* method **flex** for parsed *Flexbox* values was created.
+  - *Node* property getter **mathElement** for *MathML* elements was created.
+  - *Container* methods **removeIf** | **cascade** argument :target:`options` as :alt:`IteratorPredicate` was implemented.
 
 .. deprecated:: 5.2.0
 
-  - *Node* property getter **flexdata** as :alt:`Node.flex(attr, parent)` is pending removal.
+  - *Node* property getter **flexdata** as :alt:`Node.flex(attr, parent)` is a duplicate provider.
 
 .. code-block::
   :caption: squared.lib.js
