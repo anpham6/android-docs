@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=e4318fd4" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=7b6aafaa" />
 
   
   <!--[if lt IE 9]>
@@ -141,7 +141,8 @@
 <span class="w">    </span><span class="nx">resourceSystemColors?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ColorRGB</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">convertImages?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">convertLineHeight?</span><span class="o">:</span><span class="w"> </span><span class="kt">ResolutionUnit</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">baseLayoutToolsIgnore?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">convertEntities</span><span class="o">?:</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;numeric&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;codepoints&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;characters&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">AnyObject</span><span class="p">)[];</span>
+</span><span class="w">    </span><span class="nx">baseLayoutToolsIgnore?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">manifestPackage?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -149,6 +150,12 @@
 </section>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.4.0: </span></p>
+<ul class="simple">
+<li><p><em>UserResourceSettingsUI</em> property <strong>convertEntities</strong> for symbol translation was created.</p></li>
+</ul>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
@@ -160,7 +167,7 @@
 <p><span class="versionmodified added">Added in version 5.2.0: </span></p>
 <ul class="simple">
 <li><p><em>UserResourceSettingsUI</em> property <strong>showAttributes</strong> accepts a <em class="alt">object map</em> to globally replace layout attributes.</p></li>
-<li><p><em>UserResourceSettingsUI</em> property <strong>resourceSystemColors</strong> device color translation map was created.</p></li>
+<li><p><em>UserResourceSettingsUI</em> property <strong>resourceSystemColors</strong> for device color translation map was created.</p></li>
 <li><p><strong>ExtensionFragmentElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
 </ul>
 </div>
@@ -322,7 +329,9 @@
 <span class="w">  </span><span class="nx">showErrorMessages</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">convertPixels</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dp&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ResolutionUnit</span>
 <span class="w">  </span><span class="nx">convertLineHeight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sp&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ResolutionUnit</span>
-<span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// tabs</span>
+<span class="hll"><span class="w">  </span><span class="nx">convertEntities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numeric&quot;</span><span class="p">],</span>
+</span><span class="hll"><span class="w">  </span><span class="nx">convertEntities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;codepoints&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* JSON (last) */</span><span class="p">}],</span><span class="w"> </span><span class="c1">// https://html.spec.whatwg.org/entities.json</span>
+</span><span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// tabs</span>
 <span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="c1">// per tab</span>
 <span class="w">  </span><span class="nx">outputDocumentHandler</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">outputEmptyCopyDirectory</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Sub directories within target directory (OR: RequestData&lt;{ emptyDir: false }&gt;)</span>

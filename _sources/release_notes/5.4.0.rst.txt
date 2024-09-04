@@ -1,0 +1,86 @@
+=====
+5.4.0
+=====
+
+:right:`2024-12-07`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface UserResourceSettingsUI {
+      convertEntities?: ("numeric" | "codepoints" | "characters" | Record<string, object>)[];
+  }
+
+  class Application {
+      get pageEncoding(): string;
+  }
+
+  class ResourceUI {
+      static setHtmlEntities(value: Record<string, object>): void; // https://html.spec.whatwg.org/entities.json
+  }
+
+  class NodeUI {
+      get fontFeatureSettings(): string[];
+      get fontVariationSettings(): string[];
+  }
+
+.. code-block::
+  :caption: squared.lib.dom
+
+  function getPageEncoding(): string;
+
+.. code-block::
+  :caption: android.base
+
+  class Application {
+      get xmlEncoding(): XmlEncoding | undefined;
+  }
+
+  class File {
+      get xmlEncoding(): XmlEncoding | undefined;
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface CacheValue {
+      aspectRatio?: [number, number] | null; // CacheValueUI
+  }
+
+  class ResourceUI {
+      preFormatString(value: string, entities?: unknown[]): string; // entities
+  }
+
+.. code-block::
+  :caption: squared.lib.util
+
+  function capitalize(value: unknown, locales: Intl.LocalesArgument | null): string; // locales
+  function capitalize(value: unknown, upper?: boolean, locales?: Intl.LocalesArgument | null): string;
+
+.. code-block::
+  :caption: android.lib.util
+
+  function applyTemplate(tagName: string, template: AnyObject, children: AnyObject[], depth?: number | null, encoding?: XmlEncoding): string; // encoding
+  function replaceCharacterData(value: string, options?: ReplaceCharacterDataOptions): string; // options
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: android.lib.util
+
+  function replaceCharacterData(value: string, tab?: number, inline?: boolean): string; // options

@@ -254,7 +254,7 @@ Changelog
   - *Node* property getter **nowrapWhiteSpace** for :alt:`text-wrap` detection was created.
   - *Node* method **resetCache** for all property cache values was created.
   - *Node* method **resetState** for all property state values was created.
-  - *Node* method **cssSpecificity** argument **context** as :alt:`string` was implemented.
+  - *Node* method **cssSpecificity** argument :target:`context` as :alt:`string` was implemented.
 
 .. versionadded:: 5.2.1
 
@@ -265,13 +265,13 @@ Changelog
   - *Node* method **withDisplay** for group display values was created.
   - *Node* method **withLayout** for display outside and inside values was created.
   - *Node* method **parseColor** for color scheme detection was created.
-  - *Node* method **flex** for parsed Flexbox values was created.
-  - *Node* property getter **mathElement** for MathML elements was created.
-  - *Container* methods **removeIf** | **cascade** argument **options** with :alt:`IteratorPredicate` was implemented.
+  - *Node* method **flex** for parsed *Flexbox* values was created.
+  - *Node* property getter **mathElement** for *MathML* elements was created.
+  - *Container* methods **removeIf** | **cascade** argument :target:`options` as :alt:`IteratorPredicate` was implemented.
 
 .. deprecated:: 5.2.0
 
-  - *Node* property getter **flexdata** as :alt:`Node.flex(attr, parent)` is pending removal.
+  - *Node* property getter **flexdata** as :alt:`Node.flex(attr, parent)` is a duplicate.
 
 .. code-block::
   :caption: squared.lib.js

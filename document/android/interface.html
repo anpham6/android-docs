@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=12562455" />
       <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=a041332a" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=e4318fd4" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=7b6aafaa" />
 
   
   <!--[if lt IE 9]>
@@ -331,12 +331,14 @@
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">firstLetterStyle</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">textAlignLast</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">textJustified</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">alignContent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;end&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformValue</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">outerRegion</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">locales</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-</span><span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">locales</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</span><span class="p">}</span>
+<span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">fontFeatureSettings</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">fontVariationSettings</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+</span><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">alignContent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;end&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformValue</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">outerRegion</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">locales</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">locales</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
 
 <span class="kd">class</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">availablePercent</span><span class="p">(</span><span class="nx">nodes</span><span class="o">:</span><span class="w"> </span><span class="kt">View</span><span class="p">[],</span><span class="w"> </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">boxSize</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">flexContainer?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
@@ -347,10 +349,10 @@
 <span class="w">    </span><span class="nx">app</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">clone</span><span class="p">(</span><span class="nx">id?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">CloneOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">View</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">applyOptimizations</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">applyCustomizations</span><span class="p">(</span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">formatted</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityValue</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">MergeGravityOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
-</span><span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityDirectionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">applyCustomizations</span><span class="p">(</span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">formatted</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityValue</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">MergeGravityOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">mergeGravity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutGravityDirectionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">anchor</span><span class="p">(</span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="kt">AnchorPositionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">documentId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">anchorChain</span><span class="p">(</span><span class="nx">...values</span><span class="o">:</span><span class="w"> </span><span class="kt">PositionAttr</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">View</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">anchorParent</span><span class="p">(</span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="kt">OrientationAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">bias</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">overwrite</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -413,10 +415,17 @@
 </div>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.4.0: </span></p>
+<ul class="simple">
+<li><p><em>NodeUI</em> property getter <strong>fontFeatureSettings</strong> for advanced typographic features was created.</p></li>
+<li><p><em>NodeUI</em> property getter <strong>fontVariationSettings</strong> for low-level control over font characteristics was created.</p></li>
+</ul>
+</div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 5.3.2: </span></p>
 <ul class="simple">
-<li><p><em>NodeUI</em> method <strong>mergeGravity</strong> <em>optional</em> argument <strong>options</strong> as <em class="alt">MergeGravityOptions</em> was implemented.</p></li>
+<li><p><em>NodeUI</em> method <strong>mergeGravity</strong> argument <em class="target">options</em> as <em class="alt">MergeGravityOptions</em> was implemented.</p></li>
 </ul>
 </div>
 <div class="versionadded">
@@ -426,7 +435,7 @@
 <li><p><em>NodeUI</em> method <strong>hasOptimization</strong> for applying built-in optimizations was created.</p></li>
 <li><p><em>NodeUI</em> method <strong>getPositionOffset</strong> for non-static coordinates was created.</p></li>
 <li><p><em>NodeUI</em> method <strong>hasFixedDimension</strong> was migrated from <em class="target">View</em>.</p></li>
-<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <strong>context</strong> as <em class="alt">string</em> was implemented.</p></li>
+<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <em class="target">context</em> as <em class="alt">string</em> was implemented.</p></li>
 <li><p><em>NodeUI</em> property accessor <strong>locales</strong> for <em>Intl</em> functionality was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>afterLineBreak</strong> for start of line detection was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>wordSpacing</strong> for trailing margin was created.</p></li>
@@ -449,15 +458,15 @@
 <ul class="simple">
 <li><p><em>NodeUI</em> property getter <strong>tagDisplay</strong> for rendered behavior was created.</p></li>
 <li><p><em>NodeUI</em> property getter <strong>alignContent</strong> for vertical layout position was created.</p></li>
-<li><p><em>NodeUI</em> method <strong>extractAttributes</strong> <em>optional</em> argument <strong>replaceWith</strong> as <em class="alt">AnyObject</em> was implemented.</p></li>
+<li><p><em>NodeUI</em> method <strong>extractAttributes</strong> argument <em class="target">replaceWith</em> as <em class="alt">AnyObject</em> was implemented.</p></li>
 <li><p><em>View</em> property getter <strong>useSystemColors</strong> for device color translation was created.</p></li>
 </ul>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 5.2.0: </span></p>
 <ul class="simple">
-<li><p><em>NodeUI</em> method <strong>flex</strong> argument <strong>parent</strong> with <em class="alt">NodeUI</em> was implemented.</p></li>
-<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <strong>name</strong> with <em class="alt">PseudoStyleElt</em> was implemented.</p></li>
+<li><p><em>NodeUI</em> method <strong>flex</strong> argument <em class="target">parent</em> with <em class="alt">NodeUI</em> was implemented.</p></li>
+<li><p><em>NodeUI</em> method <strong>getPseudoElement</strong> argument <em class="target">name</em> with <em class="alt">PseudoStyleElt</em> was implemented.</p></li>
 </ul>
 </div>
 <div class="deprecated">
