@@ -23,7 +23,7 @@ ADDED
   }
 
   class ResourceUI {
-      static setHtmlEntities(value: Record<string, object>): void; // https://html.spec.whatwg.org/entities.json
+      static setHtmlEntities(value?: string | Record<string, object>, init?: RequestInit): void | Promise<void>; // https://html.spec.whatwg.org/entities.json
   }
 
   class NodeUI {
@@ -47,6 +47,11 @@ ADDED
       get xmlEncoding(): XmlEncoding | undefined;
   }
 
+.. code-block::
+  :caption: android.lib.util
+
+  function getXmlProlog(encoding: string): string;
+
 .. rst-class:: release-notes
 
 CHANGED
@@ -68,6 +73,13 @@ CHANGED
 
   function capitalize(value: unknown, locales: Intl.LocalesArgument | null): string; // locales
   function capitalize(value: unknown, upper?: boolean, locales?: Intl.LocalesArgument | null): string;
+
+.. code-block::
+  :caption: android
+
+  interface FontProviderAction {
+      addFontProvider(authority: string, package: string, certs: string[], webFonts: string | FontProviderFonts, init?: RequestInit): Promise<boolean>; // init
+  }
 
 .. code-block::
   :caption: android.lib.util

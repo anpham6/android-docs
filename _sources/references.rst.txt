@@ -365,6 +365,7 @@ https://github.com/microsoft/TypeScript/blob/main/src/lib/dom.generated.d.ts
   | `Element <search.html?q=Element>`_
   | `HTMLElement <search.html?q=HTMLElement>`_
   | `MutationObserverInit <search.html?q=MutationObserverInit>`_
+  | `RequestInit <search.html?q=RequestInit>`_
   | `ShadowRoot <search.html?q=DOMRect>`_
 
 .. _references-typescript-es2015-iterable:
