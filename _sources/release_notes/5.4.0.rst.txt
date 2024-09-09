@@ -32,6 +32,14 @@ ADDED
   }
 
 .. code-block::
+  :caption: squared.lib.base
+
+  class Container {
+      takeWhile(predicate: IteratorPredicate<unknown, unknown>, options?: ContainerEachOptions): unknown[];
+      dropWhile(predicate: IteratorPredicate<unknown, unknown>, options?: ContainerEachOptions): unknown[];
+  }
+
+.. code-block::
   :caption: squared.lib.dom
 
   function getPageEncoding(): string;
