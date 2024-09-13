@@ -35,7 +35,7 @@ ADDED
   :caption: squared.lib.base
 
   class Container {
-      takeWhile(predicate: IteratorPredicate<unknown, unknown>, options?: ContainerEachOptions): unknown[];
+      takeWhile(predicate: IteratorPredicate<unknown, unknown>, options?: ContainerTakeWhileOptions): unknown[];
       dropWhile(predicate: IteratorPredicate<unknown, unknown>, options?: ContainerEachOptions): unknown[];
   }
 

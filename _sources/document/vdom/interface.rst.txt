@@ -20,7 +20,7 @@ Interface
       every(predicate: IteratorPredicate<T, unknown>, options?: ContainerRangeOptions): boolean;
       removeIf(predicate: IteratorPredicate<T, unknown>, options?: ContainerRemoveIfOptions<T> | IteratorPredicate<T, boolean>): T[];
       find(predicate: IteratorPredicate<T, unknown>, options?: ContainerFindOptions<T>): T | undefined;
-      takeWhile(predicate: IteratorPredicate<T, unknown>, options?: ContainerEachOptions): T[];
+      takeWhile(predicate: IteratorPredicate<T, unknown>, options?: ContainerTakeWhileOptions): T[];
       dropWhile(predicate: IteratorPredicate<T, unknown>, options?: ContainerEachOptions): T[];
       includes(item: T, cascade: boolean): boolean;
       includes(item: T, options?: ContainerIncludesOptions<T>): boolean;

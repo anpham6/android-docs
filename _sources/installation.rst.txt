@@ -113,6 +113,18 @@ Repo
   repo init -u https://github.com/anpham6/squared-repo -m 5.3.0.xml
   repo sync
 
+.. code-block::
+  :caption: Ruby (alternate) [#]_
+
+  mkdir workspace
+  cd workspace          # REPO_ROOT
+
+  curl -o ./Rakefile https://github.com/anpham6/squared/raw/5.4.0/Rakefile
+
+  # REPO_BUILD={dev,prod}
+  # FAIL_BUILD=1
+  rake repo:init[5.4.0] # Git tag (optional)
+
 .. rst-class:: installation-workspace
 
 .. code-block::
@@ -122,3 +134,4 @@ Repo
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo
+.. [#] https://www.ruby-lang.org/en/documentation/installation (2.7/3.0)
