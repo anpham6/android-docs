@@ -69,11 +69,11 @@ GitHub
   node serve.js
 
 .. code-block::
-  :caption: dev - 5.3.0
+  :caption: dev - 5.4.0
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.3.0
+  git checkout 5.4.0
 
   npm install
   npm run build:dev
@@ -82,7 +82,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 3.3.0
+  git checkout 3.4.0
 
   npm install
   npm run dev
@@ -110,20 +110,21 @@ Repo
   mkdir workspace
   cd workspace
 
-  repo init -u https://github.com/anpham6/squared-repo -m 5.3.0.xml
+  repo init -u https://github.com/anpham6/squared-repo -m prod.xml
   repo sync
 
 .. code-block::
   :caption: Ruby (alternate) [#]_
 
   mkdir workspace
-  cd workspace          # REPO_ROOT
+  cd workspace
 
   curl -o ./Rakefile https://github.com/anpham6/squared/raw/5.4.0/Rakefile
 
   # REPO_BUILD={dev,prod}
   # FAIL_BUILD=1
   rake repo:init[5.4.0] # Git tag (optional)
+  rake -T               # List tasks
 
 .. rst-class:: installation-workspace
 
@@ -134,4 +135,4 @@ Repo
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo
-.. [#] https://www.ruby-lang.org/en/documentation/installation (2.7/3.0)
+.. [#] https://www.ruby-lang.org/en/documentation/installation (2.5/3.0)
