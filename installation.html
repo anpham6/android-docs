@@ -201,7 +201,7 @@ curl<span class="w"> </span>-s<span class="w"> </span>https://storage.googleapis
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>workspace
 <span class="nb">cd</span><span class="w"> </span>workspace
 
-repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://github.com/anpham6/squared-repo<span class="w"> </span>-m<span class="w"> </span>prod.xml
+repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://github.com/anpham6/squared-repo<span class="w"> </span>-m<span class="w"> </span>latest.xml
 repo<span class="w"> </span>sync
 </pre></div>
 </div>
@@ -215,8 +215,8 @@ curl<span class="w"> </span>-o<span class="w"> </span>./Rakefile<span class="w">
 
 <span class="c1"># REPO_BUILD={dev,prod}</span>
 <span class="c1"># FAIL_BUILD=1</span>
-rake<span class="w"> </span>repo:init<span class="o">[</span><span class="m">5</span>.4.0<span class="o">]</span><span class="w"> </span><span class="c1"># Git tag (optional)</span>
-rake<span class="w"> </span>-T<span class="w">               </span><span class="c1"># List tasks</span>
+rake<span class="w"> </span>repo:init<span class="o">[</span>nightly<span class="o">]</span><span class="w"> </span><span class="c1"># Repo tag (optional)</span>
+rake<span class="w"> </span>-T<span class="w">                 </span><span class="c1"># List tasks</span>
 </pre></div>
 </div>
 </div>

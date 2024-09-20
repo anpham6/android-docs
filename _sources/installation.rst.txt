@@ -110,7 +110,7 @@ Repo
   mkdir workspace
   cd workspace
 
-  repo init -u https://github.com/anpham6/squared-repo -m prod.xml
+  repo init -u https://github.com/anpham6/squared-repo -m latest.xml
   repo sync
 
 .. code-block::
@@ -123,8 +123,8 @@ Repo
 
   # REPO_BUILD={dev,prod}
   # FAIL_BUILD=1
-  rake repo:init[5.4.0] # Git tag (optional)
-  rake -T               # List tasks
+  rake repo:init[nightly] # Repo tag (optional)
+  rake -T                 # List tasks
 
 .. rst-class:: installation-workspace
 
