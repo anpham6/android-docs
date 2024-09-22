@@ -59,7 +59,6 @@ Interface
 
 .. code-block::
   :caption: android.delegate.multiline
-  :emphasize-lines: 3
 
   interface DelegateMultilineOptions {
       mergeSingleLine: boolean;

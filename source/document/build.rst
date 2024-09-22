@@ -77,7 +77,6 @@ Interface
 ---------
 
 .. code-block::
-  :emphasize-lines: 15-16
 
   interface DocumentOutput {
       targetAPI?: number | string;
@@ -191,7 +190,6 @@ Interface
 ---------
 
 .. code-block::
-  :emphasize-lines: 9-11,19,35,43
 
   interface FileActionOptions {
       baseHref?: URL;

@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 4,15,42
+  :emphasize-lines: 42
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -172,7 +172,6 @@ Example usage
 
 .. code-block::
   :caption: Global
-  :emphasize-lines: 31,57-58
 
   squared.settings = {
     builtInExtensions: [
