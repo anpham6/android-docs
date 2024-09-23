@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build Options &mdash; squared 5.3.2 documentation</title>
+  <title>Build Options &mdash; squared 5.3.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
@@ -19,7 +19,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=cf8b163a"></script>
+        <script src="../_static/documentation_options.js?v=6bf39223"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -185,9 +185,9 @@
 <span class="w">    </span><span class="nx">mainSrcDir?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">mainActivityFile?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">javaVersion?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">jvmToolchain?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-</span><span class="hll"><span class="w">    </span><span class="nx">versionCatalog?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-</span><span class="w">    </span><span class="nx">versionName?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">jvmToolchain?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">versionCatalog?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">versionName?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">versionCode?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">dataBinding?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">commands?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[])[];</span>
@@ -295,18 +295,18 @@
 <span class="w">        </span><span class="nx">link?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
 <span class="w">        </span><span class="nx">image?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
 <span class="w">        </span><span class="nx">font?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
-<span class="hll"><span class="w">        </span><span class="nx">video?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
-</span><span class="hll"><span class="w">        </span><span class="nx">audio?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
-</span><span class="hll"><span class="w">        </span><span class="nx">raw?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
-</span><span class="w">    </span><span class="p">};</span>
+<span class="w">        </span><span class="nx">video?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">audio?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">raw?</span><span class="o">:</span><span class="w"> </span><span class="kt">SaveAsOptions</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
 <span class="w">    </span><span class="nx">downloadOnly?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">excluding?</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">observe?</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">MutationCallback</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">preserveCrossOrigin?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">URLData</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">addResourceHints?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ResourceHintType</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ResourceHintType</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">retainUsedStyles</span><span class="o">?:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">)[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">UsedStylesData</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">removeBinaries?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-</span><span class="w">    </span><span class="nx">removeInlineStyles?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeBinaries?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">removeInlineStyles?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">removeUnusedClasses?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">removeUnusedPseudoClasses?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">removeUnusedVariables?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -321,16 +321,16 @@
 <span class="kd">interface</span><span class="w"> </span><span class="nx">DocumentOutput</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">productionRelease?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">productionIncremental?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">serverRootMapping?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
-</span><span class="w">    </span><span class="nx">useOriginalHtmlPage?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">serverRootMapping?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">useOriginalHtmlPage?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">useUnsafeHtmlReplace?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">useSessionCache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">stripCommentsAndCDATA?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">normalizeHtmlOutput?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">escapeReservedCharacters?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">ignoreServerCodeBlocks?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
-<span class="hll"><span class="w">    </span><span class="nx">sanitizeFramework?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
-</span><span class="w">    </span><span class="nx">webBundle</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sanitizeFramework?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">webBundle</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">rootDirAlias?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">        </span><span class="nx">baseUrl?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">        </span><span class="nx">primaryUrl?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Android &mdash; squared 5.3.2 documentation</title>
+  <title>Android &mdash; squared 5.3.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
@@ -19,7 +19,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=cf8b163a"></script>
+        <script src="../_static/documentation_options.js?v=6bf39223"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -103,8 +103,8 @@
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">supportRTL</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-</span><span class="w">    </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledViewModel</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -114,8 +114,8 @@
 <span class="w">    </span><span class="nx">includableElements</span><span class="o">:</span><span class="w"> </span><span class="kt">ExtensionIncludeElement</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">substitutableElements</span><span class="o">:</span><span class="w"> </span><span class="kt">ExtensionSubtituteElement</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">fragmentableElements</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionFragmentElement</span><span class="p">)[];</span>
-<span class="hll"><span class="w">    </span><span class="nx">composableElements</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="p">)[];</span>
-</span><span class="w">    </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionFragmentElement</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">composableElements</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="p">)[];</span>
+<span class="w">    </span><span class="nx">baseLayoutAsFragment</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ExtensionFragmentElement</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">convertPixels</span><span class="o">:</span><span class="w"> </span><span class="kt">ResolutionUnit</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">lineHeightAdjust</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">fontMeasureAdjust</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
@@ -303,8 +303,8 @@
 <span class="w">    </span><span class="s2">&quot;android.resource.data&quot;</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="nx">convertImages</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// jpeg | webp | gif | bmp</span>
-<span class="hll"><span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)</span>
-</span><span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;****************&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Tinify API key</span>
+<span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// npm i @pi-r/tinify + TinyPNG (https://tinypng.com/developers)</span>
+<span class="w">  </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;****************&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Tinify API key</span>
 <span class="w">  </span><span class="nx">showAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="s2">&quot;android:hyphenationFrequency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace all</span>
 <span class="w">    </span><span class="s2">&quot;android:fontFeatureSettings&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Delete all</span>
@@ -329,9 +329,9 @@
 <span class="w">  </span><span class="nx">showErrorMessages</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">convertPixels</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dp&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ResolutionUnit</span>
 <span class="w">  </span><span class="nx">convertLineHeight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sp&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ResolutionUnit</span>
-<span class="hll"><span class="w">  </span><span class="nx">convertEntities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numeric&quot;</span><span class="p">],</span>
-</span><span class="hll"><span class="w">  </span><span class="nx">convertEntities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;codepoints&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* JSON (last) */</span><span class="p">}],</span><span class="w"> </span><span class="c1">// https://html.spec.whatwg.org/entities.json</span>
-</span><span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// tabs</span>
+<span class="w">  </span><span class="nx">convertEntities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numeric&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">convertEntities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numeric&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;codepoints&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* JSON (last) */</span><span class="p">}],</span><span class="w"> </span><span class="c1">// https://html.spec.whatwg.org/entities.json</span>
+<span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// tabs</span>
 <span class="w">  </span><span class="nx">insertSpaces</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="c1">// per tab</span>
 <span class="w">  </span><span class="nx">outputDocumentHandler</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">outputEmptyCopyDirectory</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Sub directories within target directory (OR: RequestData&lt;{ emptyDir: false }&gt;)</span>

@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 3,55,64,93,95-96,153,196-197,216,223-224,226-227,241
+  :emphasize-lines: 196-197,223-224
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
