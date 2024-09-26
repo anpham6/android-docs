@@ -107,8 +107,8 @@ Repo
 .. code-block::
   :caption: Usage [#]_
 
-  mkdir workspace
-  cd workspace
+  mkdir workspaces
+  cd workspaces
 
   repo init -u https://github.com/anpham6/squared-repo -m latest.xml
   repo sync
@@ -116,23 +116,43 @@ Repo
 .. code-block::
   :caption: Ruby (alternate) [#]_
 
-  mkdir workspace
-  cd workspace
+  mkdir workspaces
+  cd workspaces            # REPO_ROOT
 
-  curl -o ./Rakefile https://github.com/anpham6/squared/raw/5.4.0/Rakefile
+  curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared/master/Rakefile     # Required
+  curl -o Dockerfile https://raw.githubusercontent.com/anpham6/squared/master/Dockerfile # Optional
+
+  # REPO_DOCS=1 (venv)
+  rake -T                  # List tasks
 
   # REPO_BUILD={dev,prod}
   # FAIL_BUILD=1
-  rake repo:init[nightly] # Repo tag (optional)
-  rake -T                 # List tasks
+  rake repo:init           # nightly
+  # OR
+  rake repo:init[latest]
+  # OR
+  REPO_MANIFEST=latest rake repo:init
+
+  # NODE_TAG=latest
+  # RUBY_VERSION=2.4.0-3.3.0
+  docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
+
+  # Express
+  docker run -it --name express --rm -p 80:80 \
+    --mount type=bind,src=${PWD},dst=/workspaces/squared/.config \
+    --mount type=bind,src=${PWD}/html,dst=/workspaces/squared/www \
+    squared
+
+  # Terminal
+  docker run -it --name debian squared /bin/bash # irb
 
 .. rst-class:: installation-workspace
 
 .. code-block::
-  :caption: ~/workspace
+  :caption: ~/workspaces
 
   android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo
-.. [#] https://www.ruby-lang.org/en/documentation/installation (2.5/3.0)
+.. [#] https://www.ruby-lang.org/en/documentation/installation (2.4/3.0)
