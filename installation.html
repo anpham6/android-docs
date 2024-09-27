@@ -209,14 +209,28 @@ repo<span class="w"> </span>sync
 <div class="literal-block-wrapper docutils container" id="id14">
 <div class="code-block-caption"><span class="caption-text">Ruby (alternate) <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>workspace
-<span class="nb">cd</span><span class="w"> </span>workspace
+<span class="nb">cd</span><span class="w"> </span>workspace<span class="w">            </span><span class="c1"># REPO_ROOT</span>
 
-curl<span class="w"> </span>-o<span class="w"> </span>./Rakefile<span class="w"> </span>https://github.com/anpham6/squared/raw/5.4.0/Rakefile
+curl<span class="w"> </span>-o<span class="w"> </span>Rakefile<span class="w"> </span>https://raw.githubusercontent.com/anpham6/squared/master/Rakefile<span class="w">     </span><span class="c1"># Required</span>
+curl<span class="w"> </span>-o<span class="w"> </span>Dockerfile<span class="w"> </span>https://raw.githubusercontent.com/anpham6/squared/master/Dockerfile<span class="w"> </span><span class="c1"># Optional</span>
+
+rake<span class="w"> </span>-T<span class="w">                 </span><span class="c1"># List tasks</span>
 
 <span class="c1"># REPO_BUILD={dev,prod}</span>
 <span class="c1"># FAIL_BUILD=1</span>
-rake<span class="w"> </span>repo:init<span class="o">[</span>nightly<span class="o">]</span><span class="w"> </span><span class="c1"># Repo tag (optional)</span>
-rake<span class="w"> </span>-T<span class="w">                 </span><span class="c1"># List tasks</span>
+rake<span class="w"> </span>repo:init<span class="w">          </span><span class="c1"># nightly</span>
+<span class="c1"># OR</span>
+rake<span class="w"> </span>repo:init<span class="o">[</span>latest<span class="o">]</span>
+<span class="c1"># OR</span>
+<span class="nv">REPO_MANIFEST</span><span class="o">=</span>latest<span class="w"> </span>rake<span class="w"> </span>repo:init
+
+<span class="c1"># NODE_TAG=latest</span>
+<span class="c1"># RUBY_VERSION=2.5.0-3.3.0</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>squared-prod<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">MANIFEST</span><span class="o">=</span>prod<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">BUILD</span><span class="o">=</span>prod<span class="w"> </span>.
+<span class="c1"># Express</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>express<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>-v<span class="w"> </span>/local/config:/repo/config:ro<span class="w"> </span>squared-prod
+<span class="c1"># Terminal</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>debian<span class="w"> </span>squared-prod<span class="w"> </span>/bin/bash
 </pre></div>
 </div>
 </div>

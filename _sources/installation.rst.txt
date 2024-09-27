@@ -117,14 +117,28 @@ Repo
   :caption: Ruby (alternate) [#]_
 
   mkdir workspace
-  cd workspace
+  cd workspace            # REPO_ROOT
 
-  curl -o ./Rakefile https://github.com/anpham6/squared/raw/5.4.0/Rakefile
+  curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared/master/Rakefile     # Required
+  curl -o Dockerfile https://raw.githubusercontent.com/anpham6/squared/master/Dockerfile # Optional
+
+  rake -T                 # List tasks
 
   # REPO_BUILD={dev,prod}
   # FAIL_BUILD=1
-  rake repo:init[nightly] # Repo tag (optional)
-  rake -T                 # List tasks
+  rake repo:init          # nightly
+  # OR
+  rake repo:init[latest]
+  # OR
+  REPO_MANIFEST=latest rake repo:init
+
+  # NODE_TAG=latest
+  # RUBY_VERSION=2.5.0-3.3.0
+  docker build -t squared-prod --build-arg MANIFEST=prod --build-arg BUILD=prod .
+  # Express 
+  docker run -it --name express --rm -p 3000:3000 -v /local/config:/repo/config:ro squared-prod
+  # Terminal
+  docker run -it --name debian squared-prod /bin/bash
 
 .. rst-class:: installation-workspace
 
