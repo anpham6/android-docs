@@ -119,8 +119,7 @@ Repo
   mkdir workspaces
   cd workspaces            # REPO_ROOT
 
-  curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared/master/Rakefile     # Required
-  curl -o Dockerfile https://raw.githubusercontent.com/anpham6/squared/master/Dockerfile # Optional
+  curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared/5.4.0/Rakefile
 
   # REPO_DOCS=1 (venv)
   rake -T                  # List tasks
@@ -133,8 +132,23 @@ Repo
   # OR
   REPO_MANIFEST=latest rake repo:init
 
+.. rst-class:: installation-workspace
+
+.. code-block::
+  :caption: ~/workspaces
+
+  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
+
+Docker
+------
+
+.. code-block::
+
+  curl -o Dockerfile https://raw.githubusercontent.com/anpham6/squared/5.4.0/Dockerfile
+
   # NODE_TAG=latest
   # RUBY_VERSION=2.4.0-3.3.0
+  # FAIL_BUILD=0
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
 
   # Express
@@ -146,12 +160,24 @@ Repo
   # Terminal
   docker run -it --name debian squared /bin/bash # irb
 
-.. rst-class:: installation-workspace
+GitHub Codespaces
+-----------------
+
+- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.4.0&repo=162848626&skip_quickstart=true>`_
 
 .. code-block::
-  :caption: ~/workspaces
 
-  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
+  sudo ./scripts/repo-install.sh
+
+  # NODE_INSTALL=pnpm
+  REPO_ROOT=/workspaces rake repo:init[0.11.x]
+
+  rake repo:sync
+  # OR
+  rake emc:checkout:force[0.11.0]    # once
+  rake pir:checkout:force[0.9.0]
+  rake express:checkout:force[3.4.0]
+  rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo
