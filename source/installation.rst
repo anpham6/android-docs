@@ -148,7 +148,8 @@ Docker
 
   # NODE_TAG=latest
   # RUBY_VERSION=2.4.0-3.3.0
-  # FAIL_BUILD=0
+  # PIPE_FAIL=0
+  # DOCS=1
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
 
   # Express
