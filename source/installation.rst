@@ -104,6 +104,9 @@ Repo
   gpg --recv-keys 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
   curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} && install -m 755 ${REPO} ~/bin/repo
 
+  # OR
+  scripts/repo-install.sh ~/bin/repo
+
 .. code-block::
   :caption: Usage [#]_
 
@@ -111,26 +114,25 @@ Repo
   cd workspaces
 
   repo init -u https://github.com/anpham6/squared-repo -m latest.xml
-  repo sync
+  repo sync -j4
 
 .. code-block::
   :caption: Ruby (alternate) [#]_
 
   mkdir workspaces
-  cd workspaces            # REPO_ROOT
+  cd workspaces           # REPO_ROOT
 
   curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared/5.4.0/Rakefile
 
-  # REPO_DOCS=1 (venv)
-  rake -T                  # List tasks
+  # REPO_DOCS=1
+  rake -T                 # List tasks
 
   # REPO_BUILD={dev,prod}
-  # FAIL_BUILD=1
-  rake repo:init           # nightly
+  # FAIL_BUILD={0,1}
+  # NODE_WORKSPACES={0,1}
+  rake repo:init          # nightly
   # OR
-  rake repo:init[latest]
-  # OR
-  REPO_MANIFEST=latest rake repo:init
+  rake repo:init[latest]  # REPO_MANIFEST=latest
 
 .. rst-class:: installation-workspace
 
@@ -148,8 +150,9 @@ Docker
 
   # NODE_TAG=latest
   # RUBY_VERSION=2.4.0-3.3.0
-  # PIPE_FAIL=0
-  # DOCS=1
+  # PIPE_FAIL={0,1}
+  # DOCS={0,1}
+  # NODE_WORKSPACES={0,1}
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
 
   # Express
@@ -175,9 +178,9 @@ GitHub Codespaces
 
   rake repo:sync
   # OR
-  rake emc:checkout:force[0.11.0]    # once
-  rake pir:checkout:force[0.9.0]
-  rake express:checkout:force[3.4.0]
+  rake emc:checkout:branch[0.11.0]    # once
+  rake pir:checkout:branch[0.9.0]
+  rake express:checkout:branch[3.4.0]
   rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
