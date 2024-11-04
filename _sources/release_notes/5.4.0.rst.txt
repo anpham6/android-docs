@@ -40,9 +40,20 @@ ADDED
   }
 
 .. code-block::
-  :caption: squared.lib.dom
+  :caption: squared.lib
+
+  /* dom */
 
   function getPageEncoding(): string;
+
+  /* regex */
+
+  const STRING: {
+      NUMERIC: string;
+      NUMERIC_PLAIN: string;
+      NUMERIC_SIGNED: string;
+      NUMERIC_EXPONENT: string;
+  };
 
 .. code-block::
   :caption: android.base

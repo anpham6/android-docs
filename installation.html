@@ -195,6 +195,9 @@ node<span class="w"> </span>serve.js
 curl<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">REPO</span><span class="si">}</span><span class="w"> </span>https://storage.googleapis.com/git-repo-downloads/repo
 gpg<span class="w"> </span>--recv-keys<span class="w"> </span>8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
 curl<span class="w"> </span>-s<span class="w"> </span>https://storage.googleapis.com/git-repo-downloads/repo.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--verify<span class="w"> </span>-<span class="w"> </span><span class="si">${</span><span class="nv">REPO</span><span class="si">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="si">${</span><span class="nv">REPO</span><span class="si">}</span><span class="w"> </span>~/bin/repo
+
+<span class="c1"># OR</span>
+scripts/repo-install.sh<span class="w"> </span>~/bin/repo
 </pre></div>
 </div>
 </div>
@@ -204,27 +207,26 @@ curl<span class="w"> </span>-s<span class="w"> </span>https://storage.googleapis
 <span class="nb">cd</span><span class="w"> </span>workspaces
 
 repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://github.com/anpham6/squared-repo<span class="w"> </span>-m<span class="w"> </span>latest.xml
-repo<span class="w"> </span>sync
+repo<span class="w"> </span>sync<span class="w"> </span>-j4
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id14">
 <div class="code-block-caption"><span class="caption-text">Ruby (alternate) <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>workspaces
-<span class="nb">cd</span><span class="w"> </span>workspaces<span class="w">            </span><span class="c1"># REPO_ROOT</span>
+<span class="nb">cd</span><span class="w"> </span>workspaces<span class="w">           </span><span class="c1"># REPO_ROOT</span>
 
 curl<span class="w"> </span>-o<span class="w"> </span>Rakefile<span class="w"> </span>https://raw.githubusercontent.com/anpham6/squared/5.4.0/Rakefile
 
-<span class="c1"># REPO_DOCS=1 (venv)</span>
-rake<span class="w"> </span>-T<span class="w">                  </span><span class="c1"># List tasks</span>
+<span class="c1"># REPO_DOCS=1</span>
+rake<span class="w"> </span>-T<span class="w">                 </span><span class="c1"># List tasks</span>
 
 <span class="c1"># REPO_BUILD={dev,prod}</span>
-<span class="c1"># FAIL_BUILD=1</span>
-rake<span class="w"> </span>repo:init<span class="w">           </span><span class="c1"># nightly</span>
+<span class="c1"># FAIL_BUILD={0,1}</span>
+<span class="c1"># NODE_WORKSPACES={0,1}</span>
+rake<span class="w"> </span>repo:init<span class="w">          </span><span class="c1"># nightly</span>
 <span class="c1"># OR</span>
-rake<span class="w"> </span>repo:init<span class="o">[</span>latest<span class="o">]</span>
-<span class="c1"># OR</span>
-<span class="nv">REPO_MANIFEST</span><span class="o">=</span>latest<span class="w"> </span>rake<span class="w"> </span>repo:init
+rake<span class="w"> </span>repo:init<span class="o">[</span>latest<span class="o">]</span><span class="w">  </span><span class="c1"># REPO_MANIFEST=latest</span>
 </pre></div>
 </div>
 </div>
@@ -240,8 +242,9 @@ rake<span class="w"> </span>repo:init<span class="o">[</span>latest<span class="
 
 <span class="c1"># NODE_TAG=latest</span>
 <span class="c1"># RUBY_VERSION=2.4.0-3.3.0</span>
-<span class="c1"># PIPE_FAIL=0</span>
-<span class="c1"># DOCS=1</span>
+<span class="c1"># PIPE_FAIL={0,1}</span>
+<span class="c1"># DOCS={0,1}</span>
+<span class="c1"># NODE_WORKSPACES={0,1}</span>
 docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>squared<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">MANIFEST</span><span class="o">=</span>prod<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">BUILD</span><span class="o">=</span>prod<span class="w"> </span>.
 
 <span class="c1"># Express</span>
@@ -267,9 +270,9 @@ docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </s
 
 rake<span class="w"> </span>repo:sync
 <span class="c1"># OR</span>
-rake<span class="w"> </span>emc:checkout:force<span class="o">[</span><span class="m">0</span>.11.0<span class="o">]</span><span class="w">    </span><span class="c1"># once</span>
-rake<span class="w"> </span>pir:checkout:force<span class="o">[</span><span class="m">0</span>.9.0<span class="o">]</span>
-rake<span class="w"> </span>express:checkout:force<span class="o">[</span><span class="m">3</span>.4.0<span class="o">]</span>
+rake<span class="w"> </span>emc:checkout:branch<span class="o">[</span><span class="m">0</span>.11.0<span class="o">]</span><span class="w">    </span><span class="c1"># once</span>
+rake<span class="w"> </span>pir:checkout:branch<span class="o">[</span><span class="m">0</span>.9.0<span class="o">]</span>
+rake<span class="w"> </span>express:checkout:branch<span class="o">[</span><span class="m">3</span>.4.0<span class="o">]</span>
 rake<span class="w"> </span>pull
 </pre></div>
 </div>
