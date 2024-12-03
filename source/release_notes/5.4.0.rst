@@ -42,6 +42,14 @@ ADDED
 .. code-block::
   :caption: squared.lib
 
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          NESTED_DECLARATIONS: boolean;
+      };
+  }
+
   /* dom */
 
   function getPageEncoding(): string;
