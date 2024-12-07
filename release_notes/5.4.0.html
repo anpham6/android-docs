@@ -131,7 +131,15 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* dom */</span>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">RULES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">NESTED_DECLARATIONS</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cm">/* dom */</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">getPageEncoding</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 
