@@ -1,5 +1,5 @@
 ===========
-squared 5.3
+squared 5.4
 ===========
 
 .. toctree::
