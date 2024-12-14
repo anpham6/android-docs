@@ -1,0 +1,36 @@
+=====
+5.4.1
+=====
+
+:right:`2024-12-23`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base.lib.constant
+
+  const enum STAGE_OPTIMIZATION {
+      STYLE = 1 << 13
+  }
+
+.. code-block::
+  :caption: android.base
+
+  interface LocalSettingsUI {
+      colorScheme: ColorScheme;
+  }
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.lib
+
+  /* dom */
+
+  type ColorScheme = "light" | "dark" | "only light" | "only dark"; // only

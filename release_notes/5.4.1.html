@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.1.7 &mdash; squared 5.4.0 documentation</title>
+  <title>5.4.1 &mdash; squared 5.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=983eb2ed" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.0.0" href="5.0.0.html" />
-    <link rel="prev" title="5.1.2" href="5.1.2.html" /> 
+    <link rel="next" title="5.3.0" href="5.3.0.html" />
+    <link rel="prev" title="5.4.0" href="5.4.0.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,17 +54,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="5.4.0.html">5.4.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="5.1.0.html">5.1.0</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="5.1.1.html">5.1.1</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="5.1.2.html">5.1.2</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">5.1.7</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5.1.0.html#added">ADDED</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5.1.0.html#changed">CHANGED</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="5.4.0.html">5.4.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.4.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.4.0.html#added">ADDED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.4.0.html#changed">CHANGED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.4.0.html#deprecated">DEPRECATED</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1.0.html">5.1.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.0.0.html">5.0.0</a></li>
 </ul>
 </li>
@@ -87,10 +86,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
-          <li class="breadcrumb-item"><a href="5.1.0.html">5.1.0</a></li>
-          <li class="breadcrumb-item"><a href="5.1.1.html">5.1.1</a></li>
-          <li class="breadcrumb-item"><a href="5.1.2.html">5.1.2</a></li>
-      <li class="breadcrumb-item active">5.1.7</li>
+          <li class="breadcrumb-item"><a href="5.4.0.html">5.4.0</a></li>
+      <li class="breadcrumb-item active">5.4.1</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -100,31 +97,34 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>5.1.7<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<p><strong class="right">2024-04-02</strong></p>
+<h1>5.4.1<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p><strong class="right">2024-12-23</strong></p>
 <section class="release-notes" id="added">
 <h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">SvgPaint</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">computed</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<div class="code-block-caption"><span class="caption-text">squared.base.lib.constant</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">STAGE_OPTIMIZATION</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">STYLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">13</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">LocalSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">colorScheme</span><span class="o">:</span><span class="w"> </span><span class="kt">ColorScheme</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </section>
-<section class="release-notes" id="changed">
+<section id="changed">
 <h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">SvgBuild</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">boxRectOf</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">strokeWidth?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRect</span><span class="p">;</span><span class="w"> </span><span class="c1">// strokeWidth</span>
-<span class="p">}</span>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* dom */</span>
 
-<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimateMotion</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">path</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">path</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">ColorScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;light&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;only light&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;only dark&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// only</span>
 </pre></div>
 </div>
 </div>
@@ -135,8 +135,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="5.1.2.html" class="btn btn-neutral float-left" title="5.1.2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="5.0.0.html" class="btn btn-neutral float-right" title="5.0.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="5.4.0.html" class="btn btn-neutral float-left" title="5.4.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="5.3.0.html" class="btn btn-neutral float-right" title="5.3.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
