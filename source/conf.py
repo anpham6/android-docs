@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'squared'
-copyright = 'squared 2024'
+copyright = 'squared 2025'
 author = 'An Pham'
-release = '5.4.0'
+release = '5.4.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
