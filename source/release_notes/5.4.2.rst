@@ -1,0 +1,38 @@
+=====
+5.4.2
+=====
+
+:right:`2025-2-7`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: android.base
+
+  class View {
+      anchor(position: AnchorPositionAttr, options: AnchorOptions): boolean;
+  }
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base.extension
+
+  interface CssGridData {
+      children: Node[];
+      absolute: Node[];
+      parent?: Node;
+  }
+
+.. code-block::
+  :caption: squared.lib.css
+
+  interface CssPropertyData {
+      readonly value: string | CssStyleAttr[]; // CssStyleAttr[]
+  }
