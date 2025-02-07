@@ -18,6 +18,8 @@ ADDED
       anchor(position: AnchorPositionAttr, options: AnchorOptions): boolean;
   }
 
+.. rst-class:: release-notes
+
 CHANGED
 =======
 
