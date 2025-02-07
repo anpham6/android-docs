@@ -30,6 +30,8 @@ ADDED
       colorScheme: ColorScheme;
   }
 
+.. rst-class:: release-notes
+
 CHANGED
 =======
 
