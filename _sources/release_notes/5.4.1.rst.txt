@@ -4,6 +4,11 @@
 
 :right:`2025-1-7`
 
+.. toctree::
+  :maxdepth: 1
+
+  5.4.2
+
 .. highlight:: typescript
 
 .. rst-class:: release-notes
@@ -24,6 +29,8 @@ ADDED
   interface LocalSettingsUI {
       colorScheme: ColorScheme;
   }
+
+.. rst-class:: release-notes
 
 CHANGED
 =======
