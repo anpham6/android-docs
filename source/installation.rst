@@ -145,7 +145,9 @@ Docker
 
 .. code-block::
 
-  curl -o Dockerfile https://raw.githubusercontent.com/anpham6/squared/5.4.0/Dockerfile
+  curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
+  curl -L -o Rakefile https://unpkg.com/squared/Rakefile
+  curl -L -o docker-entrypoint.sh https://unpkg.com/squared/docker-entrypoint.sh
 
   # NODE_TAG=latest
   # RUBY_VERSION=2.4.0-3.3.0
