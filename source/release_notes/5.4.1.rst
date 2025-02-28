@@ -20,7 +20,7 @@ ADDED
   :caption: squared.base.lib.constant
 
   const enum STAGE_OPTIMIZATION {
-      STYLE = 1 << 13
+      STYLE = 8192
   }
 
 .. code-block::

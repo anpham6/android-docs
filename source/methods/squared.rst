@@ -128,7 +128,7 @@ squared
 
     squared.setFramework(android);
     squared.setFramework(android, true); // Used when switching frameworks
-    squared.setFramework(android, { targetAPI: 34, idNamingStyle: "html" });
+    squared.setFramework(android, { targetAPI: 35, idNamingStyle: "html" });
 
   Alternate::
 
