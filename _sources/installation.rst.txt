@@ -145,7 +145,8 @@ Docker
 
 .. code-block::
 
-  curl -o Dockerfile https://raw.githubusercontent.com/anpham6/squared/5.4.0/Dockerfile
+  curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
+  curl -L -o Rakefile https://unpkg.com/squared/Rakefile
 
   # NODE_TAG=latest
   # RUBY_VERSION=2.4.0-3.3.0
@@ -173,13 +174,13 @@ GitHub Codespaces
   sudo ./scripts/repo-install.sh
 
   # NODE_INSTALL=pnpm
-  REPO_ROOT=/workspaces rake repo:init[0.11.x]
+  REPO_ROOT=/workspaces rake repo:init[0.12.x]
 
   rake repo:sync
   # OR
-  rake emc:checkout:branch[0.11.0]    # once
-  rake pir:checkout:branch[0.9.0]
-  rake express:checkout:branch[3.4.0]
+  rake emc:checkout:branch[0.12.0]    # once
+  rake pir:checkout:branch[0.10.0]
+  rake express:checkout:branch[3.5.0]
   rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo

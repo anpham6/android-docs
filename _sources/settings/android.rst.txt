@@ -6,7 +6,6 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 42
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -79,7 +78,7 @@ Example usage
   :caption: Customizable (project/all)
 
   squared.settings = {
-    targetAPI: 34,
+    targetAPI: 35,
     resolutionDPI: 160, // 320dpi = 2560x1600
     resolutionScreenWidth: 1280,
     resolutionScreenHeight: 800,
