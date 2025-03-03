@@ -1,0 +1,54 @@
+=====
+5.4.3
+=====
+
+:right:`2025-3-6`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface AppProcessing {
+      targetFragment?: FragmentTargetText;
+  }
+
+  interface AppProjectUI {
+      replacedElements?: Map<Element, Element[]>;
+  }
+
+  interface ControllerSettingsStyleUI {
+      targetTextBackgroundColor?: string;
+  }
+
+.. code-block::
+  :caption: squared.lib.dom
+
+  type PseudoDocumentElt = ... | "::target-text";
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.lib.dom
+
+  function createElement(tagName: string | HTMLElement, options: CreateElementOptions): HTMLElement; // HTMLElement
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  interface AppProjectUI {
+      firstLetterValue?: Map<Element, string>; // Will be renamed
+  }
