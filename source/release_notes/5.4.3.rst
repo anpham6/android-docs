@@ -27,7 +27,17 @@ ADDED
   }
 
 .. code-block::
-  :caption: squared.lib.dom
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      CONSTRUCTOR: {
+          INTL_SEGMENTER: boolean;
+      };
+  }
+
+  /* dom */
 
   type PseudoDocumentElt = ... | "::target-text";
 
