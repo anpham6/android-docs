@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.4.2 &mdash; squared 5.4.3 documentation</title>
+  <title>5.4.3 &mdash; squared 5.4.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=12562455" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.4.3" href="5.4.3.html" />
-    <link rel="prev" title="5.4.1" href="5.4.1.html" /> 
+    <link rel="next" title="5.3.0" href="5.3.0.html" />
+    <link rel="prev" title="5.4.2" href="5.4.2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,8 +56,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="5.4.0.html">5.4.0</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="5.4.1.html">5.4.1</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">5.4.2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5.4.3.html">5.4.3</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="5.4.2.html">5.4.2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.4.3</a></li>
 <li class="toctree-l3"><a class="reference internal" href="5.4.0.html#added">ADDED</a></li>
 <li class="toctree-l3"><a class="reference internal" href="5.4.0.html#changed">CHANGED</a></li>
 <li class="toctree-l3"><a class="reference internal" href="5.4.0.html#deprecated">DEPRECATED</a></li>
@@ -90,7 +90,8 @@
           <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
           <li class="breadcrumb-item"><a href="5.4.0.html">5.4.0</a></li>
           <li class="breadcrumb-item"><a href="5.4.1.html">5.4.1</a></li>
-      <li class="breadcrumb-item active">5.4.2</li>
+          <li class="breadcrumb-item"><a href="5.4.2.html">5.4.2</a></li>
+      <li class="breadcrumb-item active">5.4.3</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -100,40 +101,58 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>5.4.2<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<p><strong class="right">2025-2-7</strong></p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="5.4.3.html">5.4.3</a></li>
-</ul>
-</div>
+<h1>5.4.3<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p><strong class="right">2025-3-6</strong></p>
 <section class="release-notes" id="added">
 <h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">anchor</span><span class="p">(</span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="kt">AnchorPositionAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">AnchorOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">AppProcessing</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">targetFragment?</span><span class="o">:</span><span class="w"> </span><span class="kt">FragmentTargetText</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AppProjectUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">replacedElements?</span><span class="o">:</span><span class="w"> </span><span class="kt">Map</span><span class="o">&lt;</span><span class="nx">Element</span><span class="p">,</span><span class="w"> </span><span class="nx">Element</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsStyleUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">targetTextBackgroundColor?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">CONSTRUCTOR</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">INTL_SEGMENTER</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cm">/* dom */</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoDocumentElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;::target-text&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section class="release-notes" id="changed">
 <h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">squared.base.extension</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">CssGridData</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="kt">Node</span><span class="p">[];</span>
-<span class="w">    </span><span class="nx">absolute</span><span class="o">:</span><span class="w"> </span><span class="kt">Node</span><span class="p">[];</span>
-<span class="w">    </span><span class="nx">parent?</span><span class="o">:</span><span class="w"> </span><span class="kt">Node</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">squared.lib.dom</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">createElement</span><span class="p">(</span><span class="nx">tagName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">HTMLElement</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">CreateElementOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">HTMLElement</span><span class="p">;</span><span class="w"> </span><span class="c1">// HTMLElement</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">squared.lib.css</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">CssPropertyData</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CssStyleAttr</span><span class="p">[];</span><span class="w"> </span><span class="c1">// CssStyleAttr[]</span>
+</section>
+<section class="release-notes" id="deprecated">
+<h2>DEPRECATED<a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">AppProjectUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">firstLetterValue?</span><span class="o">:</span><span class="w"> </span><span class="kt">Map</span><span class="o">&lt;</span><span class="nx">Element</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Will be renamed</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -145,8 +164,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="5.4.1.html" class="btn btn-neutral float-left" title="5.4.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="5.4.3.html" class="btn btn-neutral float-right" title="5.4.3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="5.4.2.html" class="btn btn-neutral float-left" title="5.4.2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="5.3.0.html" class="btn btn-neutral float-right" title="5.3.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
