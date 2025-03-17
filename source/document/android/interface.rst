@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 196-197,223-224
+  :emphasize-lines: 196-197,223-224,245
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -251,6 +251,7 @@ Interface
       formatted(value: string, overwrite?: boolean): void;
       mergeGravity(attr: LayoutGravityAttr, alignment: LayoutGravityValue, options: MergeGravityOptions): void;
       mergeGravity(attr: LayoutGravityAttr, alignment: LayoutGravityDirectionAttr, overwrite?: boolean): void;
+      anchor(position: AnchorPositionAttr, options: AnchorOptions): boolean;
       anchor(position: AnchorPositionAttr, documentId?: string, overwrite?: boolean): boolean;
       anchorChain(...values: PositionAttr[]): View[];
       anchorParent(orientation: OrientationAttr, bias: number, overwrite: true): boolean;
@@ -312,6 +313,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.4.2
+
+  - *NodeUI* method **anchor** argument :target:`options` as :alt:`AnchorOptions` was implemented.
 
 .. versionadded:: 5.4.0
 

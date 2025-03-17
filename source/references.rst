@@ -11,7 +11,6 @@ squared
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/type.d.ts
-  | `ArrayOf <search.html?q=ArrayOf>`_
   | `IteratorPredicate <search.html?q=IteratorPredicate>`_
   | `PlainObject <search.html?q=PlainObject>`_
   | `StringMap <search.html?q=StringMap>`_

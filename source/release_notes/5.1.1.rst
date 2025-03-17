@@ -46,7 +46,7 @@ ADDED
   :caption: android
 
   interface DocumentOutput {
-      dependencyScopes?: boolean | ArrayOf<"compile" | "provided" | "runtime" | "test" | "snapshot">; // true is all except "snapshot"
+      dependencyScopes?: boolean | ["compile" | "provided" | "runtime" | "test" | "snapshot"][]; // true is all except "snapshot"
   }
 
 .. code-block::

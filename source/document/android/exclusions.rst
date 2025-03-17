@@ -56,7 +56,8 @@ Interface
       WHITESPACE = 512,
       TRANSLATE = 1024,
       TRANSFORM = 2048,
-      SCALING = 4096
+      SCALING = 4096,
+      STYLE = 8192
   }
 
 Method
