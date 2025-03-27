@@ -110,6 +110,7 @@ https://unpkg.com/squared/types/base/file.d.ts
   | `BroadcastMessageCallback <search.html?q=BroadcastMessageCallback>`_
   | `BroadcastSocket <search.html?q=BroadcastSocket>`_
   | `ChecksumOutput <search.html?q=ChecksumOutput>`_
+  | `CompressFormat <search.html?q=CompressFormat>`_
   | `DataSource <search.html?q=DataSource>`_
   | `Exclusions <search.html?q=Exclusions>`_
   | `FileAsset <search.html?q=FileAsset>`_

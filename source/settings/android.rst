@@ -6,11 +6,12 @@ Interface
 =========
 
 .. code-block:: typescript
+  :emphasize-lines: 4
 
   interface UserResourceSettingsUI {
       targetAPI: number;
       supportRTL: boolean;
-      compressImages: boolean | string;
+      compressImages: boolean | string | CompressFormat | CompressFormat[];
       enabledMultiline: boolean;
       enabledViewModel: boolean;
       enabledIncludes: boolean;
@@ -55,6 +56,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.5.0
+
+  - *UserResourceSettingsUI* property **compressImages** accepts using :target:`CompressFormat` as :alt:`object` | :alt:`Array`.
 
 .. versionadded:: 5.4.0
 

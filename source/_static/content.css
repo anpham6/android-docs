@@ -3,7 +3,7 @@ table.versions th.head {
     text-align: right;
 }
 
-table.versions th.head:nth-child(1) {
+table.versions th.head:first-child {
     text-align: center;
 }
 
