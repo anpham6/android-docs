@@ -148,7 +148,7 @@ Docker
   curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
 
   # NODE_TAG=latest
-  # RUBY_VERSION=2.4.0-3.3.0
+  # RUBY_VERSION=2.4.0-3.4.0
   # PIPE_FAIL={0,1}
   # DOCS=any
   # NODE_WORKSPACES={0,1}

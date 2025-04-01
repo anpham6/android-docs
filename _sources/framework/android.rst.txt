@@ -16,7 +16,7 @@ Example usage
   <script src="/dist/squared.svg.min.js"></script>
   <script src="/dist/android.framework.min.js"></script>
   <script>
-    squared.settings.targetAPI = 34; // Optional
+    squared.settings.targetAPI = 35; // Optional
 
     document.addEventListener("DOMContentLoaded", async () => {
       squared.setFramework(android, {/* UserResourceSettingsUI */});

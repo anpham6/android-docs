@@ -1,0 +1,43 @@
+=====
+5.5.0
+=====
+
+:right:`2025-04-29`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface CompressFormat {
+      worker?: boolean | number; // Timeout (ms)
+      metadata?: PlainObject;
+  }
+
+  interface WatchInterval {
+      recursive?: boolean | string | string[]; // ESM parent directory + Glob match (NodeJS 19.1/20)
+  }
+
+.. code-block::
+  :caption: chrome.base
+
+  interface AssetCommand {
+      worker?: boolean | number; // image + font
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      compressImages: boolean | string | CompressFormat | CompressFormat[]; // CompressFormat
+  }
