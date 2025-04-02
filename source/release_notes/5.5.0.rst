@@ -27,7 +27,7 @@ ADDED
   :caption: chrome.base
 
   interface AssetCommand {
-      worker?: boolean | number; // image + font
+      worker?: boolean | number; // image + font + raw assets
   }
 
 .. rst-class:: release-notes
