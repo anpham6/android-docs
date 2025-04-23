@@ -75,6 +75,11 @@
     float: right;
 }
 
+.rst-content .footnote-reference {
+    top: -0.5em;
+    font-size: 75%;
+}
+
 .rst-content .admonition p:last-child {
     font-size: 13px;
     line-height: 20px;

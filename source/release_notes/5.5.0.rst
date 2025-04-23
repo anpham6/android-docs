@@ -24,6 +24,30 @@ ADDED
   }
 
 .. code-block::
+  :caption: android.base
+
+  interface Constraint {
+      grid?: {
+          children: View[][];
+          rows: number;
+          columns: number;
+          align: string;
+      };
+  }
+
+  class Resource {
+      static addRawAsset(resourceId: number, type: "audio" | "video" | "images", name: string, value: unknown): string;
+  }
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const enum DEPENDENCY_TYPE {
+      LINT_CHECKS = 11,
+      LINT_PUBLISH = 12
+  }
+
+.. code-block::
   :caption: chrome.base
 
   interface AssetCommand {
@@ -40,4 +64,8 @@ CHANGED
 
   interface UserResourceSettingsUI {
       compressImages: boolean | string | CompressFormat | CompressFormat[]; // CompressFormat
+  }
+
+  class Resource {
+      static formatName(value: string, isFile?: boolean): string; // isFile
   }
