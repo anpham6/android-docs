@@ -27,6 +27,7 @@ search:
     framework/*: 8
     document/*: 7
     installation.html: 5
+    types.html: 5
     release_notes/*: 4
     references.html: 3
     "*/settings.html": 2
