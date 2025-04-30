@@ -2,7 +2,7 @@
 Installation
 ============
 
-- NodeJS 16 :alt:`(Minimum)`
+- NodeJS 18 :alt:`(Minimum)`
 
 NPX
 ===
@@ -69,11 +69,11 @@ GitHub
   node serve.js
 
 .. code-block::
-  :caption: dev - 5.4.0
+  :caption: dev - 5.5.0
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.4.0
+  git checkout 5.5.0
 
   npm install
   npm run build:dev
@@ -82,7 +82,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 3.4.0
+  git checkout 3.5.0
 
   npm install
   npm run dev
@@ -151,7 +151,6 @@ Docker
   # RUBY_VERSION=2.4.0-3.4.0
   # PIPE_FAIL={0,1}
   # DOCS=any
-  # NODE_WORKSPACES={0,1}
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
 
   # Express

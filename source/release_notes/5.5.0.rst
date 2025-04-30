@@ -39,6 +39,10 @@ ADDED
       static addRawAsset(resourceId: number, type: "audio" | "video" | "images", name: string, value: unknown): string;
   }
 
+  class View {
+      get labelForElement(): boolean;
+  }
+
 .. code-block::
   :caption: android.lib.constant
 
