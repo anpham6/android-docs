@@ -1,5 +1,5 @@
 ===========
-squared 5.4
+squared 5.5
 ===========
 
 .. toctree::
@@ -12,6 +12,7 @@ squared 5.4
   methods/index
   document/index
   release_notes/index
+  types
   references
   versions
 

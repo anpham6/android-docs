@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 196-197,223-224,245
+  :emphasize-lines: 196-197,274
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -280,6 +280,7 @@ Interface
       getMarginPercent(horizontal: boolean): number;
       getPaddingPercent(horizontal: boolean): number;
       hasFlex(direction: LayoutDirectionAttr): boolean | 0;
+      get labelForElement(): boolean;
       set anchored(value);
       get anchored(): boolean;
       set localSettings(value);
@@ -313,6 +314,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.5.0
+
+  - *View* property getter **labelForElement** for controls with a companion was created.
 
 .. versionadded:: 5.4.2
 
