@@ -1,0 +1,130 @@
+=====
+5.5.2
+=====
+
+:right:`2025-6-16`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface CacheValueUI {
+      fontSynthesis?: FontSynthesis;
+  }
+
+  interface CacheStateUI {
+      fontVariantAlternates?: string[];
+  }
+
+  class NodeUI {
+      setFontVariantAlternates(fontFamily: string): void;
+      get fontVariantAlternates(): string[];
+      get fontSynthesis(): FontSynthesis;
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* constant */
+
+  const enum CSS_TRAITS {
+      CASE_SENSITIVE = 1024,
+      STRING = 2048,
+      POSITIVE = 4096,
+      NEGATIVE = 8192
+  }
+
+  const enum CSS_ATTR_TYPE {
+      NONE = 0,
+      INTEGER = 1,
+      NUMBER = 2,
+      PERCENTAGE = 4,
+      LENGTH = 8,
+      LENGTH_PERCENTAGE = 16,
+      ANGLE = 32,
+      TIME = 64,
+      RESOLUTION = 128,
+      COLOR = 256,
+      TRANSFORM_FUNCTION = 512,
+      IMAGE = 1024,
+      STRING = 2048,
+      CUSTOM_IDENT = 4096,
+      ANY = 8192,
+      RAW_STRING = 16384
+  }
+
+  /* css */
+
+  interface CssPropertyData {
+      readonly type: number;
+      readonly keywords?: (string | [string, string, (string | string[])?] | [string | string[], number[], boolean?] | [string[], string?] | [string[], string[], string?])[];
+      readonly separator?: string | [string, number];
+      readonly singleValue?: boolean;
+      readonly allValue?: -1 | 0 | 1 | 2;
+      readonly splitValue?: [number, number, number?];
+      readonly repeatStart?: number | [number, RegExp];
+      readonly typeValidator?: string;
+  }
+
+  interface UnitOptions {
+      strict?: boolean;
+  }
+
+  interface CalculateVarAsStringOptions {
+      attr?: CssStyleAttr;
+  }
+
+  function parseAttrType(element: HTMLElement, attr: CssStyleAttr, value: string): string;
+  function hasAttrType(value: string): boolean;
+
+  /* regex */
+
+  const STRING: {
+      LENGTH_0: string;
+      LENGTH_PERCENTAGE_0: string;
+      CSS_TRANSFORM: string;
+      CSS_BASIC_SHAPE: string;
+      CSS_IDENT: string;
+      CSS_CUSTOM_IDENT: string;
+  };
+
+  /* internal */
+
+  const CSS_PROPERTIES_WRITINGMODE: CssPropertiesWritingMode;
+  const CSS_DATA_TYPES: CssDataTypes;
+  const CSS_DATA_TYPES_ANY: CssDataTypes;
+  const CSS_ATTR_TYPES: string[];
+
+.. code-block::
+  :caption: squared.base.lib.css
+
+  function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap;
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function isLength(value: string, percent?: boolean, strict?: boolean): boolean; // strict
+  function parseTime(value: string, fallback?: number): number; // fallback
+  function parseResolution(value: string, fallback?: number): number;
+
+  /* dom */
+
+  function getNamedItem(element: Element, attr: string, fallback?: string): string; // fallback
+
+.. code-block::
+  :caption: squared.base.lib.css
+
+  function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // documentRoot
