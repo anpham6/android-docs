@@ -175,6 +175,8 @@ https://unpkg.com/squared/types/lib/squared.d.ts
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/lib/data.d.ts
+  | `CssPropertyData <search.html?q=CssPropertyData>`_
+  | `CssPropertyWritingModeData <search.html?q=CssPropertyWritingModeData>`_
   | `ElementData <search.html?q=ElementData>`_
   | `UserAgentData <search.html?q=UserAgentData>`_
 
@@ -362,11 +364,12 @@ https://github.com/microsoft/TypeScript/blob/main/src/lib/dom.generated.d.ts
   | `CSSStyleDeclaration <search.html?q=CSSStyleDeclaration>`_
   | `DOMRect <search.html?q=DOMRect>`_
   | `DOMStringMap <search.html?q=DOMStringMap>`_
+  | `DocumentOrShadowRoot <search.html?q=DocumentOrShadowRoot>`_
   | `Element <search.html?q=Element>`_
   | `HTMLElement <search.html?q=HTMLElement>`_
   | `MutationObserverInit <search.html?q=MutationObserverInit>`_
   | `RequestInit <search.html?q=RequestInit>`_
-  | `ShadowRoot <search.html?q=DOMRect>`_
+  | `ShadowRoot <search.html?q=ShadowRoot>`_
 
 .. _references-typescript-es2015-iterable:
 .. rst-class:: block-list

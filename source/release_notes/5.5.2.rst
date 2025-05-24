@@ -82,6 +82,7 @@ ADDED
 
   function parseAttrType(element: HTMLElement, attr: CssStyleAttr, value: string): string;
   function hasAttrType(value: string): boolean;
+  function isAttrType(attr: CssStyleAttr, value: string, type?: string): boolean;
 
   /* regex */
 
@@ -95,6 +96,20 @@ ADDED
   };
 
   /* internal */
+
+  const CSS_PROPERTIES: {
+      printColorAdjust: CssPropertyData;
+      scrollTimeline: CssPropertyData;
+      scrollTimelineAxis: CssPropertyData;
+      scrollTimelineName: CssPropertyData;
+      timelineScope: CssPropertyData;
+      overflowClipMargin: CssPropertyData;
+      viewTimeline: CssPropertyData;
+      viewTimelineAxis: CssPropertyData;
+      viewTimelineInset: CssPropertyData;
+      viewTimelineName: CssPropertyData;
+      viewTransitionName: CssPropertyData;
+  };
 
   const CSS_PROPERTIES_WRITINGMODE: CssPropertiesWritingMode;
   const CSS_DATA_TYPES: CssDataTypes;
@@ -124,7 +139,56 @@ CHANGED
 
   function getNamedItem(element: Element, attr: string, fallback?: string): string; // fallback
 
+  /* internal */
+
+  const CSS_PROPERTIES: {
+      container: CssPropertyData; // CSS_TRAITS.SHORTHAND
+      alignmentBaseline: CssPropertyData; // svg.internal
+      textRendering: CssPropertyData;
+  };
+
+  const CSS_PROPERTIES_WRITINGMODE: {
+      overflowBlock: CssPropertyWritingModeData; // CSS_PROPERTIES
+      overflowInline: CssPropertyWritingModeData;
+  };
+
+.. code-block::
+  :caption: squared.svg.lib.internal
+
+  const CSS_PROPERTIES: {
+      d: CssPropertyData; // squared.internal
+  };
+
 .. code-block::
   :caption: squared.base.lib.css
 
   function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // documentRoot
+
+.. rst-class:: release-notes
+
+DELETED
+=======
+
+.. code-block::
+  :caption: squared.lib.internal
+
+  const CSS_PROPERTIES: {
+      maskPositionX: CssPropertyData; // maskPosition
+      maskPositionY: CssPropertyData;
+      textJustify: CssPropertyData;
+  };
+
+.. code-block::
+  :caption: squared.svg.lib.internal
+
+  const CSS_PROPERTIES: {
+      mask: CssPropertyData; // squared.internal
+      maskComposite: CssPropertyData;
+      maskClip: CssPropertyData;
+      maskImage: CssPropertyData;
+      maskMode: CssPropertyData;
+      maskRepeat: CssPropertyData;
+      maskOrigin: CssPropertyData;
+      maskPosition: CssPropertyData;
+      maskSize: CssPropertyData;
+  };
