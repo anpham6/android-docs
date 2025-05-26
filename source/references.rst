@@ -270,6 +270,7 @@ https://unpkg.com/squared/types/android/node.d.ts
   | `Constraint <search.html?q=Constraint>`_
   | `LocalSettingsUI <search.html?q=LocalSettingsUI>`_
   | `NamingStyles <search.html?q=NamingStyles>`_
+  | `UnicodeFeatures <search.html?q=UnicodeFeatures>`_
 
 .. _references-android-data:
 .. rst-class:: block-list

@@ -132,6 +132,9 @@ Interface
 
   interface ResourceStringsOptions {
       numberAsResource: boolean;
+      enableEmojiViews: boolean;
+      detectEmojiPattern: RegExp | null;
+      ignoreEmojiPattern: RegExp | null;
   }
 
 .. code-block::
@@ -160,6 +163,17 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.5.2
+
+  - *ResourceStringsOptions* properties were created:
+
+    .. hlist::
+      :columns: 3
+
+      - enableEmojiViews
+      - detectEmojiPattern
+      - ignoreEmojiPattern
 
 .. versionadded:: 5.3.0
 

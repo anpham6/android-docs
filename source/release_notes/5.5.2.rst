@@ -55,21 +55,29 @@ ADDED
       IMAGE = 1024,
       STRING = 2048,
       CUSTOM_IDENT = 4096,
-      ANY = 8192,
-      RAW_STRING = 16384
+      RAW_STRING = 8192
   }
 
   /* css */
 
+  type CssPropertyKeywords = (
+      string
+      | [string, string, (string | string[])?]
+      | [string | string[], number[], boolean?]
+      | [string[], string?]
+      | [string[], string[], string?]
+  )[];
+
   interface CssPropertyData {
       readonly type: number;
-      readonly keywords?: (string | [string, string, (string | string[])?] | [string | string[], number[], boolean?] | [string[], string?] | [string[], string[], string?])[];
+      readonly keywords?: CssPropertyKeywords | (() => CssPropertyKeywords);
+      readonly anyStart?: number;
       readonly separator?: string | [string, number];
-      readonly singleValue?: boolean;
       readonly allValue?: -1 | 0 | 1 | 2;
       readonly splitValue?: [number, number, number?];
-      readonly repeatStart?: number | [number, RegExp];
+      readonly repeatStart?: number | [number, string];
       readonly typeValidator?: string;
+      readonly valueOfAuto?: string;
   }
 
   interface UnitOptions {
@@ -89,6 +97,7 @@ ADDED
   const STRING: {
       LENGTH_0: string;
       LENGTH_PERCENTAGE_0: string;
+      CSS_UNIT: string;
       CSS_TRANSFORM: string;
       CSS_BASIC_SHAPE: string;
       CSS_IDENT: string;
@@ -98,12 +107,18 @@ ADDED
   /* internal */
 
   const CSS_PROPERTIES: {
+      animationRange: string;
+      animationRangeStart: string;
+      animationRangeEnd: string;
+      fontSynthesisPosition: CssPropertyData;
+      overflowClipMargin: CssPropertyData;
+      overlay: CssPropertyData;
       printColorAdjust: CssPropertyData;
       scrollTimeline: CssPropertyData;
       scrollTimelineAxis: CssPropertyData;
       scrollTimelineName: CssPropertyData;
+      textSpacingTrim: CssPropertyData;
       timelineScope: CssPropertyData;
-      overflowClipMargin: CssPropertyData;
       viewTimeline: CssPropertyData;
       viewTimelineAxis: CssPropertyData;
       viewTimelineInset: CssPropertyData;
@@ -111,15 +126,85 @@ ADDED
       viewTransitionName: CssPropertyData;
   };
 
-  const CSS_PROPERTIES_WRITINGMODE: CssPropertiesWritingMode;
+  const CLIENT_SAFARI: boolean;
+  const CLIENT_FIREFOX: boolean;
+  const CLIENT_CHROME: boolean;
+  const UNIT_PATTERN: string[];
+  const VALUE_PATTERN: string[];
+  const UNIT_INLINE: string[];
   const CSS_DATA_TYPES: CssDataTypes;
-  const CSS_DATA_TYPES_ANY: CssDataTypes;
+  const CSS_PROPERTIES_WRITINGMODE: CssPropertiesWritingMode;
   const CSS_ATTR_TYPES: string[];
 
+  function hasPropertyTrait(attr: CssStyleAttr, value: number): boolean;
+
 .. code-block::
-  :caption: squared.base.lib.css
+  :caption: squared.svg
+
+  class SvgBuild {
+      static asPath(object: unknown): object is SvgPath;
+  }
+
+  class SvgContainer {
+      findViewBoxContainer(container?: SvgContainer): SvgContainer | undefined;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* constant */
+
+  enum STAGE_OPTIMIZATION {
+      UNICODE = 16384
+  }
+
+  /* css */
 
   function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap;
+
+  /* util */
+
+  function getIndent(value: number): string;
+
+.. code-block::
+  :caption: android.base
+
+  interface LocalSettingsBaseUI {
+      supportUnicode: boolean | ("utf-16" | "emoji")[];
+  }
+
+  class Application {
+      getEncodingOptions(projectId?: string): ReplaceCharacterDataOptions;
+  }
+
+  class View {
+      get companionStyle(): boolean;
+      get emojiContainer(): CONTAINER_NODE;
+  }
+
+.. code-block::
+  :caption: android.extensions
+
+  interface ResourceStringsOptions {
+      enableEmojiViews: boolean;
+      detectEmojiPattern: RegExp | null;
+      ignoreEmojiPattern: RegExp | null;
+  }
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const EMOJI_TAGNAME: {
+      TEXT: string;
+      EDIT: string;
+      BUTTON: string;
+  };
+
+  const EMOJI_TAGNAME_X: {
+      TEXT: string;
+      EDIT: string;
+      BUTTON: string;
+  };
 
 .. rst-class:: release-notes
 
@@ -175,7 +260,6 @@ DELETED
   const CSS_PROPERTIES: {
       maskPositionX: CssPropertyData; // maskPosition
       maskPositionY: CssPropertyData;
-      textJustify: CssPropertyData;
   };
 
 .. code-block::

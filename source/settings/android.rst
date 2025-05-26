@@ -6,11 +6,12 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 4
+  :emphasize-lines: 4,5
 
   interface UserResourceSettingsUI {
       targetAPI: number;
       supportRTL: boolean;
+      supportUnicode: boolean | UnicodeFeatures | UnicodeFeatures[];
       compressImages: boolean | string | CompressFormat | CompressFormat[];
       enabledMultiline: boolean;
       enabledViewModel: boolean;
@@ -57,6 +58,10 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.5.2
+
+  - *UserResourceSettingsUI* property **supportUnicode** for UTF-16 and emoji detection was created.
+
 .. versionadded:: 5.5.0
 
   - *UserResourceSettingsUI* property **compressImages** accepts using :target:`CompressFormat` as :alt:`object` | :alt:`Array`.
@@ -91,6 +96,7 @@ Example usage
     useShapeGeometryBox: true, // Dimensions use native SVG method getBbox
     supportRTL: true,
     supportNegativeLeftTop: true,
+    supportUnicode: ["emoji"],
     preloadImages: true,
     preloadFonts: true,
     preloadLocalFonts: true, // window.queryLocalFonts (Chromium)
