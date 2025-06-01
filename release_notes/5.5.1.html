@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release Notes &mdash; squared 5.5.1 documentation</title>
+  <title>5.5.1 &mdash; squared 5.5.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.5.0" href="5.5.0.html" />
-    <link rel="prev" title="Build Options" href="../document/build.html" /> 
+    <link rel="next" title="5.5.2" href="5.5.2.html" />
+    <link rel="prev" title="5.5.0" href="5.5.0.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +53,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.5.0.html">5.5.0</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="5.5.0.html">5.5.0</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.5.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.5.2.html">5.5.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.5.0.html#added">ADDED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.5.0.html#changed">CHANGED</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="5.4.0.html">5.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
@@ -81,7 +87,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Release Notes</li>
+          <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
+          <li class="breadcrumb-item"><a href="5.5.0.html">5.5.0</a></li>
+      <li class="breadcrumb-item active">5.5.1</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -90,26 +98,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="release-notes">
-<h1>Release Notes<a class="headerlink" href="#release-notes" title="Link to this heading"></a></h1>
+  <section id="id1">
+<h1>5.5.1<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p><strong class="right">2025-5-14</strong></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="5.5.0.html">5.5.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.4.0.html">5.4.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.1.0.html">5.1.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.0.0.html">5.0.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.5.2.html">5.5.2</a></li>
 </ul>
 </div>
+<section class="release-notes" id="added">
+<h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">squared.lib.client</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">PROMISE</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">TRY</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="changed">
+<h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">CssCascadeLayer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">add</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">CssCascadeLayer</span><span class="p">;</span><span class="w"> </span><span class="c1">// name</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../document/build.html" class="btn btn-neutral float-left" title="Build Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="5.5.0.html" class="btn btn-neutral float-right" title="5.5.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="5.5.0.html" class="btn btn-neutral float-left" title="5.5.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="5.5.2.html" class="btn btn-neutral float-right" title="5.5.2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

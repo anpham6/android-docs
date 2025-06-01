@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interface &mdash; squared 5.5.0 documentation</title>
+  <title>Interface &mdash; squared 5.5.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=a385a3de"></script>
+      <script src="../../_static/documentation_options.js?v=07fd27c7"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -203,7 +203,8 @@
 <span class="w">    </span><span class="nx">getPositionOffset</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sticky&quot;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Point</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">getAnchoredSiblings</span><span class="p">(</span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="kt">OrientationAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">NodeUI</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">getPseudoElement</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">PseudoElt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">PseudoStyleElt</span><span class="p">,</span><span class="w"> </span><span class="nx">attr?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">context?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">hasFixedDimension</span><span class="p">(</span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">setFontVariantAlternates</span><span class="p">(</span><span class="nx">fontFamily</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">hasFixedDimension</span><span class="p">(</span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">isResizable</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">DimensionSizableAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">not?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">fitToScreen</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">Dimension</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Dimension</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">getComments</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">ReferenceType</span><span class="p">,</span><span class="w"> </span><span class="nx">attrs?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">];</span>
@@ -332,7 +333,9 @@
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">textJustified</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">fontFeatureSettings</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">fontVariationSettings</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
-<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">alignContent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;end&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">fontVariantAlternates</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">fontSynthesis</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">FontSynthesis</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">alignContent</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;end&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">transformValue</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">outerRegion</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">locales</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
@@ -416,6 +419,14 @@
 </div>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.5.2: </span></p>
+<ul class="simple">
+<li><p><em>NodeUI</em> method <strong>setFontVariantAlternates</strong> for system resolved font family was created.</p></li>
+<li><p><em>NodeUI</em> property getter <strong>fontVariantAlternates</strong> for usage of alternate glyphs was created.</p></li>
+<li><p><em>NodeUI</em> property getter <strong>fontSynthesis</strong> for available rendering capabilities was created.</p></li>
+</ul>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.5.0: </span></p>
 <ul class="simple">

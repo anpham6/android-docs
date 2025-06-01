@@ -57,7 +57,8 @@ Interface
       TRANSLATE = 1024,
       TRANSFORM = 2048,
       SCALING = 4096,
-      STYLE = 8192
+      STYLE = 8192,
+      UNICODE = 16384
   }
 
 Method

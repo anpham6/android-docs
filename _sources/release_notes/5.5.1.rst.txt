@@ -1,0 +1,38 @@
+=====
+5.5.1
+=====
+
+:right:`2025-5-14`
+
+.. toctree::
+  :maxdepth: 1
+
+  5.5.2
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.lib.client
+
+  interface UserAgentFeatures {
+      PROMISE: {
+          TRY: boolean;
+      };
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.lib
+
+  interface CssCascadeLayer {
+      add(name: string | undefined): CssCascadeLayer; // name
+  }

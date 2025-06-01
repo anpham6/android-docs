@@ -1,0 +1,275 @@
+=====
+5.5.2
+=====
+
+:right:`2025-6-16`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface CacheValueUI {
+      fontSynthesis?: FontSynthesis;
+  }
+
+  interface CacheStateUI {
+      fontVariantAlternates?: string[];
+  }
+
+  class NodeUI {
+      setFontVariantAlternates(fontFamily: string): void;
+      get fontVariantAlternates(): string[];
+      get fontSynthesis(): FontSynthesis;
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* constant */
+
+  const enum CSS_TRAITS {
+      CASE_SENSITIVE = 1024,
+      STRING = 2048,
+      POSITIVE = 4096,
+      NEGATIVE = 8192
+  }
+
+  const enum CSS_ATTR_TYPE {
+      NONE = 0,
+      INTEGER = 1,
+      NUMBER = 2,
+      PERCENTAGE = 4,
+      LENGTH = 8,
+      LENGTH_PERCENTAGE = 16,
+      ANGLE = 32,
+      TIME = 64,
+      RESOLUTION = 128,
+      COLOR = 256,
+      TRANSFORM_FUNCTION = 512,
+      IMAGE = 1024,
+      STRING = 2048,
+      CUSTOM_IDENT = 4096,
+      RAW_STRING = 8192
+  }
+
+  /* css */
+
+  type CssPropertyKeywords = (
+      string
+      | [string, string, (string | string[])?]
+      | [string | string[], number[], boolean?]
+      | [string[], string?]
+      | [string | string[], string[], string?]
+  )[];
+
+  interface CssPropertyData {
+      readonly type: number;
+      readonly keywords?: CssPropertyKeywords | (() => CssPropertyKeywords);
+      readonly anyStart?: number;
+      readonly separator?: string | [string, number];
+      readonly allValue?: -1 | 0 | 1 | 2;
+      readonly splitValue?: [number, number, number?];
+      readonly repeatStart?: number | [number, string];
+      readonly typeValidator?: string;
+      readonly valueOfAuto?: string;
+  }
+
+  interface UnitOptions {
+      strict?: boolean;
+  }
+
+  interface CalculateVarAsStringOptions {
+      attr?: CssStyleAttr;
+  }
+
+  function parseAttrType(element: HTMLElement, attr: CssStyleAttr, value: string): string;
+  function hasAttrType(value: string): boolean;
+  function isAttrType(attr: CssStyleAttr, value: string, type?: string): boolean;
+
+  /* regex */
+
+  const STRING: {
+      LENGTH_0: string;
+      LENGTH_PERCENTAGE_0: string;
+      CSS_UNIT: string;
+      CSS_TRANSFORM: string;
+      CSS_BASIC_SHAPE: string;
+      CSS_IDENT: string;
+      CSS_CUSTOM_IDENT: string;
+  };
+
+  /* internal */
+
+  const CSS_PROPERTIES: {
+      animationRange: string;
+      animationRangeStart: string;
+      animationRangeEnd: string;
+      fontSynthesisPosition: CssPropertyData;
+      overflowClipMargin: CssPropertyData;
+      overlay: CssPropertyData;
+      printColorAdjust: CssPropertyData;
+      scrollTimeline: CssPropertyData;
+      scrollTimelineAxis: CssPropertyData;
+      scrollTimelineName: CssPropertyData;
+      textSpacingTrim: CssPropertyData;
+      timelineScope: CssPropertyData;
+      viewTimeline: CssPropertyData;
+      viewTimelineAxis: CssPropertyData;
+      viewTimelineInset: CssPropertyData;
+      viewTimelineName: CssPropertyData;
+      viewTransitionName: CssPropertyData;
+  };
+
+  const UNIT_PATTERN: string[];
+  const VALUE_PATTERN: string[];
+  const UNIT_INLINE: string[];
+  const CSS_DATA_TYPES: CssDataTypes;
+  const CSS_PROPERTIES_WRITINGMODE: CssPropertiesWritingMode;
+  const CSS_ATTR_TYPES: string[];
+
+  function hasPropertyTrait(attr: CssStyleAttr, value: number): boolean;
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgBuild {
+      static asPath(object: unknown): object is SvgPath;
+  }
+
+  class SvgContainer {
+      findViewBoxContainer(container?: SvgContainer): SvgContainer | undefined;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* constant */
+
+  enum STAGE_OPTIMIZATION {
+      UNICODE = 16384
+  }
+
+  /* css */
+
+  function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap;
+
+  /* util */
+
+  function getIndent(value: number): string;
+
+.. code-block::
+  :caption: android.base
+
+  interface LocalSettingsBaseUI {
+      supportUnicode: boolean | ("utf-16" | "emoji")[];
+  }
+
+  class Application {
+      getEncodingOptions(projectId?: string): ReplaceCharacterDataOptions;
+  }
+
+  class View {
+      get companionStyle(): boolean;
+      get emojiContainer(): CONTAINER_NODE;
+  }
+
+.. code-block::
+  :caption: android.extensions
+
+  interface ResourceStringsOptions {
+      enableEmojiViews: boolean;
+      detectEmojiPattern: RegExp | null;
+      ignoreEmojiPattern: RegExp | null;
+  }
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const EMOJI_TAGNAME: {
+      TEXT: string;
+      EDIT: string;
+      BUTTON: string;
+  };
+
+  const EMOJI_TAGNAME_X: {
+      TEXT: string;
+      EDIT: string;
+      BUTTON: string;
+  };
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function isLength(value: string, percent?: boolean, strict?: boolean): boolean; // strict
+  function parseTime(value: string, fallback?: number): number; // fallback
+  function parseResolution(value: string, fallback?: number): number;
+
+  /* dom */
+
+  function getNamedItem(element: Element, attr: string, fallback?: string): string; // fallback
+
+  /* internal */
+
+  const CSS_PROPERTIES: {
+      container: CssPropertyData; // CSS_TRAITS.SHORTHAND
+      alignmentBaseline: CssPropertyData; // svg.internal
+      textRendering: CssPropertyData;
+  };
+
+  const CSS_PROPERTIES_WRITINGMODE: {
+      overflowBlock: CssPropertyWritingModeData; // CSS_PROPERTIES
+      overflowInline: CssPropertyWritingModeData;
+  };
+
+.. code-block::
+  :caption: squared.svg.lib.internal
+
+  const CSS_PROPERTIES: {
+      d: CssPropertyData; // squared.internal
+  };
+
+.. code-block::
+  :caption: squared.base.lib.css
+
+  function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // documentRoot
+
+.. rst-class:: release-notes
+
+DELETED
+=======
+
+.. code-block::
+  :caption: squared.lib.internal
+
+  const CSS_PROPERTIES: {
+      maskPositionX: CssPropertyData; // maskPosition
+      maskPositionY: CssPropertyData;
+  };
+
+.. code-block::
+  :caption: squared.svg.lib.internal
+
+  const CSS_PROPERTIES: {
+      mask: CssPropertyData; // squared.internal
+      maskComposite: CssPropertyData;
+      maskClip: CssPropertyData;
+      maskImage: CssPropertyData;
+      maskMode: CssPropertyData;
+      maskRepeat: CssPropertyData;
+      maskOrigin: CssPropertyData;
+      maskPosition: CssPropertyData;
+      maskSize: CssPropertyData;
+  };

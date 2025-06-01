@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 196-197,274
+  :emphasize-lines: 96,197-198,226-227,277
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -102,6 +102,7 @@ Interface
       getPositionOffset(name: "sticky"): Point;
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
+      setFontVariantAlternates(fontFamily: string): void;
       hasFixedDimension(dimension: DimensionAttr): boolean;
       isResizable(attr: DimensionSizableAttr, not?: string | string[]): boolean;
       fitToScreen(value: Dimension): Dimension;
@@ -231,6 +232,8 @@ Interface
       get textJustified(): boolean;
       get fontFeatureSettings(): string[];
       get fontVariationSettings(): string[];
+      get fontVariantAlternates(): string[];
+      get fontSynthesis(): FontSynthesis;
       get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
       get outerRegion(): BoxRectDimension;
@@ -314,6 +317,12 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.5.2
+
+  - *NodeUI* method **setFontVariantAlternates** for system resolved font family was created.
+  - *NodeUI* property getter **fontVariantAlternates** for usage of alternate glyphs was created.
+  - *NodeUI* property getter **fontSynthesis** for available rendering capabilities was created.
 
 .. versionadded:: 5.5.0
 
