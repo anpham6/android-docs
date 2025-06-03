@@ -2,7 +2,7 @@
 Interface
 =========
 
-.. highlight::  typescript
+.. highlight:: typescript
 
 .. code-block::
   :emphasize-lines: 96,197-198,226-227,277
