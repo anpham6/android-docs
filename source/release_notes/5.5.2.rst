@@ -22,6 +22,10 @@ ADDED
       fontVariantAlternates?: string[];
   }
 
+  interface HasOptions {
+      validate?: string;
+  }
+
   class NodeUI {
       setFontVariantAlternates(fontFamily: string): void;
       get fontVariantAlternates(): string[];
@@ -34,10 +38,9 @@ ADDED
   /* constant */
 
   const enum CSS_TRAITS {
-      CASE_SENSITIVE = 1024,
-      STRING = 2048,
-      POSITIVE = 4096,
-      NEGATIVE = 8192
+      CUSTOM_IDENT = 1024,
+      DASHED_IDENT = 2048,
+      CASE_SENSITIVE = 4096
   }
 
   const enum CSS_ATTR_TYPE {
@@ -69,14 +72,14 @@ ADDED
   )[];
 
   interface CssPropertyData {
-      readonly type: number;
-      readonly keywords?: CssPropertyKeywords | (() => CssPropertyKeywords);
-      readonly anyStart?: number;
-      readonly separator?: string | [string, number];
-      readonly allValue?: -1 | 0 | 1 | 2;
-      readonly splitValue?: [number, number, number?];
-      readonly repeatStart?: number | [number, string];
-      readonly typeValidator?: string;
+      type: number;
+      anyStart?: number;
+      separator?: string | [string, number, ...string[]];
+      range?: [number, number] | [number, number, number, number];
+      keywordEnd?: number;
+      allValue?: -1 | 0 | 1 | 2;
+      splitValue?: [number, number, number?];
+      repeatStart?: number | [number, string, number?];
       readonly valueOfAuto?: string;
   }
 
@@ -90,6 +93,8 @@ ADDED
 
   function parseAttrType(element: HTMLElement, attr: CssStyleAttr, value: string): string;
   function hasAttrType(value: string): boolean;
+  function isAttrType(attr: CssStyleAttr, value: string, options: AttrTypeOptions): boolean;
+  function isAttrType(attr: CssStyleAttr, value: string, element: HTMLElement): boolean;
   function isAttrType(attr: CssStyleAttr, value: string, type?: string): boolean;
 
   /* regex */
@@ -114,6 +119,8 @@ ADDED
       overflowClipMargin: CssPropertyData;
       overlay: CssPropertyData;
       printColorAdjust: CssPropertyData;
+      readingFlow: CssPropertyData;
+      readingOrder: CssPropertyData;
       scrollTimeline: CssPropertyData;
       scrollTimelineAxis: CssPropertyData;
       scrollTimelineName: CssPropertyData;
@@ -159,6 +166,12 @@ ADDED
   }
 
   /* css */
+
+  interface CssPropertyData {
+      trait: number; // readonly
+      value: string | CssStyleAttr[];
+      keywords?: CssPropertyKeywords | (() => CssPropertyKeywords);
+  }
 
   function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap;
 
@@ -245,9 +258,20 @@ CHANGED
   };
 
 .. code-block::
-  :caption: squared.base.lib.css
+  :caption: squared.base.lib
+
+  /* css */
 
   function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // documentRoot
+
+  /* dom */
+
+  function getOptionArray(element: HTMLSelectElement | HTMLOptGroupElement, locales?: Intl.LocalesArgument | null, all?: boolean): OptionArrayData; // locales
+
+  /* util */
+
+  function upperCaseString(value: string, locales?: Intl.LocalesArgument | null, capitalize?: boolean): string; // locales
+  function lowerCaseString(value: string, locales?: Intl.LocalesArgument | null): string;
 
 .. rst-class:: release-notes
 
