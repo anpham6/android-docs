@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 96,197-198,226-227,277
+  :emphasize-lines: 96,197-198,226-227,277,303-304
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -309,6 +309,8 @@ Interface
       get flexibleWidth(): boolean;
       get flexibleHeight(): boolean;
       get flexibleHorizontal(): boolean;
+      get companionStyle(): boolean;
+      get emojiContainer(): CONTAINER_NODE;
       get watch(): WatchInterval | undefined;
       get tasks(): TaskCommand[] | undefined;
       get target(): HTMLElement | null;
@@ -323,6 +325,8 @@ Changelog
   - *NodeUI* method **setFontVariantAlternates** for system resolved font family was created.
   - *NodeUI* property getter **fontVariantAlternates** for usage of alternate glyphs was created.
   - *NodeUI* property getter **fontSynthesis** for available rendering capabilities was created.
+  - *View* property getter **companionStyle** for input labels was created.
+  - *View* property getter **emojiContainer** for supported views was created.
 
 .. versionchanged:: 5.5.2
 
