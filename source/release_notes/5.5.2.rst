@@ -14,6 +14,10 @@ ADDED
 .. code-block::
   :caption: squared.base
 
+  interface UserResourceSettingsUI {
+      defaultIntlLocales?: ResourceIntlLocales;
+  }
+
   interface CacheValueUI {
       fontSynthesis?: FontSynthesis;
   }
@@ -223,6 +227,15 @@ ADDED
 
 CHANGED
 =======
+
+.. code-block::
+  :caption: squared.base
+
+  type ResourceIntlLocales = string[] | null;
+
+  class NodeUI {
+      get locales(): ResourceIntlLocales; // Does not filter with Intl.Segmenter
+  }
 
 .. code-block::
   :caption: squared.lib

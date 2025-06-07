@@ -13,6 +13,8 @@ Extension
 .. code-block:: javascript
   :caption: Global
 
+  squared.settings.defaultIntlLocales = ["ja-JP"]; // All text elements
+  /* OR */
   squared.attr("android.delegate.multiline", "intlLocales", ["ja-JP"]);
 
 .. code-block:: javascript

@@ -10,8 +10,8 @@ Settings
 ::
 
   squared.settings.supportUnicode = false; // Prefers UTF-8 encoding
-  squared.settings.supportUnicode = "utf-16"; // Preserve UTF-16 encoding
-  squared.settings.supportUnicode = "emoji"; // Detect views with Emoji characters
+  squared.settings.supportUnicode = ["utf-16"]; // Preserve UTF-16 encoding
+  squared.settings.supportUnicode = ["emoji"]; // Detect views with Emoji characters
   squared.settings.supportUnicode = ["utf-16", "emoji"]; // "utf-16" | "emoji"
   squared.settings.supportUnicode = true; // All available features
 
@@ -39,8 +39,8 @@ Emoji
       ignoreEmojiPattern: /[©®]/g
   };
 
-  squared.attr("android.resource.strings", "enableEmojiViews", false); // Use standard views only
-  squared.attr("android.resource.strings", "detectEmojiPattern", /(?:\p{Extended_Pictographic}|\p{Emoji_Presentation})/gu); // Mainstream Emoji only
+  squared.attr("android.resource.strings", "enableEmojiViews", false); // Use standard views
+  squared.attr("android.resource.strings", "detectEmojiPattern", /(?:\p{Extended_Pictographic}|\p{Emoji_Presentation})/gu); // Mainstream only
   squared.attr("android.resource.strings", "ignoreEmojiPattern", null); // Ignore nothing
 
 .. code-block:: html

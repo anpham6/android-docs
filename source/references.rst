@@ -87,6 +87,7 @@ https://unpkg.com/squared/types/base/application.d.ts
 .. rst-class:: block-list
 
 https://unpkg.com/squared/types/base/resource.d.ts
+  | `ResourceIntlLocales <search.html?q=ResourceIntlLocales>`_
   | `URLData <search.html?q=URLData>`_
 
 .. _references-squared-base-node:

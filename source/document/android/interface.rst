@@ -238,7 +238,7 @@ Interface
       get transformValue(): string;
       get outerRegion(): BoxRectDimension;
       set locales(value);
-      get locales(): string[] | null;
+      get locales(): ResourceIntlLocales;
   }
 
   class View extends NodeUI {
@@ -323,6 +323,10 @@ Changelog
   - *NodeUI* method **setFontVariantAlternates** for system resolved font family was created.
   - *NodeUI* property getter **fontVariantAlternates** for usage of alternate glyphs was created.
   - *NodeUI* property getter **fontSynthesis** for available rendering capabilities was created.
+
+.. versionchanged:: 5.5.2
+
+  - *NodeUI* property getter **locales** uses inheritance for inline text elements with :doc:`defaultIntlLocales <../../settings/android>` as the fallback.
 
 .. versionadded:: 5.5.0
 
