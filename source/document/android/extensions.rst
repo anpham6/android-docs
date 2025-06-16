@@ -146,9 +146,10 @@ Interface
       mergeVectorDrawable: boolean;
       dependencyVectorDrawable: "animated" | "seekable";
       transformExclude: SvgTransformExclude;
-      animateInterpolator: string;
       floatPrecision: number;
       floatPrecisionKeyTime: number;
+      animateInterpolator: string;
+      customInterpolator: boolean | 1;
   }
 
 .. code-block::
@@ -175,9 +176,11 @@ Changelog
       - detectEmojiPattern
       - ignoreEmojiPattern
 
+  - *ResourceSvgOptions* property **customInterpolator** for modifying built-in attributes as :alt:`boolean | 1` was created.
+
 .. versionadded:: 5.3.0
 
-  - *DelegateMultilineOptions* property **intlLocales** as :alt:`Intl.LocaleArguments | null` was created.
+  - *DelegateMultilineOptions* property **intlLocales** for the default Unicode locale identifier as :alt:`Intl.LocaleArguments | null` was created.
 
 .. versionadded:: 5.2.1
 

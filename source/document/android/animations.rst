@@ -13,7 +13,7 @@ Animations are usually started before *DOMContentLoaded* has been fired and :fun
 
   <svg viewBox="0 0 200 200">
     <rect id="animate" x="10" y="10" width="30" height="20" fill="purple" data-base-value='{ "x": 10, "y": 10, "width": 30, "height": 20, "fill": "purple" }'>
-      <animate attributeName="y" values="150; 75; 0; 50; 100;" keyTimes="0; 0.2; 0.5; 0.7; 1" begin="0s" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="y" values="150; 75; 0; 50; 100" keyTimes="0; 0.2; 0.5; 0.7; 1" begin="0s" dur="9s" repeatCount="indefinite" />
     </rect>
   </svg>
 
@@ -23,10 +23,62 @@ Animations are usually started before *DOMContentLoaded* has been fired and :fun
 
   <svg width="120" height="120" viewBox="0 0 240 240" data-base-value="width: 120; height: 120; opacity: 1;">
     <rect x="10" y="0" width="100" height="50" stroke="black" stroke-width="2" fill="purple" data-base-value="x: 10; y: 0; width: 100; fill: purple; opacity: 1; stroke-opacity: 1; fill-opacity: 1;">
-      <animate attributeName="x" values="0; 100;" keyTimes="0; 1" begin="0s" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="x" values="0; 100" keyTimes="0; 1" begin="0s" dur="10s" repeatCount="indefinite" />
       <animate attributeName="y" values="0; 100" keyTimes="0; 1" begin="0s; 5s; 10s" dur="10s" repeatCount="1" />
     </rect>
   </svg>
+
+Interpolator
+============
+
+::
+
+  squared.attr("android.resource.svg", "customInterpolator", true); // One template per element
+  /* OR */
+  squared.attr("android.resource.svg", "customInterpolator", 1); // One shared template per type/config
+
+.. code-block:: html
+  :caption: data-timing-function
+
+  <svg width="120" height="120" viewBox="0 0 240 240">
+    <rect x="10" y="0" width="100" height="50" data-timing-function="decelerate"> <!-- does not inherit -->
+      <animate attributeName="x" values="0; 100" keyTimes="0; 1" begin="0s" dur="10s" /> <!-- inherits from shape -->
+      <animate attributeName="x" values="0; 100" keyTimes="0; 1" begin="0s" dur="10s" data-timing-function="none" /> <!-- no timing function -->
+      <animate attributeName="y" values="0; 100" keyTimes="0; 1" begin="0s" dur="10s" data-timing-function='anticipate_overshoot={ "tension": 3, "extraTension": 2 }' /> <!-- strict JSON -->
+    </rect>
+  </svg>
+
+These built-in interpolators are usable without any additional configuration:
+
+.. hlist::
+  :columns: 2
+
+  - accelerate
+
+    * factor
+
+  - anticipate
+
+    * tension
+
+  - anticipate_overshoot
+
+    * tension
+    * extraTension
+
+  - cycle
+
+    * cycles
+
+  - decelerate
+
+    * factor
+
+  - overshoot
+
+    * tension
+
+.. note:: The extension will always generate an interpolator with custom attributes.
 
 Play
 ====

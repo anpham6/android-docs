@@ -12,7 +12,7 @@ Settings
   squared.settings.supportUnicode = false; // Prefers UTF-8 encoding
   squared.settings.supportUnicode = ["utf-16"]; // Preserve UTF-16 encoding
   squared.settings.supportUnicode = ["emoji"]; // Detect views with Emoji characters
-  squared.settings.supportUnicode = ["utf-16", "emoji"]; // "utf-16" | "emoji"
+  squared.settings.supportUnicode = ["utf-16", "emoji"];
   squared.settings.supportUnicode = true; // All available features
 
 Encoding
