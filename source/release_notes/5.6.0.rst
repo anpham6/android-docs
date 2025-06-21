@@ -1,0 +1,103 @@
+=====
+5.6.0
+=====
+
+:right:`2025-08-09`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgContainer {
+      build(options?: SvgBuildOptions): void; // SvgContainerBuild(SvgContainer) (mixin)
+  }
+
+.. code-block::
+  :caption: squared.lib.color
+
+  namespace external {
+      function intoRGB(value: ColorSpace): RGB | [ColorCoords, ColorCoordinates] | null; // squared.lib.color.intoRGB -> squared.lib.color.external.intoRGB
+      function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | [ColorCoords, ColorCoordinates] | null; // squared.lib.color.intoRelativeRGB -> squared.lib.color.external.intoRelativeRGB
+  }
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgBuild {
+      static findViewport(object: SvgElement): Svg | undefined; // SvgContainer.getViewport (deprecated)
+  }
+
+  class SvgContainerBuild {
+      build(options?: SvgBuildOptions): void;
+  }
+
+  declare var SvgBaseVal: <T extends Constructor<SvgElement>>(Base: T) => T & SvgBaseVal;
+  declare var SvgContainerBuild: <T extends Constructor<SvgContainer>>(Base: T) => T & SvgContainerBuild;
+  declare var SvgPaint: <T extends Constructor<SvgElement>>(Base: T) => T & SvgPaint;
+  declare var SvgSynchronize: <T extends Constructor<SvgView>>(Base: T) => T & SvgSynchronize;
+  declare var SvgView: <T extends Constructor<SvgElement>>(Base: T) => T & SvgView;
+  declare var SvgViewRect: <T extends Constructor<SvgBaseVal>>(Base: T) => T & SvgViewRect;
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const MATERIAL_TAGNAME: {
+      EDIT_LIST: string;
+  };
+
+  const CONTAINER_TAGNAME_X: {
+      BUTTON_GROUP: string;
+  };
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: android.base
+
+  interface ManifestData {
+      application?: PlainObject; // All attributes are supported (e.g. "android:description" | description)
+  }
+
+  interface LocalSettingsBaseUI {
+      preferMaterialDesign: boolean | MaterialThemes; // uses MaterialComponentsViewInflater (legacy behavior: true)
+  }
+
+  class View {
+      set controlName(value); // renderedAs.controlName (rendered: true)
+      get controlName(): string;
+  }
+
+.. code-block::
+  :caption: types/chrome/base/index.d.ts
+
+  export interface FileActionOptions {} // types/chrome/options.d.ts
+  export type FileCopyingOptions = {};
+  export type FileArchivingOptions = {};
+
+.. rst-class:: release-notes
+
+DELETED
+=======
+
+.. code-block::
+  :caption: types/android/extension.d.ts
+
+  interface ExtensionListOptions {
+      ordinalFontSizeAdjust: number; // Modifiable
+      ordinalPaddingLeft: number;
+      imagePaddingRight: number;
+  }
