@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 4-6
+  :emphasize-lines: 4-5
 
   interface UserResourceSettingsUI {
       targetAPI: number;
