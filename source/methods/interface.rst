@@ -129,6 +129,13 @@ squared
 .. rst-class:: section-caption
 
 .. code-block::
+  :caption: ESM
+
+  function userSettings(value: PlainObject): void;
+
+.. rst-class:: section-caption
+
+.. code-block::
   :caption: Observe
 
   function observe(enable = true): void;

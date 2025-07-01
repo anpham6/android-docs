@@ -9,3 +9,4 @@ Methods
   squared
   android
   chrome
+  vdom
