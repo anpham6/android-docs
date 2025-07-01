@@ -2,10 +2,41 @@
 VDOM
 ====
 
-A minimal framework that is primarily for debugging elements in `DevTools <https://developer.chrome.com/docs/devtools>`_ console. The :ref:`lite <browser-download-vdom-lite>` version is half the download size :alt:`(55kb gzipped)` and was built for browser applications.
+A minimal framework that is primarily for debugging elements in `DevTools <https://developer.chrome.com/docs/devtools>`_ console. The :ref:`lite <browser-download-vdom-lite>` variation is 25% smaller :alt:`(80kb gzipped)` and was built for web applications.
 
 Example usage
 =============
+
+.. code-block:: html
+  :caption: ESM [#]_
+
+  <script type="importmap">
+    {
+      "imports": {
+        "squared/": "/js/squared/"
+      }
+    }
+  </script>
+  <script type="module">
+    import { userSettings, fromElement, getElementById, querySelectorAll } from 'squared/vdom.js';
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ // Optional
+        createElementMap: true,
+        pierceShadowRoot: true,
+        adaptStyleMap: true,
+        showErrorMessages: true
+      });
+
+      const elements = await querySelectorAll("*");
+      /* OR */
+      const element = await fromElement(document.body);
+      /* OR */
+      const elements = await getElementById("content-id").querySelectorAll("*");
+    });
+  </script>
+
+.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
 
 .. code-block:: html
   :caption: base-dom
@@ -41,3 +72,5 @@ Example usage
   </script>
 
 .. tip:: Synchronous is the recommended way to query when you are not concerned with image dimensions.
+
+.. [#] https://caniuse.com/import-maps
