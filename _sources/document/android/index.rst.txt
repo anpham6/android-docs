@@ -9,6 +9,7 @@ Android
   extensions
   data
   resources
+  unicode
   includes
   substitute
   compose

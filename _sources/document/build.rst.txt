@@ -137,7 +137,7 @@ Example usage
     profileable: "debug", // android.buildTypes.release.signingConfig = signingConfigs.debug
     profileable: "--warn-manifest-validation", // aaptOptions.additionalParameters (--prefix)
     profileable: ["release", "--warn-manifest-validation", "--no-version-vectors"], // signingConfig + additionalParameters (multiple --args)
-    dependencies: ["androidx.appcompat:appcompat:1.6.0"],
+    dependencies: ["androidx.appcompat:appcompat:1.7.0"],
     dependencyScopes: true, // All first-level dependencies
     dependencyScopes: "compile", // implementation="compile" | compileOnly="provided" | runtimeOnly="runtime" | testImplementation="test"
     dependencyScopes: ["compile", "runtime"],

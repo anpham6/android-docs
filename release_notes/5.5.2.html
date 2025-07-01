@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.5.2 &mdash; squared 5.5.1 documentation</title>
+  <title>5.5.2 &mdash; squared 5.5.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=07fd27c7"></script>
+      <script src="../_static/documentation_options.js?v=3005adad"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.jpg)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
 
           
           
@@ -54,6 +54,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5.6.0.html">5.6.0</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="5.5.0.html">5.5.0</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="5.5.1.html">5.5.1</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">5.5.2</a></li>
@@ -77,7 +78,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.jpg)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">squared</a>
       </nav>
@@ -106,12 +107,20 @@
 <h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">CacheValueUI</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">defaultIntlLocales?</span><span class="o">:</span><span class="w"> </span><span class="kt">ResourceIntlLocales</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">CacheValueUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">fontSynthesis?</span><span class="o">:</span><span class="w"> </span><span class="kt">FontSynthesis</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">CacheStateUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">fontVariantAlternates?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">HasOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">validate?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
@@ -127,10 +136,9 @@
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* constant */</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">CSS_TRAITS</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">CASE_SENSITIVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1024</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">STRING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2048</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">POSITIVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4096</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">NEGATIVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8192</span>
+<span class="w">    </span><span class="nx">CUSTOM_IDENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1024</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">DASHED_IDENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2048</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">CASE_SENSITIVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4096</span>
 <span class="p">}</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">CSS_ATTR_TYPE</span><span class="w"> </span><span class="p">{</span>
@@ -158,18 +166,18 @@
 <span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">?</span><span class="p">]</span>
 <span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="kt">number</span><span class="p">[],</span><span class="w"> </span><span class="kt">boolean</span><span class="o">?</span><span class="p">]</span>
 <span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="kt">string</span><span class="o">?</span><span class="p">]</span>
-<span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="kt">string</span><span class="o">?</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="kt">string</span><span class="o">?</span><span class="p">]</span>
 <span class="p">)[];</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">CssPropertyData</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">keywords?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyKeywords</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">CssPropertyKeywords</span><span class="p">);</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">anyStart?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">separator?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">];</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">allValue</span><span class="o">?:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">splitValue</span><span class="o">?:</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="o">?</span><span class="p">];</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">repeatStart?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">];</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">typeValidator?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">anyStart?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">separator?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="kt">string</span><span class="p">[]];</span>
+<span class="w">    </span><span class="nx">range</span><span class="o">?:</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">keywordEnd?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">allValue</span><span class="o">?:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">splitValue</span><span class="o">?:</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="o">?</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">repeatStart?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="o">?</span><span class="p">];</span>
 <span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">valueOfAuto?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -183,6 +191,8 @@
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">parseAttrType</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">hasAttrType</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isAttrType</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">AttrTypeOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isAttrType</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">isAttrType</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 
 <span class="cm">/* regex */</span>
@@ -207,6 +217,8 @@
 <span class="w">    </span><span class="nx">overflowClipMargin</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">overlay</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">printColorAdjust</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">readingFlow</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">readingOrder</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">scrollTimeline</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">scrollTimelineAxis</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">scrollTimelineName</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
@@ -219,6 +231,9 @@
 <span class="w">    </span><span class="nx">viewTransitionName</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
 <span class="p">};</span>
 
+<span class="kd">const</span><span class="w"> </span><span class="nx">CLIENT_SAFARI</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">CLIENT_FIREFOX</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">CLIENT_CHROME</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">UNIT_PATTERN</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">VALUE_PATTERN</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">UNIT_INLINE</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
@@ -251,6 +266,12 @@
 <span class="p">}</span>
 
 <span class="cm">/* css */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">CssPropertyData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">trait</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// readonly</span>
+<span class="w">    </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CssStyleAttr</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">keywords?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyKeywords</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">CssPropertyKeywords</span><span class="p">);</span>
+<span class="p">}</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">parseFontFeatureValues</span><span class="p">(</span><span class="nx">documentRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">DocumentOrShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">FontFeatureValuesMap</span><span class="p">;</span>
 
@@ -307,7 +328,17 @@
 <section class="release-notes" id="changed">
 <h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">type</span><span class="w"> </span><span class="nx">ResourceIntlLocales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">locales</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">ResourceIntlLocales</span><span class="p">;</span><span class="w"> </span><span class="c1">// Does not filter with Intl.Segmenter</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">isLength</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">percent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">,</span><span class="w"> </span><span class="nx">strict?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// strict</span>
@@ -333,25 +364,36 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">squared.svg.lib.internal</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">squared.svg.lib.internal</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CSS_PROPERTIES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">d</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span><span class="w"> </span><span class="c1">// squared.internal</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">squared.base.lib.css</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">getKeyframesRules</span><span class="p">(</span><span class="nx">documentRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">DocumentOrShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">KeyframesMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// documentRoot</span>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">squared.base.lib</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">getKeyframesRules</span><span class="p">(</span><span class="nx">documentRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">DocumentOrShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">KeyframesMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// documentRoot</span>
+
+<span class="cm">/* dom */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">getOptionArray</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLSelectElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">HTMLOptGroupElement</span><span class="p">,</span><span class="w"> </span><span class="nx">locales?</span><span class="o">:</span><span class="w"> </span><span class="kt">Intl.LocalesArgument</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">all?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">OptionArrayData</span><span class="p">;</span><span class="w"> </span><span class="c1">// locales</span>
+
+<span class="cm">/* util */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">upperCaseString</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">locales?</span><span class="o">:</span><span class="w"> </span><span class="kt">Intl.LocalesArgument</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">capitalize?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// locales</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">lowerCaseString</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">locales?</span><span class="o">:</span><span class="w"> </span><span class="kt">Intl.LocalesArgument</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section class="release-notes" id="deleted">
 <h2>DELETED<a class="headerlink" href="#deleted" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">squared.lib.internal</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">squared.lib.internal</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CSS_PROPERTIES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">maskPositionX</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span><span class="w"> </span><span class="c1">// maskPosition</span>
 <span class="w">    </span><span class="nx">maskPositionY</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>
@@ -359,8 +401,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">squared.svg.lib.internal</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">squared.svg.lib.internal</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CSS_PROPERTIES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">mask</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span><span class="w"> </span><span class="c1">// squared.internal</span>
 <span class="w">    </span><span class="nx">maskComposite</span><span class="o">:</span><span class="w"> </span><span class="kt">CssPropertyData</span><span class="p">;</span>

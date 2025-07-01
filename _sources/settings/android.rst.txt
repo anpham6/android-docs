@@ -6,12 +6,13 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 4,5
+  :emphasize-lines: 4-6
 
   interface UserResourceSettingsUI {
       targetAPI: number;
       supportRTL: boolean;
-      supportUnicode: boolean | UnicodeFeatures | UnicodeFeatures[];
+      supportUnicode: boolean | UnicodeFeatures[];
+      defaultIntlLocales: ResourceIntlLocales;
       compressImages: boolean | string | CompressFormat | CompressFormat[];
       enabledMultiline: boolean;
       enabledViewModel: boolean;
@@ -61,6 +62,7 @@ Changelog
 .. versionadded:: 5.5.2
 
   - *UserResourceSettingsUI* property **supportUnicode** for UTF-16 and emoji detection was created.
+  - *UserResourceSettingsUI* property **defaultIntlLocales** for :ref:`Intl.LocalesArgument <references-mdn-intl-locales_argument>` was created.
 
 .. versionadded:: 5.5.0
 
@@ -96,7 +98,8 @@ Example usage
     useShapeGeometryBox: true, // Dimensions use native SVG method getBbox
     supportRTL: true,
     supportNegativeLeftTop: true,
-    supportUnicode: false,
+    supportUnicode: ["emoji"],
+    defaultIntlLocales: null, // ["ja-JP", "ko-KR"]
     preloadImages: true,
     preloadFonts: true,
     preloadLocalFonts: true, // window.queryLocalFonts (Chromium)

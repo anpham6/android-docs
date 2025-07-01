@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extensions &mdash; squared 5.5.1 documentation</title>
+  <title>Extensions &mdash; squared 5.5.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=07fd27c7"></script>
+      <script src="../../_static/documentation_options.js?v=3005adad"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.jpg)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
 
           
           
@@ -58,6 +58,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Extensions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html">Data Binding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.html">Unicode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="includes.html">Layout Includes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="substitute.html">Substitute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compose.html">Jetpack Compose</a></li>
@@ -85,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.jpg)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -245,6 +246,9 @@
 <div class="code-block-caption"><span class="caption-text">android.resource.strings</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ResourceStringsOptions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">numberAsResource</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">enableEmojiViews</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">detectEmojiPattern</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ignoreEmojiPattern</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -257,9 +261,10 @@
 <span class="w">    </span><span class="nx">mergeVectorDrawable</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">dependencyVectorDrawable</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;animated&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;seekable&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">transformExclude</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgTransformExclude</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">animateInterpolator</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">floatPrecision</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">floatPrecisionKeyTime</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">animateInterpolator</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">customInterpolator</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -281,9 +286,27 @@
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
 <div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.5.2: </span></p>
+<ul>
+<li><p><em>ResourceStringsOptions</em> properties were created:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>enableEmojiViews</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>detectEmojiPattern</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>ignoreEmojiPattern</p></li>
+</ul>
+</td></tr></table>
+</li>
+<li><p><em>ResourceSvgOptions</em> property <strong>customInterpolator</strong> for modifying built-in attributes as <em class="alt">boolean | 1</em> was created.</p></li>
+</ul>
+</div>
+<div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
-<li><p><em>DelegateMultilineOptions</em> property <strong>intlLocales</strong> as <em class="alt">Intl.LocaleArguments | null</em> was created.</p></li>
+<li><p><em>DelegateMultilineOptions</em> property <strong>intlLocales</strong> for the default Unicode locale identifier as <em class="alt">Intl.LocaleArguments | null</em> was created.</p></li>
 </ul>
 </div>
 <div class="versionadded">

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SVG Animations &mdash; squared 5.5.1 documentation</title>
+  <title>SVG Animations &mdash; squared 5.5.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=07fd27c7"></script>
+      <script src="../../_static/documentation_options.js?v=3005adad"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.jpg)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
 
           
           
@@ -58,6 +58,7 @@
 <li class="toctree-l3"><a class="reference internal" href="extensions.html">Extensions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html">Data Binding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicode.html">Unicode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="includes.html">Layout Includes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="substitute.html">Substitute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compose.html">Jetpack Compose</a></li>
@@ -85,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.jpg)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -115,7 +116,7 @@
 <div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&quot;0 0 200 200&quot;</span><span class="p">&gt;</span>
 <span class="hll">  <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;animate&quot;</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;30&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;purple&quot;</span> <span class="na">data-base-value</span><span class="o">=</span><span class="s">&#39;{ &quot;x&quot;: 10, &quot;y&quot;: 10, &quot;width&quot;: 30, &quot;height&quot;: 20, &quot;fill&quot;: &quot;purple&quot; }&#39;</span><span class="p">&gt;</span>
-</span>    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;y&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;150; 75; 0; 50; 100;&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 0.2; 0.5; 0.7; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;9s&quot;</span> <span class="na">repeatCount</span><span class="o">=</span><span class="s">&quot;indefinite&quot;</span> <span class="p">/&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;y&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;150; 75; 0; 50; 100&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 0.2; 0.5; 0.7; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;9s&quot;</span> <span class="na">repeatCount</span><span class="o">=</span><span class="s">&quot;indefinite&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;/</span><span class="nt">rect</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </pre></div>
@@ -125,12 +126,73 @@
 <div class="code-block-caption"><span class="caption-text">Delimited</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;120&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;120&quot;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&quot;0 0 240 240&quot;</span> <span class="na">data-base-value</span><span class="o">=</span><span class="s">&quot;width: 120; height: 120; opacity: 1;&quot;</span><span class="p">&gt;</span>
 </span><span class="hll">  <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;black&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;purple&quot;</span> <span class="na">data-base-value</span><span class="o">=</span><span class="s">&quot;x: 10; y: 0; width: 100; fill: purple; opacity: 1; stroke-opacity: 1; fill-opacity: 1;&quot;</span><span class="p">&gt;</span>
-</span>    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;x&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;0; 100;&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;10s&quot;</span> <span class="na">repeatCount</span><span class="o">=</span><span class="s">&quot;indefinite&quot;</span> <span class="p">/&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;x&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;0; 100&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;10s&quot;</span> <span class="na">repeatCount</span><span class="o">=</span><span class="s">&quot;indefinite&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;y&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;0; 100&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s; 5s; 10s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;10s&quot;</span> <span class="na">repeatCount</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;/</span><span class="nt">rect</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+</div>
+</section>
+<section id="interpolator">
+<h2>Interpolator<a class="headerlink" href="#interpolator" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.resource.svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;customInterpolator&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// One template per element</span>
+<span class="cm">/* OR */</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.resource.svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;customInterpolator&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// One shared template per type/config</span>
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">data-timing-function</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;120&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;120&quot;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&quot;0 0 240 240&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">data-timing-function</span><span class="o">=</span><span class="s">&quot;decelerate&quot;</span><span class="p">&gt;</span> <span class="cm">&lt;!-- does not inherit --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;x&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;0; 100&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;10s&quot;</span> <span class="p">/&gt;</span> <span class="cm">&lt;!-- inherits from shape --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;x&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;0; 100&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;10s&quot;</span> <span class="na">data-timing-function</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="p">/&gt;</span> <span class="cm">&lt;!-- no timing function --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">animate</span> <span class="na">attributeName</span><span class="o">=</span><span class="s">&quot;y&quot;</span> <span class="na">values</span><span class="o">=</span><span class="s">&quot;0; 100&quot;</span> <span class="na">keyTimes</span><span class="o">=</span><span class="s">&quot;0; 1&quot;</span> <span class="na">begin</span><span class="o">=</span><span class="s">&quot;0s&quot;</span> <span class="na">dur</span><span class="o">=</span><span class="s">&quot;10s&quot;</span> <span class="na">data-timing-function</span><span class="o">=</span><span class="s">&#39;anticipate_overshoot={ &quot;tension&quot;: 3, &quot;extraTension&quot;: 2 }&#39;</span> <span class="p">/&gt;</span> <span class="cm">&lt;!-- strict JSON --&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">rect</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>These built-in interpolators are usable without any additional configuration:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>accelerate</p>
+<ul>
+<li><p>factor</p></li>
+</ul>
+</li>
+<li><p>anticipate</p>
+<ul>
+<li><p>tension</p></li>
+</ul>
+</li>
+<li><p>anticipate_overshoot</p>
+<ul>
+<li><p>tension</p></li>
+<li><p>extraTension</p></li>
+</ul>
+</li>
+</ul>
+</td><td><ul class="simple">
+<li><p>cycle</p>
+<ul>
+<li><p>cycles</p></li>
+</ul>
+</li>
+<li><p>decelerate</p>
+<ul>
+<li><p>factor</p></li>
+</ul>
+</li>
+<li><p>overshoot</p>
+<ul>
+<li><p>tension</p></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The extension will always generate an interpolator with custom attributes.</p>
 </div>
 </section>
 <section id="play">
