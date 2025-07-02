@@ -391,6 +391,12 @@ MDN
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument
   | `Intl.LocalesArgument <search.html?q=Intl.LocalesArgument>`_
 
+.. _references-mdn-websocket:
+.. rst-class:: block-list
+
+https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
+  | `WebSocket <search.html?q=WebSocket>`_
+
 .. _references-mdn-request-mode:
 .. rst-class:: block-list
 

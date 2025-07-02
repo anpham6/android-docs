@@ -50,6 +50,17 @@ ADDED
   declare var SvgViewRect: <T extends Constructor<SvgBaseVal>>(Base: T) => T & SvgViewRect;
 
 .. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function prefetch(type: "css" | "javascript" | "image" | "svg", ...targets: [boolean?, ...unknown[]]): Promise<PrefetchItem[]>;
+
+  /* internal */
+
+  function checkSocketTimeout(socket: WebSocket, response: unknown, socketId: string, socketKey?: string): response is WebSocketResponse;
+
+.. code-block::
   :caption: android.lib.constant
 
   const MATERIAL_TAGNAME: {
