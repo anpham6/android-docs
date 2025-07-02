@@ -269,9 +269,15 @@ android
     * Pixel 7a
     * Pixel 7 Pro
     * Pixel 8
+    * Pixel 8a
     * Pixel 8 Pro
-    * Pixel C
+    * Pixel 9 Pro XL
+    * Pixel 9
+    * Pixel 9 Pro
     * Pixel Fold
+    * Pixel 9 Fold
+    * Pixel C
+    * Pixel Tablet
     * Nexus 5X
     * Nexus 6
     * Nexus 6P
@@ -288,6 +294,12 @@ android
     * Television (720p)
     * Automotive
     * Automotive (1024p landscape)
+    * Automotive Portrait
+    * Automotive Large Portrait
+    * Automotive (1408p landscape)
+    * Automotive Distant Display
+    * Automotive (1080p landscape
+    * Automotive Ultrawide
 
   The exact configuration for each device can be found in the latest Android Studio.
 
