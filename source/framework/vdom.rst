@@ -8,7 +8,7 @@ Example usage
 =============
 
 .. code-block:: html
-  :caption: ESM [#]_
+  :caption: Import maps [#]_
 
   <script type="importmap">
     {
@@ -19,14 +19,12 @@ Example usage
   </script>
   <script type="module">
     import { userSettings, fromElement, getElementById, querySelectorAll } from 'squared/vdom.js';
+    import { parseColor } from 'squared/lib/css.js';
+
+    const blue = parseColor("#0000FF");
 
     document.addEventListener("DOMContentLoaded", async () => {
-      userSettings({ // Optional
-        createElementMap: true,
-        pierceShadowRoot: true,
-        adaptStyleMap: true,
-        showErrorMessages: true
-      });
+      userSettings({ pierceShadowRoot: true, adaptStyleMap: true }); // Optional
 
       const elements = await querySelectorAll("*");
       /* OR */
@@ -39,6 +37,23 @@ Example usage
 .. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
 
 .. code-block:: html
+  :caption: ESM
+
+  <script type="module">
+    import { userSettings, fromElement, getElementById, querySelectorAll } from '/dist/vdom.mjs';
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ pierceShadowRoot: true, adaptStyleMap: true }); // Optional
+
+      const elements = await querySelectorAll("*");
+      /* OR */
+      const element = await fromElement(document.body);
+      /* OR */
+      const elements = await getElementById("content-id").querySelectorAll("*");
+    });
+  </script>
+
+.. code-block:: html
   :caption: base-dom
 
   <script src="/dist/squared.min.js"></script>
@@ -46,7 +61,7 @@ Example usage
   <script src="/dist/vdom.framework.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      squared.setFramework(vdom, {/* UserSettings */});
+      squared.setFramework(vdom, { pierceShadowRoot: true, adaptStyleMap: true });
 
       const elements = await squared.querySelectorAll("*");
       /* OR */
