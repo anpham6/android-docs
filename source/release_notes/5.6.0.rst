@@ -32,6 +32,13 @@ ADDED
 =====
 
 .. code-block::
+  :caption: squared.base
+
+  class File {
+      addLocalAddress(hostname: AddressValue): void;
+  }
+
+.. code-block::
   :caption: squared.svg
 
   class SvgBuild {
@@ -58,6 +65,9 @@ ADDED
 
   /* internal */
 
+  function isDocumentReady(): number;
+  function incrementDocumentReady(): void;
+  function decrementDocumentReady(): void;
   function checkSocketTimeout(socket: WebSocket, response: unknown, socketId: string, socketKey?: string): response is WebSocketResponse;
 
 .. code-block::
