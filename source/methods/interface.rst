@@ -29,8 +29,8 @@ squared
   :caption: Framework
 
   function setFramework(value: Application, options?: PlainObject, cache?: boolean): void;
-  function setFramework(value: Application, loadAs: string, cache?: boolean): void;
-  function setFramework(value: Application, options?: PlainObject, saveAs?: string, cache?: boolean): void;
+  function setFramework(value: Application, loadName: string, cache?: boolean): void;
+  function setFramework(value: Application, options?: PlainObject, saveName?: string, cache?: boolean): void;
 
   function extend(functionMap: PlainObject, framework?: number): void;
   function clear(): void;
@@ -132,7 +132,7 @@ squared
 .. code-block::
   :caption: ESM
 
-  function userSettings(value: PlainObject): void;
+  function userSettings(value: PlainObject, loadName?: string, saveName?: string): void;
 
 .. rst-class:: section-caption
 

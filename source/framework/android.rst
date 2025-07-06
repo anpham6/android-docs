@@ -116,6 +116,68 @@ Example usage
     });
   </script>
 
+.. code-block:: html
+  :caption: Import maps [#]_
+
+  <script type="importmap">
+    {
+      "imports": {
+        "squared/": "/js/squared/"
+      }
+    }
+  </script>
+  <script type="module">
+    import { appendTo, close, copyTo, parseDocument, reset, save, saveAs, userSettings } from "squared/android.js";
+    import { parseColor } from "squared/lib/css.js";
+
+    const blue = parseColor("#0000FF");
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ targetAPI: 36, createManifest: true, createBuildDependencies: true }); // Optional
+
+      await parseDocument();
+      /* OR */
+      await parseDocument(document.querySelector("main"), "fragment-id", /* ...element */);
+
+      await close("project-1");
+      await save();
+      await saveAs("project.zip", {/* RequestData */});
+      await saveAs("default.7z", { throwErrors: true }).catch(err => console.log(err));
+      await copyTo("/path/project-1", { projectId: "project-1", emptyDir: true, ignoreExtensions: true });
+      await appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
+      reset();
+  </script>
+
+.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
+
+.. code-block:: html
+  :caption: ESM
+
+  <script type="module">
+    import { android, appendTo, close, copyTo, parseDocument, reset, save, saveAs, userSettings } from "/dist/android.mjs";
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ targetAPI: 36, createManifest: true, createBuildDependencies: true }); // Optional
+
+      await parseDocument();
+      /* OR */
+      await parseDocument(document.querySelector("main"), "fragment-id", /* ...element */);
+
+      await close("project-1");
+      await save();
+      await saveAs("project.zip", {/* RequestData */});
+      await saveAs("default.7z", { throwErrors: true }).catch(err => console.log(err));
+      await copyTo("/path/project-1", { projectId: "project-1", emptyDir: true, ignoreExtensions: true });
+      await appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
+      reset();
+
+      const app = android.cached(); // Current framework installed
+      android.setResolutionByDeviceName("Pixel Tablet");
+    });
+  </script>
+
+.. note:: Libraries :alt:`(squared.lib)` are not exported when using an ES bundle.
+
 .. code-block::
   :caption: Cross-origin support
 
@@ -180,3 +242,5 @@ Example usage
       expires: "1h"
     }
   );
+
+.. [#] https://caniuse.com/import-maps

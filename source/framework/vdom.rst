@@ -8,52 +8,6 @@ Example usage
 =============
 
 .. code-block:: html
-  :caption: Import maps [#]_
-
-  <script type="importmap">
-    {
-      "imports": {
-        "squared/": "/js/squared/"
-      }
-    }
-  </script>
-  <script type="module">
-    import { userSettings, fromElement, getElementById, querySelectorAll } from 'squared/vdom.js';
-    import { parseColor } from 'squared/lib/css.js';
-
-    const blue = parseColor("#0000FF");
-
-    document.addEventListener("DOMContentLoaded", async () => {
-      userSettings({ pierceShadowRoot: true, adaptStyleMap: true }); // Optional
-
-      const elements = await querySelectorAll("*");
-      /* OR */
-      const element = await fromElement(document.body);
-      /* OR */
-      const elements = await getElementById("content-id").querySelectorAll("*");
-    });
-  </script>
-
-.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
-
-.. code-block:: html
-  :caption: ESM
-
-  <script type="module">
-    import { userSettings, fromElement, getElementById, querySelectorAll } from '/dist/vdom.mjs';
-
-    document.addEventListener("DOMContentLoaded", async () => {
-      userSettings({ pierceShadowRoot: true, adaptStyleMap: true }); // Optional
-
-      const elements = await querySelectorAll("*");
-      /* OR */
-      const element = await fromElement(document.body);
-      /* OR */
-      const elements = await getElementById("content-id").querySelectorAll("*");
-    });
-  </script>
-
-.. code-block:: html
   :caption: base-dom
 
   <script src="/dist/squared.min.js"></script>
@@ -87,5 +41,55 @@ Example usage
   </script>
 
 .. tip:: Synchronous is the recommended way to query when you are not concerned with image dimensions.
+
+.. code-block:: html
+  :caption: Import maps [#]_
+
+  <script type="importmap">
+    {
+      "imports": {
+        "squared/": "/js/squared/"
+      }
+    }
+  </script>
+  <script type="module">
+    import { fromElement, getElementById, querySelectorAll, userSettings } from "squared/vdom.js";
+    import { parseColor } from "squared/lib/css.js";
+
+    const blue = parseColor("#0000FF");
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ pierceShadowRoot: true, adaptStyleMap: true }); // Optional
+
+      const elements = await querySelectorAll("*");
+      /* OR */
+      const element = await fromElement(document.body);
+      /* OR */
+      const elements = await getElementById("content-id").querySelectorAll("*");
+    });
+  </script>
+
+.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
+
+.. code-block:: html
+  :caption: ESM
+
+  <script type="module">
+    import { vdom, fromElement, getElementById, querySelectorAll, userSettings } from "/dist/vdom.mjs";
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ pierceShadowRoot: true, adaptStyleMap: true }); // Optional
+
+      const elements = await querySelectorAll("*");
+      /* OR */
+      const element = await fromElement(document.body);
+      /* OR */
+      const elements = await getElementById("content-id").querySelectorAll("*");
+
+      const app = vdom.cached(); // Current framework installed
+    });
+  </script>
+
+.. note:: Libraries :alt:`(squared.lib)` are not exported when using an ES bundle.
 
 .. [#] https://caniuse.com/import-maps

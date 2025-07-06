@@ -4,16 +4,18 @@ vdom
 
 .. module:: vdom
 
-.. function:: userSettings(value)
+.. function:: userSettings(value[, loadName, saveName])
 
   Applies object values to |Application| property ``userSettings``. (ESM only)
 
   :param value: PlainObject with settings overrides
   :type value: |UserSettings|
+  :param string loadName: Restore previously saved settings from local storage
+  :param string saveName: Store current settings into local storage
 
   Usage::
 
-    import { userSettings } from 'squared/vdom.js';
+    import { userSettings } from "squared/vdom.js";
 
     userSettings({
       pierceShadowRoot: true,
