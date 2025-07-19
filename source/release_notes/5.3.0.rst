@@ -205,9 +205,9 @@ ADDED
 
   interface ExtensionComposeViewElement {
       selector?: string;
-      android?: Record<string, string>;
-      app?: Record<string, string>;
-      tools?: Record<string, string>;
+      android?: StringMap;
+      app?: StringMap;
+      tools?: StringMap;
   }
 
 .. code-block::
@@ -303,9 +303,9 @@ CHANGED
 
   interface ExtensionComposeViewElement {
       selector?: string;
-      android?: Record<string, string>;
-      app?: Record<string, string>;
-      tools?: Record<string, string>;
+      android?: StringMap;
+      app?: StringMap;
+      tools?: StringMap;
   }
 
   class Resource {

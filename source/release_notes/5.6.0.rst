@@ -34,8 +34,17 @@ ADDED
 .. code-block::
   :caption: squared.base
 
+  interface RequestData {
+      auth?: unknown;
+      authProvider?: string;
+  }
+
   class File {
       addLocalAddress(hostname: AddressValue): void;
+  }
+
+  class NodeUI {
+      get boundingRegion(): BoxRectDimension;
   }
 
 .. code-block::
@@ -62,6 +71,12 @@ ADDED
   /* css */
 
   function prefetch(type: "css" | "javascript" | "image" | "svg", ...targets: [boolean?, ...unknown[]]): Promise<PrefetchItem[]>;
+
+  /* dom */
+
+  interface CreateElementOptions {
+      prepend?: boolean;
+  }
 
   /* internal */
 
