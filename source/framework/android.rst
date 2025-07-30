@@ -122,7 +122,11 @@ Example usage
   <script type="importmap">
     {
       "imports": {
-        "squared/": "/js/squared/"
+        "squared/": "https://unpkg.com/squared@5.6.0/"
+        /* OR */
+        "squared/": "/node_modules/squared/" // NodeJS
+        /* OR */
+        "squared/": "/dist/esm/" // Docker
       }
     }
   </script>
@@ -171,7 +175,8 @@ Example usage
       await appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
       reset();
 
-      const app = android.cached(); // Current framework installed
+      const { base, extensions } = android; // Class namespaces
+      const { application } = android.cached(); // Application instance
       android.setResolutionByDeviceName("Pixel Tablet");
     });
   </script>

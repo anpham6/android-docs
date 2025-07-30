@@ -78,6 +78,8 @@ ADDED
       prepend?: boolean;
   }
 
+  function escapeHtml(value: string, ampersand?: boolean): string;
+
   /* internal */
 
   function isDocumentReady(): number;

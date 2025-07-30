@@ -32,7 +32,11 @@ Example usage
   <script type="importmap">
     {
       "imports": {
-        "squared/": "/js/squared/"
+        "squared/": "https://unpkg.com/squared@5.6.0/"
+        /* OR */
+        "squared/": "/node_modules/squared/" // NodeJS
+        /* OR */
+        "squared/": "/dist/esm/" // Docker
       }
     }
   </script>
@@ -74,7 +78,7 @@ Example usage
       /* OR */
       await appendTo("/path/to/android.7z", {/* RequestData */});
 
-      const app = chrome.cached(); // Current framework installed
+      const { application } = chrome.cached(); // Application instance
       chrome.lib.constant.UUID.JS = '16'; // Length of auto-generated filenames
     });
   </script>

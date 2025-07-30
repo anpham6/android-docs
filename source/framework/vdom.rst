@@ -48,7 +48,11 @@ Example usage
   <script type="importmap">
     {
       "imports": {
-        "squared/": "/js/squared/"
+        "squared/": "https://unpkg.com/squared@5.6.0/"
+        /* OR */
+        "squared/": "/node_modules/squared/" // NodeJS
+        /* OR */
+        "squared/": "/dist/esm/" // Docker
       }
     }
   </script>
@@ -86,7 +90,7 @@ Example usage
       /* OR */
       const elements = await getElementById("content-id").querySelectorAll("*");
 
-      const app = vdom.cached(); // Current framework installed
+      const { application } = vdom.cached(); // Application instance
     });
   </script>
 
