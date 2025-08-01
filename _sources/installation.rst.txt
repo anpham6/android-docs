@@ -51,7 +51,7 @@ GitHub
   git checkout master
 
   npm install
-  npm run build:all
+  npm run prod
 
   cd ..
 
@@ -69,11 +69,11 @@ GitHub
   node serve.js
 
 .. code-block::
-  :caption: dev - 5.5.0
+  :caption: dev - 5.6.0
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.5.0
+  git checkout 5.6.0
 
   npm install
   npm run build:dev
@@ -82,7 +82,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 3.5.0
+  git checkout 4.0.0
 
   npm install
   npm run dev
@@ -165,7 +165,7 @@ Docker
 GitHub Codespaces
 -----------------
 
-- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.4.0&repo=162848626&skip_quickstart=true>`_
+- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.5.0&repo=162848626&skip_quickstart=true>`_
 
 .. code-block::
 

@@ -26,6 +26,65 @@ Example usage
     });
   </script>
 
+.. code-block:: html
+  :caption: Import maps [#]_
+
+  <script type="importmap">
+    {
+      "imports": {
+        "squared/": "https://unpkg.com/squared@5.6.0/"
+        /* OR */
+        "squared/": "/node_modules/squared/" // NodeJS
+        /* OR */
+        "squared/": "/dist/esm/" // Docker
+      }
+    }
+  </script>
+  <script type="module">
+    import { appendTo, copyTo, save, saveAs, userSettings } from "squared/chrome.js";
+    import { parseColor } from "squared/lib/css.js";
+
+    const blue = parseColor("#0000FF");
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ preloadImages: true, preloadFonts: true }); // Optional
+
+      await save(); // Uses defaults from settings
+      /* OR */
+      await saveAs("android.zip", {/* RequestData */});
+      /* OR */
+      await copyTo("/path/project", {/* RequestData */});
+      /* OR */
+      await appendTo("/path/to/android.7z", {/* RequestData */});
+    });
+  </script>
+
+.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
+
+.. code-block:: html
+  :caption: ESM
+
+  <script type="module">
+    import { chrome, appendTo, copyTo, save, saveAs, userSettings } from "/dist/chrome.mjs";
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      userSettings({ preloadImages: true, preloadFonts: true }); // Optional
+
+      await save(); // Uses defaults from settings
+      /* OR */
+      await saveAs("android.zip", {/* RequestData */});
+      /* OR */
+      await copyTo("/path/project", {/* RequestData */});
+      /* OR */
+      await appendTo("/path/to/android.7z", {/* RequestData */});
+
+      const { application } = chrome.cached(); // Application instance
+      chrome.lib.constant.UUID.JS = '16'; // Length of auto-generated filenames
+    });
+  </script>
+
+.. note:: Libraries :alt:`(squared.lib)` are not exported when using an ES bundle.
+
 .. code-block::
   :caption: Observe element
 
@@ -41,3 +100,5 @@ Example usage
       characterDataOldValue: true
     });
   });
+
+.. [#] https://caniuse.com/import-maps

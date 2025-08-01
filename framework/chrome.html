@@ -114,8 +114,73 @@
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Observe element</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Import maps <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;importmap&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;imports&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;squared/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://unpkg.com/squared@5.6.0/&quot;</span>
+<span class="w">      </span><span class="cm">/* OR */</span>
+<span class="w">      </span><span class="s2">&quot;squared/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/node_modules/squared/&quot;</span><span class="w"> </span><span class="c1">// NodeJS</span>
+<span class="w">      </span><span class="cm">/* OR */</span>
+<span class="w">      </span><span class="s2">&quot;squared/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/dist/esm/&quot;</span><span class="w"> </span><span class="c1">// Docker</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">appendTo</span><span class="p">,</span><span class="w"> </span><span class="nx">copyTo</span><span class="p">,</span><span class="w"> </span><span class="nx">save</span><span class="p">,</span><span class="w"> </span><span class="nx">saveAs</span><span class="p">,</span><span class="w"> </span><span class="nx">userSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;squared/chrome.js&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">parseColor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;squared/lib/css.js&quot;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parseColor</span><span class="p">(</span><span class="s2">&quot;#0000FF&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">userSettings</span><span class="p">({</span><span class="w"> </span><span class="nx">preloadImages</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">preloadFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Optional</span>
+
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">save</span><span class="p">();</span><span class="w"> </span><span class="c1">// Uses defaults from settings</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* RequestData */</span><span class="p">});</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* RequestData */</span><span class="p">});</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;/path/to/android.7z&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* RequestData */</span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Import maps is part of <a class="reference external" href="https://webstatus.dev/features/import-maps">Baseline 2023</a> and is <em class="target">Newly available</em>.</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">ESM</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chrome</span><span class="p">,</span><span class="w"> </span><span class="nx">appendTo</span><span class="p">,</span><span class="w"> </span><span class="nx">copyTo</span><span class="p">,</span><span class="w"> </span><span class="nx">save</span><span class="p">,</span><span class="w"> </span><span class="nx">saveAs</span><span class="p">,</span><span class="w"> </span><span class="nx">userSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;/dist/chrome.mjs&quot;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">userSettings</span><span class="p">({</span><span class="w"> </span><span class="nx">preloadImages</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">preloadFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Optional</span>
+
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">save</span><span class="p">();</span><span class="w"> </span><span class="c1">// Uses defaults from settings</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* RequestData */</span><span class="p">});</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* RequestData */</span><span class="p">});</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;/path/to/android.7z&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* RequestData */</span><span class="p">});</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">chrome</span><span class="p">.</span><span class="nx">cached</span><span class="p">();</span><span class="w"> </span><span class="c1">// Application instance</span>
+<span class="w">    </span><span class="nx">chrome</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">constant</span><span class="p">.</span><span class="nx">UUID</span><span class="p">.</span><span class="nx">JS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;16&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Length of auto-generated filenames</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Libraries <em class="alt">(squared.lib)</em> are not exported when using an ES bundle.</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Observe element</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useOriginalHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">observe</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observe</span><span class="p">();</span><span class="w"> </span><span class="c1">// Watch all events</span>
 <span class="w">  </span><span class="cm">/* OR */</span>
@@ -131,6 +196,12 @@
 </pre></div>
 </div>
 </div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://caniuse.com/import-maps">https://caniuse.com/import-maps</a></p>
+</aside>
+</aside>
 </section>
 </section>
 

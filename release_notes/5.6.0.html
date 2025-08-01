@@ -124,7 +124,24 @@
 <section class="release-notes" id="added">
 <h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">RequestData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">auth?</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">authProvider?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">File</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">addLocalAddress</span><span class="p">(</span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="kt">AddressValue</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">boundingRegion</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxRectDimension</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">SvgBuild</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">findViewport</span><span class="p">(</span><span class="nx">object</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgElement</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Svg</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w"> </span><span class="c1">// SvgContainer.getViewport (deprecated)</span>
 <span class="p">}</span>
@@ -142,8 +159,31 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">prefetch</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;css&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;javascript&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;image&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">targets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="kt">boolean</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">unknown</span><span class="p">[]])</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">PrefetchItem</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="cm">/* dom */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">CreateElementOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">prepend?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">escapeHtml</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">ampersand?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="cm">/* internal */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">isDocumentReady</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">incrementDocumentReady</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">decrementDocumentReady</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">checkSocketTimeout</span><span class="p">(</span><span class="nx">socket</span><span class="o">:</span><span class="w"> </span><span class="kt">WebSocket</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">,</span><span class="w"> </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">socketKey?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">WebSocketResponse</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">MATERIAL_TAGNAME</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">EDIT_LIST</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">};</span>
@@ -157,8 +197,8 @@
 </section>
 <section class="release-notes" id="changed">
 <h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ManifestData</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">application?</span><span class="o">:</span><span class="w"> </span><span class="kt">PlainObject</span><span class="p">;</span><span class="w"> </span><span class="c1">// All attributes are supported (e.g. &quot;android:description&quot; | description)</span>
 <span class="p">}</span>
@@ -174,8 +214,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">types/chrome/base/index.d.ts</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">types/chrome/base/index.d.ts</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">FileActionOptions</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// types/chrome/options.d.ts</span>
 <span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">FileCopyingOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
 <span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">FileArchivingOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
@@ -185,8 +225,8 @@
 </section>
 <section class="release-notes" id="deleted">
 <h2>DELETED<a class="headerlink" href="#deleted" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">types/android/extension.d.ts</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">types/android/extension.d.ts</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ExtensionListOptions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">ordinalFontSizeAdjust</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modifiable</span>
 <span class="w">    </span><span class="nx">ordinalPaddingLeft</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>

@@ -14,7 +14,8 @@ Interface
 
 .. highlight:: typescript
 
-::
+.. code-block::
+  :emphasize-lines: 34-35
 
   interface FileActionOptions {
       pid?: number;
@@ -49,6 +50,9 @@ Interface
       watch?: boolean;
       cache?: boolean | PlainObject;
       log?: boolean | string | string[] | LogOptions;
+      auth?: unknown;
+      authProvider?: string;
+      /* RequestBase */
       baseUrl?: string;
       priority?: number;
       broadcastId?: string | string[];
@@ -69,6 +73,13 @@ Interface
       format?: string;
       copyTo?: string;
   }
+
+Changelog
+---------
+
+.. versionadded:: 5.6.0
+
+  - *RequestData* properties **auth** | **authProvider** for external authorization :alt:`(non-JWT)` was created.
 
 Android
 =======

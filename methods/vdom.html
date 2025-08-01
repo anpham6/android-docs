@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>chrome &mdash; squared 5.5.2 documentation</title>
+  <title>vdom &mdash; squared 5.5.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="vdom" href="vdom.html" />
-    <link rel="prev" title="android" href="android.html" /> 
+    <link rel="next" title="Document" href="../document/index.html" />
+    <link rel="prev" title="chrome" href="chrome.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,11 +55,11 @@
 <li class="toctree-l2"><a class="reference internal" href="interface.html">Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="squared.html">squared</a></li>
 <li class="toctree-l2"><a class="reference internal" href="android.html">android</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">chrome</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#chrome.removeObserver"><code class="docutils literal notranslate"><span class="pre">removeObserver()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="chrome.html">chrome</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">vdom</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vdom.userSettings"><code class="docutils literal notranslate"><span class="pre">userSettings()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="vdom.html">vdom</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
@@ -84,7 +84,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Methods</a></li>
-      <li class="breadcrumb-item active">chrome</li>
+      <li class="breadcrumb-item active">vdom</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -93,31 +93,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-chrome">
-<span id="chrome"></span><h1>chrome<a class="headerlink" href="#module-chrome" title="Link to this heading"></a></h1>
+  <section id="module-vdom">
+<span id="vdom"></span><h1>vdom<a class="headerlink" href="#module-vdom" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="chrome.removeObserver">
-<span class="sig-prename descclassname"><span class="pre">chrome.</span></span><span class="sig-name descname"><span class="pre">removeObserver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrome.removeObserver" title="Link to this definition"></a></dt>
-<dd><p>Forwards the target element to <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> which will stop it from being monitored for changes.</p>
+<dt class="sig sig-object py" id="vdom.userSettings">
+<span class="sig-prename descclassname"><span class="pre">vdom.</span></span><span class="sig-name descname"><span class="pre">userSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">loadName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveName</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#vdom.userSettings" title="Link to this definition"></a></dt>
+<dd><p>Applies object values to <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Application</span></a> property <code class="docutils literal notranslate"><span class="pre">userSettings</span></code>. (ESM only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>element</strong> – <em>HTMLElement</em> instance</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Success when observed</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>boolean</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference internal" href="../references.html#references-squared-base-application"><span class="std std-ref">UserSettings</span></a>) – PlainObject with settings overrides</p></li>
+<li><p><strong>loadName</strong> (<em>string</em>) – Restore previously saved settings from local storage</p></li>
+<li><p><strong>saveName</strong> (<em>string</em>) – Store current settings into local storage</p></li>
+</ul>
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">userSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;squared/vdom.js&quot;</span><span class="p">;</span>
 
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useOriginalHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">observe</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observe</span><span class="p">();</span>
+<span class="nx">userSettings</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">pierceShadowRoot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">adaptStyleMap</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">});</span>
-
-<span class="nx">chrome</span><span class="p">.</span><span class="nx">removeObserver</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -128,8 +125,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="android.html" class="btn btn-neutral float-left" title="android" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="vdom.html" class="btn btn-neutral float-right" title="vdom" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="chrome.html" class="btn btn-neutral float-left" title="chrome" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../document/index.html" class="btn btn-neutral float-right" title="Document" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

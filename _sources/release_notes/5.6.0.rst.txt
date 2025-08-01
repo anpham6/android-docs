@@ -32,6 +32,22 @@ ADDED
 =====
 
 .. code-block::
+  :caption: squared.base
+
+  interface RequestData {
+      auth?: unknown;
+      authProvider?: string;
+  }
+
+  class File {
+      addLocalAddress(hostname: AddressValue): void;
+  }
+
+  class NodeUI {
+      get boundingRegion(): BoxRectDimension;
+  }
+
+.. code-block::
   :caption: squared.svg
 
   class SvgBuild {
@@ -48,6 +64,28 @@ ADDED
   declare var SvgSynchronize: <T extends Constructor<SvgView>>(Base: T) => T & SvgSynchronize;
   declare var SvgView: <T extends Constructor<SvgElement>>(Base: T) => T & SvgView;
   declare var SvgViewRect: <T extends Constructor<SvgBaseVal>>(Base: T) => T & SvgViewRect;
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  function prefetch(type: "css" | "javascript" | "image" | "svg", ...targets: [boolean?, ...unknown[]]): Promise<PrefetchItem[]>;
+
+  /* dom */
+
+  interface CreateElementOptions {
+      prepend?: boolean;
+  }
+
+  function escapeHtml(value: string, ampersand?: boolean): string;
+
+  /* internal */
+
+  function isDocumentReady(): number;
+  function incrementDocumentReady(): void;
+  function decrementDocumentReady(): void;
+  function checkSocketTimeout(socket: WebSocket, response: unknown, socketId: string, socketKey?: string): response is WebSocketResponse;
 
 .. code-block::
   :caption: android.lib.constant

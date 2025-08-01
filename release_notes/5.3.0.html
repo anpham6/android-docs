@@ -300,9 +300,9 @@
 <div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">selector?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">android?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">app?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">tools?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">android?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">app?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">tools?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -402,9 +402,9 @@
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ExtensionComposeViewElement</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">selector?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">android?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">app?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">tools?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">android?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">app?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">tools?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>

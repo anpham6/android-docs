@@ -93,17 +93,17 @@
              
   <section id="vdom">
 <h1>VDOM<a class="headerlink" href="#vdom" title="Link to this heading"></a></h1>
-<p>A minimal framework that is primarily for debugging elements in <a class="reference external" href="https://developer.chrome.com/docs/devtools">DevTools</a> console. The <a class="reference internal" href="../browser.html#browser-download-vdom-lite"><span class="std std-ref">lite</span></a> version is half the download size <em class="alt">(55kb gzipped)</em> and was built for browser applications.</p>
+<p>A minimal framework that is primarily for debugging elements in <a class="reference external" href="https://developer.chrome.com/docs/devtools">DevTools</a> console. The <a class="reference internal" href="../browser.html#browser-download-vdom-lite"><span class="std std-ref">lite</span></a> variation is 25% smaller <em class="alt">(80kb gzipped)</em> and was built for web applications.</p>
 <section id="example-usage">
 <h2>Example usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">base-dom</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">base-dom</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/dist/squared.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/dist/squared.base-dom.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/dist/vdom.framework.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">vdom</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="cm">/* UserSettings */</span><span class="p">});</span>
+<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">vdom</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pierceShadowRoot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">adaptStyleMap</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
 
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="cm">/* OR */</span>
@@ -115,8 +115,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">lite</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">lite</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/dist/squared.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/dist/vdom-lite.framework.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -135,6 +135,72 @@
 <p class="admonition-title">Tip</p>
 <p>Synchronous is the recommended way to query when you are not concerned with image dimensions.</p>
 </div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Import maps <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;importmap&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;imports&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;squared/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://unpkg.com/squared@5.6.0/&quot;</span>
+<span class="w">      </span><span class="cm">/* OR */</span>
+<span class="w">      </span><span class="s2">&quot;squared/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/node_modules/squared/&quot;</span><span class="w"> </span><span class="c1">// NodeJS</span>
+<span class="w">      </span><span class="cm">/* OR */</span>
+<span class="w">      </span><span class="s2">&quot;squared/&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/dist/esm/&quot;</span><span class="w"> </span><span class="c1">// Docker</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fromElement</span><span class="p">,</span><span class="w"> </span><span class="nx">getElementById</span><span class="p">,</span><span class="w"> </span><span class="nx">querySelectorAll</span><span class="p">,</span><span class="w"> </span><span class="nx">userSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;squared/vdom.js&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">parseColor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;squared/lib/css.js&quot;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parseColor</span><span class="p">(</span><span class="s2">&quot;#0000FF&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">userSettings</span><span class="p">({</span><span class="w"> </span><span class="nx">pierceShadowRoot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">adaptStyleMap</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Optional</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">).</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Import maps is part of <a class="reference external" href="https://webstatus.dev/features/import-maps">Baseline 2023</a> and is <em class="target">Newly available</em>.</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">ESM</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">vdom</span><span class="p">,</span><span class="w"> </span><span class="nx">fromElement</span><span class="p">,</span><span class="w"> </span><span class="nx">getElementById</span><span class="p">,</span><span class="w"> </span><span class="nx">querySelectorAll</span><span class="p">,</span><span class="w"> </span><span class="nx">userSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;/dist/vdom.mjs&quot;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">userSettings</span><span class="p">({</span><span class="w"> </span><span class="nx">pierceShadowRoot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">adaptStyleMap</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Optional</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* OR */</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">).</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">vdom</span><span class="p">.</span><span class="nx">cached</span><span class="p">();</span><span class="w"> </span><span class="c1">// Application instance</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Libraries <em class="alt">(squared.lib)</em> are not exported when using an ES bundle.</p>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://caniuse.com/import-maps">https://caniuse.com/import-maps</a></p>
+</aside>
+</aside>
 </section>
 </section>
 

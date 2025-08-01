@@ -29,8 +29,8 @@ squared
   :caption: Framework
 
   function setFramework(value: Application, options?: PlainObject, cache?: boolean): void;
-  function setFramework(value: Application, loadAs: string, cache?: boolean): void;
-  function setFramework(value: Application, options?: PlainObject, saveAs?: string, cache?: boolean): void;
+  function setFramework(value: Application, loadName: string, cache?: boolean): void;
+  function setFramework(value: Application, options?: PlainObject, saveName?: string, cache?: boolean): void;
 
   function extend(functionMap: PlainObject, framework?: number): void;
   function clear(): void;
@@ -42,7 +42,8 @@ squared
 
   function add(...values: ExtensionRequestObject[]): number;
   function remove(...values: ExtensionRequest[]): number;
-  function get(...values: string[]): Extension | Extension[] | undefined;
+  function get(value: string): Extension | undefined;
+  function get(...values: string[]): Extension[];
   function attr(name: ExtensionRequest, attrName: string, value?: unknown): unknown;
 
   function apply(value: ExtensionRequest, saveAs: string): boolean;
@@ -125,6 +126,13 @@ squared
 
   function fromNode(node: Node, sync: true, cache?: boolean): Node | null;
   function fromNode(node: Node, sync?: false, cache?: boolean): Promise<Node | null>;
+
+.. rst-class:: section-caption
+
+.. code-block::
+  :caption: ESM
+
+  function userSettings(value: PlainObject, loadName?: string, saveName?: string): void;
 
 .. rst-class:: section-caption
 

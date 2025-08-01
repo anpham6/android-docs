@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 96,197-198,226-227,277,303-304
+  :emphasize-lines: 197-198,231
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -237,6 +237,7 @@ Interface
       get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
       get outerRegion(): BoxRectDimension;
+      get boundingRegion(): BoxRectDimension;
       set locales(value);
       get locales(): ResourceIntlLocales;
   }
@@ -319,6 +320,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.6.0
+
+  - *NodeUI* property getter **boundingRegion** for child outer bounds was created.
 
 .. versionadded:: 5.5.2
 
