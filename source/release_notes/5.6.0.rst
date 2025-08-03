@@ -32,7 +32,7 @@ ADDED
 =====
 
 .. code-block::
-  :caption: squared.base
+  :caption: squared.base [#]_
 
   interface RequestData {
       auth?: unknown;
@@ -67,6 +67,12 @@ ADDED
 
 .. code-block::
   :caption: squared.lib
+
+  /* constant */
+
+  const enum USER_AGENT {
+      FIREFOX_ANDROID = 256
+  }
 
   /* css */
 
@@ -139,3 +145,5 @@ DELETED
       ordinalPaddingLeft: number;
       imagePaddingRight: number;
   }
+
+.. [#] RequestData: :external+chrome:ref:`auth | authProvider <build-external-authentication>`
