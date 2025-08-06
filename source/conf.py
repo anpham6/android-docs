@@ -52,7 +52,7 @@ rst_prolog = """
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/004.png)',
+  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/005.png)',
   'navigation_depth': 3,
   'includehidden': False,
 }
@@ -61,7 +61,8 @@ html_extra_path = [
   '_static/places/001.png',
   '_static/places/002.png',
   '_static/places/003.png',
-  '_static/places/004.png'
+  '_static/places/004.png',
+  '_static/places/005.png'
 ]
 html_css_files = ['role.css', 'content.css', 'highlight-abap.css', 'override.css']
 html_context = {
