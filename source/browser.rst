@@ -51,6 +51,43 @@ Usable combinations: 1-2-4 + 1-2-4-5 + 1-2-3-4-5 + 1-vdom-lite
 
 File bundles for common combinations are available in the ``/dist/bundles`` folder and do not require a call to :target:`setFramework`.
 
+ES Modules
+==========
+
+Bundle
+------
+
+A single file with no exports outside of the core methods.
+
+- https://unpkg.com/squared/dist/android.mjs
+- https://unpkg.com/squared/dist/chrome.mjs
+- https://unpkg.com/squared/dist/vdom.mjs
+
+.. code-block:: html
+  :caption: ES2021
+
+  <script type="module">
+    import { parseDocument } from "https://unpkg.com/squared/dist/android.mjs";
+  <script>
+
+Import maps
+-----------
+
+Possibly hundreds of files with all exports and core methods.
+
+- https://unpkg.com/squared/android.js
+- https://unpkg.com/squared/chrome.js
+- https://unpkg.com/squared/vdom.js
+
+.. code-block:: html
+  :caption: ES2021
+
+  <script type="module">
+    import { parseDocument } from "https://unpkg.com/squared/android.js";
+  <script>
+
+.. tip:: Fastest and easiest to use is the traditional :alt:`(UMD)` non-modular namespaced global reference :target:`squared`. ESM is more appropriately used when bundled into one application :alt:`(web)` and not used with import maps :alt:`(development)`.
+
 .. [#] android | chrome | vdom
 .. [#] android
 .. [#] android | chrome | vdom | vdom-lite
