@@ -1,0 +1,21 @@
+=====
+5.7.0
+=====
+
+:right:`2025-10-18`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: android
+
+  /* squared.add("squared.grid") */
+
+  squared.settings.builtInExtensions = [
+      "squared.grid" // display: table (non-TABLE elements)
+  ];
