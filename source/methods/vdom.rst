@@ -4,7 +4,7 @@ vdom
 
 .. module:: vdom
 
-.. function:: userSettings(value[, loadName, saveName])
+.. function:: userSettings([value, loadName, saveName])
 
   Applies object values to |Application| property ``userSettings``. (ESM only)
 
@@ -21,6 +21,11 @@ vdom
       pierceShadowRoot: true,
       adaptStyleMap: true
     });
+
+  Alternate::
+
+    const settings = userSettings();
+    settings.pierceShadowRoot = true;
 
 .. |Application| replace:: :ref:`Application <references-squared-base>`
 .. |UserSettings| replace:: :ref:`UserSettings <references-squared-base-application>`
