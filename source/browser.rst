@@ -57,7 +57,7 @@ ES Modules
 Bundle
 ------
 
-A single file with no exports outside of the core methods.
+A single file with no exports outside of the core methods. [#esm]_
 
 - https://unpkg.com/squared/dist/android.mjs
 - https://unpkg.com/squared/dist/chrome.mjs
@@ -73,7 +73,7 @@ A single file with no exports outside of the core methods.
 Import maps
 -----------
 
-Possibly hundreds of files with all exports and core methods.
+Possibly hundreds of files with all exports and core methods. [#esm]_
 
 - https://unpkg.com/squared/android.js
 - https://unpkg.com/squared/chrome.js
@@ -86,8 +86,9 @@ Possibly hundreds of files with all exports and core methods.
     import { parseDocument } from "https://unpkg.com/squared/android.js";
   <script>
 
-.. tip:: Fastest and easiest to use is the traditional :alt:`(UMD)` non-modular namespaced global reference :target:`squared`. ESM is more appropriately used when bundled into one application :alt:`(web)` and not used with import maps :alt:`(development)`.
+.. tip:: The traditional **UMD** namespaced global reference :target:`squared` is the fastest to load and execute. **ESM** is the modern alternative but has some drawbacks when used with larger libraries. It is not recommended to use :target:`import maps` outside of a development environment.
 
 .. [#] android | chrome | vdom
 .. [#] android
 .. [#] android | chrome | vdom | vdom-lite
+.. [#esm] Framework switching :func:`setFramework` is not supported.
