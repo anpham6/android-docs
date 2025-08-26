@@ -5,6 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
+  :emphasize-lines: 128
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -133,6 +134,7 @@ Interface
       get tagName(): string;
       get naturalChild(): boolean;
       get naturalElement(): boolean;
+      get customElement(): boolean;
       get parentElement(): Element | null;
       get htmlElement(): boolean;
       get styleElement(): boolean;
@@ -244,6 +246,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.7.0
+
+  - *Node* property getter **customElement** for user-defined HTML elements was created.
 
 .. versionadded:: 5.4.0
 

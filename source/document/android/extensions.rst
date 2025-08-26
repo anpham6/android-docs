@@ -165,6 +165,10 @@ Interface
 Changelog
 =========
 
+.. deprecated:: 5.7.0
+
+  - *ResourceGridOptions* as part of :target:`squared.grid` is not included with the default built-in extensions.
+
 .. versionadded:: 5.5.2
 
   - *ResourceStringsOptions* properties were created:

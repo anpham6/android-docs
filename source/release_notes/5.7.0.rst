@@ -14,8 +14,42 @@ BREAKING
 .. code-block::
   :caption: android
 
-  /* squared.add("squared.grid") */
-
   squared.settings.builtInExtensions = [
       "squared.grid" // display: table (non-TABLE elements)
   ];
+
+.. tip:: Legacy web pages can re-install the deprecated extension using the command :code:`squared.add("squared.grid")`. The modern approach is to use **Flexbox** or **CSS Grid**.
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      get customElement(): boolean;
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgUseSymbol {
+      readonly symbolElement: SVGSymbolElement | SVGSVGElement; // SVGSVGElement
+      constructor(element: SVGSymbolElement | SVGSVGElement, useElement: SVGUseElement);
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* dom */
+
+  function isCustomElement(element: Element): boolean;
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation")[]; // navigation
+  }
