@@ -148,7 +148,7 @@ Docker
   curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
 
   # NODE_TAG=latest
-  # RUBY_VERSION=2.4.0-3.4.0
+  # RUBY_VERSION=2.7.0-3.4.0
   # PIPE_FAIL={0,1}
   # DOCS=any
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
@@ -165,7 +165,7 @@ Docker
 GitHub Codespaces
 -----------------
 
-- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.5.0&repo=162848626&skip_quickstart=true>`_
+- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.6.0&repo=162848626&skip_quickstart=true>`_
 
 .. code-block::
 
@@ -178,7 +178,7 @@ GitHub Codespaces
   # OR
   rake emc:checkout:branch[0.12.0]    # once
   rake pir:checkout:branch[0.10.0]
-  rake express:checkout:branch[3.5.0]
+  rake express:checkout:branch[4.0.0]
   rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
