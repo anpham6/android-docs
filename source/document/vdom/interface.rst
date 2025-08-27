@@ -5,6 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
+  :emphasize-lines: 31-32
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -36,7 +37,8 @@ Interface
   class Node extends Container<Node> {
       static readonly TEXT_STYLE: string[];
       static boxValueOf(node: Node, attr: BoxModelAttr, options?: CssUnitOptions): number;
-      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap): CssStyleMap;
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode: string | undefined, output: CssStyleMap | undefined, elementData: ElementData | undefined): CssStyleMap;
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, override?: boolean | ElementData): CssStyleMap;
       readonly id: number;
       readonly sessionId: string;
       setParent(parent: Node | null, depth?: number, index?: number): void;
@@ -244,6 +246,11 @@ Interface
 
 Changelog
 =========
+
+.. versionchanged:: 5.6.4
+
+  - *Node* static method **sanitizeCss** argument :target:`elementData` as :alt:`ElementData` was implemented.
+  - *Node* static method **sanitizeCss** argument :target:`override` as :alt:`boolean` was implemented.
 
 .. versionadded:: 5.4.0
 

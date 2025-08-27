@@ -132,6 +132,7 @@ squared
 .. code-block::
   :caption: ESM
 
+  function userSettings(): PlainObject;
   function userSettings(value: PlainObject, loadName?: string, saveName?: string): void;
 
 .. rst-class:: section-caption

@@ -184,7 +184,7 @@ Changelog
 
 .. versionadded:: 5.2.1
 
-  - *ResourceSvgOptions* property **dependencyVectorDrawable** as :alt:`string` was created.
+  - *ResourceSvgOptions* property **dependencyVectorDrawable** for the Java implementation as :alt:`seekable | animated` was created.
 
 .. versionadded:: 5.2.0
 

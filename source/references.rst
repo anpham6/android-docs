@@ -40,6 +40,7 @@ https://unpkg.com/squared/types/dom.d.ts
   | `PseudoElt <search.html?q=PseudoElt>`_
   | `PseudoStyleElt <search.html?q=PseudoStyleElt>`_
   | `PositionAttr <search.html?q=PositionAttr>`_
+  | `SrcElement <search.html?q=SrcElement>`_
 
 .. _references-squared-main:
 .. rst-class:: block-list
