@@ -1,0 +1,36 @@
+=====
+5.6.4
+=====
+
+:right:`2025-9-2`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      hasVisibleStyle(border?: PositionAttr): boolean;
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, elementData?: ElementData | null): CssStyleMap; // elementData
+  }
+
+.. code-block::
+  :caption: squared.lib.dom
+
+  function getSrcValue(element: SrcElement | HTMLVideoElement | HTMLLinkElement | SVGUseElement | SVGImageElement, image?: boolean): string | null; // HTMLLinkElement
