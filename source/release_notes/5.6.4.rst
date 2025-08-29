@@ -27,7 +27,8 @@ CHANGED
   :caption: squared.base
 
   class Node {
-      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, elementData?: ElementData | null): CssStyleMap; // elementData
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode: string | undefined, output: CssStyleMap | undefined, elementData: ElementData | undefined): CssStyleMap; // elementData
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, override?: boolean | ElementData): CssStyleMap; // override
   }
 
 .. code-block::
