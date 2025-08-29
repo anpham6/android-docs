@@ -26,6 +26,11 @@ ADDED
 =====
 
 .. code-block::
+  :caption: squared
+
+  function attr(name: ExtensionRequest<Node>, attrName: string, value?: unknown, append?: boolean): unknown; // append
+
+.. code-block::
   :caption: squared.base
 
   class Node {
@@ -52,4 +57,13 @@ ADDED
 
   interface UserResourceSettingsUI {
       createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation")[]; // navigation
+  }
+
+.. code-block::
+  :caption: android.extensions
+
+  /* <style name="Text_P"> -> <style name="Text_P" parent="TextAppearance.AppCompat"> */
+
+  interface ResourceStylesOptions {
+      inheritFromParent: StringMap; // squared.attr("android.resource.styles", "inheritFromParent", { "Text_P": "TextAppearance.AppCompat" })
   }

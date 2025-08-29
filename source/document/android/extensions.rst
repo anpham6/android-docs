@@ -138,6 +138,13 @@ Interface
   }
 
 .. code-block::
+  :caption: android.resource.styles
+
+  interface ResourceStylesOptions {
+      inheritFromParent: StringMap;
+  }
+
+.. code-block::
   :caption: android.resource.svg
 
   interface ResourceSvgOptions {
@@ -165,9 +172,13 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.7.0
+
+  - *ResourceStylesOptions* property **inheritFromParent** for directly assigning to the parent style attribute as :alt:`StringMap` was created.
+
 .. deprecated:: 5.7.0
 
-  - *ResourceGridOptions* as part of :target:`squared.grid` is not included with the default built-in extensions.
+  - *ResourceGridOptions* is not usable by default as part of the :target:`squared.grid` built-in extension deprecation.
 
 .. versionadded:: 5.5.2
 

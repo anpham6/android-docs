@@ -264,13 +264,14 @@ squared
     drawer.options.navigationView.android = { fitsSystemWindows: "true" };
     menu.project.set(document.getElementId("child-item-id"), await fetch("http://localhost:3000/drawer/menu.json"), "project-1" /* optional */); // Add project data
 
-.. function:: attr(target, name[, value])
+.. function:: attr(target, name[, value, append])
 
   Set or get extension options. **typeof** is enforced and will only set existing attributes.
 
   :param target: Name or control of extension
   :param string name: Name of attribute in |Extension|.options
   :param value: Any value of an existing attribute
+  :param boolean append: Any value of an existing attribute
   :returns: Resultant value of attempted action
   :rtype: unknown
 
@@ -282,6 +283,10 @@ squared
     squared.attr("android.substitute", "viewAttributes", items.concat(["hint", "buttonTint"]));
 
     squared.attr("android.substitute", "attributeMapping", { "android:src": "app:srcCompat", "icon": "navigationIcon" }); // Set only and does not merge
+
+  Alternate::
+
+    squared.attr("android.resource.styles", "inheritFromParent", { "Text_P": "TextAppearance.AppCompat" }, true); // Assigns objects and concats arrays
 
 .. function:: apply(target, options[, setting])
 

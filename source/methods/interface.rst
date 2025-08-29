@@ -44,7 +44,7 @@ squared
   function remove(...values: ExtensionRequest[]): number;
   function get(value: string): Extension | undefined;
   function get(...values: string[]): Extension[];
-  function attr(name: ExtensionRequest, attrName: string, value?: unknown): unknown;
+  function attr(name: ExtensionRequest, attrName: string, value?: unknown, append?: boolean): unknown;
 
   function apply(value: ExtensionRequest, saveAs: string): boolean;
   function apply(value: ExtensionRequest, options: PlainObject, saveAs?: string): boolean;
