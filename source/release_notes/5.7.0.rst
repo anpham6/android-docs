@@ -34,6 +34,9 @@ ADDED
   :caption: squared.base
 
   class Node {
+      isSibling(type: "first" | "last" | "only", attr: NodeChildrenAttr): boolean;
+      isSibling(type: "first" | "last" | "only", filter: IteratorPredicate<Node, unknown>): boolean;
+      isSibling(type: "first" | "last" | "only", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
       get customElement(): boolean;
   }
 
@@ -47,6 +50,16 @@ ADDED
 
 .. code-block::
   :caption: squared.lib
+
+  /* constant */
+
+  const enum CSS_POSITION {
+      NONE = 0,
+      TOP = 1,
+      RIGHT = 2,
+      BOTTOM = 4,
+      LEFT = 8
+  }
 
   /* dom */
 
@@ -66,4 +79,14 @@ ADDED
 
   interface ResourceStylesOptions {
       inheritFromParent: StringMap; // squared.attr("android.resource.styles", "inheritFromParent", { "Text_P": "TextAppearance.AppCompat" })
+  }
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface OffsetXYOptions {
+      flags?: number;
   }

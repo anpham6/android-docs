@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 31-32,129
+  :emphasize-lines: 31-32,109-11,132
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -115,6 +115,9 @@ Interface
       descendantsOne(value?: string | DescendParameterOptions<Node>, options?: DescendParameterOptions<Node>): Node | undefined;
       siblings(value?: string | SiblingsParameterOptions<Node>, options?: SiblingsParameterOptions<Node>): Node[];
       siblingsOne(value?: string | SiblingsParameterOptions<Node>, options?: SiblingsParameterOptions<Node>): Node | undefined;
+      isSibling(type: "first" | "last" | "only", attr: NodeChildrenAttr): boolean;
+      isSibling(type: "first" | "last" | "only", filter: IteratorPredicate<Node, unknown>): boolean;
+      isSibling(type: "first" | "last" | "only", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
       boxOf(attr: keyof (BoxRect & Dimension)): number;
       valueOf(attr: CssStyleAttr, options?: CssInitialOptions): string;
       get documentRoot(): boolean;
@@ -251,6 +254,7 @@ Changelog
 .. versionadded:: 5.7.0
 
   - *Node* property getter **customElement** for user-defined HTML elements was created.
+  - *Node* method **isSibling** for first or last children position was created.
 
 .. versionchanged:: 5.6.4
 

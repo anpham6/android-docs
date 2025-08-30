@@ -71,6 +71,7 @@ https://unpkg.com/squared/types/base/squared.d.ts
   | `FileActionResult <search.html?q=FileActionResult>`_
   | `MutationCallback <search.html?q=MutationCallback>`_
   | `Node <search.html?q=Node>`_
+  | `NodeChildrenAttr <search.html?q=NodeChildrenAttr>`_
   | `NodeParentAttr <search.html?q=NodeParentAttr>`_
   | `RootElement <search.html?q=RootElement>`_
 
@@ -150,6 +151,7 @@ https://unpkg.com/squared/types/base/options.d.ts
   | `OffsetXYOptions <search.html?q=OffsetXYOptions>`_
   | `RemoveTryOptions <search.html?q=RemoveTryOptions>`_
   | `ReplaceTryOptions <search.html?q=ReplaceTryOptions>`_
+  | `SiblingOptions <search.html?q=SiblingOptions>`_
   | `SiblingsParameterOptions <search.html?q=SiblingsParameterOptions>`_
   | `TextHeightOptions <search.html?q=TextHeightOptions>`_
   | `TranslateOptions <search.html?q=TranslateOptions>`_
