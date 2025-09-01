@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 197-198,231
+  :emphasize-lines: 83,198-199,232
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -89,6 +89,7 @@ Interface
       setCacheState(attr: keyof CacheStateUI<NodeUI>, value: any): void;
       setCacheStyle(attr: keyof CssStyleMap, value: string): void;
       unsetStyle(...attrs: CssStyleAttr[]): void;
+      hasVisibleStyle(border?: PositionAttr): boolean;
       extractAttributes(depth?: number, replaceWith?: AnyObject): string;
       css(attr: CssStyleAttr, value?: string | null, cache?: boolean): string;
       cssSet(attr: CssStyleAttr, value: string, cache?: boolean): string;
@@ -320,6 +321,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.6.4
+
+  - *NodeUI* method **hasVisibleStyle** for detecting box edge styling was created.
 
 .. versionadded:: 5.6.0
 

@@ -51,6 +51,44 @@ Usable combinations: 1-2-4 + 1-2-4-5 + 1-2-3-4-5 + 1-vdom-lite
 
 File bundles for common combinations are available in the ``/dist/bundles`` folder and do not require a call to :target:`setFramework`.
 
+ES Modules
+==========
+
+Bundle
+------
+
+A single file with no exports outside of the core methods. [#esm]_
+
+- https://unpkg.com/squared/dist/android.mjs
+- https://unpkg.com/squared/dist/chrome.mjs
+- https://unpkg.com/squared/dist/vdom.mjs
+
+.. code-block:: html
+  :caption: ES2021
+
+  <script type="module">
+    import { parseDocument } from "https://unpkg.com/squared/dist/android.mjs";
+  <script>
+
+Import maps
+-----------
+
+Possibly hundreds of files with all exports and core methods. [#esm]_
+
+- https://unpkg.com/squared/android.js
+- https://unpkg.com/squared/chrome.js
+- https://unpkg.com/squared/vdom.js
+
+.. code-block:: html
+  :caption: ES2021
+
+  <script type="module">
+    import { parseDocument } from "https://unpkg.com/squared/android.js";
+  <script>
+
+.. tip:: The traditional **UMD** namespaced global reference :target:`squared` is the fastest to load and execute. **ESM** is the modern alternative but has some drawbacks when used with larger libraries. It is not recommended to use :target:`import maps` outside of a development environment.
+
 .. [#] android | chrome | vdom
 .. [#] android
 .. [#] android | chrome | vdom | vdom-lite
+.. [#esm] Framework switching :func:`setFramework` is not supported.

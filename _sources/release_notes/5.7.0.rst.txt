@@ -1,0 +1,92 @@
+=====
+5.7.0
+=====
+
+:right:`2025-10-18`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: android
+
+  squared.settings.builtInExtensions = [
+      "squared.grid" // display: table (non-TABLE elements)
+  ];
+
+.. tip:: Legacy web pages can re-install the deprecated extension using the command :code:`squared.add("squared.grid")`. The modern approach is to use **Flexbox** or **CSS Grid**.
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared
+
+  function attr(name: ExtensionRequest<Node>, attrName: string, value?: unknown, append?: boolean): unknown; // append
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      isSibling(type: "first" | "last", attr: NodeChildrenAttr): boolean;
+      isSibling(type: "first" | "last", filter: IteratorPredicate<Node, unknown>): boolean;
+      isSibling(type: "first" | "last", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
+      get customElement(): boolean;
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgUseSymbol {
+      readonly symbolElement: SVGSymbolElement | SVGSVGElement; // SVGSVGElement
+      constructor(element: SVGSymbolElement | SVGSVGElement, useElement: SVGUseElement);
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* constant */
+
+  const enum CSS_POSITION {
+      NONE = 0,
+      TOP = 1,
+      RIGHT = 2,
+      BOTTOM = 4,
+      LEFT = 8
+  }
+
+  /* dom */
+
+  function isCustomElement(element: Element): boolean;
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation")[]; // navigation
+  }
+
+.. code-block::
+  :caption: android.extensions
+
+  /* <style name="Text_P"> -> <style name="Text_P" parent="TextAppearance.AppCompat"> */
+
+  interface ResourceStylesOptions {
+      inheritFromParent: StringMap; // squared.attr("android.resource.styles", "inheritFromParent", { "Text_P": "TextAppearance.AppCompat" })
+  }
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface OffsetXYOptions {
+      flags?: number;
+  }

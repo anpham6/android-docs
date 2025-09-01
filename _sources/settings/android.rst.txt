@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 4-5
+  :emphasize-lines: 36
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -43,7 +43,7 @@ Interface
       manifestThemeName: string;
       manifestParentThemeName: string;
       createManifest: boolean;
-      createBuildDependencies: boolean | ("ktx" | "baseline-profile")[];
+      createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation")[];
       outputMainFileName: string;
       outputFragmentFileName: string;
       resolutionDPI?: number;
@@ -58,6 +58,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.7.0
+
+  - *UserResourceSettingsUI* property **createBuildDependencies** enum value :target:`navigation` for navigation graphs was implemented.
 
 .. versionadded:: 5.5.2
 
@@ -74,14 +78,14 @@ Changelog
 
 .. versionadded:: 5.3.0
 
-  - **ExtensionComposeViewElement** extends the :target:`ViewAttribute` interface.
+  - **ExtensionComposeViewElement** extends the interface :target:`ViewAttribute`.
   - *UserResourceSettingsUI* property **compressImages** accepts a :alt:`string` to use as an API key.
 
 .. versionadded:: 5.2.0
 
-  - *UserResourceSettingsUI* property **showAttributes** accepts a :alt:`object map` to globally replace layout attributes.
-  - *UserResourceSettingsUI* property **resourceSystemColors** for device color translation map was created.
-  - **ExtensionFragmentElement** extends the :target:`ViewAttribute` interface.
+  - *UserResourceSettingsUI* property **showAttributes** accepts a :alt:`ObjectMap` to globally replace layout attributes.
+  - *UserResourceSettingsUI* property **resourceSystemColors** for device color translation mapping was created.
+  - **ExtensionFragmentElement** extends the interface :target:`ViewAttribute`.
 
 Example usage
 =============
@@ -90,7 +94,7 @@ Example usage
   :caption: Customizable (project/all)
 
   squared.settings = {
-    targetAPI: 35,
+    targetAPI: 36,
     resolutionDPI: 160, // 320dpi = 2560x1600
     resolutionScreenWidth: 1280,
     resolutionScreenHeight: 800,
@@ -180,7 +184,7 @@ Example usage
     outputDirectory: "app/src/main",
     createManifest: false, // Update AndroidManifest.xml
     createBuildDependencies: false, // build.gradle
-    createBuildDependencies: ["ktx", "baseline-profile"]
+    createBuildDependencies: ["ktx", "baseline-profile", "navigation"]
   };
 
 .. code-block::
@@ -204,7 +208,7 @@ Example usage
       "squared.table",
       "squared.column",
       "squared.list",
-      "squared.grid",
+      "squared.grid", // Removed 5.7.0
       "squared.sprite",
       "squared.whitespace",
       "android.resource.background",

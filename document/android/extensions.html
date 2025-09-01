@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extensions &mdash; squared 5.5.2 documentation</title>
+  <title>Extensions &mdash; squared 5.6.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=3005adad"></script>
+      <script src="../../_static/documentation_options.js?v=0602f75f"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -254,7 +254,15 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-text">android.resource.svg</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">android.resource.styles</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ResourceStylesOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">inheritFromParent</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">android.resource.svg</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ResourceSvgOptions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">textAsImage</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">mergeClipPath</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -269,8 +277,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id15">
-<div class="code-block-caption"><span class="caption-text">jetpack.compose.view</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">jetpack.compose.view</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">JetpackComposeViewOptions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">viewAttributes</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">renderChildren</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -285,6 +293,18 @@
 </section>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.7.0: </span></p>
+<ul class="simple">
+<li><p><em>ResourceStylesOptions</em> property <strong>inheritFromParent</strong> for directly assigning to the parent style attribute as <em class="alt">StringMap</em> was created.</p></li>
+</ul>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 5.7.0: </span></p>
+<ul class="simple">
+<li><p><em>ResourceGridOptions</em> is not usable by default as part of the <em class="target">squared.grid</em> built-in extension deprecation.</p></li>
+</ul>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.5.2: </span></p>
 <ul>
@@ -312,7 +332,7 @@
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.2.1: </span></p>
 <ul class="simple">
-<li><p><em>ResourceSvgOptions</em> property <strong>dependencyVectorDrawable</strong> as <em class="alt">string</em> was created.</p></li>
+<li><p><em>ResourceSvgOptions</em> property <strong>dependencyVectorDrawable</strong> for the Java implementation as <em class="alt">seekable | animated</em> was created.</p></li>
 </ul>
 </div>
 <div class="versionadded">
@@ -363,8 +383,8 @@
 <section id="example-usage">
 <h2>Example usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
 <p>Some extensions have a few settings which can be configured. The default settings usually achieve the best overall rendering accuracy without noticeably affecting performance.</p>
-<div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-text">Create</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Create</span><a class="headerlink" href="#id17" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Sample</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">ExtensionUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">attributeName</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
@@ -385,8 +405,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id17">
-<div class="code-block-caption"><span class="caption-text">Install</span><a class="headerlink" href="#id17" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Install</span><a class="headerlink" href="#id18" title="Link to this code"></a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">sample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Sample</span><span class="p">(</span><span class="s2">&quot;widget.example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="cm">/* APP_FRAMEWORK.ANDROID */</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">tagNames</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;span&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;li&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">dependencies</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">});</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">sample</span><span class="p">);</span>
 <span class="c1">// OR</span>
@@ -394,14 +414,14 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-text">Configure</span><a class="headerlink" href="#id18" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Configure</span><a class="headerlink" href="#id19" title="Link to this code"></a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;widget.example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;floatPrecision&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// typeof is enforced and will only set existing attributes</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-text">Add project data</span><a class="headerlink" href="#id19" title="Link to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Add project data</span><a class="headerlink" href="#id20" title="Link to this code"></a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;widget.example.com&quot;</span><span class="p">);</span>
 
 <span class="nx">ext</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="o">?</span><span class="nx">id</span><span class="o">=</span><span class="mf">1</span><span class="p">));</span><span class="w"> </span><span class="c1">// Map interface with optional &quot;projectId&quot; argument</span>

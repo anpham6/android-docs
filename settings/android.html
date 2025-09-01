@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Android &mdash; squared 5.5.2 documentation</title>
+  <title>Android &mdash; squared 5.6.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=3005adad"></script>
+      <script src="../_static/documentation_options.js?v=0602f75f"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
 
           
           
@@ -75,7 +75,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">squared</a>
       </nav>
@@ -102,9 +102,9 @@
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">supportRTL</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="hll"><span class="w">    </span><span class="nx">supportUnicode</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">UnicodeFeatures</span><span class="p">[];</span>
-</span><span class="hll"><span class="w">    </span><span class="nx">defaultIntlLocales</span><span class="o">:</span><span class="w"> </span><span class="kt">ResourceIntlLocales</span><span class="p">;</span>
-</span><span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CompressFormat</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CompressFormat</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">supportUnicode</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">UnicodeFeatures</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">defaultIntlLocales</span><span class="o">:</span><span class="w"> </span><span class="kt">ResourceIntlLocales</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">compressImages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CompressFormat</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">CompressFormat</span><span class="p">[];</span>
 <span class="w">    </span><span class="nx">enabledMultiline</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledViewModel</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -134,8 +134,8 @@
 <span class="w">    </span><span class="nx">manifestThemeName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">manifestParentThemeName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">createManifest</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;ktx&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="p">)[];</span>
-<span class="w">    </span><span class="nx">outputMainFileName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;ktx&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;navigation&quot;</span><span class="p">)[];</span>
+</span><span class="w">    </span><span class="nx">outputMainFileName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">outputFragmentFileName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">resolutionDPI?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">resourceQualifier?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ResourceQualifierMap</span><span class="p">;</span>
@@ -151,6 +151,12 @@
 </section>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.7.0: </span></p>
+<ul class="simple">
+<li><p><em>UserResourceSettingsUI</em> property <strong>createBuildDependencies</strong> enum value <em class="target">navigation</em> for navigation graphs was implemented.</p></li>
+</ul>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.5.2: </span></p>
 <ul class="simple">
@@ -173,16 +179,16 @@
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.3.0: </span></p>
 <ul class="simple">
-<li><p><strong>ExtensionComposeViewElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
+<li><p><strong>ExtensionComposeViewElement</strong> extends the interface <em class="target">ViewAttribute</em>.</p></li>
 <li><p><em>UserResourceSettingsUI</em> property <strong>compressImages</strong> accepts a <em class="alt">string</em> to use as an API key.</p></li>
 </ul>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.2.0: </span></p>
 <ul class="simple">
-<li><p><em>UserResourceSettingsUI</em> property <strong>showAttributes</strong> accepts a <em class="alt">object map</em> to globally replace layout attributes.</p></li>
-<li><p><em>UserResourceSettingsUI</em> property <strong>resourceSystemColors</strong> for device color translation map was created.</p></li>
-<li><p><strong>ExtensionFragmentElement</strong> extends the <em class="target">ViewAttribute</em> interface.</p></li>
+<li><p><em>UserResourceSettingsUI</em> property <strong>showAttributes</strong> accepts a <em class="alt">ObjectMap</em> to globally replace layout attributes.</p></li>
+<li><p><em>UserResourceSettingsUI</em> property <strong>resourceSystemColors</strong> for device color translation mapping was created.</p></li>
+<li><p><strong>ExtensionFragmentElement</strong> extends the interface <em class="target">ViewAttribute</em>.</p></li>
 </ul>
 </div>
 </section>
@@ -191,7 +197,7 @@
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Customizable (project/all)</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">36</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">resolutionDPI</span><span class="o">:</span><span class="w"> </span><span class="mf">160</span><span class="p">,</span><span class="w"> </span><span class="c1">// 320dpi = 2560x1600</span>
 <span class="w">  </span><span class="nx">resolutionScreenWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">1280</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">resolutionScreenHeight</span><span class="o">:</span><span class="w"> </span><span class="mf">800</span><span class="p">,</span>
@@ -282,7 +288,7 @@
 <span class="w">  </span><span class="nx">outputDirectory</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app/src/main&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">createManifest</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Update AndroidManifest.xml</span>
 <span class="w">  </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// build.gradle</span>
-<span class="w">  </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ktx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ktx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;navigation&quot;</span><span class="p">]</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -307,7 +313,7 @@
 <span class="w">    </span><span class="s2">&quot;squared.table&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;squared.column&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;squared.list&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;squared.grid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squared.grid&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Removed 5.7.0</span>
 <span class="w">    </span><span class="s2">&quot;squared.sprite&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;squared.whitespace&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;android.resource.background&quot;</span><span class="p">,</span>

@@ -68,11 +68,11 @@ ADDED
   /* css */
 
   type CssPropertyKeywords = (
-      string
-      | [string, string, (string | string[])?]
-      | [string | string[], number[], boolean?]
-      | [string[], string?]
-      | [string[], string[], string?]
+      string |
+      [string, string, (string | string[])?] |
+      [string | string[], number[], boolean?] |
+      [string[], string?] |
+      [string[], string[], string?]
   )[];
 
   interface CssPropertyData {

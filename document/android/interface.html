@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interface &mdash; squared 5.5.2 documentation</title>
+  <title>Interface &mdash; squared 5.6.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
@@ -17,7 +17,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=3005adad"></script>
+      <script src="../../_static/documentation_options.js?v=0602f75f"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/004.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -191,7 +191,8 @@
 <span class="w">    </span><span class="nx">setCacheState</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">keyof</span><span class="w"> </span><span class="nx">CacheStateUI</span><span class="o">&lt;</span><span class="nx">NodeUI</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">setCacheStyle</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">keyof</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">unsetStyle</span><span class="p">(</span><span class="nx">...attrs</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">extractAttributes</span><span class="p">(</span><span class="nx">depth?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">replaceWith?</span><span class="o">:</span><span class="w"> </span><span class="kt">AnyObject</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="hll"><span class="w">    </span><span class="nx">hasVisibleStyle</span><span class="p">(</span><span class="nx">border?</span><span class="o">:</span><span class="w"> </span><span class="kt">PositionAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+</span><span class="w">    </span><span class="nx">extractAttributes</span><span class="p">(</span><span class="nx">depth?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">replaceWith?</span><span class="o">:</span><span class="w"> </span><span class="kt">AnyObject</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">css</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">cache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">cssSet</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">cache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">translateX</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">TranslateOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -423,6 +424,12 @@
 </div>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 5.6.4: </span></p>
+<ul class="simple">
+<li><p><em>NodeUI</em> method <strong>hasVisibleStyle</strong> for detecting box edge styling was created.</p></li>
+</ul>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">Added in version 5.6.0: </span></p>
 <ul class="simple">
