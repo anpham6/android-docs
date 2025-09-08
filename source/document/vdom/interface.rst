@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 31-32,109-11,132
+  :emphasize-lines: 31-32,109-111,132
 
   class Container<T> implements Iterable<T> {
       children: T[];
