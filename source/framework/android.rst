@@ -150,6 +150,7 @@ Example usage
       await copyTo("/path/project-1", { projectId: "project-1", emptyDir: true, ignoreExtensions: true });
       await appendTo("http://localhost:3000/archives/project.001", { format: "7z" });
       reset();
+    });
   </script>
 
 .. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
