@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 31-32,109-11,132
+  :emphasize-lines: 31-32,109-111,132
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -115,9 +115,9 @@ Interface
       descendantsOne(value?: string | DescendParameterOptions<Node>, options?: DescendParameterOptions<Node>): Node | undefined;
       siblings(value?: string | SiblingsParameterOptions<Node>, options?: SiblingsParameterOptions<Node>): Node[];
       siblingsOne(value?: string | SiblingsParameterOptions<Node>, options?: SiblingsParameterOptions<Node>): Node | undefined;
-      isSibling(type: "first" | "last", attr: NodeChildrenAttr): boolean;
-      isSibling(type: "first" | "last", filter: IteratorPredicate<Node, unknown>): boolean;
-      isSibling(type: "first" | "last", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
+      isSibling(type: "first" | "last" | "only", attr: NodeChildrenAttr): boolean;
+      isSibling(type: "first" | "last" | "only", filter: IteratorPredicate<Node, unknown>): boolean;
+      isSibling(type: "first" | "last" | "only", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
       boxOf(attr: keyof (BoxRect & Dimension)): number;
       valueOf(attr: CssStyleAttr, options?: CssInitialOptions): string;
       get documentRoot(): boolean;

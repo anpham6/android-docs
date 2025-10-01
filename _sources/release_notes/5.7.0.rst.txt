@@ -18,7 +18,7 @@ BREAKING
       "squared.grid" // display: table (non-TABLE elements)
   ];
 
-.. tip:: Legacy web pages can re-install the deprecated extension using the command :code:`squared.add("squared.grid")`. The modern approach is to use **Flexbox** or **CSS Grid**.
+.. note:: Legacy web pages can re-install the deprecated extension with :code:`squared.add("squared.grid")`. The modern approach is to use **Flexbox** or **CSS Grid** for column aligmnent.
 
 .. rst-class:: release-notes
 
@@ -34,9 +34,9 @@ ADDED
   :caption: squared.base
 
   class Node {
-      isSibling(type: "first" | "last", attr: NodeChildrenAttr): boolean;
-      isSibling(type: "first" | "last", filter: IteratorPredicate<Node, unknown>): boolean;
-      isSibling(type: "first" | "last", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
+      isSibling(type: "first" | "last" | "only", attr: NodeChildrenAttr): boolean;
+      isSibling(type: "first" | "last" | "only", filter: IteratorPredicate<Node, unknown>): boolean;
+      isSibling(type: "first" | "last" | "only", options?: SiblingOptions<Node, NodeChildrenAttr, NodeParentAttr>): boolean;
       get customElement(): boolean;
   }
 
@@ -61,6 +61,17 @@ ADDED
       LEFT = 8
   }
 
+  /* css */
+
+  interface CSSStyleDeclaration {
+      dynamicRangeLimit: string;
+      positionAnchor: string;
+      positionArea: string;
+      positionTryFallbacks: string;
+      positionTryOrder: string;
+      positionVisibility: string;
+  }
+
   /* dom */
 
   function isCustomElement(element: Element): boolean;
@@ -80,6 +91,8 @@ ADDED
   interface ResourceStylesOptions {
       inheritFromParent: StringMap; // squared.attr("android.resource.styles", "inheritFromParent", { "Text_P": "TextAppearance.AppCompat" })
   }
+
+.. rst-class:: release-notes
 
 CHANGED
 =======
