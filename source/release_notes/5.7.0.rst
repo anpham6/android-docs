@@ -33,6 +33,12 @@ ADDED
 .. code-block::
   :caption: squared.base
 
+  interface ControllerSettingsStyleUI {
+      iframeBorderColor?: string;
+      iframeBorderWidth?: string;
+      iframeBorderStyle?: string;
+  }
+
   class Node {
       isSibling(type: "first" | "last" | "only", attr: NodeChildrenAttr): boolean;
       isSibling(type: "first" | "last" | "only", filter: IteratorPredicate<Node, unknown>): boolean;
@@ -50,6 +56,14 @@ ADDED
 
 .. code-block::
   :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          ANCHOR_POSITIONING: boolean;
+      };
+  }  
 
   /* constant */
 
@@ -70,11 +84,25 @@ ADDED
       positionTryFallbacks: string;
       positionTryOrder: string;
       positionVisibility: string;
+      rubyOverhang: string;
   }
+
+  function parseEnv(element: HTMLElement | SVGElement, value: string): string;
+  function hasEnv(value: string): boolean;
 
   /* dom */
 
   function isCustomElement(element: Element): boolean;
+
+  /* internal */
+
+  const ELEMENT_HIDDEN: string[];
+
+  /* regex */
+
+  const STRING: {
+      CSS_FUNCTION: string;
+  };
 
 .. code-block::
   :caption: android.base
