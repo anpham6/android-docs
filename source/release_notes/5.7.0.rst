@@ -33,12 +33,6 @@ ADDED
 .. code-block::
   :caption: squared.base
 
-  interface ControllerSettingsStyleUI {
-      iframeBorderColor?: string;
-      iframeBorderWidth?: string;
-      iframeBorderStyle?: string;
-  }
-
   class Node {
       isSibling(type: "first" | "last" | "only", attr: NodeChildrenAttr): boolean;
       isSibling(type: "first" | "last" | "only", filter: IteratorPredicate<Node, unknown>): boolean;
@@ -78,6 +72,8 @@ ADDED
   /* css */
 
   interface CSSStyleDeclaration {
+      anchorName: string;
+      anchorScope: string;
       dynamicRangeLimit: string;
       positionAnchor: string;
       positionArea: string;
@@ -93,10 +89,6 @@ ADDED
   /* dom */
 
   function isCustomElement(element: Element): boolean;
-
-  /* internal */
-
-  const ELEMENT_HIDDEN: string[];
 
   /* regex */
 
