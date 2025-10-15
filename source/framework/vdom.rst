@@ -73,7 +73,7 @@ Example usage
     });
   </script>
 
-.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Newly available`.
+.. caution:: Import maps is part of `Baseline 2023 <https://webstatus.dev/features/import-maps>`_ and is :target:`Widely available`.
 
 .. code-block:: html
   :caption: ESM
