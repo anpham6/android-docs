@@ -6,18 +6,18 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.7.0 &mdash; squared 5.6.4 documentation</title>
+  <title>5.7.0 &mdash; squared 5.7.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
       <link rel="stylesheet" type="text/css" href="../_static/content.css?v=022e6686" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=3b60f061" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=931a6594" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=cd8b6792"></script>
+      <script src="../_static/documentation_options.js?v=402f376c"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
 
           
           
@@ -78,7 +78,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">squared</a>
       </nav>
@@ -113,7 +113,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Legacy web pages can re-install the deprecated extension with <code class="code docutils literal notranslate"><span class="pre">squared.add(&quot;squared.grid&quot;)</span></code>. The modern approach is to use <strong>Flexbox</strong> or <strong>CSS Grid</strong> for column aligmnent.</p>
+<p>Legacy web pages can re-install the deprecated extension with <code class="code docutils literal notranslate"><span class="pre">squared.add(&quot;squared.grid&quot;)</span></code>. The modern approach is to use <strong>Flexbox</strong> or <strong>CSS Grid</strong> for column alignment.</p>
 </div>
 </section>
 <section class="release-notes" id="added">
@@ -146,7 +146,15 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* constant */</span>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">RULES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">ANCHOR_POSITIONING</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cm">/* constant */</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">CSS_POSITION</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
@@ -159,17 +167,29 @@
 <span class="cm">/* css */</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">CSSStyleDeclaration</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">anchorName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">anchorScope</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">dynamicRangeLimit</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">positionAnchor</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">positionArea</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">positionTryFallbacks</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">positionTryOrder</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">positionVisibility</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">rubyOverhang</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseEnv</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasEnv</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 
 <span class="cm">/* dom */</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">isCustomElement</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">Element</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+
+<span class="cm">/* regex */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">STRING</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">CSS_FUNCTION</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 </div>

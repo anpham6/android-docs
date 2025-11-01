@@ -2,7 +2,7 @@
 Installation
 ============
 
-- NodeJS 18 :alt:`(Minimum)`
+- NodeJS 18 LTS :alt:`(Minimum)`
 
 NPX
 ===
@@ -165,20 +165,20 @@ Docker
 GitHub Codespaces
 -----------------
 
-- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.6.0&repo=162848626&skip_quickstart=true>`_
+- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.7.0&repo=162848626&skip_quickstart=true>`_
 
 .. code-block::
 
   sudo ./scripts/repo-install.sh
 
   # NODE_INSTALL=pnpm
-  REPO_ROOT=/workspaces rake repo:init[0.12.x]
+  REPO_ROOT=/workspaces rake repo:init[0.13.x]
 
   rake repo:sync
   # OR
-  rake emc:checkout:branch[0.12.0]    # once
-  rake pir:checkout:branch[0.10.0]
-  rake express:checkout:branch[4.0.0]
+  rake emc:checkout:branch[0.13.0]    # once
+  rake pir:checkout:branch[0.11.0]
+  rake express:checkout:branch[4.1.0]
   rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo

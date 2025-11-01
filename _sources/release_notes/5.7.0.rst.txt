@@ -18,7 +18,7 @@ BREAKING
       "squared.grid" // display: table (non-TABLE elements)
   ];
 
-.. note:: Legacy web pages can re-install the deprecated extension with :code:`squared.add("squared.grid")`. The modern approach is to use **Flexbox** or **CSS Grid** for column aligmnent.
+.. note:: Legacy web pages can re-install the deprecated extension with :code:`squared.add("squared.grid")`. The modern approach is to use **Flexbox** or **CSS Grid** for column alignment.
 
 .. rst-class:: release-notes
 
@@ -51,6 +51,14 @@ ADDED
 .. code-block::
   :caption: squared.lib
 
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          ANCHOR_POSITIONING: boolean;
+      };
+  }  
+
   /* constant */
 
   const enum CSS_POSITION {
@@ -64,17 +72,29 @@ ADDED
   /* css */
 
   interface CSSStyleDeclaration {
+      anchorName: string;
+      anchorScope: string;
       dynamicRangeLimit: string;
       positionAnchor: string;
       positionArea: string;
       positionTryFallbacks: string;
       positionTryOrder: string;
       positionVisibility: string;
+      rubyOverhang: string;
   }
+
+  function parseEnv(element: HTMLElement | SVGElement, value: string): string;
+  function hasEnv(value: string): boolean;
 
   /* dom */
 
   function isCustomElement(element: Element): boolean;
+
+  /* regex */
+
+  const STRING: {
+      CSS_FUNCTION: string;
+  };
 
 .. code-block::
   :caption: android.base

@@ -344,7 +344,9 @@ android
 
     await squared.parseDocument({
       element: document.body,
-      observe(mutations, observer, settings) {}
+      observe(mutations, observer, settings) {
+        console.log(mutations);
+      }
     });
 
     android.removeObserver(document.body);

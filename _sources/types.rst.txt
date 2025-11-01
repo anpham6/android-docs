@@ -29,4 +29,4 @@ tsconfig.json
     }
   }
 
-You can do the same thing with **squared-express 4.0** using the :target:`typeRoot` ``node_modules/squared-express`` and the :target:`UMD` global ``sqex``.
+You can do the same thing with **squared-express 4.0** using :target:`typeRoot` ``node_modules/squared-express`` and the :target:`UMD` global ``sqex``.

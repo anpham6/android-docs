@@ -6,32 +6,32 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; squared 5.6.4 documentation</title>
+  <title>Installation &mdash; squared 5.7.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=9dcc611a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/role.css?v=5e8f2c84" />
       <link rel="stylesheet" type="text/css" href="_static/content.css?v=022e6686" />
       <link rel="stylesheet" type="text/css" href="_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="_static/override.css?v=3b60f061" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=931a6594" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=cd8b6792"></script>
+      <script src="_static/documentation_options.js?v=402f376c"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Browser" href="browser.html" />
-    <link rel="prev" title="squared 5.6" href="index.html" /> 
+    <link rel="prev" title="squared 5.7" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
 
           
           
@@ -72,7 +72,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/005.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">squared</a>
       </nav>
@@ -94,7 +94,7 @@
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>NodeJS 18 <em class="alt">(Minimum)</em></p></li>
+<li><p>NodeJS 18 LTS <em class="alt">(Minimum)</em></p></li>
 </ul>
 <section id="npx">
 <h2>NPX<a class="headerlink" href="#npx" title="Link to this heading"></a></h2>
@@ -260,18 +260,18 @@ docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </s
 <section id="github-codespaces">
 <h3>GitHub Codespaces<a class="headerlink" href="#github-codespaces" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=5.6.0&amp;repo=162848626&amp;skip_quickstart=true">Create</a></p></li>
+<li><p><a class="reference external" href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=5.7.0&amp;repo=162848626&amp;skip_quickstart=true">Create</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./scripts/repo-install.sh
 
 <span class="c1"># NODE_INSTALL=pnpm</span>
-<span class="nv">REPO_ROOT</span><span class="o">=</span>/workspaces<span class="w"> </span>rake<span class="w"> </span>repo:init<span class="o">[</span><span class="m">0</span>.12.x<span class="o">]</span>
+<span class="nv">REPO_ROOT</span><span class="o">=</span>/workspaces<span class="w"> </span>rake<span class="w"> </span>repo:init<span class="o">[</span><span class="m">0</span>.13.x<span class="o">]</span>
 
 rake<span class="w"> </span>repo:sync
 <span class="c1"># OR</span>
-rake<span class="w"> </span>emc:checkout:branch<span class="o">[</span><span class="m">0</span>.12.0<span class="o">]</span><span class="w">    </span><span class="c1"># once</span>
-rake<span class="w"> </span>pir:checkout:branch<span class="o">[</span><span class="m">0</span>.10.0<span class="o">]</span>
-rake<span class="w"> </span>express:checkout:branch<span class="o">[</span><span class="m">4</span>.0.0<span class="o">]</span>
+rake<span class="w"> </span>emc:checkout:branch<span class="o">[</span><span class="m">0</span>.13.0<span class="o">]</span><span class="w">    </span><span class="c1"># once</span>
+rake<span class="w"> </span>pir:checkout:branch<span class="o">[</span><span class="m">0</span>.11.0<span class="o">]</span>
+rake<span class="w"> </span>express:checkout:branch<span class="o">[</span><span class="m">4</span>.1.0<span class="o">]</span>
 rake<span class="w"> </span>pull
 </pre></div>
 </div>
@@ -297,7 +297,7 @@ rake<span class="w"> </span>pull
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="squared 5.6" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="squared 5.7" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="browser.html" class="btn btn-neutral float-right" title="Browser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
