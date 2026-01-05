@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 31-32,109-111,132
+  :emphasize-lines: 31-32,109-111,132,229
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -235,6 +235,7 @@ Interface
       get previousElementSibling(): Node | null;
       get nextElementSibling(): Node | null;
       get attributes(): StringMap;
+      get keyframes(): KeyframesMap | null;
       get checked(): boolean | null;
       get boundingClientRect(): DOMRect | null;
       get preserveWhiteSpace(): boolean;
@@ -250,6 +251,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.7.1
+
+  - *Node* property getter **keyframes** for :target:`@layer` keyframes was created.
 
 .. versionadded:: 5.7.0
 

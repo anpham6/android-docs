@@ -128,3 +128,17 @@ The amount of spacing between words cannot be accurately measured due to the fon
   </p>
 
 .. note:: *CSS* ``word-spacing`` is not implemented when using column layout.
+
+Translatable
+============
+
+Any element parsed text content can be given their own unshared resource **@string** entry. Tooltips and other attribute hints will similarly be treated as non-translatable.
+
+::
+
+  <p data-android-translatable="false">
+    吾輩は猫である。名前はたぬき。
+    吾輩は猫である。名前はたぬき。
+  </p>
+
+.. note:: The only valid value is "false".

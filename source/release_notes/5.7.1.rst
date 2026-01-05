@@ -1,0 +1,128 @@
+=====
+5.7.1
+=====
+
+:right:`2026-01-07`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface CssCascadeLayer {
+      fontFeatureValues: FontFeatureValuesMap | null;
+  }
+
+  interface ElementData {
+      keyframes?: KeyframesMap;
+      fontFeatureValues?: FontFeatureValuesMap;
+  }
+
+  interface ResourceAssetsMap {
+      metadata: Map<string, PlainObject>;
+      fontFeatureValues?: Map<Document | ShadowRoot, FontFeatureValuesMap>;
+  }
+
+  class Resource {
+      getKeyframes(resourceId: number, node?: Node): KeyframesMap | null;
+  }
+
+  class Node {
+      get keyframes(): KeyframesMap | null;
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          FONT_FEATURE_VALUES: boolean;
+      };
+  }
+
+  /* color */
+
+  interface ColorRGB {
+      get "display-p3-linear"(): ColorCoordinates;
+  }
+
+  /* css */
+
+  interface CSSStyleDeclaration {
+      fontLanguageOverride: string;
+      interactivity: string;
+      page: string;
+      textAutospace: string;
+      zoom: string;
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  interface SvgBuildOptions {
+      keyframes?: KeyframesMap | null;
+  }
+
+  class Svg {
+      get keyframes(): KeyframesMap | null;
+  }
+
+.. code-block::
+  :caption: android.base
+
+  interface CacheValueUI {
+      translatable?: boolean;
+  }
+
+  class File {
+      get layoutExtension(): string;
+  }
+
+  class View {
+      set translatable(value);
+      get translatable(): boolean;
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      setFontVariantAlternates(fontFamily: string, fontData?: FontFeatureValuesData): void; // fontData
+  }
+
+.. code-block::
+  :caption: squared.lib.css
+
+  type CssPropertyKeywords = [string | string[], string[]];
+
+.. code-block::
+  :caption: android.base
+
+  class File {
+      finalizeStringToXml(resourceId: number, stored: StoredStrings, directory: string, options?: FileActionOptions): string[]; // directory
+      finalizeIntegerToXml(resourceId: number, stored: StoredIntegers, directory: string, options?: FileActionOptions): string[];
+      finalizeFractionToXml(resourceId: number, stored: StoredIntegers, directory: string, options?: FileActionOptions): string[];
+      finalizeStringArrayToXml(resourceId: number, stored: StoredArrays, directory: string, options?: FileActionOptions): string[];
+      finalizeColorToXml(resourceId: number, stored: StoredColors, directory: string, options?: FileActionOptions): string[];
+      finalizeDimenToXml(resourceId: number, stored: StoredDimens, directory: string, options?: FileActionOptions): string[];
+      finalizeStyleToXml(resourceId: number, stored: StoredStyles, directory: string, options?: FileActionOptions): string[];
+      finalizeThemeToXml(resourceId: number, stored: StoredThemes, directory: string, options?: FileActionOptions): string[];
+      finalizeFontToXml(resourceId: number, stored: StoredFonts, directory: string, options?: FileActionOptions): string[];
+      finalizeDrawableToXml(resourceId: number, stored: StoredDrawables, directory: string, options?: FileActionOptions): string[];
+      finalizeAnimToXml(resourceId: number, stored: StoredAnimators, directory: string, options?: FileActionOptions): string[];
+      finalizeDrawableImageToFile(resourceId: number, stored: StoredImages, directory: string, options?: FileActionOptions): string[];
+      finalizeRawVideoToFile(resourceId: number, stored: AssetsVideo, directory: string, options?: FileActionOptions): string[];
+      finalizeRawAudioToFile(resourceId: number, stored: AssetsAudio, directory: string, options?: FileActionOptions): string[];
+  }
