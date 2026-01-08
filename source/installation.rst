@@ -148,7 +148,7 @@ Docker
   curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
 
   # NODE_TAG=latest
-  # RUBY_VERSION=2.7.0-3.4.0
+  # RUBY_VERSION=2.7.0-4.0.0
   # PIPE_FAIL={0,1}
   # DOCS=any
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .

@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 83,198-199,232
+  :emphasize-lines: 307-308
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -313,6 +313,8 @@ Interface
       get flexibleHorizontal(): boolean;
       get companionStyle(): boolean;
       get emojiContainer(): CONTAINER_NODE;
+      set translatable(value);
+      get translatable(): boolean;
       get watch(): WatchInterval | undefined;
       get tasks(): TaskCommand[] | undefined;
       get target(): HTMLElement | null;
@@ -321,6 +323,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.7.1
+
+  - *NodeUI* property accessor **translatable** for non-shared :target:`@string` resources was created.
 
 .. versionadded:: 5.6.4
 
