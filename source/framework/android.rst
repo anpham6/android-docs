@@ -122,7 +122,7 @@ Example usage
   <script type="importmap">
     {
       "imports": {
-        "squared/": "https://unpkg.com/squared@5.6.0/"
+        "squared/": "https://unpkg.com/squared/"
         /* OR */
         "squared/": "/node_modules/squared/" // NodeJS
         /* OR */

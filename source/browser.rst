@@ -73,7 +73,7 @@ A single file with no exports outside of the core methods. [#esm]_
 Import maps
 -----------
 
-Possibly hundreds of files with all exports and core methods. [#esm]_
+Possibly hundreds of files with all exports and core methods. It is not recommended to be used in a production environment. [#esm]_
 
 - https://unpkg.com/squared/android.js
 - https://unpkg.com/squared/chrome.js
@@ -82,11 +82,18 @@ Possibly hundreds of files with all exports and core methods. [#esm]_
 .. code-block:: html
   :caption: ES2021
 
+  <script type="importmap">
+    {
+      "imports": {
+        "squared/": "https://unpkg.com/squared/"
+      }
+    }
+  </script>
   <script type="module">
-    import { parseDocument } from "https://unpkg.com/squared/android.js";
+    import { parseDocument } from "squared/android.js";
   <script>
 
-.. tip:: The traditional **UMD** namespaced global reference :target:`squared` is the fastest to load and execute. **ESM** is the modern alternative but has some drawbacks when used with larger libraries. It is not recommended to use :target:`import maps` outside of a development environment.
+.. tip:: The traditional **UMD** namespaced global reference :target:`squared` will load and execute faster than **ESM**. It is also immediately available inside *DevTools* when issuing an arbitrary command.
 
 .. [#] android | chrome | vdom
 .. [#] android
