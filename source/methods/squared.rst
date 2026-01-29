@@ -39,15 +39,21 @@ squared
 
     squared.setLocalAddress(new URL("http://0.0.0.0"));
 
-.. function:: auth(token)
+.. function:: auth(token[, body])
 
-  Set :abbr:`JWT (JSON Web Token)` authorization token for all requests
+  Use a :abbr:`JWT (JSON Web Token)` header authorization token for all outgoing requests. Custom service providers are supported by passing an options object.
 
-  :param string token: Three concatenated Base64url-encoded strings separated by dots
+  :param token: Three concatenated Base64url-encoded strings separated by dots
+  :type token: string or object
+  :param boolean body: Serialize object as :target:`auth` property
 
   Usage::
 
     squared.auth("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNxdWFyZWQiLCJwYXNzd29yZCI6Imp3dDEyMyIsImlhdCI6MTY1MjcxNDQwMH0.xqwQ96LsItilsB1dskzJQqXORaZ4mGMu0FeZezo297c");
+
+  Alternate::
+
+    squared.auth({ username: "mongo", password: "91075", realm: "hokkaido" }, true);
 
 .. function:: kill([pid, timeout])
 
