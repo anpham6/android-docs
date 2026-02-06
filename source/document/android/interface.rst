@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 307-308
+  :emphasize-lines: 48,308-309
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -54,6 +54,7 @@ Interface
       lockAttr(name: string, attr: string): void;
       unlockAttr(name: string, attr: string): void;
       lockedAttr(name: string, attr: string): boolean;
+      joinAttr(name: string, attr: string, value: string, delim?: string): string;
       unsetCache(...attrs: (CssStyleAttr | keyof CacheValueUI)[]): void;
       addAlign(value: number): void;
       removeAlign(value: number): void;
@@ -323,6 +324,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.7.2
+
+  - *NodeUI* method **joinAttr** for appending values with a delimeter was created.
 
 .. versionadded:: 5.7.1
 

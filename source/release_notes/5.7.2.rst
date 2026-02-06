@@ -1,0 +1,33 @@
+=====
+5.7.2
+=====
+
+:right:`2026-02-09`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface PrefetchData {
+      audio?: Record<string, ArrayBuffer>;
+      video?: Record<string, ArrayBuffer>;
+  }
+
+  interface PrefetchItem {
+      type?: "audio" | "video";
+  }
+
+  class NodeUI {
+      joinAttr(name: string, attr: string, value: string, delim?: string): string;
+  }
+
+.. code-block::
+  :caption: squared.lib.css
+
+  type PseudoDocumentElt = "::before::marker" | "::after::marker";
