@@ -2,7 +2,7 @@
 Exclusions
 ==========
 
-Most attributes can be excluded from the generated XML. One or more exclusions can be applied to any element using the OR "**|**" operator.
+Most attributes can be excluded from the generated XML. One or more exclusions can be applied to any element using the OR ":lower:`|`" operator.
 
 .. tip:: Defining an element ``id`` will prevent it from being removed during the optimization phase. ``STAGE_OPTIMIZATION`` flags similarly will disable specific actions from being applied which are undesirable.
 

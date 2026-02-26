@@ -5,7 +5,7 @@ Miscellaneous
 System Colors
 =============
 
-Any `R.color <https://developer.android.com/reference/android/R.color>`_ that starts with the prefix "**system_**" can be used as substitute for a *CSS* color.
+Any `R.color <https://developer.android.com/reference/android/R.color>`_ that starts with the prefix ":lower:`system_`" can be used as substitute for a *CSS* color.
 
 ::
 
