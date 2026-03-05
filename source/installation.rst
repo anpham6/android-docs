@@ -2,7 +2,7 @@
 Installation
 ============
 
-- NodeJS 18 LTS :alt:`(Minimum)`
+- NodeJS 18 :alt:`(Minimum)`
 
 NPX
 ===
@@ -69,11 +69,11 @@ GitHub
   node serve.js
 
 .. code-block::
-  :caption: dev - 5.7.0
+  :caption: dev - 5.8.0
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.7.0
+  git checkout 5.8.0
 
   npm install
   npm run build:dev
@@ -82,7 +82,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 4.1.0
+  git checkout 4.2.0
 
   npm install
   npm run dev
@@ -148,7 +148,7 @@ Docker
   curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
 
   # NODE_TAG=latest
-  # RUBY_VERSION=2.7.0-4.0.0
+  # RUBY_VERSION=2.5.0-4.0.0
   # PIPE_FAIL={0,1}
   # DOCS=any
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
@@ -172,15 +172,15 @@ GitHub Codespaces
   sudo ./scripts/repo-install.sh
 
   # NODE_INSTALL=pnpm
-  REPO_ROOT=/workspaces rake repo:init[0.13.x]
+  REPO_ROOT=/workspaces rake repo:init[0.14.x]
 
   rake repo:sync
   # OR
-  rake emc:checkout:branch[0.13.0]    # once
-  rake pir:checkout:branch[0.11.0]
-  rake express:checkout:branch[4.1.0]
+  rake emc:checkout:branch[0.14.0]    # once
+  rake pir:checkout:branch[0.12.0]
+  rake express:checkout:branch[4.2.0]
   rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo
-.. [#] https://www.ruby-lang.org/en/documentation/installation (2.4/3.0)
+.. [#] https://www.ruby-lang.org/en/documentation/installation (2.5/4.0)
