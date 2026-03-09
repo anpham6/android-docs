@@ -67,6 +67,7 @@ https://unpkg.com/squared/types/base/squared.d.ts
   | `AppFramework <search.html?q=AppFramework>`_
   | `Application <search.html?q=Application>`_
   | `ElementSettings <search.html?q=ElementSettings>`_
+  | `ElementSettingsUI <search.html?q=ElementSettingsUI>`_
   | `Extension <search.html?q=Extension>`_
   | `FileActionResult <search.html?q=FileActionResult>`_
   | `MutationCallback <search.html?q=MutationCallback>`_
@@ -248,6 +249,7 @@ https://unpkg.com/squared/types/android/resource.d.ts
   | `FontProviderFonts <search.html?q=FontProviderFonts>`_
   | `ManifestData <search.html?q=ManifestData>`_
   | `ResourceQualifierMap <search.html?q=ResourceQualifierMap>`_
+  | `ResourceStoredMap <search.html?q=ResourceStoredMap>`_
 
 .. _references-android-file:
 .. rst-class:: block-list

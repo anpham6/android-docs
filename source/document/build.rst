@@ -15,7 +15,6 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 34-35
 
   interface FileActionOptions {
       pid?: number;
@@ -132,7 +131,7 @@ Example usage
 .. code-block:: javascript
 
   squared.saveAs("android.zip", {
-    targetAPI: 35, // Override settings.targetAPI
+    targetAPI: 36, // Override settings.targetAPI
     targetAPI: 0, // "buildToolsVersion"
     targetAPI: "Tiramisu", // "buildToolsVersion-Tiramisu"
     manifest: {
@@ -201,6 +200,7 @@ Interface
 ---------
 
 .. code-block::
+  :emphasize-lines: 39
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -239,6 +239,7 @@ Interface
       serverRootMapping?: StringMap;
       useOriginalHtmlPage?: boolean | string;
       useUnsafeHtmlReplace?: boolean;
+      /** @deprecated **/
       useSessionCache?: boolean;
       stripCommentsAndCDATA?: boolean | string;
       normalizeHtmlOutput?: boolean | string;
@@ -271,6 +272,10 @@ Interface
 
 Changelog
 ---------
+
+.. deprecated:: 5.8.0
+
+  - *DocumentOutput* property **useSessionCache** can only be cached globally per JS/CSS extension. To disable caching an explicit ":lower:`false`" is required.
 
 .. versionadded:: 5.3.0
 
@@ -337,6 +342,7 @@ Example usage
     baseHref: "http://hostname/prod/example.html", // Additional hostname to use for parsing local files
     retainUsedStyles: [/^a:[a-z]/i, "--property-name"],
     downloadOnly: true, // Do not transform HTML and CSS files
+    useSessionCache: false, // Cached globally by extension (required)
     excluding: Array.from(document.querySelectorAll("video, audio")) // Elements to remove from HTML
   });
 

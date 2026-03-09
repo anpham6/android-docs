@@ -1,0 +1,127 @@
+=====
+5.8.0
+=====
+
+:right:`2026-04-29`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface CacheValueUI {
+      inlineBlock?: boolean;
+  }
+
+  interface NodeParseUnitOptions {
+      fromFont?: boolean;
+  }
+
+  interface AppProjectUI {
+      documentRoot: LayoutRoot<NodeUI>[];
+      set rendered(value);
+      get rendered(): NodeUI[];
+  }
+
+  class ResourceUI {
+      static appendId(resourceId: number, section: string, name: string): boolean;
+  }
+
+  class NodeUI {
+      get scalableElement(): boolean;
+      get inlineBlock(): boolean;
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          FUNCTION: boolean;
+      };
+  }
+
+  /* css */
+
+  function parseConditional(element: HTMLElement | SVGElement, attr: CssStyleAttr, value: string): string;
+  function hasConditional(value: string): boolean;
+  function isResolution(value: string): boolean;
+
+  /* dom */
+
+  type PseudoDocumentElt = "::view-transition";
+  type PseudoStyleElt = "::search-text" | "::search-text:current";
+  type PseudoQueryElt = "::cue(string)" | "::highlight(string)";
+
+  /* regex */
+
+  const STRING: {
+      CSS_VARIABLE: string;
+  };
+
+  const CSS: {
+      CUSTOM_IDENT: RegExp;
+  }
+
+.. code-block::
+  :caption: squared.lib.base
+
+  class Container {
+      concat(list: unknown[] | Container): this;
+  }
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      createResourceIds: string | string[] | undefined; // "android" | "compose" | "fragment" | "drawable" | "animated-drawable";
+  }
+
+  interface ControllerSettingsUI {
+      filename: {
+          id: string;
+      };
+  }
+
+  interface ControllerSettingsDirectoryUI {
+      id: string;
+  }
+
+  class File {
+      resourceIdToXml(stored: Required<ResourceStoredMap>, qualifier?: string | FileActionOptions, options?: FileActionOptions): string[];
+      finalizeIdToXml(resourceId: number, stored: string[], directory: string, options?: FileActionOptions): string[];
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface LocalSettingsUI /* extends ElementSettingsUI */ {}
+
+  class Resource {
+      static findStoredAsset(resourceId: number, type: string, name: string, options?: FindStoredAssetOptions): unknown; // options
+  }
+
+.. code-block::
+  :caption: squared.lib.dom
+
+  type PseudoElt = "::target-text";
+  type PseudoStyleElt = "::target-text"; // PseudoDocumentElt
+
+.. code-block::
+  :caption: android.base
+
+  class View {
+      get localSettings(): LocalSettingsUI & ElementSettingsUI; // ElementSettingsUI
+  }
