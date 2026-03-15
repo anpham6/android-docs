@@ -11,6 +11,11 @@ table.versions td {
     text-align: right;
 }
 
+table.center th, table.center td {
+    min-width: 50px;
+    text-align: center;
+}
+
 .block-list a, .block-list .rst-content dl dt {
     font-weight: 400;
 }

@@ -4,6 +4,16 @@ Types
 
 *ESM* compatible :target:`stand-alone` typings are available as of **squared 5.5**.
 
+.. rst-class:: center
+
+========= =======
+ squared    TS
+========= =======
+  5.5.x    5.8.3
+  5.6.x    5.9.2
+  5.7.x    5.9.3
+========= =======
+
 Installation
 ============
 
