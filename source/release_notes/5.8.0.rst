@@ -14,6 +14,12 @@ ADDED
 .. code-block::
   :caption: squared.base
 
+  interface AppProjectUI {
+      documentRoot: LayoutRoot<NodeUI>[];
+      set rendered(value);
+      get rendered(): NodeUI[];
+  }
+
   interface CacheValueUI {
       inlineBlock?: boolean;
   }
@@ -22,17 +28,12 @@ ADDED
       fromFont?: boolean;
   }
 
-  interface AppProjectUI {
-      documentRoot: LayoutRoot<NodeUI>[];
-      set rendered(value);
-      get rendered(): NodeUI[];
-  }
-
   class ResourceUI {
       static appendId(resourceId: number, section: string, name: string): boolean;
   }
 
   class NodeUI {
+      datasetValue(name: string): string | undefined;
       get scalableElement(): boolean;
       get inlineBlock(): boolean;
   }
@@ -107,10 +108,23 @@ CHANGED
 .. code-block::
   :caption: squared.base
 
-  interface LocalSettingsUI /* extends ElementSettingsUI */ {}
+  interface MetadataAction<T = PlainObject> { // unknown
+      metadata?: T | null; // null
+  }
+
+  interface FileAsset extends MetadataAction {}
+
+  type AssetsVideo = Map<string, Asset & MetadataAction>;
+  type AssetsAudio = Map<string, Asset & MetadataAction>;
 
   class Resource {
       static findStoredAsset(resourceId: number, type: string, name: string, options?: FindStoredAssetOptions): unknown; // options
+  }
+
+  interface LocalSettingsUI /* extends ElementSettingsUI */ {}
+
+  class NodeUI {
+      get localSettings(): LocalSettingsUI & ElementSettingsUI; // ElementSettingsUI
   }
 
 .. code-block::
@@ -122,6 +136,12 @@ CHANGED
 .. code-block::
   :caption: android.base
 
-  class View {
-      get localSettings(): LocalSettingsUI & ElementSettingsUI; // ElementSettingsUI
+  interface InsertStoredAssetOptions {} // extends MetadataAction
+  interface AddImageSrcOptions {}
+  interface AddImageOptions {}
+  interface ParseImageOptions {}
+
+  class Resource {
+      static addRawAsset(resourceId: number, type: ResourceRawAsset | "images", name: string, value: unknown, options?: InsertStoredAssetOptions): string; // options
+      addImageSet(resourceId: number, images: StringMap, options?: AddImageOptions): string; // options
   }
