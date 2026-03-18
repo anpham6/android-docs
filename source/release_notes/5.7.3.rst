@@ -1,0 +1,41 @@
+=====
+5.7.3
+=====
+
+:right:`2026-03-27`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface ControllerSettingsStyleUI
+      inputPlaceholderColor?: string;
+  }
+
+.. code-block::
+  :caption: squared.lib.css
+
+  type PseudoStyleWebkitElt = "::-webkit-input-placeholder" | "::-webkit-selection";
+
+.. code-block::
+  :caption: android.base
+
+  class View {
+      setTextAlign(value?: string | boolean): void;
+  }
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      getPseudoElement(name: PseudoElt | PseudoStyleElt | PseudoStyleWebkitElt, attr?: CssStyleAttr, context?: string): string | CssStyleMap | null; // PseudoStyleWebkitElt
+  }

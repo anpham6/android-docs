@@ -273,6 +273,8 @@ Interface
       setLayoutWidth(value: string, overwrite?: boolean): void;
       setLayoutHeight(value: string, overwrite?: boolean): void;
       setLayoutPercent(value: string, horizontal?: boolean, includeMargin?: boolean): void;
+      setTextAlign(inherit: boolean): void;
+      setTextAlign(value?: string): void;
       setSingleLine(maxLines: boolean, ellipsize?: boolean): void;
       setConstraintDimension(percentAvailable?: number): number;
       setFlexDimension(dimension: DimensionAttr, percentAvailable?: number, weight?: number): number;
@@ -325,13 +327,17 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.7.3
+
+  - *View* method **setTextAlign** for style property ``text-align`` was created.
+
 .. versionadded:: 5.7.2
 
   - *NodeUI* method **joinAttr** for appending values with a delimeter was created.
 
 .. versionadded:: 5.7.1
 
-  - *NodeUI* property accessor **translatable** for non-shared :target:`@string` resources was created.
+  - *View* property accessor **translatable** for non-shared :target:`@string` resources was created.
 
 .. versionadded:: 5.6.4
 
