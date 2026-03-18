@@ -4,6 +4,11 @@
 
 :right:`2026-02-09`
 
+.. toctree::
+  :maxdepth: 1
+
+  5.7.3
+
 .. highlight:: typescript
 
 .. rst-class:: release-notes
