@@ -18,10 +18,29 @@ ADDED
       inputPlaceholderColor?: string;
   }
 
+  interface StyleSheetOptions {
+      namespaceRule?: CSSNamespaceRule[];
+  }
+
 .. code-block::
-  :caption: squared.lib.css
+  :caption: squared.lib
+
+  /* dom */
 
   type PseudoStyleWebkitElt = "::-webkit-input-placeholder" | "::-webkit-selection";
+
+  /* regex */
+
+  const STRING: {
+      CSS_NAMESPACE: string;
+  };
+
+.. code-block::
+  :caption: squared.base.lib.regex
+
+  const DOM: {
+      BREAK_LINE: RegExp;
+  };
 
 .. code-block::
   :caption: android.base

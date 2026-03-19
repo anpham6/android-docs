@@ -31,6 +31,7 @@ https://unpkg.com/squared/types/dom.d.ts
   | `BoxRect <search.html?q=BoxRect>`_
   | `BoxRectDimension <search.html?q=BoxRectDimension>`_
   | `ColorRGB <search.html?q=ColorRGB>`_
+  | `ContainerData <search.html?q=ContainerData>`_
   | `ContainerDimension <search.html?q=ContainerDimension>`_
   | `CssStyleAttr <search.html?q=CssStyleAttr>`_
   | `CssStyleMap <search.html?q=BoxPaddingAttr>`_
@@ -39,6 +40,7 @@ https://unpkg.com/squared/types/dom.d.ts
   | `FlexData <search.html?q=FlexData>`_
   | `PseudoElt <search.html?q=PseudoElt>`_
   | `PseudoStyleElt <search.html?q=PseudoStyleElt>`_
+  | `PseudoStyleWebkitElt <search.html?q=PseudoStyleWebkitElt>`_
   | `PositionAttr <search.html?q=PositionAttr>`_
   | `SrcElement <search.html?q=SrcElement>`_
 

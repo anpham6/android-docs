@@ -36,6 +36,7 @@ ADDED
       datasetValue(name: string): string | undefined;
       get scalableElement(): boolean;
       get inlineBlock(): boolean;
+      get metadata(): PlainObject | null;
   }
 
 .. code-block::
@@ -51,6 +52,11 @@ ADDED
 
   /* css */
 
+  interface MatchContainerOptions {
+      prefix?: string;
+  }
+
+  function findContainerType(element: Element, conditionText: string, name?: string): ContainerData | null;
   function parseConditional(element: HTMLElement | SVGElement, attr: CssStyleAttr, value: string): string;
   function hasConditional(value: string): boolean;
   function isResolution(value: string): boolean;
@@ -98,6 +104,11 @@ ADDED
   class File {
       resourceIdToXml(stored: Required<ResourceStoredMap>, qualifier?: string | FileActionOptions, options?: FileActionOptions): string[];
       finalizeIdToXml(resourceId: number, stored: string[], directory: string, options?: FileActionOptions): string[];
+  }
+
+  class View {
+      getLayoutConstraint(attr: "justifyContent" | "alignItems" | "alignContent", type: "flex" | "grid", direction?: "row" | "column", all?: boolean): string;
+      hasConstraint(horizontal: boolean, type?: "spread" | "percent" | "wrap"): boolean;
   }
 
 .. rst-class:: release-notes
