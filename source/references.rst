@@ -39,6 +39,7 @@ https://unpkg.com/squared/types/dom.d.ts
   | `FlexData <search.html?q=FlexData>`_
   | `PseudoElt <search.html?q=PseudoElt>`_
   | `PseudoStyleElt <search.html?q=PseudoStyleElt>`_
+  | `PseudoStyleWebkitElt <search.html?q=PseudoStyleWebkitElt>`_
   | `PositionAttr <search.html?q=PositionAttr>`_
   | `SrcElement <search.html?q=SrcElement>`_
 

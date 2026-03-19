@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 48,308-309
+  :emphasize-lines: 105,171,188,235,271-272,280-281,287
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -103,7 +103,7 @@ Interface
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getPositionOffset(name: "sticky"): Point;
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
-      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
+      getPseudoElement(name: PseudoElt | PseudoStyleElt | PseudoStyleWebkitElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
       setFontVariantAlternates(fontFamily: string): void;
       hasFixedDimension(dimension: DimensionAttr): boolean;
       isResizable(attr: DimensionSizableAttr, not?: string | string[]): boolean;
@@ -111,6 +111,7 @@ Interface
       getComments(type: ReferenceType, attrs?: CssStyleAttr[]): [string, string];
       cssValue(attr: CssStyleAttr): string;
       cssValues(...attrs: CssStyleAttr[]): string[];
+      datasetValue(name: string): string | undefined;
       set documentRoot(value);
       get documentRoot(): boolean;
       set depth(value);
@@ -176,6 +177,7 @@ Interface
       set localSettings(value);
       get localSettings(): LocalSettingsUI;
       get extensions(): string[];
+      get scalableElement(): boolean;
       get scrollElement(): boolean;
       get controlElement(): boolean;
       get imageContainer(): boolean;
@@ -192,6 +194,7 @@ Interface
       get blockVertical(): boolean;
       get blockDimension(): boolean;
       get inlineFlow(): boolean;
+      get inlineBlock(): boolean;
       get verticalAligned(): boolean;
       get variableWidth(): boolean;
       get variableHeight(): boolean;
@@ -238,6 +241,7 @@ Interface
       get fontSynthesis(): FontSynthesis;
       get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
+      get metadata(): PlainObject | null;
       get outerRegion(): BoxRectDimension;
       get boundingRegion(): BoxRectDimension;
       set locales(value);
@@ -282,11 +286,14 @@ Interface
       getAnchorPosition(parent: View, horizontal: boolean, modifyAnchor?: boolean): Partial<BoxRect>;
       isUnstyled(checkMargin?: boolean): boolean;
       isAnchored(options: IsAnchoredOptions): boolean;
+      getLayoutConstraint(attr: "justifyContent" | "alignItems" | "alignContent", type: "flex", direction?: "row" | "column", all?: boolean): string;
+      getLayoutConstraint(attr: "justifyContent" | "alignItems" | "alignContent", type?: "flex" | "grid", all?: boolean): string;
       getHorizontalBias(rect?: BoxRect): number;
       getVerticalBias(rect?: BoxRect): number;
       getAbsolutePaddingOffset(region: number, value: number): number;
       getMarginPercent(horizontal: boolean): number;
       getPaddingPercent(horizontal: boolean): number;
+      hasConstraint(horizontal: boolean, type?: "spread" | "percent" | "wrap"): boolean;
       hasFlex(direction: LayoutDirectionAttr): boolean | 0;
       get labelForElement(): boolean;
       set anchored(value);

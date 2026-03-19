@@ -24,6 +24,13 @@ ADDED
   type PseudoStyleWebkitElt = "::-webkit-input-placeholder" | "::-webkit-selection";
 
 .. code-block::
+  :caption: squared.base.lib.regex
+
+  const DOM: {
+      BREAK_LINE: RegExp;
+  };
+
+.. code-block::
   :caption: android.base
 
   class View {
