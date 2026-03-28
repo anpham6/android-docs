@@ -97,9 +97,11 @@ Interface
 
 .. code-block::
   :caption: android.resource.fonts
+  :emphasize-lines: 3
 
   interface ResourceFontsOptions {
       defaultFontFamily: string;
+      mathFontFamily: string;
       systemFonts: string[];
       disableFontAlias: boolean;
       installGoogleFonts: boolean;
@@ -171,6 +173,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.8.0
+
+  - *ResourceFontsOptions* property **mathFontFamily** for ":lower:`font-family: math`" as :alt:`Noto Serif` was created.
 
 .. versionadded:: 5.7.0
 

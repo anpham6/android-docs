@@ -83,6 +83,7 @@ https://unpkg.com/squared/types/base/squared.d.ts
 
 https://unpkg.com/squared/types/base/application.d.ts
   | `ControllerSettingsDirectoryUI <search.html?q=ControllerSettingsDirectoryUI>`_
+  | `LayoutRoot <search.html?q=LayoutRoot>`_
   | `NodeTemplate <search.html?q=NodeTemplate>`_
   | `UserSettings <search.html?q=UserSettings>`_
   | `UserResourceSettings <search.html?q=UserResourceSettings>`_

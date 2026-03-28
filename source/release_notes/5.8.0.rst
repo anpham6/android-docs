@@ -59,6 +59,7 @@ ADDED
   function findContainerType(element: Element, conditionText: string, name?: string): ContainerData | null;
   function parseConditional(element: HTMLElement | SVGElement, attr: CssStyleAttr, value: string): string;
   function hasConditional(value: string): boolean;
+  function hasFunction(value: string): boolean;
   function isResolution(value: string): boolean;
 
   /* dom */
@@ -66,6 +67,10 @@ ADDED
   type PseudoDocumentElt = "::view-transition";
   type PseudoStyleElt = "::search-text" | "::search-text:current";
   type PseudoQueryElt = "::cue(string)" | "::highlight(string)";
+
+  /* internal */
+
+  const CLIENT_FEATURES: UserAgentFeatures;
 
   /* regex */
 
@@ -99,6 +104,10 @@ ADDED
 
   interface ControllerSettingsDirectoryUI {
       id: string;
+  }
+
+  class Application {
+      getTargetApi(sessionId: string): number;
   }
 
   class File {
