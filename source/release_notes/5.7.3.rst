@@ -23,6 +23,13 @@ ADDED
   }
 
 .. code-block::
+  :caption: squared.base.lib.regex
+
+  const DOM: {
+      BREAK_LINE: RegExp;
+  };
+
+.. code-block::
   :caption: squared.lib
 
   /* dom */
@@ -33,13 +40,6 @@ ADDED
 
   const STRING: {
       CSS_NAMESPACE: string;
-  };
-
-.. code-block::
-  :caption: squared.base.lib.regex
-
-  const DOM: {
-      BREAK_LINE: RegExp;
   };
 
 .. code-block::

@@ -48,14 +48,6 @@ ADDED
   }
 
 .. code-block::
-  :caption: squared.svg
-
-  class SvgUseSymbol {
-      readonly symbolElement: SVGSymbolElement | SVGSVGElement; // SVGSVGElement
-      constructor(element: SVGSymbolElement | SVGSVGElement, useElement: SVGUseElement);
-  }
-
-.. code-block::
   :caption: squared.lib
 
   /* client */
@@ -102,6 +94,14 @@ ADDED
   const STRING: {
       CSS_FUNCTION: string;
   };
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgUseSymbol {
+      readonly symbolElement: SVGSymbolElement | SVGSVGElement; // SVGSVGElement
+      constructor(element: SVGSymbolElement | SVGSVGElement, useElement: SVGUseElement);
+  }
 
 .. code-block::
   :caption: android.base

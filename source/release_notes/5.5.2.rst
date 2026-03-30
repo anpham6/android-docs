@@ -37,6 +37,29 @@ ADDED
   }
 
 .. code-block::
+  :caption: squared.base.lib
+
+  /* constant */
+
+  enum STAGE_OPTIMIZATION {
+      UNICODE = 16384
+  }
+
+  /* css */
+
+  interface CssPropertyData {
+      trait: number; // readonly
+      value: string | CssStyleAttr[];
+      keywords?: CssPropertyKeywords | (() => CssPropertyKeywords);
+  }
+
+  function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap;
+
+  /* util */
+
+  function getIndent(value: number): string;
+
+.. code-block::
   :caption: squared.lib
 
   /* constant */
@@ -161,29 +184,6 @@ ADDED
   }
 
 .. code-block::
-  :caption: squared.base.lib
-
-  /* constant */
-
-  enum STAGE_OPTIMIZATION {
-      UNICODE = 16384
-  }
-
-  /* css */
-
-  interface CssPropertyData {
-      trait: number; // readonly
-      value: string | CssStyleAttr[];
-      keywords?: CssPropertyKeywords | (() => CssPropertyKeywords);
-  }
-
-  function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap;
-
-  /* util */
-
-  function getIndent(value: number): string;
-
-.. code-block::
   :caption: android.base
 
   interface LocalSettingsBaseUI {
@@ -238,6 +238,22 @@ CHANGED
   }
 
 .. code-block::
+  :caption: squared.base.lib
+
+  /* css */
+
+  function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // documentRoot
+
+  /* dom */
+
+  function getOptionArray(element: HTMLSelectElement | HTMLOptGroupElement, locales?: Intl.LocalesArgument | null, all?: boolean): OptionArrayData; // locales
+
+  /* util */
+
+  function upperCaseString(value: string, locales?: Intl.LocalesArgument | null, capitalize?: boolean): string; // locales
+  function lowerCaseString(value: string, locales?: Intl.LocalesArgument | null): string;
+
+.. code-block::
   :caption: squared.lib
 
   /* css */
@@ -269,22 +285,6 @@ CHANGED
   const CSS_PROPERTIES: {
       d: CssPropertyData; // squared.internal
   };
-
-.. code-block::
-  :caption: squared.base.lib
-
-  /* css */
-
-  function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // documentRoot
-
-  /* dom */
-
-  function getOptionArray(element: HTMLSelectElement | HTMLOptGroupElement, locales?: Intl.LocalesArgument | null, all?: boolean): OptionArrayData; // locales
-
-  /* util */
-
-  function upperCaseString(value: string, locales?: Intl.LocalesArgument | null, capitalize?: boolean): string; // locales
-  function lowerCaseString(value: string, locales?: Intl.LocalesArgument | null): string;
 
 .. rst-class:: release-notes
 
