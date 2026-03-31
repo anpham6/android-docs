@@ -12,14 +12,14 @@ android
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2020)`
+- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2022)`
 
 chrome
 ------
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2020)`
+- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022)`
 
 vdom
 ----
@@ -64,7 +64,7 @@ A single file with no exports outside of the core methods. [#esm]_
 - https://unpkg.com/squared/dist/vdom.mjs
 
 .. code-block:: html
-  :caption: ES2021
+  :caption: ES2022
 
   <script type="module">
     import { parseDocument } from "https://unpkg.com/squared/dist/android.mjs";
@@ -80,7 +80,7 @@ Possibly hundreds of files with all exports and core methods. It is not recommen
 - https://unpkg.com/squared/vdom.js
 
 .. code-block:: html
-  :caption: ES2021
+  :caption: ES2022
 
   <script type="importmap">
     {

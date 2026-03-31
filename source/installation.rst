@@ -122,12 +122,11 @@ Repo
   mkdir workspaces
   cd workspaces           # REPO_ROOT
 
-  curl -o Rakefile https://unpkg.com/squared/Rakefile
+  curl -o Rakefile https://github.com/anpham6/squared-repo/Rakefile
 
   rake -T                 # List tasks
 
   # REPO_BUILD={dev,prod}
-  # FAIL_BUILD={0,1}
   # NODE_INSTALL={pnpm,yarn}
   rake repo:init          # nightly
   # OR
