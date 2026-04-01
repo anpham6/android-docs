@@ -30,9 +30,11 @@ ADDED
 
   class ResourceUI {
       static appendId(resourceId: number, section: string, name: string): boolean;
+      characterMap: StringMap;
   }
 
   class NodeUI {
+      getFontSizeAdjust(fontFamily: string, fontSize?: number, fallback?: number): number;
       datasetValue(name: string): string | undefined;
       get scalableElement(): boolean;
       get inlineBlock(): boolean;
@@ -78,6 +80,10 @@ ADDED
   type PseudoStyleElt = "::search-text" | "::search-text:current";
   type PseudoQueryElt = "::cue(string)" | "::highlight(string)";
 
+  interface ContainerData {
+      conditionText?: string;
+  }
+
   /* internal */
 
   const CLIENT_FEATURES: UserAgentFeatures;
@@ -107,10 +113,18 @@ ADDED
   }
 
 .. code-block::
+  :caption: squared.svg.util
+
+  const TRANSFORM: {
+      typeAsReset(type: number | string): string;
+  };
+
+.. code-block::
   :caption: android.base
 
   interface UserResourceSettingsUI {
       createResourceIds: string | string[] | undefined; // "android" | "compose" | "fragment" | "drawable" | "animated-drawable";
+      createBuildDependencies: "navigation-v3";
   }
 
   interface ControllerSettingsUI {
@@ -165,10 +179,23 @@ CHANGED
   }
 
 .. code-block::
-  :caption: squared.lib.dom
+  :caption: squared.lib
+
+  /* dom */
 
   type PseudoElt = "::target-text";
   type PseudoStyleElt = "::target-text"; // PseudoDocumentElt
+
+  /* util */
+
+  function hasKeys(obj: object, prefix?: string): boolean; // prefix
+
+.. code-block::
+  :caption: squared.svg.util
+
+  const TRANSFORM: {
+      parse(element: SVGElement, options: SvgTransformParseOptions): SvgTransform[] | null; // options
+  };
 
 .. code-block::
   :caption: android.base
@@ -181,4 +208,8 @@ CHANGED
   class Resource {
       static addRawAsset(resourceId: number, type: ResourceRawAsset | "images", name: string, value: unknown, options?: InsertStoredAssetOptions): string; // options
       addImageSet(resourceId: number, images: StringMap, options?: AddImageOptions): string; // options
+  }
+
+  class NodeUI {
+      static baseline(list: NodeUI[], options: BaselineOptions): NodeUI | null; // options
   }

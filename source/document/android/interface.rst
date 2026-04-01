@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 105,171,188,235,271-272,280-281,287
+  :emphasize-lines: 96,106,172,189,236,272-273,281-282,288
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -102,6 +102,7 @@ Interface
       flex(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getPositionOffset(name: "sticky"): Point;
+      getFontSizeAdjust(fontFamily: string, fontSize?: number, fallback?: number): number;
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt | PseudoStyleWebkitElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
       setFontVariantAlternates(fontFamily: string): void;
@@ -334,6 +335,16 @@ Interface
 Changelog
 =========
 
+.. versionadded:: 5.8.0
+
+  - *NodeUI* method **getFontSizeAdjust** for rescaling font bounding box differences was created.
+  - *NodeUI* method **datasetValue** for retrieving namespaced data attributes was created.
+  - *NodeUI* property getter **scalableElement** for elements which can adjust to different resolutions was created.
+  - *NodeUI* property getter **inlineBlock** for validating an ":lower:`inline-block`" alignment was created.
+  - *NodeUI* property getter **metadata** for extra backend processing information was created.
+  - *View* method **getLayoutConstraint** for non-default :alt:`(e.g. start)` orientation bias was created.
+  - *View* method **hasConstraint** for checking layout space allocation as ":lower:`spread`" | ":lower:`wrap`" | ":lower:`percent`" was created.
+
 .. versionadded:: 5.7.3
 
   - *View* method **setTextAlign** for style property ``text-align`` was created.
@@ -359,8 +370,8 @@ Changelog
   - *NodeUI* method **setFontVariantAlternates** for system resolved font family was created.
   - *NodeUI* property getter **fontVariantAlternates** for usage of alternate glyphs was created.
   - *NodeUI* property getter **fontSynthesis** for available rendering capabilities was created.
-  - *View* property getter **companionStyle** for input labels was created.
-  - *View* property getter **emojiContainer** for supported views was created.
+  - *View* property getter **companionStyle** for wrapped input labels was created.
+  - *View* property getter **emojiContainer** for views that can display emoji characters was created.
 
 .. versionchanged:: 5.5.2
 
