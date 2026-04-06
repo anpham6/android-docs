@@ -50,15 +50,3 @@ CHANGED
   :caption: squared.lib.dom
 
   function createElement(tagName: string | HTMLElement, options: CreateElementOptions): HTMLElement; // HTMLElement
-
-.. rst-class:: release-notes
-
-DEPRECATED
-==========
-
-.. code-block::
-  :caption: squared.base
-
-  interface AppProjectUI {
-      firstLetterValue?: Map<Element, string>; // Will be renamed
-  }

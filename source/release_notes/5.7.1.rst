@@ -96,6 +96,13 @@ ADDED
       get translatable(): boolean;
   }
 
+.. code-block::
+  :caption: android.lib
+
+  const SUPPORT_TAGNAME_X: {
+      VIEW_PAGER: string;
+  };
+
 .. rst-class:: release-notes
 
 CHANGED

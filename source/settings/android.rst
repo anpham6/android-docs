@@ -43,7 +43,7 @@ Interface
       manifestThemeName: string;
       manifestParentThemeName: string;
       createManifest: boolean;
-      createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation")[];
+      createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation" | "navigation-v3")[];
       outputMainFileName: string;
       outputFragmentFileName: string;
       resolutionDPI?: number;
@@ -184,7 +184,7 @@ Example usage
     outputDirectory: "app/src/main",
     createManifest: false, // Update AndroidManifest.xml
     createBuildDependencies: false, // build.gradle
-    createBuildDependencies: ["ktx", "baseline-profile", "navigation"]
+    createBuildDependencies: ["ktx", "baseline-profile", "navigation", "navigation-v3"]
   };
 
 .. code-block::
