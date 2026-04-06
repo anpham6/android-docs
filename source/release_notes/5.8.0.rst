@@ -60,6 +60,10 @@ ADDED
 
   /* css */
 
+  interface CSSStyleDeclaration {
+      textDecorationInset: string;
+  }
+
   interface ParseUnitOptions {
       typedOM?: boolean;
   }
@@ -102,7 +106,7 @@ ADDED
   :caption: squared.lib.base
 
   class Container {
-      concat(list: unknown[] | Container): this;
+      concat(list: unknown[] | Container): unknown[];
   }
 
 .. code-block::
@@ -210,6 +214,161 @@ CHANGED
       addImageSet(resourceId: number, images: StringMap, options?: AddImageOptions): string; // options
   }
 
+  class Node {
+      descend(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node[];
+      descendOne(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node | undefined;
+  }
+
   class NodeUI {
       static baseline(list: NodeUI[], options: BaselineOptions): NodeUI | null; // options
   }
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  interface FinalizeDataExtensionUI {} // AppProjectUI
+
+  interface AppProcessing {
+      containerName: ObjectMap<WeakMap<HTMLElement, ContainerData>>;
+  }
+
+  class ControllerUI {
+      optimize(rendered: NodeUI[], project?: AppProjectUI): Promise<void>; // optimize(project)
+      finalize(layouts: FileAsset[], project?: AppProjectUI): Promise<void>; // finalize(project)
+  }
+
+  class Resource {
+      get mimeTypeMap(): ObjectMap<MIMEOrAll>;
+  }
+
+  class ResourceUI {
+      writeRawSvg(resourceId: number, element: SVGSVGElement, dimension?: Dimension): string;
+      get STRING_SPACE(): string; // characterMap
+      get STRING_NEWLINE(): string;
+      get STRING_WBR(): string;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* css */
+
+  function parseKeyframes(rules: CSSRuleList): KeyframeData | null; // Node.keyframes
+  function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // svg.lib
+  function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap; // NodeUI.elementData.fontFeatureValues
+  function parseBorderRadius(value: string, options?: ParseBorderRadiusOptions): BoxOf<number>[] | null; // svg.lib
+
+  /* regex */
+
+  const DOM: {
+      PRE_IDENT: RegExp;
+  };
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      REGEXP: {
+          DOT_ALL: boolean;
+          LOOK_BEHIND: boolean;
+          NAMED_CAPTURE_GROUPS: boolean;
+          HAS_INDICES: boolean;
+      };
+      PROMISE: {
+          FINALLY: boolean;
+          ALL_SETTLED: boolean;
+          ANY: boolean;
+      };
+      RULES: {
+          STYLE_SHEET: boolean;
+      };
+      FONT: {
+          ACTUAL_BOUNDING_BOX: boolean;
+          BOUNDING_BOX: boolean;
+      };
+      CONSTRUCTOR: {
+          INTL_SEGMENTER: boolean;
+      };
+  }
+
+  /* css */
+
+  interface MatchContainerOptions {
+      conditionStyle?: boolean; // prefix
+  }
+
+  interface CalculateVarAsStringOptions {
+      errorString?: RegExp;
+  }
+
+  function calculateStyle(element: StyleElement, attr: string, value: string, boundingBox?: Dimension | null, percent?: boolean): string; // boundingBox | percent
+
+  /* dom */
+
+  interface ContainerData {
+      descendantOf?: HTMLElement[];
+  }
+
+  /* regex */
+
+  const CSS: {
+      LIGHT_DARK: RegExp;
+  };
+
+  /* util */
+
+  function cloneObject(data: object, options?: CloneObjectOptions<object>): object; // structuredClone
+  function replaceAll(value: string, searchValue: string, replaceWith: string, replaceCount?: number): string; // String.replaceAll
+  function concatArray(list: unknown[], appending: unknown[]): unknown[]; // Array.concat
+  function joinArray(list: ArrayBase<unknown>, predicate: IteratorPredicate<unknown, string>, char?: string): string; // String.join
+
+.. code-block::
+  :caption: squared.svg
+
+  class Svg {
+      keyframesMap?: KeyframesMap; // keyframes
+  }
+
+.. code-block::
+  :caption: android.base
+
+  class Resource {
+      static findStoredAsset(resourceId: number, type: string, name: string, remove?: boolean): unknown; // options
+      addImageSet(resourceId: number, images: StringMap, prefix?: string): string; // options
+  }
+
+.. code-block::
+  :caption: android.lib.util
+
+  function getDataSet(dataset: StringMap | DOMStringMap, prefix: string): StringMap | undefined; // squared.lib.base
+
+.. code-block::
+  :caption: chrome.base
+
+  interface DocumentOutput {
+      useSessionCache?: boolean; // "false" to disable
+  }
+
+.. rst-class:: release-notes
+
+DELETED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface ElementSettingsUI {}
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const CONTAINER_ELEMENT: {
+      FENCEDFRAME: number;
+  };

@@ -13,6 +13,7 @@ Interface
       item(index: number, value?: T): T | undefined;
       add(item: T): this;
       addAll(list: T[] | Container): this;
+      concat(list: T[] | Container): T[];
       remove(item: T): T | undefined;
       removeAll(list: T[] | Container): T[];
       retainAs(list: T[]): this;
@@ -52,8 +53,8 @@ Interface
       resetState(): void;
       ascend(options?: AscendParameterOptions<Node, NodeParentAttr>, attr?: boolean | string | ((item: Node) => boolean), error?: (item: Node) => boolean): Node[];
       ascendOne(options?: AscendParameterOptions<Node, NodeParentAttr>, attr?: boolean | string | ((item: Node) => boolean), error?: (item: Node) => boolean): Node | undefined;
-      descend(options?: DescendParameterOptions<Node>): Node[];
-      descendOne(options?: DescendParameterOptions<Node>): Node | undefined;
+      descend(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node[];
+      descendOne(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node | undefined;
       intersectX(rect: BoxRectDimension, options?: CoordsXYOptions): boolean;
       intersectY(rect: BoxRectDimension, options?: CoordsXYOptions): boolean;
       withinX(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
@@ -251,6 +252,14 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.8.0
+
+  - *Container* method **concat** for using a new array when appending items was created.
+
+.. versionchanged:: 5.8.0
+
+  - *Node* method **descend** | **descendOne** argument :target:`error` as :alt:`(item: Node) => boolean` was implemented.
 
 .. versionadded:: 5.7.1
 
