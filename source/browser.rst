@@ -12,21 +12,21 @@ android
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2022)`
+- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2022/Chrome 85)`
 
 chrome
 ------
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022)`
+- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022/Chrome 98)`
 
 vdom
 ----
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base-dom.min.js
-- https://unpkg.com/squared/dist/vdom.framework.min.js
+- https://unpkg.com/squared/dist/vdom.framework.min.js :alt:`(ES2018/Chrome 55)`
 
 .. _browser-download-vdom-lite:
 
