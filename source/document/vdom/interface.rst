@@ -39,7 +39,7 @@ Interface
       static readonly TEXT_STYLE: string[];
       static boxValueOf(node: Node, attr: BoxModelAttr, options?: CssUnitOptions): number;
       static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode: string | undefined, output: CssStyleMap | undefined, elementData: ElementData | undefined): CssStyleMap;
-      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, override?: boolean | ElementData): CssStyleMap;
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, override?: boolean): CssStyleMap;
       readonly id: number;
       readonly sessionId: string;
       setParent(parent: Node | null, depth?: number, index?: number): void;

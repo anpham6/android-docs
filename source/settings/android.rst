@@ -83,7 +83,7 @@ Changelog
 
 .. versionadded:: 5.2.0
 
-  - *UserResourceSettingsUI* property **showAttributes** accepts a :alt:`ObjectMap` to globally replace layout attributes.
+  - *UserResourceSettingsUI* property **showAttributes** accepts an :alt:`Record<string, unknown>` to globally replace layout attributes.
   - *UserResourceSettingsUI* property **resourceSystemColors** for device color translation mapping was created.
   - **ExtensionFragmentElement** extends the interface :target:`ViewAttribute`.
 

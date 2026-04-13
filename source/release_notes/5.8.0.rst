@@ -8,6 +8,22 @@
 
 .. rst-class:: release-notes
 
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  type Specificity = [number, number, number, number] | [number, number, number, number, number, number]; // [3] | [5] = 0:named,1:unnamed,2:global 
+
+  /* internal */
+
+  function getSpecificity(value: string, layer?: 0 | 1 | 2): Specificity; // layer
+
+.. rst-class:: release-notes
+
 ADDED
 =====
 
@@ -24,6 +40,15 @@ ADDED
       inlineBlock?: boolean;
   }
 
+  interface DescendOptions {
+      matches?: string;
+  }
+
+  interface AscendOptions {
+      closest?: string;
+      matches?: string;
+  }
+
   interface NodeParseUnitOptions {
       fromFont?: boolean;
   }
@@ -31,11 +56,13 @@ ADDED
   class ResourceUI {
       static appendId(resourceId: number, section: string, name: string): boolean;
       characterMap: StringMap;
+      placeholderIntl: Record<string, StringMap>;
+      getInputPlaceholder(type: string, languages: string[], fallback?: string): string;
   }
 
   class NodeUI {
       getFontSizeAdjust(fontFamily: string, fontSize?: number, fallback?: number): number;
-      datasetValue(name: string): string | undefined;
+      datasetValue(name: string, global?: boolean): string | undefined;
       get scalableElement(): boolean;
       get inlineBlock(): boolean;
       get metadata(): PlainObject | null;
@@ -55,13 +82,17 @@ ADDED
   /* constant */
 
   const enum CSS_UNIT {
-      RESOLUTION = 1 << 6
+      RESOLUTION = 64
   }
 
   /* css */
 
   interface CSSStyleDeclaration {
       textDecorationInset: string;
+  }
+
+  inteface CssPropertyData {
+      also?: CssStyleAttr;
   }
 
   interface ParseUnitOptions {
@@ -74,8 +105,8 @@ ADDED
 
   function findContainerType(element: Element, conditionText: string, name?: string): ContainerData | null;
   function parseConditional(element: HTMLElement | SVGElement, attr: CssStyleAttr, value: string): string;
+  function hasCustomFunction(value: string): boolean;
   function hasConditional(value: string): boolean;
-  function hasFunction(value: string): boolean;
   function isResolution(value: string): boolean;
 
   /* dom */
@@ -122,6 +153,8 @@ ADDED
   const TRANSFORM: {
       typeAsReset(type: number | string): string;
   };
+
+  function formatSkew(value: string, type?: number): string;
 
 .. code-block::
   :caption: android.base
@@ -190,6 +223,10 @@ CHANGED
   type PseudoElt = "::target-text";
   type PseudoStyleElt = "::target-text"; // PseudoDocumentElt
 
+  /* internal */
+
+  function performQuerySelector(value: string, documentRoot: SelectorRoot, type: 0 | 1 | 2 | 4 | 8, shadowRoot?: ShadowRoot | null, sessionId?: string): ArrayLike<Element>; // sessionId
+
   /* util */
 
   function hasKeys(obj: object, prefix?: string): boolean; // prefix
@@ -234,7 +271,8 @@ DEPRECATED
   interface FinalizeDataExtensionUI {} // AppProjectUI
 
   interface AppProcessing {
-      containerName: ObjectMap<WeakMap<HTMLElement, ContainerData>>;
+      containerName: Record<string, WeakMap<HTMLElement, ContainerData>>;
+      styleMap?: Record<string, CssStyleMap | Record<string, [string, boolean]>> | null;
   }
 
   class ControllerUI {
@@ -243,7 +281,7 @@ DEPRECATED
   }
 
   class Resource {
-      get mimeTypeMap(): ObjectMap<MIMEOrAll>;
+      get mimeTypeMap(): Record<string, MIMEOrAll>;
   }
 
   class ResourceUI {
@@ -268,6 +306,10 @@ DEPRECATED
   const DOM: {
       PRE_IDENT: RegExp;
   };
+
+  /* util */
+
+  function splitAll(value: string, char: string, trim?: boolean): string[];
 
 .. code-block::
   :caption: squared.lib
@@ -299,6 +341,10 @@ DEPRECATED
   }
 
   /* css */
+
+  interface StyleSheetOptions {
+      context?: string;
+  }
 
   interface MatchContainerOptions {
       conditionStyle?: boolean; // prefix
@@ -335,6 +381,12 @@ DEPRECATED
   class Svg {
       keyframesMap?: KeyframesMap; // keyframes
   }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  function getAttribute(element: SVGElement, attr: string, computed?: boolean, named?: boolean): string; // named
+  function getParentAttribute(element: SVGElement, attr: string, computed?: boolean, named?: boolean): string;
 
 .. code-block::
   :caption: android.base

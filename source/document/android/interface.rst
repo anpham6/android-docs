@@ -112,7 +112,7 @@ Interface
       getComments(type: ReferenceType, attrs?: CssStyleAttr[]): [string, string];
       cssValue(attr: CssStyleAttr): string;
       cssValues(...attrs: CssStyleAttr[]): string[];
-      datasetValue(name: string): string | undefined;
+      datasetValue(name: string, global?: boolean): string | undefined;
       set documentRoot(value);
       get documentRoot(): boolean;
       set depth(value);
