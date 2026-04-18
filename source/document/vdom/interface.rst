@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 31-32,109-111,132,229
+  :emphasize-lines: 7,45-48
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -260,6 +260,8 @@ Changelog
 .. versionchanged:: 5.8.0
 
   - *Node* method **descend** | **descendOne** argument :target:`error` as :alt:`(item: Node) => boolean` was implemented.
+  - *Node* method **ascend** | **ascendOne** | **descend** | **descendOne** options :target:`matches` as :alt:`string` in :alt:`DescendOptions` was implemented.
+  - *Node* method **ascend** | **ascendOne** options :target:`closest` as :alt:`string` in :alt:`AscendOptions` was implemented.
 
 .. versionadded:: 5.7.1
 

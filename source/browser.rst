@@ -93,7 +93,7 @@ Possibly hundreds of files with all exports and core methods. It is not recommen
     import { parseDocument } from "squared/android.js";
   <script>
 
-.. tip:: The traditional **UMD** namespaced global reference :target:`squared` will load and execute faster than **ESM**. It is also available inside *DevTools* when issuing an arbitrary command.
+.. tip:: The traditional **UMD** namespaced global reference :target:`squared` will load and execute faster than **ESM**. It is always available inside *DevTools* to issue arbitrary commands.
 
 .. [#] android | chrome | vdom
 .. [#] android

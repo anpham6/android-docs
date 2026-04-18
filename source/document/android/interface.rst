@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 96,106,172,189,236,272-273,281-282,288
+  :emphasize-lines: 31,97,107,173,175,191,238,274-275,283-284,290
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -37,6 +37,7 @@ Interface
       alignParent(...position: AnchorPositionAttr[]): boolean;
       alignSibling(position: AnchorPositionAttr, documentId?: string): string;
       anchorChain(...values: PositionAttr[]): NodeUI[];
+      anchorSibling(orientation: OrientationAttr, documentId?: string): [AnchorPositionAttr, string][];
       localizeString(value: string): string;
       inherit(node: NodeUI, ...modules: string[]): PlainObject | null;
       inheritApply(module: string, data: PlainObject): void;
@@ -180,6 +181,7 @@ Interface
       get extensions(): string[];
       get scalableElement(): boolean;
       get scrollElement(): boolean;
+      get modalElement(): boolean;
       get controlElement(): boolean;
       get imageContainer(): boolean;
       get baselineHeight(): number;
@@ -339,7 +341,9 @@ Changelog
 
   - *NodeUI* method **getFontSizeAdjust** for rescaling font bounding box differences was created.
   - *NodeUI* method **datasetValue** for retrieving namespaced data attributes was created.
+  - *NodeUI* method **anchorSibling** for every connected sibling by orientation was created.
   - *NodeUI* property getter **scalableElement** for elements which can adjust to different resolutions was created.
+  - *NodeUI* property getter **modalElement** for elements which are in the top layer was created.
   - *NodeUI* property getter **inlineBlock** for validating an ":lower:`inline-block`" alignment was created.
   - *NodeUI* property getter **metadata** for extra backend processing information was created.
   - *View* method **getLayoutConstraint** for non-default :alt:`(e.g. start)` orientation bias was created.
