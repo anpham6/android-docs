@@ -87,9 +87,12 @@ Interface
 ---------
 
 .. code-block::
+  :emphasize-lines: 3-4
 
   interface DocumentOutput {
       targetAPI?: number | string;
+      resolutionScreenWidth?: number;
+      resolutionScreenHeight?: number;
       manifest?: ManifestData;
       namespace?: string;
       applicationId?: string;
@@ -115,6 +118,10 @@ Interface
 Changelog
 ---------
 
+.. versionadded:: 5.8.0
+
+  - *DocumentOutput* property **resolutionScreenWidth** | **resolutionScreenHeight** for overriding the equivalent settings property was created.
+
 .. versionadded:: 5.3.0
 
   - *DocumentOutput* property **jvmToolchain** for :alt:`build.gradle` upgrades was created.
@@ -131,7 +138,7 @@ Example usage
 .. code-block:: javascript
 
   squared.saveAs("android.zip", {
-    targetAPI: 36, // Override settings.targetAPI
+    targetAPI: 37, // Override settings.targetAPI
     targetAPI: 0, // "buildToolsVersion"
     targetAPI: "Tiramisu", // "buildToolsVersion-Tiramisu"
     manifest: {

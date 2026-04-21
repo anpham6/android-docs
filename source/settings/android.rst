@@ -6,7 +6,7 @@ Interface
 =========
 
 .. code-block:: typescript
-  :emphasize-lines: 36
+  :emphasize-lines: 37
 
   interface UserResourceSettingsUI {
       targetAPI: number;
@@ -44,6 +44,7 @@ Interface
       manifestParentThemeName: string;
       createManifest: boolean;
       createBuildDependencies: boolean | ("ktx" | "baseline-profile" | "navigation" | "navigation-v3")[];
+      createResourceIds: string | string[] | undefined; // "android" | "compose" | "fragment" | "drawable" | "animated-drawable";
       outputMainFileName: string;
       outputFragmentFileName: string;
       resolutionDPI?: number;
@@ -58,6 +59,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.8.0
+
+  - *UserResourceSettingsUI* property **createResourceIds** for external layout :target:`@id` generation was created.
 
 .. versionadded:: 5.7.0
 
@@ -94,7 +99,7 @@ Example usage
   :caption: Customizable (project/all)
 
   squared.settings = {
-    targetAPI: 36,
+    targetAPI: 37,
     resolutionDPI: 160, // 320dpi = 2560x1600
     resolutionScreenWidth: 1280,
     resolutionScreenHeight: 800,
@@ -136,6 +141,7 @@ Example usage
     preferMaterialDesign: true, // "Material3"
     preferMaterialDesign: "MaterialComponents",
     createDownloadableFonts: true,
+    createResourceIds: ["compose", "fragment"], // res/values/ids.xml
     createElementMap: false, // Cache not used with NodeUI
     pierceShadowRoot: true,
     adaptStyleMap: true, // Use rendered values for output

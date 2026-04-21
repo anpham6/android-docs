@@ -16,7 +16,7 @@ Example usage
   <script src="/dist/squared.svg.min.js"></script>
   <script src="/dist/android.framework.min.js"></script>
   <script>
-    squared.settings.targetAPI = 35; // Optional
+    squared.settings.targetAPI = 37; // Optional
 
     document.addEventListener("DOMContentLoaded", async () => {
       squared.setFramework(android, {/* UserResourceSettingsUI */});
@@ -48,7 +48,8 @@ Example usage
             color: undefined,
             dimension: undefined,
             style: undefined,
-            theme: undefined
+            theme: undefined,
+            ids: undefined
           },
           excludeQuery: [
             { selector: "main > article" }, // Hide elements
@@ -137,7 +138,7 @@ Example usage
     const blue = parseColor("#0000FF");
 
     document.addEventListener("DOMContentLoaded", async () => {
-      userSettings({ targetAPI: 36, createManifest: true, createBuildDependencies: true }); // Optional
+      userSettings({ targetAPI: 37, createManifest: true, createBuildDependencies: true }); // Optional
 
       await parseDocument();
       /* OR */
@@ -162,7 +163,7 @@ Example usage
     import { android, appendTo, close, copyTo, parseDocument, reset, save, saveAs, userSettings } from "/dist/android.mjs";
 
     document.addEventListener("DOMContentLoaded", async () => {
-      userSettings({ targetAPI: 36, createManifest: true, createBuildDependencies: true }); // Optional
+      userSettings({ targetAPI: 37, createManifest: true, createBuildDependencies: true }); // Optional
 
       await parseDocument();
       /* OR */

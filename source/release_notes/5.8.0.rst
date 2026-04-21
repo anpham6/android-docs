@@ -175,6 +175,11 @@ ADDED
       createBuildDependencies: "navigation-v3";
   }
 
+  interface DocumentOutput {
+      resolutionScreenWidth?: number; // copyTo | saveAs (override)
+      resolutionScreenHeight?: number;
+  }
+
   interface ControllerSettingsUI {
       filename: {
           id: string;

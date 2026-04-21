@@ -20,7 +20,7 @@ These are the latest server default settings for the :target:`android` framework
           "@pi-r/android/extensions/task"
         ],
         "versions": {
-          "org.jetbrains.kotlin:kotlin-stdlib": "23.10.0",
+          "org.jetbrains.kotlin:kotlin-stdlib": "23.20.0",
           "buildToolsVersion": ""
         },
         "settings": {
