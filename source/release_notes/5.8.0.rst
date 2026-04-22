@@ -120,9 +120,10 @@ ADDED
 
   /* dom */
 
-  type PseudoDocumentElt = "::view-transition";
-  type PseudoStyleElt = "::search-text" | "::search-text:current";
-  type PseudoQueryElt = "::cue(string)" | "::highlight(string)";
+  type PseudoDocumentElt = PseudoScrollElt | "::picker(select)" | "::picker-icon" | "::checkmark";
+  type PseudoStyleElt = "::search-text" | "::view-transition";
+  type PseudoQueryElt = "::cue(string)" | "::highlight(string)" | "view-transition-group(string)" | "::view-transition-image-pair(string)" | "::view-transition-new(string)" | "::view-transition-old(string)";
+  type PseudoScrollElt = "::scroll-marker-group" | "::scroll-marker" | "::scroll-button(top)" | "::scroll-button(right)" | "::scroll-button(bottom)" | "::scroll-button(left)" | "::scroll-button(block-start)" | "::scroll-button(block-end)" | "::scroll-button(inline-start)" | "::scroll-button(inline-end)";
 
   interface ContainerData {
       conditionText?: string;

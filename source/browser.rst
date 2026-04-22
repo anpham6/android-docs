@@ -19,7 +19,7 @@ chrome
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022/Chrome 98)`
+- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022/Chrome 85)`
 
 vdom
 ----
