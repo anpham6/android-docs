@@ -19,7 +19,7 @@ chrome
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022/Chrome 98)`
+- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022/Chrome 85)`
 
 vdom
 ----
@@ -93,7 +93,7 @@ Possibly hundreds of files with all exports and core methods. It is not recommen
     import { parseDocument } from "squared/android.js";
   <script>
 
-.. tip:: The traditional **UMD** namespaced global reference :target:`squared` will load and execute faster than **ESM**. It is always available inside *DevTools* to issue arbitrary commands.
+.. tip:: The traditional **UMD** namespaced global reference :target:`squared` will load and execute much faster than **ESM**. It is also fully available inside *DevTools* to issue arbitrary commands without typing out every import path.
 
 .. [#] android | chrome | vdom
 .. [#] android

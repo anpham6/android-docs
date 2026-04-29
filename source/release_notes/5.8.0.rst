@@ -120,9 +120,10 @@ ADDED
 
   /* dom */
 
-  type PseudoDocumentElt = "::view-transition";
-  type PseudoStyleElt = "::search-text" | "::search-text:current";
-  type PseudoQueryElt = "::cue(string)" | "::highlight(string)";
+  type PseudoDocumentElt = PseudoScrollElt | "::picker(select)" | "::picker-icon" | "::checkmark";
+  type PseudoStyleElt = "::search-text" | "::view-transition";
+  type PseudoQueryElt = "::cue(string)" | "::highlight(string)" | "view-transition-group(string)" | "::view-transition-image-pair(string)" | "::view-transition-new(string)" | "::view-transition-old(string)";
+  type PseudoScrollElt = "::scroll-marker-group" | "::scroll-marker" | "::scroll-button(top)" | "::scroll-button(right)" | "::scroll-button(bottom)" | "::scroll-button(left)" | "::scroll-button(block-start)" | "::scroll-button(block-end)" | "::scroll-button(inline-start)" | "::scroll-button(inline-end)";
 
   interface ContainerData {
       conditionText?: string;
@@ -154,6 +155,14 @@ ADDED
 .. code-block::
   :caption: squared.svg
 
+  class Svg {
+      shadowHost: ShadowRoot | null;
+  }
+
+  class SvgAnimation {
+      shadowHost: ShadowRoot | null;
+  }
+
   class SvgAnimate {
       insertAt(time: number, value: string, index?: number): void;
   }
@@ -165,6 +174,7 @@ ADDED
       typeAsReset(type: number | string): string;
   };
 
+  function getTargetElement(element: SVGElement, rootElement?: SVGSVGElement | null, shadowRoot?: ShadowRoot | null, contentMap?: StringMap | null): SVGElement | null; // shadowRoot
   function formatSkew(value: string, type?: number): string;
 
 .. code-block::
@@ -292,8 +302,8 @@ DEPRECATED
   }
 
   class ControllerUI {
-      optimize(rendered: NodeUI[], project?: AppProjectUI): Promise<void>; // optimize(project)
-      finalize(layouts: FileAsset[], project?: AppProjectUI): Promise<void>; // finalize(project)
+      optimize(rendered: NodeUI[], project?: AppProjectUI): Promise<void>;
+      finalize(layouts: FileAsset[], project?: AppProjectUI): Promise<void>;
   }
 
   class Resource {
@@ -387,7 +397,6 @@ DEPRECATED
 
   /* util */
 
-  function cloneObject(data: object, options?: CloneObjectOptions<object>): object; // structuredClone
   function replaceAll(value: string, searchValue: string, replaceWith: string, replaceCount?: number): string; // String.replaceAll
   function concatArray(list: unknown[], appending: unknown[]): unknown[]; // Array.concat
   function joinArray(list: ArrayBase<unknown>, predicate: IteratorPredicate<unknown, string>, char?: string): string; // String.join
