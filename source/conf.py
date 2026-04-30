@@ -9,7 +9,7 @@
 project = 'squared'
 copyright = 'squared 2026'
 author = 'An Pham'
-release = '5.7.3'
+release = '5.8.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -52,7 +52,7 @@ rst_prolog = """
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/006.png)',
+  'style_nav_header_background': 'url(https://squared.readthedocs.io/en/latest/_static/places/007.png)',
   'navigation_depth': 3,
   'includehidden': False,
 }

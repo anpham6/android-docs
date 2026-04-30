@@ -12,7 +12,7 @@ Types
   5.5.x    5.8.3
   5.6.x    5.9.2
   5.7.x    5.9.3
-  5.8.x    6.0.2
+  5.8.x    6.0.3
 ========= =======
 
 Installation
@@ -40,4 +40,4 @@ tsconfig.json
     }
   }
 
-You can do the same thing with **squared-express 4.0** using :target:`typeRoot` ``node_modules/squared-express`` and the :target:`UMD` global ``sqex``.
+.. tip:: You can do the same thing with **squared-express 4.0** using :target:`typeRoot` ``node_modules/squared-express`` and the :target:`UMD` global ``sqex``.

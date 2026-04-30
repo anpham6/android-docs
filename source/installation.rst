@@ -122,7 +122,7 @@ Repo
   mkdir workspaces
   cd workspaces           # REPO_ROOT
 
-  curl -o Rakefile https://github.com/anpham6/squared-repo/Rakefile
+  curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared-repo/master/Rakefile
 
   rake -T                 # List tasks
 
@@ -164,7 +164,7 @@ Docker
 GitHub Codespaces
 -----------------
 
-- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.7.0&repo=162848626&skip_quickstart=true>`_
+- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.8.0&repo=162848626&skip_quickstart=true>`_
 
 .. code-block::
 
