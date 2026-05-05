@@ -43,7 +43,9 @@ Interface
       modules?: string[];
       update?: WatchInterval;
       incremental?: boolean | "none" | "staging" | "etag" | "exists";
-      checksum?: string | boolean | 1 | ChecksumOutput;
+      checksum?: string | ChecksumOutput;
+      checksum?: boolean; // recursive
+      checksum?: 1; // recursive + ignore nested checksum files with same filename
       imports?: StringMap;
       headers?: OutgoingHeaders;
       watch?: boolean;
@@ -138,7 +140,7 @@ Example usage
 .. code-block:: javascript
 
   squared.saveAs("android.zip", {
-    targetAPI: 37, // Override settings.targetAPI
+    targetAPI: 36.1, // Override settings.targetAPI (minorApiLevel)
     targetAPI: 0, // "buildToolsVersion"
     targetAPI: "Tiramisu", // "buildToolsVersion-Tiramisu"
     manifest: {
@@ -207,7 +209,7 @@ Interface
 ---------
 
 .. code-block::
-  :emphasize-lines: 39
+  :emphasize-lines: 14,40
 
   interface FileActionOptions {
       baseHref?: URL;
@@ -222,6 +224,7 @@ Interface
           raw?: SaveAsOptions;
       };
       downloadOnly?: boolean;
+      packageExports?: boolean | string[];
       excluding?: HTMLElement[];
       observe?: true | MutationCallback;
       preserveCrossOrigin?: boolean | URLData;
@@ -279,6 +282,10 @@ Interface
 
 Changelog
 ---------
+
+.. versionadded:: 5.8.1
+
+  - *FileActionOptions* property **packageExports** for resolving relative imports and ":lower:`importmap`" specifiers was created.
 
 .. deprecated:: 5.8.0
 

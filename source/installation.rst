@@ -127,7 +127,7 @@ Repo
   rake -T                 # List tasks
 
   # REPO_BUILD={dev,prod}
-  # NODE_INSTALL={pnpm,yarn}
+  # NODE_INSTALL={yarn,pnpm@8}
   rake repo:init          # nightly
   # OR
   rake repo:init[latest]  # REPO_MANIFEST=latest
@@ -170,7 +170,7 @@ GitHub Codespaces
 
   sudo ./scripts/repo-install.sh
 
-  # NODE_INSTALL=pnpm
+  # NODE_INSTALL=yarn
   REPO_ROOT=/workspaces rake repo:init[0.14.x]
 
   rake repo:sync
