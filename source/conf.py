@@ -9,7 +9,7 @@
 project = 'squared'
 copyright = 'squared 2026'
 author = 'An Pham'
-release = '5.8.0'
+release = '5.8.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -62,7 +62,9 @@ html_extra_path = [
   '_static/places/002.png',
   '_static/places/003.png',
   '_static/places/004.png',
-  '_static/places/005.png'
+  '_static/places/005.png',
+  '_static/places/006.png',
+  '_static/places/007.png'
 ]
 html_css_files = ['role.css', 'content.css', 'highlight-abap.css', 'override.css']
 html_context = {

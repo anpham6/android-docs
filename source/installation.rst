@@ -132,6 +132,10 @@ Repo
   # OR
   rake repo:init[latest]  # REPO_MANIFEST=latest
 
+  # Docker
+  BUILD_DOCKER_OPTS="NODE_TAG=20" rake docker:build
+  rake docker-test:bake:build[node-release]
+
 .. rst-class:: installation-workspace
 
 .. code-block::
