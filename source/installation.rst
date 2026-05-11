@@ -141,7 +141,7 @@ Repo
 .. code-block::
   :caption: ~/workspaces
 
-  android-docs  chrome-docs  e-mc  pi-r  pi-r2  squared  squared-express
+  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
 
 Docker
 ------
