@@ -1,0 +1,64 @@
+=====
+5.8.2
+=====
+
+:right:`2026-07-05`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.lib
+
+  /* internal */
+
+  function removeURLRequestModifiers(value: string): string;
+
+  /* regex */
+
+  const STRING: {
+      CSS_COLORSTOP: string;
+      CSS_GRADIENT: string;
+  };
+
+  const CSS: {
+      LIGHT_DARK_IMAGE: RegExp;
+      SPLIT_IMAGE: RegExp;
+  };
+
+.. code-block::
+  :caption: chrome.base
+
+  interface DocumentOutput {
+      stripStyleComments?: boolean;
+  }
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.lib
+
+  /* constant */
+
+  const enum USER_AGENT {
+      OPERA = 32
+  }
+
+  /* internal */
+
+  function parseAngle(value: string, fallback?: number): number;
+  function convertAngle(value: string, unit?: string, fallback?: number): number;
+
+.. code-block::
+  :caption: squared.base.lib.regex
+
+  const STRING: {
+      CSS_COLORSTOP: string; // squared.lib.regex
+  };
