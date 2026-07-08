@@ -1,0 +1,65 @@
+=====
+5.8.3
+=====
+
+:right:`2026-07-08`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.lib.css
+
+  interface CalculateVarAsStringOptions {
+      ignoreKeywords?: string[];
+  }
+
+  function splitStyleValue(value: string, char?: string): string;
+
+.. code-block::
+  :caption: squared.svg.util
+
+  interface SvgDrawShapesOptions {
+      attr?: CssStyleAttr;
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base.lib.util
+
+  function trimBoth(value: string, trim: boolean): string; // trim
+  function trimString(value: string, pattern: string, single?: boolean): string; // single
+  function trimStart(value: string, pattern: string, single?: boolean): string;
+  function trimEnd(value: string, pattern: string, single?: boolean): string;
+
+.. code-block::
+  :caption: squared.svg.util
+
+  function getBoundingLength(element: SVGGraphicsElement, value: string, options: SvgBoundingLengthOptions): number; // options
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.lib.internal
+
+  const REGEXP_ANGLE: RegExp;
+
+.. code-block::
+  :caption: squared.svg.util
+
+  interface SvgDrawShapesOptions {
+      clipPath?: boolean; // attr
+  }
+
+  function getBoundingLength(element: SVGGraphicsElement, value: string, dimension?: number | DimensionAttr, geometryBox?: SvgGeometryBoxValue | number, precision?: number): number; // options
