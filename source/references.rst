@@ -12,6 +12,7 @@ squared
 
 https://unpkg.com/squared/types/type.d.ts
   | `IteratorPredicate <search.html?q=IteratorPredicate>`_
+  | `UnionOfArray <search.html?q=UnionOfArray>`_
   | `PlainObject <search.html?q=PlainObject>`_
   | `StringMap <search.html?q=StringMap>`_
 

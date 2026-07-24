@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 7,45-48
+  :emphasize-lines: 7,45-48,56
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -62,6 +62,7 @@ Interface
       outsideX(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
       outsideY(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
       as(target: typeof Element): InstanceType<typeof Element> | null;
+      any(...target: typeof Element[]): InstanceType<UnionOfArray<typeof Element[]>> | null;
       css(attr: CssStyleAttr, value?: string, cache?: boolean): string;
       cssInitial(attr: CssStyleAttr, options?: CssInitialOptions): string;
       cssAny(attr: CssStyleAttr, values: string[], options?: CssAnyOptions): boolean;
@@ -252,6 +253,10 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.8.4
+
+  - *Node* method **any** for the discriminated union of element instances was created.
 
 .. versionadded:: 5.8.0
 
