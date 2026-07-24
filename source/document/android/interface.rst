@@ -103,7 +103,7 @@ Interface
       flex(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getPositionOffset(name: "sticky"): Point;
-      getFontSizeAdjust(fontFamily: string, fontSize?: number, fallback?: number): number;
+      getFontSizeAdjust(fontFamily: string, fontSize?: number | null, fontRule?: number)
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
       getPseudoElement(name: PseudoElt | PseudoStyleElt | PseudoStyleWebkitElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
       setFontVariantAlternates(fontFamily: string): void;
@@ -336,6 +336,10 @@ Interface
 
 Changelog
 =========
+
+.. versionchanged:: 5.8.4
+
+  - *NodeUI* method **getFontSizeAdjust** argument :target:`fallback` was changed to :target:`fontRule`.
 
 .. versionadded:: 5.8.0
 

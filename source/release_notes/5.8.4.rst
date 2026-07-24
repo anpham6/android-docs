@@ -1,0 +1,63 @@
+=====
+5.8.4
+=====
+
+:right:`2026-08-06`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface FontFaceData {
+      fontVariationSettings?: string;
+      sizeAdjust?: number;
+  }
+
+.. code-block::
+  :caption: squared.base.lib.util
+
+  function trimQuote(value: string, inside?: boolean): string;
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  class NodeUI {
+      getFontSizeAdjust(fontFamily: string, fontSize?: number | null, fontRule?: number): number; // fontRule
+  }
+
+.. code-block::
+  :caption: squared.lib.util
+
+  interface SplitEnclosingOptions {
+      take?: number;
+  }
+
+  function splitEnclosing(value: string, take: number, options?: SplitEnclosingOptions): string[];
+  function splitEnclosing(value: string, trim: boolean, options?: SplitEnclosingOptions): string[];
+  function splitEnclosing(value: string, grouping: [string, string], options?: SplitEnclosingOptions): string[];
+  function splitEnclosing(value: string, pattern: string | RegExp, take: number, opening?: string, closing?: string): string[];
+  function splitEnclosing(value: string, pattern: string | RegExp, trim: boolean, opening?: string, closing?: string): string[];
+  function splitEnclosing(value: string, pattern?: string | RegExp | boolean | number | [string, string], options?: SplitEnclosingOptions | boolean | number, opening?: string, closing?: string): string[];
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: android.extension.resource.font
+
+  interface ResourceFontsOptions {
+      fontSizeAdjust: number;
+  }
