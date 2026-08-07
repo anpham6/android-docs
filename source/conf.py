@@ -9,7 +9,7 @@
 project = 'squared'
 copyright = 'squared 2026'
 author = 'An Pham'
-release = '5.8.3'
+release = '5.8.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
