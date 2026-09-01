@@ -5,7 +5,7 @@ Interface
 .. highlight:: typescript
 
 .. code-block::
-  :emphasize-lines: 83,198-199,232
+  :emphasize-lines: 31,97,107,173,175,191,238,274-275,283-284,290
 
   class NodeUI extends Node {
       static baseline(list: NodeUI[], text?: boolean, image?: boolean): NodeUI | null;
@@ -37,6 +37,7 @@ Interface
       alignParent(...position: AnchorPositionAttr[]): boolean;
       alignSibling(position: AnchorPositionAttr, documentId?: string): string;
       anchorChain(...values: PositionAttr[]): NodeUI[];
+      anchorSibling(orientation: OrientationAttr, documentId?: string): [AnchorPositionAttr, string][];
       localizeString(value: string): string;
       inherit(node: NodeUI, ...modules: string[]): PlainObject | null;
       inheritApply(module: string, data: PlainObject): void;
@@ -54,6 +55,7 @@ Interface
       lockAttr(name: string, attr: string): void;
       unlockAttr(name: string, attr: string): void;
       lockedAttr(name: string, attr: string): boolean;
+      joinAttr(name: string, attr: string, value: string, delim?: string): string;
       unsetCache(...attrs: (CssStyleAttr | keyof CacheValueUI)[]): void;
       addAlign(value: number): void;
       removeAlign(value: number): void;
@@ -101,8 +103,9 @@ Interface
       flex(attr: string, parent?: boolean | NodeUI, wrapped?: boolean): boolean | number | string;
       getBoxSpacing(region?: BOX_STANDARD): [number, number, number, number];
       getPositionOffset(name: "sticky"): Point;
+      getFontSizeAdjust(fontFamily: string, fontSize?: number | null, fontRule?: number);
       getAnchoredSiblings(orientation: OrientationAttr): NodeUI[];
-      getPseudoElement(name: PseudoElt | PseudoStyleElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
+      getPseudoElement(name: PseudoElt | PseudoStyleElt | PseudoStyleWebkitElt, attr?: CssStyleAttr, context?: string): CssStyleMap | string | null;
       setFontVariantAlternates(fontFamily: string): void;
       hasFixedDimension(dimension: DimensionAttr): boolean;
       isResizable(attr: DimensionSizableAttr, not?: string | string[]): boolean;
@@ -110,6 +113,7 @@ Interface
       getComments(type: ReferenceType, attrs?: CssStyleAttr[]): [string, string];
       cssValue(attr: CssStyleAttr): string;
       cssValues(...attrs: CssStyleAttr[]): string[];
+      datasetValue(name: string, global?: boolean): string | undefined;
       set documentRoot(value);
       get documentRoot(): boolean;
       set depth(value);
@@ -175,7 +179,9 @@ Interface
       set localSettings(value);
       get localSettings(): LocalSettingsUI;
       get extensions(): string[];
+      get scalableElement(): boolean;
       get scrollElement(): boolean;
+      get modalElement(): boolean;
       get controlElement(): boolean;
       get imageContainer(): boolean;
       get baselineHeight(): number;
@@ -191,6 +197,7 @@ Interface
       get blockVertical(): boolean;
       get blockDimension(): boolean;
       get inlineFlow(): boolean;
+      get inlineBlock(): boolean;
       get verticalAligned(): boolean;
       get variableWidth(): boolean;
       get variableHeight(): boolean;
@@ -237,6 +244,7 @@ Interface
       get fontSynthesis(): FontSynthesis;
       get alignContent(): "start" | "end" | "center" | "baseline" | "";
       get transformValue(): string;
+      get metadata(): PlainObject | null;
       get outerRegion(): BoxRectDimension;
       get boundingRegion(): BoxRectDimension;
       set locales(value);
@@ -272,6 +280,8 @@ Interface
       setLayoutWidth(value: string, overwrite?: boolean): void;
       setLayoutHeight(value: string, overwrite?: boolean): void;
       setLayoutPercent(value: string, horizontal?: boolean, includeMargin?: boolean): void;
+      setTextAlign(inherit: boolean): void;
+      setTextAlign(value?: string): void;
       setSingleLine(maxLines: boolean, ellipsize?: boolean): void;
       setConstraintDimension(percentAvailable?: number): number;
       setFlexDimension(dimension: DimensionAttr, percentAvailable?: number, weight?: number): number;
@@ -279,11 +289,14 @@ Interface
       getAnchorPosition(parent: View, horizontal: boolean, modifyAnchor?: boolean): Partial<BoxRect>;
       isUnstyled(checkMargin?: boolean): boolean;
       isAnchored(options: IsAnchoredOptions): boolean;
+      getLayoutConstraint(attr: "justifyContent" | "alignItems" | "alignContent", type: "flex", direction?: "row" | "column", all?: boolean): string;
+      getLayoutConstraint(attr: "justifyContent" | "alignItems" | "alignContent", type?: "flex" | "grid", all?: boolean): string;
       getHorizontalBias(rect?: BoxRect): number;
       getVerticalBias(rect?: BoxRect): number;
       getAbsolutePaddingOffset(region: number, value: number): number;
       getMarginPercent(horizontal: boolean): number;
       getPaddingPercent(horizontal: boolean): number;
+      hasConstraint(horizontal: boolean, type?: "spread" | "percent" | "wrap"): boolean;
       hasFlex(direction: LayoutDirectionAttr): boolean | 0;
       get labelForElement(): boolean;
       set anchored(value);
@@ -313,6 +326,8 @@ Interface
       get flexibleHorizontal(): boolean;
       get companionStyle(): boolean;
       get emojiContainer(): CONTAINER_NODE;
+      set translatable(value);
+      get translatable(): boolean;
       get watch(): WatchInterval | undefined;
       get tasks(): TaskCommand[] | undefined;
       get target(): HTMLElement | null;
@@ -321,6 +336,34 @@ Interface
 
 Changelog
 =========
+
+.. versionchanged:: 5.8.4
+
+  - *NodeUI* method **getFontSizeAdjust** argument :target:`fallback` was changed to :target:`fontRule`.
+
+.. versionadded:: 5.8.0
+
+  - *NodeUI* method **getFontSizeAdjust** for rescaling font bounding box differences was created.
+  - *NodeUI* method **datasetValue** for retrieving namespaced data attributes was created.
+  - *NodeUI* method **anchorSibling** for every connected sibling by orientation was created.
+  - *NodeUI* property getter **scalableElement** for elements which can adjust to different resolutions was created.
+  - *NodeUI* property getter **modalElement** for elements which are in the top layer was created.
+  - *NodeUI* property getter **inlineBlock** for validating an ":lower:`inline-block`" alignment was created.
+  - *NodeUI* property getter **metadata** for extra backend processing information was created.
+  - *View* method **getLayoutConstraint** for non-default :alt:`(e.g. start)` orientation bias was created.
+  - *View* method **hasConstraint** for checking layout space allocation as ":lower:`spread`" | ":lower:`wrap`" | ":lower:`percent`" was created.
+
+.. versionadded:: 5.7.3
+
+  - *View* method **setTextAlign** for style property ``text-align`` was created.
+
+.. versionadded:: 5.7.2
+
+  - *NodeUI* method **joinAttr** for appending values with a delimeter was created.
+
+.. versionadded:: 5.7.1
+
+  - *View* property accessor **translatable** for non-shared :target:`@string` resources was created.
 
 .. versionadded:: 5.6.4
 
@@ -335,8 +378,8 @@ Changelog
   - *NodeUI* method **setFontVariantAlternates** for system resolved font family was created.
   - *NodeUI* property getter **fontVariantAlternates** for usage of alternate glyphs was created.
   - *NodeUI* property getter **fontSynthesis** for available rendering capabilities was created.
-  - *View* property getter **companionStyle** for input labels was created.
-  - *View* property getter **emojiContainer** for supported views was created.
+  - *View* property getter **companionStyle** for wrapped input labels was created.
+  - *View* property getter **emojiContainer** for views that can display emoji characters was created.
 
 .. versionchanged:: 5.5.2
 

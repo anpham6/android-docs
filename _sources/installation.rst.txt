@@ -2,7 +2,7 @@
 Installation
 ============
 
-- NodeJS 18 LTS :alt:`(Minimum)`
+- NodeJS 18 :alt:`(Minimum)`
 
 NPX
 ===
@@ -69,11 +69,11 @@ GitHub
   node serve.js
 
 .. code-block::
-  :caption: dev - 5.7.0
+  :caption: dev - 5.8.0
 
   git clone https://github.com/anpham6/squared
   cd squared
-  git checkout 5.7.0
+  git checkout 5.8.0
 
   npm install
   npm run build:dev
@@ -82,7 +82,7 @@ GitHub
 
   git clone https://github.com/anpham6/squared-express
   cd squared-express
-  git checkout 4.1.0
+  git checkout 4.2.0
 
   npm install
   npm run dev
@@ -122,23 +122,26 @@ Repo
   mkdir workspaces
   cd workspaces           # REPO_ROOT
 
-  curl -o Rakefile https://unpkg.com/squared/Rakefile
+  curl -o Rakefile https://raw.githubusercontent.com/anpham6/squared-repo/master/Rakefile
 
   rake -T                 # List tasks
 
   # REPO_BUILD={dev,prod}
-  # FAIL_BUILD={0,1}
-  # NODE_INSTALL={pnpm,yarn}
+  # NODE_INSTALL={yarn,pnpm@8}
   rake repo:init          # nightly
   # OR
   rake repo:init[latest]  # REPO_MANIFEST=latest
+
+  # Docker
+  BUILD_DOCKER_OPTS="NODE_TAG=20" rake docker:build
+  rake docker-test:bake:build[node-release]
 
 .. rst-class:: installation-workspace
 
 .. code-block::
   :caption: ~/workspaces
 
-  android-docs  chrome-docs  e-mc  pi-r  pi-r2  squared  squared-express
+  android-docs  chrome-docs  e-mc  pi-r  squared  squared-express
 
 Docker
 ------
@@ -148,7 +151,7 @@ Docker
   curl -L -o Dockerfile https://unpkg.com/squared/Dockerfile
 
   # NODE_TAG=latest
-  # RUBY_VERSION=2.7.0-3.4.0
+  # RUBY_VERSION=2.5.0-4.0.0
   # PIPE_FAIL={0,1}
   # DOCS=any
   docker build -t squared --build-arg MANIFEST=prod --build-arg BUILD=prod .
@@ -165,22 +168,22 @@ Docker
 GitHub Codespaces
 -----------------
 
-- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.7.0&repo=162848626&skip_quickstart=true>`_
+- `Create <https://github.com/codespaces/new?hide_repo_select=true&ref=5.8.0&repo=162848626&skip_quickstart=true>`_
 
 .. code-block::
 
   sudo ./scripts/repo-install.sh
 
-  # NODE_INSTALL=pnpm
-  REPO_ROOT=/workspaces rake repo:init[0.13.x]
+  # NODE_INSTALL=yarn
+  REPO_ROOT=/workspaces rake repo:init[0.14.x]
 
   rake repo:sync
   # OR
-  rake emc:checkout:branch[0.13.0]    # once
-  rake pir:checkout:branch[0.11.0]
-  rake express:checkout:branch[4.1.0]
+  rake emc:checkout:branch[0.14.0]    # once
+  rake pir:checkout:branch[0.12.0]
+  rake express:checkout:branch[4.2.0]
   rake pull
 
 .. [#] https://source.android.com/docs/setup/download#installing-repo
 .. [#] https://source.android.com/docs/setup/reference/repo
-.. [#] https://www.ruby-lang.org/en/documentation/installation (2.4/3.0)
+.. [#] https://www.ruby-lang.org/en/documentation/installation (2.5/4.0)

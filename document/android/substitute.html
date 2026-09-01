@@ -6,20 +6,20 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Substitute &mdash; squared 5.7.0 documentation</title>
+  <title>Substitute &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=6762e766" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -114,22 +114,22 @@
 <h2>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
 <span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"android.substitute"</span><span class="p">],</span>
 <span class="w">  </span><span class="nx">substitutableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span>
-<span class="w">    </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#navigation&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">tag</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;com.google.android.material.tabs.TabLayout&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">tagChild</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;com.google.android.material.tabs.TabItem&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s2">"#navigation"</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">tag</span><span class="o">:</span><span class="w"> </span><span class="s2">"com.google.android.material.tabs.TabLayout"</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">tagChild</span><span class="o">:</span><span class="w"> </span><span class="s2">"com.google.android.material.tabs.TabItem"</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">tagChildAttr</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="hll"><span class="w">        </span><span class="nx">layout_height</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span>
+<span class="hll"><span class="w">        </span><span class="nx">layout_height</span><span class="o">:</span><span class="w"> </span><span class="s2">"match_parent"</span>
 </span><span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nx">renderChildren</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">autoLayout</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}]</span>
 <span class="p">});</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">navigation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;navigation&quot;</span><span class="p">);</span>
-<span class="hll"><span class="nx">navigation</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">&quot;layout_height&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">navigation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">"navigation"</span><span class="p">);</span>
+<span class="hll"><span class="nx">navigation</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">"layout_height"</span><span class="p">,</span><span class="w"> </span><span class="s2">"match_parent"</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <div class="admonition tip">
@@ -139,13 +139,13 @@
 </section>
 <section id="inline">
 <h2>Inline<a class="headerlink" href="#inline" title="Link to this heading"></a></h2>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;navigation&quot;</span>
-  <span class="na">data-use-android</span><span class="o">=</span><span class="s">&quot;android.substitute&quot;</span>
-<span class="hll">  <span class="na">data-android-attr</span><span class="o">=</span><span class="s">&quot;layout_height::match_parent&quot;</span>
-</span>  <span class="na">data-android-substitute-tag</span><span class="o">=</span><span class="s">&quot;com.google.android.material.tabs.TabLayout&quot;</span>
-  <span class="na">data-android-substitute-tag-child</span><span class="o">=</span><span class="s">&quot;com.google.android.material.tabs.TabItem&quot;</span>
-<span class="hll">  <span class="na">data-android-substitute-tag-child-attr</span><span class="o">=</span><span class="s">&quot;layout_height::match_parent&quot;</span>
-</span>  <span class="na">data-android-substitute-auto-layout</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">"navigation"</span>
+  <span class="na">data-use-android</span><span class="o">=</span><span class="s">"android.substitute"</span>
+<span class="hll">  <span class="na">data-android-attr</span><span class="o">=</span><span class="s">"layout_height::match_parent"</span>
+</span>  <span class="na">data-android-substitute-tag</span><span class="o">=</span><span class="s">"com.google.android.material.tabs.TabLayout"</span>
+  <span class="na">data-android-substitute-tag-child</span><span class="o">=</span><span class="s">"com.google.android.material.tabs.TabItem"</span>
+<span class="hll">  <span class="na">data-android-substitute-tag-child-attr</span><span class="o">=</span><span class="s">"layout_height::match_parent"</span>
+</span>  <span class="na">data-android-substitute-auto-layout</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>TAB 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>TAB 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>TAB 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -155,21 +155,21 @@
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Output</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;com.google.android.material.tabs.TabLayout</span>
-<span class="w">  </span><span class="na">android:id=</span><span class="s">&quot;@+id/navigation&quot;</span>
-<span class="w">  </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="w">  </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="na">android:id=</span><span class="s">"@+id/navigation"</span>
+<span class="w">  </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+<span class="w">  </span><span class="na">android:layout_width=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;com.google.android.material.tabs.TabItem</span>
-<span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
-<span class="w">    </span><span class="na">android:text=</span><span class="s">&quot;@string/tab_1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+<span class="w">    </span><span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+<span class="w">    </span><span class="na">android:text=</span><span class="s">"@string/tab_1"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;com.google.android.material.tabs.TabItem</span>
-<span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
-<span class="w">    </span><span class="na">android:text=</span><span class="s">&quot;@string/tab_2&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+<span class="w">    </span><span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+<span class="w">    </span><span class="na">android:text=</span><span class="s">"@string/tab_2"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;com.google.android.material.tabs.TabItem</span>
-<span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
-<span class="w">    </span><span class="na">android:text=</span><span class="s">&quot;@string/tab_3&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+<span class="w">    </span><span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+<span class="w">    </span><span class="na">android:text=</span><span class="s">"@string/tab_3"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/com.google.android.material.tabs.TabLayout&gt;</span>
 </pre></div>
 </div>

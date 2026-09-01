@@ -6,32 +6,32 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.7.0 &mdash; squared 5.7.0 documentation</title>
+  <title>5.7.0 &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=6762e766" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.6.0" href="5.6.0.html" />
-    <link rel="prev" title="Release Notes" href="index.html" /> 
+    <link rel="next" title="5.7.1" href="5.7.1.html" />
+    <link rel="prev" title="5.8.4" href="5.8.4.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -54,7 +54,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5.8.0.html">5.8.0</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.7.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5.7.1.html">5.7.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.7.2.html">5.7.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.7.3.html">5.7.3</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#breaking">BREAKING</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#added">ADDED</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#changed">CHANGED</a></li>
@@ -78,7 +82,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">squared</a>
       </nav>
@@ -101,12 +105,19 @@
   <section id="id1">
 <h1>5.7.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
 <p><strong class="right">2025-10-18</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="5.7.1.html">5.7.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.7.2.html">5.7.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.7.3.html">5.7.3</a></li>
+</ul>
+</div>
 <section class="release-notes" id="breaking">
 <h2>BREAKING<a class="headerlink" href="#breaking" title="Link to this heading"></a></h2>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">android</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">builtInExtensions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;squared.grid&quot;</span><span class="w"> </span><span class="c1">// display: table (non-TABLE elements)</span>
+<span class="w">    </span><span class="s2">"squared.grid"</span><span class="w"> </span><span class="c1">// display: table (non-TABLE elements)</span>
 <span class="p">];</span>
 </pre></div>
 </div>
@@ -127,25 +138,16 @@
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">isSibling</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;first&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;last&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;only&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">NodeChildrenAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">isSibling</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;first&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;last&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;only&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="kt">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">Node</span><span class="p">,</span><span class="w"> </span><span class="nx">unknown</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">isSibling</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;first&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;last&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;only&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SiblingOptions</span><span class="o">&lt;</span><span class="nx">Node</span><span class="p">,</span><span class="w"> </span><span class="nx">NodeChildrenAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">NodeParentAttr</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">isSibling</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"first"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"last"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"only"</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">NodeChildrenAttr</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">isSibling</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"first"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"last"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"only"</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="kt">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">Node</span><span class="p">,</span><span class="w"> </span><span class="nx">unknown</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">isSibling</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"first"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"last"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"only"</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">SiblingOptions</span><span class="o">&lt;</span><span class="nx">Node</span><span class="p">,</span><span class="w"> </span><span class="nx">NodeChildrenAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">NodeParentAttr</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">customElement</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">SvgUseSymbol</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">symbolElement</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSymbolElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGSVGElement</span><span class="p">;</span><span class="w"> </span><span class="c1">// SVGSVGElement</span>
-<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSymbolElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGSVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">useElement</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGUseElement</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
@@ -193,20 +195,29 @@
 </pre></div>
 </div>
 </div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">SvgUseSymbol</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">readonly</span><span class="w"> </span><span class="nx">symbolElement</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSymbolElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGSVGElement</span><span class="p">;</span><span class="w"> </span><span class="c1">// SVGSVGElement</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSymbolElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGSVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">useElement</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGUseElement</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;ktx&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;baseline-profile&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;navigation&quot;</span><span class="p">)[];</span><span class="w"> </span><span class="c1">// navigation</span>
+<span class="w">    </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="s2">"ktx"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"baseline-profile"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"navigation"</span><span class="p">)[];</span><span class="w"> </span><span class="c1">// navigation</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id8">
 <div class="code-block-caption"><span class="caption-text">android.extensions</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* &lt;style name=&quot;Text_P&quot;&gt; -&gt; &lt;style name=&quot;Text_P&quot; parent=&quot;TextAppearance.AppCompat&quot;&gt; */</span>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* &lt;style name="Text_P"&gt; -&gt; &lt;style name="Text_P" parent="TextAppearance.AppCompat"&gt; */</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ResourceStylesOptions</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">inheritFromParent</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// squared.attr(&quot;android.resource.styles&quot;, &quot;inheritFromParent&quot;, { &quot;Text_P&quot;: &quot;TextAppearance.AppCompat&quot; })</span>
+<span class="w">    </span><span class="nx">inheritFromParent</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// squared.attr("android.resource.styles", "inheritFromParent", { "Text_P": "TextAppearance.AppCompat" })</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -229,8 +240,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="5.6.0.html" class="btn btn-neutral float-right" title="5.6.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="5.8.4.html" class="btn btn-neutral float-left" title="5.8.4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="5.7.1.html" class="btn btn-neutral float-right" title="5.7.1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

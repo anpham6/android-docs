@@ -2,7 +2,7 @@
 5.4.1
 =====
 
-:right:`2025-1-7`
+:right:`2025-01-07`
 
 .. toctree::
   :maxdepth: 1

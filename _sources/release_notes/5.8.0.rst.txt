@@ -1,0 +1,466 @@
+=====
+5.8.0
+=====
+
+:right:`2026-04-29`
+
+.. toctree::
+  :maxdepth: 1
+
+  5.8.1
+  5.8.2
+  5.8.3
+  5.8.4
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+BREAKING
+========
+
+.. code-block::
+  :caption: squared.lib
+
+  /* css */
+
+  type Specificity = [number, number, number, number, number] | [number, number, number, number, number, number, number]; // @layer [3] | [5] / @scope [4] | [6]
+
+  /* internal */
+
+  function getSpecificity(value: string, layer?: number): Specificity; // layer
+
+.. code-block::
+  :caption: squared.base
+
+  class Node {
+      cssSpecificity(attr: CssStyleAttr, context?: string): Specificity | undefined;
+  }
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.base
+
+  interface AppProjectUI {
+      documentRoot: LayoutRoot<NodeUI>[];
+      set rendered(value);
+      get rendered(): NodeUI[];
+  }
+
+  interface CacheValueUI {
+      inlineBlock?: boolean;
+  }
+
+  interface DescendOptions {
+      matches?: string;
+  }
+
+  interface AscendOptions {
+      closest?: string;
+      matches?: string;
+  }
+
+  interface NodeParseUnitOptions {
+      fromFont?: boolean;
+  }
+
+  class ResourceUI {
+      static appendId(resourceId: number, section: string, name: string): boolean;
+      characterMap: StringMap;
+      placeholderIntl: Record<string, StringMap>;
+      getInputPlaceholder(type: string, languages: string[], fallback?: string): string;
+  }
+
+  class NodeUI {
+      anchorSibling(orientation: OrientationAttr, documentId?: string): [AnchorPositionAttr, string][];
+      getFontSizeAdjust(fontFamily: string, fontSize?: number, fallback?: number): number;
+      datasetValue(name: string, global?: boolean): string | undefined;
+      get scalableElement(): boolean;
+      get modalElement(): boolean;
+      get inlineBlock(): boolean;
+      get metadata(): PlainObject | null;
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      RULES: {
+          FUNCTION: boolean;
+      };
+  }
+
+  /* constant */
+
+  const enum CSS_UNIT {
+      RESOLUTION = 64
+  }
+
+  /* css */
+
+  interface CSSStyleDeclaration {
+      textDecorationInset: string;
+  }
+
+  inteface CssPropertyData {
+      also?: CssStyleAttr;
+  }
+
+  interface ParseUnitOptions {
+      typedOM?: boolean;
+  }
+
+  interface MatchContainerOptions {
+      prefix?: string;
+  }
+
+  function findContainerType(element: Element, conditionText: string, name?: string): ContainerData | null;
+  function parseConditional(element: HTMLElement | SVGElement, attr: CssStyleAttr, value: string): string;
+  function hasCustomFunction(value: string): boolean;
+  function hasConditional(value: string): boolean;
+  function isResolution(value: string): boolean;
+
+  /* dom */
+
+  type PseudoDocumentElt = PseudoScrollElt | "::picker(select)" | "::picker-icon" | "::checkmark";
+  type PseudoStyleElt = "::search-text" | "::view-transition";
+  type PseudoQueryElt = "::cue(string)" | "::highlight(string)" | "view-transition-group(string)" | "::view-transition-image-pair(string)" | "::view-transition-new(string)" | "::view-transition-old(string)";
+  type PseudoScrollElt = "::scroll-marker-group" | "::scroll-marker" | "::scroll-button(top)" | "::scroll-button(right)" | "::scroll-button(bottom)" | "::scroll-button(left)" | "::scroll-button(block-start)" | "::scroll-button(block-end)" | "::scroll-button(inline-start)" | "::scroll-button(inline-end)";
+
+  interface ContainerData {
+      conditionText?: string;
+  }
+
+  function isOpen(element: Element, modal?: boolean): boolean;
+
+  /* internal */
+
+  const CLIENT_FEATURES: UserAgentFeatures;
+
+  /* regex */
+
+  const STRING: {
+      CSS_VARIABLE: string;
+  };
+
+  const CSS: {
+      CUSTOM_IDENT: RegExp;
+  }
+
+.. code-block::
+  :caption: squared.lib.base
+
+  class Container {
+      concat(list: unknown[] | Container): unknown[];
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  class Svg {
+      shadowHost: ShadowRoot | null;
+  }
+
+  class SvgAnimation {
+      shadowHost: ShadowRoot | null;
+  }
+
+  class SvgAnimate {
+      insertAt(time: number, value: string, index?: number): void;
+  }
+
+.. code-block::
+  :caption: squared.svg.util
+
+  const TRANSFORM: {
+      typeAsReset(type: number | string): string;
+  };
+
+  function getTargetElement(element: SVGElement, rootElement?: SVGSVGElement | null, shadowRoot?: ShadowRoot | null, contentMap?: StringMap | null): SVGElement | null; // shadowRoot
+  function formatSkew(value: string, type?: number): string;
+
+.. code-block::
+  :caption: android.base
+
+  interface UserResourceSettingsUI {
+      createResourceIds: string | string[] | undefined; // "android" | "compose" | "fragment" | "drawable" | "animated-drawable";
+      createBuildDependencies: "navigation-v3";
+  }
+
+  interface DocumentOutput {
+      resolutionScreenWidth?: number; // copyTo | saveAs (override)
+      resolutionScreenHeight?: number;
+  }
+
+  interface ControllerSettingsUI {
+      filename: {
+          id: string;
+      };
+  }
+
+  interface ControllerSettingsDirectoryUI {
+      id: string;
+  }
+
+  class Application {
+      getTargetApi(sessionId: string): number;
+  }
+
+  class File {
+      resourceIdToXml(stored: Required<ResourceStoredMap>, qualifier?: string | FileActionOptions, options?: FileActionOptions): string[];
+      finalizeIdToXml(resourceId: number, stored: string[], directory: string, options?: FileActionOptions): string[];
+  }
+
+  class View {
+      getLayoutConstraint(attr: "justifyContent" | "alignItems" | "alignContent", type: "flex" | "grid", direction?: "row" | "column", all?: boolean): string;
+      hasConstraint(horizontal: boolean, type?: "spread" | "percent" | "wrap"): boolean;
+  }
+
+.. rst-class:: release-notes
+
+CHANGED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface MetadataAction<T = PlainObject> { // unknown
+      metadata?: T | null; // null
+  }
+
+  interface FileAsset extends MetadataAction {}
+
+  type AssetsVideo = Map<string, Asset & MetadataAction>;
+  type AssetsAudio = Map<string, Asset & MetadataAction>;
+
+  class Resource {
+      static findStoredAsset(resourceId: number, type: string, name: string, options?: FindStoredAssetOptions): unknown; // options
+  }
+
+  interface LocalSettingsUI /* extends ElementSettingsUI */ {}
+
+  class NodeUI {
+      get localSettings(): LocalSettingsUI & ElementSettingsUI; // ElementSettingsUI
+  }
+
+.. code-block::
+  :caption: squared.lib
+
+  /* dom */
+
+  type PseudoElt = "::target-text";
+  type PseudoStyleElt = "::target-text"; // PseudoDocumentElt
+
+  /* internal */
+
+  function performQuerySelector(value: string, documentRoot: SelectorRoot, type: 0 | 1 | 2 | 4 | 8, shadowRoot?: ShadowRoot | null, sessionId?: string): ArrayLike<Element>; // sessionId
+
+  /* util */
+
+  function hasKeys(obj: object, prefix?: string): boolean; // prefix
+
+.. code-block::
+  :caption: squared.svg.util
+
+  const TRANSFORM: {
+      parse(element: SVGElement, options: SvgTransformParseOptions): SvgTransform[] | null; // options
+  };
+
+.. code-block::
+  :caption: android.base
+
+  interface InsertStoredAssetOptions {} // extends MetadataAction
+  interface AddImageSrcOptions {}
+  interface AddImageOptions {}
+  interface ParseImageOptions {}
+
+  class Resource {
+      static addRawAsset(resourceId: number, type: ResourceRawAsset | "images", name: string, value: unknown, options?: InsertStoredAssetOptions): string; // options
+      addImageSet(resourceId: number, images: StringMap, options?: AddImageOptions): string; // options
+  }
+
+  class Node {
+      descend(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node[];
+      descendOne(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node | undefined;
+  }
+
+  class NodeUI {
+      static baseline(list: NodeUI[], options: BaselineOptions): NodeUI | null; // options
+  }
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  interface FinalizeDataExtensionUI {} // AppProjectUI
+
+  interface AppProcessing {
+      containerName: Record<string, WeakMap<HTMLElement, ContainerData>>;
+      styleMap?: Record<string, CssStyleMap | Record<string, [string, boolean]>> | null;
+  }
+
+  class ControllerUI {
+      optimize(rendered: NodeUI[], project?: AppProjectUI): Promise<void>;
+      finalize(layouts: FileAsset[], project?: AppProjectUI): Promise<void>;
+  }
+
+  class Resource {
+      get mimeTypeMap(): Record<string, MIMEOrAll>;
+  }
+
+  class ResourceUI {
+      writeRawSvg(resourceId: number, element: SVGSVGElement, dimension?: Dimension): string;
+      get STRING_SPACE(): string; // characterMap
+      get STRING_NEWLINE(): string;
+      get STRING_WBR(): string;
+  }
+
+.. code-block::
+  :caption: squared.base.lib
+
+  /* css */
+
+  function parseKeyframes(rules: CSSRuleList): KeyframeData | null; // Node.keyframes
+  function getKeyframesRules(documentRoot?: DocumentOrShadowRoot | null): KeyframesMap; // svg.lib
+  function parseFontFeatureValues(documentRoot?: DocumentOrShadowRoot | null): FontFeatureValuesMap; // NodeUI.elementData.fontFeatureValues
+  function parseBorderRadius(value: string, options?: ParseBorderRadiusOptions): BoxOf<number>[] | null; // svg.lib
+
+  /* regex */
+
+  const DOM: {
+      PRE_IDENT: RegExp;
+  };
+
+  /* util */
+
+  function splitAll(value: string, char: string, trim?: boolean): string[];
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      REGEXP: {
+          DOT_ALL: boolean;
+          LOOK_BEHIND: boolean;
+          NAMED_CAPTURE_GROUPS: boolean;
+          HAS_INDICES: boolean;
+      };
+      PROMISE: {
+          FINALLY: boolean;
+          ALL_SETTLED: boolean;
+          ANY: boolean;
+      };
+      RULES: {
+          STYLE_SHEET: boolean;
+      };
+      FONT: {
+          ACTUAL_BOUNDING_BOX: boolean;
+          BOUNDING_BOX: boolean;
+      };
+      CONSTRUCTOR: {
+          INTL_SEGMENTER: boolean;
+      };
+  }
+
+  /* css */
+
+  interface MatchContainerOptions {
+      conditionStyle?: boolean; // prefix
+  }
+
+  interface CalculateVarAsStringOptions {
+      errorString?: RegExp;
+  }
+
+  function calculateStyle(element: StyleElement, attr: string, value: string, boundingBox?: Dimension | null, percent?: boolean): string; // boundingBox | percent
+
+  /* dom */
+
+  interface ContainerData {
+      descendantOf?: HTMLElement[];
+  }
+
+  /* internal */
+
+  function startsWith(value: string, leading: string): boolean; // squared.lib.util
+  function endsWith(value: string, trailing: string): boolean;
+
+  /* regex */
+
+  const CSS: {
+      LIGHT_DARK: RegExp;
+  };
+
+  /* util */
+
+  function replaceAll(value: string, searchValue: string, replaceWith: string, replaceCount?: number): string; // String.replaceAll
+  function concatArray(list: unknown[], appending: unknown[]): unknown[]; // Array.concat
+  function joinArray(list: ArrayBase<unknown>, predicate: IteratorPredicate<unknown, string>, char?: string): string; // String.join
+
+.. code-block::
+  :caption: squared.svg
+
+  class Svg {
+      keyframesMap?: KeyframesMap; // keyframes
+  }
+
+.. code-block::
+  :caption: squared.svg.lib.util
+
+  function getAttribute(element: SVGElement, attr: string, computed?: boolean, named?: boolean): string; // named
+  function getParentAttribute(element: SVGElement, attr: string, computed?: boolean, named?: boolean): string;
+
+.. code-block::
+  :caption: android.base
+
+  class Resource {
+      static findStoredAsset(resourceId: number, type: string, name: string, remove?: boolean): unknown; // options
+      addImageSet(resourceId: number, images: StringMap, prefix?: string): string; // options
+  }
+
+.. code-block::
+  :caption: android.lib.util
+
+  function getDataSet(dataset: StringMap | DOMStringMap, prefix: string): StringMap | undefined; // squared.lib.base
+
+.. code-block::
+  :caption: chrome.base
+
+  interface DocumentOutput {
+      useSessionCache?: boolean; // "false" to disable
+  }
+
+.. rst-class:: release-notes
+
+DELETED
+=======
+
+.. code-block::
+  :caption: squared.base
+
+  interface ElementSettingsUI {}
+
+  interface UserSettingsAction {}
+
+  interface ChecksumBase {
+      digest?: string; // digestEncoding
+  }
+
+.. code-block::
+  :caption: android.lib.constant
+
+  const CONTAINER_ELEMENT: {
+      FENCEDFRAME: number;
+  };

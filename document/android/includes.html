@@ -6,20 +6,20 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Layout Includes &mdash; squared 5.7.0 documentation</title>
+  <title>Layout Includes &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=6762e766" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -114,28 +114,28 @@
 <h2>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">android</span><span class="p">.</span><span class="nx">setViewModelByProject</span><span class="p">(</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="hll"><span class="w">    </span><span class="nx">variable</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;exampleData&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;com.example.ExampleData&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="hll"><span class="w">    </span><span class="nx">variable</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"exampleData"</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"com.example.ExampleData"</span><span class="w"> </span><span class="p">}]</span>
 </span><span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="s2">&quot;project-1&quot;</span>
+<span class="w">  </span><span class="s2">"project-1"</span>
 <span class="p">);</span>
 
 <span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
 <span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Affects all layouts in same project</span>
+<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Affects all layouts in same project</span>
 <span class="w">  </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">includableElements</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">selectorStart</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#item2&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">selectorEnd</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#item4&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app/src/main/res/layout-land&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;filename1.xml&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">selectorStart</span><span class="o">:</span><span class="w"> </span><span class="s2">"#item2"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">selectorEnd</span><span class="o">:</span><span class="w"> </span><span class="s2">"#item4"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"app/src/main/res/layout-land"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">"filename1.xml"</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">merge</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c1">// Multiple elements will auto-merge</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">selectorStart</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#item5&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">selectorEnd</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#item5&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;filename2&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Uses default layout file extension &quot;.xml&quot;</span>
-<span class="hll"><span class="w">      </span><span class="nx">viewModel</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;exampleData&quot;</span><span class="w"> </span><span class="c1">// One element only when &quot;merge = false&quot;</span>
+<span class="w">      </span><span class="nx">selectorStart</span><span class="o">:</span><span class="w"> </span><span class="s2">"#item5"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">selectorEnd</span><span class="o">:</span><span class="w"> </span><span class="s2">"#item5"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">"filename2"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Uses default layout file extension ".xml"</span>
+<span class="hll"><span class="w">      </span><span class="nx">viewModel</span><span class="o">:</span><span class="w"> </span><span class="s2">"exampleData"</span><span class="w"> </span><span class="c1">// One element only when "merge = false"</span>
 </span><span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">});</span>
@@ -149,11 +149,11 @@
 <section id="inline">
 <h2>Inline<a class="headerlink" href="#inline" title="Link to this heading"></a></h2>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item1&quot;</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item2&quot;</span> <span class="na">data-android-include-start</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-android-include-merge</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-pathname-android</span><span class="o">=</span><span class="s">&quot;app/src/main/res/layout-land&quot;</span> <span class="na">data-filename-android</span><span class="o">=</span><span class="s">&quot;filename1.xml&quot;</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item3&quot;</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item4&quot;</span> <span class="na">data-android-include-end</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item5&quot;</span> <span class="na">data-android-include</span><span class="o">=</span><span class="s">&quot;filename2&quot;</span> <span class="na">data-android-include-end</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-android-include-viewmodel</span><span class="o">=</span><span class="s">&quot;exampleData&quot;</span><span class="p">&gt;</span>Item 5<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"item1"</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"item2"</span> <span class="na">data-android-include-start</span><span class="o">=</span><span class="s">"true"</span> <span class="na">data-android-include-merge</span><span class="o">=</span><span class="s">"true"</span> <span class="na">data-pathname-android</span><span class="o">=</span><span class="s">"app/src/main/res/layout-land"</span> <span class="na">data-filename-android</span><span class="o">=</span><span class="s">"filename1.xml"</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"item3"</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"item4"</span> <span class="na">data-android-include-end</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"item5"</span> <span class="na">data-android-include</span><span class="o">=</span><span class="s">"filename2"</span> <span class="na">data-android-include-end</span><span class="o">=</span><span class="s">"true"</span> <span class="na">data-android-include-viewmodel</span><span class="o">=</span><span class="s">"exampleData"</span><span class="p">&gt;</span>Item 5<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -166,8 +166,8 @@
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- res/layout/activity_main.xml --&gt;</span>
 <span class="nt">&lt;LinearLayout&gt;</span>
 <span class="w">  </span><span class="nt">&lt;TextView&gt;</span>Item<span class="w"> </span>1<span class="nt">&lt;/TextView&gt;</span>
-<span class="w">  </span><span class="nt">&lt;include</span><span class="w"> </span><span class="na">layout=</span><span class="s">&quot;@layout/filename1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="hll"><span class="w">  </span><span class="nt">&lt;include</span><span class="w"> </span><span class="na">layout=</span><span class="s">&quot;@layout/filename2&quot;</span><span class="w"> </span><span class="na">app:exampleData=</span><span class="s">&quot;@{exampleData}&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;include</span><span class="w"> </span><span class="na">layout=</span><span class="s">"@layout/filename1"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;include</span><span class="w"> </span><span class="na">layout=</span><span class="s">"@layout/filename2"</span><span class="w"> </span><span class="na">app:exampleData=</span><span class="s">"@{exampleData}"</span><span class="w"> </span><span class="nt">/&gt;</span>
 </span><span class="nt">&lt;/LinearLayout&gt;</span>
 
 <span class="cm">&lt;!-- res/layout-land/filename1.xml --&gt;</span>
@@ -180,7 +180,7 @@
 <span class="cm">&lt;!-- res/layout/filename2.xml --&gt;</span>
 <span class="nt">&lt;layout&gt;</span>
 <span class="w">  </span><span class="nt">&lt;data&gt;</span>
-<span class="hll"><span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;exampleData&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;com.example.ExampleData&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">"exampleData"</span><span class="w"> </span><span class="na">type=</span><span class="s">"com.example.ExampleData"</span><span class="w"> </span><span class="nt">/&gt;</span>
 </span><span class="w">  </span><span class="nt">&lt;/data&gt;</span>
 <span class="w">  </span><span class="nt">&lt;TextView&gt;</span>Item<span class="w"> </span>5<span class="nt">&lt;/TextView&gt;</span>
 <span class="nt">&lt;/layout&gt;</span>

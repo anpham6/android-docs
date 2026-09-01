@@ -79,3 +79,15 @@ CHANGED
   class Resource {
       static formatName(value: string, isFile?: boolean): string; // isFile
   }
+
+.. rst-class:: release-notes
+
+DEPRECATED
+==========
+
+.. code-block::
+  :caption: squared.base
+
+  interface AppProjectUI {
+      firstLetterValue?: Map<Element, string>; // Will be renamed
+  }

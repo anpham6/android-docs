@@ -50,33 +50,24 @@ Interpolator
 
 These built-in interpolators are usable without any additional configuration:
 
-.. hlist::
-  :columns: 2
+  .. hlist::
+    :columns: 2
 
-  - accelerate
+    - accelerate
+      * factor
+    - anticipate
+      * tension
 
-    * factor
+    - anticipate_overshoot
+      * tension
+      * extraTension
+    - cycle
+      * cycles
 
-  - anticipate
-
-    * tension
-
-  - anticipate_overshoot
-
-    * tension
-    * extraTension
-
-  - cycle
-
-    * cycles
-
-  - decelerate
-
-    * factor
-
-  - overshoot
-
-    * tension
+    - decelerate
+      * factor
+    - overshoot
+      * tension
 
 .. note:: The extension will always generate an interpolator with custom attributes.
 

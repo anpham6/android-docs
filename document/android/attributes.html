@@ -6,20 +6,20 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modify Attributes &mdash; squared 5.7.0 documentation</title>
+  <title>Modify Attributes &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=6762e766" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -117,16 +117,16 @@
 <section id="settings">
 <h2>Settings<a class="headerlink" href="#settings" title="Link to this heading"></a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">showAttributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="s2">&quot;hyphenationFrequency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace all</span>
-<span class="w">  </span><span class="s2">&quot;android:fontFeatureSettings&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// Delete all</span>
-<span class="w">  </span><span class="s2">&quot;app:menu&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;@menu/menu_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;@menu/menu_2&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace with &quot;@menu/menu_2&quot; when value is &quot;@menu/menu_1&quot;</span>
-<span class="w">    </span><span class="s2">&quot;@menu/menu_3&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Delete attribute when value is &quot;@menu/menu_3&quot;</span>
+<span class="w">  </span><span class="s2">"hyphenationFrequency"</span><span class="o">:</span><span class="w"> </span><span class="s2">"full"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace all</span>
+<span class="w">  </span><span class="s2">"android:fontFeatureSettings"</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// Delete all</span>
+<span class="w">  </span><span class="s2">"app:menu"</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"@menu/menu_1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"@menu/menu_2"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace with "@menu/menu_2" when value is "@menu/menu_1"</span>
+<span class="w">    </span><span class="s2">"@menu/menu_3"</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Delete attribute when value is "@menu/menu_3"</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="cm">/* OR */</span>
-<span class="w">  </span><span class="s2">&quot;app:menu&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;@menu/menu_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;@menu/menu_2&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;@menu/menu_3&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="s2">"app:menu"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"@menu/menu_1"</span><span class="o">:</span><span class="w"> </span><span class="s2">"@menu/menu_2"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"@menu/menu_3"</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 </pre></div>
@@ -135,10 +135,10 @@
 <section id="method">
 <h2>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;customId&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">node</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">&quot;layout_width&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">node</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">&quot;layout_height&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">node</span><span class="p">.</span><span class="nx">app</span><span class="p">(</span><span class="s2">&quot;layout_scrollFlags&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;scroll|exitUntilCollapsed&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">"customId"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">node</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">"layout_width"</span><span class="p">,</span><span class="w"> </span><span class="s2">"match_parent"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">node</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">"layout_height"</span><span class="p">,</span><span class="w"> </span><span class="s2">"match_parent"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">node</span><span class="p">.</span><span class="nx">app</span><span class="p">(</span><span class="s2">"layout_scrollFlags"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scroll|exitUntilCollapsed"</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -148,19 +148,19 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>data-android-attr-{namespace}?
 </pre></div>
 </div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;customId&quot;</span>
-<span class="hll">  <span class="na">data-android-attr</span><span class="o">=</span><span class="s">&quot;layout_width::match_parent;layout_height::match_parent&quot;</span>
-</span>  <span class="na">data-android-attr-app</span><span class="o">=</span><span class="s">&quot;layout_scrollFlags::scroll|exitUntilCollapsed&quot;</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"customId"</span>
+<span class="hll">  <span class="na">data-android-attr</span><span class="o">=</span><span class="s">"layout_width::match_parent;layout_height::match_parent"</span>
+</span>  <span class="na">data-android-attr-app</span><span class="o">=</span><span class="s">"layout_scrollFlags::scroll|exitUntilCollapsed"</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Output</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;LinearLayout</span>
-<span class="w">  </span><span class="na">android:id=</span><span class="s">&quot;@+id/customId&quot;</span>
-<span class="w">  </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="w">  </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="w">  </span><span class="na">app:layout_scrollFlags=</span><span class="s">&quot;scroll|exitUntilCollapsed&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="na">android:id=</span><span class="s">"@+id/customId"</span>
+<span class="w">  </span><span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+<span class="w">  </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+<span class="w">  </span><span class="na">app:layout_scrollFlags=</span><span class="s">"scroll|exitUntilCollapsed"</span><span class="w"> </span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>

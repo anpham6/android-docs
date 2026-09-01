@@ -6,32 +6,32 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; squared 5.7.0 documentation</title>
+  <title>Installation &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=6762e766" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=402f376c"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Browser" href="browser.html" />
-    <link rel="prev" title="squared 5.7" href="index.html" /> 
+    <link rel="prev" title="squared 5.8" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -72,7 +72,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">squared</a>
       </nav>
@@ -94,7 +94,7 @@
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>NodeJS 18 LTS <em class="alt">(Minimum)</em></p></li>
+<li><p>NodeJS 18 <em class="alt">(Minimum)</em></p></li>
 </ul>
 <section id="npx">
 <h2>NPX<a class="headerlink" href="#npx" title="Link to this heading"></a></h2>
@@ -162,10 +162,10 @@ node<span class="w"> </span>serve.js
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">dev - 5.7.0</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="code-block-caption"><span class="caption-text">dev - 5.8.0</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/anpham6/squared
 <span class="nb">cd</span><span class="w"> </span>squared
-git<span class="w"> </span>checkout<span class="w"> </span><span class="m">5</span>.7.0
+git<span class="w"> </span>checkout<span class="w"> </span><span class="m">5</span>.8.0
 
 npm<span class="w"> </span>install
 npm<span class="w"> </span>run<span class="w"> </span>build:dev
@@ -174,7 +174,7 @@ npm<span class="w"> </span>run<span class="w"> </span>build:dev
 
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/anpham6/squared-express
 <span class="nb">cd</span><span class="w"> </span>squared-express
-git<span class="w"> </span>checkout<span class="w"> </span><span class="m">4</span>.1.0
+git<span class="w"> </span>checkout<span class="w"> </span><span class="m">4</span>.2.0
 
 npm<span class="w"> </span>install
 npm<span class="w"> </span>run<span class="w"> </span>dev
@@ -217,22 +217,25 @@ repo<span class="w"> </span>sync<span class="w"> </span>-j4
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>workspaces
 <span class="nb">cd</span><span class="w"> </span>workspaces<span class="w">           </span><span class="c1"># REPO_ROOT</span>
 
-curl<span class="w"> </span>-o<span class="w"> </span>Rakefile<span class="w"> </span>https://unpkg.com/squared/Rakefile
+curl<span class="w"> </span>-o<span class="w"> </span>Rakefile<span class="w"> </span>https://raw.githubusercontent.com/anpham6/squared-repo/master/Rakefile
 
 rake<span class="w"> </span>-T<span class="w">                 </span><span class="c1"># List tasks</span>
 
 <span class="c1"># REPO_BUILD={dev,prod}</span>
-<span class="c1"># FAIL_BUILD={0,1}</span>
-<span class="c1"># NODE_INSTALL={pnpm,yarn}</span>
+<span class="c1"># NODE_INSTALL={yarn,pnpm@8}</span>
 rake<span class="w"> </span>repo:init<span class="w">          </span><span class="c1"># nightly</span>
 <span class="c1"># OR</span>
 rake<span class="w"> </span>repo:init<span class="o">[</span>latest<span class="o">]</span><span class="w">  </span><span class="c1"># REPO_MANIFEST=latest</span>
+
+<span class="c1"># Docker</span>
+<span class="nv">BUILD_DOCKER_OPTS</span><span class="o">=</span><span class="s2">"NODE_TAG=20"</span><span class="w"> </span>rake<span class="w"> </span>docker:build
+rake<span class="w"> </span>docker-test:bake:build<span class="o">[</span>node-release<span class="o">]</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper installation-workspace docutils container" id="id15">
 <div class="code-block-caption"><span class="caption-text">~/workspaces</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>android-docs<span class="w">  </span>chrome-docs<span class="w">  </span>e-mc<span class="w">  </span>pi-r<span class="w">  </span>pi-r2<span class="w">  </span>squared<span class="w">  </span>squared-express
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>android-docs<span class="w">  </span>chrome-docs<span class="w">  </span>e-mc<span class="w">  </span>pi-r<span class="w">  </span>squared<span class="w">  </span>squared-express
 </pre></div>
 </div>
 </div>
@@ -241,7 +244,7 @@ rake<span class="w"> </span>repo:init<span class="o">[</span>latest<span class="
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>Dockerfile<span class="w"> </span>https://unpkg.com/squared/Dockerfile
 
 <span class="c1"># NODE_TAG=latest</span>
-<span class="c1"># RUBY_VERSION=2.7.0-3.4.0</span>
+<span class="c1"># RUBY_VERSION=2.5.0-4.0.0</span>
 <span class="c1"># PIPE_FAIL={0,1}</span>
 <span class="c1"># DOCS=any</span>
 docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>squared<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">MANIFEST</span><span class="o">=</span>prod<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">BUILD</span><span class="o">=</span>prod<span class="w"> </span>.
@@ -260,18 +263,18 @@ docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </s
 <section id="github-codespaces">
 <h3>GitHub Codespaces<a class="headerlink" href="#github-codespaces" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=5.7.0&amp;repo=162848626&amp;skip_quickstart=true">Create</a></p></li>
+<li><p><a class="reference external" href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=5.8.0&amp;repo=162848626&amp;skip_quickstart=true">Create</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./scripts/repo-install.sh
 
-<span class="c1"># NODE_INSTALL=pnpm</span>
-<span class="nv">REPO_ROOT</span><span class="o">=</span>/workspaces<span class="w"> </span>rake<span class="w"> </span>repo:init<span class="o">[</span><span class="m">0</span>.13.x<span class="o">]</span>
+<span class="c1"># NODE_INSTALL=yarn</span>
+<span class="nv">REPO_ROOT</span><span class="o">=</span>/workspaces<span class="w"> </span>rake<span class="w"> </span>repo:init<span class="o">[</span><span class="m">0</span>.14.x<span class="o">]</span>
 
 rake<span class="w"> </span>repo:sync
 <span class="c1"># OR</span>
-rake<span class="w"> </span>emc:checkout:branch<span class="o">[</span><span class="m">0</span>.13.0<span class="o">]</span><span class="w">    </span><span class="c1"># once</span>
-rake<span class="w"> </span>pir:checkout:branch<span class="o">[</span><span class="m">0</span>.11.0<span class="o">]</span>
-rake<span class="w"> </span>express:checkout:branch<span class="o">[</span><span class="m">4</span>.1.0<span class="o">]</span>
+rake<span class="w"> </span>emc:checkout:branch<span class="o">[</span><span class="m">0</span>.14.0<span class="o">]</span><span class="w">    </span><span class="c1"># once</span>
+rake<span class="w"> </span>pir:checkout:branch<span class="o">[</span><span class="m">0</span>.12.0<span class="o">]</span>
+rake<span class="w"> </span>express:checkout:branch<span class="o">[</span><span class="m">4</span>.2.0<span class="o">]</span>
 rake<span class="w"> </span>pull
 </pre></div>
 </div>
@@ -286,7 +289,7 @@ rake<span class="w"> </span>pull
 </aside>
 <aside class="footnote brackets" id="id6" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://www.ruby-lang.org/en/documentation/installation">https://www.ruby-lang.org/en/documentation/installation</a> (2.4/3.0)</p>
+<p><a class="reference external" href="https://www.ruby-lang.org/en/documentation/installation">https://www.ruby-lang.org/en/documentation/installation</a> (2.5/4.0)</p>
 </aside>
 </aside>
 </section>
@@ -297,7 +300,7 @@ rake<span class="w"> </span>pull
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="squared 5.7" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="squared 5.8" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="browser.html" class="btn btn-neutral float-right" title="Browser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

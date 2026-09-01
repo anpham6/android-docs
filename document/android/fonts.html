@@ -6,20 +6,20 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Downloadable Fonts &mdash; squared 5.7.0 documentation</title>
+  <title>Downloadable Fonts &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=6762e766" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -120,13 +120,13 @@
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">Install and build <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">android</span><span class="p">.</span><span class="nx">addFontProvider</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;com.google.android.gms.fonts&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;com.google.android.gms&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="p">[</span><span class="s2">&quot;MIIEqDCCA5CgAwIBAgIJANWFuGx9007...&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MIIEQzCCAyugAwIBAgIJAMLgh0Zk...&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="s2">&quot;https://www.googleapis.com/webfonts/v1/webfonts?key=1234567890&quot;</span><span class="w"> </span><span class="c1">// JSON object is synchronous</span>
+<span class="w">  </span><span class="s2">"com.google.android.gms.fonts"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"com.google.android.gms"</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="s2">"MIIEqDCCA5CgAwIBAgIJANWFuGx9007..."</span><span class="p">,</span><span class="w"> </span><span class="s2">"MIIEQzCCAyugAwIBAgIJAMLgh0Zk..."</span><span class="p">],</span>
+<span class="w">  </span><span class="s2">"https://www.googleapis.com/webfonts/v1/webfonts?key=1234567890"</span><span class="w"> </span><span class="c1">// JSON object is synchronous</span>
 <span class="p">);</span>
 
-<span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">createDownloadableFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;fonts.zip&quot;</span><span class="p">));</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">createDownloadableFonts</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">"fonts.zip"</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
@@ -134,9 +134,9 @@
 <h3>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h3>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">AndroidManifest.xml</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;manifest</span><span class="w"> </span><span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="nt">&gt;</span>
-<span class="w">   </span><span class="nt">&lt;application</span><span class="w"> </span><span class="na">android:theme=</span><span class="s">&quot;@style/AppTheme&quot;</span><span class="nt">&gt;</span>
-<span class="hll"><span class="w">      </span><span class="nt">&lt;meta-data</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;preloaded_fonts&quot;</span><span class="w"> </span><span class="na">android:resource=</span><span class="s">&quot;@array/preloaded_fonts&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;manifest</span><span class="w"> </span><span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;application</span><span class="w"> </span><span class="na">android:theme=</span><span class="s">"@style/AppTheme"</span><span class="nt">&gt;</span>
+<span class="hll"><span class="w">      </span><span class="nt">&lt;meta-data</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"preloaded_fonts"</span><span class="w"> </span><span class="na">android:resource=</span><span class="s">"@array/preloaded_fonts"</span><span class="w"> </span><span class="nt">/&gt;</span>
 </span><span class="w">   </span><span class="nt">&lt;/application&gt;</span>
 <span class="nt">&lt;/manifest&gt;</span>
 </pre></div>
@@ -145,7 +145,7 @@
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text">build.gradle</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>dependencies {
-    implementation &#39;androidx.appcompat:appcompat:1.7.0&#39;
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 }
 </pre></div>
 </div>
@@ -154,7 +154,7 @@
 </section>
 <section id="disable">
 <h2>Disable<a class="headerlink" href="#disable" title="Link to this heading"></a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.resource.fonts&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;installGoogleFonts&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Use browser and local fonts only</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"android.resource.fonts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"installGoogleFonts"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Use browser and local fonts only</span>
 </pre></div>
 </div>
 <aside class="footnote-list brackets">

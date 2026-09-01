@@ -1,0 +1,26 @@
+=====
+5.8.1
+=====
+
+:right:`2026-05-10`
+
+.. toctree::
+  :maxdepth: 1
+
+  5.8.2
+  5.8.3
+  5.8.4
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: chrome.base
+
+  interface FileActionOptions {
+      packageExports?: boolean | string[];
+  }

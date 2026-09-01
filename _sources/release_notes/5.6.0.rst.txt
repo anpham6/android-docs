@@ -18,18 +18,18 @@ BREAKING
 ========
 
 .. code-block::
-  :caption: squared.svg
-
-  class SvgContainer {
-      build(options?: SvgBuildOptions): void; // SvgContainerBuild(SvgContainer) (mixin)
-  }
-
-.. code-block::
   :caption: squared.lib.color
 
   namespace external {
       function intoRGB(value: ColorSpace): RGB | [ColorCoords, ColorCoordinates] | null; // squared.lib.color.intoRGB -> squared.lib.color.external.intoRGB
       function intoRelativeRGB(method: string, relative: ColorRGB, r: string, g: string, b: string, profile?: string): RGB | [ColorCoords, ColorCoordinates] | null; // squared.lib.color.intoRelativeRGB -> squared.lib.color.external.intoRelativeRGB
+  }
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgContainer {
+      build(options?: SvgBuildOptions): void; // SvgContainerBuild(SvgContainer) (mixin)
   }
 
 .. rst-class:: release-notes
@@ -52,24 +52,6 @@ ADDED
   class NodeUI {
       get boundingRegion(): BoxRectDimension;
   }
-
-.. code-block::
-  :caption: squared.svg
-
-  class SvgBuild {
-      static findViewport(object: SvgElement): Svg | undefined; // SvgContainer.getViewport (deprecated)
-  }
-
-  class SvgContainerBuild {
-      build(options?: SvgBuildOptions): void;
-  }
-
-  declare var SvgBaseVal: <T extends Constructor<SvgElement>>(Base: T) => T & SvgBaseVal;
-  declare var SvgContainerBuild: <T extends Constructor<SvgContainer>>(Base: T) => T & SvgContainerBuild;
-  declare var SvgPaint: <T extends Constructor<SvgElement>>(Base: T) => T & SvgPaint;
-  declare var SvgSynchronize: <T extends Constructor<SvgView>>(Base: T) => T & SvgSynchronize;
-  declare var SvgView: <T extends Constructor<SvgElement>>(Base: T) => T & SvgView;
-  declare var SvgViewRect: <T extends Constructor<SvgBaseVal>>(Base: T) => T & SvgViewRect;
 
 .. code-block::
   :caption: squared.lib
@@ -98,6 +80,24 @@ ADDED
   function incrementDocumentReady(): void;
   function decrementDocumentReady(): void;
   function checkSocketTimeout(socket: WebSocket, response: unknown, socketId: string, socketKey?: string): response is WebSocketResponse;
+
+.. code-block::
+  :caption: squared.svg
+
+  class SvgBuild {
+      static findViewport(object: SvgElement): Svg | undefined; // SvgContainer.getViewport (deprecated)
+  }
+
+  class SvgContainerBuild {
+      build(options?: SvgBuildOptions): void;
+  }
+
+  declare var SvgBaseVal: <T extends Constructor<SvgElement>>(Base: T) => T & SvgBaseVal;
+  declare var SvgContainerBuild: <T extends Constructor<SvgContainer>>(Base: T) => T & SvgContainerBuild;
+  declare var SvgPaint: <T extends Constructor<SvgElement>>(Base: T) => T & SvgPaint;
+  declare var SvgSynchronize: <T extends Constructor<SvgView>>(Base: T) => T & SvgSynchronize;
+  declare var SvgView: <T extends Constructor<SvgElement>>(Base: T) => T & SvgView;
+  declare var SvgViewRect: <T extends Constructor<SvgBaseVal>>(Base: T) => T & SvgViewRect;
 
 .. code-block::
   :caption: android.lib.constant

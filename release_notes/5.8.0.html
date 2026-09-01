@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.8.0 &mdash; squared 5.8.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=1d8fb11c" />
+      <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=6762e766" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.8.1" href="5.8.1.html" />
+    <link rel="prev" title="Release Notes" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            squared
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/index.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../document/index.html">Document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.8.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5.8.1.html">5.8.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.8.2.html">5.8.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.8.3.html">5.8.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5.8.4.html">5.8.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#breaking">BREAKING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#added">ADDED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed">CHANGED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deprecated">DEPRECATED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleted">DELETED</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="5.7.0.html">5.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.6.0.html">5.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5.0.html">5.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4.0.html">5.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1.0.html">5.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.0.0.html">5.0.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">squared</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
+      <li class="breadcrumb-item active">5.8.0</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>5.8.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p><strong class="right">2026-04-29</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="5.8.1.html">5.8.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.8.2.html">5.8.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.8.3.html">5.8.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.8.4.html">5.8.4</a></li>
+</ul>
+</div>
+<section class="release-notes" id="breaking">
+<h2>BREAKING<a class="headerlink" href="#breaking" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">Specificity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">];</span><span class="w"> </span><span class="c1">// @layer [3] | [5] / @scope [4] | [6]</span>
+
+<span class="cm">/* internal */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">getSpecificity</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">layer?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Specificity</span><span class="p">;</span><span class="w"> </span><span class="c1">// layer</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">cssSpecificity</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">context?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Specificity</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="added">
+<h2>ADDED<a class="headerlink" href="#added" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">AppProjectUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">documentRoot</span><span class="o">:</span><span class="w"> </span><span class="kt">LayoutRoot</span><span class="o">&lt;</span><span class="nx">NodeUI</span><span class="o">&gt;</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">rendered</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">rendered</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">NodeUI</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">CacheValueUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">inlineBlock?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">DescendOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">matches?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AscendOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">closest?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">matches?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">NodeParseUnitOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fromFont?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">ResourceUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">appendId</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">section</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">characterMap</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">placeholderIntl</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">StringMap</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">getInputPlaceholder</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">languages</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">fallback?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">anchorSibling</span><span class="p">(</span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="kt">OrientationAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">documentId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">AnchorPositionAttr</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">][];</span>
+<span class="w">    </span><span class="nx">getFontSizeAdjust</span><span class="p">(</span><span class="nx">fontFamily</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">fontSize?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">fallback?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">datasetValue</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">global?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">scalableElement</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">modalElement</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">inlineBlock</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">metadata</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">PlainObject</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">RULES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">FUNCTION</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cm">/* constant */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">CSS_UNIT</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">RESOLUTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span>
+<span class="p">}</span>
+
+<span class="cm">/* css */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">CSSStyleDeclaration</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">textDecorationInset</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">inteface</span><span class="w"> </span><span class="nx">CssPropertyData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">also?</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ParseUnitOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">typedOM?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">MatchContainerOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">prefix?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">findContainerType</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">Element</span><span class="p">,</span><span class="w"> </span><span class="nx">conditionText</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">name?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ContainerData</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseConditional</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">CssStyleAttr</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasCustomFunction</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasConditional</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">isResolution</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+
+<span class="cm">/* dom */</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoDocumentElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PseudoScrollElt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::picker(select)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::picker-icon"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::checkmark"</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoStyleElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"::search-text"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::view-transition"</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoQueryElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"::cue(string)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::highlight(string)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"view-transition-group(string)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::view-transition-image-pair(string)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::view-transition-new(string)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::view-transition-old(string)"</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoScrollElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"::scroll-marker-group"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-marker"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(top)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(right)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(bottom)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(left)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(block-start)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(block-end)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(inline-start)"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"::scroll-button(inline-end)"</span><span class="p">;</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ContainerData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">conditionText?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">isOpen</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">Element</span><span class="p">,</span><span class="w"> </span><span class="nx">modal?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+
+<span class="cm">/* internal */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">CLIENT_FEATURES</span><span class="o">:</span><span class="w"> </span><span class="kt">UserAgentFeatures</span><span class="p">;</span>
+
+<span class="cm">/* regex */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">STRING</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">CSS_VARIABLE</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">CUSTOM_IDENT</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">squared.lib.base</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">concat</span><span class="p">(</span><span class="nx">list</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Container</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">[];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Svg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">shadowHost</span><span class="o">:</span><span class="w"> </span><span class="kt">ShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimation</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">shadowHost</span><span class="o">:</span><span class="w"> </span><span class="kt">ShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">SvgAnimate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">insertAt</span><span class="p">(</span><span class="nx">time</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">index?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">squared.svg.util</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">TRANSFORM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">typeAsReset</span><span class="p">(</span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">getTargetElement</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">rootElement?</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSVGElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">shadowRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">ShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">contentMap?</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SVGElement</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// shadowRoot</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">formatSkew</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">UserResourceSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">createResourceIds</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w"> </span><span class="c1">// "android" | "compose" | "fragment" | "drawable" | "animated-drawable";</span>
+<span class="w">    </span><span class="nx">createBuildDependencies</span><span class="o">:</span><span class="w"> </span><span class="s2">"navigation-v3"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">DocumentOutput</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">resolutionScreenWidth?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// copyTo | saveAs (override)</span>
+<span class="w">    </span><span class="nx">resolutionScreenHeight?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ControllerSettingsDirectoryUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">getTargetApi</span><span class="p">(</span><span class="nx">sessionId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">File</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">resourceIdToXml</span><span class="p">(</span><span class="nx">stored</span><span class="o">:</span><span class="w"> </span><span class="kt">Required</span><span class="o">&lt;</span><span class="nx">ResourceStoredMap</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">qualifier?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">FileActionOptions</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">FileActionOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">finalizeIdToXml</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">stored</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">directory</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">FileActionOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">getLayoutConstraint</span><span class="p">(</span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="s2">"justifyContent"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"alignItems"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"alignContent"</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"flex"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"grid"</span><span class="p">,</span><span class="w"> </span><span class="nx">direction</span><span class="o">?:</span><span class="w"> </span><span class="s2">"row"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"column"</span><span class="p">,</span><span class="w"> </span><span class="nx">all?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">hasConstraint</span><span class="p">(</span><span class="nx">horizontal</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">?:</span><span class="w"> </span><span class="s2">"spread"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"percent"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"wrap"</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="changed">
+<h2>CHANGED<a class="headerlink" href="#changed" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id10" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">MetadataAction</span><span class="o">&lt;</span><span class="nx">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PlainObject</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// unknown</span>
+<span class="w">    </span><span class="nx">metadata?</span><span class="o">:</span><span class="w"> </span><span class="kt">T</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// null</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">FileAsset</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">MetadataAction</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">AssetsVideo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Map</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">Asset</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">MetadataAction</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">AssetsAudio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Map</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">Asset</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">MetadataAction</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">findStoredAsset</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">FindStoredAssetOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">LocalSettingsUI</span><span class="w"> </span><span class="cm">/* extends ElementSettingsUI */</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">localSettings</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">LocalSettingsUI</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">ElementSettingsUI</span><span class="p">;</span><span class="w"> </span><span class="c1">// ElementSettingsUI</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id11" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* dom */</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"::target-text"</span><span class="p">;</span>
+<span class="kr">type</span><span class="w"> </span><span class="nx">PseudoStyleElt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"::target-text"</span><span class="p">;</span><span class="w"> </span><span class="c1">// PseudoDocumentElt</span>
+
+<span class="cm">/* internal */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">performQuerySelector</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">documentRoot</span><span class="o">:</span><span class="w"> </span><span class="kt">SelectorRoot</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="nx">shadowRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">ShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">sessionId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">ArrayLike</span><span class="o">&lt;</span><span class="nx">Element</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span><span class="c1">// sessionId</span>
+
+<span class="cm">/* util */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">hasKeys</span><span class="p">(</span><span class="nx">obj</span><span class="o">:</span><span class="w"> </span><span class="kt">object</span><span class="p">,</span><span class="w"> </span><span class="nx">prefix?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// prefix</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">squared.svg.util</span><a class="headerlink" href="#id12" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">TRANSFORM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">parse</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">SvgTransformParseOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">SvgTransform</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id13" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">InsertStoredAssetOptions</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// extends MetadataAction</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AddImageSrcOptions</span><span class="w"> </span><span class="p">{}</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AddImageOptions</span><span class="w"> </span><span class="p">{}</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ParseImageOptions</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">addRawAsset</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">ResourceRawAsset</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">InsertStoredAssetOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="nx">addImageSet</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">images</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">AddImageOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">descend</span><span class="p">(</span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">DescendParameterOptions</span><span class="o">&lt;</span><span class="nx">Node</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="o">?:</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="kt">Node</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Node</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">descendOne</span><span class="p">(</span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">DescendParameterOptions</span><span class="o">&lt;</span><span class="nx">Node</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="o">?:</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="kt">Node</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">baseline</span><span class="p">(</span><span class="nx">list</span><span class="o">:</span><span class="w"> </span><span class="kt">NodeUI</span><span class="p">[],</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="kt">BaselineOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">NodeUI</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="deprecated">
+<h2>DEPRECATED<a class="headerlink" href="#deprecated" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id14" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">FinalizeDataExtensionUI</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// AppProjectUI</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">AppProcessing</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">containerName</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nb">WeakMap</span><span class="o">&lt;</span><span class="nx">HTMLElement</span><span class="p">,</span><span class="w"> </span><span class="nx">ContainerData</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">styleMap?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">CssStyleMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">ControllerUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">optimize</span><span class="p">(</span><span class="nx">rendered</span><span class="o">:</span><span class="w"> </span><span class="kt">NodeUI</span><span class="p">[],</span><span class="w"> </span><span class="nx">project?</span><span class="o">:</span><span class="w"> </span><span class="kt">AppProjectUI</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">finalize</span><span class="p">(</span><span class="nx">layouts</span><span class="o">:</span><span class="w"> </span><span class="kt">FileAsset</span><span class="p">[],</span><span class="w"> </span><span class="nx">project?</span><span class="o">:</span><span class="w"> </span><span class="kt">AppProjectUI</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">mimeTypeMap</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">MIMEOrAll</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">ResourceUI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">writeRawSvg</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGSVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension?</span><span class="o">:</span><span class="w"> </span><span class="kt">Dimension</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">STRING_SPACE</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// characterMap</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">STRING_NEWLINE</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">STRING_WBR</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">squared.base.lib</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* css */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseKeyframes</span><span class="p">(</span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="kt">CSSRuleList</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">KeyframeData</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// Node.keyframes</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getKeyframesRules</span><span class="p">(</span><span class="nx">documentRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">DocumentOrShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">KeyframesMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// svg.lib</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseFontFeatureValues</span><span class="p">(</span><span class="nx">documentRoot?</span><span class="o">:</span><span class="w"> </span><span class="kt">DocumentOrShadowRoot</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">FontFeatureValuesMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// NodeUI.elementData.fontFeatureValues</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseBorderRadius</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options?</span><span class="o">:</span><span class="w"> </span><span class="kt">ParseBorderRadiusOptions</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">BoxOf</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// svg.lib</span>
+
+<span class="cm">/* regex */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">DOM</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">PRE_IDENT</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cm">/* util */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">splitAll</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">char</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">trim?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">squared.lib</span><a class="headerlink" href="#id16" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* client */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserAgentFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">REGEXP</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DOT_ALL</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">LOOK_BEHIND</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">NAMED_CAPTURE_GROUPS</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">HAS_INDICES</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">PROMISE</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">FINALLY</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">ALL_SETTLED</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">ANY</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">RULES</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">STYLE_SHEET</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">FONT</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">ACTUAL_BOUNDING_BOX</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">BOUNDING_BOX</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">CONSTRUCTOR</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">INTL_SEGMENTER</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cm">/* css */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">MatchContainerOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">conditionStyle?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// prefix</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">CalculateVarAsStringOptions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">errorString?</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">calculateStyle</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">StyleElement</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">boundingBox?</span><span class="o">:</span><span class="w"> </span><span class="kt">Dimension</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">percent?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// boundingBox | percent</span>
+
+<span class="cm">/* dom */</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ContainerData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">descendantOf?</span><span class="o">:</span><span class="w"> </span><span class="kt">HTMLElement</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="cm">/* internal */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">startsWith</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">leading</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// squared.lib.util</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">endsWith</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">trailing</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+
+<span class="cm">/* regex */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">CSS</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">LIGHT_DARK</span><span class="o">:</span><span class="w"> </span><span class="kt">RegExp</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cm">/* util */</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">replaceAll</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">searchValue</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">replaceWith</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">replaceCount?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// String.replaceAll</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">concatArray</span><span class="p">(</span><span class="nx">list</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">[],</span><span class="w"> </span><span class="nx">appending</span><span class="o">:</span><span class="w"> </span><span class="kt">unknown</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">[];</span><span class="w"> </span><span class="c1">// Array.concat</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">joinArray</span><span class="p">(</span><span class="nx">list</span><span class="o">:</span><span class="w"> </span><span class="kt">ArrayBase</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">predicate</span><span class="o">:</span><span class="w"> </span><span class="kt">IteratorPredicate</span><span class="o">&lt;</span><span class="nx">unknown</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">char?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// String.join</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">squared.svg</span><a class="headerlink" href="#id17" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Svg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">keyframesMap?</span><span class="o">:</span><span class="w"> </span><span class="kt">KeyframesMap</span><span class="p">;</span><span class="w"> </span><span class="c1">// keyframes</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">squared.svg.lib.util</span><a class="headerlink" href="#id18" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">computed?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">,</span><span class="w"> </span><span class="nx">named?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// named</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getParentAttribute</span><span class="p">(</span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">SVGElement</span><span class="p">,</span><span class="w"> </span><span class="nx">attr</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">computed?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">,</span><span class="w"> </span><span class="nx">named?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">android.base</span><a class="headerlink" href="#id19" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">findStoredAsset</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">remove?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="w">    </span><span class="nx">addImageSet</span><span class="p">(</span><span class="nx">resourceId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">images</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="p">,</span><span class="w"> </span><span class="nx">prefix?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// options</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">android.lib.util</span><a class="headerlink" href="#id20" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">getDataSet</span><span class="p">(</span><span class="nx">dataset</span><span class="o">:</span><span class="w"> </span><span class="kt">StringMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">DOMStringMap</span><span class="p">,</span><span class="w"> </span><span class="nx">prefix</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">StringMap</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w"> </span><span class="c1">// squared.lib.base</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">chrome.base</span><a class="headerlink" href="#id21" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">DocumentOutput</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">useSessionCache?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="c1">// "false" to disable</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="release-notes" id="deleted">
+<h2>DELETED<a class="headerlink" href="#deleted" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">squared.base</span><a class="headerlink" href="#id22" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">ElementSettingsUI</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">UserSettingsAction</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ChecksumBase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">digest?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// digestEncoding</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">android.lib.constant</span><a class="headerlink" href="#id23" title="Link to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CONTAINER_ELEMENT</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">FENCEDFRAME</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="5.8.1.html" class="btn btn-neutral float-right" title="5.8.1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

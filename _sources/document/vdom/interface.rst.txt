@@ -5,7 +5,7 @@ Interface
 .. highlight::  typescript
 
 .. code-block::
-  :emphasize-lines: 31-32,109-111,132
+  :emphasize-lines: 7,45-48,56
 
   class Container<T> implements Iterable<T> {
       children: T[];
@@ -13,6 +13,7 @@ Interface
       item(index: number, value?: T): T | undefined;
       add(item: T): this;
       addAll(list: T[] | Container): this;
+      concat(list: T[] | Container): T[];
       remove(item: T): T | undefined;
       removeAll(list: T[] | Container): T[];
       retainAs(list: T[]): this;
@@ -38,7 +39,7 @@ Interface
       static readonly TEXT_STYLE: string[];
       static boxValueOf(node: Node, attr: BoxModelAttr, options?: CssUnitOptions): number;
       static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode: string | undefined, output: CssStyleMap | undefined, elementData: ElementData | undefined): CssStyleMap;
-      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, override?: boolean | ElementData): CssStyleMap;
+      static sanitizeCss(element: HTMLElement, input: CssStyleMap, writingMode?: string, output?: CssStyleMap, override?: boolean): CssStyleMap;
       readonly id: number;
       readonly sessionId: string;
       setParent(parent: Node | null, depth?: number, index?: number): void;
@@ -52,8 +53,8 @@ Interface
       resetState(): void;
       ascend(options?: AscendParameterOptions<Node, NodeParentAttr>, attr?: boolean | string | ((item: Node) => boolean), error?: (item: Node) => boolean): Node[];
       ascendOne(options?: AscendParameterOptions<Node, NodeParentAttr>, attr?: boolean | string | ((item: Node) => boolean), error?: (item: Node) => boolean): Node | undefined;
-      descend(options?: DescendParameterOptions<Node>): Node[];
-      descendOne(options?: DescendParameterOptions<Node>): Node | undefined;
+      descend(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node[];
+      descendOne(options?: DescendParameterOptions<Node>, error?: (item: Node) => boolean): Node | undefined;
       intersectX(rect: BoxRectDimension, options?: CoordsXYOptions): boolean;
       intersectY(rect: BoxRectDimension, options?: CoordsXYOptions): boolean;
       withinX(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
@@ -61,6 +62,7 @@ Interface
       outsideX(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
       outsideY(rect: BoxRectDimension, options?: OffsetXYOptions): boolean;
       as(target: typeof Element): InstanceType<typeof Element> | null;
+      any(...target: typeof Element[]): InstanceType<UnionOfArray<typeof Element[]>> | null;
       css(attr: CssStyleAttr, value?: string, cache?: boolean): string;
       cssInitial(attr: CssStyleAttr, options?: CssInitialOptions): string;
       cssAny(attr: CssStyleAttr, values: string[], options?: CssAnyOptions): boolean;
@@ -235,6 +237,7 @@ Interface
       get previousElementSibling(): Node | null;
       get nextElementSibling(): Node | null;
       get attributes(): StringMap;
+      get keyframes(): KeyframesMap | null;
       get checked(): boolean | null;
       get boundingClientRect(): DOMRect | null;
       get preserveWhiteSpace(): boolean;
@@ -250,6 +253,24 @@ Interface
 
 Changelog
 =========
+
+.. versionadded:: 5.8.4
+
+  - *Node* method **any** for the discriminated union of element instances was created.
+
+.. versionadded:: 5.8.0
+
+  - *Container* method **concat** for using a new array when appending items was created.
+
+.. versionchanged:: 5.8.0
+
+  - *Node* method **descend** | **descendOne** argument :target:`error` as :alt:`(item: Node) => boolean` was implemented.
+  - *Node* method **ascend** | **ascendOne** | **descend** | **descendOne** options :target:`matches` as :alt:`string` in :alt:`DescendOptions` was implemented.
+  - *Node* method **ascend** | **ascendOne** options :target:`closest` as :alt:`string` in :alt:`AscendOptions` was implemented.
+
+.. versionadded:: 5.7.1
+
+  - *Node* property getter **keyframes** for :target:`@layer` keyframes was created.
 
 .. versionadded:: 5.7.0
 

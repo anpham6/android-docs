@@ -6,20 +6,20 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>squared &mdash; squared 5.7.0 documentation</title>
+  <title>squared &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../_static/override.css?v=6762e766" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -108,7 +108,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">squared</a>
       </nav>
@@ -140,7 +140,7 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setHostname</span><span class="p">(</span><span class="s2">&quot;https://localhost:8000&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setHostname</span><span class="p">(</span><span class="s2">"https://localhost:8000"</span><span class="p">);</span>
 
 <span class="nx">squared</span><span class="p">.</span><span class="nx">setHostname</span><span class="p">();</span><span class="w"> </span><span class="c1">// Reset to window.location (e.g. localhost:3000)</span>
 </pre></div>
@@ -160,7 +160,7 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setEndpoint</span><span class="p">(</span><span class="s2">&quot;ASSETS_COPY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/api/v2/assets/copy&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setEndpoint</span><span class="p">(</span><span class="s2">"ASSETS_COPY"</span><span class="p">,</span><span class="w"> </span><span class="s2">"/api/v2/assets/copy"</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -175,26 +175,35 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setLocalAddress</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;nodejs-001&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setLocalAddress</span><span class="p">(</span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"nodejs-001"</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setLocalAddress</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">&quot;http://0.0.0.0&quot;</span><span class="p">));</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setLocalAddress</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"http://0.0.0.0"</span><span class="p">));</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="auth">
-<span class="sig-name descname"><span class="pre">auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth" title="Link to this definition"></a></dt>
-<dd><p>Set <abbr title="JSON Web Token">JWT</abbr> authorization token for all requests</p>
+<span class="sig-name descname"><span class="pre">auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">credentials</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#auth" title="Link to this definition"></a></dt>
+<dd><p>Use a <abbr title="JSON Web Token">JWT</abbr> header authorization token for all outgoing requests. Custom service providers are supported by passing a credentials object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>token</strong> (<em>string</em>) – Three concatenated Base64url-encoded strings separated by dots</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<em>string</em><em> or </em><em>boolean</em>) – Three concatenated Base64url-encoded strings separated by dots</p></li>
+<li><p><strong>credentials</strong> (<em>object</em>) – Serialize object as <em class="target">auth</em> property</p></li>
+</ul>
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">auth</span><span class="p">(</span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNxdWFyZWQiLCJwYXNzd29yZCI6Imp3dDEyMyIsImlhdCI6MTY1MjcxNDQwMH0.xqwQ96LsItilsB1dskzJQqXORaZ4mGMu0FeZezo297c&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">auth</span><span class="p">(</span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNxdWFyZWQiLCJwYXNzd29yZCI6Imp3dDEyMyIsImlhdCI6MTY1MjcxNDQwMH0.xqwQ96LsItilsB1dskzJQqXORaZ4mGMu0FeZezo297c"</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Alternate:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">auth</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">username</span><span class="o">:</span><span class="w"> </span><span class="s2">"mongo"</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="s2">"89064"</span><span class="p">,</span><span class="w"> </span><span class="nx">realm</span><span class="o">:</span><span class="w"> </span><span class="s2">"hokkaido"</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// { auth: undefined }</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">auth</span><span class="p">(</span><span class="s2">"chrome"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">username</span><span class="o">:</span><span class="w"> </span><span class="s2">"redis"</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="s2">"1022"</span><span class="p">,</span><span class="w"> </span><span class="nx">realm</span><span class="o">:</span><span class="w"> </span><span class="s2">"tohoku"</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// { auth: "chrome" }</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">auth</span><span class="p">({</span><span class="w"> </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="cm">/* Same */</span><span class="p">},</span><span class="w"> </span><span class="nx">chrome</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="cm">/* Same */</span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -218,7 +227,7 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;example.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pid</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">});</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">"example.zip"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pid</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">});</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="mf">100</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="cm">/* KILLED */</span>
@@ -233,8 +242,8 @@
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;10s&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate previous request in 10 seconds</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="s2">&quot;500ms&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate next request in 500 milliseconds</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"10s"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate previous request in 10 seconds</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">kill</span><span class="p">(</span><span class="s2">"500ms"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Terminate next request in 500 milliseconds</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -258,16 +267,16 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses &quot;socketId&quot;</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;222-222-222&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"111-111-111"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses "socketId"</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"222-222-222"</span><span class="p">);</span>
 
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">broadcastId</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;111-111-111&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;222-222-222&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">});</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"/path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">broadcastId</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"111-111-111"</span><span class="p">,</span><span class="w"> </span><span class="s2">"222-222-222"</span><span class="p">]</span><span class="w"> </span><span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"/path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">broadcast</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="s2">"111-111-111"</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">callback</span><span class="o">:</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
@@ -275,11 +284,11 @@
 <span class="p">});</span>
 
 <span class="c1">// Messages sent from another API (FileBroadcastOptions)</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Uses &quot;socket_id&quot;</span>
-<span class="w">  </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;333-333-333&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">socketKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;socket_id&quot;</span><span class="p">,</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Uses "socket_id"</span>
+<span class="w">  </span><span class="nx">socketId</span><span class="o">:</span><span class="w"> </span><span class="s2">"333-333-333"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">socketKey</span><span class="o">:</span><span class="w"> </span><span class="s2">"socket_id"</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.1.1.1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s2">"1.1.1.1"</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span>
 <span class="p">});</span>
 </pre></div>
@@ -302,15 +311,15 @@
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">);</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Used when switching frameworks</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="nx">idNamingStyle</span><span class="o">:</span><span class="w"> </span><span class="s2">"html"</span><span class="w"> </span><span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">26</span><span class="p">,</span><span class="w"> </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Local storage</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">targetAPI</span><span class="o">:</span><span class="w"> </span><span class="mf">26</span><span class="p">,</span><span class="w"> </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Local storage</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">,</span><span class="w"> </span><span class="s2">"example"</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -352,8 +361,8 @@
 <span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
 <span class="nx">body</span><span class="p">.</span><span class="nx">altId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
 <span class="nx">body</span><span class="p">.</span><span class="nx">altId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 5</span>
-<span class="nx">body</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">);</span>
+<span class="nx">body</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"example"</span><span class="p">);</span>
 <span class="p">});</span>
 
 <span class="nx">squared</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="w"> </span><span class="nx">_preferInitial</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">VDOM</span><span class="w"> </span><span class="cm">/* 1 */</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">CHROME</span><span class="w"> </span><span class="cm">/* 4 */</span><span class="p">);</span><span class="w"> </span><span class="c1">// squared.base.lib.constant</span>
@@ -398,24 +407,24 @@
 <span class="w">      </span><span class="nx">navigationView</span><span class="o">:</span><span class="w"> </span><span class="p">{}</span>
 <span class="w">    </span><span class="p">};</span>
 <span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">documentBase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android.external&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">leading</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;android.widget.menu&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;android.widget.coordinator&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"android.external"</span><span class="p">,</span><span class="w"> </span><span class="nx">leading</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">"android.widget.menu"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">"android.widget.coordinator"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Drawer</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">constant</span><span class="p">.</span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">ANDROID</span><span class="w"> </span><span class="cm">/* 2 */</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Drawer</span><span class="p">(</span><span class="s2">"android.widget.drawer"</span><span class="p">,</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">constant</span><span class="p">.</span><span class="nx">APP_FRAMEWORK</span><span class="p">.</span><span class="nx">ANDROID</span><span class="w"> </span><span class="cm">/* 2 */</span><span class="p">);</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
 
 <span class="c1">// Built-in</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;android.resource.includes&quot;</span><span class="p">);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"android.resource.includes"</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">layout_width</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">layout_width</span><span class="o">:</span><span class="w"> </span><span class="s2">"match_parent"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">([</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">]);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">([</span><span class="s2">"android.substitute"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">]);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -436,12 +445,12 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Drawer</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Drawer</span><span class="p">(</span><span class="s2">"android.widget.drawer"</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
 
 <span class="nx">squared</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
 <span class="cm">/* OR */</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">);</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">"android.widget.drawer"</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -466,11 +475,11 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">drawer</span><span class="p">,</span><span class="w"> </span><span class="nx">menu</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;android.widget.drawer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android.widget.menu&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">drawer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"android.widget.drawer"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">drawer</span><span class="p">,</span><span class="w"> </span><span class="nx">menu</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"android.widget.drawer"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android.widget.menu"</span><span class="p">);</span>
 
-<span class="nx">drawer</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">navigationView</span><span class="p">.</span><span class="nx">android</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fitsSystemWindows</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="p">};</span>
-<span class="nx">menu</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementId</span><span class="p">(</span><span class="s2">&quot;child-item-id&quot;</span><span class="p">),</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/drawer/menu.json&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="cm">/* optional */</span><span class="p">);</span><span class="w"> </span><span class="c1">// Add project data</span>
+<span class="nx">drawer</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">navigationView</span><span class="p">.</span><span class="nx">android</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fitsSystemWindows</span><span class="o">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w"> </span><span class="p">};</span>
+<span class="nx">menu</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementId</span><span class="p">(</span><span class="s2">"child-item-id"</span><span class="p">),</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">"http://localhost:3000/drawer/menu.json"</span><span class="p">),</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="cm">/* optional */</span><span class="p">);</span><span class="w"> </span><span class="c1">// Add project data</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -496,16 +505,16 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;viewAttributes&quot;</span><span class="w"> </span><span class="cm">/* string[] */</span><span class="p">);</span>
-<span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;hint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;buttonTint&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"android.substitute"</span><span class="p">,</span><span class="w"> </span><span class="s2">"viewAttributes"</span><span class="w"> </span><span class="cm">/* string[] */</span><span class="p">);</span>
+<span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">"hint"</span><span class="p">,</span><span class="w"> </span><span class="s2">"buttonTint"</span><span class="p">);</span>
 <span class="cm">/* OR */</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;viewAttributes&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">concat</span><span class="p">([</span><span class="s2">&quot;hint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;buttonTint&quot;</span><span class="p">]));</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"android.substitute"</span><span class="p">,</span><span class="w"> </span><span class="s2">"viewAttributes"</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">concat</span><span class="p">([</span><span class="s2">"hint"</span><span class="p">,</span><span class="w"> </span><span class="s2">"buttonTint"</span><span class="p">]));</span>
 
-<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.substitute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;attributeMapping&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;android:src&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;app:srcCompat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;icon&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;navigationIcon&quot;</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Set only and does not merge</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"android.substitute"</span><span class="p">,</span><span class="w"> </span><span class="s2">"attributeMapping"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"android:src"</span><span class="o">:</span><span class="w"> </span><span class="s2">"app:srcCompat"</span><span class="p">,</span><span class="w"> </span><span class="s2">"icon"</span><span class="o">:</span><span class="w"> </span><span class="s2">"navigationIcon"</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Set only and does not merge</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;android.resource.styles&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;inheritFromParent&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Text_P&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TextAppearance.AppCompat&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Assigns objects and concats arrays</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"android.resource.styles"</span><span class="p">,</span><span class="w"> </span><span class="s2">"inheritFromParent"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"Text_P"</span><span class="o">:</span><span class="w"> </span><span class="s2">"TextAppearance.AppCompat"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Assigns objects and concats arrays</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -530,25 +539,25 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="s2">&quot;android.widget.toolbar&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="s2">"android.widget.toolbar"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;toolbar-id&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"toolbar-id"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">background</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;?android:attr/windowBackground&quot;</span>
+<span class="w">        </span><span class="nx">background</span><span class="o">:</span><span class="w"> </span><span class="s2">"?android:attr/windowBackground"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nx">appBar</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">android</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;</span>
+<span class="w">          </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="s2">"@style/ThemeOverlay.AppCompat.Dark.ActionBar"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="s2">&quot;toolbar-example&quot;</span><span class="w"> </span><span class="c1">// Save</span>
+<span class="w">  </span><span class="s2">"toolbar-example"</span><span class="w"> </span><span class="c1">// Save</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="s2">&quot;android.widget.toolbar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbar-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Load</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="s2">"android.widget.toolbar"</span><span class="p">,</span><span class="w"> </span><span class="s2">"toolbar-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Load</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -573,12 +582,12 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">());</span><span class="w"> </span><span class="c1">// Cross-origin support</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">"css"</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">());</span><span class="w"> </span><span class="c1">// Cross-origin support</span>
 
 <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span>
-<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">),</span><span class="w"> </span><span class="c1">// All stylesheets</span>
-<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;css&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./undetected.css&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;shadow-id&quot;</span><span class="p">).</span><span class="nx">shadowRoot</span><span class="p">),</span>
-<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">&quot;svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;http://example.com/icon.svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;../images/android.svg&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">"css"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">),</span><span class="w"> </span><span class="c1">// All stylesheets</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">"css"</span><span class="p">,</span><span class="w"> </span><span class="s2">"./undetected.css"</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"shadow-id"</span><span class="p">).</span><span class="nx">shadowRoot</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">prefetch</span><span class="p">(</span><span class="s2">"svg"</span><span class="p">,</span><span class="w"> </span><span class="s2">"http://example.com/icon.svg"</span><span class="p">,</span><span class="w"> </span><span class="s2">"../images/android.svg"</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">());</span>
 </pre></div>
@@ -608,9 +617,9 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">section</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
-<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;section-1&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sqd&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">resourceQualifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;land&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s2">"section-1"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"sqd"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">resourceQualifier</span><span class="o">:</span><span class="w"> </span><span class="s2">"land"</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">enabledIncludes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">});</span>
 </pre></div>
@@ -639,7 +648,7 @@
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocumentSync</span><span class="p">();</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocumentSync</span><span class="p">(</span><span class="s2">&quot;content-1&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocumentSync</span><span class="p">(</span><span class="s2">"content-1"</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -669,22 +678,22 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;content-1&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">"content-1"</span><span class="p">);</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">section1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;section&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Only if no element has id=&quot;section&quot;</span>
-<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">section2</span><span class="p">,</span><span class="w"> </span><span class="nx">section3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;main &gt; section&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Always an array with &quot;all&quot;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">section1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">"section"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Only if no element has id="section"</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">section2</span><span class="p">,</span><span class="w"> </span><span class="nx">section3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">"main &gt; section"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Always an array with "all"</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">&quot;relativelayout-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Control id</span>
-<span class="nx">layout</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">&quot;layout_width&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;match_parent&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">findDocumentNode</span><span class="p">(</span><span class="s2">"relativelayout-1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"project-1"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Control id</span>
+<span class="nx">layout</span><span class="p">.</span><span class="nx">android</span><span class="p">(</span><span class="s2">"layout_width"</span><span class="p">,</span><span class="w"> </span><span class="s2">"match_parent"</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="latest">
-<span class="sig-name descname"><span class="pre">latest</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">count</span> <span class="pre">=</span> <span class="pre">1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#latest" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">latest</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#latest" title="Link to this definition"></a></dt>
 <dd><p>Get any stored session ids from <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> since the last time <a class="reference internal" href="#clear" title="clear"><code class="xref py py-func docutils literal notranslate"><span class="pre">clear()</span></code></a> was called.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -698,8 +707,8 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="s2">&quot;id-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;id-2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;id-3&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// [&quot;00001&quot;, &quot;00002&quot;, &quot;00003&quot;]</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="s2">"id-1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"id-2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"id-3"</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ["00001", "00002", "00003"]</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">id3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">();</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">id2</span><span class="p">,</span><span class="w"> </span><span class="nx">id3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">latest</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
@@ -764,14 +773,14 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span><span class="w"> </span><span class="c1">// Default project &quot;_&quot; is used</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span><span class="w"> </span><span class="c1">// Default project "_" is used</span>
 
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10 seconds for &quot;project-1&quot; to build</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="s2">"project-1"</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10 seconds for "project-1" to build</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">);</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;111-111-111&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// broadcastId</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"111-111-111"</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="s2">"project-1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"111-111-111"</span><span class="p">);</span><span class="w"> </span><span class="c1">// broadcastId</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -798,20 +807,20 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Uses default unnamed project &quot;_&quot;</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Uses default unnamed project "_"</span>
 
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">});</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;project-1.7z&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">throwErrors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Will cancel partial archive download</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="p">});</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">"project-1.7z"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="p">,</span><span class="w"> </span><span class="nx">throwErrors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Will cancel partial archive download</span>
 <span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;saveAs&quot; namespace</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own "saveAs" namespace</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -838,21 +847,21 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/archives/android.001&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tar&quot;</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// &quot;tar&quot; is explicit (ignored filename)</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">"http://localhost:3000/archives/android.001"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s2">"tar"</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// "tar" is explicit (ignored filename)</span>
 <span class="p">});</span>
 
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">});</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;../data/project-1.7z&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Uses NodeJS process.cwd() resolution</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="p">});</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">"../data/project-1.7z"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Uses NodeJS process.cwd() resolution</span>
 <span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;./android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;appendTo&quot; namespace</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">"./android.zip"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own "appendTo" namespace</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;./android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">"./android.zip"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -879,22 +888,22 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"./path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
 
-<span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"/path/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">([</span><span class="s2">&quot;/path/project1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/path/project2&quot;</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Copies processed files to &quot;project1&quot; and &quot;project2&quot;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">([</span><span class="s2">"/path/project1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"/path/project2"</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Copies processed files to "project1" and "project2"</span>
 
 <span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;copyTo&quot; namespace</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"./path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">log</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showSize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own "copyTo" namespace</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"./path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -923,30 +932,30 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;android.png&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android.png&quot;</span><span class="w"> </span><span class="c1">// ./images/android.png</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">"android.png"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android.png"</span><span class="w"> </span><span class="c1">// ./images/android.png</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-ldpi.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ./images/android-ldpi.png</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-ldpi.png"</span><span class="p">,</span><span class="w"> </span><span class="c1">// ./images/android-ldpi.png</span>
 <span class="w">      </span><span class="nb">document</span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-hdpi.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ./android-hdpi.png</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-hdpi.png"</span><span class="p">,</span><span class="w"> </span><span class="c1">// ./android-hdpi.png</span>
 <span class="w">      </span><span class="nb">document</span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">};</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;saveFiles&quot; namespace</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own "saveFiles" namespace</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">saveFiles</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -973,31 +982,31 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;7z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s2">"7z"</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xhdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-xhdpi.png"</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxhdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-xxhdpi.png"</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxxhdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-xxxhdpi.png"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">};</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/archives/android.001&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">"http://localhost:3000/archives/android.001"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;appendFiles&quot; namespace</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own "appendFiles" namespace</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">&quot;android.zip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">appendFiles</span><span class="p">(</span><span class="s2">"android.zip"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1026,31 +1035,31 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xhdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-xhdpi.png"</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxhdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-xxhdpi.png"</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;images&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:3000/common/images/android-xxxhdpi.png&quot;</span>
+<span class="w">      </span><span class="nx">pathname</span><span class="o">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/common/images/android-xxxhdpi.png"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">};</span>
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">"/path/project"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">([</span><span class="s2">&quot;/path/project1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/path/project2&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span><span class="w"> </span><span class="c1">// Copies assets to &quot;project1&quot; and &quot;project2&quot;</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">([</span><span class="s2">"/path/project1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"/path/project2"</span><span class="p">],</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span><span class="w"> </span><span class="c1">// Copies assets to "project1" and "project2"</span>
 
 <span class="c1">// Save</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own &quot;copyFiles&quot; namespace</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">"./path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uses own "copyFiles" namespace</span>
 
 <span class="c1">// Load</span>
-<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">&quot;./path/to/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;android-example&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">copyFiles</span><span class="p">(</span><span class="s2">"./path/to/project"</span><span class="p">,</span><span class="w"> </span><span class="s2">"android-example"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Any page in same domain</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1072,21 +1081,21 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">chrome</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">systemName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// &quot;chrome&quot;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">systemName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// "chrome"</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">setFramework</span><span class="p">(</span><span class="nx">android</span><span class="p">);</span>
 <span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">();</span>
 <span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">activityMain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// XML content</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">activityMain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">"project1"</span><span class="p">);</span><span class="w"> </span><span class="c1">// XML content</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="getElementById">
-<span class="sig-name descname"><span class="pre">getElementById</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getElementById" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">getElementById</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getElementById" title="Link to this definition"></a></dt>
 <dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.getElementById</span></code> <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> except returns a <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1108,17 +1117,17 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"content-id"</span><span class="p">);</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="o">?</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">elementId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;child-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cascade</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"content-id"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="o">?</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">elementId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"child-id"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cascade</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="querySelector">
-<span class="sig-name descname"><span class="pre">querySelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelector" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">querySelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelector" title="Link to this definition"></a></dt>
 <dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.querySelector</span></code> <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> except returns a <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1140,11 +1149,11 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;section img[src=vdom.png]&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"section img[src=vdom.png]"</span><span class="p">);</span>
 
-<span class="nx">squared</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;body &gt; p&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Synchronous</span>
+<span class="nx">squared</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"body &gt; p"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Synchronous</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">inline</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;display&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;inline-block&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s2">"display"</span><span class="p">,</span><span class="w"> </span><span class="s2">"inline-block"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -1153,7 +1162,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="querySelectorAll">
-<span class="sig-name descname"><span class="pre">querySelectorAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelectorAll" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">querySelectorAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#querySelectorAll" title="Link to this definition"></a></dt>
 <dd><p>Same behavior as native <code class="docutils literal notranslate"><span class="pre">document.querySelectorAll</span></code> <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> except returns an array of <a class="reference internal" href="../references.html#references-squared-base"><span class="std std-ref">Node</span></a> instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1175,9 +1184,9 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">img1</span><span class="p">,</span><span class="w"> </span><span class="nx">img2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;section img&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">img1</span><span class="p">,</span><span class="w"> </span><span class="nx">img2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"section img"</span><span class="p">);</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"content-id"</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"*"</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1208,8 +1217,8 @@
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">attributes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="s2">&quot;content-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="o">?</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">elementId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;child-id&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cascade</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="s2">"content-id"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="o">?</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">elementId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"child-id"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cascade</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1239,7 +1248,7 @@
 </dl>
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;body div&quot;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">item</span><span class="p">));</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"body div"</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">item</span><span class="p">));</span>
 <span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromNode</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">fromNode</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">imageElement</span><span class="p">);</span><span class="w"> </span><span class="c1">// Synchronous</span>
@@ -1249,7 +1258,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="observe">
-<span class="sig-name descname"><span class="pre">observe</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">enable</span> <span class="pre">=</span> <span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observe" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">observe</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observe" title="Link to this definition"></a></dt>
 <dd><p>Uses <a class="reference internal" href="../references.html#references-typescript-dom-generated"><span class="std std-ref">MutationObserver</span></a> to watch for any changes to the <a class="reference internal" href="#parseDocument" title="parseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseDocument()</span></code></a> root element. Start after <em>DOM</em> and third-party libraries are initialized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1259,16 +1268,16 @@
 <p>Usage:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">({</span>
 <span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">observe</span><span class="p">(</span><span class="nx">mutations</span><span class="p">,</span><span class="w"> </span><span class="nx">observer</span><span class="p">,</span><span class="w"> </span><span class="nx">settings</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="s2">"project-1"</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modified</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
+<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"/path/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="p">,</span><span class="w"> </span><span class="nx">modified</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
 <span class="w">    </span><span class="p">});</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">});</span>
 
-<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">useOriginalHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"/path/project"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="p">,</span><span class="w"> </span><span class="nx">useOriginalHtmlPage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observe</span><span class="p">();</span>
 <span class="p">});</span>
 
@@ -1290,7 +1299,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="observeSrc">
-<span class="sig-name descname"><span class="pre">observeSrc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#observeSrc" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">observeSrc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <span class="optional">]</span><em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#observeSrc" title="Link to this definition"></a></dt>
 <dd><p>Can be used to watch external elements which contain modifiable source files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1308,21 +1317,21 @@
 </dd>
 </dl>
 <p>Usage:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project-1&quot;</span><span class="w"> </span><span class="p">};</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="s2">"project-1"</span><span class="w"> </span><span class="p">};</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observeSrc</span><span class="p">(</span>
-<span class="w">    </span><span class="s2">&quot;link[rel=stylesheet]&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"link[rel=stylesheet]"</span><span class="p">,</span>
 <span class="w">    </span><span class="p">(</span><span class="nx">ev</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="s2">&quot;project-1&quot;</span><span class="p">);</span>
-<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">&quot;/path/project&quot;</span><span class="p">));</span>
+<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="s2">"project-1"</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">squared</span><span class="p">.</span><span class="nx">parseDocument</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="s2">"/path/project"</span><span class="p">));</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span><span class="w"> </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reload&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1h&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span><span class="w"> </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s2">"reload"</span><span class="p">,</span><span class="w"> </span><span class="nx">expires</span><span class="o">:</span><span class="w"> </span><span class="s2">"1h"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Optional</span>
 <span class="w">  </span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>Alternate:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observeSrc</span><span class="p">(</span><span class="s2">&quot;link[rel=stylesheet]&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Will call location.reload()</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">observeSrc</span><span class="p">(</span><span class="s2">"link[rel=stylesheet]"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Will call location.reload()</span>
 </pre></div>
 </div>
 </dd></dl>

@@ -12,21 +12,21 @@ android
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2020)`
+- https://unpkg.com/squared/dist/android.framework.min.js :alt:`(ES2022/Chrome 85)`
 
 chrome
 ------
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base.min.js
-- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2020)`
+- https://unpkg.com/squared/dist/chrome.framework.min.js :alt:`(ES2022/Chrome 85)`
 
 vdom
 ----
 
 - https://unpkg.com/squared/dist/squared.min.js
 - https://unpkg.com/squared/dist/squared.base-dom.min.js
-- https://unpkg.com/squared/dist/vdom.framework.min.js
+- https://unpkg.com/squared/dist/vdom.framework.min.js :alt:`(ES2018/Chrome 55)`
 
 .. _browser-download-vdom-lite:
 
@@ -64,7 +64,7 @@ A single file with no exports outside of the core methods. [#esm]_
 - https://unpkg.com/squared/dist/vdom.mjs
 
 .. code-block:: html
-  :caption: ES2021
+  :caption: ES2022
 
   <script type="module">
     import { parseDocument } from "https://unpkg.com/squared/dist/android.mjs";
@@ -73,20 +73,27 @@ A single file with no exports outside of the core methods. [#esm]_
 Import maps
 -----------
 
-Possibly hundreds of files with all exports and core methods. [#esm]_
+Possibly hundreds of files with all exports and core methods. It is not recommended to be used in production. [#esm]_
 
 - https://unpkg.com/squared/android.js
 - https://unpkg.com/squared/chrome.js
 - https://unpkg.com/squared/vdom.js
 
 .. code-block:: html
-  :caption: ES2021
+  :caption: ES2022
 
+  <script type="importmap">
+    {
+      "imports": {
+        "squared/": "https://unpkg.com/squared/"
+      }
+    }
+  </script>
   <script type="module">
-    import { parseDocument } from "https://unpkg.com/squared/android.js";
+    import { parseDocument } from "squared/android.js";
   <script>
 
-.. tip:: The traditional **UMD** namespaced global reference :target:`squared` is the fastest to load and execute. **ESM** is the modern alternative but has some drawbacks when used with larger libraries. It is not recommended to use :target:`import maps` outside of a development environment.
+.. tip:: The traditional **UMD** namespaced global reference :target:`squared` will load and execute much faster than **ESM**. It is also fully available inside *DevTools* to issue arbitrary commands without typing out every import path.
 
 .. [#] android | chrome | vdom
 .. [#] android

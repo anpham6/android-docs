@@ -55,6 +55,11 @@ CHANGED
 =======
 
 .. code-block::
+  :caption: squared.svg.lib.util
+
+  function findContainer(element: Element, name?: string, ancestors?: WeakMap<HTMLElement, ContainerData>): ContainerData | null; // ancestors
+
+.. code-block::
   :caption: android.lib.constant
 
   const enum DEPENDENCY_TYPE {
@@ -70,8 +75,3 @@ CHANGED
       ANDROID_TEST_COMPILE_ONLY = 9,
       ANDROID_TEST_RUNTIME_ONLY = 10
   }
-
-.. code-block::
-  :caption: squared.svg.lib.util
-
-  function findContainer(element: Element, name?: string, ancestors?: WeakMap<HTMLElement, ContainerData>): ContainerData | null; // ancestors

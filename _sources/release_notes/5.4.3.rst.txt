@@ -2,7 +2,7 @@
 5.4.3
 =====
 
-:right:`2025-3-6`
+:right:`2025-03-06`
 
 .. highlight:: typescript
 
@@ -50,15 +50,3 @@ CHANGED
   :caption: squared.lib.dom
 
   function createElement(tagName: string | HTMLElement, options: CreateElementOptions): HTMLElement; // HTMLElement
-
-.. rst-class:: release-notes
-
-DEPRECATED
-==========
-
-.. code-block::
-  :caption: squared.base
-
-  interface AppProjectUI {
-      firstLetterValue?: Map<Element, string>; // Will be renamed
-  }

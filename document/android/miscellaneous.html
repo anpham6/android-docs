@@ -6,20 +6,20 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miscellaneous &mdash; squared 5.7.0 documentation</title>
+  <title>Miscellaneous &mdash; squared 5.8.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=9dcc611a" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=5e8f2c84" />
-      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=022e6686" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/role.css?v=45b5f77a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/content.css?v=1d8fb11c" />
       <link rel="stylesheet" type="text/css" href="../../_static/highlight-abap.css?v=cead1d42" />
-      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=931a6594" />
+      <link rel="stylesheet" type="text/css" href="../../_static/override.css?v=6762e766" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=402f376c"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/documentation_options.js?v=0a4d824f"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -31,7 +31,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+        <div class="wy-side-nav-search"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
 
           
           
@@ -86,7 +86,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/006.png)" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: url(https://squared.readthedocs.io/en/latest/_static/places/007.png)" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">squared</a>
       </nav>
@@ -111,13 +111,13 @@
 <h1>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Link to this heading"></a></h1>
 <section id="system-colors">
 <h2>System Colors<a class="headerlink" href="#system-colors" title="Link to this heading"></a></h2>
-<p>Any <a class="reference external" href="https://developer.android.com/reference/android/R.color">R.color</a> that starts with the prefix “<strong>system_</strong>” can be used as substitute for a <em>CSS</em> color.</p>
+<p>Any <a class="reference external" href="https://developer.android.com/reference/android/R.color">R.color</a> that starts with the prefix “<em class="lower">system_</em>” can be used as substitute for a <em>CSS</em> color.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">resourceSystemColors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="s2">&quot;system_accent1_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Converted to ARGB</span>
-<span class="w">  </span><span class="s2">&quot;system_accent1_50&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Will override &quot;system_accent1_0&quot;</span>
-<span class="w">  </span><span class="s2">&quot;system_accent1_100&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75</span><span class="p">],</span><span class="w"> </span><span class="c1">// Different color with opacity</span>
-<span class="w">  </span><span class="s2">&quot;system_accent1_200&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hwb(12 50% 0%)&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// rgb + hsl</span>
-<span class="w">  </span><span class="s2">&quot;system_accent1_300&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">parseColor</span><span class="p">(</span><span class="s2">&quot;#000&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
+<span class="w">  </span><span class="s2">"system_accent1_0"</span><span class="o">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Converted to ARGB</span>
+<span class="w">  </span><span class="s2">"system_accent1_50"</span><span class="o">:</span><span class="w"> </span><span class="s2">"#FFFFFF"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Will override "system_accent1_0"</span>
+<span class="w">  </span><span class="s2">"system_accent1_100"</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75</span><span class="p">],</span><span class="w"> </span><span class="c1">// Different color with opacity</span>
+<span class="w">  </span><span class="s2">"system_accent1_200"</span><span class="o">:</span><span class="w"> </span><span class="s2">"hwb(12 50% 0%)"</span><span class="p">,</span><span class="w"> </span><span class="c1">// rgb + hsl</span>
+<span class="w">  </span><span class="s2">"system_accent1_300"</span><span class="o">:</span><span class="w"> </span><span class="nx">squared</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">parseColor</span><span class="p">(</span><span class="s2">"#000"</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -127,11 +127,11 @@
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/color/res/values/attrs.xml">?attr/color*</a></span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">preferMaterialDesign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;MaterialComponents&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">preferMaterialDesign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"MaterialComponents"</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
 <span class="nx">squared</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">resourceSystemColors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="s2">&quot;system_accent1_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Invalid</span>
-<span class="w">  </span><span class="s2">&quot;colorPrimary&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;colorSecondary&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rgb(255 0 0)&quot;</span>
+<span class="w">  </span><span class="s2">"system_accent1_0"</span><span class="o">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Invalid</span>
+<span class="w">  </span><span class="s2">"colorPrimary"</span><span class="o">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"colorSecondary"</span><span class="o">:</span><span class="w"> </span><span class="s2">"rgb(255 0 0)"</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -139,20 +139,20 @@
 <p>When any element uses a <em>CSS</em> color it will be substituted with the same value in the global system color map. This behavior can be disabled locally using dataset attributes.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">Active (highlight)</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-android-system-color-children</span><span class="o">=</span><span class="s">&quot;false&quot;</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-android-system-color-children</span><span class="o">=</span><span class="s">"false"</span><span class="p">&gt;</span>
 </span>  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="hll">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="hll">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">&quot;false&quot;</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">"false"</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
-</span><span class="hll">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">&quot;inherit&quot;</span><span class="p">&gt;</span>Item 5<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">"inherit"</span><span class="p">&gt;</span>Item 5<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span><span class="hll">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">&quot;inherit&quot;</span><span class="p">&gt;</span>Item 6<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-system-color</span><span class="o">=</span><span class="s">"inherit"</span><span class="p">&gt;</span>Item 6<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
@@ -164,10 +164,10 @@
 <p>Sometimes it is necessary to extract elements and append them into other containers for it to look identical on the Android device. Usually it is when you are using an <a class="reference external" href="https://developer.android.com/develop/ui/views/appwidgets/overview">App widget</a> and never with the standard layouts.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-target</span><span class="o">=</span><span class="s">&quot;location&quot;</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="hll">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-target</span><span class="o">=</span><span class="s">&quot;location&quot;</span> <span class="na">data-android-target-index</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-target</span><span class="o">=</span><span class="s">"location"</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-android-target</span><span class="o">=</span><span class="s">"location"</span> <span class="na">data-android-target-index</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;location&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">"location"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 5<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="cm">&lt;!-- span --&gt;</span>
@@ -195,10 +195,10 @@
 <p>Usually anything that is off-screen or set to <code class="docutils literal notranslate"><span class="pre">display:</span> <span class="pre">none</span></code> is not processed to minimize performance issues with nested tree depth. This behavior can be overridden only through a dataset property set directly onto the parent element.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="hll">  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-</span>  <span class="p">&lt;</span><span class="nt">menu</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span> <span class="na">data-cascade-all-android</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
+</span>  <span class="p">&lt;</span><span class="nt">menu</span> <span class="na">style</span><span class="o">=</span><span class="s">"display: none;"</span> <span class="na">data-cascade-all-android</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
 <span class="hll">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span><span class="hll">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span>    <span class="p">&lt;</span><span class="nt">menu</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span> <span class="na">data-cascade-all</span><span class="o">=</span><span class="s">&quot;false&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">menu</span> <span class="na">style</span><span class="o">=</span><span class="s">"display: none;"</span> <span class="na">data-cascade-all</span><span class="o">=</span><span class="s">"false"</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">menu</span><span class="p">&gt;</span>
