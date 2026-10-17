@@ -1,0 +1,30 @@
+=====
+5.8.5
+=====
+
+:right:`2026-10-18`
+
+.. highlight:: typescript
+
+.. rst-class:: release-notes
+
+ADDED
+=====
+
+.. code-block::
+  :caption: squared.lib
+
+  /* client */
+
+  interface UserAgentFeatures {
+      STYLE: {
+          RANDOM: boolean;
+      };
+  }
+
+  /* css */
+
+  interface CSSStyleDeclaration {
+      fontWidth: string;
+      textDecorationSkipSpaces: string;
+  }
